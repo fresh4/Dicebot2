@@ -1,0 +1,11 @@
+"use strict";class BooksList{constructor(a){this.contentsUrl=a.contentsUrl,this.sortFn=a.sortFn,this.dataProp=a.dataProp,this.enhanceRowDataFn=a.enhanceRowDataFn,this.rootPage=a.rootPage,this.rowBuilderFn=a.rowBuilderFn,this.list=null,this.dataIx=0,this.dataList=[]}onPageLoad(){ExcludeUtil.pInitialise(),SortUtil.initHandleFilterButtonClicks(),DataUtil.loadJSON(this.contentsUrl).then(this.onJsonLoad.bind(this))}onJsonLoad(a){const b=(d,a,b)=>c.sortFn(c.dataList,d,a,b);this.list=new List("listcontainer",{valueNames:["name","uniqueid"],listClass:"books",sortFunction:b});const c=this;$("#filtertools").find("button.sort").click(function(){const a=$(this);$("#filtertools").find(".caret").removeClass("caret--reverse caret"),"asc"===a.attr("sortby")?(a.find("span").addClass("caret caret--reverse"),a.attr("sortby","desc")):(a.attr("sortby","asc"),a.find("span").addClass("caret")),c.list.sort(a.data("sort"),{order:a.attr("sortby"),sortFunction:b})}),this.list.sort("name"),$("#reset").click(function(){$("#search").val(""),c.list.search(),c.list.sort("name"),c.list.filter(),$(`.showhide`).each((a,b)=>{const c=$(b);c.data("hidden")||BookUtil.indexListToggle(null,b)})}),this.addData(a),BrewUtil.pAddBrewData().then(handleBrew).then(()=>BrewUtil.bind({list:this.list})).then(()=>BrewUtil.pAddLocalBrewData()).catch(BrewUtil.pPurgeBrew).then(()=>BrewUtil.makeBrewButton("manage-brew"))}addData(a){if(!a[this.dataProp]||!a[this.dataProp].length)return;this.dataList=this.dataList.concat(a[this.dataProp]);const b=$("ul.books");let c="";for(;this.dataIx<this.dataList.length;this.dataIx++){const a=this.dataList[this.dataIx];this.enhanceRowDataFn&&this.enhanceRowDataFn(a),c+=`<li ${FLTR_ID}="${this.dataIx}">
+				<a href="${this.rootPage}#${UrlUtil.encodeForHash(a.id)}" title="${a.name}" class="book-name">
+					<span class="full-width">
+						${this.rowBuilderFn(a)}
+					</span>
+					<span class="showhide" onclick="BookUtil.indexListToggle(event, this)" data-hidden="true">[+]</span>
+					<span class="source" style="display: none">${a.id}</span>
+					<span class="uniqueid" style="display: none">${a.uniqueId}</span>
+				</a>
+				${BookUtil.makeContentsBlock({book:a,addPrefix:this.rootPage,defaultHidden:!0})}
+			</li>`}const d=ListUtil.getSearchTermAndReset(this.list);b.append(c),this.list.reIndex(),d&&this.list.search(d),this.list.sort("name")}}

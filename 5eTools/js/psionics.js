@@ -1,0 +1,32 @@
+"use strict";const JSON_URL="data/psionics.json",ID_PSIONICS_LIST="psionicsList",CLS_LI_NONE="list-entry-none",LIST_NAME="name",LIST_SOURCE="source",LIST_TYPE="type",LIST_ORDER="order",LIST_MODE_LIST="mode-list";function getHiddenModeList(a){const b=a.modes;if(b===void 0)return"";const c=[];for(let d=0;d<b.length;++d)if(c.push(`"${b[d].name}"`),null!=b[d].submodes){const a=b[d].submodes;for(let b=0;b<a.length;++b)c.push(`"${a[b].name}"`)}return c.join(",")}window.onload=async function(){await ExcludeUtil.pInitialise(),SortUtil.initHandleFilterButtonClicks(),DataUtil.loadJSON(JSON_URL).then(onJsonLoad)};let list,psionicsBookView;const sourceFilter=getSourceFilter({deselFn:()=>!1});let filterBox;async function onJsonLoad(a){const b=new Filter({header:"Type",items:[Parser.PSI_ABV_TYPE_TALENT,Parser.PSI_ABV_TYPE_DISCIPLINE],displayFn:Parser.psiTypeToFull}),c=new Filter({header:"Order",items:["Avatar","Awakened","Immortal","Nomad","Wu Jen",Parser.PSI_ORDER_NONE]});filterBox=await pInitFilterBox({filters:[sourceFilter,b,c]}),list=ListUtil.search({valueNames:[LIST_NAME,LIST_SOURCE,LIST_TYPE,LIST_ORDER,LIST_MODE_LIST,"uniqueid"],listClass:"psionics",sortFunction:SortUtil.listSort});const d=$(`.lst__wrp-search-visible`);list.on("updated",()=>{d.html(`${list.visibleItems.length}/${list.items.length}`)}),$(filterBox).on(FilterBox.EVNT_VALCHANGE,handleFilterChange);ListUtil.initSublist({valueNames:["name","type","order","id"],listClass:"subpsionics",getSublistRow:getSublistItem});ListUtil.initGenericPinnable(),psionicsBookView=new BookModeView("bookview",$(`#btn-psibook`),"If you wish to view multiple psionics, please first make a list",a=>{const b=ListUtil.getSublistedIds().map(a=>psionicList[a]),c=[],d=a=>{c.push(`<table class="spellbook-entry"><tbody>`),c.push(Renderer.psionic.getCompactRenderedString(a)),c.push(`</tbody></table>`)},e=a=>{const e=b.filter(b=>b.type===a);e.length&&(c.push(Renderer.utils.getBorderTr(`<span class="spacer-name">${Parser.psiTypeToFull(a)}</span>`)),c.push(`<tr class="spellbook-level"><td>`),e.forEach(a=>d(a)),c.push(`</td></tr>`))};return e("T"),e("D"),b.length||null==History.lastLoadedId||(c.push(`<tr class="spellbook-level"><td>`),d(psionicList[History.lastLoadedId]),c.push(`</td></tr>`)),a.append(c.join("")),b.length},!0),addPsionics(a),BrewUtil.pAddBrewData().then(handleBrew).then(()=>BrewUtil.bind({list})).then(()=>BrewUtil.pAddLocalBrewData()).catch(BrewUtil.pPurgeBrew).then(async()=>{BrewUtil.makeBrewButton("manage-brew"),BrewUtil.bind({filterBox,sourceFilter}),await ListUtil.pLoadState(),ListUtil.bindShowTableButton("btn-show-table","Psionics",psionicList,{name:{name:"Name",transform:!0},source:{name:"Source",transform:a=>`<span class="${Parser.sourceJsonToColor(a)}" title="${Parser.sourceJsonToFull(a)}" ${BrewUtil.sourceJsonToStyle(a.source)}>${Parser.sourceJsonToAbv(a)}</span>`},_text:{name:"Text",transform:a=>"T"===a.type?Renderer.psionic.getTalentText(a,renderer):Renderer.psionic.getDisciplineText(a,renderer),flex:3}},{generator:ListUtil.basicFilterGenerator},(c,a)=>SortUtil.ascSort(c.name,a.name)||SortUtil.ascSort(c.source,a.source)),RollerUtil.addListRollButton(),ListUtil.addListShowHide(),History.init(!0),ExcludeUtil.checkShowAllExcluded(psionicList,$(`#pagecontent`))})}function handleBrew(a){return addPsionics(a),Promise.resolve()}let psionicList=[],psI=0;function addPsionics(a){if(!a.psionic||!a.psionic.length)return;psionicList=psionicList.concat(a.psionic);let b="";for(;psI<psionicList.length;psI++){const a=psionicList[psI];ExcludeUtil.isExcluded(a.name,"psionic",a.source)||(a._fOrder=Parser.psiOrderToFull(a.order),b+=`
+			<li class="row" ${FLTR_ID}="${psI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
+				<a id="${psI}" href="#${UrlUtil.autoEncodeHash(a)}" title="${a.name}">
+					<span class="${LIST_NAME} col-6">${a.name}</span>
+					<span class="${LIST_TYPE} col-2">${Parser.psiTypeToFull(a.type)}</span>
+					<span class="${LIST_ORDER} col-2 ${a._fOrder===STR_NONE?CLS_LI_NONE:""}">${a._fOrder}</span>
+					<span class="${LIST_SOURCE} col-2 text-center" title="${Parser.sourceJsonToFull(a.source)}" ${BrewUtil.sourceJsonToStyle(a.source)}>${Parser.sourceJsonToAbv(a.source)}</span>
+					
+					<span class="${LIST_MODE_LIST} hidden">${getHiddenModeList(a)}</span>
+					<span class="uniqueid hidden">${a.uniqueId?a.uniqueId:psI}</span>
+				</a>
+			</li>
+		`,sourceFilter.addItem(a.source))}const c=ListUtil.getSearchTermAndReset(list);$(`#${ID_PSIONICS_LIST}`).append(b),list.reIndex(),c&&list.search(c),list.sort("name"),filterBox.render(),handleFilterChange(),ListUtil.setOptions({itemList:psionicList,getSublistRow:getSublistItem,primaryLists:[list]}),ListUtil.bindPinButton(),Renderer.hover.bindPopoutButton(psionicList),UrlUtil.bindLinkExportButton(filterBox),ListUtil.bindDownloadButton(),ListUtil.bindUploadButton()}function handleFilterChange(){const a=filterBox.getValues();list.filter(function(b){const c=psionicList[$(b.elm).attr(FLTR_ID)];return filterBox.toDisplay(a,c.source,c.type,c._fOrder)}),FilterBox.selectFirstVisible(psionicList)}function getSublistItem(a,b){return`
+		<li class="row" ${FLTR_ID}="${b}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
+			<a href="#${UrlUtil.autoEncodeHash(a)}" title="${a.name}">
+				<span class="name col-6 pl-0">${a.name}</span>
+				<span class="type col-3">${Parser.psiTypeToFull(a.type)}</span>
+				<span class="order col-3 ${a._fOrder===STR_NONE?CLS_LI_NONE:""} pr-0">${a._fOrder}</span>
+				<span class="id hidden">${b}</span>
+			</a>
+		</li>
+	`}let renderer;function loadHash(a){renderer||(renderer=Renderer.get()),renderer.setFirstSection(!0);const b=$(`#pagecontent`).empty(),c=psionicList[a];b.append(`
+		${Renderer.utils.getBorderTr()}
+		${Renderer.utils.getNameTr(c)}
+		<tr>
+			<td colspan="6"><i>${"T"===c.type?Parser.psiTypeToFull(c.type):`${c._fOrder} ${Parser.psiTypeToFull(c.type)}`}</i><span id="order"></span> <span id="type"></span></td>
+		</tr>
+		<tr><td class="divider" colspan="6"><div></div></td></tr>
+		<tr class="text"><td colspan="6" id="text">${"T"===c.type?Renderer.psionic.getTalentText(c,renderer):Renderer.psionic.getDisciplineText(c,renderer)}</td></tr>
+		${Renderer.utils.getPageTr(c)}
+		${Renderer.utils.getBorderTr()}
+	`),loadSubHash([]),ListUtil.updateSelected()}function loadSubHash(a){a=filterBox.setFromSubHashes(a),ListUtil.setFromSubHashes(a),psionicsBookView.handleSub(a)}

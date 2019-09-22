@@ -1,0 +1,1 @@
+"use strict";class GenUtil{static getFromTable(a,b){const c={};return Object.assign(c,a.find(a=>a.min===b||a.max&&b>=a.min&&b<=a.max)),Object.keys(c).forEach(a=>{"function"==typeof c[a]&&(c[a]=c[a]())}),c.display&&!c.result&&(c.result=c.display),c.display&&(c.display=Renderer.get().render(c.display)),c.result&&(c.result=Renderer.get().render(c.result)),c}}

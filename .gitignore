@@ -1,0 +1,4 @@
+node_modules
+botconfig.json
+server_info.json
+package-lock.json
