@@ -6,6 +6,7 @@ const bot = new discord.Client();
 const botConfig = require('./botconfig.json');
 
 bot.config = botConfig;
+bot.prefix = bot.config.prefix;
 
 let server_info = JSON.parse(fs.readFileSync("./server_info.json", "utf8"));
 
@@ -40,6 +41,5 @@ bot.on("message", msg => {
     //[-]set a command to change the prefix only useable by the admin 
     request = msg.content;
 });
-
 
 bot.login(botConfig.token);

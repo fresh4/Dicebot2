@@ -1,17 +1,26 @@
 const fs = require('fs');
 module.exports = (bot, msg) => {
     
-    var prefix;    
     if(msg.author.bot) return;
     try{
-        prefix = JSON.parse(fs.readFileSync("./server_info.json", "utf8"))[msg.guild.id].prefix[0];
+        bot.prefix = JSON.parse(fs.readFileSync("./server_info.json", "utf8"))[msg.guild.id].prefix[0];
     }catch(Error){
-        prefix = bot.config.prefix
+        bot.prefix = bot.config.prefix
     }
-    if (msg.content.indexOf(prefix) !== 0) return;
-    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-    const cmd = bot.commands.get(command);
+    //No Prefix Stuff
+    if(msg.content.includes("[[") || msg.content.includes("]]")) bot.commands.get("inlineroll").run(bot, msg);
+    //End NOPREFIX
+    if (msg.content.indexOf(bot.prefix) !== 0) return;
+    let args = msg.content.slice(bot.prefix.length).trim().split(/ +/g);
+    let command = args.shift().toLowerCase();
+    let cmd = bot.commands.get(command);
+    //Special cases...
+    if(command.match(new RegExp('(\\d|)+d\\d+', "g"))) {
+        args[0] = command;
+        cmd = bot.commands.get("roll");
+    } else if(command == "r") cmd = bot.commands.get("roll");
+    if(command == "rr") cmd = bot.commands.get("multiroll");
+    //End Special Cases
     if (!cmd) return;
     cmd.run(bot, msg, args);
 }
