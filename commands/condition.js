@@ -1,22 +1,28 @@
+const discord = require('discord.js');
 var fs = require('fs');
 var data = JSON.parse(fs.readFileSync('./5eTools/data/conditionsdiseases.json'));
 exports.run = (bot, msg, args) => {
     try {
         var description = "", conditionsData = data;
+        const embeddedMessage = new discord.RichEmbed()
         for(var i = 0; i < conditionsData.condition.length; i++){
-            if(args[0] == conditionsData.condition[i].name.toLowerCase()){
-                if(conditionsData.condition[i].entries[0].type == "list")
-                    for(var j = 0; j < conditionsData.condition[i].entries[0].items.length; j++)
-                        description += conditionsData.condition[i].entries[0].items[j] + "\n";
+            let condition = conditionsData.condition[i];
+
+            if(args[0] == condition.name.toLowerCase()){
+                if(condition.entries[0].type == "list")
+                    condition.entries[0].items.forEach(item => {
+                        description += item;
+                    });
                 else
-                    for(var j = 0; j < conditionsData.condition[i].entries.length; j++)
-                        description += conditionsData.condition[i].entries[j] + "\n";
-                msg.channel.send({embed:{
-                    title: conditionsData.condition[i].name,
-                    description: description
-                }});
+                    condition.entries.forEach(entry =>{
+                        description += `${entry}\n`
+                    });
+                return msg.channel.send(embeddedMessage.setTitle(condition.name)
+                                                       .setDescription(description)
+                                                       .setColor(3447003));
             }
         }
+        msg.channel.send("Condition not found.")
     }
     catch(Error){
         console.log(Error)
