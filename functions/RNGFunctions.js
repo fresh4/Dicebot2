@@ -1,4 +1,11 @@
 var dice = require('./diceFunctions.js')
+/*exports.rollCharacter = function(){
+    var stats = String(this.rollStats()).split(",");
+    var race = races[generateRace()];
+    var dClass = classes[generateClass()];
+    var statsToSort = stats;
+    return assignPoints(dClass, stats, race);
+}*/
 exports.rollStats = function(){
     var score = new Array(0, 0, 0, 0, 0, 0);
     var stat = [];
@@ -38,4 +45,30 @@ exports.totalModMessage = function(mods){
         return `Your total modifier is ${total}; you may be too strong, consider rerolling.`;
     else 
         return `Your total modifier is ${total}`;
+}
+exports.shuffle = function(a){
+    var j, x, i;
+    for (i = a.length; i > 2; i--){
+        j = Math.floor(Math.random() * 4) + 2;
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+exports.numSort = function(a){
+    for(var i = 0; i < a.length; i++){
+        a[i] = parseInt(a[i]);
+    }
+    var temp;
+    for(var i=0; i<6; i++){
+        for(var j=0; j<6-i-1; j++){
+            if( a[j] < a[j+1]){
+            temp = a[j];
+            a[j] = a[j+1];
+            a[j+1] = temp;
+            } 
+        }
+    }
+    return a;
 }
