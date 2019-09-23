@@ -3530,7 +3530,14 @@
 							"type": "entries",
 							"name": "House Agent Bard",
 							"entries": [
-								"The Draconic Prophecy is one of the greatest mysteries of all. You're an observer tasked to keep your eyes open for any sort of manifestation of the Prophecy. You are part detective, part spy. Always keep your eyes open for leads and see where they take you. Sage Wizard. You started out as a scribe and discovered a talent for arcane magic and a love of history. You're eager to explore ancient ruins and lost civilizations, and you're especially interested in uncovering old records, spellbooks, and ancient lore."
+								"The Draconic Prophecy is one of the greatest mysteries of all. You're an observer tasked to keep your eyes open for any sort of manifestation of the Prophecy. You are part detective, part spy. Always keep your eyes open for leads and see where they take you."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Sage Wizard",
+							"entries": [
+								"You started out as a scribe and discovered a talent for arcane magic and a love of history. You're eager to explore ancient ruins and lost civilizations, and you're especially interested in uncovering old records, spellbooks, and ancient lore."
 							]
 						},
 						{
@@ -4275,7 +4282,7 @@
 					"type": "inset",
 					"name": "That-Which-Endures",
 					"entries": [
-						"That-Which-Endures is a nameless, faceless, mysterious entity, something between a multiverse-spanning primordial spirit and an over-god. It represents the amoral and all-encompassing power of entropy\u2014the force that unknowingly and uncaringly changes order into chaos, and that breaks matter and time down into its component parts so that all can be rebuilt. Some who study this entity claim that it is clearly evil and destructive. Others call it simply a necessary part of the cycle of death and rebirth. In the end, though, That-Which-Endures shows precious little interest in what people say about it.\n"
+						"That-Which-Endures is a nameless, faceless, mysterious entity, something between a multiverse-spanning primordial spirit and an over-god. It represents the amoral and all-encompassing power of entropy\u2014the force that unknowingly and uncaringly changes order into chaos, and that breaks matter and time down into its component parts so that all can be rebuilt. Some who study this entity claim that it is clearly evil and destructive. Others call it simply a necessary part of the cycle of death and rebirth. In the end, though, That-Which-Endures shows precious little interest in what people say about it."
 					]
 				},
 				{

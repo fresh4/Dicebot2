@@ -1,11 +1,25 @@
 {
 	"map": [
 		{
+			"id": "BGDIA",
+			"name": "Baldur's Gate Descent Into Avernus",
+			"size": 17900563,
+			"version": "1.0",
+			"dateLastModified": 1568753729
+		},
+		{
 			"id": "CoS",
 			"name": "Curse of Strahd",
 			"size": 19892865,
 			"version": "1.5",
 			"dateLastModified": 1555103370
+		},
+		{
+			"id": "DIP",
+			"name": "Dragon of Icespire Peak",
+			"size": 16746559,
+			"version": "1.0",
+			"dateLastModified": 1567862109
 		},
 		{
 			"id": "GoS",
@@ -27,6 +41,13 @@
 			"size": 3474873,
 			"version": "1.5",
 			"dateLastModified": 1543605262
+		},
+		{
+			"id": "OotW",
+			"name": "The Orrery of the Wanderer",
+			"size": 10075254,
+			"version": "",
+			"dateLastModified": 1567710260
 		},
 		{
 			"id": "PotA",
@@ -55,6 +76,13 @@
 			"size": 21299679,
 			"version": "2.1",
 			"dateLastModified": 1555103370
+		},
+		{
+			"id": "STSS",
+			"name": "Stranger Things Starter Set",
+			"size": 2207762,
+			"version": "1.0",
+			"dateLastModified": 1563228537
 		},
 		{
 			"id": "TftYP-AtG",

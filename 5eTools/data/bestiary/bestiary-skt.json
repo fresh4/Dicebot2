@@ -1185,7 +1185,7 @@
 				{
 					"ac": 21,
 					"from": [
-						"{@item plate armor +3|dmg|+3 plate armor}"
+						"{@item plate armor +3||+3 plate armor}"
 					]
 				}
 			],
@@ -2310,7 +2310,7 @@
 				{
 					"name": "Create Fire Elemental (Costs 3 Actions)",
 					"entries": [
-						"Maegera's hit points are reduced by 50 as part of it separates and becomes a fire elemental with 102 hit points. The fire element appears in an unoccupied space within 15 feet of Maegera and acts on Maegera's initiative count. Maegera can't use this action if it has 50 hit points or fewer. The fire element obeys Maegera's commands and fights until destroyed."
+						"Maegera's hit points are reduced by 50 as part of it separates and becomes a {@creature fire elemental} with 102 hit points. The fire element appears in an unoccupied space within 15 feet of Maegera and acts on Maegera's initiative count. Maegera can't use this action if it has 50 hit points or fewer. The fire element obeys Maegera's commands and fights until destroyed."
 					]
 				}
 			],
@@ -4936,6 +4936,7 @@
 		},
 		{
 			"name": "Claugiyliamatar",
+			"isNamedCreature": true,
 			"isNpc": true,
 			"source": "SKT",
 			"_copy": {
@@ -5011,7 +5012,18 @@
 				"I",
 				"CD"
 			],
-			"page": 96
+			"page": 96,
+			"otherSources": [
+				{
+					"source": "DC"
+				},
+				{
+					"source": "SLW"
+				},
+				{
+					"source": "SDW"
+				}
+			]
 		},
 		{
 			"name": "Clockwork Mule",
@@ -6131,7 +6143,7 @@
 						"items": {
 							"name": "Roleplaying Information",
 							"entries": [
-								"A skilled rider of rocs and whales, Shaldoor believes that\n\nAnnam the All-Father shattered the ordning to push giants into war against the dragons. She is thrilled to be on the front lines in this great conflict!",
+								"A skilled rider of rocs and whales, Shaldoor believes that Annam the All-Father shattered the ordning to push giants into war against the dragons. She is thrilled to be on the front lines in this great conflict!",
 								"Ideal: \"Giants are made for war\u2014storm giants most of all!\"",
 								"Bond: \"Ostoria is gone, yet I long for the return of a mighty giant empire.\"",
 								"Flaw: \"I like to rain destruction down upon my enemies, and I never show them mercy.\""

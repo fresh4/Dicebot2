@@ -273,7 +273,7 @@
 		{
 			"name": "Blessing of Valhalla",
 			"entries": [
-				"This blessing grants you the power to summon spirit warriors, as if you had blown a {@item horn of valhalla, silver|DMG|silver horn of Valhalla}. Once you use this blessing, you can't use it again until 7 days have passed."
+				"This blessing grants you the power to summon spirit warriors, as if you had blown a {@item horn of valhalla, silver||silver horn of Valhalla}. Once you use this blessing, you can't use it again until 7 days have passed."
 			],
 			"source": "DMG",
 			"type": "Blessing",
@@ -449,6 +449,14 @@
 			"source": "GGR",
 			"type": "Charm",
 			"page": 174
+		},
+		{
+			"name": "Charm of the Storm",
+			"entries": [
+				"You become charged with the power of the storm, to the extent that tiny sparks crackle in your eyes. You can cast the {@spell lightning bolt} spell (3rd-level version) as an action. Once used three times, the charm vanishes from you."
+			],
+			"source": "DIP",
+			"type": "Charm"
 		},
 		{
 			"name": "I'jin",

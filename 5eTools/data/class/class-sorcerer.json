@@ -11,6 +11,8 @@
 				"con",
 				"cha"
 			],
+			"spellcastingAbility": "cha",
+			"casterProgression": "full",
 			"classTableGroups": [
 				{
 					"colLabels": [
@@ -981,7 +983,7 @@
 													],
 													[
 														"37-38",
-														"{@dice 1d6} {@creature flumph|MM|flumphs} controlled by the DM appear in unoccupied spaces within 60 feet of you and are {@condition frightened} of you. They vanish after 1 minute."
+														"{@dice 1d6} {@creature flumph||flumphs} controlled by the DM appear in unoccupied spaces within 60 feet of you and are {@condition frightened} of you. They vanish after 1 minute."
 													],
 													[
 														"39-40",
@@ -1387,6 +1389,122 @@
 					],
 					"source": "UARevisedSubclasses",
 					"shortName": "Favored Soul v3 (UA)"
+				},
+				{
+					"name": "Storm Sorcery (UA)",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Storm Sorcery",
+								"entries": [
+									"Your innate magic comes from the power of elemental air. Perhaps you were born during a howling gale so powerful that folk still tell stories of it. Your lineage might include the influence of potent air creatures such as vaati or djinni. Whatever the case, the magic of the storm permeates your soul.",
+									"Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by sahuagin, pirates, and other waterborne threats.",
+									{
+										"type": "entries",
+										"name": "Stormborn",
+										"entries": [
+											"The arcane magic you command is infused with elemental air. You can speak, read, and write Primordial. In addition, you gain the following spells at the listed sorcerer level. These spells do not count against the number of sorcerer spells you know.",
+											{
+												"type": "table",
+												"caption": "Storm Sorcerer Bonus Spells",
+												"colLabels": [
+													"Sorcerer Level",
+													"Spells"
+												],
+												"colStyles": [
+													"col-1 text-center",
+													"col-11"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell Fog cloud}, {@spell thunderwave}"
+													],
+													[
+														"3rd",
+														"{@spell Gust of wind}, {@spell levitate}"
+													],
+													[
+														"5th",
+														"{@spell Call lightning}, {@spell sleet storm}"
+													],
+													[
+														"7th",
+														"{@spell Conjure minor elementals}*, {@spell ice storm}"
+													],
+													[
+														"9th",
+														"{@spell Conjure elemental}**"
+													]
+												],
+												"footnotes": [
+													"* Unless you gain this spell from another source, you can summon only {@creature smoke mephit||smoke mephits}, {@creature steam mephit||steam mephits}, {@creature ice mephit||ice mephits}, or {@creature dust mephit||dust mephits} with it.",
+													"**Unless you gain this spell from another source, you can summon only {@creature air elemental||air elementals} with it."
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Tempestuous Magic",
+										"entries": [
+											"At 1st level, you are attuned to elemental air magic. Whenever you cast a spell other than a cantrip during your turn, whirling gusts of elemental air surround you. You can use a bonus action to fly 10 feet without provoking opportunity attacks."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Heart of the Storm",
+										"entries": [
+											"At 6th level, you gain resistance to lightning and thunder damage. Whenever you cast a spell other than a cantrip that deals lightning or thunder damage, a stormy aura surrounds you. In addition to the spell's effects, creatures of your choice within 10 feet of you take lightning or thunder damage (choose each time this ability activates) equal to half your sorcerer level."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Storm Guide",
+										"entries": [
+											"At 6th level, you gain the ability to subtly control the weather around you.",
+											"If it is raining, you can use an action to cause the rain to stop falling in a 20‐foot radius centered on you. You can end this effect as a bonus action.",
+											"If it is windy, you can use a bonus action each round to choose the direction that the wind blows in a 100‐foot radius around you. The wind blows in that direction until the end of your next turn. You have no ability to alter the speed of the wind."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Storm's Fury",
+										"entries": [
+											"At 14th level, the storm energy you channel through your magic seethes within your soul. When you are hit by a melee attack, you can use your reaction to deal lightning damage to the attacker equal to your sorcerer level. The attacker must also make a Strength saving throw, with a DC equal to 8 + your Charisma bonus + your proficiency bonus. On a failed save, the attacker is pushed in a straight line 20 feet away from you."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Wind Soul",
+										"entries": [
+											"At 18th level, you gain a flying speed of 60 feet and immunity to lightning and thunder damage. As an action, you can reduce your flying speed to 30 feet for one hour and choose a number of creatures within 30 feet of you equal to 3 + your Charisma modifier. The chosen creatures gain a flying speed of 30 feet for 1 hour."
+										]
+									}
+								]
+							}
+						]
+					],
+					"source": "UAWaterborneAdventures",
+					"shortName": "Storm (UA)"
 				},
 				{
 					"name": "Storm Sorcery",
@@ -2478,6 +2596,139 @@
 					],
 					"source": "UAGiantSoulSorcerer",
 					"shortName": "Giant Soul (UA)"
+				},
+				{
+					"name": "Aberrant Mind (UA)",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Aberrant Mind",
+								"entries": [
+									"An alien influence has wrapped its tendrils around you, warping you in both body and mind. Perhaps a psychic splinter lodged in your psyche after you suffered domination by an aboleth. Maybe you were born somewhere tainted by the Far Realm, a planar blot that changed you forever. Or perhaps mind flayers kidnapped you, subjecting you to the nightmarish process of ceremorphosis\u2014but the transformation failed and left you altered.",
+									{
+										"type": "inset",
+										"name": "Unique Disturbance",
+										"entries": [
+											"Regardless of its genesis, the Aberrant Mind origin imparts a sense of eeriness to the character or their surroundings. This can be as subtle as when your sorcerer reads a creature's mind with detect thoughts, anyone in their immediate vicinity experiences a faint but pervasive sense of dread. Or it could be unmistakable, such as sweating a sheen of viscous mucus when you're scared, or your pupils squirming when you're excited. Consider the potentially unspeakable source of your sorcerer's powers, and use that as a guide to weave threads of eeriness throughout your magic."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Invasive Thoughts",
+										"entries": [
+											"At 1st level, you gain the ability to use a bonus action to magically create a telepathic link with one creature you can see within 30 feet of you. Until the link ends, you can telepathically speak to the target through the link, and if it understands at least one language, it can speak telepathically to you. The link lasts for 10 minutes, and it ends early if you are {@condition incapacitated} or die, or if you use another bonus action to break the link or to establish this link with a different creature."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Psionic Spells",
+										"entries": [
+											"Starting at 1st level, your aberrant nature changes your mind in subtle but profound ways. You learn additional spells when you reach certain levels in this class, as shown on the Psionic Spells table. The spell counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
+											{
+												"type": "table",
+												"caption": "Psionic Spells",
+												"colLabels": [
+													"Sorcerer Level",
+													"Spells"
+												],
+												"colStyles": [
+													"col-3 text-center",
+													"col-9"
+												],
+												"rows": [
+													[
+														"1st",
+														"{@spell arms of Hadar}, {@spell dissonant whispers}"
+													],
+													[
+														"3rd",
+														"{@spell calm emotions}, {@spell detect thoughts}"
+													],
+													[
+														"5th",
+														"{@spell hunger of Hadar}, {@spell sending}"
+													],
+													[
+														"7th",
+														"{@spell compulsion}, {@spell Evard's black tentacles}"
+													],
+													[
+														"9th",
+														"{@spell modify memory}, {@spell Rary's telepathic bond}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Warped Being",
+										"entries": [
+											"Starting at 1st level, your aberrant origin protects you from harm. Your body might have a coating of viscous slime, tough hide, scales, or an invisible psionic barrier (choose the form of protection when you gain this feature). Whatever form the protection takes, your AC equals 13 + your Dexterity modifier while you aren't wearing armor."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Psionic Sorcery",
+										"entries": [
+											"Beginning at 6th level, when you cast any of the spells gained from your Psionic Spells feature, you can cast it by expending a spell slot as normal or by spending a number of sorcery points equal to the spell's level. If you cast the spell using sorcery points, it requires no components."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Psychic Defenses",
+										"entries": [
+											"At 6th level, you gain resistance to psychic damage, and you have advantage on saving throws against being {@condition charmed} or {@condition frightened}."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Revelation in Flesh",
+										"entries": [
+											"Beginning at 14th level, you can unleash the aberrant truth hidden within your flesh. As a bonus action, you can spend 1 or more sorcery points to magically transform your body for 1 minute. For each sorcery point you spend, you can gain one of the following benefits of your choice, the effects of which last until the transformation ends:",
+											{
+												"type": "list",
+												"items": [
+													"You gain a swimming speed equal to your walking speed and the ability to breathe water. Gills grow from your neck or fan out from behind your ears, your fingers become webbed, or you grow lashing cilia that extend through your clothing.",
+													"You gain a flying speed equal to your walking speed and can hover. As you fly, your skin glistens with mucus.",
+													"Your body, along with any equipment you are wearing or carrying, becomes slimy and pliable. You can move through any space as narrow as 1 inch without squeezing, and you can spend 5 feet of movement to escape from nonmagical restraints or being {@condition grappled}.",
+													"Your eyes turn black or become writhing sensory tendrils. You are aware of the location of any hidden or {@condition invisible} creature within 60 feet of you."
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Warp Reality",
+										"entries": [
+											"At 18th level, you become the focal point of a reality-warping anomaly. As an action, you can magically radiate a transparent, 20-foot-radius aura for 1 minute. This might take the form of a sphere of rippling psychic energy, a fluctuating amoebic gel, an extrusion of ephemeral parasites, or some other manifestation. Other creatures treat the aura as difficult terrain, and when they start their turn in it, they take {@dice 2d10} psychic damage. When you activate this feature, you can choose any number of creatures you can see to be unaffected by the aura.",
+											"As a bonus action, you can end the aura early. If you do so, you and any number of creatures you choose within the aura are teleported to a location you can see within 1 mile of you. Each creature must appear within 20 feet of you and in an unoccupied space. An unwilling creature that succeeds on a Charisma saving throw against your spell save DC is not teleported. Once you use this feature, you can't use it again until you finish a long rest."
+										]
+									}
+								]
+							}
+						]
+					],
+					"source": "UASorcererAndWarlock",
+					"shortName": "Aberrant Mind (UA)"
 				}
 			],
 			"fluff": [

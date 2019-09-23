@@ -139,7 +139,7 @@
 									"type": "inset",
 									"name": "Yugoloths: Fickle Allies",
 									"entries": [
-										"Yugoloths are major players on both sides of the Blood War. The death of a yugoloth is meaningless when it occurs in the Abyss or the Nine Hells, and thus these mercenaries freely give their all in any battle even when it means fighting other yugoloths. Demons and devils both know that a yugoloth's loyalty is constantly for sale-even during a conflict on the battlefield-and a yugoloth never agrees to a contract that prohibits it from seeking a better offer. This set of circumstances prompts hellish and abyssal armies to carry war chests with them in the hope of buying the services of the yugoloths on the other side. The war chests themselves thus become highly prized targets, which in turn leads to protective measures, such as valuables hidden in {@item bag of holding|dmg|bags of holding} or empty treasure containers used to lure the enemy into a trap.",
+										"Yugoloths are major players on both sides of the Blood War. The death of a yugoloth is meaningless when it occurs in the Abyss or the Nine Hells, and thus these mercenaries freely give their all in any battle even when it means fighting other yugoloths. Demons and devils both know that a yugoloth's loyalty is constantly for sale-even during a conflict on the battlefield-and a yugoloth never agrees to a contract that prohibits it from seeking a better offer. This set of circumstances prompts hellish and abyssal armies to carry war chests with them in the hope of buying the services of the yugoloths on the other side. The war chests themselves thus become highly prized targets, which in turn leads to protective measures, such as valuables hidden in {@item bag of holding||bags of holding} or empty treasure containers used to lure the enemy into a trap.",
 										"Regardless of the side that hires them, yugoloths almost never fight on their home plane of Gehenna despite the fact that both sides sometimes traverse it and many battles of the Blood War are fought there. A yugoloth killed in Gehenna can't be restored to life except through an exceptional ritual, so the sums required to entice one to fight on its home plane are astronomical... and making such a bargain always draws the attention of the ultroloths."
 									]
 								}
@@ -737,16 +737,16 @@
 						{
 							"type": "list",
 							"items": [
-								"{@cult Cult of Asmodeus|MTF}",
-								"{@cult Cult of Baalzebul|MTF}",
-								"{@cult Cult of Dispater|MTF}",
-								"{@cult Cult of Fierna|MTF}",
-								"{@cult Cult of Geryon|MTF}",
-								"{@cult Cult of Glasya|MTF}",
-								"{@cult Cult of Levistus|MTF}",
-								"{@cult Cult of Mammon|MTF}",
-								"{@cult Cult of Mephistopheles|MTF}",
-								"{@cult Cult of Zariel|MTF}"
+								"{@cult Cult of Asmodeus}",
+								"{@cult Cult of Baalzebul}",
+								"{@cult Cult of Dispater}",
+								"{@cult Cult of Fierna}",
+								"{@cult Cult of Geryon}",
+								"{@cult Cult of Glasya}",
+								"{@cult Cult of Levistus}",
+								"{@cult Cult of Mammon}",
+								"{@cult Cult of Mephistopheles}",
+								"{@cult Cult of Zariel}"
 							]
 						}
 					]
@@ -1390,14 +1390,14 @@
 						{
 							"type": "list",
 							"items": [
-								"{@boon Baphomet|MTF}",
-								"{@boon Demogorgon|MTF}",
-								"{@boon Fraz-Urb'luu|MTF}",
-								"{@boon Graz'zt|MTF}",
-								"{@boon Juiblex|MTF}",
-								"{@boon Orcus|MTF}",
-								"{@boon Yeenoghu|MTF}",
-								"{@boon Zuggtmoy|MTF}"
+								"{@boon Baphomet}",
+								"{@boon Demogorgon}",
+								"{@boon Fraz-Urb'luu}",
+								"{@boon Graz'zt}",
+								"{@boon Juiblex}",
+								"{@boon Orcus}",
+								"{@boon Yeenoghu}",
+								"{@boon Zuggtmoy}"
 							]
 						},
 						"A typical demon can impart boons to a number of creatures equal to the demon's number of Hit Dice. In contrast, demon lords have no limit on the number of creatures that can receive their boons.",
@@ -3076,52 +3076,7 @@
 					"page": 64,
 					"entries": [
 						"This section provides tables for players and DMs who want to choose or randomly generate details about elves",
-						{
-							"type": "table",
-							"caption": "Elven Trinkets",
-							"colLabels": [
-								"d8",
-								"Trinket"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1",
-									"A small notebook that causes anything written in it to disappear after 1 hour"
-								],
-								[
-									"2",
-									"A crystal lens made of ivory and gold that causes anything observed through it to appear to be surrounded by motes of multicolored light"
-								],
-								[
-									"3",
-									"A small golden pyramid inscribed with elven symbols and about the size of a walnut"
-								],
-								[
-									"4",
-									"A cloak pin made from enamel in the shape of a butterfly; when you take the pin off, it turns into a real butterfly, and returns when you are ready to put your cloak back on again"
-								],
-								[
-									"5",
-									"A golden compass that points toward the nearest portal to the Feywild within 10 miles"
-								],
-								[
-									"6",
-									"A small silver spinning top that, when spun, endlessly spins until interrupted"
-								],
-								[
-									"7",
-									"A small songbird made of enamel, gold wire, and precious stone; uttering the songbird's name in Elvish causes the trinket to emit that bird's birdsong"
-								],
-								[
-									"8",
-									"A small enamel flower that, when put in one's hair, animates, tying back the wearer's hair with a living vine with flowers; plucking a single flower from this vine returns it to its inanimate form"
-								]
-							]
-						},
+						"{@item Elven Trinket|MTF|Elven Trinkets}",
 						{
 							"type": "table",
 							"caption": "Elf (Non-drow) Adventurer Story Hooks",
@@ -6810,7 +6765,7 @@
 											"type": "inset",
 											"name": "Halflings of the Multiverse",
 											"entries": [
-												"In the worlds of DUNGEONS & DRAGONS, many kinds of halflings exist, and they vary greatly from place to place.",
+												"In the worlds of Dungeons & Dragons, many kinds of halflings exist, and they vary greatly from place to place.",
 												"In the Forgotten Realms, halflings are of the lightfoot and strongheart varieties. Lightfoot halflings are taller and thinner than stronghearts, although \"thinner\" is a relative word by halfling standards. Lightfoots prefer to live on the move in traveling bands, and their members are most likely to take to a life of adventuring. Stronghearts are homebodies by nature, most of them likely to spend their lives tucked away in their secluded villages, and are also quite happy living in the communities of other races, working as farmers, innkeepers, cobblers and bakers.",
 												"In the Dragonlance setting, kender are the counterparts of halflings. Possessed of shorter life spans than their counterparts on other worlds, the kender have pointed ears and become wizened as they age. Great mimics and vocalists, kender are consummate storytellers, but they often speak too fast for other races not accustomed to their frenetic cadence.",
 												"Halflings in the world of Greyhawk live in underground burrows or small cottages in the grasslands or hills. They are lightly covered with hair over most of their bodies, especially on the backs of their hands and the tops of their feet, and they rarely wear shoes. The three subraces are the hairfeet, which are the most numerous; the tallfellows, which are the tallest and least athletic of the halflings, somewhat resembling elves; and the stouts, which are more akin to dwarves in temperament and stature than the other two.",

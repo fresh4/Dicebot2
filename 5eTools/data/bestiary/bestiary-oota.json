@@ -578,7 +578,7 @@
 				{
 					"ac": 20,
 					"from": [
-						"{@item dwarven plate|dmg}"
+						"{@item dwarven plate}"
 					]
 				}
 			],
@@ -4115,7 +4115,7 @@
 			],
 			"hp": {
 				"average": 44,
-				"formula": "4d10 + 22"
+				"formula": "4d10 + 4"
 			},
 			"speed": {
 				"walk": 30,
@@ -4432,7 +4432,7 @@
 			"dex": 12,
 			"con": 18,
 			"int": 8,
-			"wis": 23,
+			"wis": 12,
 			"cha": 12,
 			"skill": {
 				"athletics": "+6",
