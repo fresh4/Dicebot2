@@ -1,4 +1,5 @@
 const discord = require('discord.js');
+var parse = require('../functions/parseFunctions.js');
 var data = require('../5eTools/data/conditionsdiseases.json');
 exports.run = (bot, msg, args) => {
     try {
@@ -9,14 +10,14 @@ exports.run = (bot, msg, args) => {
             if(args[0] == condition.name.toLowerCase()){
                 if(condition.entries[0].type == "list")
                     condition.entries[0].items.forEach(item => {
-                        description += item;
+                        description += `• ${item}\n`;
                     });
                 else
                     condition.entries.forEach(entry =>{
                         description += `${entry}\n`
                     });
                 return msg.channel.send(embeddedMessage.setTitle(condition.name)
-                                                       .setDescription(description)
+                                                       .setDescription(parse.removeTags(description))
                                                        .setColor(3447003));
             }
         }
