@@ -1,16 +1,1409 @@
-"use strict";const HASH_HIDE_FEATURES="hideclassfs:",HASH_SHOW_FLUFF="showfluff:",HASH_SOURCES="sources:",HASH_BOOK_VIEW="bookview:",HASH_SHOW_PILL_SOURCES="pillsource:",CLSS_FEATURE_LINK="feature-link",CLSS_ACTIVE="sc_pill--active",CLSS_SUBCLASS_PILL="sc_pill__subclass",CLSS_PANEL_LINK="pnl-link",CLSS_CLASS_FEATURES_ACTIVE="cf-active",CLSS_FLUFF_ACTIVE="fluff-active",CLSS_SUBCLASS_PREFIX="subclass-prefix",CLSS_CLASS_FEATURE="class-feature",CLSS_CLASS_FLUFF="class-fluff",CLSS_GAIN_SUBCLASS_FEATURE="gain-subclass-feature",CLSS_FRESH_UA="fresh-ua",ID_CLASS_FEATURES_TOGGLE="cf-toggle",ID_FLUFF_TOGGLE="fluff-toggle",ID_OTHER_SOURCES_TOGGLE="os-toggle",STR_PROF_NONE="none",STR_SOURCES_OFFICIAL="0",STR_SOURCES_MIXED="1",STR_SOURCES_ALL="2",STRS_SOURCE_STATES=["Official Sources","Most Recent","All Sources"],ATB_DATA_FEATURE_LINK="data-flink",ATB_DATA_FEATURE_ID="data-flink-id",ATB_DATA_SC_LIST="data-subclass-list";let subclassComparisonView,filterBox;function loadHash(a){HashLoad.loadHash(a)}function loadSubHash(a){a=filterBox.setFromSubHashes(a),SubClassLoader.loadSubHash(a)}class ClassDisplay{}ClassDisplay.curClass=null;function _isNonStandardSource(a){return!a._isStandardSource&&SourceUtil.isNonstandardSource(a.source)}class FeatureTable{static getTableDataScData(a,b){return a+ATB_DATA_PART_SEP+b}}class ClassList{static handleFilterChange(){const a=filterBox.getValues();ClassList.classList.filter(function(b){const d=ClassData.classes[$(b.elm).attr(FLTR_ID)];return filterBox.toDisplay(a,d._fSource)})}static addClasses(a){const b=ListUtil.getSearchTermAndReset(ClassList.classList);ClassList._appendClassesToList(a),ClassList.classList.reIndex(),b&&ClassList.classList.search(b),ClassList.classList.sort("name"),filterBox.render(),ClassList.handleFilterChange()}static _appendClassesToList(a){const b=ClassData.classes.length-a.length,c=$("ul.classes");let d="";for(let c=0;c<a.length;c++){const e=a[c];if(ExcludeUtil.isExcluded(e.name,"class",e.source))continue;e._fSource=e.source===SRC_UASIK?"Sidekicks":BrewUtil.hasSourceJson(e.source)?"Homebrew":e._isStandardSource?"Core":SourceUtil.isNonstandardSource(e.source)?"Others":"Core",sourceFilter.addItem(e._fSource);const f=c+b;d+=ClassList._renderClass(e,f)}c.append(d)}static _renderClass(a,b){return`<li class="row" ${FLTR_ID}="${b}" ${a.uniqueId?`data-unique-id="${a.uniqueId}"`:""}>
-				<a id="${b}" href="${HashLoad.getClassHash(a)}" title="${a.name}">
-					<span class="name col-8 pl-0">${a.name}</span>
-					<span class="source col-4 text-center ${Parser.sourceJsonToColor(a.source)}" title="${Parser.sourceJsonToFull(a.source)} pr-0" ${BrewUtil.sourceJsonToStyle(a.source)}>
-						${Parser.sourceJsonToAbv(a.source)}
+"use strict";
+
+const HASH_HIDE_FEATURES = "hideclassfs:";
+const HASH_SHOW_FLUFF = "showfluff:";
+const HASH_SOURCES = "sources:";
+const HASH_BOOK_VIEW = "bookview:";
+const HASH_SHOW_PILL_SOURCES = "pillsource:";
+
+const CLSS_FEATURE_LINK = "feature-link";
+const CLSS_ACTIVE = "sc_pill--active";
+const CLSS_SUBCLASS_PILL = "sc_pill__subclass";
+const CLSS_PANEL_LINK = "pnl-link";
+const CLSS_CLASS_FEATURES_ACTIVE = "cf-active";
+const CLSS_FLUFF_ACTIVE = "fluff-active";
+const CLSS_SUBCLASS_PREFIX = "subclass-prefix";
+const CLSS_CLASS_FEATURE = "class-feature";
+const CLSS_CLASS_FLUFF = "class-fluff";
+const CLSS_GAIN_SUBCLASS_FEATURE = "gain-subclass-feature";
+const CLSS_FRESH_UA = "fresh-ua";
+
+const ID_CLASS_FEATURES_TOGGLE = "cf-toggle";
+const ID_FLUFF_TOGGLE = "fluff-toggle";
+const ID_OTHER_SOURCES_TOGGLE = "os-toggle";
+
+const STR_PROF_NONE = "none";
+const STR_SOURCES_OFFICIAL = "0";
+const STR_SOURCES_MIXED = "1";
+const STR_SOURCES_ALL = "2";
+const STRS_SOURCE_STATES = ["Official Sources", "Most Recent", "All Sources"];
+
+const ATB_DATA_FEATURE_LINK = "data-flink";
+const ATB_DATA_FEATURE_ID = "data-flink-id";
+const ATB_DATA_SC_LIST = "data-subclass-list";
+
+let subclassComparisonView;
+let filterBox;
+
+// Exported to hist.js, gets called on hash change
+function loadHash (id) {
+	HashLoad.loadHash(id);
+}
+
+// Exported to hist.js
+function loadSubHash (sub) {
+	sub = filterBox.setFromSubHashes(sub);
+	SubClassLoader.loadSubHash(sub);
+}
+
+class ClassDisplay {}
+ClassDisplay.curClass = null;
+
+function _isNonStandardSource (entry) {
+	return !entry._isStandardSource && SourceUtil.isNonstandardSource(entry.source);
+}
+
+class FeatureTable {
+	/**
+	 * Get the value used to identify this subclass in the feature table
+	 *
+	 * @param scName
+	 * @param scSource
+	 * @returns {string}
+	 */
+	static getTableDataScData (scName, scSource) {
+		return scName + ATB_DATA_PART_SEP + scSource;
+	}
+}
+
+class ClassList {
+	static handleFilterChange () {
+		const f = filterBox.getValues();
+		ClassList.classList.filter(function (item) {
+			const c = ClassData.classes[$(item.elm).attr(FLTR_ID)];
+			return filterBox.toDisplay(
+				f,
+				c._fSource
+			);
+		});
+	}
+
+	static addClasses (newClasses) {
+		const lastSearch = ListUtil.getSearchTermAndReset(ClassList.classList);
+
+		ClassList._appendClassesToList(newClasses);
+
+		ClassList.classList.reIndex();
+		if (lastSearch) ClassList.classList.search(lastSearch);
+		ClassList.classList.sort("name");
+
+		filterBox.render();
+		ClassList.handleFilterChange();
+	}
+
+	static _appendClassesToList (newClasses) {
+		const previousClassAmount = ClassData.classes.length - newClasses.length;
+		const $classTable = $("ul.classes");
+		let tempString = "";
+		for (let i = 0; i < newClasses.length; i++) {
+			const curClass = newClasses[i];
+			if (ExcludeUtil.isExcluded(curClass.name, "class", curClass.source)) continue;
+
+			if (curClass.source === SRC_UASIK) curClass._fSource = "Sidekicks";
+			else if (BrewUtil.hasSourceJson(curClass.source)) curClass._fSource = "Homebrew";
+			else if (curClass._isStandardSource) curClass._fSource = "Core";
+			else if (SourceUtil.isNonstandardSource(curClass.source)) curClass._fSource = "Others";
+			else curClass._fSource = "Core";
+
+			sourceFilter.addItem(curClass._fSource);
+			const id = i + previousClassAmount;
+			tempString += ClassList._renderClass(curClass, id);
+		}
+		$classTable.append(tempString);
+	}
+
+	static _renderClass (classToRender, id) {
+		return `<li class="row" ${FLTR_ID}="${id}" ${classToRender.uniqueId ? `data-unique-id="${classToRender.uniqueId}"` : ""}>
+				<a id="${id}" href="${HashLoad.getClassHash(classToRender)}" title="${classToRender.name}">
+					<span class="name col-8 pl-0">${classToRender.name}</span>
+					<span class="source col-4 text-center ${Parser.sourceJsonToColor(classToRender.source)}" title="${Parser.sourceJsonToFull(classToRender.source)} pr-0" ${BrewUtil.sourceJsonToStyle(classToRender.source)}>
+						${Parser.sourceJsonToAbv(classToRender.source)}
 					</span>
-					<span class="uniqueid hidden">${a.uniqueId?a.uniqueId:b}</span>
+					<span class="uniqueid hidden">${classToRender.uniqueId ? classToRender.uniqueId : id}</span>
 				</a>
-			</li>`}}ClassList.classList=void 0;class ClassData{static addClassData(a){const b=a.class;if(b&&b.length&&(b.forEach(a=>{a.subclasses=a.subclasses||[],a.subclasses.forEach(b=>{b.source=b.source||a.source,b.shortName=b.shortName||b.name})}),ClassData.sortSubclasses(b),b.filter(a=>SourceUtil.isNonstandardSource(a.source)||BrewUtil.hasSourceJson(a.source)).forEach(ClassData.markSameSourceSubclassesAndFluffAsForceStandard),ClassData.classes=ClassData.classes.concat(b),ClassList.addClasses(b),!History.initialLoad)){if(a.class.some(a=>a.uniqueId)){const a=filterBox.getValues();a.Source.Homebrew=1,filterBox.setFromValues({Source:a.Source})}History.hashChange()}}static addSubclassData(a){if(a.subclass&&a.subclass.length){const b=a.subclass;b.forEach(a=>{const b=ClassData.classes.find(b=>b.name.toLowerCase()===a.class.toLowerCase()&&b.source.toLowerCase()===(a.classSource||SRC_PHB).toLowerCase());return b?void(b.subclasses=b.subclasses.concat(a),ClassData.sortSubclasses([b])):void JqueryUtil.doToast({content:`Could not add subclass; could not find class with name: ${a.class}`,type:"danger"})}),History.initialLoad||History.hashChange(!0)}}static sortSubclasses(a){for(const b of a)b.subclasses&&(b.subclasses=b.subclasses.sort((c,a)=>SortUtil.ascSort(c.name,a.name)))}static markSameSourceSubclassesAndFluffAsForceStandard(a){a.fluff&&a.fluff.filter(b=>b.source===a.source).forEach(a=>a._isStandardSource=!0),a.subclasses.filter(b=>b.source===a.source).forEach(a=>a._isStandardSource=!0)}static cleanScSource(a){return Parser._getSourceStringFromSource(a)}}ClassData.classes=[];class FeatureDescription{static getSubclassStyles(a){const b=[CLSS_SUBCLASS_FEATURE],c=_isNonStandardSource(a)||SourceUtil.hasBeenReprinted(a.shortName,a.source)||a.source===SRC_DMG;return c&&b.push(CLSS_NON_STANDARD_SOURCE),FeatureDescription.subclassIsFreshUa(a)&&b.push(CLSS_FRESH_UA),BrewUtil.hasSourceJson(ClassData.cleanScSource(a.source))&&b.push(CLSS_HOMEBREW_SOURCE),b}static subclassIsFreshUa(a){if(_isNonStandardSource(a)||SourceUtil.hasBeenReprinted(a.shortName,a.source)){if("Knowledge Domain (PSA)"===a.name&&a.source===SRC_PSA)return!1;if("Deep Stalker (UA)"===a.name&&a.source===SRC_UALDR)return!1;if(a.name.includes("Favored Soul"))return!1;if("Shadow (UA)"===a.name&&a.source===SRC_UALDR)return!1;if("The Undying Light (UA)"===a.name&&a.source===SRC_UALDR)return!1;const b=ClassDisplay.curClass.subclasses.find(b=>!_isNonStandardSource(b)&&b.name.replace(/(v\d+)?\s*\((UA|SCAG|PSA|Livestream)\)/,"").trim()===a.name);if(b)return!1}return!0}}class HashLoad{static loadHash(a){function b(a){const b=Parser.numberToString(a.choose);return 18===a.from.length?`Choose any ${b}.`:`Choose ${b} from ${a.from.map(a=>Renderer.get().render(`{@skill ${a}}`)).joinConjunct(", "," and ")}.`}renderer.setFirstSection(!0),$("#pagecontent").html(tableDefault),$("#statsprof").html(statsProfDefault),$("#classtable").html(classTableDefault),$(`#msg-no-class-selected`).remove(),$(`#classtable`).show(),$(`#button-wrapper`).show(),$(`#statsprof`).show(),$(`#sticky-nav`).show(),ClassDisplay.curClass=ClassData.classes[a];const c=$(`<div class="cls__btn-toggle-sidebar">[\u2012]</div>`).click(()=>{const a=c.text().includes("+");$(`.cls__sidebar-visible`).toggle(a),c.text(`[${a?"\u2012":"+"}]`)});if($("th#nameTable").html(ClassDisplay.curClass.name),$("th#nameSummary").empty().append($$`<div class="split flex-v-center">
+			</li>`;
+	}
+}
+ClassList.classList = undefined;
+
+class ClassData {
+	static addClassData (data) {
+		const newClasses = data.class;
+		if (!newClasses || !newClasses.length) return;
+
+		newClasses.forEach(c => {
+			c.subclasses = c.subclasses || [];
+			c.subclasses.forEach(sc => {
+				sc.source = sc.source || c.source; // default subclasses to same source as parent
+				sc.shortName = sc.shortName || sc.name; // ensure shortName
+			});
+		});
+		ClassData.sortSubclasses(newClasses);
+
+		newClasses.filter(c => SourceUtil.isNonstandardSource(c.source) || BrewUtil.hasSourceJson(c.source))
+			.forEach(ClassData.markSameSourceSubclassesAndFluffAsForceStandard);
+
+		ClassData.classes = ClassData.classes.concat(newClasses);
+
+		ClassList.addClasses(newClasses);
+
+		if (!Hist.initialLoad) {
+			if (data.class.some(c => c.uniqueId)) {
+				const filterVals = filterBox.getValues();
+				filterVals.Source.Homebrew = 1;
+				filterBox.setFromValues({Source: filterVals.Source});
+			}
+			Hist.hashChange();
+		}
+	}
+
+	static addSubclassData (data) {
+		if (!data.subclass || !data.subclass.length) return;
+
+		const scData = data.subclass;
+		scData.forEach(subClass => {
+			// get the class
+			const c = ClassData.classes.find(c => c.name.toLowerCase() === subClass.class.toLowerCase() && c.source.toLowerCase() === (subClass.classSource || SRC_PHB).toLowerCase());
+			if (!c) {
+				JqueryUtil.doToast({
+					content: `Could not add subclass; could not find class with name: ${subClass.class}`,
+					type: "danger"
+				});
+				return;
+			}
+
+			c.subclasses = c.subclasses.concat(subClass);
+
+			ClassData.sortSubclasses([c]);
+		});
+		if (!Hist.initialLoad) Hist.hashChange(true);
+	}
+
+	/**
+	 * Sorts subclasses of the classes given
+	 * @param classes an Array of classes
+	 */
+	static sortSubclasses (classes) {
+		for (const c of classes) {
+			if (c.subclasses) c.subclasses = c.subclasses.sort((a, b) => SortUtil.ascSort(a.name, b.name));
+		}
+	}
+
+	static markSameSourceSubclassesAndFluffAsForceStandard (clazz) {
+		if (clazz.fluff) clazz.fluff.filter(f => f.source === clazz.source).forEach(f => f._isStandardSource = true);
+		clazz.subclasses.filter(subClass => subClass.source === clazz.source).forEach(subClass => subClass._isStandardSource = true);
+	}
+
+	static cleanScSource (source) {
+		return Parser._getSourceStringFromSource(source);
+	}
+}
+ClassData.classes = [];
+
+class FeatureDescription {
+	static getSubclassStyles (sc) {
+		const styleClasses = [CLSS_SUBCLASS_FEATURE];
+		const nonStandard = _isNonStandardSource(sc) || SourceUtil.hasBeenReprinted(sc.shortName, sc.source) || sc.source === SRC_DMG;
+		if (nonStandard) styleClasses.push(CLSS_NON_STANDARD_SOURCE);
+		if (FeatureDescription.subclassIsFreshUa(sc)) styleClasses.push(CLSS_FRESH_UA);
+		if (BrewUtil.hasSourceJson(ClassData.cleanScSource(sc.source))) styleClasses.push(CLSS_HOMEBREW_SOURCE);
+		return styleClasses;
+	}
+
+	static subclassIsFreshUa (sc) {
+		// only tag reprinted UA
+		if (_isNonStandardSource(sc) || SourceUtil.hasBeenReprinted(sc.shortName, sc.source)) {
+			// special cases
+			if (sc.name === "Knowledge Domain (PSA)" && sc.source === SRC_PSA) return false;
+			if (sc.name === "Deep Stalker (UA)" && sc.source === SRC_UALDR) return false;
+			if (sc.name.includes("Favored Soul")) return false;
+			if (sc.name === "Shadow (UA)" && sc.source === SRC_UALDR) return false;
+			if (sc.name === "The Undying Light (UA)" && sc.source === SRC_UALDR) return false;
+
+			const baseName = sc.name.replace(/(v\d+)?\s*\((UA|SCAG|PSA|Livestream)\)/, "").trim().toLowerCase();
+			const nonUa = ClassDisplay.curClass.subclasses.find(it => !_isNonStandardSource(it) && it.name.trim().toLowerCase() === baseName);
+			if (nonUa) return false;
+		}
+		return true;
+	}
+}
+
+class HashLoad {
+	static loadHash (id) {
+		renderer.setFirstSection(true);
+
+		$("#pagecontent").html(tableDefault);
+		$("#statsprof").html(statsProfDefault);
+		$("#classtable").html(classTableDefault);
+
+		$(`#msg-no-class-selected`).remove();
+		$(`#classtable`).show();
+		$(`#button-wrapper`).show();
+		$(`#statsprof`).show();
+		$(`#sticky-nav`).show();
+
+		ClassDisplay.curClass = ClassData.classes[id];
+
+		// name
+		const $btnShowHideSidebar = $(`<div class="cls__btn-toggle-sidebar">[\u2012]</div>`)
+			.click(() => {
+				const nxtShow = $btnShowHideSidebar.text().includes("+");
+				$(`.cls__sidebar-visible`).toggle(nxtShow);
+				$btnShowHideSidebar.text(`[${nxtShow ? "\u2012" : "+"}]`);
+			});
+
+		$("th#nameTable").html(ClassDisplay.curClass.name);
+		$("th#nameSummary").empty().append($$`<div class="split flex-v-center">
 			<div>${ClassDisplay.curClass.name}</div>
-			<div>${c}</div>
-		</div>`),ClassDisplay.curClass.authors?$("th#author").html(`By ${ClassDisplay.curClass.authors.join(", ")}`).show():$("th#author").html("").hide(),ClassDisplay.curClass.hd){$("td#hp").show();const a={toRoll:`${ClassDisplay.curClass.hd.number}d${ClassDisplay.curClass.hd.faces}`,rollable:!0};$("td#hp div#hitdice span").html(Renderer.getEntryDice(a,"Hit die")),$("td#hp div#hp1stlevel span").html(ClassDisplay.curClass.hd.faces+" + your Constitution modifier"),$("td#hp div#hphigherlevels span").html(`${Renderer.getEntryDice(a,"Hit die")} (or ${ClassDisplay.curClass.hd.faces/2+1}) + your Constitution modifier per ${ClassDisplay.curClass.name} level after 1st`)}else $("td#hp").hide();ClassDisplay.curClass.proficiency&&$("td#prof div#saves span").html(ClassDisplay.curClass.proficiency.map(a=>Parser.attAbvToFull(a)).join(", "));const d=a=>a.map(b=>"light"===b||"medium"===b||"heavy"===b?b+" armor":b).join(", "),e=a=>a.map(a=>"simple"===a||"martial"===a?a+" weapons":a).join(", "),f=a=>a.join(", "),g=a=>b(a),h=ClassDisplay.curClass.startingProficiencies;if(h){const a=$("td#prof");a.find("div#armor span").html(void 0===h.armor?STR_PROF_NONE:d(h.armor)),a.find("div#weapons span").html(void 0===h.weapons?STR_PROF_NONE:e(h.weapons)),a.find("div#tools span").html(void 0===h.tools?STR_PROF_NONE:f(h.tools)),a.find("div#skills span").html(void 0===h.skills?STR_PROF_NONE:g(h.skills))}if($("td#prof").toggle(!!(ClassDisplay.curClass.proficiency||h)),ClassDisplay.curClass.startingEquipment){const a=$("#equipment").show(),b=ClassDisplay.curClass.startingEquipment,c=b.additionalFromBackground?"<p>You start with the following items, plus anything provided by your background.</p>":"",d=0===b.default.length?"":`<ul><li>${b.default.map(a=>Renderer.get().render(a)).join("</li><li>")}</ul>`,e=void 0===b.goldAlternative?"":`<p>Alternatively, you may start with ${Renderer.get().render(b.goldAlternative)} gp to buy your own equipment.</p>`;a.find("div").html(`${c}${d}${e}`)}else $("#equipment").hide();if(ClassDisplay.curClass.multiclassing){const a=ClassDisplay.curClass.multiclassing,b=$("#multiclassing").show().find("#multiclassing_prereqs");if(a.requirements){const c=(a,b=", ")=>Object.keys(a).filter(a=>"or"!==a).sort(SortUtil.ascSortAtts).map(b=>`${Parser.attAbvToFull(b)} ${a[b]}`).join(b),d=a.requirements.or?a.requirements.or.map(a=>c(a," or ")).join("; "):"",e=c(a.requirements);b.append(`<div>To qualify for a new class, you must meet the ability score prerequisites for both your current class and your new one.</div>`).append(`<strong>Ability Score Minimum:</strong> <span>${[d,e].filter(Boolean).join("; ")}</span>`)}if(a.proficienciesGained){$(`#multiclassing_profs`).html(`<div ${a.requirements?`style="margin-top: 1.7em;"`:""}>When you gain a level in a class other than your first, you gain only some of that class's starting proficiencies.</div>`);const b=$(`#multiclassing_profs_armor`).toggle(null!=a.proficienciesGained.armor).find("span").html(a.proficienciesGained.armor?d(a.proficienciesGained.armor):""),c=$(`#multiclassing_profs_weapons`).toggle(null!=a.proficienciesGained.weapons).find("span").html(a.proficienciesGained.weapons?e(a.proficienciesGained.weapons):""),h=$(`#multiclassing_profs_tools`).toggle(null!=a.proficienciesGained.tools).find("span").html(a.proficienciesGained.tools?f(a.proficienciesGained.tools):""),i=$(`#multiclassing_profs_skills`).toggle(null!=a.proficienciesGained.skills).find("span").html(a.proficienciesGained.skills?g(a.proficienciesGained.skills):"")}else $(`#multiclassing_profs`).hide(),$(`#multiclassing_profs_armor`).hide(),$(`#multiclassing_profs_weapons`).hide(),$(`#multiclassing_profs_tools`).hide(),$(`#multiclassing_profs_skills`).hide()}else $("#multiclassing").hide();$(`#statsprof_divider`).toggle(!!(ClassDisplay.curClass.hd||ClassDisplay.curClass.proficiency||ClassDisplay.curClass.startingProficiencies||ClassDisplay.curClass.startingEquipment||ClassDisplay.curClass.multiclassing)),renderer.resetHeaderIndex();const j=(ClassDisplay.curClass.classTableGroups||[]).filter(a=>null==a.subclasses),k=new Map,l=function(a,b){const c=JSON.stringify(a);k.has(c)||k.set(c,[]),k.get(c).push(b)};(ClassDisplay.curClass.classTableGroups||[]).filter(a=>null!=a.subclasses).map(a=>{const{subclasses:b,...c}=a;a.subclasses.map(a=>l(c,a))}),ClassDisplay.curClass.subclasses.filter(a=>null!=a.subclassTableGroups).map(a=>{const b={name:a.name,source:a.source};a.subclassTableGroups.map(a=>l(a,b))}),k.forEach((a,b)=>{const c=JSON.parse(b);c.subclasses=a,j.push(c)});const m=$("#groupHeaders"),n=$("#colHeaders"),o=[];if((()=>{let a,b=0;for(;(a=$(`#level${b++ +1}`)).length;)o.push(a);const c=ClassDisplay.curClass.classFeatures.length-o.length;if(0<c){let a=1;[...Array(c)].forEach(()=>{const b=o.length+a++;o.push($(`<tr id="level${b}">
-						<td class="level">${Parser.getOrdinalForm(b)}</td>
+			<div>${$btnShowHideSidebar}</div>
+		</div>`);
+		if (ClassDisplay.curClass.authors) {
+			$("th#author").html(`By ${ClassDisplay.curClass.authors.join(", ")}`).show();
+		} else {
+			$("th#author").html("").hide();
+		}
+
+		// SUMMARY SIDEBAR =================================================================================================
+		// hit dice and HP
+		if (ClassDisplay.curClass.hd) {
+			$("td#hp").show();
+			const hdEntry = {toRoll: `${ClassDisplay.curClass.hd.number}d${ClassDisplay.curClass.hd.faces}`, rollable: true};
+			$("td#hp div#hitdice span").html(Renderer.getEntryDice(hdEntry, "Hit die"));
+			$("td#hp div#hp1stlevel span").html(ClassDisplay.curClass.hd.faces + " + your Constitution modifier");
+			$("td#hp div#hphigherlevels span").html(`${Renderer.getEntryDice(hdEntry, "Hit die")} (or ${
+				(ClassDisplay.curClass.hd.faces / 2 + 1)}) + your Constitution modifier per ${ClassDisplay.curClass.name} level after 1st`);
+		} else {
+			$("td#hp").hide();
+		}
+
+		// save proficiency
+		if (ClassDisplay.curClass.proficiency) {
+			$("td#prof div#saves span").html(ClassDisplay.curClass.proficiency.map(p => Parser.attAbvToFull(p)).join(", "));
+		}
+
+		// starting proficiencies
+		const renderArmorProfs = (armorProfs) => armorProfs.map(a => a === "light" || a === "medium" || a === "heavy" ? a + " armor" : a).join(", ");
+		const renderWeaponsProfs = (weaponProfs) => weaponProfs.map(w => w === "simple" || w === "martial" ? w + " weapons" : w).join(", ");
+		const renderToolsProfs = (toolProfs) => toolProfs.join(", ");
+		const renderSkillsProfs = (skillProfs) => getSkillProfString(skillProfs);
+
+		const sProfs = ClassDisplay.curClass.startingProficiencies;
+		if (sProfs) {
+			const profSel = $("td#prof");
+			profSel.find("div#armor span").html(sProfs.armor === undefined ? STR_PROF_NONE : renderArmorProfs(sProfs.armor));
+			profSel.find("div#weapons span").html(sProfs.weapons === undefined ? STR_PROF_NONE : renderWeaponsProfs(sProfs.weapons));
+			profSel.find("div#tools span").html(sProfs.tools === undefined ? STR_PROF_NONE : renderToolsProfs(sProfs.tools));
+			profSel.find("div#skills span").html(sProfs.skills === undefined ? STR_PROF_NONE : renderSkillsProfs(sProfs.skills));
+		}
+		$("td#prof").toggle(!!(ClassDisplay.curClass.proficiency || sProfs));
+
+		function getSkillProfString (skills) {
+			const numString = Parser.numberToText(skills.choose);
+			return skills.from.length === 18 ? `Choose any ${numString}.` : `Choose ${numString} from ${skills.from.map(it => Renderer.get().render(`{@skill ${it}}`)).joinConjunct(", ", " and ")}.`
+		}
+
+		// starting equipment
+		if (ClassDisplay.curClass.startingEquipment) {
+			const $equipment = $("#equipment").show();
+			const sEquip = ClassDisplay.curClass.startingEquipment;
+			const fromBackground = sEquip.additionalFromBackground ? "<p>You start with the following items, plus anything provided by your background.</p>" : "";
+			const defList = sEquip.default.length === 0 ? "" : `<ul><li>${sEquip.default.map(it => Renderer.get().render(it)).join("</li><li>")}</ul>`;
+			const goldAlt = sEquip.goldAlternative === undefined ? "" : `<p>Alternatively, you may start with ${Renderer.get().render(sEquip.goldAlternative)} gp to buy your own equipment.</p>`;
+			$equipment.find("div").html(`${fromBackground}${defList}${goldAlt}`);
+		} else {
+			$("#equipment").hide();
+		}
+
+		// multiclassing requirements and proficiencies
+		if (ClassDisplay.curClass.multiclassing) {
+			const mc = ClassDisplay.curClass.multiclassing;
+			const $div = $("#multiclassing").show().find("#multiclassing_prereqs");
+			if (mc.requirements) {
+				const renderPart = (obj, joiner = ", ") => Object.keys(obj).filter(k => k !== "or").sort(SortUtil.ascSortAtts).map(k => `${Parser.attAbvToFull(k)} ${obj[k]}`).join(joiner);
+				const orPart = mc.requirements.or ? mc.requirements.or.map(obj => renderPart(obj, " or ")).join("; ") : "";
+				const basePart = renderPart(mc.requirements);
+				$div
+					.append(`<div>To qualify for a new class, you must meet the ability score prerequisites for both your current class and your new one.</div>`)
+					.append(`<strong>Ability Score Minimum:</strong> <span>${[orPart, basePart].filter(Boolean).join("; ")}</span>`);
+			}
+			if (mc.proficienciesGained) {
+				$(`#multiclassing_profs`).html(`<div ${mc.requirements ? `style="margin-top: 1.7em;"` : ""}>When you gain a level in a class other than your first, you gain only some of that class's starting proficiencies.</div>`);
+				const $mcProfArmor = $(`#multiclassing_profs_armor`).toggle(mc.proficienciesGained.armor != null).find("span").html(mc.proficienciesGained.armor ? renderArmorProfs(mc.proficienciesGained.armor) : "");
+				const $mcProfWeapons = $(`#multiclassing_profs_weapons`).toggle(mc.proficienciesGained.weapons != null).find("span").html(mc.proficienciesGained.weapons ? renderWeaponsProfs(mc.proficienciesGained.weapons) : "");
+				const $mcProfTools = $(`#multiclassing_profs_tools`).toggle(mc.proficienciesGained.tools != null).find("span").html(mc.proficienciesGained.tools ? renderToolsProfs(mc.proficienciesGained.tools) : "");
+				const $mcProfSkills = $(`#multiclassing_profs_skills`).toggle(mc.proficienciesGained.skills != null).find("span").html(mc.proficienciesGained.skills ? renderSkillsProfs(mc.proficienciesGained.skills) : "");
+			} else {
+				$(`#multiclassing_profs`).hide();
+				$(`#multiclassing_profs_armor`).hide();
+				$(`#multiclassing_profs_weapons`).hide();
+				$(`#multiclassing_profs_tools`).hide();
+				$(`#multiclassing_profs_skills`).hide();
+			}
+		} else {
+			$("#multiclassing").hide();
+		}
+
+		$(`#statsprof_divider`).toggle(!!(ClassDisplay.curClass.hd
+			|| ClassDisplay.curClass.proficiency
+			|| ClassDisplay.curClass.startingProficiencies
+			|| ClassDisplay.curClass.startingEquipment
+			|| ClassDisplay.curClass.multiclassing));
+
+		// FEATURE TABLE ===================================================================================================
+		renderer.resetHeaderIndex();
+		const tData = (ClassDisplay.curClass.classTableGroups || []).filter(tg => tg.subclasses == null);
+
+		const tgSourcesMap = new Map();
+
+		const addToSourceMap = function (tg, source) {
+			const tgString = JSON.stringify(tg);
+			if (!tgSourcesMap.has(tgString)) tgSourcesMap.set(tgString, []);
+			tgSourcesMap.get(tgString).push(source);
+		};
+
+		(ClassDisplay.curClass.classTableGroups || [])
+			.filter(tg => tg.subclasses != null)
+			.map(tg => {
+				const {subclasses, ...tgData} = tg;
+				tg.subclasses.map(s => addToSourceMap(tgData, s));
+			});
+
+		ClassDisplay.curClass.subclasses
+			.filter(s => s.subclassTableGroups != null)
+			.map(s => {
+				const sSource = {"name": s.name, "source": s.source};
+				s.subclassTableGroups.map(tg => addToSourceMap(tg, sSource));
+			});
+
+		tgSourcesMap.forEach((value, key) => {
+			const tgObj = JSON.parse(key);
+			tgObj.subclasses = value;
+			tData.push(tgObj);
+		});
+
+		const groupHeaders = $("#groupHeaders");
+		const colHeaders = $("#colHeaders");
+		const $levelTrs = [];
+
+		// support for more than (or less than) 20 levels
+		(() => {
+			let i = 0;
+			let $ele;
+			while (($ele = $(`#level${i++ + 1}`)).length) $levelTrs.push($ele);
+			const lenDiff = ClassDisplay.curClass.classFeatures.length - $levelTrs.length;
+			if (lenDiff > 0) {
+				let addCount = 1;
+				[...new Array(lenDiff)].forEach(() => {
+					const level = $levelTrs.length + addCount++;
+					$levelTrs.push($(`<tr id="level${level}">
+						<td class="level">${Parser.getOrdinalForm(level)}</td>
 						<td class="pb">+6</td>
 						<td class="features"></td>
-					</tr>`).insertAfter(o.last()))})}else 0>c&&[...Array(-c)].forEach(()=>o.pop().remove())})(),j)for(let a=0;a<j.length;a++){const b=j[a],c=void 0!==b.title;let d="";void 0!==b.subclasses&&(d=`${ATB_DATA_SC_LIST}="${b.subclasses.map(a=>FeatureTable.getTableDataScData(a.name,ClassData.cleanScSource(a.source))).join(ATB_DATA_LIST_SEP)}"`),m.append(`<th ${c?`class="colGroupTitle"`:""} colspan="${b.colLabels.length}" ${d}>${c?b.title:""}</th>`);for(let a,c=0;c<b.colLabels.length;c++)a=`<div class="cls__squash_header">${renderer.render(b.colLabels[c])}</div>`,n.append(`<th class="centred-col" ${d}>${a}</th>`);for(let a=0;a<b.rows.length;a++)for(let c,e=0;e<b.rows[a].length;e++){c=b.rows[a][e],0===c&&(c="\u2014");const f=[];renderer.recursiveRender(c,f),o[a].append(`<td class="centred-col" ${d}>${f.join("")}</td>`)}}const p=[];renderer.setFirstSection(!0);const q=$("#ftTopBorder");ClassDisplay.curClass.fluff&&(p.push(`<tr class="text ${CLSS_CLASS_FLUFF}"><td colspan="6">`),ClassDisplay.curClass.fluff.forEach((a,b)=>{const c=Object.assign({},a);c.type=c.type||"section",0!==b||c.name||(c.name=ClassDisplay.curClass.name),a.source&&a.source!==SRC_PHB&&c.entries&&(c.entries=MiscUtil.copy(c.entries),c.entries.unshift(`{@note The following information is from ${Parser.sourceJsonToFull(a.source)}${0<a.page?`, page ${a.page}`:""}.}`)),renderer.recursiveRender(c,p)}),p.push(`</td></tr>`));let r=0;for(let b=0;b<o.length;b++){const a=o[b].find(".features"),c=[],d=ClassDisplay.curClass.classFeatures[b];for(let a=0;a<d.length;a++){const e=d[a],f=UrlUtil.encodeForHash(` ${b+1}`),g=`${CLSS_HASH_FEATURE}${UrlUtil.encodeForHash(e.name)}${f}`,h=`${CLSS_HASH_FEATURE}${UrlUtil.encodeForHash(e.name)}${f}`,i=$(`<a href="${HashLoad.getClassHash(ClassDisplay.curClass)}${HASH_PART_SEP}${h}" class="${CLSS_FEATURE_LINK}" ${ATB_DATA_FEATURE_LINK}="${h}" ${ATB_DATA_FEATURE_ID}="${g}">${e.name}</a>`);i.click(function(){const a=HASH_HIDE_FEATURES.slice(0,-1),b="true"===History.getSubHash(a);b?setTimeout(()=>{History.setSubhash(a,null),setTimeout(()=>document.getElementById(g).scrollIntoView(),1)},1):document.getElementById(g).scrollIntoView()}),"inset"!==e.type&&c.push(i);const j=[CLSS_CLASS_FEATURE,"linked-titles--classes"];if(e.gainSubclassFeature&&j.push(CLSS_GAIN_SUBCLASS_FEATURE),p.push(`<tr id="${g}" class="${j.join(" ")}"><td colspan="6">`),renderer.recursiveRender(e,p),p.push(`</td></tr>`),e.gainSubclassFeature){for(let a=0;a<ClassDisplay.curClass.subclasses.length;a++){const b=ClassDisplay.curClass.subclasses[a];if(!ExcludeUtil.isExcluded(b.name,"subclass",b.source))for(let a=0;a<b.subclassFeatures[r].length;a++){const c=b.subclassFeatures[r][a];if(void 0===c.name)for(let a=0;a<c.entries.length;a++){const d=c.entries[a];void 0===d.name||d.name.startsWith(`<span class="${CLSS_SUBCLASS_PREFIX}">`)||(d.name=`<span class="${CLSS_SUBCLASS_PREFIX}">${b.name}: </span>${d.name}`)}const d=FeatureDescription.getSubclassStyles(b);p.push(`<tr class="text ${d.join(" ")}" ${ATB_DATA_SC}="${b.name}" ${ATB_DATA_SRC}="${ClassData.cleanScSource(b.source)}"><td colspan="6">`),renderer.recursiveRender(c,p),p.push(`</td></tr>`)}}r++}}0===c.length?a.html("\u2014"):c.forEach((b,d)=>{a.append(b),d<c.length-1&&a.append(", ")})}q.after(p.join("")),$(`.${CLSS_NON_STANDARD_SOURCE}`).not(`.${CLSS_SUBCLASS_PILL}`).not(`.${CLSS_PANEL_LINK}`).hide(),HashLoad.subclassPillWrapper=$("div#subclasses"),HashLoad.subclassPillWrapper.find("span").remove(),HashLoad.makeGenericTogglePill("Class Features",CLSS_CLASS_FEATURES_ACTIVE,ID_CLASS_FEATURES_TOGGLE,HASH_HIDE_FEATURES,!0,"Toggle class features"),ClassDisplay.curClass.fluff&&HashLoad.makeGenericTogglePill("Info",CLSS_FLUFF_ACTIVE,ID_FLUFF_TOGGLE,HASH_SHOW_FLUFF,!1,"Toggle class detail information"),HashLoad.makeSourceCyclePill(),HashLoad.addPillDivider();const s=ClassDisplay.curClass.subclasses.filter(a=>!ExcludeUtil.isExcluded(a.name,"subclass",a.source)).sort((c,a)=>SortUtil.ascSort(c.shortName,a.shortName));for(let b=0;b<s.length;b++){const a=s[b],c=_isNonStandardSource(a)||SourceUtil.hasBeenReprinted(a.shortName,a.source)||a.source===SRC_DMG,d=[CLSS_ACTIVE,CLSS_SUBCLASS_PILL,"sc_pill"];c&&d.push(CLSS_NON_STANDARD_SOURCE),FeatureDescription.subclassIsFreshUa(a)&&d.push(CLSS_FRESH_UA),BrewUtil.hasSourceJson(ClassData.cleanScSource(a.source))&&d.push(CLSS_HOMEBREW_SOURCE);const e=SourceUtil.hasBeenReprinted(a.shortName,a.source),f=e?`${a.shortName} (${Parser.sourceJsonToAbv(a.source)})`:a.shortName,g=e||_isNonStandardSource(a)?"":` (${Parser.sourceJsonToAbv(a.source)})`,h=$(`<span class="${d.join(" ")}" ${ATB_DATA_SC}="${a.name}" ${ATB_DATA_SRC}="${ClassData.cleanScSource(a.source)}" title="Source: ${Parser.sourceJsonToFull(a.source)}"><span>${f}<span class="sc_pill__source_suffix">${g}</span></span></span>`),i=()=>HashLoad.handleSubclassClick(h.hasClass(CLSS_ACTIVE),s[b].name,ClassData.cleanScSource(s[b].source));h.click(i).contextmenu(a=>{a.ctrlKey||(a.preventDefault(),i())}),c&&h.hide(),HashLoad.subclassPillWrapper.append(h)}HashLoad.addPillDivider(),HashLoad.makeFeelingLuckyPill(),HashLoad.makeToggleSourcesPill(),HashLoad.makeResetPill(),loadSubHash([])}static makeSourceCyclePill(){const a=$(`<span title="Cycle through source types" id="${ID_OTHER_SOURCES_TOGGLE}" data-state="0" style="min-width: 8em;" class="sc_pill"><span>${STRS_SOURCE_STATES[0]}</span></span>`);HashLoad.subclassPillWrapper.append(a),a.click(()=>{let b=+a.attr("data-state");2<++b&&(b=0),a.attr("data-state",b),a.find(`span`).text(STRS_SOURCE_STATES[b]),HashLoad.setSourceState(b)}).contextmenu(b=>{if(b.ctrlKey)return;b.preventDefault();let c=+a.attr("data-state");0>--c&&(c=STRS_SOURCE_STATES.length-1),a.attr("data-state",c),a.find(`span`).text(STRS_SOURCE_STATES[c]),HashLoad.setSourceState(c)})}static makeGenericTogglePill(a,b,c,d,e,f){function g(a){const b=[],c=window.location.hash.split(HASH_PART_SEP);for(let e=0;e<c.length;e++){const a=c[e];a.startsWith(d)||b.push(a)}a?b.push(d+"true"):b.push(d+"false"),HashLoad.cleanSetHash(b.join(HASH_PART_SEP))}const h=$(`<span title="${f}" id="${c}" class="sc_pill"><span>${a}</span></span>`);e&&h.addClass(b),HashLoad.subclassPillWrapper.append(h);const i=function(a){if(a.ctrlKey)return;a.preventDefault();let c=$(this).hasClass(b);e||(c=!c),g(c)};return h.click(i).contextmenu(i),h}static addPillDivider(){HashLoad.subclassPillWrapper.append($(`<span class="divider">`))}static makeFeelingLuckyPill(){const a=$(`<span title="Feeling Lucky?" class="sc_pill sc-pill-feeling-lucky"><span class="glyphicon glyphicon-random"></span></span>`);HashLoad.subclassPillWrapper.append(a),a.click(()=>{const[a,...b]=History._getHashParts(),c=[a];let d=null;b.filter(a=>!a.startsWith(HASH_SUBCLASS)||void(!a.includes(HASH_LIST_SEP)&&a.length&&(d=a.slice(HASH_SUBCLASS.length)))).forEach(a=>c.push(a));const e=$(`.${CLSS_SUBCLASS_PILL}`).filter(`:visible`).map((a,b)=>HashLoad.getEncodedSubclass($(b).attr(`data-subclass`),$(b).attr(`data-source`))).get(),f=()=>e[RollerUtil.roll(e.length)];if(null==d||1===e.length)c.push(`${HASH_SUBCLASS}${f()}`);else if(1<e.length){let a;do a=f();while(a===d);c.push(`${HASH_SUBCLASS}${a}`)}HashLoad.cleanSetHash(c.join(HASH_PART_SEP))})}static makeToggleSourcesPill(){$(`<span title="Toggle Sources" class="sc_pill sc_pill__source"><span class="glyphicon glyphicon-book"></span></span>`).appendTo(HashLoad.subclassPillWrapper).click(function(){const[a,...b]=History._getHashParts(),c=[a];let d=!1;b.filter(a=>!a.startsWith(HASH_SHOW_PILL_SOURCES)||void(d="true"===a.substr(HASH_SHOW_PILL_SOURCES.length))).forEach(a=>c.push(a)),c.push(`${HASH_SHOW_PILL_SOURCES}${!d}`),HashLoad.cleanSetHash(c.join(HASH_PART_SEP))})}static makeResetPill(){$(`<span title="Reset" class="sc_pill"><span class="glyphicon glyphicon-refresh"></span></span>`).appendTo(HashLoad.subclassPillWrapper).click(()=>HashLoad.cleanSetHash(window.location.hash.split(HASH_PART_SEP)[0]||""))}static handleSubclassClick(a,b,c){const d=[],e=window.location.hash.split(HASH_PART_SEP),f=HashLoad.getEncodedSubclass(b,c),g=HASH_SUBCLASS+f;if(a&&window.location.hash.includes(HASH_SUBCLASS))for(let a=0;a<e.length;a++){const b=e[a];if(!b.startsWith(HASH_SUBCLASS))d.push(b);else{const a=[],c=b.substr(HASH_SUBCLASS.length).split(HASH_LIST_SEP);for(let b=0;b<c.length;b++){const d=c[b];d!==f&&a.push(d)}0<a.length&&d.push(HASH_SUBCLASS+a.join(HASH_LIST_SEP))}}else{let a=!1;for(let b=0;b<e.length;b++){const c=e[b];if(!c.startsWith(HASH_SUBCLASS))d.push(c);else{const b=[],e=c.substr(HASH_SUBCLASS.length).split(HASH_LIST_SEP);for(let a=0;a<e.length;a++){const c=e[a];c!==f&&b.push(c)}b.push(f),0<b.length&&d.push(HASH_SUBCLASS+b.join(HASH_LIST_SEP)),a=!0}}a||d.push(g)}HashLoad.cleanSetHash(d.join(HASH_PART_SEP))}static getClassHash(a){return`#${UrlUtil.autoEncodeHash(a)}`}static getEncodedSubclass(a,b){return`${UrlUtil.encodeForHash(a)}${HASH_SUB_LIST_SEP}${UrlUtil.encodeForHash(b)}`}static cleanSetHash(a){window.location.hash=a.replace(/,+/g,",").replace(/,$/,"").toLowerCase()}static setSourceState(a){const b=window.location.hash;b.includes(HASH_SOURCES)?HashLoad.cleanSetHash(b.replace(/sources:(\d|true|false)/,`${HASH_SOURCES}${a}`)):HashLoad.cleanSetHash(`${b}${HASH_PART_SEP}${HASH_SOURCES}${a}`)}}HashLoad.subclassPillWrapper=void 0;class SubClassLoader{static loadSubHash(a){function b(a,b){return"true"===a.slice(b.length)}const c=$(`#pagecontent`);let d=null,e=null,f=null,g=null,h=null,j=null,k=null,l=null;SubClassLoader.partCache=null;for(let c=0;c<a.length;c++){const i=a[c];i.startsWith(HASH_SUBCLASS)&&(d=i.slice(HASH_SUBCLASS.length).split(HASH_LIST_SEP)),i.startsWith(CLSS_HASH_FEATURE)&&(e=i),i.startsWith(HASH_HIDE_FEATURES)&&(f=b(i,HASH_HIDE_FEATURES)),i.startsWith(HASH_SHOW_FLUFF)&&(g=b(i,HASH_SHOW_FLUFF)),i.startsWith(HASH_SOURCES)&&(h=i.slice(HASH_SOURCES.length)),i.startsWith(HASH_BOOK_VIEW)&&(j=b(i,HASH_BOOK_VIEW)),i.startsWith(HASH_SHOW_PILL_SOURCES)&&(l=b(i,HASH_SHOW_PILL_SOURCES)),subclassComparisonView&&i.startsWith(subclassComparisonView.hashKey)&&(k=b(i,`${subclassComparisonView.hashKey}:`))}const m=!ClassBookView.bookViewActive&&(null===h||h===STR_SOURCES_OFFICIAL),n=!ClassBookView.bookViewActive&&h===STR_SOURCES_MIXED;if(null!==d&&(m||n)){const b=[],c=$(`.${CLSS_SUBCLASS_PILL}.${CLSS_NON_STANDARD_SOURCE}.${CLSS_ACTIVE}`),e=m?c:c.not(`.${CLSS_FRESH_UA}`);e.each(function(){const a=$(this),c=HashLoad.getEncodedSubclass(a.attr(ATB_DATA_SC),a.attr(ATB_DATA_SRC));$.inArray(d,c)&&b.push(c)});const f=d.filter(a=>0>b.indexOf(a));if(f.length!==d.length){const b=[];for(let c=0;c<a.length;c++){const d=a[c];d.startsWith(HASH_SUBCLASS)?0<f.length&&b.push(HASH_SUBCLASS+f.join(HASH_LIST_SEP)):b.push(d)}const c=History._getHashParts();if(1<c.length){const a=[c[0]].concat(b);HashLoad.cleanSetHash(HASH_START+a.join(HASH_PART_SEP))}return}}if(null!==d){SubClassLoader.updateClassTableLinks(),SubClassLoader.updateNavLinks(a);const b=[],e=[],f=$(`.${CLSS_SUBCLASS_PILL}`);if(f.each(function(){const a=$(this),c=HashLoad.getEncodedSubclass(a.attr(ATB_DATA_SC),a.attr(ATB_DATA_SRC));let f=!1;for(let a=0;a<d.length;a++){const b=d[a].toLowerCase();if(b.trim()===c){f=!0;break}}f?b.push(a):e.push(a)}),ClassBookView.updateVisible(b,e),0===b.length)SubClassLoader.hideAllSubclasses(a,m);else{const a=c.find(`div.${CLSS_NON_STANDARD_SOURCE}`),d=[];$.each(b,function(b,c){c.addClass(CLSS_ACTIVE),$(`.${CLSS_SUBCLASS_FEATURE}[${ATB_DATA_SC}="${c.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${c.attr(ATB_DATA_SRC)}"]`).show(),m||n?a.filter(`[${ATB_DATA_SC}="${c.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${c.attr(ATB_DATA_SRC)}"]`).hide():a.filter(`[${ATB_DATA_SC}="${c.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${c.attr(ATB_DATA_SRC)}"]`).show();const e=FeatureTable.getTableDataScData(c.attr(ATB_DATA_SC),c.attr(ATB_DATA_SRC));d.push(e),SubClassLoader.handleTableGroups(d,e,!0)}),$.each(e,function(b,c){c.removeClass(CLSS_ACTIVE),$(`.${CLSS_SUBCLASS_FEATURE}[${ATB_DATA_SC}="${c.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${c.attr(ATB_DATA_SRC)}"]`).hide(),a.filter(`[${ATB_DATA_SC}="${c.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${c.attr(ATB_DATA_SRC)}"]`).hide();const e=FeatureTable.getTableDataScData(c.attr(ATB_DATA_SC),c.attr(ATB_DATA_SRC));SubClassLoader.handleTableGroups(d,e,!1)});const f=a.not(`.${CLSS_SUBCLASS_FEATURE}`).filter(`:not([${ATB_DATA_SC}]):not([${ATB_DATA_SRC}])`),g=a.not(`.${CLSS_SUBCLASS_FEATURE}`).filter(`[${ATB_DATA_SC}="${Renderer.DATA_NONE}"][${ATB_DATA_SRC}="${Renderer.DATA_NONE}"]`);m?(f.hide(),g.hide()):(f.show(),g.show())}$(`.${CLSS_SUBCLASS_PREFIX}`).toggle(1<b.length)}else SubClassLoader.hideAllSubclasses(a,m),ClassBookView.updateVisible([],$(`.${CLSS_SUBCLASS_PILL}`).map((a,b)=>$(b)).get());const o=$(`#${ID_CLASS_FEATURES_TOGGLE}`),p=c.find(`.${CLSS_CLASS_FEATURE}`),q=p.not(`.${CLSS_GAIN_SUBCLASS_FEATURE}`),r=null!==f&&f;r&&null===d?(p.hide(),g?$(`#please-select-message`).removeClass("showing"):$(`#please-select-message`).addClass("showing")):(p.show(),$(`#please-select-message`).removeClass("showing")),r?(o.removeClass(CLSS_CLASS_FEATURES_ACTIVE),q.hide()):(o.addClass(CLSS_CLASS_FEATURES_ACTIVE),q.show());const s=$(`#${ID_FLUFF_TOGGLE}`),t=c.find(`.${CLSS_CLASS_FLUFF}`);g?(ClassList.classList.items.forEach(a=>{const b=$(a.elm).find("a"),c=b.attr("href").split(HASH_PART_SEP)[0],d=[c,`${HASH_SHOW_FLUFF}${!0}`].join(HASH_PART_SEP);b.attr("href",d)}),s.addClass(CLSS_FLUFF_ACTIVE),t.show()):(ClassList.classList.items.forEach(a=>{const b=$(a.elm).find("a"),c=b.attr("href").split(HASH_PART_SEP)[0];b.attr("href",c)}),s.removeClass(CLSS_FLUFF_ACTIVE),t.hide());const u=$(`#${ID_OTHER_SOURCES_TOGGLE}`),v=$(`.${CLSS_SUBCLASS_PILL}.${CLSS_NON_STANDARD_SOURCE}`).not(`.${CLSS_PANEL_LINK}`);m?(u.find(`span`).text(STRS_SOURCE_STATES[0]),u.attr("data-state",STR_SOURCES_OFFICIAL),v.hide()):n?(u.find(`span`).text(STRS_SOURCE_STATES[1]),u.attr("data-state",STR_SOURCES_MIXED),v.show().not(`.${CLSS_FRESH_UA}`).hide()):(u.find(`span`).text(STRS_SOURCE_STATES[2]),u.attr("data-state",STR_SOURCES_ALL),v.show()),null!==e&&(null===SubClassLoader.prevFeature||SubClassLoader.prevFeature!==e)&&(document.getElementById($(`[${ATB_DATA_FEATURE_LINK}="${e}"]`)[0].getAttribute(ATB_DATA_FEATURE_ID)).scrollIntoView(),SubClassLoader.prevFeature=e),SubClassLoader.updateClassTableLinks(),SubClassLoader.updateNavLinks(a),j?ClassBookView.open():ClassBookView.teardown(),k&&subclassComparisonView?subclassComparisonView.open():subclassComparisonView&&subclassComparisonView.teardown(),$(`.sc_pill__source_suffix`).toggle(!!l),$(`.sc_pill__source`).toggleClass(CLSS_ACTIVE,!!l)}static handleTableGroups(a,b,c){$(`[${ATB_DATA_SC_LIST}]`).each(function(){const d=$(this),e=d.attr(ATB_DATA_SC_LIST).split(ATB_DATA_LIST_SEP);if(!c)for(let b=0;b<e.length;b++){const c=e[b];if(-1!==$.inArray(c,a))return}for(let a=0;a<e.length;a++){const f=e[a];if(f===b){d.toggle(!!c);break}}})}static getFeatureLink(a){if(!SubClassLoader.partCache){const a=window.location.hash,b=a.slice(1).split(HASH_PART_SEP);SubClassLoader.partCache=[];for(let a=0;a<b.length;a++){const c=b[a];c.startsWith(CLSS_HASH_FEATURE)||SubClassLoader.partCache.push(c)}}return HASH_START+SubClassLoader.partCache.join(HASH_PART_SEP)+HASH_PART_SEP+a}static updateClassTableLinks(){$(`.${CLSS_FEATURE_LINK}`).each(function(){const a=$(this);this.href=SubClassLoader.getFeatureLink(a.attr(ATB_DATA_FEATURE_LINK))})}static hideAllSubclasses(a,b){SubClassLoader.updateClassTableLinks(),SubClassLoader.updateNavLinks(a);const c=$(`#pagecontent`);$(`.${CLSS_SUBCLASS_PILL}`).removeClass(CLSS_ACTIVE),c.find(`.${CLSS_SUBCLASS_FEATURE}`).hide(),$(`.${CLSS_SUBCLASS_PREFIX}`).hide();const d=c.find(`div.${CLSS_NON_STANDARD_SOURCE}`);d.hide(),b||d.not(`.${CLSS_SUBCLASS_FEATURE}`).not(`.${CLSS_SUBCLASS_PILL}`).show(),$(`[${ATB_DATA_SC_LIST}]`).each(function(){$(this).hide()})}static updateNavLinks(a){function b(a,b,c,d,e,f,g){const h=e.split(" ").map(a=>a===Renderer.HEAD_NEG_1?"n1":a===Renderer.HEAD_0?"n2":a===Renderer.HEAD_1?"n3":void 0).filter(Boolean)[0];if(null!=h){const e=!!d.length&&d.hasClass("subclass-feature"),i=!!b.parent().hasClass("spicy-sauce")||!!d.length&&d.hasClass("spicy-sauce"),j=!!b.parent().hasClass("refreshing-brew")||!!d.length&&d.hasClass("refreshing-brew");$(`<div class="nav-item ${h} ${j?"purple":i?"green":e?"blue":""}">${f}</div>`).on("click",()=>{c.length&&(window.location.hash=SubClassLoader.getFeatureLink(c.attr("id")));const a=$(`[data-title-index="${g}"]`);a.get()[0]&&a.get()[0].scrollIntoView()}).appendTo(a)}}SubClassLoader.prevSub===a&&SubClassLoader.prevSub.equals(a)||setTimeout(()=>{const a=$(`#sticky-nav`),c=a.find(`hr`),d=a.find(`.nav-body`).empty(),e=a.find(`.nav-head`);e.find(`.nav-outline`).off("click").on("click",()=>{d.toggle(),c.toggle();const a=+!+e.attr("data-state");e.attr("data-state",a)});const f=$(`.rd__h`);f.each((a,c)=>{const e=$(c),f=e.parent().attr("class").trim();if(f.split(" ").includes(Renderer.HEAD_2))return;if(!e.is(":visible"))return;const g=e.closest(`tr[id]`),h=e.closest(`tr`),i=e.find(`.entry-title-inner`).contents().filter(function(){return 3===this.nodeType&&this.nodeValue.trim()});if(!i.length)return;const j=i[0].nodeValue.trim().replace(/[:.]$/g,""),k=e.data("title-index");b(d,e,g,h,f,j,k)})},5),SubClassLoader.prevSub=a}}SubClassLoader.prevFeature=null,SubClassLoader.prevSub=null,SubClassLoader.partCache=null;function initCompareMode(){subclassComparisonView=new BookModeView("compview",$(`#btn-comparemode`),"Please select some subclasses first",a=>{const b=[],c=ClassDisplay.curClass.subclasses[0].subclassFeatures.length;for(let d=0;d<c;++d)b.push(`<tr class="text">`),ClassDisplay.curClass.subclasses.filter(a=>!ExcludeUtil.isExcluded(a.name,"subclass",a.source)).forEach((a,c)=>{b.push(`<td class="subclass-features-${c} ${FeatureDescription.getSubclassStyles(a).join(" ")}">`),a.subclassFeatures[d].forEach(a=>{renderer.recursiveRender(a,b)}),b.push(`</td>`)}),b.push(`</tr>`),b.push(`<tr><th colspan="6"><hr></th></tr>`);a.append(b.join(""));let d=0;return ClassDisplay.curClass.subclasses.filter(a=>!ExcludeUtil.isExcluded(a.name,"subclass",a.source)).forEach((b,c)=>{const e=$(`.${CLSS_SUBCLASS_PILL}[data-subclass="${b.name}"][data-source="${b.source}"]`);e.hasClass(CLSS_ACTIVE)?d++:a.find(`.subclass-features-${c}`).hide()}),a.find(`tr > td > div`).css("width","400px"),d})}class ClassBookView{static open(){function a(a,b){a.find(`.class-features`).toggle(),b.toggleClass("cf-active")}function b(){HashLoad.cleanSetHash(window.location.hash.replace(ClassBookView.SUBHASH,""))}if(ClassBookView.bookViewActive)return;ClassBookView.bookViewActive=!0,HashLoad.setSourceState(STR_SOURCES_ALL);const c=$(`body`),d=$(`<div class="book-mode"/>`);ClassBookView._$body=c,ClassBookView._$wrpBook=d,c.css("overflow","hidden"),c.addClass("book-mode-active");const e=$(`<div class="pnl-content"/>`),f=$(`<table class="stats stats-book stats-book--large"/>`);ClassBookView._$bkTbl=f;const g=$(`<tr><th class="border close-border" colspan="6"><div/></th></tr>`),h=$(`<span class="delete-icon glyphicon glyphicon-remove"></span>`).on("click",()=>b());g.find(`div`).append(h),f.append(g);const j=[];renderer.setFirstSection(!0),j.push(`<tr><td colspan="6">`),renderer.recursiveRender({type:"section",name:ClassDisplay.curClass.name},j),j.push(`</td></tr>`),j.push(`<tr class="text class-features"><td colspan="6">`),ClassDisplay.curClass.classFeatures.forEach(a=>{a.forEach(a=>{renderer.recursiveRender(a,j)})}),j.push(`</td></tr>`),ClassDisplay.curClass.subclasses.filter(a=>!ExcludeUtil.isExcluded(a.name,"subclass",a.source)).forEach((a,b)=>{j.push(`<tr class="subclass-features-${b} ${FeatureDescription.getSubclassStyles(a).join(" ")}"><td colspan="6">`),a.subclassFeatures.forEach(a=>{a.forEach(a=>{renderer.recursiveRender(a,j)})}),j.push(`</td></tr>`)}),j.push(Renderer.utils.getBorderTr()),f.append(j.join("")),e.append(f);const k=$(`<div class="pnl-menu"/>`),l=$(`#${ID_CLASS_FEATURES_TOGGLE}`),m=$(`<span class="pnl-link cf-active">Class Features</span>`).on("click",()=>{a(f,m),l.click()});l.hasClass("cf-active")||a(f,m),k.append(m),ClassDisplay.curClass.subclasses.filter(a=>!ExcludeUtil.isExcluded(a.name,"subclass",a.source)).forEach((a,b)=>{const c=SourceUtil.hasBeenReprinted(a.shortName,a.source)?`${a.shortName} (${Parser.sourceJsonToAbv(a.source)})`:a.shortName,d=FeatureDescription.getSubclassStyles(a),e=$(`.${CLSS_SUBCLASS_PILL}[data-subclass="${a.name}"][data-source="${a.source}"]`),g=$(`<span class="pnl-link active ${d.join(" ")}" title="Source: ${Parser.sourceJsonToFull(a.source)}" data-i="${b}" data-bk-subclass="${a.name}" data-bk-source="${a.source}">${c}</span>`).on("click",()=>{ClassBookView._toggleSubclass(f,g,b),e.click()});e.hasClass(CLSS_ACTIVE)||ClassBookView._toggleSubclass(f,g,b),ClassBookView._$scToggles[b+""]=g,k.append(g)});const n=$(`<span class="pnl-link pnl-link-close">\u21FD Close</span>`).on("click",()=>{b()});k.append(n);const o=$(`<div class="pnl-menu pnl-menu-pad"/>`);d.append(k).append(e).append(o),c.append(d)}static teardown(){ClassBookView.bookViewActive&&(ClassBookView._$bkTbl=null,ClassBookView._$scToggles={},ClassBookView._$body.css("overflow",""),ClassBookView._$body.removeClass("book-mode-active"),ClassBookView._$wrpBook.remove(),ClassBookView.bookViewActive=!1)}static _toggleSubclass(a,b,c){a.find(`.subclass-features-${c}`).toggle(),b.toggleClass("active")}static updateVisible(a,b){function c(a,b){a.map(a=>{const c=ClassBookView._$wrpBook.find(`.pnl-link[data-bk-subclass="${a.attr(ATB_DATA_SC)}"][data-bk-source="${a.attr(ATB_DATA_SRC)}"]`);if(c.length){const a=c.data("i"),d=ClassBookView._$scToggles[a];b&&!d.hasClass("active")&&ClassBookView._toggleSubclass(ClassBookView._$bkTbl,d,+a),!b&&d.hasClass("active")&&ClassBookView._toggleSubclass(ClassBookView._$bkTbl,d,+a)}})}ClassBookView.bookViewActive&&(c(a,!0),c(b,!1))}static initButton(){$(`#btn-readmode`).on("click",()=>{HashLoad.cleanSetHash(`${window.location.hash}${HASH_PART_SEP}${ClassBookView.SUBHASH}`)})}}ClassBookView.SUBHASH=`${HASH_BOOK_VIEW}true`,ClassBookView.bookViewActive=!1,ClassBookView._$body=null,ClassBookView._$wrpBookUnder=null,ClassBookView._$wrpBook=null,ClassBookView._$bkTbl=null,ClassBookView._$scToggles={};function initLinkGrabbers(){const a=$(`body`);a.on(`mousedown`,`.linked-titles--classes > td > * > .rd__h .entry-title-inner`,a=>a.preventDefault()),a.on(`click`,`.linked-titles--classes > td > * > .rd__h .entry-title-inner`,async function(a){const b=$(this);if(a.shiftKey)await MiscUtil.pCopyTextToClipboard(b.text().replace(/\.$/,"")),JqueryUtil.showCopiedEffect(b);else{const a=b.closest(`tr`).attr("id"),c=`${window.location.hash.slice(1).split(HASH_PART_SEP).filter(a=>!a.startsWith(CLSS_HASH_FEATURE)).join(HASH_PART_SEP)}${HASH_PART_SEP}${a}`;await MiscUtil.pCopyTextToClipboard(`${window.location.href.split("#")[0]}#${c}`),JqueryUtil.showCopiedEffect(b,"Copied link!")}})}const renderer=Renderer.get(),sourceFilter=new Filter({header:FilterBox.SOURCE_HEADER,minimalUi:!0,items:["Core","Others"],selFn:a=>"Core"===a||"Homebrew"===a});let tableDefault=$("#pagecontent").html(),statsProfDefault=$("#statsprof").html(),classTableDefault=$("#classtable").html();function handleBrew(a){return ClassData.addClassData(a),ClassData.addSubclassData(a),Promise.resolve()}async function doPageInit(){filterBox=await pInitFilterBox({filters:[sourceFilter],isCompact:!0}),$(filterBox).on(FilterBox.EVNT_VALCHANGE,ClassList.handleFilterChange),ClassList.classList=ListUtil.search({valueNames:["name","source","uniqueid"],listClass:"classes"}),BrewUtil.makeBrewButton("manage-brew"),BrewUtil.bind({list:ClassList.classList,filterBox,sourceFilter}),initCompareMode(),initLinkGrabbers(),ClassBookView.initButton(),await ExcludeUtil.pInitialise(),SortUtil.initHandleFilterButtonClicks(),Omnisearch.addScrollTopFloat(),DataUtil.class.loadJSON().then(a=>{ClassData.addClassData(a),BrewUtil.pAddBrewData().then(handleBrew).then(()=>BrewUtil.pAddLocalBrewData()).catch(BrewUtil.pPurgeBrew).then(()=>{RollerUtil.addListRollButton(),History.init(!0),ExcludeUtil.checkShowAllExcluded(ClassData.classes,$(`#pagecontent`))})})}window.addEventListener("load",()=>doPageInit());
+					</tr>`).insertAfter($levelTrs.last()));
+				});
+			} else if (lenDiff < 0) {
+				[...new Array(-lenDiff)].forEach(() => $levelTrs.pop().remove());
+			}
+		})();
+
+		if (tData) {
+			for (let i = 0; i < tData.length; i++) {
+				const tGroup = tData[i];
+
+				const hasTitle = tGroup.title !== undefined;
+				let subclassData = "";
+				if (tGroup.subclasses !== undefined) {
+					subclassData =
+						`${ATB_DATA_SC_LIST}="${tGroup.subclasses.map(s => FeatureTable.getTableDataScData(s.name, ClassData.cleanScSource(s.source))).join(ATB_DATA_LIST_SEP)}"`;
+				}
+				groupHeaders.append(`<th ${hasTitle ? `class="colGroupTitle"` : ""} colspan="${tGroup.colLabels.length}" ${subclassData}>${hasTitle ? tGroup.title : ""}</th>`);
+
+				for (let j = 0; j < tGroup.colLabels.length; j++) {
+					let lbl = `<div class="cls__squash_header" title="${Renderer.stripTags(tGroup.colLabels[j])}">${renderer.render(tGroup.colLabels[j])}</div>`;
+					colHeaders.append(`<th class="centred-col" ${subclassData}>${lbl}</th>`)
+				}
+
+				for (let j = 0; j < tGroup.rows.length; j++) {
+					for (let k = 0; k < tGroup.rows[j].length; k++) {
+						let entry = tGroup.rows[j][k];
+						if (entry === 0) entry = "\u2014";
+						const stack = [];
+						renderer.recursiveRender(entry, stack);
+						$levelTrs[j].append(`<td class="centred-col" ${subclassData}>${stack.join("")}</td>`)
+					}
+				}
+			}
+		}
+
+		// FEATURE DESCRIPTIONS & FLUFF ============================================================================================
+		const renderStack = [];
+		renderer.setFirstSection(true);
+		const topBorder = $("#ftTopBorder");
+
+		// FLUFF
+		if (ClassDisplay.curClass.fluff) {
+			renderStack.push(`<tr class="text ${CLSS_CLASS_FLUFF}"><td colspan="6">`);
+			ClassDisplay.curClass.fluff.forEach((f, i) => {
+				const toRender = Object.assign({}, f);
+				toRender.type = toRender.type || "section";
+				if (i === 0 && !toRender.name) toRender.name = ClassDisplay.curClass.name;
+				if (f.source && f.source !== SRC_PHB && toRender.entries) {
+					toRender.entries = MiscUtil.copy(toRender.entries);
+					toRender.entries.unshift(`{@note The following information is from ${Parser.sourceJsonToFull(f.source)}${f.page > 0 ? `, page ${f.page}` : ""}.}`)
+				}
+				renderer.recursiveRender(toRender, renderStack);
+			});
+			renderStack.push(`</td></tr>`);
+		}
+
+		// FEATURE DESCRIPTIONS
+		let subclassIndex = 0; // the subclass array is not 20 elements
+		for (let i = 0; i < $levelTrs.length; i++) {
+			// track class table feature names
+			const tblLvlFeatures = $levelTrs[i].find(".features");
+			// used to build class table
+			const featureLinks = [];
+
+			// add class features to render stack
+			const lvlFeatureList = ClassDisplay.curClass.classFeatures[i];
+			for (let j = 0; j < lvlFeatureList.length; j++) {
+				const feature = lvlFeatureList[j];
+				const idLevelPart = UrlUtil.encodeForHash(` ${i + 1}`);
+				const featureId = `${CLSS_HASH_FEATURE}${UrlUtil.encodeForHash(feature.name)}${idLevelPart}`;
+
+				const featureLinkPart = `${CLSS_HASH_FEATURE}${UrlUtil.encodeForHash(feature.name)}${idLevelPart}`;
+				const featureLink = $(`<a href="${HashLoad.getClassHash(
+					ClassDisplay.curClass)}${HASH_PART_SEP}${featureLinkPart}" class="${CLSS_FEATURE_LINK}" ${ATB_DATA_FEATURE_LINK}="${featureLinkPart}" ${ATB_DATA_FEATURE_ID}="${featureId}">${feature.name}</a>`);
+				featureLink.click(function () {
+					const hideClassFsKey = HASH_HIDE_FEATURES.slice(0, -1);
+					const hiddenState = Hist.getSubHash(hideClassFsKey) === "true";
+					if (hiddenState) {
+						setTimeout(() => {
+							Hist.setSubhash(hideClassFsKey, null);
+							setTimeout(() => document.getElementById(featureId).scrollIntoView(), 1);
+						}, 1);
+					} else document.getElementById(featureId).scrollIntoView();
+				});
+				if (feature.type !== "inset") featureLinks.push(featureLink);
+
+				const styleClasses = [CLSS_CLASS_FEATURE, "linked-titles--classes"];
+				if (feature.gainSubclassFeature) styleClasses.push(CLSS_GAIN_SUBCLASS_FEATURE);
+
+				renderStack.push(`<tr id="${featureId}" class="${styleClasses.join(" ")}"><td colspan="6">`);
+				renderer.recursiveRender(feature, renderStack);
+				renderStack.push(`</td></tr>`);
+
+				// add subclass features to render stack if appropriate
+				if (feature.gainSubclassFeature) {
+					for (let k = 0; k < ClassDisplay.curClass.subclasses.length; k++) {
+						const subClass = ClassDisplay.curClass.subclasses[k];
+
+						if (ExcludeUtil.isExcluded(subClass.name, "subclass", subClass.source)) continue;
+
+						for (let l = 0; l < subClass.subclassFeatures[subclassIndex].length; l++) {
+							const subFeature = subClass.subclassFeatures[subclassIndex][l];
+
+							// if this is not the subclass intro, add the subclass to the feature name
+							// this will only be shown if there are multiple subclasses displayed
+							if (subFeature.name === undefined) {
+								for (let m = 0; m < subFeature.entries.length; m++) {
+									const childEntry = subFeature.entries[m];
+									if (childEntry.name !== undefined && !childEntry.name.startsWith(`<span class="${CLSS_SUBCLASS_PREFIX}">`)) {
+										childEntry.name = `<span class="${CLSS_SUBCLASS_PREFIX}">${subClass.name}: </span>${childEntry.name}`;
+									}
+								}
+							}
+
+							const styleClasses = FeatureDescription.getSubclassStyles(subClass);
+							renderStack.push(`<tr class="text ${styleClasses.join(" ")}" ${ATB_DATA_SC}="${subClass.name}" ${ATB_DATA_SRC}="${ClassData.cleanScSource(subClass.source)}"><td colspan="6">`);
+							renderer.recursiveRender(subFeature, renderStack);
+							renderStack.push(`</td></tr>`);
+						}
+					}
+					subclassIndex++;
+				}
+			}
+
+			// render class table feature names
+			if (featureLinks.length === 0) {
+				tblLvlFeatures.html("\u2014");
+			} else {
+				featureLinks.forEach(($it, j) => {
+					tblLvlFeatures.append($it);
+					if (j < featureLinks.length - 1) tblLvlFeatures.append(", ");
+				});
+			}
+		}
+		topBorder.after(renderStack.join(""));
+
+		// hide UA/other sources by default
+		$(`.${CLSS_NON_STANDARD_SOURCE}`).not(`.${CLSS_SUBCLASS_PILL}`).not(`.${CLSS_PANEL_LINK}`).hide();
+
+		// CLASS FEATURE/UA/SUBCLASS PILL BUTTONS ==========================================================================
+		HashLoad.subclassPillWrapper = $("div#subclasses");
+		// remove any from previous class
+		HashLoad.subclassPillWrapper.find("span").remove();
+
+		// show/hide class features pill
+		HashLoad.makeGenericTogglePill("Class Features", CLSS_CLASS_FEATURES_ACTIVE, ID_CLASS_FEATURES_TOGGLE, HASH_HIDE_FEATURES, true, "Toggle class features");
+		if (ClassDisplay.curClass.fluff) HashLoad.makeGenericTogglePill("Info", CLSS_FLUFF_ACTIVE, ID_FLUFF_TOGGLE, HASH_SHOW_FLUFF, false, "Toggle class detail information");
+
+		// show/hide UA/other sources
+		HashLoad.makeSourceCyclePill();
+
+		// spacer before the subclass pills
+		HashLoad.addPillDivider();
+
+		// subclass pills
+		const subClasses = ClassDisplay.curClass.subclasses
+			.filter(sc => !ExcludeUtil.isExcluded(sc.name, "subclass", sc.source))
+			.sort((a, b) => SortUtil.ascSort(a.shortName, b.shortName));
+		for (let i = 0; i < subClasses.length; i++) {
+			const sc = subClasses[i];
+			const nonStandardSource = _isNonStandardSource(sc) || SourceUtil.hasBeenReprinted(sc.shortName, sc.source) || sc.source === SRC_DMG;
+			const styleClasses = [CLSS_ACTIVE, CLSS_SUBCLASS_PILL, "sc_pill"];
+			if (nonStandardSource) styleClasses.push(CLSS_NON_STANDARD_SOURCE);
+			if (FeatureDescription.subclassIsFreshUa(sc)) styleClasses.push(CLSS_FRESH_UA);
+			if (BrewUtil.hasSourceJson(ClassData.cleanScSource(sc.source))) styleClasses.push(CLSS_HOMEBREW_SOURCE);
+			const reprinted = SourceUtil.hasBeenReprinted(sc.shortName, sc.source);
+			const pillText = reprinted ? `${sc.shortName} (${Parser.sourceJsonToAbv(sc.source)})` : sc.shortName;
+			const pillPostText = reprinted || _isNonStandardSource(sc) ? "" : ` (${Parser.sourceJsonToAbv(sc.source)})`;
+			const $pill = $(`<span class="${styleClasses.join(" ")}" ${ATB_DATA_SC}="${sc.name}" ${ATB_DATA_SRC}="${
+				ClassData.cleanScSource(sc.source)}" title="Source: ${Parser.sourceJsonToFull(sc.source)}"><span>${pillText}<span class="sc_pill__source_suffix">${pillPostText}</span></span></span>`);
+			const handlePillClick = () => HashLoad.handleSubclassClick($pill.hasClass(CLSS_ACTIVE), subClasses[i].name, ClassData.cleanScSource(subClasses[i].source));
+			$pill.click(handlePillClick)
+				.contextmenu(evt => {
+					evt.preventDefault();
+					handlePillClick();
+				});
+			if (nonStandardSource) $pill.hide();
+			HashLoad.subclassPillWrapper.append($pill);
+		}
+
+		// spacer before "Feeling Lucky" pill
+		HashLoad.addPillDivider();
+		HashLoad.makeFeelingLuckyPill();
+		HashLoad.makeToggleSourcesPill();
+		HashLoad.makeResetPill();
+
+		// call loadSubHash with a blank sub-hash, to ensure the right content is displayed
+		loadSubHash([]);
+	}
+
+	static makeSourceCyclePill () {
+		const $pill = $(`<span title="Cycle through source types" id="${ID_OTHER_SOURCES_TOGGLE}" data-state="0" style="min-width: 8em;" class="sc_pill"><span>${
+			STRS_SOURCE_STATES[0]}</span></span>`);
+		HashLoad.subclassPillWrapper.append($pill);
+		$pill.click(() => {
+			let state = Number($pill.attr("data-state"));
+			if (++state > 2) state = 0;
+			$pill.attr("data-state", state);
+			$pill.find(`span`).text(STRS_SOURCE_STATES[state]);
+			HashLoad.setSourceState(state);
+		}).contextmenu(evt => {
+			evt.preventDefault();
+			let state = Number($pill.attr("data-state"));
+			if (--state < 0) state = STRS_SOURCE_STATES.length - 1;
+			$pill.attr("data-state", state);
+			$pill.find(`span`).text(STRS_SOURCE_STATES[state]);
+			HashLoad.setSourceState(state);
+		});
+	}
+
+	// helper functions
+	static makeGenericTogglePill (pillText, pillActiveClass, pillId, hashKey, defaultActive, title) {
+		const pill = $(`<span title="${title}" id="${pillId}" class="sc_pill"><span>${pillText}</span></span>`);
+		if (defaultActive) pill.addClass(pillActiveClass);
+		HashLoad.subclassPillWrapper.append(pill);
+		const onPillClick = function (evt) {
+			evt.preventDefault();
+			let active = $(this).hasClass(pillActiveClass);
+			if (!defaultActive) active = !active;
+			handleToggleFeaturesClicks(active)
+		};
+		pill.click(onPillClick).contextmenu(onPillClick);
+		return pill;
+
+		function handleToggleFeaturesClicks (isPillActive) {
+			const outStack = [];
+			const split = window.location.hash.split(HASH_PART_SEP);
+
+			for (let i = 0; i < split.length; i++) {
+				const hashPart = split[i];
+				if (!hashPart.startsWith(hashKey)) outStack.push(hashPart);
+			}
+			if (isPillActive) {
+				outStack.push(hashKey + "true")
+			} else {
+				outStack.push(hashKey + "false")
+			}
+
+			HashLoad.cleanSetHash(outStack.join(HASH_PART_SEP));
+		}
+	}
+
+	static addPillDivider () {
+		HashLoad.subclassPillWrapper.append($(`<span class="divider">`));
+	}
+
+	static makeFeelingLuckyPill () {
+		const $pill = $(`<span title="Feeling Lucky?" class="sc_pill sc-pill-feeling-lucky"><span class="glyphicon glyphicon-random"></span></span>`);
+		HashLoad.subclassPillWrapper.append($pill);
+		$pill.click(() => {
+			const [link, ...sub] = Hist._getHashParts();
+			const outStack = [link];
+			let singleSelected = null;
+			sub.filter(hashPart => {
+				if (!hashPart.startsWith(HASH_SUBCLASS)) return true;
+				else if (!hashPart.includes(HASH_LIST_SEP) && hashPart.length) singleSelected = hashPart.slice(HASH_SUBCLASS.length);
+			}).forEach(hashPart => outStack.push(hashPart));
+			const hashes = $(`.${CLSS_SUBCLASS_PILL}`).filter(`:visible`)
+				.map((i, e) => HashLoad.getEncodedSubclass($(e).attr(`data-subclass`), $(e).attr(`data-source`))).get();
+
+			const getRolled = () => hashes[RollerUtil.roll(hashes.length)];
+
+			if (singleSelected == null || hashes.length === 1) outStack.push(`${HASH_SUBCLASS}${getRolled()}`);
+			else if (hashes.length > 1) {
+				let rolled;
+				do {
+					rolled = getRolled()
+				} while (rolled === singleSelected);
+				outStack.push(`${HASH_SUBCLASS}${rolled}`);
+			}
+			HashLoad.cleanSetHash(outStack.join(HASH_PART_SEP));
+		});
+	}
+
+	static makeToggleSourcesPill () {
+		$(`<span title="Toggle Sources" class="sc_pill sc_pill__source"><span class="glyphicon glyphicon-book"></span></span>`)
+			.appendTo(HashLoad.subclassPillWrapper)
+			.click(function () {
+				const [link, ...sub] = Hist._getHashParts();
+				const outStack = [link];
+				let curr = false;
+				sub.filter(hashPart => {
+					if (!hashPart.startsWith(HASH_SHOW_PILL_SOURCES)) return true;
+					else curr = hashPart.substr(HASH_SHOW_PILL_SOURCES.length) === "true";
+				}).forEach(hashPart => outStack.push(hashPart));
+				outStack.push(`${HASH_SHOW_PILL_SOURCES}${!curr}`);
+				HashLoad.cleanSetHash(outStack.join(HASH_PART_SEP));
+			});
+	}
+
+	static makeResetPill () {
+		$(`<span title="Reset" class="sc_pill"><span class="glyphicon glyphicon-refresh"></span></span>`)
+			.appendTo(HashLoad.subclassPillWrapper)
+			.click(() => HashLoad.cleanSetHash(window.location.hash.split(HASH_PART_SEP)[0] || ""));
+	}
+
+	static handleSubclassClick (isPillActive, subclassName, subclassSource) {
+		const outStack = [];
+		const split = window.location.hash.split(HASH_PART_SEP);
+
+		const encodedSubClass = HashLoad.getEncodedSubclass(subclassName, subclassSource);
+		const subclassLink = HASH_SUBCLASS + encodedSubClass;
+
+		if (isPillActive && window.location.hash.includes(HASH_SUBCLASS)) {
+			for (let i = 0; i < split.length; i++) {
+				const hashPart = split[i];
+				if (!hashPart.startsWith(HASH_SUBCLASS)) {
+					outStack.push(hashPart);
+				} else {
+					const subClassStack = [];
+					const subClasses = hashPart.substr(HASH_SUBCLASS.length).split(HASH_LIST_SEP);
+					for (let j = 0; j < subClasses.length; j++) {
+						const subClass = subClasses[j];
+						if (subClass !== encodedSubClass) subClassStack.push(subClass);
+					}
+					if (subClassStack.length > 0) outStack.push(HASH_SUBCLASS + subClassStack.join(HASH_LIST_SEP));
+				}
+			}
+		} else {
+			let hasSubclassHash = false;
+
+			for (let i = 0; i < split.length; i++) {
+				const hashPart = split[i];
+				if (!hashPart.startsWith(HASH_SUBCLASS)) {
+					outStack.push(hashPart);
+				} else {
+					const subClassStack = [];
+					const subClasses = hashPart.substr(HASH_SUBCLASS.length).split(HASH_LIST_SEP);
+					for (let j = 0; j < subClasses.length; j++) {
+						const subClass = subClasses[j];
+						if (subClass !== encodedSubClass) subClassStack.push(subClass);
+					}
+					subClassStack.push(encodedSubClass);
+					if (subClassStack.length > 0) outStack.push(HASH_SUBCLASS + subClassStack.join(HASH_LIST_SEP));
+
+					hasSubclassHash = true;
+				}
+			}
+
+			if (!hasSubclassHash) outStack.push(subclassLink);
+		}
+
+		HashLoad.cleanSetHash(outStack.join(HASH_PART_SEP));
+	}
+
+	static getClassHash (aClass) {
+		return `#${UrlUtil.autoEncodeHash(aClass)}`;
+	}
+
+	static getEncodedSubclass (name, source) {
+		return `${UrlUtil.encodeForHash(name)}${HASH_SUB_LIST_SEP}${UrlUtil.encodeForHash(source)}`;
+	}
+
+	static cleanSetHash (toSet) {
+		window.location.hash = toSet.replace(/,+/g, ",").replace(/,$/, "").toLowerCase();
+	}
+
+	static setSourceState (toState) {
+		const hash = window.location.hash;
+		if (hash.includes(HASH_SOURCES)) {
+			// handle old hash style
+			HashLoad.cleanSetHash(hash.replace(/sources:(\d|true|false)/, `${HASH_SOURCES}${toState}`));
+		} else {
+			HashLoad.cleanSetHash(`${hash}${HASH_PART_SEP}${HASH_SOURCES}${toState}`)
+		}
+	}
+}
+HashLoad.subclassPillWrapper = undefined;
+
+class SubClassLoader {
+	static loadSubHash (sub) {
+		const $pgContent = $(`#pagecontent`);
+
+		let subclasses = null;
+		let feature = null;
+		let hideClassFeatures = null;
+		let showFluff = null;
+		let sources = null;
+		let bookView = null;
+		let comparisonView = null;
+		let showPillSources = null;
+
+		SubClassLoader.partCache = null;
+
+		function sliceTrue (hashPart, findString) {
+			return hashPart.slice(findString.length) === "true";
+		}
+
+		for (let i = 0; i < sub.length; i++) {
+			const hashPart = sub[i];
+
+			if (hashPart.startsWith(HASH_SUBCLASS)) subclasses = hashPart.slice(HASH_SUBCLASS.length).split(HASH_LIST_SEP);
+			if (hashPart.startsWith(CLSS_HASH_FEATURE)) feature = hashPart;
+			if (hashPart.startsWith(HASH_HIDE_FEATURES)) hideClassFeatures = sliceTrue(hashPart, HASH_HIDE_FEATURES);
+			if (hashPart.startsWith(HASH_SHOW_FLUFF)) showFluff = sliceTrue(hashPart, HASH_SHOW_FLUFF);
+			if (hashPart.startsWith(HASH_SOURCES)) sources = hashPart.slice(HASH_SOURCES.length);
+			if (hashPart.startsWith(HASH_BOOK_VIEW)) bookView = sliceTrue(hashPart, HASH_BOOK_VIEW);
+			if (hashPart.startsWith(HASH_SHOW_PILL_SOURCES)) showPillSources = sliceTrue(hashPart, HASH_SHOW_PILL_SOURCES);
+			if (subclassComparisonView && hashPart.startsWith(subclassComparisonView.hashKey)) comparisonView = sliceTrue(hashPart, `${subclassComparisonView.hashKey}:`);
+		}
+
+		const hideAllSources = !ClassBookView.bookViewActive && (sources === null || sources === STR_SOURCES_OFFICIAL);
+		const hideSomeSources = !ClassBookView.bookViewActive && sources === STR_SOURCES_MIXED;
+
+		// deselect any pills that would be hidden
+		if (subclasses !== null && (hideAllSources || hideSomeSources)) {
+			const toDeselect = [];
+			const $toCheckBase = $(`.${CLSS_SUBCLASS_PILL}.${CLSS_NON_STANDARD_SOURCE}.${CLSS_ACTIVE}`);
+			const $toCheck = hideAllSources ? $toCheckBase : $toCheckBase.not(`.${CLSS_FRESH_UA}`);
+			$toCheck.each(function () {
+				const $this = $(this);
+				const thisSc = HashLoad.getEncodedSubclass($this.attr(ATB_DATA_SC), $this.attr(ATB_DATA_SRC));
+				if ($.inArray(subclasses, thisSc)) {
+					toDeselect.push(thisSc)
+				}
+			});
+			const toKeep = subclasses.filter(sc => toDeselect.indexOf(sc) < 0);
+			if (toKeep.length !== subclasses.length) {
+				const newHashStack = [];
+				for (let i = 0; i < sub.length; i++) {
+					const hashPart = sub[i];
+
+					if (!hashPart.startsWith(HASH_SUBCLASS)) {
+						newHashStack.push(hashPart);
+					} else if (toKeep.length > 0) newHashStack.push(HASH_SUBCLASS + toKeep.join(HASH_LIST_SEP))
+				}
+				const curParts = Hist._getHashParts();
+				if (curParts.length > 1) {
+					const newParts = [curParts[0]].concat(newHashStack);
+					HashLoad.cleanSetHash(HASH_START + newParts.join(HASH_PART_SEP));
+				}
+				return;
+			}
+		}
+
+		if (subclasses !== null) {
+			SubClassLoader.updateClassTableLinks();
+			SubClassLoader.updateNavLinks(sub);
+
+			const $toShow = [];
+			const $toHide = [];
+			const $subClassSpanList = $(`.${CLSS_SUBCLASS_PILL}`);
+			$subClassSpanList.each(
+				function () {
+					const $this = $(this);
+					const thisSc = HashLoad.getEncodedSubclass($this.attr(ATB_DATA_SC), $this.attr(ATB_DATA_SRC));
+					let shown = false;
+
+					for (let j = 0; j < subclasses.length; j++) {
+						const sc = subclasses[j].toLowerCase();
+						if (sc.trim() === thisSc) {
+							shown = true;
+							break;
+						}
+					}
+					if (shown) {
+						$toShow.push($this);
+					} else {
+						$toHide.push($this);
+					}
+				}
+			);
+
+			ClassBookView.updateVisible($toShow, $toHide);
+
+			if ($toShow.length === 0) {
+				SubClassLoader.hideAllSubclasses(sub, hideAllSources);
+			} else {
+				const $otherSrcSubFeat = $pgContent.find(`div.${CLSS_NON_STANDARD_SOURCE}`);
+				const shownInTable = [];
+
+				$.each($toShow, function (i, v) {
+					v.addClass(CLSS_ACTIVE);
+					$(`.${CLSS_SUBCLASS_FEATURE}[${ATB_DATA_SC}="${v.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${v.attr(ATB_DATA_SRC)}"]`).show();
+					if (hideAllSources || hideSomeSources) {
+						$otherSrcSubFeat.filter(`[${ATB_DATA_SC}="${v.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${v.attr(ATB_DATA_SRC)}"]`).hide();
+					} else {
+						$otherSrcSubFeat.filter(`[${ATB_DATA_SC}="${v.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${v.attr(ATB_DATA_SRC)}"]`).show();
+					}
+
+					const asInTable = FeatureTable.getTableDataScData(v.attr(ATB_DATA_SC), v.attr(ATB_DATA_SRC));
+					shownInTable.push(asInTable);
+					SubClassLoader.handleTableGroups(shownInTable, asInTable, true);
+				});
+
+				$.each($toHide, function (i, v) {
+					v.removeClass(CLSS_ACTIVE);
+					$(`.${CLSS_SUBCLASS_FEATURE}[${ATB_DATA_SC}="${v.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${v.attr(ATB_DATA_SRC)}"]`).hide();
+					$otherSrcSubFeat.filter(`[${ATB_DATA_SC}="${v.attr(ATB_DATA_SC)}"][${ATB_DATA_SRC}="${v.attr(ATB_DATA_SRC)}"]`).hide();
+
+					const asInTable = FeatureTable.getTableDataScData(v.attr(ATB_DATA_SC), v.attr(ATB_DATA_SRC));
+					SubClassLoader.handleTableGroups(shownInTable, asInTable, false);
+				});
+
+				const $spicy_NotScFeature_NoSubclassNoSource = $otherSrcSubFeat.not(`.${CLSS_SUBCLASS_FEATURE}`).filter(`:not([${ATB_DATA_SC}]):not([${ATB_DATA_SRC}])`);
+				const $spicy_NotScFeature_NoneSubclassNoneSource = $otherSrcSubFeat.not(`.${CLSS_SUBCLASS_FEATURE}`).filter(`[${ATB_DATA_SC}="${Renderer.DATA_NONE}"][${ATB_DATA_SRC}="${Renderer.DATA_NONE}"]`);
+				if (hideAllSources) {
+					$spicy_NotScFeature_NoSubclassNoSource.hide();
+					$spicy_NotScFeature_NoneSubclassNoneSource.hide();
+				} else {
+					$spicy_NotScFeature_NoSubclassNoSource.show();
+					$spicy_NotScFeature_NoneSubclassNoneSource.show();
+				}
+			}
+
+			// show subclass prefixes if we're displaying more than 1 subclass
+			$(`.${CLSS_SUBCLASS_PREFIX}`).toggle($toShow.length > 1);
+		} else {
+			SubClassLoader.hideAllSubclasses(sub, hideAllSources);
+			ClassBookView.updateVisible([], $(`.${CLSS_SUBCLASS_PILL}`).map((i, e) => $(e)).get());
+		}
+
+		// hide class features as required
+		const $cfToggle = $(`#${ID_CLASS_FEATURES_TOGGLE}`);
+		const $allCf = $pgContent.find(`.${CLSS_CLASS_FEATURE}`);
+		const $toToggleCf = $allCf.not(`.${CLSS_GAIN_SUBCLASS_FEATURE}`);
+		const isHideClassFeatures = hideClassFeatures !== null && hideClassFeatures;
+		// if showing no subclass and hiding class features, hide the "gain a feature at this level" labels
+		if (isHideClassFeatures && subclasses === null) {
+			$allCf.hide();
+			if (!showFluff) {
+				$(`#please-select-message`).addClass("showing");
+			} else {
+				$(`#please-select-message`).removeClass("showing");
+			}
+		} else {
+			$allCf.show();
+			$(`#please-select-message`).removeClass("showing");
+		}
+		if (isHideClassFeatures) {
+			$cfToggle.removeClass(CLSS_CLASS_FEATURES_ACTIVE);
+			$toToggleCf.hide();
+		} else {
+			$cfToggle.addClass(CLSS_CLASS_FEATURES_ACTIVE);
+			$toToggleCf.show();
+		}
+
+		// show fluff as required
+		const $fluffToggle = $(`#${ID_FLUFF_TOGGLE}`);
+		const $fluff = $pgContent.find(`.${CLSS_CLASS_FLUFF}`);
+		if (!showFluff) {
+			ClassList.classList.items.forEach(it => {
+				const $e = $(it.elm).find("a");
+				const nuHref = $e.attr("href").split(HASH_PART_SEP)[0];
+				$e.attr("href", nuHref);
+			});
+			$fluffToggle.removeClass(CLSS_FLUFF_ACTIVE);
+			$fluff.hide();
+		} else {
+			ClassList.classList.items.forEach(it => {
+				const $e = $(it.elm).find("a");
+				const nuHrefBase = $e.attr("href").split(HASH_PART_SEP)[0];
+				const nuHref = [nuHrefBase, `${HASH_SHOW_FLUFF}${true}`].join(HASH_PART_SEP);
+				$e.attr("href", nuHref);
+			});
+			$fluffToggle.addClass(CLSS_FLUFF_ACTIVE);
+			$fluff.show();
+		}
+
+		// show UA/etc pills as required
+		const $btnToggleSrcMode = $(`#${ID_OTHER_SOURCES_TOGGLE}`);
+		const $elesToToggle = $(`.${CLSS_SUBCLASS_PILL}.${CLSS_NON_STANDARD_SOURCE}`).not(`.${CLSS_PANEL_LINK}`);
+		if (hideAllSources) {
+			$btnToggleSrcMode.find(`span`).text(STRS_SOURCE_STATES[0]);
+			$btnToggleSrcMode.attr("data-state", STR_SOURCES_OFFICIAL);
+			$elesToToggle.hide();
+		} else if (hideSomeSources) {
+			$btnToggleSrcMode.find(`span`).text(STRS_SOURCE_STATES[1]);
+			$btnToggleSrcMode.attr("data-state", STR_SOURCES_MIXED);
+			$elesToToggle.show().not(`.${CLSS_FRESH_UA}`).hide();
+		} else {
+			$btnToggleSrcMode.find(`span`).text(STRS_SOURCE_STATES[2]);
+			$btnToggleSrcMode.attr("data-state", STR_SOURCES_ALL);
+			$elesToToggle.show();
+		}
+
+		// scroll to the linked feature if required
+		if (feature !== null && (SubClassLoader.prevFeature === null || SubClassLoader.prevFeature !== feature)) {
+			document.getElementById($(`[${ATB_DATA_FEATURE_LINK}="${feature}"]`)[0].getAttribute(ATB_DATA_FEATURE_ID)).scrollIntoView();
+			SubClassLoader.prevFeature = feature;
+		}
+
+		SubClassLoader.updateClassTableLinks();
+		SubClassLoader.updateNavLinks(sub);
+
+		if (bookView) ClassBookView.open();
+		else ClassBookView.teardown();
+
+		if (comparisonView && subclassComparisonView) subclassComparisonView.open();
+		else if (subclassComparisonView) subclassComparisonView.teardown();
+
+		$(`.sc_pill__source_suffix`).toggle(!!showPillSources);
+		$(`.sc_pill__source`).toggleClass(CLSS_ACTIVE, !!showPillSources);
+	}
+
+	static handleTableGroups (shownInTable, tableDataTag, show) {
+		$(`[${ATB_DATA_SC_LIST}]`).each(
+			function () {
+				const $this = $(this);
+				const scs = $this.attr(ATB_DATA_SC_LIST).split(ATB_DATA_LIST_SEP);
+
+				// if another class has shown this item, don't hide it
+				if (!show) {
+					for (let i = 0; i < scs.length; i++) {
+						const sc = scs[i];
+						if ($.inArray(sc, shownInTable) !== -1) {
+							return;
+						}
+					}
+				}
+
+				for (let i = 0; i < scs.length; i++) {
+					const sc = scs[i];
+					if (sc === tableDataTag) {
+						$this.toggle(!!show);
+						break;
+					}
+				}
+			}
+		);
+	}
+
+	static getFeatureLink (featurePart) {
+		if (!SubClassLoader.partCache) {
+			const curHash = window.location.hash;
+			const hashParts = curHash.slice(1).split(HASH_PART_SEP);
+			SubClassLoader.partCache = [];
+			for (let i = 0; i < hashParts.length; i++) {
+				const part = hashParts[i];
+				if (!part.startsWith(CLSS_HASH_FEATURE)) SubClassLoader.partCache.push(part);
+			}
+		}
+		return HASH_START + SubClassLoader.partCache.join(HASH_PART_SEP) + HASH_PART_SEP + featurePart;
+	}
+
+	static updateClassTableLinks () {
+		$(`.${CLSS_FEATURE_LINK}`).each(
+			function () {
+				const $this = $(this);
+				this.href = SubClassLoader.getFeatureLink($this.attr(ATB_DATA_FEATURE_LINK));
+			}
+		)
+	}
+
+	static hideAllSubclasses (curSub, hideAllSources) {
+		SubClassLoader.updateClassTableLinks();
+		SubClassLoader.updateNavLinks(curSub);
+		const $pgContent = $(`#pagecontent`);
+		$(`.${CLSS_SUBCLASS_PILL}`).removeClass(CLSS_ACTIVE);
+		$pgContent.find(`.${CLSS_SUBCLASS_FEATURE}`).hide();
+		$(`.${CLSS_SUBCLASS_PREFIX}`).hide();
+		const allNonstandard = $pgContent.find(`div.${CLSS_NON_STANDARD_SOURCE}`);
+		allNonstandard.hide();
+		// if we're showing features from other sources, make sure these stay visible
+		if (!hideAllSources) {
+			allNonstandard.not(`.${CLSS_SUBCLASS_FEATURE}`).not(`.${CLSS_SUBCLASS_PILL}`).show();
+		}
+		// hide all table col groups
+		// TODO add handling for non-standard sources if UA non-caster->caster subclass are introduced
+		$(`[${ATB_DATA_SC_LIST}]`).each(
+			function () {
+				$(this).hide();
+			}
+		);
+	}
+
+	static updateNavLinks (sub) {
+		function makeScroller ($nav, $ele, idTr, parentTr, idClasses, displayText, scrollTo) {
+			const navClass = idClasses.split(" ").map(idClass => {
+				switch (idClass) {
+					case Renderer.HEAD_NEG_1: return "n1";
+					case Renderer.HEAD_0: return "n2";
+					case Renderer.HEAD_1: return "n3";
+				}
+			}).filter(Boolean)[0];
+			if (navClass != null) {
+				const subClass = parentTr.length ? parentTr.hasClass("subclass-feature") : false;
+				// either the element itself or the root feature can be a special colour
+				const ua = $ele.parent().hasClass("spicy-sauce") ? true
+					: parentTr.length ? parentTr.hasClass("spicy-sauce") : false;
+				const brew = $ele.parent().hasClass("refreshing-brew") ? true
+					: parentTr.length ? parentTr.hasClass("refreshing-brew") : false;
+				$(`<div class="nav-item ${navClass} ${brew ? "purple" : ua ? "green" : subClass ? "blue" : ""}">${displayText}</div>`).on("click", () => {
+					if (idTr.length) {
+						window.location.hash = SubClassLoader.getFeatureLink(idTr.attr("id"))
+					}
+
+					const $it = $(`[data-title-index="${scrollTo}"]`);
+					if ($it.get()[0]) $it.get()[0].scrollIntoView();
+				}).appendTo($nav);
+			}
+		}
+
+		if (!(SubClassLoader.prevSub === sub && SubClassLoader.prevSub.equals(sub))) { // checking array equality is faster than hitting the DOM
+			setTimeout(() => {
+				const $nav = $(`#sticky-nav`);
+				const $hr = $nav.find(`hr`);
+				const $navBody = $nav.find(`.nav-body`).empty();
+				const $navHead = $nav.find(`.nav-head`);
+				$navHead.find(`.nav-outline`).off("click").on("click", () => {
+					$navBody.toggle();
+					$hr.toggle();
+					const nextState = Number(!Number($navHead.attr("data-state")));
+					$navHead.attr("data-state", nextState);
+				});
+				const $titles = $(`.rd__h`);
+				$titles.each((i, e) => {
+					const $e = $(e);
+					const pClass = $e.parent().attr("class").trim();
+					if (pClass.split(" ").includes(Renderer.HEAD_2)) return; // consider enabling these for e.g. maneuvers?
+					if (!$e.is(":visible")) return;
+					const idTr = $e.closest(`tr[id]`);
+					const pTr = $e.closest(`tr`);
+					const textNodes = $e.find(`.entry-title-inner`).contents().filter(function () {
+						return this.nodeType === 3 && this.nodeValue.trim();
+					});
+					if (!textNodes.length) return;
+					const displayText = textNodes[0].nodeValue.trim().replace(/[:.]$/g, "");
+					const scrollTo = $e.data("title-index");
+					makeScroller($navBody, $e, idTr, pTr, pClass, displayText, scrollTo);
+				});
+			}, 5); // delay hack to allow rendering to catch up
+		}
+		SubClassLoader.prevSub = sub;
+	}
+}
+SubClassLoader.prevFeature = null;
+SubClassLoader.prevSub = null;
+SubClassLoader.partCache = null;
+
+function initCompareMode () {
+	subclassComparisonView = new BookModeView(
+		"compview", $(`#btn-comparemode`), "Please select some subclasses first",
+		($tbl) => {
+			const renderStack = [];
+			const numScLvls = ClassDisplay.curClass.subclasses[0].subclassFeatures.length;
+			for (let i = 0; i < numScLvls; ++i) {
+				renderStack.push(`<tr class="text">`);
+				ClassDisplay.curClass.subclasses.filter(sc => !ExcludeUtil.isExcluded(sc.name, "subclass", sc.source)).forEach((sc, j) => {
+					renderStack.push(`<td class="subclass-features-${j} ${FeatureDescription.getSubclassStyles(sc).join(" ")}">`);
+					sc.subclassFeatures[i].forEach(f => {
+						renderer.recursiveRender(f, renderStack);
+					});
+					renderStack.push(`</td>`);
+				});
+				renderStack.push(`</tr>`);
+				renderStack.push(`<tr><th colspan="6"><hr></th></tr>`);
+			}
+			$tbl.append(renderStack.join(""));
+
+			let numShown = 0;
+			ClassDisplay.curClass.subclasses.filter(sc => !ExcludeUtil.isExcluded(sc.name, "subclass", sc.source)).forEach((sc, i) => {
+				const $pill = $(`.${CLSS_SUBCLASS_PILL}[data-subclass="${sc.name}"][data-source="${sc.source}"]`);
+				if (!($pill.hasClass(CLSS_ACTIVE))) {
+					$tbl.find(`.subclass-features-${i}`).hide();
+				} else numShown++;
+			});
+
+			$tbl.find(`tr > td > div`).css("width", "400px");
+
+			return numShown;
+		}
+	);
+}
+
+class ClassBookView {
+	static open () {
+		function tglCf ($bkTbl, $cfToggle) {
+			$bkTbl.find(`.class-features`).toggle();
+			$cfToggle.toggleClass("cf-active");
+		}
+
+		function hashTeardown () {
+			HashLoad.cleanSetHash(window.location.hash.replace(ClassBookView.SUBHASH, ""));
+		}
+
+		if (ClassBookView.bookViewActive) return;
+		ClassBookView.bookViewActive = true;
+
+		HashLoad.setSourceState(STR_SOURCES_ALL);
+
+		const $body = $(`body`);
+		const $wrpBook = $(`<div class="book-mode"/>`);
+		ClassBookView._$body = $body;
+		ClassBookView._$wrpBook = $wrpBook;
+
+		$body.css("overflow", "hidden");
+		$body.addClass("book-mode-active");
+
+		// main panel
+		const $pnlContent = $(`<div class="pnl-content"/>`);
+		const $bkTbl = $(`<table class="stats stats--book stats--book-large"/>`);
+		ClassBookView._$bkTbl = $bkTbl;
+		const $brdTop = $(`<tr><th class="border close-border" colspan="6"><div/></th></tr>`);
+		const $btnClose = $(`<span class="delete-icon glyphicon glyphicon-remove"></span>`)
+			.on("click", () => hashTeardown());
+		$brdTop.find(`div`).append($btnClose);
+		$bkTbl.append($brdTop);
+
+		const renderStack = [];
+		renderer.setFirstSection(true);
+		renderStack.push(`<tr><td colspan="6">`);
+		renderer.recursiveRender({type: "section", name: ClassDisplay.curClass.name}, renderStack);
+		renderStack.push(`</td></tr>`);
+
+		renderStack.push(`<tr class="text class-features"><td colspan="6">`);
+		ClassDisplay.curClass.classFeatures.forEach(lvl => {
+			lvl.forEach(cf => {
+				renderer.recursiveRender(cf, renderStack);
+			});
+		});
+		renderStack.push(`</td></tr>`);
+
+		ClassDisplay.curClass.subclasses.filter(sc => !ExcludeUtil.isExcluded(sc.name, "subclass", sc.source)).forEach((sc, i) => {
+			renderStack.push(`<tr class="subclass-features-${i} ${FeatureDescription.getSubclassStyles(sc).join(" ")}"><td colspan="6">`);
+			sc.subclassFeatures.forEach(lvl => {
+				lvl.forEach(f => {
+					renderer.recursiveRender(f, renderStack);
+				});
+			});
+			renderStack.push(`</td></tr>`);
+		});
+		renderStack.push(Renderer.utils.getBorderTr());
+		$bkTbl.append(renderStack.join(""));
+		$pnlContent.append($bkTbl);
+
+		// menu panel
+		const $pnlMenu = $(`<div class="pnl-menu"/>`);
+		const $cfPill = $(`#${ID_CLASS_FEATURES_TOGGLE}`);
+
+		const $cfToggle = $(`<span class="pnl-link cf-active">Class Features</span>`).on("click", () => {
+			tglCf($bkTbl, $cfToggle);
+			$cfPill.click();
+		});
+
+		if (!($cfPill.hasClass("cf-active"))) {
+			tglCf($bkTbl, $cfToggle);
+		}
+
+		$pnlMenu.append($cfToggle);
+
+		ClassDisplay.curClass.subclasses.filter(sc => !ExcludeUtil.isExcluded(sc.name, "subclass", sc.source)).forEach((sc, i) => {
+			const name = SourceUtil.hasBeenReprinted(sc.shortName, sc.source) ? `${sc.shortName} (${Parser.sourceJsonToAbv(sc.source)})` : sc.shortName;
+			const styles = FeatureDescription.getSubclassStyles(sc);
+			const $pill = $(`.${CLSS_SUBCLASS_PILL}[data-subclass="${sc.name}"][data-source="${sc.source}"]`);
+
+			const $scToggle = $(`<span class="pnl-link active ${styles.join(" ")}" title="Source: ${Parser.sourceJsonToFull(sc.source)}" data-i="${i}" data-bk-subclass="${
+				sc.name}" data-bk-source="${sc.source}">${name}</span>`).on("click", () => {
+				ClassBookView._toggleSubclass($bkTbl, $scToggle, i);
+				$pill.click();
+			});
+
+			if (!($pill.hasClass(CLSS_ACTIVE))) {
+				ClassBookView._toggleSubclass($bkTbl, $scToggle, i);
+			}
+
+			ClassBookView._$scToggles[String(i)] = $scToggle;
+			$pnlMenu.append($scToggle);
+		});
+
+		const $menClose = $(`<span class="pnl-link pnl-link-close">\u21FD Close</span>`).on("click", () => {
+			hashTeardown();
+		});
+		$pnlMenu.append($menClose);
+
+		// right (blank) panel
+		const $pnlBlank = $(`<div class="pnl-menu pnl-menu-pad"/>`);
+
+		$wrpBook.append($pnlMenu).append($pnlContent).append($pnlBlank);
+		$body.append($wrpBook);
+	}
+
+	static teardown () {
+		if (ClassBookView.bookViewActive) {
+			ClassBookView._$bkTbl = null;
+			ClassBookView._$scToggles = {};
+
+			ClassBookView._$body.css("overflow", "");
+			ClassBookView._$body.removeClass("book-mode-active");
+			ClassBookView._$wrpBook.remove();
+			ClassBookView.bookViewActive = false;
+		}
+	}
+
+	static _toggleSubclass ($bkTbl, $scToggle, i) {
+		$bkTbl.find(`.subclass-features-${i}`).toggle();
+		$scToggle.toggleClass("active");
+	}
+
+	static updateVisible ($toShow, $toHide) {
+		function doUpdate ($list, show) {
+			$list.map($p => {
+				const $it = ClassBookView._$wrpBook.find(`.pnl-link[data-bk-subclass="${$p.attr(ATB_DATA_SC)}"][data-bk-source="${$p.attr(ATB_DATA_SRC)}"]`);
+				if ($it.length) {
+					const index = $it.data("i");
+					const $real = ClassBookView._$scToggles[index];
+					if (show && !$real.hasClass("active")) {
+						ClassBookView._toggleSubclass(ClassBookView._$bkTbl, $real, Number(index));
+					}
+					if (!show && $real.hasClass("active")) {
+						ClassBookView._toggleSubclass(ClassBookView._$bkTbl, $real, Number(index));
+					}
+				}
+			});
+		}
+
+		if (ClassBookView.bookViewActive) {
+			// $toShow/$toHide are lists of subclass pills
+			doUpdate($toShow, true);
+			doUpdate($toHide, false);
+		}
+	}
+
+	static initButton () {
+		$(`#btn-readmode`).on("click", () => {
+			HashLoad.cleanSetHash(`${window.location.hash}${HASH_PART_SEP}${ClassBookView.SUBHASH}`);
+		});
+	}
+}
+ClassBookView.SUBHASH = `${HASH_BOOK_VIEW}true`;
+ClassBookView.bookViewActive = false;
+ClassBookView._$body = null;
+ClassBookView._$wrpBookUnder = null;
+ClassBookView._$wrpBook = null;
+ClassBookView._$bkTbl = null;
+ClassBookView._$scToggles = {};
+
+function initLinkGrabbers () {
+	const $body = $(`body`);
+	$body.on(`mousedown`, `.linked-titles--classes > td > * > .rd__h .entry-title-inner`, (evt) => evt.preventDefault());
+	$body.on(`click`, `.linked-titles--classes > td > * > .rd__h .entry-title-inner`, async function (evt) {
+		const $this = $(this);
+
+		if (evt.shiftKey) {
+			await MiscUtil.pCopyTextToClipboard($this.text().replace(/\.$/, ""));
+			JqueryUtil.showCopiedEffect($this);
+		} else {
+			const fTag = $this.closest(`tr`).attr("id");
+
+			const hash = `${window.location.hash.slice(1).split(HASH_PART_SEP)
+				.filter(it => !it.startsWith(CLSS_HASH_FEATURE)).join(HASH_PART_SEP)}${HASH_PART_SEP}${fTag}`;
+
+			await MiscUtil.pCopyTextToClipboard(`${window.location.href.split("#")[0]}#${hash}`);
+			JqueryUtil.showCopiedEffect($this, "Copied link!");
+		}
+	});
+}
+
+const renderer = Renderer.get();
+
+const sourceFilter = new Filter({
+	header: FilterBox.SOURCE_HEADER,
+	minimalUi: true,
+	items: ["Core", "Others"],
+	selFn: (it) => it === "Core" || it === "Homebrew"
+});
+
+let tableDefault = $("#pagecontent").html();
+let statsProfDefault = $("#statsprof").html();
+let classTableDefault = $("#classtable").html();
+
+function handleBrew (homebrew) {
+	ClassData.addClassData(homebrew);
+	ClassData.addSubclassData(homebrew);
+	return Promise.resolve();
+}
+
+async function doPageInit () {
+	filterBox = await pInitFilterBox({filters: [sourceFilter], isCompact: true});
+
+	// filtering function
+	$(filterBox).on(
+		FilterBox.EVNT_VALCHANGE,
+		ClassList.handleFilterChange
+	);
+
+	ClassList.classList = ListUtil.search({
+		valueNames: ["name", "source", "uniqueid"],
+		listClass: "classes"
+	});
+
+	BrewUtil.makeBrewButton("manage-brew");
+	BrewUtil.bind({list: ClassList.classList, filterBox, sourceFilter});
+
+	initCompareMode();
+	initLinkGrabbers();
+	ClassBookView.initButton();
+	await ExcludeUtil.pInitialise();
+	SortUtil.initHandleFilterButtonClicks();
+	Omnisearch.addScrollTopFloat();
+
+	DataUtil.class.loadJSON().then((data) => {
+		ClassData.addClassData(data);
+
+		BrewUtil.pAddBrewData()
+			.then(handleBrew)
+			.then(() => BrewUtil.pAddLocalBrewData())
+			.catch(BrewUtil.pPurgeBrew)
+			.then(() => {
+				RollerUtil.addListRollButton();
+				Hist.init(true);
+				ExcludeUtil.checkShowAllExcluded(ClassData.classes, $(`#pagecontent`));
+			});
+	});
+}
+
+window.addEventListener("load", () => doPageInit());

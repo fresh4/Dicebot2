@@ -1,21 +1,152 @@
-"use strict";const JSON_URL="data/names.json";let nameList;const renderer=Renderer.get();function makeContentsBlock(a,b){let c="<ul>";return b.tables.forEach((d,e)=>{const f=getTableName(b,d);c+=`<li>
-				<a id="${a},${e}" href="#${UrlUtil.encodeForHash([b.name,b.source,d.option])}" title="${f}">${f}</a>
-			</li>`}),c+="</ul>",c}function getTableName(a,b){return`${a.name} - ${b.option}`}window.onload=function(){ExcludeUtil.pInitialise(),DataUtil.loadJSON(JSON_URL).then(onJsonLoad)};let list;function onJsonLoad(a){nameList=a.name;const b=$("ul.names");let c="";for(let b=0;b<nameList.length;b++){const a=nameList[b];c+=`<li>
-				<span class="name" onclick="showHideList(this)" title="Source: ${Parser.sourceJsonToFull(a.source)}">${a.name}</span>
-				${makeContentsBlock(b,a)}
-			</li>`}b.append(c),list=ListUtil.search({valueNames:["name"],listClass:"names"}),History.init(!0)}function showHideList(a){const b=$(a);b.next(`ul`).toggle()}function loadHash(a){renderer.setFirstSection(!0);const[b,c]=a.split(",").map(a=>+a),d=nameList[b],e=d.tables[c].table,f=getTableName(d,d.tables[c]),g=d.tables[c].diceType;let h=`
+"use strict";
+
+const JSON_URL = "data/names.json";
+
+let nameList;
+const renderer = Renderer.get();
+
+function makeContentsBlock (i, loc) {
+	let out =
+		"<ul>";
+
+	loc.tables.forEach((t, j) => {
+		const tableName = getTableName(loc, t);
+		out +=
+			`<li>
+				<a id="${i},${j}" href="#${UrlUtil.encodeForHash([loc.name, loc.source, t.option])}" title="${tableName}">${tableName}</a>
+			</li>`;
+	});
+
+	out +=
+		"</ul>";
+	return out;
+}
+
+function getTableName (loc, table) {
+	return `${loc.name} - ${table.option}`;
+}
+
+window.onload = function load () {
+	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
+	DataUtil.loadJSON(JSON_URL).then(onJsonLoad);
+};
+
+let list;
+function onJsonLoad (data) {
+	nameList = data.name;
+
+	const namesList = $("ul.names");
+	let tempString = "";
+	for (let i = 0; i < nameList.length; i++) {
+		const loc = nameList[i];
+
+		tempString +=
+			`<li>
+				<span class="name" onclick="showHideList(this)" title="Source: ${Parser.sourceJsonToFull(loc.source)}">${loc.name}</span>
+				${makeContentsBlock(i, loc)}
+			</li>`;
+	}
+	namesList.append(tempString);
+
+	list = ListUtil.search({
+		valueNames: ["name"],
+		listClass: "names"
+	});
+
+	Hist.init(true);
+}
+
+function showHideList (ele) {
+	const $ele = $(ele);
+	$ele.next(`ul`).toggle();
+}
+
+function loadHash (id) {
+	renderer.setFirstSection(true);
+
+	const [iLoad, jLoad] = id.split(",").map(n => Number(n));
+	const race = nameList[iLoad];
+	const table = race.tables[jLoad].table;
+	const tableName = getTableName(race, race.tables[jLoad]);
+	const diceType = race.tables[jLoad].diceType;
+
+	let htmlText = `
 		<tr>
 			<td colspan="6">
 				<table class="striped-odd">
-					<caption>${f}</caption>
+					<caption>${tableName}</caption>
 					<thead>
 						<tr>
 							<th class="col-2 text-center">
-								<span class="roller" onclick="rollAgainstTable('${b}', '${c}')">d${g}</span>
+								<span class="roller" onclick="rollAgainstTable('${iLoad}', '${jLoad}')">d${diceType}</span>
 							</th>
 							<th class="col-10">Name</th>
 						</tr>
-					</thead>`;for(let b=0;b<e.length;b++){const a=e[b].min===e[b].max?pad(e[b].min):`${pad(e[b].min)}-${pad(e[b].max)}`;h+=`<tr><td class="text-center">${a}</td><td>${getRenderedText(e[b].result)}</td></tr>`}h+=`
+					</thead>`;
+
+	for (let i = 0; i < table.length; i++) {
+		const range = table[i].min === table[i].max ? pad(table[i].min) : `${pad(table[i].min)}-${pad(table[i].max)}`;
+		htmlText += `<tr><td class="text-center">${range}</td><td>${getRenderedText(table[i].result)}</td></tr>`;
+	}
+
+	htmlText += `
 				</table>
 			</td>
-		</tr>`,$("#pagecontent").html(h),$(list.list).find(`.list-multi-selected`).removeClass("list-multi-selected");const i=History.getSelectedListElement().parent();$(i).addClass("list-multi-selected")}function pad(a){return(a+"").padStart(2,"0")}function getRenderedText(a){if(-1!==a.indexOf("{@")){const b=[];return renderer.recursiveRender(a,b),b.join("")}return a}function rollAgainstTable(a,b){a=+a,b=+b;const c=nameList[a],d=c.tables[b],e=d.table;e._rMax=null==e._rMax?Math.max(...e.filter(a=>null!=a.min).map(a=>a.min),...e.filter(a=>null!=a.max).map(a=>a.max)):e._rMax,e._rMin=null==e._rMin?Math.min(...e.filter(a=>null!=a.min).map(a=>a.min),...e.filter(a=>null!=a.max).map(a=>a.max)):e._rMin;const f=RollerUtil.randomise(e._rMax,e._rMin);let g;for(let c=0;c<e.length;c++){const a=e[c],b=null!=a.max&&a.max<a.min?a.max:a.min,d=null!=a.max&&a.max>a.min?a.max:a.min;if(f>=b&&f<=d){g=getRenderedText(a.result);break}}g=g.replace(RollerUtil.DICE_REGEX,function(a){const b=Renderer.dice.parseRandomise2(a);return`<span class="roller" onmousedown="event.preventDefault()" onclick="reroll(this)">${a}</span> (<span class="result">${b}</span>)`}),Renderer.dice.addRoll({name:`${c.name} - ${d.option}`},`<span><strong>${pad(f)}</strong> ${g}</span>`)}function reroll(a){const b=$(a),c=Renderer.dice.parseRandomise2(b.html());b.next(".result").html(c)}
+		</tr>`;
+	$("#pagecontent").html(htmlText);
+
+	// update list highlights
+	$(list.list).find(`.list-multi-selected`).removeClass("list-multi-selected");
+	const $listEle = Hist.getSelectedListElement().parent();
+	$($listEle).addClass("list-multi-selected");
+}
+
+function pad (number) {
+	return String(number).padStart(2, "0");
+}
+
+function getRenderedText (rawText) {
+	if (rawText.indexOf("{@") !== -1) {
+		const stack = [];
+		renderer.recursiveRender(rawText, stack);
+		return stack.join("");
+	} else return rawText;
+}
+
+function rollAgainstTable (iLoad, jLoad) {
+	iLoad = Number(iLoad);
+	jLoad = Number(jLoad);
+	const race = nameList[iLoad];
+	const table = race.tables[jLoad];
+	const rollTable = table.table;
+
+	rollTable._rMax = rollTable._rMax == null ? Math.max(...rollTable.filter(it => it.min != null).map(it => it.min), ...rollTable.filter(it => it.max != null).map(it => it.max)) : rollTable._rMax;
+	rollTable._rMin = rollTable._rMin == null ? Math.min(...rollTable.filter(it => it.min != null).map(it => it.min), ...rollTable.filter(it => it.max != null).map(it => it.max)) : rollTable._rMin;
+
+	const roll = RollerUtil.randomise(rollTable._rMax, rollTable._rMin);
+
+	let result;
+	for (let i = 0; i < rollTable.length; i++) {
+		const row = rollTable[i];
+		const trueMin = row.max != null && row.max < row.min ? row.max : row.min;
+		const trueMax = row.max != null && row.max > row.min ? row.max : row.min;
+		if (roll >= trueMin && roll <= trueMax) {
+			result = getRenderedText(row.result);
+			break;
+		}
+	}
+
+	// add dice results
+	result = result.replace(RollerUtil.DICE_REGEX, function (match) {
+		const r = Renderer.dice.parseRandomise2(match);
+		return `<span class="roller" onmousedown="event.preventDefault()" onclick="reroll(this)">${match}</span> (<span class="result">${r}</span>)`
+	});
+
+	Renderer.dice.addRoll({name: `${race.name} - ${table.option}`}, `<span><strong>${pad(roll)}</strong> ${result}</span>`);
+}
+
+function reroll (ele) {
+	const $ele = $(ele);
+	const resultRoll = Renderer.dice.parseRandomise2($ele.html());
+	$ele.next(".result").html(resultRoll);
+}

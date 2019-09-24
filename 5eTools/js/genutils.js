@@ -1,1 +1,19 @@
-"use strict";class GenUtil{static getFromTable(a,b){const c={};return Object.assign(c,a.find(a=>a.min===b||a.max&&b>=a.min&&b<=a.max)),Object.keys(c).forEach(a=>{"function"==typeof c[a]&&(c[a]=c[a]())}),c.display&&!c.result&&(c.result=c.display),c.display&&(c.display=Renderer.get().render(c.display)),c.result&&(c.result=Renderer.get().render(c.result)),c}}
+"use strict";
+
+class GenUtil {
+	static getFromTable (table, roll) {
+		const it = {};
+		Object.assign(it, table.find(it => {
+			return it.min === roll || (it.max && roll >= it.min && roll <= it.max);
+		}));
+		Object.keys(it).forEach(k => {
+			if (typeof it[k] === "function") {
+				it[k] = it[k]();
+			}
+		});
+		if (it.display && !it.result) it.result = it.display;
+		if (it.display) it.display = Renderer.get().render(it.display);
+		if (it.result) it.result = Renderer.get().render(it.result);
+		return it;
+	}
+}

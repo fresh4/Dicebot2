@@ -1,30 +1,92 @@
-"use strict";const JSON_URL="data/cultsboons.json";window.onload=function(){ExcludeUtil.pInitialise(),SortUtil.initHandleFilterButtonClicks(),DataUtil.loadJSON(JSON_URL).then(onJsonLoad)};function cultBoonTypeToFull(a){return"c"===a?"Cult":"Demonic Boon"}let cultsAndBoonsList;const sourceFilter=getSourceFilter();let filterBox,list;async function onJsonLoad(a){list=ListUtil.search({valueNames:["name","source","type","uniqueid"],listClass:"cultsboons",sortFunction:SortUtil.listSort});const b=new Filter({header:"Type",items:["b","c"],displayFn:cultBoonTypeToFull});filterBox=await pInitFilterBox({filters:[sourceFilter,b]});const c=$(`.lst__wrp-search-visible`);list.on("updated",()=>{c.html(`${list.visibleItems.length}/${list.items.length}`)}),$(filterBox).on(FilterBox.EVNT_VALCHANGE,handleFilterChange);ListUtil.initSublist({valueNames:["type","name","source","id"],listClass:"subcultsboons",getSublistRow:getSublistItem});ListUtil.initGenericPinnable(),RollerUtil.addListRollButton(),ListUtil.addListShowHide(),a.cult.forEach(a=>a._type="c"),a.boon.forEach(a=>a._type="b"),cultsAndBoonsList=a.cult.concat(a.boon);let d="";cultsAndBoonsList.forEach((a,b)=>{d+=`
-			<li class="row" ${FLTR_ID}="${b}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
-				<a id="${b}" href="#${UrlUtil.autoEncodeHash(a)}" title="${a.name}">
-					<span class="type col-3 text-center pl-0">${cultBoonTypeToFull(a._type)}</span>
-					<span class="name col-7">${a.name}</span>
-					<span class="source col-2 text-center ${Parser.sourceJsonToColor(a.source)} pr-0" title="${Parser.sourceJsonToFull(a.source)}" ${BrewUtil.sourceJsonToStyle(a.source)}>${Parser.sourceJsonToAbv(a.source)}</span>
-					
-					<span class="uniqueid hidden">${a.uniqueId?a.uniqueId:b}</span>
-				</a>
-			</li>`,sourceFilter.addItem(a.source)});const e=ListUtil.getSearchTermAndReset(list);$("ul.cultsboons").append(d),list.reIndex(),e&&list.search(e),list.sort("type"),filterBox.render(),handleFilterChange(),ListUtil.setOptions({itemList:cultsAndBoonsList,primaryLists:[list]}),ListUtil.bindPinButton(),Renderer.hover.bindPopoutButton(cultsAndBoonsList),UrlUtil.bindLinkExportButton(filterBox),ListUtil.bindDownloadButton(),ListUtil.bindUploadButton(),History.init(!0)}function handleFilterChange(){const a=filterBox.getValues();list.filter(function(b){const c=cultsAndBoonsList[$(b.elm).attr(FLTR_ID)];return filterBox.toDisplay(a,c.source,c._type)}),FilterBox.selectFirstVisible(cultsAndBoonsList)}function getSublistItem(a,b){return`
-		<li class="row" ${FLTR_ID}="${b}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
-			<a href="#${UrlUtil.autoEncodeHash(a)}" title="${a.name}">
-				<span class="name col-12 px-0">${a.name}</span>
-				<span class="id hidden">${b}</span>
+"use strict";
+
+function cultBoonTypeToFull (type) {
+	return type === "cult" ? "Cult" : "Demonic Boon";
+}
+
+class CultsBoonsPage extends ListPage {
+	constructor () {
+		const sourceFilter = getSourceFilter();
+		const typeFilter = new Filter({
+			header: "Type",
+			items: ["boon", "cult"],
+			displayFn: cultBoonTypeToFull
+		});
+
+		super({
+			dataSource: "data/cultsboons.json",
+
+			filters: [
+				sourceFilter,
+				typeFilter
+			],
+			filterSource: sourceFilter,
+
+			listValueNames: ["name", "source", "type", "uniqueid"],
+			listClass: "cultsboons",
+
+			sublistValueNames: ["type", "name", "source", "id"],
+			sublistClass: "subcultsboons",
+
+			dataProps: ["cult", "boon"]
+		});
+
+		this._sourceFilter = sourceFilter;
+	}
+
+	getListItem (it, bcI) {
+		// populate filters
+		this._sourceFilter.addItem(it.source);
+
+		return `
+		<li class="row" ${FLTR_ID}="${bcI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
+			<a id="${bcI}" href="#${UrlUtil.autoEncodeHash(it)}" title="${it.name}">
+				<span class="type col-3 text-center pl-0">${cultBoonTypeToFull(it.__prop)}</span>
+				<span class="name col-7">${it.name}</span>
+				<span class="source col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${Parser.sourceJsonToAbv(it.source)}</span>
+				
+				<span class="uniqueid hidden">${it.uniqueId ? it.uniqueId : bcI}</span>
+			</a>
+		</li>`;
+	}
+
+	handleFilterChange () {
+		const f = this._filterBox.getValues();
+		this._list.filter(item => {
+			const cb = this._dataList[$(item.elm).attr(FLTR_ID)];
+			return this._filterBox.toDisplay(
+				f,
+				cb.source,
+				cb.__prop
+			);
+		});
+		FilterBox.selectFirstVisible(this._dataList);
+	}
+
+	getSublistItem (it, pinId) {
+		return `
+		<li class="row" ${FLTR_ID}="${pinId}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
+			<a href="#${UrlUtil.autoEncodeHash(it)}" title="${it.name}">
+				<span class="name col-12 px-0">${it.name}</span>
+				<span class="id hidden">${pinId}</span>
 			</a>
 		</li>
-	`}const renderer=Renderer.get();function loadHash(a){renderer.setFirstSection(!0);const b=cultsAndBoonsList[a],c=[];"c"===b._type?(Renderer.cultboon.doRenderCultParts(b,renderer,c),renderer.recursiveRender({entries:b.entries},c,{depth:2}),$("#pagecontent").html(`
-			${Renderer.utils.getBorderTr()}
-			${Renderer.utils.getNameTr(b)}
-			<tr id="text"><td class="divider" colspan="6"><div></div></td></tr>
-			<tr class='text'><td colspan='6' class='text'>${c.join("")}</td></tr>
-			${Renderer.utils.getPageTr(b)}
-			${Renderer.utils.getBorderTr()}
-		`)):"b"===b._type&&(b._displayName=b._displayName||`Demonic Boon: ${b.name}`,Renderer.cultboon.doRenderBoonParts(b,renderer,c),renderer.recursiveRender({entries:b.entries},c,{depth:1}),$("#pagecontent").html(`
-			${Renderer.utils.getBorderTr()}
-			${Renderer.utils.getNameTr(b)}
-			<tr class='text'><td colspan='6'>${c.join("")}</td></tr>
-			${Renderer.utils.getPageTr(b)}
-			${Renderer.utils.getBorderTr()}
-		`)),ListUtil.updateSelected()}function loadSubHash(a){a=filterBox.setFromSubHashes(a),ListUtil.setFromSubHashes(a)}
+	`;
+	}
+
+	doLoadHash (id) {
+		const it = this._dataList[id];
+
+		$("#pagecontent").empty().append(RenderCultsBoons.$getRenderedCultBoon(it));
+
+		ListUtil.updateSelected();
+	}
+
+	doLoadSubHash (sub) {
+		sub = this._filterBox.setFromSubHashes(sub);
+		ListUtil.setFromSubHashes(sub);
+	}
+}
+
+const cultsBoonsPage = new CultsBoonsPage();
+window.addEventListener("load", () => cultsBoonsPage.pOnLoad());

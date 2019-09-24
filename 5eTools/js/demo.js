@@ -1,5 +1,87 @@
-"use strict";const JSON_URL="data/demo.json",STORAGE_LOCATION="demoInput";window.onload=loadJson;function loadJson(){ExcludeUtil.pInitialise(),DataUtil.loadJSON(JSON_URL).then(initDemo)}async function initDemo(a){function b(){f.html("");const a=[];let b;try{b=JSON.parse(k.getValue())}catch(a){f.html(`Invalid JSON! We recommend using <a href="https://jsonlint.com/" target="_blank" rel="noopener">JSONLint</a>.`),setTimeout(()=>{throw a})}e.setFirstSection(!0),e.resetHeaderIndex(),e.recursiveRender(b,a),h.html(`
+"use strict";
+
+const JSON_URL = "data/demo.json";
+const STORAGE_LOCATION = "demoInput";
+
+window.onload = loadJson;
+
+function loadJson () {
+	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
+	DataUtil.loadJSON(JSON_URL).then(initDemo)
+}
+
+async function initDemo (data) {
+	const defaultJson = data.data[0];
+
+	const renderer = new Renderer();
+	const $msg = $(`#message`);
+	const $in = $(`#jsoninput`);
+	const $out = $(`#pagecontent`);
+
+	const $btnRender = $(`#demoRender`);
+	const $btnReset = $(`#demoReset`);
+
+	// init editor
+	const editor = ace.edit("jsoninput");
+	editor.setOptions({
+		wrap: true,
+		showPrintMargin: false,
+		tabSize: 2
+	});
+
+	function demoRender () {
+		$msg.html("");
+		const renderStack = [];
+		let json;
+		try {
+			json = JSON.parse(editor.getValue());
+		} catch (e) {
+			$msg.html(`Invalid JSON! We recommend using <a href="https://jsonlint.com/" target="_blank" rel="noopener">JSONLint</a>.`);
+			setTimeout(() => {
+				throw e
+			});
+		}
+
+		renderer.setFirstSection(true);
+		renderer.resetHeaderIndex();
+		renderer.recursiveRender(json, renderStack);
+		$out.html(`
 			<tr><th class="border" colspan="6"></th></tr>
-			<tr class="text"><td colspan="6">${a.join("")}</td></tr>
+			<tr class="text"><td colspan="6">${renderStack.join("")}</td></tr>
 			<tr><th class="border" colspan="6"></th></tr>		
-		`)}function c(){k.setValue(JSON.stringify(d,null,"\t")),k.clearSelection(),b(),k.selection.moveCursorToPosition({row:0,column:0})}const d=a.data[0],e=new Renderer,f=$(`#message`),g=$(`#jsoninput`),h=$(`#pagecontent`),i=$(`#demoRender`),j=$(`#demoReset`),k=ace.edit("jsoninput");k.setOptions({wrap:!0,showPrintMargin:!1,tabSize:2});try{const a=await StorageUtil.pGetForPage(STORAGE_LOCATION);a?(k.setValue(a,-1),b()):c()}catch(a){setTimeout(()=>{throw a}),c()}const l=MiscUtil.debounce(()=>{b(),StorageUtil.pSetForPage(STORAGE_LOCATION,k.getValue())},150);j.on("click",()=>{c()}),i.on("click",()=>{b()}),k.on("change",()=>{l()})}
+		`)
+	}
+
+	function demoReset () {
+		editor.setValue(JSON.stringify(defaultJson, null, "\t"));
+		editor.clearSelection();
+		demoRender();
+		editor.selection.moveCursorToPosition({row: 0, column: 0});
+	}
+
+	try {
+		const prevInput = await StorageUtil.pGetForPage(STORAGE_LOCATION);
+		if (prevInput) {
+			editor.setValue(prevInput, -1);
+			demoRender();
+		} else demoReset();
+	} catch (ignored) {
+		setTimeout(() => { throw ignored; });
+		demoReset();
+	}
+
+	const renderAndSaveDebounced = MiscUtil.debounce(() => {
+		demoRender();
+		StorageUtil.pSetForPage(STORAGE_LOCATION, editor.getValue());
+	}, 150);
+
+	$btnReset.on("click", () => {
+		demoReset();
+	});
+	$btnRender.on("click", () => {
+		demoRender();
+	});
+	editor.on("change", () => {
+		renderAndSaveDebounced();
+	});
+}

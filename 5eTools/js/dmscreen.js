@@ -1,28 +1,3253 @@
-"use strict";const UP="UP",RIGHT="RIGHT",LEFT="LEFT",DOWN="DOWN",AX_X="AXIS_X",AX_Y="AXIS_Y",EVT_NAMESPACE=".dm_screen",TITLE_LOADING="Loading...",PANEL_TYP_EMPTY=0,PANEL_TYP_STATS=1,PANEL_TYP_ROLLBOX=2,PANEL_TYP_TEXTBOX=3,PANEL_TYP_RULES=4,PANEL_TYP_INITIATIVE_TRACKER=5,PANEL_TYP_UNIT_CONVERTER=6,PANEL_TYP_CREATURE_SCALED_CR=7,PANEL_TYP_SUNDIAL=8,PANEL_TYP_MONEY_CONVERTER=9,PANEL_TYP_TUBE=10,PANEL_TYP_TWITCH=11,PANEL_TYP_TWITCH_CHAT=12,PANEL_TYP_ADVENTURES=13,PANEL_TYP_BOOKS=14,PANEL_TYP_INITIATIVE_TRACKER_PLAYER=15,PANEL_TYP_IMAGE=20,PANEL_TYP_GENERIC_EMBED=90;class Board{constructor(){this.panels={},this.exiledPanels=[],this.$creen=$(`.dm-screen`),this.width=this.getInitialWidth(),this.height=this.getInitialHeight(),this.sideMenu=new SideMenu(this),this.menu=new AddMenu,this.isFullscreen=!1,this.isLocked=!1,this.reactor=new Reactor,this.isAlertOnNav=!1,this.nextId=1,this.hoveringPanel=null,this.availContent={},this.availRules={},this.availAdventures={},this.availBooks={},this.$cbConfirmTabClose=null,this.$btnFullscreen=null,this.$btnLockPanels=null,this._pDoSaveStateDebounced=MiscUtil.debounce(()=>StorageUtil.pSet(DMSCREEN_STORAGE,this.getSaveableState()),25)}getInitialWidth(){const e=this.$creen.width();return Math.ceil(e/400)}getInitialHeight(){const e=this.$creen.height();return Math.ceil(e/300)}getNextId(){return this.nextId++}get$creen(){return this.$creen}getWidth(){return this.width}getHeight(){return this.height}getConfirmTabClose(){return null!=this.$cbConfirmTabClose&&this.$cbConfirmTabClose.prop("checked")}setDimensions(e,n){var t=Math.max;const d=this.width,a=this.height;e&&(this.width=t(e,1)),n&&(this.height=t(n,1)),d===e&&a===n||(this.doAdjust$creenCss(),(e<d||n<a)&&this.doCullPanels(d,a),this.sideMenu.doUpdateDimensions()),this.doCheckFillSpaces(),this.reactor.fire("panelResize")}doCullPanels(e,n){for(let t=e-1;0<=t;t--)for(let e=n-1;0<=e;e--){const n=this.getPanel(t,e);n&&(t>=this.width&&e>=this.height?n.canShrinkBottom()&&n.canShrinkRight()?(n.doShrinkBottom(),n.doShrinkRight()):n.exile():t>=this.width?n.canShrinkRight()?n.doShrinkRight():n.exile():e>=this.height&&(n.canShrinkBottom()?n.doShrinkBottom():n.exile()))}}doAdjust$creenCss(){this.$creen.css({marginTop:this.isFullscreen?0:3,gridGap:7,width:`calc(100% - ${this._getWidthAdjustment()}px)`,height:`calc(100% - ${this._getHeightAdjustment()}px)`,gridAutoColumns:`${100*(1/this.width)}%`,gridAutoRows:`${100*(1/this.height)}%`})}_getWidthAdjustment(){return 7*(this.width-1)}_getHeightAdjustment(){const e=7*(this.height-1);return this.isFullscreen?e:81+e}getPanelDimensions(){const e=this.$creen.outerWidth()+this._getWidthAdjustment(),n=this.$creen.outerHeight()+this._getHeightAdjustment();return{pxWidth:e/this.width,pxHeight:n/this.height}}doShowLoading(){$(`<div class="dm-screen-loading"><span class="initial-message">Loading...</span></div>`).css({gridColumnStart:"1",gridColumnEnd:this.width+1+"",gridRowStart:"1",gridRowEnd:this.height+1+""}).appendTo(this.$creen)}doHideLoading(){this.$creen.find(`.dm-screen-loading`).remove()}async pInitialise(){this.doAdjust$creenCss(),this.doShowLoading(),await this.pLoadIndex(),this.hasSavedStateUrl()?this.doLoadUrlState():(await this.pHasSavedState())?await this.pDoLoadState():this.doCheckFillSpaces(),this.initGlobalHandlers()}initGlobalHandlers(){window.onhashchange=()=>this.doLoadUrlState(),$(window).resize(()=>this.reactor.fire("panelResize"))}async pLoadIndex(){async function e(e,n,t,d){const a=await DataUtil.loadJSON(e);t.ALL=elasticlunr(function(){this.addField(d),this.addField("c"),this.addField("n"),this.addField("p"),this.addField("o"),this.setRef("id")}),SearchUtil.removeStemmer(t.ALL);let o=0;a[n].forEach(e=>{t[e.id]=elasticlunr(function(){this.addField(d),this.addField("c"),this.addField("n"),this.addField("p"),this.addField("o"),this.setRef("id")}),SearchUtil.removeStemmer(t[e.id]),e.contents.forEach((n,a)=>{const i={[d]:e.id,n:e.name,c:n.name,p:a,id:o++};n.ordinal&&(i.o=Parser.bookOrdinalToAbv(n.ordinal,!0)),t.ALL.addDoc(i),t[e.id].addDoc(i)})})}await SearchUiUtil.pDoGlobalInit(),await(async()=>{const e=await DataUtil.loadJSON("data/generated/bookref-dmscreen-index.json");this.availRules.ALL=elasticlunr(function(){this.addField("b"),this.addField("s"),this.addField("p"),this.addField("n"),this.addField("h"),this.setRef("id")}),SearchUtil.removeStemmer(this.availRules.ALL),e.data.forEach(n=>{n.n=e._meta.name[n.b],n.b=e._meta.id[n.b],n.s=e._meta.section[n.s],this.availRules.ALL.addDoc(n)})})(),await e(`data/adventures.json`,"adventure",this.availAdventures,"a"),await e(`data/books.json`,"book",this.availBooks,"b"),this.availContent=await SearchUiUtil.pGetContentIndices();const n=new AddMenuSearchTab(this.availContent),t=new AddMenuSearchTab(this.availRules,"rules"),d=new AddMenuSearchTab(this.availAdventures,"adventures"),a=new AddMenuSearchTab(this.availBooks,"books"),o=new AddMenuVideoTab,i=new AddMenuImageTab,l=new AddMenuSpecialTab;this.menu.addTab(n).addTab(t).addTab(d).addTab(a).addTab(i).addTab(o).addTab(l),this.menu.render(),this.sideMenu.render(),this.doHideLoading()}getPanel(e,n){return Object.values(this.panels).find(t=>t.x<=e&&e<t.x+t.width&&t.y<=n&&n<t.y+t.height)}getPanels(e,n,t=1,d=1){const a=[];for(let o=0;o<t;++o)for(let t=0;t<d;++t)a.push(this.getPanel(e+o,n+t));return a.filter(e=>e)}getPanelPx(e,n){var t=Math.floor;const d=this.getPanelDimensions();return this.getPanel(t(e/d.pxWidth),t(n/d.pxHeight))}setHoveringPanel(e){this.hoveringPanel=e}setVisiblyHoveringPanel(e){Object.values(this.panels).forEach(e=>e.removeHoverClass()),e&&this.hoveringPanel&&this.hoveringPanel.addHoverClass()}exilePanel(e){const n=Object.keys(this.panels).find(n=>this.panels[n].id===e);if(n){const t=this.panels[n];if(!t.getEmpty()){delete this.panels[n],this.exiledPanels.unshift(t);const e=this.exiledPanels.splice(10);e.forEach(e=>e.destroy()),this.sideMenu.doUpdateHistory()}else this.destroyPanel(e);this.doSaveStateDebounced()}}recallPanel(e){const n=this.exiledPanels.findIndex(n=>n.id===e.id);~n&&this.exiledPanels.splice(n,1),this.panels[e.id]=e,this.doSaveStateDebounced()}destroyPanel(e){const n=Object.keys(this.panels).find(n=>this.panels[n].id===e);n&&delete this.panels[n],this.doSaveStateDebounced()}doCheckFillSpaces(){for(let e=0;e<this.width;e++)for(let n=0;n<this.height;++n){const t=this.getPanel(e,n);if(!t){const t=new Panel(this,e,n);this.panels[t.id]=t}}Object.values(this.panels).forEach(e=>e.render()),this.doSaveStateDebounced()}hasSavedStateUrl(){return window.location.hash.length}doLoadUrlState(){if(window.location.hash.length){const e=JSON.parse(decodeURIComponent(window.location.hash.slice(1)));this.doReset(),this.doLoadStateFrom(e)}window.location.hash=""}async pHasSavedState(){return!!(await StorageUtil.pGet(DMSCREEN_STORAGE))}getSaveableState(){return{w:this.width,h:this.height,ctc:this.getConfirmTabClose(),fs:this.isFullscreen,lk:this.isLocked,ps:Object.values(this.panels).map(e=>e.getSaveableState()),ex:this.exiledPanels.map(e=>e.getSaveableState())}}doSaveStateDebounced(){this._pDoSaveStateDebounced()}doLoadStateFrom(e){this.$cbConfirmTabClose&&this.$cbConfirmTabClose.prop("checked",!!e.ctc),this.$btnFullscreen&&e.fs!==!!this.isFullscreen&&this.$btnFullscreen.click(),this.$btnLockPanels&&e.lk!==!!this.isLocked&&this.$btnLockPanels.click(),e.ex.filter(Boolean).reverse().forEach(e=>{const n=Panel.fromSavedState(this,e);n&&(this.panels[n.id]=n,n.exile())}),this.setDimensions(e.w,e.h),e.ps.filter(Boolean).filter(e=>e.t!==PANEL_TYP_EMPTY).forEach(e=>{const n=Panel.fromSavedState(this,e);n&&(this.panels[n.id]=n)}),this.setDimensions(e.w,e.h)}async pDoLoadState(){try{const e=await StorageUtil.pGet(DMSCREEN_STORAGE);this.doLoadStateFrom(e)}catch(n){JqueryUtil.doToast({content:"Error when loading DM screen! Purged saved data. (See the log for more information.)",type:"danger"}),await StorageUtil.pRemove(DMSCREEN_STORAGE),setTimeout(()=>{throw n})}}doReset(){this.exiledPanels.forEach(e=>e.destroy()),this.exiledPanels=[],this.sideMenu.doUpdateHistory(),Object.values(this.panels).forEach(e=>e.destroy()),this.panels={},this.setDimensions(this.getInitialWidth(),this.getInitialHeight())}setHoveringButton(e){this.resetHoveringButton(e),e.$btnAddInner.addClass("faux-hover")}resetHoveringButton(e){Object.values(this.panels).forEach(n=>{e&&e.id===n.id||n.$btnAddInner.removeClass("faux-hover")})}addPanel(e){this.panels[e.id]=e,e.render(),this.doSaveStateDebounced()}disablePanelMoves(){Object.values(this.panels).forEach(e=>e.toggleMovable(!1))}doBindAlertOnNavigation(){this.isAlertOnNav||(this.isAlertOnNav=!0,$(window).on("beforeunload",e=>{return(e||window.event).message="Temporary data and connections will be lost.","Temporary data and connections will be lost."}))}getPanelsByType(e){return Object.values(this.panels).filter(n=>n.tabDatas.length&&n.tabDatas.find(n=>n.type===e))}}class SideMenu{constructor(e){this.board=e,this.$mnu=$(`.sidemenu`),this.$mnu.on("mouseover",()=>{this.board.setHoveringPanel(null),this.board.setVisiblyHoveringPanel(!1),this.board.resetHoveringButton()}),this.$iptWidth=null,this.$iptHeight=null,this.$wrpHistory=null}render(){const e=()=>this.$mnu.append(`<hr class="sidemenu__row__divider">`),n=$(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Width</div></div>`).appendTo(this.$mnu),t=$(`<input class="form-control" type="number" value="${this.board.width}">`).appendTo(n);this.$iptWidth=t;const d=$(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Height</div></div>`).appendTo(this.$mnu),a=$(`<input class="form-control" type="number" value="${this.board.height}">`).appendTo(d);this.$iptHeight=a;const o=$(`<div class="sidemenu__row split-v-center"/>`).appendTo(this.$mnu),i=$(`<button class="btn btn-primary" style="width: 100%;">Set Dimensions</div>`).appendTo(o);i.on("click",()=>{const e=+t.val(),n=+a.val();(10<e||10<n)&&!window.confirm("That's a lot of panels. You sure?")||this.board.setDimensions(e,n)}),e();const l=$(`<div class="sidemenu__row flex-vh-center-around"></div>`).appendTo(this.$mnu),r=$(`<button class="btn btn-primary">Toggle Fullscreen</button>`).appendTo(l);this.board.$btnFullscreen=r,r.on("click",()=>{this.board.isFullscreen=!this.board.isFullscreen,this.board.isFullscreen?$(`body`).addClass(`is-fullscreen`):$(`body`).removeClass(`is-fullscreen`),this.board.doAdjust$creenCss(),this.board.doSaveStateDebounced(),this.board.reactor.fire("panelResize")});const s=$(`<button class="btn btn-danger" title="Lock Panels"><span class="glyphicon glyphicon-lock"/></button>`).appendTo(l);this.board.$btnLockPanels=s,s.on("click",()=>{this.board.isLocked=!this.board.isLocked,this.board.isLocked?(this.board.disablePanelMoves(),$(`body`).addClass(`dm-screen-locked`),s.removeClass(`btn-danger`).addClass(`btn-success`)):($(`body`).removeClass(`dm-screen-locked`),s.addClass(`btn-danger`).removeClass(`btn-success`)),this.board.doSaveStateDebounced()}),e();const p=$(`<div class="sidemenu__row--vert"/>`).appendTo(this.$mnu),u=$(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo(p),c=$(`<button class="btn btn-primary">Save to File</button>`).appendTo(u);c.on("click",()=>{DataUtil.userDownload(`dm-screen`,this.board.getSaveableState())});const f=$(`<button class="btn btn-primary">Load from File</button>`).appendTo(u);f.on("click",async()=>{const e=await DataUtil.pUserUpload();this.board.doReset(),this.board.doLoadStateFrom(e)});const h=$(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo(p),b=$(`<button class="btn btn-primary">Save to URL</button>`).appendTo(h);b.on("click",async()=>{const e=`${window.location.href.split("#")[0]}#${encodeURIComponent(JSON.stringify(this.board.getSaveableState()))}`;await MiscUtil.pCopyTextToClipboard(e),JqueryUtil.showCopiedEffect(b)}),e();const g=$(`<div class="sidemenu__row split-v-center"><label class="sidemenu__row__label sidemenu__row__label--cb-label"><span>Confirm on Tab Close</span></label></div>`).appendTo(this.$mnu);this.board.$cbConfirmTabClose=$(`<input type="checkbox" class="sidemenu__row__label__cb">`).appendTo(g.find(`label`)),e();const m=$(`<div class="sidemenu__row split-v-center"/>`).appendTo(this.$mnu),T=$(`<button class="btn btn-danger" style="width: 100%;">Reset Screen</button>`).appendTo(m);T.on("click",()=>{window.confirm("Are you sure?")&&this.board.doReset()}),e(),this.$wrpHistory=$(`<div class="sidemenu__history"/>`).appendTo(this.$mnu)}doUpdateDimensions(){this.$iptWidth.val(this.board.width),this.$iptHeight.val(this.board.height)}doUpdateHistory(){if(this.board.exiledPanels.forEach(e=>e.get$ContentWrapper().detach()),this.$wrpHistory.children().remove(),this.board.exiledPanels.length){const e=$(`<div class="sidemenu__row split-v-center"><span style="font-variant: small-caps;">Recently Removed</span></div>`).appendTo(this.$wrpHistory),n=$(`<button class="btn btn-danger">Clear</button>`).appendTo(e);n.on("click",()=>{this.board.exiledPanels=[],this.doUpdateHistory()})}this.board.exiledPanels.forEach((n,e)=>{const t=$(`<div class="sidemenu__history-item"/>`).appendTo(this.$wrpHistory),d=$(`<div class="sidemenu__history-item-cover"/>`).appendTo(t),a=$(`<div class="panel-history-control-remove-wrapper"><span class="panel-history-control-remove glyphicon glyphicon-remove" title="Remove"/></div>`).appendTo(d),o=$(`<div class="panel-history-control-middle" title="Move"/>`).appendTo(d);a.on("click",()=>{this.board.exiledPanels.splice(e,1),this.doUpdateHistory()});const i=n.get$ContentWrapper();t.append(i),o.on("mousedown touchstart",d=>{this.board.setVisiblyHoveringPanel(!0);const e=$(`body`);MiscUtil.clearSelection(),e.css("userSelect","none");const l=i.width(),r=i.height(),s=i.offset(),p=d.clientX-s.left,u=d.clientY-s.top;e.append(i),$(`.panel-control`).hide(),i.css("overflow-y","hidden"),Panel.setMovingCss(d,i,l,r,p,u,61),t.css("box-shadow","none"),a.hide(),o.hide(),this.board.get$creen().addClass("board-content-hovering"),n.get$Content().addClass("panel-content-hovering"),Panel.bindMovingEvents(this.board,i,p,u),$(document).on(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`,()=>{if(this.board.setVisiblyHoveringPanel(!1),$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`),e.css("userSelect",""),i.css("overflow-y",""),Panel.unsetMovingCss(i),t.css("box-shadow",""),a.show(),o.show(),this.board.get$creen().removeClass("board-content-hovering"),n.get$Content().removeClass("panel-content-hovering"),!this.board.hoveringPanel||n.id===this.board.hoveringPanel.id)t.append(i);else{this.board.recallPanel(n);const e=this.board.hoveringPanel;if(e.getEmpty())e.setFromPeer(n.getPanelMeta(),n.$content),n.destroy();else{const t=e.getPanelMeta(),d=e.get$Content();e.setFromPeer(n.getPanelMeta(),n.get$Content()),n.setFromPeer(t,d),n.exile()}e.$pnl.removeClass("panel-mode-move"),e.doShowJoystick(),this.doUpdateHistory()}MiscUtil.clearSelection(),this.board.doSaveStateDebounced()})})}),this.board.doSaveStateDebounced()}}class Panel{constructor(e,n,t,d=1,a=1,o=""){this.id=e.getNextId(),this.board=e,this.x=n,this.y=t,this.width=d,this.height=a,this.title=o,this.isDirty=!0,this.isContentDirty=!1,this.isLocked=!1,this.type=0,this.contentMeta=null,this.isMousedown=!1,this.isTabs=!1,this.tabIndex=null,this.tabDatas=[],this.tabCanRename=!1,this.tabRenamed=!1,this.$btnAdd=null,this.$btnAddInner=null,this.$content=null,this.joyMenu=null,this.$pnl=null,this.$pnlWrpContent=null,this.$pnlTitle=null,this.$pnlAddTab=null,this.$pnlWrpTabs=null,this.$pnlTabs=null}static fromSavedState(e,n){function t(e,n,t){function d(n){null!=e.r&&(n.tabDatas[t].tabRenamed=!0)}switch(e.t){case PANEL_TYP_EMPTY:return a;case PANEL_TYP_STATS:{const t=e.c.p,o=e.c.s,i=e.c.u;return a.doPopulate_Stats(t,o,i,n,e.r),d(a),a}case PANEL_TYP_CREATURE_SCALED_CR:{const t=e.c.p,o=e.c.s,i=e.c.u,l=e.c.cr;return a.doPopulate_StatsScaledCr(t,o,i,l,n,e.r),d(a),a}case PANEL_TYP_RULES:{const t=e.c.b,o=e.c.c,i=e.c.h;return a.doPopulate_Rules(t,o,i,n,e.r),d(a),a}case PANEL_TYP_ADVENTURES:{const t=e.c.a,o=e.c.c;return a.doPopulate_Adventures(t,o,n,e.r),d(a),a}case PANEL_TYP_BOOKS:{const t=e.c.b,o=e.c.c;return a.doPopulate_Books(t,o,n,e.r),d(a),a}case PANEL_TYP_ROLLBOX:return Renderer.dice.bindDmScreenPanel(a,e.r),d(a),a;case PANEL_TYP_TEXTBOX:return a.doPopulate_TextBox(e.s.x,e.r),d(a),a;case PANEL_TYP_INITIATIVE_TRACKER:return a.doPopulate_InitiativeTracker(e.s,e.r),d(a),a;case PANEL_TYP_INITIATIVE_TRACKER_PLAYER:return a.doPopulate_InitiativeTrackerPlayer(e.s,e.r),d(a),a;case PANEL_TYP_UNIT_CONVERTER:return a.doPopulate_UnitConverter(e.s,e.r),d(a),a;case PANEL_TYP_MONEY_CONVERTER:return a.doPopulate_MoneyConverter(e.s,e.r),d(a),a;case PANEL_TYP_SUNDIAL:return a.doPopulate_Sundial(e.s,e.r),d(a),a;case PANEL_TYP_TUBE:return a.doPopulate_YouTube(e.c.u,e.r),d(a),a;case PANEL_TYP_TWITCH:return a.doPopulate_Twitch(e.c.u,e.r),d(a),a;case PANEL_TYP_TWITCH_CHAT:return a.doPopulate_TwitchChat(e.c.u,e.r),d(a),a;case PANEL_TYP_GENERIC_EMBED:return a.doPopulate_GenericEmbed(e.c.u,e.r),d(a),a;case PANEL_TYP_IMAGE:return a.doPopulate_Image(e.c.u,e.r),d(a),a;default:throw new Error(`Unhandled panel type ${e.t}`);}}const d=e.getPanels(n.x,n.y,n.w,n.h);if(n.t===PANEL_TYP_EMPTY&&d.length)return null;d.length&&d.forEach(e=>e.destroy());const a=new Panel(e,n.x,n.y,n.w,n.h);return a.render(),n.a?(a.isTabs=!0,a.doRenderTabs(),n.a.forEach((e,n)=>t(e,!0,n)),a.setActiveTab(n.b)):t(n),a}static _get$eleLoading(e="Loading"){return $(`<div class="panel-content-wrapper-inner"><div class="ui-search__message loading-spinner"><i>${e}...</i></div></div>`)}static setMovingCss(e,n,t,d,a,o,i){n.css({width:t,height:d,position:"fixed",top:e.clientY-o,left:e.clientX-a,zIndex:i,pointerEvents:"none",transform:"rotate(-4deg)",background:"none"})}static unsetMovingCss(e){e.css({width:"",height:"",position:"",top:"",left:"",zIndex:"",pointerEvents:"",transform:"",background:""})}static bindMovingEvents(n,t,d,a){$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`),$(document).on(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`,o=>{n.setVisiblyHoveringPanel(!0),t.css({top:o.clientY-a,left:o.clientX-d})})}static isNonExilableType(e){return e===PANEL_TYP_ROLLBOX||e===PANEL_TYP_TUBE||e===PANEL_TYP_TWITCH}doPopulate_Empty(e){this.close$TabContent(e)}doPopulate_Loading(e){return this.set$ContentTab(PANEL_TYP_EMPTY,null,Panel._get$eleLoading(e),TITLE_LOADING)}doPopulate_Stats(e,n,t,d,a){const o={p:e,s:n,u:t},i=this.set$TabLoading(PANEL_TYP_STATS,o);Renderer.hover._doFillThenCall(e,n,t,()=>{const d=Renderer.hover._pageToRenderFn(e),l=Renderer.hover._getFromCache(e,n,t),r=$(`<div class="panel-content-wrapper-inner"/>`),s=$(`<table class="stats"/>`).appendTo(r);s.append(d(l)),this._stats_bindCrScaleClickHandler(l,o,r,s),this.set$Tab(i,PANEL_TYP_STATS,o,r,a||l.name,!0,!!a)})}_stats_bindCrScaleClickHandler(e,n,t,d){const a=this;d.off("click",".mon__btn-scale-cr").on("click",".mon__btn-scale-cr",function(o){o.stopPropagation();const i=$(this),l=null==a.contentMeta.cr?e.cr.cr||e.cr:Parser.numberToCr(a.contentMeta.cr);Renderer.monster.getCrScaleTarget(i,l,o=>{const i=Parser.crToNumber(e.cr.cr||e.cr)===o,l=e=>{d.empty().append(Renderer.monster.getCompactRenderedString(e,null,{showScaler:!0,isScaled:!i}));const l={...n,cr:o};i&&delete l.cr,a.set$Tab(a.tabIndex,i?PANEL_TYP_STATS:PANEL_TYP_CREATURE_SCALED_CR,l,t,e._displayName||e.name,!0)};i?l(e):ScaleCreature.scale(e,o).then(e=>l(e))},!0)}),d.off("click",".mon__btn-reset-cr").on("click",".mon__btn-reset-cr",function(){d.empty().append(Renderer.monster.getCompactRenderedString(e,null,{showScaler:!0,isScaled:!1})),a.set$Tab(a.tabIndex,PANEL_TYP_STATS,n,t,e.name,!0)})}doPopulate_StatsScaledCr(e,n,t,d,a,o){const i={p:e,s:n,u:t,cr:d},l=this.set$TabLoading(PANEL_TYP_CREATURE_SCALED_CR,i);Renderer.hover._doFillThenCall(e,n,t,()=>{const a=Renderer.hover._getFromCache(e,n,t);ScaleCreature.scale(a,d).then(e=>{const n=$(`<div class="panel-content-wrapper-inner"/>`),t=$(`<table class="stats"/>`).appendTo(n);t.append(Renderer.monster.getCompactRenderedString(e,null,{showScaler:!0,isScaled:!0})),this._stats_bindCrScaleClickHandler(a,i,n,t),this.set$Tab(l,PANEL_TYP_CREATURE_SCALED_CR,i,n,o||e._displayName||e.name,!0,!!o)})})}doPopulate_Rules(e,n,t,d,a){const o={b:e,c:n,h:t},i=this.set$TabLoading(PANEL_TYP_RULES,o);RuleLoader.pFill(e).then(()=>{const d=RuleLoader.getFromCache(e,n,t),l=Renderer.rule.getCompactRenderedString(d);this.set$Tab(i,PANEL_TYP_RULES,o,$(`<div class="panel-content-wrapper-inner"><table class="stats">${l}</table></div>`),a||d.name||"",!0,!!a)})}doPopulate_Adventures(e,n,t,d){const a={a:e,c:n},o=this.set$TabLoading(PANEL_TYP_ADVENTURES,a);adventureLoader.pFill(e).then(()=>{const t=adventureLoader.getFromCache(e,n),i=new AdventureOrBookView("adventure",this,adventureLoader,o,{adventure:e,chapter:n});this.set$Tab(o,PANEL_TYP_ADVENTURES,a,$(`<div class="panel-content-wrapper-inner"></div>`).append(i.$getEle()),d||t.name||"",!0,!!d)})}doPopulate_Books(e,n,t,d){const a={b:e,c:n},o=this.set$TabLoading(PANEL_TYP_BOOKS,a);bookLoader.pFill(e).then(()=>{const t=bookLoader.getFromCache(e,n),i=new AdventureOrBookView("book",this,bookLoader,o,{book:e,chapter:n});this.set$Tab(o,PANEL_TYP_BOOKS,a,$(`<div class="panel-content-wrapper-inner"></div>`).append(i.$getEle()),d||t.name||"",!0,!!d)})}set$ContentTab(e,n,t,d,a,o){const i=this.isTabs?this.getNextTabIndex():0;return this.set$Tab(i,e,n,t,d,a,o)}doPopulate_Rollbox(e){this.set$ContentTab(PANEL_TYP_ROLLBOX,null,$(`<div class="panel-content-wrapper-inner"/>`).append(Renderer.dice.get$Roller().addClass("rollbox-panel")),e||"Dice Roller",!0,!!e)}doPopulate_InitiativeTracker(e={},n){this.set$ContentTab(PANEL_TYP_INITIATIVE_TRACKER,e,$(`<div class="panel-content-wrapper-inner"/>`).append(InitiativeTracker.make$Tracker(this.board,e)),n||"Initiative Tracker",!0)}doPopulate_InitiativeTrackerPlayer(e={},n){this.set$ContentTab(PANEL_TYP_INITIATIVE_TRACKER_PLAYER,e,$(`<div class="panel-content-wrapper-inner"/>`).append(InitiativeTrackerPlayer.make$tracker(this.board,e)),n||"Initiative Tracker",!0)}doPopulate_UnitConverter(e={},n){this.set$ContentTab(PANEL_TYP_UNIT_CONVERTER,e,$(`<div class="panel-content-wrapper-inner"/>`).append(UnitConverter.make$Converter(this.board,e)),n||"Unit Converter",!0)}doPopulate_MoneyConverter(e={},n){this.set$ContentTab(PANEL_TYP_MONEY_CONVERTER,e,$(`<div class="panel-content-wrapper-inner"/>`).append(MoneyConverter.make$Converter(this.board,e)),n||"Money Converter",!0)}doPopulate_Sundial(e={},n){this.set$ContentTab(PANEL_TYP_SUNDIAL,e,$(`<div class="panel-content-wrapper-inner"/>`).append(Sundial.make$Sundail(this.board,e)),n||"Sundial",!0)}doPopulate_TextBox(e,n="Notes"){this.set$ContentTab(PANEL_TYP_TEXTBOX,null,$(`<div class="panel-content-wrapper-inner"/>`).append(NoteBox.make$Notebox(this.board,e)),n,!0)}doPopulate_YouTube(e,n="YouTube"){this.set$ContentTab(PANEL_TYP_TUBE,{u:e},$(`<div class="panel-content-wrapper-inner"><iframe src="${e}?autoplay=1&enablejsapi=1&modestbranding=1&iv_load_policy=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen /></div>`),n,!0)}doPopulate_Twitch(e,n="Twitch"){this.set$ContentTab(PANEL_TYP_TWITCH,{u:e},$(`<div class="panel-content-wrapper-inner"><iframe src="${e}" frameborder="0"  scrolling="no" allowfullscreen/></div>`),n,!0)}doPopulate_TwitchChat(e,n="Twitch Chat"){this.set$ContentTab(PANEL_TYP_TWITCH_CHAT,{u:e},$(`<div class="panel-content-wrapper-inner"><iframe src="${e}" frameborder="0"  scrolling="no"/></div>`),n,!0)}doPopulate_GenericEmbed(e,n="Embed"){this.set$ContentTab(PANEL_TYP_GENERIC_EMBED,{u:e},$(`<div class="panel-content-wrapper-inner"><iframe src="${e}"/></div>`),n,!0)}doPopulate_Image(e,n,t="Image"){const d=$(`<div class="panel-content-wrapper-inner"/>`),a=$(`<div class="panel-content-wrapper-img"/>`).appendTo(d),o=$(`<img src="${e}" alt="${t}">`).appendTo(a),i=$(`<button class="panel-zoom-reset btn btn-xs btn-default"><span class="glyphicon glyphicon-refresh"/></button>`).appendTo(d),l=$(`<input type="range" class="panel-zoom-slider">`).appendTo(d);this.set$ContentTab(PANEL_TYP_IMAGE,{u:e},d,t,!0,n),o.panzoom({$reset:i,$zoomRange:l,minScale:.1,maxScale:8,duration:100})}getTopNeighbours(){return[...Array(this.width)].map((e,n)=>n+this.x).map(e=>this.board.getPanel(e,this.y-1)).filter(e=>e)}getRightNeighbours(){const e=this.x+this.width;return[...Array(this.height)].map((e,n)=>n+this.y).map(n=>this.board.getPanel(e,n)).filter(e=>e)}getBottomNeighbours(){const e=this.y+this.height;return[...Array(this.width)].map((e,n)=>n+this.x).map(n=>this.board.getPanel(n,e)).filter(e=>e)}getLeftNeighbours(){return[...Array(this.height)].map((e,n)=>n+this.y).map(e=>this.board.getPanel(this.x-1,e)).filter(e=>e)}hasRowTop(){return 0<this.y}hasColumnRight(){return this.x+this.width<this.board.getWidth()}hasRowBottom(){return this.y+this.height<this.board.getHeight()}hasColumnLeft(){return 0<this.x}hasSpaceTop(){const e=this.getTopNeighbours().filter(e=>e.getLocked()).length;return this.hasRowTop()&&!e}hasSpaceRight(){const e=this.getRightNeighbours().filter(e=>e.getLocked()).length;return this.hasColumnRight()&&!e}hasSpaceBottom(){const e=this.getBottomNeighbours().filter(e=>e.getLocked()).length;return this.hasRowBottom()&&!e}hasSpaceLeft(){const e=this.getLeftNeighbours().filter(e=>e.getLocked()).length;return this.hasColumnLeft()&&!e}canShrinkTop(){return 1<this.height&&!this.getLocked()}canShrinkRight(){return 1<this.width&&!this.getLocked()}canShrinkBottom(){return 1<this.height&&!this.getLocked()}canShrinkLeft(){return 1<this.width&&!this.getLocked()}doShrinkTop(){this.height-=1,this.y+=1,this.setDirty(!0),this.render()}doShrinkRight(){this.width-=1,this.setDirty(!0),this.render()}doShrinkBottom(){this.height-=1,this.setDirty(!0),this.render()}doShrinkLeft(){this.width-=1,this.x+=1,this.setDirty(!0),this.render()}canBumpTop(){return!!this.hasRowTop()&&(!this.getTopNeighbours().filter(e=>!e.getEmpty()).length||!this.getTopNeighbours().filter(e=>!e.getEmpty()).filter(e=>!e.canBumpTop()).length)}canBumpRight(){return!!this.hasColumnRight()&&(!this.getRightNeighbours().filter(e=>!e.getEmpty()).length||!this.getRightNeighbours().filter(e=>!e.getEmpty()).filter(e=>!e.canBumpRight()).length)}canBumpBottom(){return!!this.hasRowBottom()&&(!this.getBottomNeighbours().filter(e=>!e.getEmpty()).length||!this.getBottomNeighbours().filter(e=>!e.getEmpty()).filter(e=>!e.canBumpBottom()).length)}canBumpLeft(){return!!this.hasColumnLeft()&&(!this.getLeftNeighbours().filter(e=>!e.getEmpty()).length||!this.getLeftNeighbours().filter(e=>!e.getEmpty()).filter(e=>!e.canBumpLeft()).length)}doBumpTop(){this.getTopNeighbours().filter(e=>e.getEmpty()).forEach(e=>e.destroy()),this.getTopNeighbours().filter(e=>!e.getEmpty()).forEach(e=>e.doBumpTop()),this.y-=1,this.setDirty(!0),this.render()}doBumpRight(){this.getRightNeighbours().filter(e=>e.getEmpty()).forEach(e=>e.destroy()),this.getRightNeighbours().filter(e=>!e.getEmpty()).forEach(e=>e.doBumpRight()),this.x+=1,this.setDirty(!0),this.render()}doBumpBottom(){this.getBottomNeighbours().filter(e=>e.getEmpty()).forEach(e=>e.destroy()),this.getBottomNeighbours().filter(e=>!e.getEmpty()).forEach(e=>e.doBumpBottom()),this.y+=1,this.setDirty(!0),this.render()}doBumpLeft(){this.getLeftNeighbours().filter(e=>e.getEmpty()).forEach(e=>e.destroy()),this.getLeftNeighbours().filter(e=>!e.getEmpty()).forEach(e=>e.doBumpLeft()),this.x-=1,this.setDirty(!0),this.render()}getPanelMeta(){return{type:this.type,contentMeta:this.contentMeta,title:this.title,isTabs:this.isTabs,tabIndex:this.tabIndex,tabDatas:this.tabDatas,tabCanRename:this.tabCanRename,tabRenamed:this.tabRenamed}}setPanelMeta(e,n){this.type=e,this.contentMeta=n}getEmpty(){return null==this.$content}getLocked(){return this.isLocked}getMousedown(){return this.isMousedown}setMousedown(e){this.isMousedown=e}setDirty(e){this.isDirty=e}setHasTabs(e){this.isTabs=e}setContentDirty(e){this.setDirty.bind(this)(e),this.isContentDirty=!0}doShowJoystick(){this.joyMenu.doShow(),this.$pnl.addClass(`panel-mode-move`)}doHideJoystick(){this.joyMenu.doHide(),this.$pnl.removeClass(`panel-mode-move`)}doRenderTitle(){const e=this.title!==TITLE_LOADING&&(this.type===PANEL_TYP_STATS||this.type===PANEL_TYP_CREATURE_SCALED_CR||this.type===PANEL_TYP_RULES||this.type===PANEL_TYP_ADVENTURES||this.type===PANEL_TYP_BOOKS)?this.title:"";this.$pnlTitle.text(e),e?this.$pnlTitle.removeClass("hidden"):this.$pnlTitle.addClass("hidden")}doRenderTabs(){this.isTabs?(this.$pnlWrpTabs.css({display:"flex"}),this.$pnlWrpContent.addClass("panel-content-wrapper-tabs"),this.$pnlAddTab.addClass("hidden")):(this.$pnlWrpTabs.css({display:""}),this.$pnlWrpContent.removeClass("panel-content-wrapper-tabs"),this.$pnlAddTab.removeClass("hidden"))}getReplacementPanel(){const e=new Panel(this.board,this.x,this.y,this.width,this.height);if(1<this.tabDatas.length&&this.tabDatas.filter(e=>!e.isDeleted&&Panel.isNonExilableType(e.type)).length){const e=this.tabDatas.findIndex(e=>!e.isDeleted);~e&&this.setActiveTab(e),this.tabDatas.filter(e=>e.type===PANEL_TYP_ROLLBOX).forEach(e=>{e.isDeleted=!0,Renderer.dice.unbindDmScreenPanel()})}return this.exile(),this.board.addPanel(e),this.board.doCheckFillSpaces(),e}toggleMovable(e){this.$pnl.find(`.panel-control`).toggle(e),this.$pnl.toggleClass(`panel-mode-move`,e)}render(){const e=e=>e.css({gridColumnStart:this.x+1+"",gridColumnEnd:this.x+1+this.width+"",gridRowStart:this.y+1+"",gridRowEnd:this.y+1+this.height+""}),n=()=>{this.board.menu.doOpen(),this.board.menu.setPanel(this),this.board.menu.hasActiveTab()?this.board.menu.getActiveTab().doTransitionActive&&this.board.menu.getActiveTab().doTransitionActive():this.board.menu.setFirstTabActive()};this.isDirty&&(this.$pnl?(e(this.$pnl),this.doRenderTitle(),this.doRenderTabs(),this.isContentDirty&&(this.$pnlWrpContent.clear(),this.$content&&this.$pnlWrpContent.append(this.$content),this.isContentDirty=!1)):function(){const t=$(`<div data-panelId="${this.id}" class="dm-screen-panel" empty="true"/>`);this.$pnl=t;const d=$(`<div class="panel-control-bar"/>`).appendTo(t);this.$pnlTitle=$(`<div class="panel-control-bar panel-control-title"/>`).appendTo(t).click(()=>this.$pnlTitle.toggleClass("panel-control-title--bumped")),this.$pnlAddTab=$(`<div class="panel-control-bar panel-control-addtab"><div class="panel-control-icon glyphicon glyphicon-plus" title="Add Tab"/></div>`).click(()=>{this.setHasTabs(!0),this.setDirty(!0),this.render(),n()}).appendTo(t);const a=$(`<div class="panel-control-icon glyphicon glyphicon-move" title="Move"/>`).appendTo(d);a.on("click",()=>{this.toggleMovable()});const o=$(`<div class="panel-control-icon glyphicon glyphicon-remove" title="Close"/>`).appendTo(d);o.on("click",()=>{this.getReplacementPanel()});const i=new JoystickMenu(this.board,this);this.joyMenu=i,i.initialise();const l=$(`<div class="panel-content-wrapper"/>`).appendTo(t),r=$(`<div class="panel-add"/>`).appendTo(l),s=$(`<span class="btn-panel-add glyphicon glyphicon-plus"/>`).on("click",()=>{n()}).appendTo(r);this.$btnAdd=r,this.$btnAddInner=s,this.$pnlWrpContent=l;const p=$(`<div class="content-tab-bar"/>`).appendTo(t),u=$(`<div class="content-tab-bar-inner"/>`).on("wheel",e=>{const n=e.originalEvent.deltaY,t=u.scrollLeft();u.scrollLeft(Math.max(0,t+n))}).appendTo(p),c=$(`<button class="btn btn-default content-tab"><span class="glyphicon glyphicon-plus"/></button>`).click(()=>n()).appendTo(u);this.$pnlWrpTabs=p,this.$pnlTabs=u,this.$content&&l.append(this.$content),e(t).appendTo(this.board.get$creen()),this.isDirty=!1}.bind(this)(),this.isDirty=!1)}getPos(){const e=this.$pnl.offset();return{top:e.top,left:e.left,width:this.$pnl.outerWidth(),height:this.$pnl.outerHeight()}}getAddButtonPos(){const e=this.$btnAddInner.offset();return{top:e.top,left:e.left,width:this.$btnAddInner.outerWidth(),height:this.$btnAddInner.outerHeight()}}doCloseTab(e){this.isTabs&&this.close$TabContent(e);const n=this.tabDatas.filter(e=>!e.isDeleted).length;if(1===n)this.isTabs=!1,this.doRenderTabs();else if(0===n){const e=new Panel(this.board,this.x,this.y,this.width,this.height);this.exile(),this.board.addPanel(e),this.board.doCheckFillSpaces()}}close$TabContent(e=0){return this.set$Tab(-1*(e+1),PANEL_TYP_EMPTY,null,null,null,!1)}set$Content(e,n,t,d,a,o){this.type=e,this.contentMeta=n,this.$content=t,this.title=d,this.tabCanRename=a,this.tabRenamed=o,null===t?(this.$pnlWrpContent.children().detach(),this.$pnlWrpContent.append(this.$btnAdd)):(this.$pnlWrpContent.find(`.panel-add`).remove(),this.$pnlWrpContent.find(`.ui-search__message.loading-spinner`).remove(),this.$pnlWrpContent.children().addClass("dms__tab_hidden"),t.removeClass("dms__tab_hidden"),!this.$pnlWrpContent.has(t[0]).length&&this.$pnlWrpContent.append(t)),this.$pnl.attr("empty",!t),this.doRenderTitle(),this.doRenderTabs()}setFromPeer(e,n){this.isTabs=e.isTabs,this.tabIndex=e.tabIndex,this.tabDatas=e.tabDatas,this.tabCanRename=e.tabCanRename,this.tabRenamed=e.tabRenamed,this.set$Tab(e.tabIndex,e.type,e.contentMeta,n,e.title,e.tabCanRename,e.tabRenamed),e.tabDatas.forEach((e,n)=>{!e.isDeleted&&e.$tabButton&&(e.$tabButton.remove(),e.$tabButton=this._get$BtnSelTab(n,e.title,e.tabCanRename),this.$pnlTabs.children().last().before(e.$tabButton))})}getNextTabIndex(){return this.tabDatas.length}set$TabLoading(e,n){return this.set$ContentTab(e,n,Panel._get$eleLoading(),TITLE_LOADING)}_get$BtnSelTab(e,n,t){n=n||"[Untitled]";const d=$(`<span class="btn btn-default content-tab flex ${t?"content-tab-can-rename":""}"><span class="content-tab-title" title="${n}">${n}</span></span>`).on("mousedown",n=>{1===n.which?this.setActiveTab(e):2===n.which&&this.doCloseTab(e)}).on("contextmenu",n=>{if(!n.ctrlKey&&d.hasClass("content-tab-can-rename")){const t=prompt("Rename tab to:");t&&t.trim()&&this.setTabTitle(e,t),n.stopPropagation(),n.preventDefault()}}),a=$(`<span class="glyphicon glyphicon-remove content-tab-remove"/>`).on("mousedown",n=>{0===n.button&&(n.stopPropagation(),(!this.board.getConfirmTabClose()||this.board.getConfirmTabClose()&&confirm(`Are you sure you want to close tab "${this.tabDatas[e].title}"?`))&&this.doCloseTab(e))}).appendTo(d);return d}setTabTitle(e,n){const t=this.tabDatas[e];t.$tabButton.find(`.content-tab-title`).text(n).attr("title",n),this.$pnlTitle.text(n);const d=this.tabDatas[e];d.title=n,d.tabRenamed=!0,this.tabIndex===e&&(this.title=n,this.tabRenamed=!0),this.board.doSaveStateDebounced()}set$Tab(e,n,t,d,a,o,i){var l=Math.abs;if(null===e&&(e=0),0>e){const n=l(e+1),t=this.tabDatas[n];t&&(t.isDeleted=!0,t.$tabButton&&t.$tabButton.detach())}else{const l=(this.tabDatas[e]||{}).$tabButton;this.tabDatas[e]={type:n,contentMeta:t,$content:d,title:a,tabCanRename:!!o,tabRenamed:!!i},l&&(this.tabDatas[e].$tabButton=l);const r=(e,n)=>{const t=this._get$BtnSelTab(e,n);return this.$pnlTabs.children().last().before(t),t};this.tabDatas[e].$tabButton?this.tabDatas[e].$tabButton.find(`.content-tab-title`).text(a).attr("title",a):this.tabDatas[e].$tabButton=r(e,a),this.tabDatas[e].$tabButton.toggleClass("content-tab-can-rename",o)}return this.setActiveTab(e),e}setActiveTab(e){if(0>e){const e=()=>{this.isTabs=!1,this.tabIndex=0,this.tabCanRename=!1,this.tabRenamed=!1,this.set$Content(PANEL_TYP_EMPTY,null,null,null,!1)};if(this.isTabs){const n=this.tabDatas.findIndex(e=>!e.isDeleted);~n?this.setActiveTab(n):e()}else e()}else{this.tabIndex=e;const n=this.tabDatas[e];this.set$Content(n.type,n.contentMeta,n.$content,n.title,n.tabCanRename,n.tabRenamed)}this.board.doSaveStateDebounced()}get$ContentWrapper(){return this.$pnlWrpContent}get$Content(){return this.$content}exile(){Panel.isNonExilableType(this.type)?this.destroy():(this.$pnl&&this.$pnl.detach(),this.board.exilePanel(this.id))}destroy(){this.type===PANEL_TYP_ROLLBOX&&Renderer.dice.unbindDmScreenPanel(),this.$pnl&&this.$pnl.remove(),this.board.destroyPanel(this.id)}addHoverClass(){this.$pnl.addClass("faux-hover")}removeHoverClass(){this.$pnl.removeClass("faux-hover")}getSaveableState(){function e(e,n,t,d,a){const o=d?a:void 0;switch(e){case PANEL_TYP_EMPTY:return null;case PANEL_TYP_ROLLBOX:return{t:e,r:o};case PANEL_TYP_STATS:return{t:e,r:o,c:{p:n.p,s:n.s,u:n.u}};case PANEL_TYP_CREATURE_SCALED_CR:return{t:e,r:o,c:{p:n.p,s:n.s,u:n.u,cr:n.cr}};case PANEL_TYP_RULES:return{t:e,r:o,c:{b:n.b,c:n.c,h:n.h}};case PANEL_TYP_ADVENTURES:return{t:e,r:o,c:{a:n.a,c:n.c}};case PANEL_TYP_BOOKS:return{t:e,r:o,c:{b:n.b,c:n.c}};case PANEL_TYP_TEXTBOX:return{t:e,r:o,s:{x:t?t.find(`textarea`).val():""}};case PANEL_TYP_INITIATIVE_TRACKER:return{t:e,r:o,s:t.find(`.dm-init`).data("getState")()};case PANEL_TYP_INITIATIVE_TRACKER_PLAYER:return{t:e,r:o,s:{}};case PANEL_TYP_UNIT_CONVERTER:return{t:e,r:o,s:t.find(`.dm-unitconv`).data("getState")()};case PANEL_TYP_MONEY_CONVERTER:return{t:e,r:o,s:t.find(`.dm_money`).data("getState")()};case PANEL_TYP_SUNDIAL:return{t:e,r:o,s:t.find(`.dm_sundial`).data("getState")()};case PANEL_TYP_TUBE:case PANEL_TYP_TWITCH:case PANEL_TYP_TWITCH_CHAT:case PANEL_TYP_GENERIC_EMBED:case PANEL_TYP_IMAGE:return{t:e,r:o,c:{u:n.u}};default:throw new Error(`Unhandled panel type ${this.type}`);}}const n={x:this.x,y:this.y,w:this.width,h:this.height,t:this.type},t=e(this.type,this.contentMeta,this.$content);if(t&&Object.assign(n,t),this.isTabs){n.a=this.tabDatas.filter(e=>!e.isDeleted).map(n=>e(n.type,n.contentMeta,n.$content,n.tabRenamed,n.title));let t=0;for(let e=0;e<this.tabIndex;++e)this.tabDatas[e].isDeleted&&t++;n.b=this.tabIndex-t}return n}}class JoystickMenu{constructor(e,n){this.board=e,this.panel=n,this.$ctrls=null}initialise(){var n=Math.abs;function e(t){MiscUtil.clearSelection(),$(`body`).css("userSelect","none"),$(`.panel-control`).hide(),$(`.panel-control-bar`).addClass("xpander-active"),l.show(),this.panel.$pnl.addClass("panel-mode-move");t===UP?d.show():t===RIGHT?a.show():t===DOWN?o.show():t===LEFT?i.show():void 0;const r=t===RIGHT||t===LEFT?AX_X:AX_Y,s=this.panel.$pnl.offset(),p=this.panel.board.getPanelDimensions();let u=0;const c=this.panel.$pnl.css("gridColumnStart"),f=this.panel.$pnl.css("gridColumnEnd"),h=this.panel.$pnl.css("gridRowStart"),b=this.panel.$pnl.css("gridRowEnd");this.panel.$pnl.css({zIndex:52,boxShadow:"0 0 12px 0 #000000a0"}),$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`),$(document).on(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`,n=>{let e=0;const d=r===AX_X?p.pxWidth:p.pxHeight;t===UP?e=s.top-n.clientY:t===RIGHT?e=n.clientX-(s.left+d*this.panel.width):t===DOWN?e=n.clientY-(s.top+d*this.panel.height):t===LEFT?e=s.left-n.clientX:void 0;u=Math.ceil(e/d);const a=r===AX_X?this.panel.width-1:this.panel.height-1;0>=a+u&&(u=-a);t===UP?(u>this.panel.y&&(u=this.panel.y),this.panel.$pnl.css({gridRowStart:this.panel.y+(1-u)+"",gridRowEnd:this.panel.y+1+this.panel.height+""})):t===RIGHT?(u>this.panel.board.width-this.panel.width-this.panel.x&&(u=this.panel.board.width-this.panel.width-this.panel.x),this.panel.$pnl.css({gridColumnEnd:this.panel.x+1+this.panel.width+u+""})):t===DOWN?(u>this.panel.board.height-this.panel.height-this.panel.y&&(u=this.panel.board.height-this.panel.height-this.panel.y),this.panel.$pnl.css({gridRowEnd:this.panel.y+1+this.panel.height+u+""})):t===LEFT?(u>this.panel.x&&(u=this.panel.x),this.panel.$pnl.css({gridColumnStart:this.panel.x+(1-u)+"",gridColumnEnd:this.panel.x+1+this.panel.width+""})):void 0}),$(document).on(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`,()=>{var e=Math.sign;$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`),$(`body`).css("userSelect",""),this.panel.$pnl.find(`.panel-control`).show(),$(`.panel-control-bar`).removeClass("xpander-active"),this.panel.$pnl.css({zIndex:"",boxShadow:"",gridColumnStart:c,gridColumnEnd:f,gridRowStart:h,gridRowEnd:b});const d=r===AX_X?this.panel.width-1:this.panel.height-1;if(0>=d+u&&(u=-d),0!==u){const d=!!~e(u);if(d)switch(t){case UP:if(!this.panel.hasSpaceTop())return;break;case RIGHT:if(!this.panel.hasSpaceRight())return;break;case DOWN:if(!this.panel.hasSpaceBottom())return;break;case LEFT:if(!this.panel.hasSpaceLeft())return;}for(let a=n(u);0<a;--a)switch(t){case UP:{if(d){const e=this.panel.getTopNeighbours();e.filter(e=>e.getEmpty()).length===e.length?e.forEach(e=>e.destroy()):e.forEach(e=>{e.canBumpTop()?e.doBumpTop():e.canShrinkBottom()?e.doShrinkBottom():e.exile()})}this.panel.height+=e(u),this.panel.y-=e(u);break}case RIGHT:{if(d){const e=this.panel.getRightNeighbours();e.filter(e=>e.getEmpty()).length===e.length?e.forEach(e=>e.destroy()):e.forEach(e=>{e.canBumpRight()?e.doBumpRight():e.canShrinkLeft()?e.doShrinkLeft():e.exile()})}this.panel.width+=e(u);break}case DOWN:{if(d){const e=this.panel.getBottomNeighbours();e.filter(e=>e.getEmpty()).length===e.length?e.forEach(e=>e.destroy()):e.forEach(e=>{e.canBumpBottom()?e.doBumpBottom():e.canShrinkTop()?e.doShrinkTop():e.exile()})}this.panel.height+=e(u);break}case LEFT:{if(d){const e=this.panel.getLeftNeighbours();e.filter(e=>e.getEmpty()).length===e.length?e.forEach(e=>e.destroy()):e.forEach(e=>{e.canBumpLeft()?e.doBumpLeft():e.canShrinkRight()?e.doShrinkRight():e.exile()})}this.panel.width+=e(u),this.panel.x-=e(u);break}}this.panel.setDirty(!0),this.panel.render(),this.panel.board.doCheckFillSpaces(),MiscUtil.clearSelection(),this.board.reactor.fire("panelResize")}})}this.panel.$pnl.on("mouseover",()=>this.panel.board.setHoveringPanel(this.panel)),this.panel.$pnl.on("mouseout",()=>this.panel.board.setHoveringPanel(null));const t=$(`<div class="panel-control panel-control-middle"/>`),d=$(`<div class="panel-control panel-control-top"/>`),a=$(`<div class="panel-control panel-control-right"/>`),o=$(`<div class="panel-control panel-control-bottom"/>`),i=$(`<div class="panel-control panel-control-left"/>`),l=$(`<div class="panel-control panel-control-bg"/>`);this.$ctrls=[t,d,a,o,i,l],t.on("mousedown touchstart",n=>{this.panel.board.setVisiblyHoveringPanel(!0);const e=$(`body`);if(MiscUtil.clearSelection(),e.css("userSelect","none"),!this.panel.$content)return;const t=this.panel.$content.width(),d=this.panel.$content.height(),a=this.panel.$content.children().first().height(),o=this.panel.$content.offset(),i=n.clientX-o.left,l=d>a?a/2:n.clientY-o.top;e.append(this.panel.$content),$(`.panel-control`).hide(),Panel.setMovingCss(n,this.panel.$content,t,d,i,l,52),this.panel.board.get$creen().addClass("board-content-hovering"),this.panel.$content.addClass("panel-content-hovering"),this.panel.$pnl.addClass("pnl-content-tab-bar-hidden"),this.panel.$pnl.removeClass("panel-mode-move"),Panel.bindMovingEvents(this.panel.board,this.panel.$content,i,l),$(document).on(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`,()=>{if(this.panel.board.setVisiblyHoveringPanel(!1),$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`),e.css("userSelect",""),Panel.unsetMovingCss(this.panel.$content),this.panel.board.get$creen().removeClass("board-content-hovering"),this.panel.$content.removeClass("panel-content-hovering"),this.panel.$pnl.removeClass("pnl-content-tab-bar-hidden"),this.panel.$pnl.removeClass("panel-mode-move"),!this.panel.board.hoveringPanel||this.panel.id===this.panel.board.hoveringPanel.id)this.panel.$pnlWrpContent.append(this.panel.$content),this.panel.doShowJoystick();else{const e=this.panel.board.hoveringPanel,n=e.getPanelMeta(),t=e.get$Content();e.setFromPeer(this.panel.getPanelMeta(),this.panel.get$Content()),this.panel.setFromPeer(n,t),this.panel.doHideJoystick(),e.doShowJoystick()}MiscUtil.clearSelection(),this.board.doSaveStateDebounced(),this.board.reactor.fire("panelResize")})}),d.on("mousedown touchstart",e.bind(this,UP)),a.on("mousedown touchstart",e.bind(this,RIGHT)),i.on("mousedown touchstart",e.bind(this,LEFT)),o.on("mousedown touchstart",e.bind(this,DOWN)),this.panel.$pnl.append(l).append(t).append(d).append(a).append(o).append(i)}doShow(){this.$ctrls.forEach(e=>e.show())}doHide(){this.$ctrls.forEach(e=>e.hide())}}class AddMenu{constructor(){this.tabs=[],this.$menu=null,this.$tabView=null,this.activeTab=null,this.pnl=null}addTab(e){return e.setMenu(this),this.tabs.push(e),this}get$Menu(){return this.$menu}setActiveTab(e){this.$menu.find(`.panel-addmenu-tab-head`).attr(`active`,!1),this.activeTab&&this.activeTab.get$Tab().detach(),this.activeTab=e,this.$tabView.append(e.get$Tab()),e.$head.attr(`active`,!0),e.doTransitionActive&&e.doTransitionActive()}hasActiveTab(){return null!==this.activeTab}getActiveTab(){return this.activeTab}setFirstTabActive(){const e=this.tabs[0];this.setActiveTab(e)}render(){if(!this.$menu){const e=$(`<div class="ui-modal__overlay">`);this.$menu=e;const n=$(`<div class="ui-modal__inner dropdown-menu">`).appendTo(e),d=$(`<div class="panel-addmenu-bar"/>`).appendTo(n);this.$tabView=$(`<div class="panel-addmenu-view"/>`).appendTo(n),this.tabs.forEach(e=>{e.render();const n=$(`<button class="btn btn-default panel-addmenu-tab-head">${e.label}</button>`).appendTo(d),t=$(`<div class="panel-addmenu-tab-body"/>`).appendTo(d);t.append(e.get$Tab),e.$head=n,e.$body=t,n.on("click",()=>this.setActiveTab(e))}),e.on("click",()=>{this.doClose(),this.pnl.isTabs&&1===this.pnl.tabDatas.filter(e=>!e.isDeleted).length&&(this.pnl.isTabs=!1,this.pnl.doRenderTabs())}),n.on("click",n=>n.stopPropagation())}}setPanel(e){this.pnl=e}doClose(){this.$menu.detach()}doOpen(){$(`body`).append(this.$menu)}}class AddMenuTab{constructor(e){this.label=e,this.$tab=null,this.menu=null}get$Tab(){return this.$tab}genTabId(e){return`tab-${e}-${this.label.toLowerCase().replace(/\s+/g,"-").replace(/[^a-z0-9-]/g,"_")}`}setMenu(e){this.menu=e}}class AddMenuVideoTab extends AddMenuTab{constructor(){super("Embed"),this.tabId=this.genTabId("tube")}render(){if(!this.$tab){const e=$(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`),n=$(`<div class="ui-modal__row"/>`).appendTo(e),t=$(`<input class="form-control" placeholder="Paste YouTube URL">`).on("keydown",n=>{13===n.which&&d.click()}).appendTo(n),d=$(`<button class="btn btn-primary">Embed</button>`).appendTo(n);d.on("click",()=>{let e=t.val().trim();const n=/https?:\/\/(www\.)?youtube\.com\/watch\?v=(.*?)(&.*$|$)/.exec(e);e&&n?(e=`https://www.youtube.com/embed/${n[2]}`,this.menu.pnl.doPopulate_YouTube(e),this.menu.doClose(),t.val("")):JqueryUtil.doToast({content:`Please enter a URL of the form: "https://www.youtube.com/watch?v=XXXXXXX"`,type:"danger"})});const a=$(`<div class="ui-modal__row"/>`).appendTo(e),o=$(`<input class="form-control" placeholder="Paste Twitch URL">`).on("keydown",n=>{13===n.which&&i.click()}).appendTo(a),i=$(`<button class="btn btn-primary">Embed</button>`).appendTo(a),l=$(`<button class="btn btn-primary">Embed Chat</button>`).appendTo(a),r=e=>/https?:\/\/(www\.)?twitch\.tv\/(.*?)(\?.*$|$)/.exec(e);i.on("click",()=>{let e=o.val().trim();const n=r(e);e&&n?(e=`http://player.twitch.tv/?channel=${n[2]}`,this.menu.pnl.doPopulate_Twitch(e),this.menu.doClose(),o.val("")):JqueryUtil.doToast({content:`Please enter a URL of the form: "https://www.twitch.tv/XXXXXX"`,type:"danger"})}),l.on("click",()=>{let e=o.val().trim();const n=r(e);e&&n?(e=`http://www.twitch.tv/embed/${n[2]}/chat`,this.menu.pnl.doPopulate_TwitchChat(e),this.menu.doClose(),o.val("")):JqueryUtil.doToast({content:`Please enter a URL of the form: "https://www.twitch.tv/XXXXXX"`,type:"danger"})});const s=$(`<div class="ui-modal__row"/>`).appendTo(e),p=$(`<input class="form-control" placeholder="Paste any URL">`).on("keydown",n=>{13===n.which&&p.click()}).appendTo(s),u=$(`<button class="btn btn-primary">Embed</button>`).appendTo(s);u.on("click",()=>{let e=p.val().trim();e?(this.menu.pnl.doPopulate_GenericEmbed(e),this.menu.doClose()):JqueryUtil.doToast({content:`Please enter a URL!`,type:"danger"})}),this.$tab=e}}}class AddMenuImageTab extends AddMenuTab{constructor(){super("Image"),this.tabId=this.genTabId("image")}render(){if(!this.$tab){const e=$(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`),n=$(`<div class="ui-modal__row"/>`).appendTo(e);$(`<span>Imgur (Anonymous Upload) <i class="text-muted">(accepts <a href="https://help.imgur.com/hc/articles/115000083326" target="_blank" rel="noopener">imgur-friendly formats</a>)</i></span>`).appendTo(n);const t=$(`<input type="file" class="hidden">`).on("change",e=>{const n=e.target,t=new FileReader;t.onload=()=>{const e=t.result.replace(/.*,/,"");$.ajax({url:"https://api.imgur.com/3/image",type:"POST",data:{image:e,type:"base64"},headers:{Accept:"application/json",Authorization:`Client-ID ${IMGUR_CLIENT_ID}`},success:e=>{this.menu.pnl.doPopulate_Image(e.data.link,d)},error:e=>{try{JqueryUtil.doToast({content:`Failed to upload: ${JSON.parse(e.responseText).data.error}`,type:"danger"})}catch(n){JqueryUtil.doToast({content:"Failed to upload: Unknown error",type:"danger"}),setTimeout(()=>{throw n})}this.menu.pnl.doPopulate_Empty(d)}})},t.onerror=()=>{this.menu.pnl.doPopulate_Empty(d)},t.fileName=n.files[0].name,t.readAsDataURL(n.files[0]);const d=this.menu.pnl.doPopulate_Loading("Uploading");this.menu.doClose()}).appendTo(e),d=$(`<button class="btn btn-primary">Upload</button>`).appendTo(n);d.on("click",()=>{t.click()}),$(`<hr class="ui-modal__row-sep"/>`).appendTo(e);const a=$(`<div class="ui-modal__row"/>`).appendTo(e),o=$(`<input class="form-control" placeholder="Paste image URL">`).on("keydown",n=>{13===n.which&&i.click()}).appendTo(a),i=$(`<button class="btn btn-primary">Add</button>`).appendTo(a);i.on("click",()=>{let e=o.val().trim();e?(this.menu.pnl.doPopulate_Image(e),this.menu.doClose()):JqueryUtil.doToast({content:`Please enter a URL!`,type:"danger"})}),this.$tab=e}}}class AddMenuSpecialTab extends AddMenuTab{constructor(){super("Special"),this.tabId=this.genTabId("special")}render(){if(!this.$tab){const e=$(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`),n=$(`<div class="ui-modal__row"><span>Dice Roller <i class="text-muted">(pins the existing dice roller to a panel)</i></span></div>`).appendTo(e),t=$(`<button class="btn btn-primary">Pin</button>`).appendTo(n);t.on("click",()=>{Renderer.dice.bindDmScreenPanel(this.menu.pnl),this.menu.doClose()}),$(`<hr class="ui-modal__row-sep"/>`).appendTo(e);const d=$(`<div class="ui-modal__row"><span>Initiative Tracker</span></div>`).appendTo(e),a=$(`<button class="btn btn-primary">Add</button>`).appendTo(d);a.on("click",()=>{this.menu.pnl.doPopulate_InitiativeTracker(),this.menu.doClose()});const o=$(`<button class="btn btn-primary">Add</button>`).click(()=>{this.menu.pnl.doPopulate_InitiativeTrackerPlayer(),this.menu.doClose()});$$`<div class="ui-modal__row">
+"use strict";
+
+const UP = "UP";
+const RIGHT = "RIGHT";
+const LEFT = "LEFT";
+const DOWN = "DOWN";
+const AX_X = "AXIS_X";
+const AX_Y = "AXIS_Y";
+
+const EVT_NAMESPACE = ".dm_screen";
+
+const TITLE_LOADING = "Loading...";
+
+const PANEL_TYP_EMPTY = 0;
+const PANEL_TYP_STATS = 1;
+const PANEL_TYP_ROLLBOX = 2;
+const PANEL_TYP_TEXTBOX = 3;
+const PANEL_TYP_RULES = 4;
+const PANEL_TYP_INITIATIVE_TRACKER = 5;
+const PANEL_TYP_UNIT_CONVERTER = 6;
+const PANEL_TYP_CREATURE_SCALED_CR = 7;
+const PANEL_TYP_TIME_TRACKER = 8;
+const PANEL_TYP_MONEY_CONVERTER = 9;
+const PANEL_TYP_TUBE = 10;
+const PANEL_TYP_TWITCH = 11;
+const PANEL_TYP_TWITCH_CHAT = 12;
+const PANEL_TYP_ADVENTURES = 13;
+const PANEL_TYP_BOOKS = 14;
+const PANEL_TYP_INITIATIVE_TRACKER_PLAYER = 15;
+const PANEL_TYP_COUNTER = 16;
+const PANEL_TYP_IMAGE = 20;
+const PANEL_TYP_GENERIC_EMBED = 90;
+
+const TIME_TRACKER_MOON_SPRITE = new Image();
+const TIME_TRACKER_MOON_SPRITE_LOADER = new Promise(resolve => {
+	TIME_TRACKER_MOON_SPRITE.onload = resolve;
+	TIME_TRACKER_MOON_SPRITE.onerror = () => {
+		TIME_TRACKER_MOON_SPRITE.hasError = true;
+		resolve();
+	};
+});
+TIME_TRACKER_MOON_SPRITE.src = "img/dmscreen/moon.png";
+
+class Board {
+	constructor () {
+		this.panels = {};
+		this.exiledPanels = [];
+		this.$creen = $(`.dm-screen`);
+		this.width = this.getInitialWidth();
+		this.height = this.getInitialHeight();
+		this.sideMenu = new SideMenu(this);
+		this.menu = new AddMenu();
+		this.isFullscreen = false;
+		this.isLocked = false;
+		this.reactor = new Reactor();
+		this.isAlertOnNav = false;
+
+		this.nextId = 1;
+		this.hoveringPanel = null;
+		this.availContent = {};
+		this.availRules = {};
+		this.availAdventures = {};
+		this.availBooks = {};
+
+		this.$cbConfirmTabClose = null;
+		this.$btnFullscreen = null;
+		this.$btnLockPanels = null;
+
+		this._pDoSaveStateDebounced = MiscUtil.debounce(() => StorageUtil.pSet(DMSCREEN_STORAGE, this.getSaveableState()), 25);
+	}
+
+	getInitialWidth () {
+		const scW = this.$creen.width();
+		return Math.ceil(scW / 400);
+	}
+
+	getInitialHeight () {
+		const scH = this.$creen.height();
+		return Math.ceil(scH / 300);
+	}
+
+	getNextId () {
+		return this.nextId++;
+	}
+
+	get$creen () {
+		return this.$creen;
+	}
+
+	getWidth () {
+		return this.width;
+	}
+
+	getHeight () {
+		return this.height;
+	}
+
+	getConfirmTabClose () {
+		return this.$cbConfirmTabClose == null ? false : this.$cbConfirmTabClose.prop("checked");
+	}
+
+	setDimensions (width, height) {
+		const oldWidth = this.width;
+		const oldHeight = this.height;
+		if (width) this.width = Math.max(width, 1);
+		if (height) this.height = Math.max(height, 1);
+		if (!(oldWidth === width && oldHeight === height)) {
+			this.doAdjust$creenCss();
+			if (width < oldWidth || height < oldHeight) this.doCullPanels(oldWidth, oldHeight);
+			this.sideMenu.doUpdateDimensions();
+		}
+		this.doCheckFillSpaces();
+		this.reactor.fire("panelResize");
+	}
+
+	doCullPanels (oldWidth, oldHeight) {
+		for (let x = oldWidth - 1; x >= 0; x--) {
+			for (let y = oldHeight - 1; y >= 0; y--) {
+				const p = this.getPanel(x, y);
+				if (!p) continue; // happens when a large panel gets shrunk
+				if (x >= this.width && y >= this.height) {
+					if (p.canShrinkBottom() && p.canShrinkRight()) {
+						p.doShrinkBottom();
+						p.doShrinkRight();
+					} else p.exile();
+				} else if (x >= this.width) {
+					if (p.canShrinkRight()) p.doShrinkRight();
+					else p.exile();
+				} else if (y >= this.height) {
+					if (p.canShrinkBottom()) p.doShrinkBottom();
+					else p.exile();
+				}
+			}
+		}
+	}
+
+	doAdjust$creenCss () {
+		// assumes 7px grid spacing
+		this.$creen.css({
+			marginTop: this.isFullscreen ? 0 : 3,
+			gridGap: 7,
+			width: `calc(100% - ${this._getWidthAdjustment()}px)`,
+			height: `calc(100% - ${this._getHeightAdjustment()}px)`,
+			gridAutoColumns: `${(1 / this.width) * 100}%`,
+			gridAutoRows: `${(1 / this.height) * 100}%`
+		});
+	}
+
+	_getWidthAdjustment () {
+		return (this.width - 1) * 7;
+	}
+
+	_getHeightAdjustment () {
+		const panelPart = (this.height - 1) * 7;
+		if (this.isFullscreen) return panelPart;
+		else return 81 + panelPart; // 81 magical pixels
+	}
+
+	getPanelDimensions () {
+		const w = this.$creen.outerWidth() + this._getWidthAdjustment();
+		const h = this.$creen.outerHeight() + this._getHeightAdjustment();
+		return {
+			pxWidth: w / this.width,
+			pxHeight: h / this.height
+		};
+	}
+
+	doShowLoading () {
+		$(`<div class="dm-screen-loading"><span class="initial-message">Loading...</span></div>`).css({
+			gridColumnStart: "1",
+			gridColumnEnd: String(this.width + 1),
+			gridRowStart: "1",
+			gridRowEnd: String(this.height + 1)
+		}).appendTo(this.$creen);
+	}
+
+	doHideLoading () {
+		this.$creen.find(`.dm-screen-loading`).remove();
+	}
+
+	async pInitialise () {
+		this.doAdjust$creenCss();
+		this.doShowLoading();
+
+		await Promise.all([TIME_TRACKER_MOON_SPRITE_LOADER, this.pLoadIndex()]);
+		if (this.hasSavedStateUrl()) {
+			this.doLoadUrlState();
+		} else if (await this.pHasSavedState()) {
+			await this.pDoLoadState();
+		} else {
+			this.doCheckFillSpaces();
+		}
+		this.initGlobalHandlers();
+	}
+
+	initGlobalHandlers () {
+		window.onhashchange = () => this.doLoadUrlState();
+		$(window).resize(() => this.reactor.fire("panelResize"));
+	}
+
+	async pLoadIndex () {
+		await SearchUiUtil.pDoGlobalInit();
+
+		// rules
+		await (async () => {
+			const data = await DataUtil.loadJSON("data/generated/bookref-dmscreen-index.json");
+			this.availRules.ALL = elasticlunr(function () {
+				this.addField("b");
+				this.addField("s");
+				this.addField("p");
+				this.addField("n");
+				this.addField("h");
+				this.setRef("id");
+			});
+			SearchUtil.removeStemmer(this.availRules.ALL);
+
+			data.data.forEach(d => {
+				d.n = data._meta.name[d.b];
+				d.b = data._meta.id[d.b];
+				d.s = data._meta.section[d.s];
+				this.availRules.ALL.addDoc(d);
+			});
+		})();
+
+		async function pDoBuildAdvantureOrAdventureIndex (dataPath, dataProp, indexStorage, indexIdField) {
+			const data = await DataUtil.loadJSON(dataPath);
+			indexStorage.ALL = elasticlunr(function () {
+				this.addField(indexIdField);
+				this.addField("c");
+				this.addField("n");
+				this.addField("p");
+				this.addField("o");
+				this.setRef("id");
+			});
+			SearchUtil.removeStemmer(indexStorage.ALL);
+
+			let bookOrAdventureId = 0;
+			data[dataProp].forEach(adventureOrBook => {
+				indexStorage[adventureOrBook.id] = elasticlunr(function () {
+					this.addField(indexIdField);
+					this.addField("c");
+					this.addField("n");
+					this.addField("p");
+					this.addField("o");
+					this.setRef("id");
+				});
+				SearchUtil.removeStemmer(indexStorage[adventureOrBook.id]);
+
+				adventureOrBook.contents.forEach((chap, i) => {
+					const chapDoc = {
+						[indexIdField]: adventureOrBook.id,
+						n: adventureOrBook.name,
+						c: chap.name,
+						p: i,
+						id: bookOrAdventureId++
+					};
+					if (chap.ordinal) chapDoc.o = Parser.bookOrdinalToAbv(chap.ordinal, true);
+
+					indexStorage.ALL.addDoc(chapDoc);
+					indexStorage[adventureOrBook.id].addDoc(chapDoc);
+				});
+			});
+		}
+
+		// adventures
+		await pDoBuildAdvantureOrAdventureIndex(`data/adventures.json`, "adventure", this.availAdventures, "a");
+
+		// books
+		await pDoBuildAdvantureOrAdventureIndex(`data/books.json`, "book", this.availBooks, "b");
+
+		// search
+		this.availContent = await SearchUiUtil.pGetContentIndices();
+
+		// add tabs
+		const omniTab = new AddMenuSearchTab(this.availContent);
+		const ruleTab = new AddMenuSearchTab(this.availRules, "rules");
+		const adventureTab = new AddMenuSearchTab(this.availAdventures, "adventures");
+		const bookTab = new AddMenuSearchTab(this.availBooks, "books");
+		const embedTab = new AddMenuVideoTab();
+		const imageTab = new AddMenuImageTab();
+		const specialTab = new AddMenuSpecialTab();
+
+		this.menu
+			.addTab(omniTab)
+			.addTab(ruleTab)
+			.addTab(adventureTab)
+			.addTab(bookTab)
+			.addTab(imageTab)
+			.addTab(embedTab)
+			.addTab(specialTab);
+
+		this.menu.render();
+
+		this.sideMenu.render();
+
+		this.doHideLoading();
+	}
+
+	getPanel (x, y) {
+		return Object.values(this.panels).find(p => {
+			// x <= pX < x+w && y <= pY < y+h
+			return (p.x <= x) && (x < (p.x + p.width)) && (p.y <= y) && (y < (p.y + p.height));
+		});
+	}
+
+	getPanels (x, y, w = 1, h = 1) {
+		const out = [];
+		for (let wOffset = 0; wOffset < w; ++wOffset) {
+			for (let hOffset = 0; hOffset < h; ++hOffset) {
+				out.push(this.getPanel(x + wOffset, y + hOffset));
+			}
+		}
+		return out.filter(it => it);
+	}
+
+	getPanelPx (xPx, hPx) {
+		const dim = this.getPanelDimensions();
+		return this.getPanel(Math.floor(xPx / dim.pxWidth), Math.floor(hPx / dim.pxHeight));
+	}
+
+	setHoveringPanel (panel) {
+		this.hoveringPanel = panel;
+	}
+
+	setVisiblyHoveringPanel (isVis) {
+		Object.values(this.panels).forEach(p => p.removeHoverClass());
+		if (isVis && this.hoveringPanel) this.hoveringPanel.addHoverClass();
+	}
+
+	exilePanel (id) {
+		const panelK = Object.keys(this.panels).find(k => this.panels[k].id === id);
+		if (panelK) {
+			const toExile = this.panels[panelK];
+			if (!toExile.getEmpty()) {
+				delete this.panels[panelK];
+				this.exiledPanels.unshift(toExile);
+				const toDestroy = this.exiledPanels.splice(10);
+				toDestroy.forEach(p => p.destroy());
+				this.sideMenu.doUpdateHistory()
+			} else this.destroyPanel(id);
+			this.doSaveStateDebounced();
+		}
+	}
+
+	recallPanel (panel) {
+		const ix = this.exiledPanels.findIndex(p => p.id === panel.id);
+		if (~ix) this.exiledPanels.splice(ix, 1);
+		this.panels[panel.id] = panel;
+		this.doSaveStateDebounced();
+	}
+
+	destroyPanel (id) {
+		const panelK = Object.keys(this.panels).find(k => this.panels[k].id === id);
+		if (panelK) delete this.panels[panelK];
+		this.doSaveStateDebounced();
+	}
+
+	doCheckFillSpaces () {
+		for (let x = 0; x < this.width; x++) {
+			for (let y = 0; y < this.height; ++y) {
+				const pnl = this.getPanel(x, y);
+				if (!pnl) {
+					const nuPnl = new Panel(this, x, y);
+					this.panels[nuPnl.id] = nuPnl;
+				}
+			}
+		}
+		Object.values(this.panels).forEach(p => p.render());
+		this.doSaveStateDebounced();
+	}
+
+	hasSavedStateUrl () {
+		return window.location.hash.length;
+	}
+
+	doLoadUrlState () {
+		if (window.location.hash.length) {
+			const toLoad = JSON.parse(decodeURIComponent(window.location.hash.slice(1)));
+			this.doReset();
+			this.doLoadStateFrom(toLoad);
+		}
+		window.location.hash = "";
+	}
+
+	async pHasSavedState () {
+		return !!await StorageUtil.pGet(DMSCREEN_STORAGE);
+	}
+
+	getSaveableState () {
+		return {
+			w: this.width,
+			h: this.height,
+			ctc: this.getConfirmTabClose(),
+			fs: this.isFullscreen,
+			lk: this.isLocked,
+			ps: Object.values(this.panels).map(p => p.getSaveableState()),
+			ex: this.exiledPanels.map(p => p.getSaveableState())
+		};
+	}
+
+	doSaveStateDebounced () {
+		this._pDoSaveStateDebounced();
+	}
+
+	doLoadStateFrom (toLoad) {
+		if (this.$cbConfirmTabClose) this.$cbConfirmTabClose.prop("checked", !!toLoad.ctc);
+		if (this.$btnFullscreen && (toLoad.fs !== !!this.isFullscreen)) this.$btnFullscreen.click();
+		if (this.$btnLockPanels && (toLoad.lk !== !!this.isLocked)) this.$btnLockPanels.click();
+
+		// re-exile
+		toLoad.ex.filter(Boolean).reverse().forEach(saved => {
+			const p = Panel.fromSavedState(this, saved);
+			if (p) {
+				this.panels[p.id] = p;
+				p.exile();
+			}
+		});
+		this.setDimensions(toLoad.w, toLoad.h); // FIXME is this necessary?
+
+		// reload
+		// fill content first; empties can fill any remaining space
+		toLoad.ps.filter(Boolean).filter(saved => saved.t !== PANEL_TYP_EMPTY).forEach(saved => {
+			const p = Panel.fromSavedState(this, saved);
+			if (p) this.panels[p.id] = p;
+		});
+		this.setDimensions(toLoad.w, toLoad.h);
+	}
+
+	async pDoLoadState () {
+		try {
+			const toLoad = await StorageUtil.pGet(DMSCREEN_STORAGE);
+			this.doLoadStateFrom(toLoad);
+		} catch (e) {
+			// on error, purge saved data and reset
+			JqueryUtil.doToast({
+				content: "Error when loading DM screen! Purged saved data. (See the log for more information.)",
+				type: "danger"
+			});
+			await StorageUtil.pRemove(DMSCREEN_STORAGE);
+			setTimeout(() => { throw e; });
+		}
+	}
+
+	doReset () {
+		this.exiledPanels.forEach(p => p.destroy());
+		this.exiledPanels = [];
+		this.sideMenu.doUpdateHistory();
+		Object.values(this.panels).forEach(p => p.destroy());
+		this.panels = {};
+		this.setDimensions(this.getInitialWidth(), this.getInitialHeight());
+	}
+
+	setHoveringButton (panel) {
+		this.resetHoveringButton(panel);
+		panel.$btnAddInner.addClass("faux-hover");
+	}
+
+	resetHoveringButton (panel) {
+		Object.values(this.panels).forEach(p => {
+			if (panel && panel.id === p.id) return;
+			p.$btnAddInner.removeClass("faux-hover");
+		})
+	}
+
+	addPanel (panel) {
+		this.panels[panel.id] = panel;
+		panel.render();
+		this.doSaveStateDebounced();
+	}
+
+	disablePanelMoves () {
+		Object.values(this.panels).forEach(p => p.toggleMovable(false));
+	}
+
+	doBindAlertOnNavigation () {
+		if (this.isAlertOnNav) return;
+		this.isAlertOnNav = true;
+		$(window).on("beforeunload", evt => {
+			const message = `Temporary data and connections will be lost.`;
+			(evt || window.event).message = message;
+			return message;
+		});
+	}
+
+	getPanelsByType (type) {
+		return Object.values(this.panels).filter(p => p.tabDatas.length && p.tabDatas.find(td => td.type === type));
+	}
+}
+
+class SideMenu {
+	constructor (board) {
+		this.board = board;
+		this.$mnu = $(`.sidemenu`);
+
+		this.$mnu.on("mouseover", () => {
+			this.board.setHoveringPanel(null);
+			this.board.setVisiblyHoveringPanel(false);
+			this.board.resetHoveringButton();
+		});
+
+		this.$iptWidth = null;
+		this.$iptHeight = null;
+		this.$wrpHistory = null;
+	}
+
+	render () {
+		const renderDivider = () => this.$mnu.append(`<hr class="sidemenu__row__divider">`);
+
+		const $wrpResizeW = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Width</div></div>`).appendTo(this.$mnu);
+		const $iptWidth = $(`<input class="form-control" type="number" value="${this.board.width}">`).appendTo($wrpResizeW);
+		this.$iptWidth = $iptWidth;
+		const $wrpResizeH = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Height</div></div>`).appendTo(this.$mnu);
+		const $iptHeight = $(`<input class="form-control" type="number" value="${this.board.height}">`).appendTo($wrpResizeH);
+		this.$iptHeight = $iptHeight;
+		const $wrpSetDim = $(`<div class="sidemenu__row split-v-center"/>`).appendTo(this.$mnu);
+		const $btnSetDim = $(`<button class="btn btn-primary" style="width: 100%;">Set Dimensions</div>`).appendTo($wrpSetDim);
+		$btnSetDim.on("click", () => {
+			const w = Number($iptWidth.val());
+			const h = Number($iptHeight.val());
+			if ((w > 10 || h > 10) && !window.confirm("That's a lot of panels. You sure?")) return;
+			this.board.setDimensions(w, h);
+		});
+		renderDivider();
+
+		const $wrpFullscreen = $(`<div class="sidemenu__row flex-vh-center-around"></div>`).appendTo(this.$mnu);
+		const $btnFullscreen = $(`<button class="btn btn-primary">Toggle Fullscreen</button>`).appendTo($wrpFullscreen);
+		this.board.$btnFullscreen = $btnFullscreen;
+		$btnFullscreen.on("click", () => {
+			this.board.isFullscreen = !this.board.isFullscreen;
+			if (this.board.isFullscreen) $(`body`).addClass(`is-fullscreen`);
+			else $(`body`).removeClass(`is-fullscreen`);
+			this.board.doAdjust$creenCss();
+			this.board.doSaveStateDebounced();
+			this.board.reactor.fire("panelResize")
+		});
+		const $btnLockPanels = $(`<button class="btn btn-danger" title="Lock Panels"><span class="glyphicon glyphicon-lock"/></button>`).appendTo($wrpFullscreen);
+		this.board.$btnLockPanels = $btnLockPanels;
+		$btnLockPanels.on("click", () => {
+			this.board.isLocked = !this.board.isLocked;
+			if (this.board.isLocked) {
+				this.board.disablePanelMoves();
+				$(`body`).addClass(`dm-screen-locked`);
+				$btnLockPanels.removeClass(`btn-danger`).addClass(`btn-success`);
+			} else {
+				$(`body`).removeClass(`dm-screen-locked`);
+				$btnLockPanels.addClass(`btn-danger`).removeClass(`btn-success`);
+			}
+			this.board.doSaveStateDebounced();
+		});
+		renderDivider();
+
+		const $wrpSaveLoad = $(`<div class="sidemenu__row--vert"/>`).appendTo(this.$mnu);
+		const $wrpSaveLoadFile = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpSaveLoad);
+		const $btnSaveFile = $(`<button class="btn btn-primary">Save to File</button>`).appendTo($wrpSaveLoadFile);
+		$btnSaveFile.on("click", () => {
+			DataUtil.userDownload(`dm-screen`, this.board.getSaveableState());
+		});
+		const $btnLoadFile = $(`<button class="btn btn-primary">Load from File</button>`).appendTo($wrpSaveLoadFile);
+		$btnLoadFile.on("click", async () => {
+			const json = await DataUtil.pUserUpload();
+			this.board.doReset();
+			this.board.doLoadStateFrom(json);
+		});
+		const $wrpSaveLoadUrl = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpSaveLoad);
+		const $btnSaveLink = $(`<button class="btn btn-primary">Save to URL</button>`).appendTo($wrpSaveLoadUrl);
+		$btnSaveLink.on("click", async () => {
+			const encoded = `${window.location.href.split("#")[0]}#${encodeURIComponent(JSON.stringify(this.board.getSaveableState()))}`;
+			await MiscUtil.pCopyTextToClipboard(encoded);
+			JqueryUtil.showCopiedEffect($btnSaveLink);
+		});
+		renderDivider();
+
+		const $wrpCbConfirm = $(`<div class="sidemenu__row split-v-center"><label class="sidemenu__row__label sidemenu__row__label--cb-label"><span>Confirm on Tab Close</span></label></div>`).appendTo(this.$mnu);
+		this.board.$cbConfirmTabClose = $(`<input type="checkbox" class="sidemenu__row__label__cb">`).appendTo($wrpCbConfirm.find(`label`));
+		renderDivider();
+
+		const $wrpReset = $(`<div class="sidemenu__row split-v-center"/>`).appendTo(this.$mnu);
+		const $btnReset = $(`<button class="btn btn-danger" style="width: 100%;">Reset Screen</button>`).appendTo($wrpReset);
+		$btnReset.on("click", () => {
+			if (window.confirm("Are you sure?")) {
+				this.board.doReset();
+			}
+		});
+		renderDivider();
+
+		this.$wrpHistory = $(`<div class="sidemenu__history"/>`).appendTo(this.$mnu);
+	}
+
+	doUpdateDimensions () {
+		this.$iptWidth.val(this.board.width);
+		this.$iptHeight.val(this.board.height);
+	}
+
+	doUpdateHistory () {
+		this.board.exiledPanels.forEach(p => p.get$ContentWrapper().detach());
+		this.$wrpHistory.children().remove();
+		if (this.board.exiledPanels.length) {
+			const $wrpHistHeader = $(`<div class="sidemenu__row split-v-center"><span style="font-variant: small-caps;">Recently Removed</span></div>`).appendTo(this.$wrpHistory);
+			const $btnHistClear = $(`<button class="btn btn-danger">Clear</button>`).appendTo($wrpHistHeader);
+			$btnHistClear.on("click", () => {
+				this.board.exiledPanels.forEach(p => p.destroy());
+				this.board.exiledPanels = [];
+				this.doUpdateHistory();
+			});
+		}
+		this.board.exiledPanels.forEach((p, i) => {
+			const $wrpHistItem = $(`<div class="sidemenu__history-item"/>`).appendTo(this.$wrpHistory);
+			const $cvrHistItem = $(`<div class="sidemenu__history-item-cover"/>`).appendTo($wrpHistItem);
+			const $btnRemove = $(`<div class="panel-history-control-remove-wrapper"><span class="panel-history-control-remove glyphicon glyphicon-remove" title="Remove"/></div>`).appendTo($cvrHistItem);
+			const $ctrlMove = $(`<div class="panel-history-control-middle" title="Move"/>`).appendTo($cvrHistItem);
+
+			$btnRemove.on("click", () => {
+				this.board.exiledPanels[i].destroy();
+				this.board.exiledPanels.splice(i, 1);
+				this.doUpdateHistory();
+			});
+
+			const $contents = p.get$ContentWrapper();
+			$wrpHistItem.append($contents);
+
+			$ctrlMove.on("mousedown touchstart", (e) => {
+				this.board.setVisiblyHoveringPanel(true);
+				const $body = $(`body`);
+				MiscUtil.clearSelection();
+				$body.css("userSelect", "none");
+
+				const w = $contents.width();
+				const h = $contents.height();
+				const offset = $contents.offset();
+				const offsetX = EventUtil.getClientX(e) - offset.left;
+				const offsetY = EventUtil.getClientY(e) - offset.top;
+
+				$body.append($contents);
+				$(`.panel-control`).hide();
+				$contents.css("overflow-y", "hidden");
+				Panel.setMovingCss(e, $contents, w, h, offsetX, offsetY, 61);
+				$wrpHistItem.css("box-shadow", "none");
+				$btnRemove.hide();
+				$ctrlMove.hide();
+				this.board.get$creen().addClass("board-content-hovering");
+				p.get$Content().addClass("panel-content-hovering");
+
+				Panel.bindMovingEvents(this.board, $contents, offsetX, offsetY);
+
+				$(document).on(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`, () => {
+					this.board.setVisiblyHoveringPanel(false);
+					$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`);
+
+					$body.css("userSelect", "");
+					$contents.css("overflow-y", "");
+					Panel.unsetMovingCss($contents);
+					$wrpHistItem.css("box-shadow", "");
+					$btnRemove.show();
+					$ctrlMove.show();
+					this.board.get$creen().removeClass("board-content-hovering");
+					p.get$Content().removeClass("panel-content-hovering");
+
+					if (!this.board.hoveringPanel || p.id === this.board.hoveringPanel.id) $wrpHistItem.append($contents);
+					else {
+						this.board.recallPanel(p);
+						const her = this.board.hoveringPanel;
+						if (her.getEmpty()) {
+							her.setFromPeer(p.getPanelMeta(), p.$content);
+							p.destroy();
+						} else {
+							const herMeta = her.getPanelMeta();
+							const $herContent = her.get$Content();
+							her.setFromPeer(p.getPanelMeta(), p.get$Content());
+							p.setFromPeer(herMeta, $herContent);
+							p.exile();
+						}
+						// clean any lingering hidden scrollbar
+						her.$pnl.removeClass("panel-mode-move");
+						her.doShowJoystick();
+						this.doUpdateHistory();
+					}
+					MiscUtil.clearSelection();
+					this.board.doSaveStateDebounced();
+				});
+			});
+		});
+		this.board.doSaveStateDebounced();
+	}
+}
+
+class Panel {
+	constructor (board, x, y, width = 1, height = 1, title = "") {
+		this.id = board.getNextId();
+		this.board = board;
+		this.x = x;
+		this.y = y;
+		this.width = width;
+		this.height = height;
+		this.title = title;
+		this.isDirty = true;
+		this.isContentDirty = false;
+		this.isLocked = false; // unused
+		this.type = 0;
+		this.contentMeta = null; // info used during saved state re-load
+		this.isMousedown = false;
+		this.isTabs = false;
+		this.tabIndex = null;
+		this.tabDatas = [];
+		this.tabCanRename = false;
+		this.tabRenamed = false;
+
+		this.$btnAdd = null;
+		this.$btnAddInner = null;
+		this.$content = null;
+		this.joyMenu = null;
+		this.$pnl = null;
+		this.$pnlWrpContent = null;
+		this.$pnlTitle = null;
+		this.$pnlAddTab = null;
+		this.$pnlWrpTabs = null;
+		this.$pnlTabs = null;
+	}
+
+	static fromSavedState (board, saved) {
+		const existing = board.getPanels(saved.x, saved.y, saved.w, saved.h);
+		if (saved.t === PANEL_TYP_EMPTY && existing.length) return null; // cull empties
+		else if (existing.length) existing.forEach(p => p.destroy()); // prefer more recent panels
+		const p = new Panel(board, saved.x, saved.y, saved.w, saved.h);
+		p.render();
+
+		function loadState (saved, skipSetTab, ixTab) {
+			function handleTabRenamed (p) {
+				if (saved.r != null) p.tabDatas[ixTab].tabRenamed = true;
+			}
+
+			switch (saved.t) {
+				case PANEL_TYP_EMPTY:
+					return p;
+				case PANEL_TYP_STATS: {
+					const page = saved.c.p;
+					const source = saved.c.s;
+					const hash = saved.c.u;
+					p.doPopulate_Stats(page, source, hash, skipSetTab, saved.r);
+					handleTabRenamed(p);
+					return p;
+				}
+				case PANEL_TYP_CREATURE_SCALED_CR: {
+					const page = saved.c.p;
+					const source = saved.c.s;
+					const hash = saved.c.u;
+					const cr = saved.c.cr;
+					p.doPopulate_StatsScaledCr(page, source, hash, cr, skipSetTab, saved.r);
+					handleTabRenamed(p);
+					return p;
+				}
+				case PANEL_TYP_RULES: {
+					const book = saved.c.b;
+					const chapter = saved.c.c;
+					const header = saved.c.h;
+					p.doPopulate_Rules(book, chapter, header, skipSetTab, saved.r);
+					handleTabRenamed(p);
+					return p;
+				}
+				case PANEL_TYP_ADVENTURES: {
+					const adventure = saved.c.a;
+					const chapter = saved.c.c;
+					p.doPopulate_Adventures(adventure, chapter, skipSetTab, saved.r);
+					handleTabRenamed(p);
+					return p;
+				}
+				case PANEL_TYP_BOOKS: {
+					const book = saved.c.b;
+					const chapter = saved.c.c;
+					p.doPopulate_Books(book, chapter, skipSetTab, saved.r);
+					handleTabRenamed(p);
+					return p;
+				}
+				case PANEL_TYP_ROLLBOX:
+					Renderer.dice.bindDmScreenPanel(p, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_TEXTBOX:
+					p.doPopulate_TextBox(saved.s.x, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_INITIATIVE_TRACKER:
+					p.doPopulate_InitiativeTracker(saved.s, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_INITIATIVE_TRACKER_PLAYER:
+					p.doPopulate_InitiativeTrackerPlayer(saved.s, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_COUNTER:
+					p.doPopulate_Counter(saved.s, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_UNIT_CONVERTER:
+					p.doPopulate_UnitConverter(saved.s, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_MONEY_CONVERTER:
+					p.doPopulate_MoneyConverter(saved.s, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_TIME_TRACKER:
+					p.doPopulate_TimeTracker(saved.s, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_TUBE:
+					p.doPopulate_YouTube(saved.c.u, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_TWITCH:
+					p.doPopulate_Twitch(saved.c.u, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_TWITCH_CHAT:
+					p.doPopulate_TwitchChat(saved.c.u, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_GENERIC_EMBED:
+					p.doPopulate_GenericEmbed(saved.c.u, saved.r);
+					handleTabRenamed(p);
+					return p;
+				case PANEL_TYP_IMAGE:
+					p.doPopulate_Image(saved.c.u, saved.r);
+					handleTabRenamed(p);
+					return p;
+				default:
+					throw new Error(`Unhandled panel type ${saved.t}`);
+			}
+		}
+
+		if (saved.a) {
+			p.isTabs = true;
+			p.doRenderTabs();
+			saved.a.forEach((tab, ix) => loadState(tab, true, ix));
+			p.setActiveTab(saved.b);
+		} else {
+			loadState(saved);
+		}
+		return p;
+	}
+
+	static _get$eleLoading (message = "Loading") {
+		return $(`<div class="panel-content-wrapper-inner"><div class="ui-search__message loading-spinner"><i>${message}...</i></div></div>`);
+	}
+
+	static setMovingCss (evt, $ele, w, h, offsetX, offsetY, zIndex) {
+		$ele.css({
+			width: w,
+			height: h,
+			position: "fixed",
+			top: EventUtil.getClientY(evt) - offsetY,
+			left: EventUtil.getClientX(evt) - offsetX,
+			zIndex: zIndex,
+			pointerEvents: "none",
+			transform: "rotate(-4deg)",
+			background: "none"
+		});
+	}
+
+	static unsetMovingCss ($ele) {
+		$ele.css({
+			width: "",
+			height: "",
+			position: "",
+			top: "",
+			left: "",
+			zIndex: "",
+			pointerEvents: "",
+			transform: "",
+			background: ""
+		});
+	}
+
+	static bindMovingEvents (board, $content, offsetX, offsetY) {
+		$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`);
+		$(document).on(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`, (e) => {
+			board.setVisiblyHoveringPanel(true);
+			$content.css({
+				top: EventUtil.getClientY(e) - offsetY,
+				left: EventUtil.getClientX(e) - offsetX
+			});
+		});
+	}
+
+	static isNonExilableType (type) {
+		return type === PANEL_TYP_ROLLBOX || type === PANEL_TYP_TUBE || type === PANEL_TYP_TWITCH;
+	}
+
+	doPopulate_Empty (ixOpt) {
+		this.close$TabContent(ixOpt);
+	}
+
+	doPopulate_Loading (message) {
+		return this.set$ContentTab(
+			PANEL_TYP_EMPTY,
+			null,
+			Panel._get$eleLoading(message),
+			TITLE_LOADING
+		);
+	}
+
+	doPopulate_Stats (page, source, hash, skipSetTab, title) { // FIXME skipSetTab is never used
+		const meta = {p: page, s: source, u: hash};
+		const ix = this.set$TabLoading(
+			PANEL_TYP_STATS,
+			meta
+		);
+		Renderer.hover.pCacheAndGet(
+			page,
+			source,
+			hash
+		).then(it => {
+			const fn = Renderer.hover._pageToRenderFn(page);
+
+			const $contentInner = $(`<div class="panel-content-wrapper-inner"/>`);
+			const $contentStats = $(`<table class="stats"/>`).appendTo($contentInner);
+			$contentStats.append(fn(it));
+
+			this._stats_bindCrScaleClickHandler(it, meta, $contentInner, $contentStats);
+
+			this.set$Tab(
+				ix,
+				PANEL_TYP_STATS,
+				meta,
+				$contentInner,
+				title || it.name,
+				true,
+				!!title
+			);
+		});
+	}
+
+	_stats_bindCrScaleClickHandler (mon, meta, $contentInner, $contentStats) {
+		const self = this;
+		$contentStats.off("click", ".mon__btn-scale-cr").on("click", ".mon__btn-scale-cr", function (evt) {
+			evt.stopPropagation();
+			const $this = $(this);
+			const lastCr = self.contentMeta.cr != null ? Parser.numberToCr(self.contentMeta.cr) : mon.cr ? (mon.cr.cr || mon.cr) : null;
+
+			Renderer.monster.getCrScaleTarget($this, lastCr, (targetCr) => {
+				const originalCr = Parser.crToNumber(mon.cr) === targetCr;
+
+				const doRender = (toRender) => {
+					$contentStats.empty().append(Renderer.monster.getCompactRenderedString(toRender, null, {showScaler: true, isScaled: !originalCr}));
+
+					const nxtMeta = {
+						...meta,
+						cr: targetCr
+					};
+					if (originalCr) delete nxtMeta.cr;
+
+					self.set$Tab(
+						self.tabIndex,
+						originalCr ? PANEL_TYP_STATS : PANEL_TYP_CREATURE_SCALED_CR,
+						nxtMeta,
+						$contentInner,
+						toRender._displayName || toRender.name,
+						true
+					);
+				};
+
+				if (originalCr) {
+					doRender(mon)
+				} else {
+					ScaleCreature.scale(mon, targetCr).then(toRender => doRender(toRender))
+				}
+			}, true);
+		});
+		$contentStats.off("click", ".mon__btn-reset-cr").on("click", ".mon__btn-reset-cr", function () {
+			$contentStats.empty().append(Renderer.monster.getCompactRenderedString(mon, null, {showScaler: true, isScaled: false}));
+			self.set$Tab(
+				self.tabIndex,
+				PANEL_TYP_STATS,
+				meta,
+				$contentInner,
+				mon.name,
+				true
+			);
+		});
+	}
+
+	doPopulate_StatsScaledCr (page, source, hash, targetCr, skipSetTab, title) { // FIXME skipSetTab is never used
+		const meta = {p: page, s: source, u: hash, cr: targetCr};
+		const ix = this.set$TabLoading(
+			PANEL_TYP_CREATURE_SCALED_CR,
+			meta
+		);
+		Renderer.hover.pCacheAndGet(
+			page,
+			source,
+			hash
+		).then(it => {
+			ScaleCreature.scale(it, targetCr).then(initialRender => {
+				const $contentInner = $(`<div class="panel-content-wrapper-inner"/>`);
+				const $contentStats = $(`<table class="stats"/>`).appendTo($contentInner);
+				$contentStats.append(Renderer.monster.getCompactRenderedString(initialRender, null, {showScaler: true, isScaled: true}));
+
+				this._stats_bindCrScaleClickHandler(it, meta, $contentInner, $contentStats);
+
+				this.set$Tab(
+					ix,
+					PANEL_TYP_CREATURE_SCALED_CR,
+					meta,
+					$contentInner,
+					title || initialRender._displayName || initialRender.name,
+					true,
+					!!title
+				);
+			});
+		});
+	}
+
+	doPopulate_Rules (book, chapter, header, skipSetTab, title) { // FIXME skipSetTab is never used
+		const meta = {b: book, c: chapter, h: header};
+		const ix = this.set$TabLoading(
+			PANEL_TYP_RULES,
+			meta
+		);
+		RuleLoader.pFill(book).then(() => {
+			const rule = RuleLoader.getFromCache(book, chapter, header);
+			const it = Renderer.rule.getCompactRenderedString(rule);
+			this.set$Tab(
+				ix,
+				PANEL_TYP_RULES,
+				meta,
+				$(`<div class="panel-content-wrapper-inner"><table class="stats">${it}</table></div>`),
+				title || rule.name || "",
+				true,
+				!!title
+			);
+		});
+	}
+
+	doPopulate_Adventures (adventure, chapter, skipSetTab, title) { // FIXME skipSetTab is never used
+		const meta = {a: adventure, c: chapter};
+		const ix = this.set$TabLoading(
+			PANEL_TYP_ADVENTURES,
+			meta
+		);
+		adventureLoader.pFill(adventure).then(() => {
+			const data = adventureLoader.getFromCache(adventure, chapter);
+			const view = new AdventureOrBookView("adventure", this, adventureLoader, ix, {adventure, chapter});
+			this.set$Tab(
+				ix,
+				PANEL_TYP_ADVENTURES,
+				meta,
+				$(`<div class="panel-content-wrapper-inner"></div>`).append(view.$getEle()),
+				title || data.name || "",
+				true,
+				!!title
+			);
+		});
+	}
+
+	doPopulate_Books (book, chapter, skipSetTab, title) { // FIXME skipSetTab is never used
+		const meta = {b: book, c: chapter};
+		const ix = this.set$TabLoading(
+			PANEL_TYP_BOOKS,
+			meta
+		);
+		bookLoader.pFill(book).then(() => {
+			const data = bookLoader.getFromCache(book, chapter);
+			const view = new AdventureOrBookView("book", this, bookLoader, ix, {book, chapter});
+			this.set$Tab(
+				ix,
+				PANEL_TYP_BOOKS,
+				meta,
+				$(`<div class="panel-content-wrapper-inner"></div>`).append(view.$getEle()),
+				title || data.name || "",
+				true,
+				!!title
+			);
+		});
+	}
+
+	set$ContentTab (type, contentMeta, $content, title, tabCanRename, tabRenamed) {
+		const ix = this.isTabs ? this.getNextTabIndex() : 0;
+		return this.set$Tab(ix, type, contentMeta, $content, title, tabCanRename, tabRenamed);
+	}
+
+	doPopulate_Rollbox (title) {
+		this.set$ContentTab(
+			PANEL_TYP_ROLLBOX,
+			null,
+			$(`<div class="panel-content-wrapper-inner"/>`).append(Renderer.dice.get$Roller().addClass("rollbox-panel")),
+			title || "Dice Roller",
+			true,
+			!!title
+		);
+	}
+
+	doPopulate_InitiativeTracker (state = {}, title) {
+		this.set$ContentTab(
+			PANEL_TYP_INITIATIVE_TRACKER,
+			state,
+			$(`<div class="panel-content-wrapper-inner"/>`).append(InitiativeTracker.make$Tracker(this.board, state)),
+			title || "Initiative Tracker",
+			true
+		);
+	}
+
+	doPopulate_InitiativeTrackerPlayer (state = {}, title) {
+		this.set$ContentTab(
+			PANEL_TYP_INITIATIVE_TRACKER_PLAYER,
+			state,
+			$(`<div class="panel-content-wrapper-inner"/>`).append(InitiativeTrackerPlayer.make$tracker(this.board, state)),
+			title || "Initiative Tracker",
+			true
+		);
+	}
+
+	doPopulate_Counter (state = {}, title) {
+		this.set$ContentTab(
+			PANEL_TYP_COUNTER,
+			state,
+			$(`<div class="panel-content-wrapper-inner"/>`).append(Counter.$getCounter(this.board, state)),
+			title || "Counter",
+			true
+		);
+	}
+
+	doPopulate_UnitConverter (state = {}, title) {
+		this.set$ContentTab(
+			PANEL_TYP_UNIT_CONVERTER,
+			state,
+			$(`<div class="panel-content-wrapper-inner"/>`).append(UnitConverter.make$Converter(this.board, state)),
+			title || "Unit Converter",
+			true
+		);
+	}
+
+	doPopulate_MoneyConverter (state = {}, title) {
+		this.set$ContentTab(
+			PANEL_TYP_MONEY_CONVERTER,
+			state,
+			$(`<div class="panel-content-wrapper-inner"/>`).append(MoneyConverter.make$Converter(this.board, state)),
+			title || "Money Converter",
+			true
+		);
+	}
+
+	doPopulate_TimeTracker (state = {}, title) {
+		this.set$ContentTab(
+			PANEL_TYP_TIME_TRACKER,
+			state,
+			$(`<div class="panel-content-wrapper-inner"/>`).append(TimeTracker.$getTracker(this.board, state)),
+			title || "Time Tracker",
+			true
+		);
+	}
+
+	doPopulate_TextBox (content, title = "Notes") {
+		this.set$ContentTab(
+			PANEL_TYP_TEXTBOX,
+			null,
+			$(`<div class="panel-content-wrapper-inner"/>`).append(NoteBox.make$Notebox(this.board, content)),
+			title,
+			true
+		);
+	}
+
+	doPopulate_YouTube (url, title = "YouTube") {
+		const meta = {u: url};
+		this.set$ContentTab(
+			PANEL_TYP_TUBE,
+			meta,
+			$(`<div class="panel-content-wrapper-inner"><iframe src="${url}?autoplay=1&enablejsapi=1&modestbranding=1&iv_load_policy=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen /></div>`),
+			title,
+			true
+		);
+	}
+
+	doPopulate_Twitch (url, title = "Twitch") {
+		const meta = {u: url};
+		this.set$ContentTab(
+			PANEL_TYP_TWITCH,
+			meta,
+			$(`<div class="panel-content-wrapper-inner"><iframe src="${url}" frameborder="0"  scrolling="no" allowfullscreen/></div>`),
+			title,
+			true
+		);
+	}
+
+	doPopulate_TwitchChat (url, title = "Twitch Chat") {
+		const meta = {u: url};
+		this.set$ContentTab(
+			PANEL_TYP_TWITCH_CHAT,
+			meta,
+			$(`<div class="panel-content-wrapper-inner"><iframe src="${url}" frameborder="0"  scrolling="no"/></div>`),
+			title,
+			true
+		);
+	}
+
+	doPopulate_GenericEmbed (url, title = "Embed") {
+		const meta = {u: url};
+		this.set$ContentTab(
+			PANEL_TYP_GENERIC_EMBED,
+			meta,
+			$(`<div class="panel-content-wrapper-inner"><iframe src="${url}"/></div>`),
+			title,
+			true
+		);
+	}
+
+	doPopulate_Image (url, ixOpt, title = "Image") {
+		const meta = {u: url};
+		const $wrpPanel = $(`<div class="panel-content-wrapper-inner"/>`);
+		const $wrpImage = $(`<div class="panel-content-wrapper-img"/>`).appendTo($wrpPanel);
+		const $img = $(`<img src="${url}" alt="${title}">`).appendTo($wrpImage);
+		const $iptReset = $(`<button class="panel-zoom-reset btn btn-xs btn-default"><span class="glyphicon glyphicon-refresh"/></button>`).appendTo($wrpPanel);
+		const $iptRange = $(`<input type="range" class="panel-zoom-slider">`).appendTo($wrpPanel);
+		this.set$ContentTab(
+			PANEL_TYP_IMAGE,
+			meta,
+			$wrpPanel,
+			title,
+			true,
+			ixOpt // FIXME never used?
+		);
+		$img.panzoom({
+			$reset: $iptReset,
+			$zoomRange: $iptRange,
+			minScale: 0.1,
+			maxScale: 8,
+			duration: 100
+		});
+	}
+	// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	getTopNeighbours () {
+		return [...new Array(this.width)]
+			.map((blank, i) => i + this.x).map(x => this.board.getPanel(x, this.y - 1))
+			.filter(p => p);
+	}
+
+	getRightNeighbours () {
+		const rightmost = this.x + this.width;
+		return [...new Array(this.height)].map((blank, i) => i + this.y)
+			.map(y => this.board.getPanel(rightmost, y))
+			.filter(p => p);
+	}
+
+	getBottomNeighbours () {
+		const lowest = this.y + this.height;
+		return [...new Array(this.width)].map((blank, i) => i + this.x)
+			.map(x => this.board.getPanel(x, lowest))
+			.filter(p => p);
+	}
+
+	getLeftNeighbours () {
+		return [...new Array(this.height)].map((blank, i) => i + this.y)
+			.map(y => this.board.getPanel(this.x - 1, y))
+			.filter(p => p);
+	}
+	// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	hasRowTop () {
+		return this.y > 0;
+	}
+
+	hasColumnRight () {
+		return (this.x + this.width) < this.board.getWidth();
+	}
+
+	hasRowBottom () {
+		return (this.y + this.height) < this.board.getHeight();
+	}
+
+	hasColumnLeft () {
+		return this.x > 0;
+	}
+	// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	hasSpaceTop () {
+		const hasLockedNeighbourTop = this.getTopNeighbours().filter(p => p.getLocked()).length;
+		return this.hasRowTop() && !hasLockedNeighbourTop;
+	}
+
+	hasSpaceRight () {
+		const hasLockedNeighbourRight = this.getRightNeighbours().filter(p => p.getLocked()).length;
+		return this.hasColumnRight() && !hasLockedNeighbourRight;
+	}
+
+	hasSpaceBottom () {
+		const hasLockedNeighbourBottom = this.getBottomNeighbours().filter(p => p.getLocked()).length;
+		return this.hasRowBottom() && !hasLockedNeighbourBottom;
+	}
+
+	hasSpaceLeft () {
+		const hasLockedNeighbourLeft = this.getLeftNeighbours().filter(p => p.getLocked()).length;
+		return this.hasColumnLeft() && !hasLockedNeighbourLeft;
+	}
+	// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	canShrinkTop () {
+		return this.height > 1 && !this.getLocked();
+	}
+
+	canShrinkRight () {
+		return this.width > 1 && !this.getLocked();
+	}
+
+	canShrinkBottom () {
+		return this.height > 1 && !this.getLocked();
+	}
+
+	canShrinkLeft () {
+		return this.width > 1 && !this.getLocked();
+	}
+	// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	doShrinkTop () {
+		this.height -= 1;
+		this.y += 1;
+		this.setDirty(true);
+		this.render();
+	}
+
+	doShrinkRight () {
+		this.width -= 1;
+		this.setDirty(true);
+		this.render();
+	}
+
+	doShrinkBottom () {
+		this.height -= 1;
+		this.setDirty(true);
+		this.render();
+	}
+
+	doShrinkLeft () {
+		this.width -= 1;
+		this.x += 1;
+		this.setDirty(true);
+		this.render();
+	}
+	// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	canBumpTop () {
+		if (!this.hasRowTop()) return false; // if there's no row above, we can't bump up a row
+		if (!this.getTopNeighbours().filter(p => !p.getEmpty()).length) return true; // if there's a row above and it's empty, we can bump
+		// if there's a row above and it has non-empty panels, we can bump if they can all bump
+		return !this.getTopNeighbours().filter(p => !p.getEmpty()).filter(p => !p.canBumpTop()).length;
+	}
+
+	canBumpRight () {
+		if (!this.hasColumnRight()) return false;
+		if (!this.getRightNeighbours().filter(p => !p.getEmpty()).length) return true;
+		return !this.getRightNeighbours().filter(p => !p.getEmpty()).filter(p => !p.canBumpRight()).length;
+	}
+
+	canBumpBottom () {
+		if (!this.hasRowBottom()) return false;
+		if (!this.getBottomNeighbours().filter(p => !p.getEmpty()).length) return true;
+		return !this.getBottomNeighbours().filter(p => !p.getEmpty()).filter(p => !p.canBumpBottom()).length;
+	}
+
+	canBumpLeft () {
+		if (!this.hasColumnLeft()) return false;
+		if (!this.getLeftNeighbours().filter(p => !p.getEmpty()).length) return true;
+		return !this.getLeftNeighbours().filter(p => !p.getEmpty()).filter(p => !p.canBumpLeft()).length;
+	}
+	// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	doBumpTop () {
+		this.getTopNeighbours().filter(p => p.getEmpty()).forEach(p => p.destroy());
+		this.getTopNeighbours().filter(p => !p.getEmpty()).forEach(p => p.doBumpTop());
+		this.y -= 1;
+		this.setDirty(true);
+		this.render();
+	}
+
+	doBumpRight () {
+		this.getRightNeighbours().filter(p => p.getEmpty()).forEach(p => p.destroy());
+		this.getRightNeighbours().filter(p => !p.getEmpty()).forEach(p => p.doBumpRight());
+		this.x += 1;
+		this.setDirty(true);
+		this.render();
+	}
+
+	doBumpBottom () {
+		this.getBottomNeighbours().filter(p => p.getEmpty()).forEach(p => p.destroy());
+		this.getBottomNeighbours().filter(p => !p.getEmpty()).forEach(p => p.doBumpBottom());
+		this.y += 1;
+		this.setDirty(true);
+		this.render();
+	}
+
+	doBumpLeft () {
+		this.getLeftNeighbours().filter(p => p.getEmpty()).forEach(p => p.destroy());
+		this.getLeftNeighbours().filter(p => !p.getEmpty()).forEach(p => p.doBumpLeft());
+		this.x -= 1;
+		this.setDirty(true);
+		this.render();
+	}
+	// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	getPanelMeta () {
+		return {
+			type: this.type,
+			contentMeta: this.contentMeta,
+			title: this.title,
+			isTabs: this.isTabs,
+			tabIndex: this.tabIndex,
+			tabDatas: this.tabDatas,
+			tabCanRename: this.tabCanRename,
+			tabRenamed: this.tabRenamed
+		}
+	}
+
+	setPanelMeta (type, contentMeta) {
+		this.type = type;
+		this.contentMeta = contentMeta;
+	}
+
+	getEmpty () {
+		return this.$content == null;
+	}
+
+	getLocked () {
+		return this.isLocked;
+	}
+
+	getMousedown () {
+		return this.isMousedown;
+	}
+
+	setMousedown (isMousedown) {
+		this.isMousedown = isMousedown;
+	}
+
+	setDirty (dirty) {
+		this.isDirty = dirty;
+	}
+
+	setHasTabs (hasTabs) {
+		this.isTabs = hasTabs;
+	}
+
+	setContentDirty (dirty) {
+		this.setDirty.bind(this)(dirty);
+		this.isContentDirty = true;
+	}
+
+	doShowJoystick () {
+		this.joyMenu.doShow();
+		this.$pnl.addClass(`panel-mode-move`);
+	}
+
+	doHideJoystick () {
+		this.joyMenu.doHide();
+		this.$pnl.removeClass(`panel-mode-move`);
+	}
+
+	doRenderTitle () {
+		const displayText = this.title !== TITLE_LOADING
+		&& (this.type === PANEL_TYP_STATS || this.type === PANEL_TYP_CREATURE_SCALED_CR || this.type === PANEL_TYP_RULES || this.type === PANEL_TYP_ADVENTURES || this.type === PANEL_TYP_BOOKS) ? this.title : "";
+
+		this.$pnlTitle.text(displayText);
+		if (!displayText) this.$pnlTitle.addClass("hidden");
+		else this.$pnlTitle.removeClass("hidden");
+	}
+
+	doRenderTabs () {
+		if (this.isTabs) {
+			this.$pnlWrpTabs.css({display: "flex"});
+			this.$pnlWrpContent.addClass("panel-content-wrapper-tabs");
+			this.$pnlAddTab.addClass("hidden");
+		} else {
+			this.$pnlWrpTabs.css({display: ""});
+			this.$pnlWrpContent.removeClass("panel-content-wrapper-tabs");
+			this.$pnlAddTab.removeClass("hidden");
+		}
+	}
+
+	getReplacementPanel () {
+		const replacement = new Panel(this.board, this.x, this.y, this.width, this.height);
+
+		if (this.tabDatas.length > 1 && this.tabDatas.filter(it => !it.isDeleted && (Panel.isNonExilableType(it.type))).length) {
+			const prevTabIx = this.tabDatas.findIndex(it => !it.isDeleted);
+			if (~prevTabIx) {
+				this.setActiveTab(prevTabIx);
+			}
+			// otherwise, it should be the currently displayed panel, and so will be destroyed on exile
+
+			this.tabDatas.filter(it => it.type === PANEL_TYP_ROLLBOX).forEach(it => {
+				it.isDeleted = true;
+				Renderer.dice.unbindDmScreenPanel();
+			});
+		}
+
+		this.exile();
+		this.board.addPanel(replacement);
+		this.board.doCheckFillSpaces();
+		return replacement;
+	}
+
+	toggleMovable (val) {
+		this.$pnl.find(`.panel-control`).toggle(val);
+		this.$pnl.toggleClass(`panel-mode-move`, val);
+	}
+
+	render () {
+		const doApplyPosCss = ($ele) => {
+			// indexed from 1 instead of zero...
+			return $ele.css({
+				gridColumnStart: String(this.x + 1),
+				gridColumnEnd: String(this.x + 1 + this.width),
+
+				gridRowStart: String(this.y + 1),
+				gridRowEnd: String(this.y + 1 + this.height)
+			});
+		};
+
+		const openAddMenu = () => {
+			this.board.menu.doOpen();
+			this.board.menu.setPanel(this);
+			if (!this.board.menu.hasActiveTab()) this.board.menu.setFirstTabActive();
+			else if (this.board.menu.getActiveTab().doTransitionActive) this.board.menu.getActiveTab().doTransitionActive();
+		};
+
+		function doInitialRender () {
+			const $pnl = $(`<div data-panelId="${this.id}" class="dm-screen-panel" empty="true"/>`);
+			this.$pnl = $pnl;
+			const $ctrlBar = $(`<div class="panel-control-bar"/>`).appendTo($pnl);
+			this.$pnlTitle = $(`<div class="panel-control-bar panel-control-title"/>`).appendTo($pnl).click(() => this.$pnlTitle.toggleClass("panel-control-title--bumped"));
+			this.$pnlAddTab = $(`<div class="panel-control-bar panel-control-addtab"><div class="panel-control-icon glyphicon glyphicon-plus" title="Add Tab"/></div>`).click(() => {
+				this.setHasTabs(true);
+				this.setDirty(true);
+				this.render();
+				openAddMenu();
+			}).appendTo($pnl);
+
+			const $ctrlMove = $(`<div class="panel-control-icon glyphicon glyphicon-move" title="Move"/>`).appendTo($ctrlBar);
+			$ctrlMove.on("click", () => {
+				this.toggleMovable();
+			});
+			const $ctrlEmpty = $(`<div class="panel-control-icon glyphicon glyphicon-remove" title="Close"/>`).appendTo($ctrlBar);
+			$ctrlEmpty.on("click", () => {
+				this.getReplacementPanel();
+			});
+
+			const joyMenu = new JoystickMenu(this.board, this);
+			this.joyMenu = joyMenu;
+			joyMenu.initialise();
+
+			const $wrpContent = $(`<div class="panel-content-wrapper"/>`).appendTo($pnl);
+			const $wrpBtnAdd = $(`<div class="panel-add"/>`).appendTo($wrpContent);
+			const $btnAdd = $(`<span class="btn-panel-add glyphicon glyphicon-plus"/>`).on("click", () => {
+				openAddMenu();
+			}).appendTo($wrpBtnAdd);
+			this.$btnAdd = $wrpBtnAdd;
+			this.$btnAddInner = $btnAdd;
+			this.$pnlWrpContent = $wrpContent;
+
+			const $wrpTabs = $(`<div class="content-tab-bar"/>`).appendTo($pnl);
+			const $wrpTabsInner = $(`<div class="content-tab-bar-inner"/>`).on("wheel", (evt) => {
+				const delta = evt.originalEvent.deltaY;
+				const curr = $wrpTabsInner.scrollLeft();
+				$wrpTabsInner.scrollLeft(Math.max(0, curr + delta));
+			}).appendTo($wrpTabs);
+			const $btnTabAdd = $(`<button class="btn btn-default content-tab"><span class="glyphicon glyphicon-plus"/></button>`)
+				.click(() => openAddMenu()).appendTo($wrpTabsInner);
+			this.$pnlWrpTabs = $wrpTabs;
+			this.$pnlTabs = $wrpTabsInner;
+
+			if (this.$content) $wrpContent.append(this.$content);
+
+			doApplyPosCss($pnl).appendTo(this.board.get$creen());
+			this.isDirty = false;
+		}
+
+		if (this.isDirty) {
+			if (!this.$pnl) doInitialRender.bind(this)();
+			else {
+				doApplyPosCss(this.$pnl);
+				this.doRenderTitle();
+				this.doRenderTabs();
+
+				if (this.isContentDirty) {
+					this.$pnlWrpContent.clear();
+					if (this.$content) this.$pnlWrpContent.append(this.$content);
+					this.isContentDirty = false;
+				}
+			}
+			this.isDirty = false;
+		}
+	}
+
+	getPos () {
+		const offset = this.$pnl.offset();
+		return {
+			top: offset.top,
+			left: offset.left,
+			width: this.$pnl.outerWidth(),
+			height: this.$pnl.outerHeight()
+		};
+	}
+
+	getAddButtonPos () {
+		const offset = this.$btnAddInner.offset();
+		return {
+			top: offset.top,
+			left: offset.left,
+			width: this.$btnAddInner.outerWidth(),
+			height: this.$btnAddInner.outerHeight()
+		};
+	}
+
+	doCloseTab (ixOpt) {
+		if (this.isTabs) {
+			this.close$TabContent(ixOpt);
+		}
+
+		const activeTabs = this.tabDatas.filter(it => !it.isDeleted).length;
+
+		if (activeTabs === 1) { // if there is only one active tab remaining, remove the tab bar
+			this.isTabs = false;
+			this.doRenderTabs();
+		} else if (activeTabs === 0) {
+			const replacement = new Panel(this.board, this.x, this.y, this.width, this.height);
+			this.exile();
+			this.board.addPanel(replacement);
+			this.board.doCheckFillSpaces();
+		}
+	}
+
+	close$TabContent (ixOpt = 0) {
+		return this.set$Tab(-1 * (ixOpt + 1), PANEL_TYP_EMPTY, null, null, null, false);
+	}
+
+	set$Content (type, contentMeta, $content, title, tabCanRename, tabRenamed) {
+		this.type = type;
+		this.contentMeta = contentMeta;
+		this.$content = $content;
+		this.title = title;
+		this.tabCanRename = tabCanRename;
+		this.tabRenamed = tabRenamed;
+
+		if ($content === null) {
+			this.$pnlWrpContent.children().detach();
+			this.$pnlWrpContent.append(this.$btnAdd);
+		} else {
+			this.$btnAdd.detach(); // preserve the "add panel" controls so we can re-attach them later if the panel empties
+			this.$pnlWrpContent.find(`.ui-search__message.loading-spinner`).remove(); // clean up any temp "loading" panels
+			this.$pnlWrpContent.children().addClass("dms__tab_hidden");
+			$content.removeClass("dms__tab_hidden");
+			if (!this.$pnlWrpContent.has($content[0]).length) this.$pnlWrpContent.append($content);
+		}
+
+		this.$pnl.attr("empty", !$content);
+		this.doRenderTitle();
+		this.doRenderTabs();
+	}
+
+	setFromPeer (hisMeta, $hisContent) {
+		this.isTabs = hisMeta.isTabs;
+		this.tabIndex = hisMeta.tabIndex;
+		this.tabDatas = hisMeta.tabDatas;
+		this.tabCanRename = hisMeta.tabCanRename;
+		this.tabRenamed = hisMeta.tabRenamed;
+
+		this.set$Tab(hisMeta.tabIndex, hisMeta.type, hisMeta.contentMeta, $hisContent, hisMeta.title, hisMeta.tabCanRename, hisMeta.tabRenamed);
+		hisMeta.tabDatas
+			.forEach((it, ix) => {
+				if (!it.isDeleted && it.$tabButton) {
+					// regenerate tab buttons to refer to the correct tab
+					it.$tabButton.remove();
+					it.$tabButton = this._get$BtnSelTab(ix, it.title, it.tabCanRename);
+					this.$pnlTabs.children().last().before(it.$tabButton);
+				}
+			});
+	}
+
+	getNextTabIndex () {
+		return this.tabDatas.length;
+	}
+
+	set$TabLoading (type, contentMeta) {
+		return this.set$ContentTab(
+			type,
+			contentMeta,
+			Panel._get$eleLoading(),
+			TITLE_LOADING
+		);
+	}
+
+	_get$BtnSelTab (ix, title, tabCanRename) {
+		title = title || "[Untitled]";
+		const $btnSelTab = $(`<span class="btn btn-default content-tab flex ${tabCanRename ? "content-tab-can-rename" : ""}"><span class="content-tab-title" title="${title}">${title}</span></span>`)
+			.on("mousedown", (evt) => {
+				if (evt.which === 1) {
+					this.setActiveTab(ix);
+				} else if (evt.which === 2) {
+					this.doCloseTab(ix);
+				}
+			})
+			.on("contextmenu", (evt) => {
+				if ($btnSelTab.hasClass("content-tab-can-rename")) {
+					const nuTitle = prompt("Rename tab to:");
+					if (nuTitle && nuTitle.trim()) {
+						this.setTabTitle(ix, nuTitle);
+					}
+					evt.stopPropagation();
+					evt.preventDefault();
+				}
+			});
+		const $btnCloseTab = $(`<span class="glyphicon glyphicon-remove content-tab-remove"/>`)
+			.on("mousedown", (evt) => {
+				if (evt.button === 0) {
+					evt.stopPropagation();
+					if (!this.board.getConfirmTabClose() || (this.board.getConfirmTabClose() && confirm(`Are you sure you want to close tab "${this.tabDatas[ix].title}"?`))) this.doCloseTab(ix);
+				}
+			}).appendTo($btnSelTab);
+		return $btnSelTab;
+	}
+
+	setTabTitle (ix, nuTitle) {
+		const tabData = this.tabDatas[ix];
+
+		tabData.$tabButton.find(`.content-tab-title`).text(nuTitle).attr("title", nuTitle);
+		this.$pnlTitle.text(nuTitle);
+		const x = this.tabDatas[ix];
+		x.title = nuTitle;
+		x.tabRenamed = true;
+		if (this.tabIndex === ix) {
+			this.title = nuTitle;
+			this.tabRenamed = true;
+		}
+		this.board.doSaveStateDebounced();
+	}
+
+	set$Tab (ix, type, contentMeta, $content, title, tabCanRename, tabRenamed) {
+		if (ix === null) ix = 0;
+		if (ix < 0) {
+			const ixPos = Math.abs(ix + 1);
+			const td = this.tabDatas[ixPos];
+			if (td) {
+				td.isDeleted = true;
+				if (td.$tabButton) td.$tabButton.detach();
+			}
+		} else {
+			const $btnOld = (this.tabDatas[ix] || {}).$tabButton; // preserve tab button
+			this.tabDatas[ix] = {
+				type: type,
+				contentMeta: contentMeta,
+				$content: $content,
+				title: title,
+				tabCanRename: !!tabCanRename,
+				tabRenamed: !!tabRenamed
+			};
+			if ($btnOld) this.tabDatas[ix].$tabButton = $btnOld;
+
+			const doAdd$BtnSelTab = (ix, title) => {
+				const $btnSelTab = this._get$BtnSelTab(ix, title);
+				this.$pnlTabs.children().last().before($btnSelTab);
+				return $btnSelTab;
+			};
+
+			if (!this.tabDatas[ix].$tabButton) this.tabDatas[ix].$tabButton = doAdd$BtnSelTab(ix, title);
+			else this.tabDatas[ix].$tabButton.find(`.content-tab-title`).text(title).attr("title", title);
+
+			this.tabDatas[ix].$tabButton.toggleClass("content-tab-can-rename", tabCanRename);
+		}
+
+		this.setActiveTab(ix);
+		return ix;
+	}
+
+	setActiveTab (ix) {
+		if (ix < 0) {
+			const handleNoTabs = () => {
+				this.isTabs = false;
+				this.tabIndex = 0;
+				this.tabCanRename = false;
+				this.tabRenamed = false;
+				this.set$Content(PANEL_TYP_EMPTY, null, null, null, false);
+			};
+
+			if (this.isTabs) {
+				const prevTabIx = this.tabDatas.findIndex(it => !it.isDeleted);
+				if (~prevTabIx) {
+					this.setActiveTab(prevTabIx);
+				} else handleNoTabs();
+			} else handleNoTabs();
+		} else {
+			this.tabIndex = ix;
+			const tabData = this.tabDatas[ix];
+			this.set$Content(tabData.type, tabData.contentMeta, tabData.$content, tabData.title, tabData.tabCanRename, tabData.tabRenamed);
+		}
+		this.board.doSaveStateDebounced();
+	}
+
+	get$ContentWrapper () {
+		return this.$pnlWrpContent;
+	}
+
+	get$Content () {
+		return this.$content
+	}
+
+	exile () {
+		if (Panel.isNonExilableType(this.type)) this.destroy();
+		else {
+			if (this.$pnl) this.$pnl.detach();
+			this.board.exilePanel(this.id);
+		}
+	}
+
+	destroy () {
+		// do cleanup
+		if (this.type === PANEL_TYP_ROLLBOX) Renderer.dice.unbindDmScreenPanel();
+		if (this.$content && this.$content.find(`.dm__data-anchor`).data("onDestroy")) this.$content.find(`.dm__data-anchor`).data("onDestroy")();
+
+		if (this.$pnl) this.$pnl.remove();
+		this.board.destroyPanel(this.id);
+	}
+
+	addHoverClass () {
+		this.$pnl.addClass("faux-hover");
+	}
+
+	removeHoverClass () {
+		this.$pnl.removeClass("faux-hover");
+	}
+
+	getSaveableState () {
+		const out = {
+			x: this.x,
+			y: this.y,
+			w: this.width,
+			h: this.height,
+			t: this.type
+		};
+
+		function getSaveableContent (type, contentMeta, $content, tabRenamed, tabTitle) {
+			const toSaveTitle = tabRenamed ? tabTitle : undefined;
+			switch (type) {
+				case PANEL_TYP_EMPTY:
+					return null;
+
+				case PANEL_TYP_ROLLBOX:
+					return {
+						t: type,
+						r: toSaveTitle
+					};
+				case PANEL_TYP_STATS:
+					return {
+						t: type,
+						r: toSaveTitle,
+						c: {
+							p: contentMeta.p,
+							s: contentMeta.s,
+							u: contentMeta.u
+						}
+					};
+				case PANEL_TYP_CREATURE_SCALED_CR:
+					return {
+						t: type,
+						r: toSaveTitle,
+						c: {
+							p: contentMeta.p,
+							s: contentMeta.s,
+							u: contentMeta.u,
+							cr: contentMeta.cr
+						}
+					};
+				case PANEL_TYP_RULES:
+					return {
+						t: type,
+						r: toSaveTitle,
+						c: {
+							b: contentMeta.b,
+							c: contentMeta.c,
+							h: contentMeta.h
+						}
+					};
+				case PANEL_TYP_ADVENTURES:
+					return {
+						t: type,
+						r: toSaveTitle,
+						c: {
+							a: contentMeta.a,
+							c: contentMeta.c
+						}
+					};
+				case PANEL_TYP_BOOKS:
+					return {
+						t: type,
+						r: toSaveTitle,
+						c: {
+							b: contentMeta.b,
+							c: contentMeta.c
+						}
+					};
+				case PANEL_TYP_TEXTBOX:
+					return {
+						t: type,
+						r: toSaveTitle,
+						s: {
+							x: $content ? $content.find(`textarea`).val() : ""
+						}
+					};
+				case PANEL_TYP_INITIATIVE_TRACKER: {
+					return {
+						t: type,
+						r: toSaveTitle,
+						s: $content.find(`.dm-init`).data("getState")()
+					};
+				}
+				case PANEL_TYP_INITIATIVE_TRACKER_PLAYER: {
+					return {
+						t: type,
+						r: toSaveTitle,
+						s: {}
+					};
+				}
+				case PANEL_TYP_COUNTER: {
+					return {
+						t: type,
+						r: toSaveTitle,
+						s: $content.find(`.dm-cnt__root`).data("getState")()
+					};
+				}
+				case PANEL_TYP_UNIT_CONVERTER: {
+					return {
+						t: type,
+						r: toSaveTitle,
+						s: $content.find(`.dm-unitconv`).data("getState")()
+					};
+				}
+				case PANEL_TYP_MONEY_CONVERTER: {
+					return {
+						t: type,
+						r: toSaveTitle,
+						s: $content.find(`.dm_money`).data("getState")()
+					};
+				}
+				case PANEL_TYP_TIME_TRACKER: {
+					return {
+						t: type,
+						r: toSaveTitle,
+						s: $content.find(`.dm-time__root`).data("getState")()
+					};
+				}
+				case PANEL_TYP_TUBE:
+				case PANEL_TYP_TWITCH:
+				case PANEL_TYP_TWITCH_CHAT:
+				case PANEL_TYP_GENERIC_EMBED:
+				case PANEL_TYP_IMAGE:
+					return {
+						t: type,
+						r: toSaveTitle,
+						c: {
+							u: contentMeta.u
+						}
+					};
+				default:
+					throw new Error(`Unhandled panel type ${this.type}`);
+			}
+		}
+
+		const toSave = getSaveableContent(this.type, this.contentMeta, this.$content);
+		if (toSave) Object.assign(out, toSave);
+
+		if (this.isTabs) {
+			out.a = this.tabDatas.filter(it => !it.isDeleted).map(td => getSaveableContent(td.type, td.contentMeta, td.$content, td.tabRenamed, td.title));
+			// offset saved tabindex by number of deleted tabs that come before
+			let delCount = 0;
+			for (let i = 0; i < this.tabIndex; ++i) {
+				if (this.tabDatas[i].isDeleted) delCount++;
+			}
+			out.b = this.tabIndex - delCount;
+		}
+
+		return out;
+	}
+}
+
+class JoystickMenu {
+	constructor (board, panel) {
+		this.board = board;
+		this.panel = panel;
+
+		this.$ctrls = null;
+	}
+
+	initialise () {
+		this.panel.$pnl.on("mouseover", () => this.panel.board.setHoveringPanel(this.panel));
+		this.panel.$pnl.on("mouseout", () => this.panel.board.setHoveringPanel(null));
+
+		const $ctrlMove = $(`<div class="panel-control panel-control-middle"/>`);
+		const $ctrlXpandUp = $(`<div class="panel-control panel-control-top"/>`);
+		const $ctrlXpandRight = $(`<div class="panel-control panel-control-right"/>`);
+		const $ctrlXpandDown = $(`<div class="panel-control panel-control-bottom"/>`);
+		const $ctrlXpandLeft = $(`<div class="panel-control panel-control-left"/>`);
+		const $ctrlBg = $(`<div class="panel-control panel-control-bg"/>`);
+		this.$ctrls = [$ctrlMove, $ctrlXpandUp, $ctrlXpandRight, $ctrlXpandDown, $ctrlXpandLeft, $ctrlBg];
+
+		$ctrlMove.on("mousedown touchstart", (e) => {
+			e.preventDefault();
+			this.panel.board.setVisiblyHoveringPanel(true);
+			const $body = $(`body`);
+			MiscUtil.clearSelection();
+			$body.css("userSelect", "none");
+			if (!this.panel.$content) return;
+
+			const w = this.panel.$content.width();
+			const h = this.panel.$content.height();
+			const childH = this.panel.$content.children().first().height();
+			const offset = this.panel.$content.offset();
+			const offsetX = EventUtil.getClientX(e) - offset.left;
+			const offsetY = h > childH ? childH / 2 : (EventUtil.getClientY(e) - offset.top);
+
+			$body.append(this.panel.$content);
+			$(`.panel-control`).hide();
+			Panel.setMovingCss(e, this.panel.$content, w, h, offsetX, offsetY, 52);
+			this.panel.board.get$creen().addClass("board-content-hovering");
+			this.panel.$content.addClass("panel-content-hovering");
+			this.panel.$pnl.addClass("pnl-content-tab-bar-hidden");
+			// clean any lingering hidden scrollbar
+			this.panel.$pnl.removeClass("panel-mode-move");
+
+			Panel.bindMovingEvents(this.panel.board, this.panel.$content, offsetX, offsetY);
+
+			$(document).on(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`, () => {
+				this.panel.board.setVisiblyHoveringPanel(false);
+				$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`);
+
+				$body.css("userSelect", "");
+				Panel.unsetMovingCss(this.panel.$content);
+				this.panel.board.get$creen().removeClass("board-content-hovering");
+				this.panel.$content.removeClass("panel-content-hovering");
+				this.panel.$pnl.removeClass("pnl-content-tab-bar-hidden");
+				// clean any lingering hidden scrollbar
+				this.panel.$pnl.removeClass("panel-mode-move");
+
+				if (!this.panel.board.hoveringPanel || this.panel.id === this.panel.board.hoveringPanel.id) {
+					this.panel.$pnlWrpContent.append(this.panel.$content);
+					this.panel.doShowJoystick();
+				} else {
+					const her = this.panel.board.hoveringPanel;
+					// TODO this should ideally peel off the selected tab and transfer it to the target pane, instead of swapping
+					const herMeta = her.getPanelMeta();
+					const $herContent = her.get$Content();
+					her.setFromPeer(this.panel.getPanelMeta(), this.panel.get$Content());
+					this.panel.setFromPeer(herMeta, $herContent);
+
+					this.panel.doHideJoystick();
+					her.doShowJoystick();
+				}
+				MiscUtil.clearSelection();
+				this.board.doSaveStateDebounced();
+				this.board.reactor.fire("panelResize");
+			});
+		});
+
+		function xpandHandler (dir, evt) {
+			evt.preventDefault();
+			MiscUtil.clearSelection();
+			$(`body`).css("userSelect", "none");
+			$(`.panel-control`).hide();
+			$(`.panel-control-bar`).addClass("xpander-active");
+			$ctrlBg.show();
+			this.panel.$pnl.addClass("panel-mode-move");
+			switch (dir) {
+				case UP:
+					$ctrlXpandUp.show();
+					break;
+				case RIGHT:
+					$ctrlXpandRight.show();
+					break;
+				case DOWN:
+					$ctrlXpandDown.show();
+					break;
+				case LEFT:
+					$ctrlXpandLeft.show();
+					break;
+			}
+			const axis = dir === RIGHT || dir === LEFT ? AX_X : AX_Y;
+
+			const pos = this.panel.$pnl.offset();
+			const dim = this.panel.board.getPanelDimensions();
+			let numPanelsCovered = 0;
+			const initGCS = this.panel.$pnl.css("gridColumnStart");
+			const initGCE = this.panel.$pnl.css("gridColumnEnd");
+			const initGRS = this.panel.$pnl.css("gridRowStart");
+			const initGRE = this.panel.$pnl.css("gridRowEnd");
+
+			this.panel.$pnl.css({
+				zIndex: 52,
+				boxShadow: "0 0 12px 0 #000000a0"
+			});
+
+			$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`);
+
+			$(document).on(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`, (e) => {
+				let delta = 0;
+				const px = axis === AX_X ? dim.pxWidth : dim.pxHeight;
+				switch (dir) {
+					case UP:
+						delta = pos.top - EventUtil.getClientY(e);
+						break;
+					case RIGHT:
+						delta = EventUtil.getClientX(e) - (pos.left + (px * this.panel.width));
+						break;
+					case DOWN:
+						delta = EventUtil.getClientY(e) - (pos.top + (px * this.panel.height));
+						break;
+					case LEFT:
+						delta = pos.left - EventUtil.getClientX(e);
+						break;
+				}
+
+				numPanelsCovered = Math.ceil((delta / px));
+				const canShrink = axis === AX_X ? this.panel.width - 1 : this.panel.height - 1;
+				if (canShrink + numPanelsCovered <= 0) numPanelsCovered = -canShrink;
+
+				switch (dir) {
+					case UP:
+						if (numPanelsCovered > this.panel.y) numPanelsCovered = this.panel.y;
+						this.panel.$pnl.css({
+							gridRowStart: String(this.panel.y + (1 - numPanelsCovered)),
+							gridRowEnd: String(this.panel.y + 1 + this.panel.height)
+						});
+						break;
+					case RIGHT:
+						if (numPanelsCovered > (this.panel.board.width - this.panel.width) - this.panel.x) numPanelsCovered = (this.panel.board.width - this.panel.width) - this.panel.x;
+						this.panel.$pnl.css({
+							gridColumnEnd: String(this.panel.x + 1 + this.panel.width + numPanelsCovered)
+						});
+						break;
+					case DOWN:
+						if (numPanelsCovered > (this.panel.board.height - this.panel.height) - this.panel.y) numPanelsCovered = (this.panel.board.height - this.panel.height) - this.panel.y;
+						this.panel.$pnl.css({
+							gridRowEnd: String(this.panel.y + 1 + this.panel.height + numPanelsCovered)
+						});
+						break;
+					case LEFT:
+						if (numPanelsCovered > this.panel.x) numPanelsCovered = this.panel.x;
+						this.panel.$pnl.css({
+							gridColumnStart: String(this.panel.x + (1 - numPanelsCovered)),
+							gridColumnEnd: String(this.panel.x + 1 + this.panel.width)
+						});
+						break;
+				}
+			});
+
+			$(document).on(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`, () => {
+				$(document).off(`mousemove${EVT_NAMESPACE} touchmove${EVT_NAMESPACE}`).off(`mouseup${EVT_NAMESPACE} touchend${EVT_NAMESPACE}`);
+
+				$(`body`).css("userSelect", "");
+				this.panel.$pnl.find(`.panel-control`).show();
+				$(`.panel-control-bar`).removeClass("xpander-active");
+				this.panel.$pnl.css({
+					zIndex: "",
+					boxShadow: "",
+					gridColumnStart: initGCS,
+					gridColumnEnd: initGCE,
+					gridRowStart: initGRS,
+					gridRowEnd: initGRE
+				});
+
+				const canShrink = axis === AX_X ? this.panel.width - 1 : this.panel.height - 1;
+				if (canShrink + numPanelsCovered <= 0) numPanelsCovered = -canShrink;
+				if (numPanelsCovered === 0) return;
+				const isGrowth = !!~Math.sign(numPanelsCovered);
+				if (isGrowth) {
+					switch (dir) {
+						case UP:
+							if (!this.panel.hasSpaceTop()) return;
+							break;
+						case RIGHT:
+							if (!this.panel.hasSpaceRight()) return;
+							break;
+						case DOWN:
+							if (!this.panel.hasSpaceBottom()) return;
+							break;
+						case LEFT:
+							if (!this.panel.hasSpaceLeft()) return;
+							break;
+					}
+				}
+
+				for (let i = Math.abs(numPanelsCovered); i > 0; --i) {
+					switch (dir) {
+						case UP: {
+							if (isGrowth) {
+								const tNeighbours = this.panel.getTopNeighbours();
+								if (tNeighbours.filter(it => it.getEmpty()).length === tNeighbours.length) {
+									tNeighbours.forEach(p => p.destroy());
+								} else {
+									tNeighbours.forEach(p => {
+										if (p.canBumpTop()) p.doBumpTop();
+										else if (p.canShrinkBottom()) p.doShrinkBottom();
+										else p.exile();
+									});
+								}
+							}
+							this.panel.height += Math.sign(numPanelsCovered);
+							this.panel.y -= Math.sign(numPanelsCovered);
+							break;
+						}
+						case RIGHT: {
+							if (isGrowth) {
+								const rNeighbours = this.panel.getRightNeighbours();
+								if (rNeighbours.filter(it => it.getEmpty()).length === rNeighbours.length) {
+									rNeighbours.forEach(p => p.destroy());
+								} else {
+									rNeighbours.forEach(p => {
+										if (p.canBumpRight()) p.doBumpRight();
+										else if (p.canShrinkLeft()) p.doShrinkLeft();
+										else p.exile();
+									});
+								}
+							}
+							this.panel.width += Math.sign(numPanelsCovered);
+							break;
+						}
+						case DOWN: {
+							if (isGrowth) {
+								const bNeighbours = this.panel.getBottomNeighbours();
+								if (bNeighbours.filter(it => it.getEmpty()).length === bNeighbours.length) {
+									bNeighbours.forEach(p => p.destroy());
+								} else {
+									bNeighbours.forEach(p => {
+										if (p.canBumpBottom()) p.doBumpBottom();
+										else if (p.canShrinkTop()) p.doShrinkTop();
+										else p.exile();
+									});
+								}
+							}
+							this.panel.height += Math.sign(numPanelsCovered);
+							break;
+						}
+						case LEFT: {
+							if (isGrowth) {
+								const lNeighbours = this.panel.getLeftNeighbours();
+								if (lNeighbours.filter(it => it.getEmpty()).length === lNeighbours.length) {
+									lNeighbours.forEach(p => p.destroy());
+								} else {
+									lNeighbours.forEach(p => {
+										if (p.canBumpLeft()) p.doBumpLeft();
+										else if (p.canShrinkRight()) p.doShrinkRight();
+										else p.exile();
+									});
+								}
+							}
+							this.panel.width += Math.sign(numPanelsCovered);
+							this.panel.x -= Math.sign(numPanelsCovered);
+							break;
+						}
+					}
+				}
+				this.panel.setDirty(true);
+				this.panel.render();
+				this.panel.board.doCheckFillSpaces();
+				MiscUtil.clearSelection();
+				this.board.reactor.fire("panelResize");
+			});
+		}
+
+		$ctrlXpandUp.on("mousedown touchstart", xpandHandler.bind(this, UP));
+		$ctrlXpandRight.on("mousedown touchstart", xpandHandler.bind(this, RIGHT));
+		$ctrlXpandLeft.on("mousedown touchstart", xpandHandler.bind(this, LEFT));
+		$ctrlXpandDown.on("mousedown touchstart", xpandHandler.bind(this, DOWN));
+
+		this.panel.$pnl.append($ctrlBg).append($ctrlMove).append($ctrlXpandUp).append($ctrlXpandRight).append($ctrlXpandDown).append($ctrlXpandLeft);
+	}
+
+	doShow () {
+		this.$ctrls.forEach($c => $c.show());
+	}
+
+	doHide () {
+		this.$ctrls.forEach($c => $c.hide());
+	}
+}
+
+class AddMenu {
+	constructor () {
+		this.tabs = [];
+
+		this.$menu = null;
+		this.$tabView = null;
+		this.activeTab = null;
+		this.pnl = null; // panel where an add button was last clicked
+	}
+
+	addTab (tab) {
+		tab.setMenu(this);
+		this.tabs.push(tab);
+		return this;
+	}
+
+	get$Menu () {
+		return this.$menu;
+	}
+
+	setActiveTab (tab) {
+		this.$menu.find(`.panel-addmenu-tab-head`).attr(`active`, false);
+		if (this.activeTab) this.activeTab.get$Tab().detach();
+		this.activeTab = tab;
+		this.$tabView.append(tab.get$Tab());
+		tab.$head.attr(`active`, true);
+
+		if (tab.doTransitionActive) tab.doTransitionActive();
+	}
+
+	hasActiveTab () {
+		return this.activeTab !== null;
+	}
+
+	getActiveTab () {
+		return this.activeTab;
+	}
+
+	setFirstTabActive () {
+		const t = this.tabs[0];
+		this.setActiveTab(t);
+	}
+
+	render () {
+		if (!this.$menu) {
+			const $menu = $(`<div class="ui-modal__overlay">`);
+			this.$menu = $menu;
+			const $menuInner = $(`<div class="ui-modal__inner dropdown-menu">`).appendTo($menu);
+			const $tabBar = $(`<div class="panel-addmenu-bar"/>`).appendTo($menuInner);
+			this.$tabView = $(`<div class="panel-addmenu-view"/>`).appendTo($menuInner);
+
+			this.tabs.forEach(t => {
+				t.render();
+				const $head = $(`<button class="btn btn-default panel-addmenu-tab-head">${t.label}</button>`).appendTo($tabBar);
+				const $body = $(`<div class="panel-addmenu-tab-body"/>`).appendTo($tabBar);
+				$body.append(t.get$Tab);
+				t.$head = $head;
+				t.$body = $body;
+				$head.on("click", () => this.setActiveTab(t));
+			});
+
+			$menu.on("click", () => {
+				this.doClose();
+
+				// undo entering "tabbed mode" if we close without adding a tab
+				if (this.pnl.isTabs && this.pnl.tabDatas.filter(it => !it.isDeleted).length === 1) {
+					this.pnl.isTabs = false;
+					this.pnl.doRenderTabs();
+				}
+			});
+			$menuInner.on("click", (e) => e.stopPropagation());
+		}
+	}
+
+	setPanel (pnl) {
+		this.pnl = pnl;
+	}
+
+	doClose () {
+		this.$menu.detach();
+	}
+
+	doOpen () {
+		$(`body`).append(this.$menu);
+	}
+}
+
+class AddMenuTab {
+	constructor (label) {
+		this.label = label;
+
+		this.$tab = null;
+		this.menu = null;
+	}
+
+	get$Tab () {
+		return this.$tab;
+	}
+
+	genTabId (type) {
+		return `tab-${type}-${this.label.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "_")}`;
+	}
+
+	setMenu (menu) {
+		this.menu = menu;
+	}
+}
+
+class AddMenuVideoTab extends AddMenuTab {
+	constructor () {
+		super("Embed");
+		this.tabId = this.genTabId("tube");
+	}
+
+	render () {
+		if (!this.$tab) {
+			const $tab = $(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`);
+
+			const $wrpYT = $(`<div class="ui-modal__row"/>`).appendTo($tab);
+			const $iptUrlYT = $(`<input class="form-control" placeholder="Paste YouTube URL">`)
+				.on("keydown", (e) => {
+					if (e.which === 13) $btnAddYT.click();
+				})
+				.appendTo($wrpYT);
+			const $btnAddYT = $(`<button class="btn btn-primary">Embed</button>`).appendTo($wrpYT);
+			$btnAddYT.on("click", () => {
+				let url = $iptUrlYT.val().trim();
+				const m = /https?:\/\/(www\.)?youtube\.com\/watch\?v=(.*?)(&.*$|$)/.exec(url);
+				if (url && m) {
+					url = `https://www.youtube.com/embed/${m[2]}`;
+					this.menu.pnl.doPopulate_YouTube(url);
+					this.menu.doClose();
+					$iptUrlYT.val("");
+				} else {
+					JqueryUtil.doToast({
+						content: `Please enter a URL of the form: "https://www.youtube.com/watch?v=XXXXXXX"`,
+						type: "danger"
+					});
+				}
+			});
+
+			const $wrpTwitch = $(`<div class="ui-modal__row"/>`).appendTo($tab);
+			const $iptUrlTwitch = $(`<input class="form-control" placeholder="Paste Twitch URL">`)
+				.on("keydown", (e) => {
+					if (e.which === 13) $btnAddTwitch.click();
+				})
+				.appendTo($wrpTwitch);
+			const $btnAddTwitch = $(`<button class="btn btn-primary">Embed</button>`).appendTo($wrpTwitch);
+			const $btnAddTwitchChat = $(`<button class="btn btn-primary">Embed Chat</button>`).appendTo($wrpTwitch);
+			const getTwitchM = (url) => {
+				return /https?:\/\/(www\.)?twitch\.tv\/(.*?)(\?.*$|$)/.exec(url);
+			};
+			$btnAddTwitch.on("click", () => {
+				let url = $iptUrlTwitch.val().trim();
+				const m = getTwitchM(url);
+				if (url && m) {
+					url = `http://player.twitch.tv/?channel=${m[2]}`;
+					this.menu.pnl.doPopulate_Twitch(url);
+					this.menu.doClose();
+					$iptUrlTwitch.val("");
+				} else {
+					JqueryUtil.doToast({
+						content: `Please enter a URL of the form: "https://www.twitch.tv/XXXXXX"`,
+						type: "danger"
+					});
+				}
+			});
+
+			$btnAddTwitchChat.on("click", () => {
+				let url = $iptUrlTwitch.val().trim();
+				const m = getTwitchM(url);
+				if (url && m) {
+					url = `http://www.twitch.tv/embed/${m[2]}/chat`;
+					this.menu.pnl.doPopulate_TwitchChat(url);
+					this.menu.doClose();
+					$iptUrlTwitch.val("");
+				} else {
+					JqueryUtil.doToast({
+						content: `Please enter a URL of the form: "https://www.twitch.tv/XXXXXX"`,
+						type: "danger"
+					});
+				}
+			});
+
+			const $wrpGeneric = $(`<div class="ui-modal__row"/>`).appendTo($tab);
+			const $iptUrlGeneric = $(`<input class="form-control" placeholder="Paste any URL">`)
+				.on("keydown", (e) => {
+					if (e.which === 13) $iptUrlGeneric.click();
+				})
+				.appendTo($wrpGeneric);
+			const $btnAddGeneric = $(`<button class="btn btn-primary">Embed</button>`).appendTo($wrpGeneric);
+			$btnAddGeneric.on("click", () => {
+				let url = $iptUrlGeneric.val().trim();
+				if (url) {
+					this.menu.pnl.doPopulate_GenericEmbed(url);
+					this.menu.doClose();
+				} else {
+					JqueryUtil.doToast({
+						content: `Please enter a URL!`,
+						type: "danger"
+					});
+				}
+			});
+
+			this.$tab = $tab;
+		}
+	}
+}
+
+class AddMenuImageTab extends AddMenuTab {
+	constructor () {
+		super("Image");
+		this.tabId = this.genTabId("image");
+	}
+
+	render () {
+		if (!this.$tab) {
+			const $tab = $(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`);
+
+			const $wrpImgur = $(`<div class="ui-modal__row"/>`).appendTo($tab);
+			$(`<span>Imgur (Anonymous Upload) <i class="text-muted">(accepts <a href="https://help.imgur.com/hc/articles/115000083326" target="_blank" rel="noopener">imgur-friendly formats</a>)</i></span>`).appendTo($wrpImgur);
+			const $iptFile = $(`<input type="file" class="hidden">`).on("change", (evt) => {
+				const input = evt.target;
+				const reader = new FileReader();
+				reader.onload = () => {
+					const base64 = reader.result.replace(/.*,/, "");
+					$.ajax({
+						url: "https://api.imgur.com/3/image",
+						type: "POST",
+						data: {
+							image: base64,
+							type: "base64"
+						},
+						headers: {
+							Accept: "application/json",
+							Authorization: `Client-ID ${IMGUR_CLIENT_ID}`
+						},
+						success: (data) => {
+							this.menu.pnl.doPopulate_Image(data.data.link, ix);
+						},
+						error: (error) => {
+							try {
+								JqueryUtil.doToast({
+									content: `Failed to upload: ${JSON.parse(error.responseText).data.error}`,
+									type: "danger"
+								});
+							} catch (e) {
+								JqueryUtil.doToast({
+									content: "Failed to upload: Unknown error",
+									type: "danger"
+								});
+								setTimeout(() => { throw e });
+							}
+							this.menu.pnl.doPopulate_Empty(ix);
+						}
+					});
+				};
+				reader.onerror = () => {
+					this.menu.pnl.doPopulate_Empty(ix);
+				};
+				reader.fileName = input.files[0].name;
+				reader.readAsDataURL(input.files[0]);
+				const ix = this.menu.pnl.doPopulate_Loading("Uploading"); // will be null if not in tabbed mode
+				this.menu.doClose();
+			}).appendTo($tab);
+			const $btnAdd = $(`<button class="btn btn-primary">Upload</button>`).appendTo($wrpImgur);
+			$btnAdd.on("click", () => {
+				$iptFile.click();
+			});
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
+
+			const $wrpUtl = $(`<div class="ui-modal__row"/>`).appendTo($tab);
+			const $iptUrl = $(`<input class="form-control" placeholder="Paste image URL">`)
+				.on("keydown", (e) => {
+					if (e.which === 13) $btnAddUrl.click();
+				})
+				.appendTo($wrpUtl);
+			const $btnAddUrl = $(`<button class="btn btn-primary">Add</button>`).appendTo($wrpUtl);
+			$btnAddUrl.on("click", () => {
+				let url = $iptUrl.val().trim();
+				if (url) {
+					this.menu.pnl.doPopulate_Image(url);
+					this.menu.doClose();
+				} else {
+					JqueryUtil.doToast({
+						content: `Please enter a URL!`,
+						type: "danger"
+					});
+				}
+			});
+
+			this.$tab = $tab;
+		}
+	}
+}
+
+class AddMenuSpecialTab extends AddMenuTab {
+	constructor () {
+		super("Special");
+		this.tabId = this.genTabId("special");
+	}
+
+	render () {
+		if (!this.$tab) {
+			const $tab = $(`<div class="ui-search__wrp-output underline-tabs" id="${this.tabId}"/>`);
+
+			const $wrpRoller = $(`<div class="ui-modal__row"><span>Dice Roller <i class="text-muted">(pins the existing dice roller to a panel)</i></span></div>`).appendTo($tab);
+			const $btnRoller = $(`<button class="btn btn-primary">Pin</button>`).appendTo($wrpRoller);
+			$btnRoller.on("click", () => {
+				Renderer.dice.bindDmScreenPanel(this.menu.pnl);
+				this.menu.doClose();
+			});
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
+
+			const $wrpTracker = $(`<div class="ui-modal__row"><span>Initiative Tracker</span></div>`).appendTo($tab);
+			const $btnTracker = $(`<button class="btn btn-primary">Add</button>`).appendTo($wrpTracker);
+			$btnTracker.on("click", () => {
+				this.menu.pnl.doPopulate_InitiativeTracker();
+				this.menu.doClose();
+			});
+
+			const $btnPlayertracker = $(`<button class="btn btn-primary">Add</button>`)
+				.click(() => {
+					this.menu.pnl.doPopulate_InitiativeTrackerPlayer();
+					this.menu.doClose();
+				});
+
+			$$`<div class="ui-modal__row">
 			<span>Initiative Tracker Player View</span>
-			${o}
-			</div>`.appendTo(e),$(`<hr class="ui-modal__row-sep"/>`).appendTo(e);const i=$(`<div class="ui-modal__row"><span>Basic Text Box <i class="text-muted">(for a feature-rich editor, embed a Google Doc or similar)</i></span></div>`).appendTo(e),l=$(`<button class="btn btn-primary">Add</button>`).appendTo(i);l.on("click",()=>{this.menu.pnl.doPopulate_TextBox(),this.menu.doClose()}),$(`<hr class="ui-modal__row-sep"/>`).appendTo(e);const r=$(`<div class="ui-modal__row"><span>Imperial-Metric Unit Converter</span></div>`).appendTo(e),s=$(`<button class="btn btn-primary">Add</button>`).appendTo(r);s.on("click",()=>{this.menu.pnl.doPopulate_UnitConverter(),this.menu.doClose()});const p=$(`<div class="ui-modal__row"><span>Coin Converter</span></div>`).appendTo(e),u=$(`<button class="btn btn-primary">Add</button>`).appendTo(p);u.on("click",()=>{this.menu.pnl.doPopulate_MoneyConverter(),this.menu.doClose()}),this.$tab=e}}}class AddMenuListTab extends AddMenuTab{constructor(e,n){super(e),this.tabId=this.genTabId("list"),this.content=n,this.list=null}render(){if(!this.$tab){const e=$(`<div class="ui-search__wrp-output" id="${this.tabId}"/>`),n=$(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Search list...">`).appendTo(e),t=$(`<div class="list panel-tab-list"/>`).appendTo(e);let a="";this.content.forEach(e=>{a+=`<div class="panel-tab-list-item"><span class="name">${e.n}</span></div>`}),t.append(a),this.$tab=e,this.$srch=n,this.$list=t}}doTransitionActive(){setTimeout(()=>{tab.list||(tab.list=new List(tab.tabId,{valueNames:["name"],listClass:"panel-tab-list"}),ListUtil.bindEscapeKey(tab.list,this.$srch))},1)}}class AddMenuSearchTab extends AddMenuTab{static _getTitle(e){switch(e){case"content":return"Content";case"rules":return"Rules";case"adventures":return"Adventures";case"books":return"Books";default:throw new Error(`Unhandled search tab subtype: "${e}"`);}}constructor(e,n="content"){super(AddMenuSearchTab._getTitle(n)),this.tabId=this.genTabId(n),this.indexes=e,this.cat="ALL",this.subType=n,this.$selCat=null,this.$srch=null,this.$results=null,this.showMsgIpt=null,this.doSearch=null}_getSearchOptions(){switch(this.subType){case"content":return{fields:{n:{boost:5,expand:!0},s:{expand:!0}},bool:"AND",expand:!0};case"rules":return{fields:{h:{boost:5,expand:!0},s:{expand:!0}},bool:"AND",expand:!0};case"adventures":case"books":return{fields:{c:{boost:5,expand:!0},n:{expand:!0}},bool:"AND",expand:!0};default:throw new Error(`Unhandled search tab subtype: "${this.subType}"`);}}_get$Row(e){switch(this.subType){case"content":return $(`
+			${$btnPlayertracker}
+			</div>`.appendTo($tab);
+
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
+
+			const $wrpText = $(`<div class="ui-modal__row"><span>Basic Text Box <i class="text-muted">(for a feature-rich editor, embed a Google Doc or similar)</i></span></div>`).appendTo($tab);
+			const $btnText = $(`<button class="btn btn-primary">Add</button>`).appendTo($wrpText);
+			$btnText.on("click", () => {
+				this.menu.pnl.doPopulate_TextBox();
+				this.menu.doClose();
+			});
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
+
+			const $wrpUnitConverter = $(`<div class="ui-modal__row"><span>Imperial-Metric Unit Converter</span></div>`).appendTo($tab);
+			const $btnUnitConverter = $(`<button class="btn btn-primary">Add</button>`).appendTo($wrpUnitConverter);
+			$btnUnitConverter.on("click", () => {
+				this.menu.pnl.doPopulate_UnitConverter();
+				this.menu.doClose();
+			});
+
+			const $wrpMoneyConverter = $(`<div class="ui-modal__row"><span>Coin Converter</span></div>`).appendTo($tab);
+			const $btnMoneyConverter = $(`<button class="btn btn-primary">Add</button>`).appendTo($wrpMoneyConverter);
+			$btnMoneyConverter.on("click", () => {
+				this.menu.pnl.doPopulate_MoneyConverter();
+				this.menu.doClose();
+			});
+
+			const $wrpCounter = $(`<div class="ui-modal__row"><span>Counter</span></div>`).appendTo($tab);
+			const $btnCounter = $(`<button class="btn btn-primary">Add</button>`).appendTo($wrpCounter);
+			$btnCounter.on("click", () => {
+				this.menu.pnl.doPopulate_Counter();
+				this.menu.doClose();
+			});
+
+			$(`<hr class="ui-modal__row-sep"/>`).appendTo($tab);
+
+			const $wrpTimeTracker = $(`<div class="ui-modal__row"><span>In-Game Clock/Calendar</span></div>`).appendTo($tab);
+			const $btnTimeTracker = $(`<button class="btn btn-primary">Add</button>`).appendTo($wrpTimeTracker);
+			$btnTimeTracker.on("click", () => {
+				this.menu.pnl.doPopulate_TimeTracker();
+				this.menu.doClose();
+			});
+
+			this.$tab = $tab;
+		}
+	}
+}
+
+class AddMenuListTab extends AddMenuTab {
+	constructor (label, content) {
+		super(label);
+		this.tabId = this.genTabId("list");
+		this.content = content;
+
+		this.list = null;
+	}
+
+	render () {
+		if (!this.$tab) {
+			const $tab = $(`<div class="ui-search__wrp-output" id="${this.tabId}"/>`);
+			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Search list...">`).appendTo($tab);
+			const $list = $(`<div class="list panel-tab-list"/>`).appendTo($tab);
+			let temp = "";
+			this.content.forEach(d => {
+				temp += `<div class="panel-tab-list-item"><span class="name">${d.n}</span></div>`;
+			});
+			$list.append(temp);
+			this.$tab = $tab;
+			this.$srch = $srch;
+			this.$list = $list;
+		}
+	}
+
+	doTransitionActive () {
+		setTimeout(() => {
+			if (!tab.list) {
+				tab.list = new List(tab.tabId, {
+					valueNames: ["name"],
+					listClass: "panel-tab-list"
+				});
+				ListUtil.bindEscapeKey(tab.list, this.$srch);
+			}
+		}, 1);
+	}
+}
+
+class AddMenuSearchTab extends AddMenuTab {
+	static _getTitle (subType) {
+		switch (subType) {
+			case "content": return "Content";
+			case "rules": return "Rules";
+			case "adventures": return "Adventures";
+			case "books": return "Books";
+			default: throw new Error(`Unhandled search tab subtype: "${subType}"`);
+		}
+	}
+
+	constructor (indexes, subType = "content") {
+		super(AddMenuSearchTab._getTitle(subType));
+		this.tabId = this.genTabId(subType);
+		this.indexes = indexes;
+		this.cat = "ALL";
+		this.subType = subType;
+
+		this.$selCat = null;
+		this.$srch = null;
+		this.$results = null;
+		this.showMsgIpt = null;
+		this.doSearch = null;
+	}
+
+	_getSearchOptions () {
+		switch (this.subType) {
+			case "content": return {
+				fields: {
+					n: {boost: 5, expand: true},
+					s: {expand: true}
+				},
+				bool: "AND",
+				expand: true
+			};
+			case "rules": return {
+				fields: {
+					h: {boost: 5, expand: true},
+					s: {expand: true}
+				},
+				bool: "AND",
+				expand: true
+			};
+			case "adventures":
+			case "books": return {
+				fields: {
+					c: {boost: 5, expand: true},
+					n: {expand: true}
+				},
+				bool: "AND",
+				expand: true
+			};
+			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
+		}
+	}
+
+	_get$Row (r) {
+		switch (this.subType) {
+			case "content": return $(`
 				<div class="ui-search__row">
-					<span>${e.doc.n}</span>
-					<span>${e.doc.s?`<i title="${Parser.sourceJsonToFull(e.doc.s)}">${Parser.sourceJsonToAbv(e.doc.s)}${e.doc.p?` p${e.doc.p}`:""}</i>`:""}</span>
+					<span>${r.doc.n}</span>
+					<span>${r.doc.s ? `<i title="${Parser.sourceJsonToFull(r.doc.s)}">${Parser.sourceJsonToAbv(r.doc.s)}${r.doc.p ? ` p${r.doc.p}` : ""}</i>` : ""}</span>
 				</div>
-			`);case"rules":return $(`
+			`);
+			case "rules": return $(`
 				<div class="ui-search__row">
-					<span>${e.doc.h}</span>
-					<span><i>${e.doc.n}, ${e.doc.s}</i></span>
+					<span>${r.doc.h}</span>
+					<span><i>${r.doc.n}, ${r.doc.s}</i></span>
 				</div>
-			`);case"adventures":case"books":return $(`
+			`);
+			case "adventures":
+			case "books": return $(`
 				<div class="ui-search__row">
-					<span>${e.doc.c}</span>
-					<span><i>${e.doc.n}${e.doc.o?`, ${e.doc.o}`:""}</i></span>
+					<span>${r.doc.c}</span>
+					<span><i>${r.doc.n}${r.doc.o ? `, ${r.doc.o}` : ""}</i></span>
 				</div>
-			`);default:throw new Error(`Unhandled search tab subtype: "${this.subType}"`);}}_getAllTitle(){switch(this.subType){case"content":return"All Categories";case"rules":return"All Categories";case"adventures":return"All Adventures";case"books":return"All Books";default:throw new Error(`Unhandled search tab subtype: "${this.subType}"`);}}_getCatOptionText(e){switch(this.subType){case"content":return e;case"rules":return e;case"adventures":case"books":return Parser.sourceJsonToFull(e);default:throw new Error(`Unhandled search tab subtype: "${this.subType}"`);}}render(){const e={doClickFirst:!1,isWait:!1};this.showMsgIpt=()=>{e.isWait=!0,this.$results.empty().append(UiUtil.getSearchEnter())};const n=()=>{this.$results.empty().append(UiUtil.getSearchLoading())},t=()=>{e.isWait=!0,this.$results.empty().append(UiUtil.getSearchEnter())};if(this.doSearch=()=>{const n=this.$srch.val().trim(),d=this._getSearchOptions(),a=this.indexes[this.cat],o=a.search(n,d),i=o.length?o.length:a.documentStore.length,l=o.length?o:Object.values(a.documentStore.docs).slice(0,UiUtil.SEARCH_RESULTS_CAP).map(e=>({doc:e}));if(this.$results.empty(),l.length){const n=e=>{switch(this.subType){case"content":{const n=UrlUtil.categoryToPage(e.doc.c),t=e.doc.s,d=e.doc.u;this.menu.pnl.doPopulate_Stats(n,t,d);break}case"rules":{this.menu.pnl.doPopulate_Rules(e.doc.b,e.doc.p,e.doc.h);break}case"adventures":{this.menu.pnl.doPopulate_Adventures(e.doc.a,e.doc.p);break}case"books":{this.menu.pnl.doPopulate_Books(e.doc.b,e.doc.p);break}default:throw new Error(`Unhandled search tab subtype: "${this.subType}"`);}this.menu.doClose()};if(e.doClickFirst)return n(l[0]),void(e.doClickFirst=!1);const t=l.slice(0,UiUtil.SEARCH_RESULTS_CAP);if(t.forEach(e=>{this._get$Row(e).on("click",()=>n(e)).appendTo(this.$results)}),i>UiUtil.SEARCH_RESULTS_CAP){const e=i-UiUtil.SEARCH_RESULTS_CAP;this.$results.append(`<div class="ui-search__row ui-search__row--readonly">...${e} more result${1==e?" was":"s were"} hidden. Refine your search!</div>`)}}else n.trim()?t():this.showMsgIpt()},!this.$tab){const t=$(`<div class="ui-search__wrp-output" id="${this.tabId}"/>`),d=$(`<div class="ui-search__wrp-controls ui-search__wrp-controls--in-tabs"/>`).appendTo(t),a=$(`
+			`);
+			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
+		}
+	}
+
+	_getAllTitle () {
+		switch (this.subType) {
+			case "content": return "All Categories";
+			case "rules": return "All Categories";
+			case "adventures": return "All Adventures";
+			case "books": return "All Books";
+			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
+		}
+	}
+
+	_getCatOptionText (it) {
+		switch (this.subType) {
+			case "content": return it;
+			case "rules": return it;
+			case "adventures":
+			case "books": return Parser.sourceJsonToFull(it);
+			default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
+		}
+	}
+
+	render () {
+		const flags = {
+			doClickFirst: false,
+			isWait: false
+		};
+
+		this.showMsgIpt = () => {
+			flags.isWait = true;
+			this.$results.empty().append(UiUtil.getSearchEnter());
+		};
+
+		const showMsgDots = () => {
+			this.$results.empty().append(UiUtil.getSearchLoading());
+		};
+
+		const showNoResults = () => {
+			flags.isWait = true;
+			this.$results.empty().append(UiUtil.getSearchEnter());
+		};
+
+		this.doSearch = () => {
+			const srch = this.$srch.val().trim();
+
+			const searchOptions = this._getSearchOptions();
+			const index = this.indexes[this.cat];
+			const results = index.search(srch, searchOptions);
+			const resultCount = results.length ? results.length : index.documentStore.length;
+			const toProcess = results.length ? results : Object.values(index.documentStore.docs).slice(0, UiUtil.SEARCH_RESULTS_CAP).map(it => ({doc: it}));
+
+			this.$results.empty();
+			if (toProcess.length) {
+				const handleClick = (r) => {
+					switch (this.subType) {
+						case "content": {
+							const page = UrlUtil.categoryToPage(r.doc.c);
+							const source = r.doc.s;
+							const hash = r.doc.u;
+
+							this.menu.pnl.doPopulate_Stats(page, source, hash);
+							break;
+						}
+						case "rules": {
+							this.menu.pnl.doPopulate_Rules(r.doc.b, r.doc.p, r.doc.h);
+							break;
+						}
+						case "adventures": {
+							this.menu.pnl.doPopulate_Adventures(r.doc.a, r.doc.p);
+							break;
+						}
+						case "books": {
+							this.menu.pnl.doPopulate_Books(r.doc.b, r.doc.p);
+							break;
+						}
+						default: throw new Error(`Unhandled search tab subtype: "${this.subType}"`);
+					}
+					this.menu.doClose();
+				};
+
+				if (flags.doClickFirst) {
+					handleClick(toProcess[0]);
+					flags.doClickFirst = false;
+					return;
+				}
+
+				const res = toProcess.slice(0, UiUtil.SEARCH_RESULTS_CAP);
+
+				res.forEach(r => {
+					this._get$Row(r).on("click", () => handleClick(r)).appendTo(this.$results);
+				});
+
+				if (resultCount > UiUtil.SEARCH_RESULTS_CAP) {
+					const diff = resultCount - UiUtil.SEARCH_RESULTS_CAP;
+					this.$results.append(`<div class="ui-search__row ui-search__row--readonly">...${diff} more result${diff === 1 ? " was" : "s were"} hidden. Refine your search!</div>`);
+				}
+			} else {
+				if (!srch.trim()) this.showMsgIpt();
+				else showNoResults();
+			}
+		};
+
+		if (!this.$tab) {
+			const $tab = $(`<div class="ui-search__wrp-output" id="${this.tabId}"/>`);
+			const $wrpCtrls = $(`<div class="ui-search__wrp-controls ui-search__wrp-controls--in-tabs"/>`).appendTo($tab);
+
+			const $selCat = $(`
 				<select class="form-control ui-search__sel-category">
 					<option value="ALL">${this._getAllTitle()}</option>
 				</select>
-			`).appendTo(d).toggle(1!==Object.keys(this.indexes).length);Object.keys(this.indexes).sort().filter(e=>"ALL"!==e).forEach(e=>{a.append(`<option value="${e}">${this._getCatOptionText(e)}</option>`)}),a.on("change",()=>{this.cat=a.val(),this.doSearch()});const o=$(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Search...">`).appendTo(d),i=$(`<div class="ui-search__wrp-results"/>`).appendTo(t);UiUtil.bindAutoSearch(o,{flags:e,search:this.doSearch,showWait:n}),this.$tab=t,this.$selCat=a,this.$srch=o,this.$results=i,this.doSearch()}}doTransitionActive(){this.$srch.val("").focus(),this.doSearch&&this.doSearch()}}class RuleLoader{static async pFill(e){const n=RuleLoader.cache;if(n[e])return n[e];const t=await DataUtil.loadJSON(`data/generated/${e}.json`);Object.keys(t.data).forEach(e=>{const d=t.data[e];n[e]||(n[e]={}),d.forEach((t,d)=>{n[e][d]||(n[e][d]={}),t.entries.forEach(t=>{n[e][d][t.name]=t})})})}static getFromCache(e,n,t){return RuleLoader.cache[e][n][t]}}RuleLoader.cache={};class AdventureOrBookLoader{constructor(e){this._type=e,this._cache={}}_getJsonPath(e){switch(this._type){case"adventure":return`data/adventure/adventure-${e.toLowerCase()}.json`;case"book":return`data/book/book-${e.toLowerCase()}.json`;default:throw new Error(`Unknown loader type "${this._type}"`);}}async pFill(e){if(this._cache[e])return this._cache[e];const n=await DataUtil.loadJSON(this._getJsonPath(e));this._cache[e]={},n.data.forEach((n,t)=>this._cache[e][t]=n)}getFromCache(e,n){return this._cache[e][n]}}class AdventureLoader extends AdventureOrBookLoader{constructor(){super("adventure")}}class BookLoader extends AdventureOrBookLoader{constructor(){super("book")}}const adventureLoader=new AdventureLoader,bookLoader=new BookLoader;class NoteBox{static make$Notebox(e,n){var t=Math.max;const d=$(`<textarea class="panel-content-textarea" placeholder="Supports embedding (CTRL-click the text to activate the embed):\n • Clickable rollers,  [[1d20+2]]\n • Tags (as per the Demo page), {@creature goblin}">${n||""}</textarea>`).on("keydown",()=>{e.doSaveStateDebounced()}).on("mousedown",e=>{e.ctrlKey&&setTimeout(()=>{var n=Math.min;const a=d[0];if(a.selectionStart===a.selectionEnd){const d=(e=0)=>{setTimeout(()=>a.setSelectionRange(e,e),1)},o=a.selectionStart,r=a.value,s=r.length;let l=[],p=[],u=0,f=0,h=null,b=null,g=null,m=null;outer:for(let e=0;e<s;++e){const d=r[e];switch(d){case"[":u=n(u+1,2),2===u&&(l=[]),g=e;break;case"]":if(u=t(u-1,0),0===u&&e>o)break outer;break;case"{":"@"===r[e+1]&&(f=1,p=[],m=e);break;case"}":if(f=0,e>o)break outer;break;default:2===u&&l.push(d),f&&p.push(d);}e===o&&(h=u,b=f)}if(2===h&&0===u){const e=l.join("");/^([1-9]\d*)?d([1-9]\d*)(\s?[+-]\s?\d+)?$/i.exec(e)&&(Renderer.dice.roll2(e.replace(`[[`,"").replace(`]]`,""),{user:!1,name:"DM Screen"}),d(g))}else if(1===b&&0===f){const n=p.join(""),t=n.split(" ")[0].replace(/^@/,"");if(Renderer.HOVER_TAG_TO_PAGE[t]){const t=Renderer.get().render(`{${n}`);e.type="mouseover",e.shiftKey=!0,$(t).trigger(e)}d(m)}}},1)});return d}}class UnitConverter{static make$Converter(board,state){const units=[new UnitConverterUnit("Inches","2.54","Centimetres","0.394"),new UnitConverterUnit("Feet","0.305","Metres","3.28"),new UnitConverterUnit("Miles","1.61","Kilometres","0.620"),new UnitConverterUnit("Pounds","0.454","Kilograms","2.20"),new UnitConverterUnit("Gallons","3.79","Litres","0.264")];let ixConv=state.c||0,dirConv=state.d||0;const $wrpConverter=$(`<div class="dm-unitconv split-column"/>`),$tblConvert=$(`<table class="table-striped"/>`).appendTo($wrpConverter),$tbodyConvert=$(`<tbody/>`).appendTo($tblConvert);units.forEach((e,n)=>{const t=$(`<tr class="row clickable"/>`).appendTo($tbodyConvert),d=()=>{ixConv=n,dirConv=0,updateDisplay()},a=()=>{ixConv=n,dirConv=1,updateDisplay()};$(`<td class="col-3">${e.n1}</td>`).click(d).appendTo(t),$(`<td class="col-3 code">×${e.x1.padStart(5)}</td>`).click(d).appendTo(t),$(`<td class="col-3">${e.n2}</td>`).click(a).appendTo(t),$(`<td class="col-3 code">×${e.x2.padStart(5)}</td>`).click(a).appendTo(t)});const $wrpIpt=$(`<div class="split wrp-ipt"/>`).appendTo($wrpConverter),$wrpLeft=$(`<div class="split-column wrp-ipt-inner"/>`).appendTo($wrpIpt),$lblLeft=$(`<span class="bold"/>`).appendTo($wrpLeft),$iptLeft=$(`<textarea class="ipt form-control">${state.i||""}</textarea>`).appendTo($wrpLeft),$btnSwitch=$(`<button class="btn btn-primary btn-switch">⇆</button>`).click(()=>{dirConv=+!dirConv,updateDisplay()}).appendTo($wrpIpt),$wrpRight=$(`<div class="split-column wrp-ipt-inner"/>`).appendTo($wrpIpt),$lblRight=$(`<span class="bold"/>`).appendTo($wrpRight),$iptRight=$(`<textarea class="ipt form-control" disabled style="background: #0000"/>`).appendTo($wrpRight),updateDisplay=()=>{const e=units[ixConv],[n,t]=0===dirConv?[e.n1,e.n2]:[e.n2,e.n1];$lblLeft.text(n),$lblRight.text(t),handleInput()},mMaths=/^([0-9.+\-*/ ()e])*$/,handleInput=()=>{const showInvalid=()=>{$iptLeft.addClass(`ipt-invalid`),$iptRight.val("")},showValid=()=>{$iptLeft.removeClass(`ipt-invalid`)},val=($iptLeft.val()||"").trim();if(!val)showValid(),$iptRight.val("");else if(mMaths.exec(val)){showValid();const it=units[ixConv],mL=[+it.x1,+it.x2][dirConv];try{const total=eval(val);$iptRight.val(total*mL)}catch(n){$iptLeft.addClass(`ipt-invalid`),$iptRight.val("")}}else showInvalid();board.doSaveStateDebounced()};return UiUtil.bindTypingEnd($iptLeft,handleInput),updateDisplay(),$wrpConverter.data("getState",()=>({c:ixConv,d:dirConv,i:$iptLeft.val()})),$wrpConverter}}class UnitConverterUnit{constructor(e,n,t,d){this.n1=e,this.x1=n,this.n2=t,this.x2=d}}class Sundial{static make$Sundail(e,n){const t=$(`<div class="dm_sundial"/>`);return t.data("getState",()=>({})),t}}class AdventureOrBookView{constructor(e,n,t,d,a){this._type=e,this._panel=n,this._loader=t,this._tabIx=d,this._state=a,this._$wrpContent=null,this._$wrpContentOuter=null,this._$titlePrev=null,this._$titleNext=null}$getEle(){this._$titlePrev=$(`<div class="dm-book__controls-title text-right"/>`),this._$titleNext=$(`<div class="dm-book__controls-title"/>`);const e=$(`<button class="btn btn-xs btn-default mr-2" title="Previous Chapter"><span class="glyphicon glyphicon-chevron-left"/></button>`).click(()=>this._handleButtonClick(-1)),n=$(`<button class="btn btn-xs btn-default" title="Next Chapter"><span class="glyphicon glyphicon-chevron-right"/></button>`).click(()=>this._handleButtonClick(1));this._$wrpContent=$(`<div class="full-height"/>`),this._$wrpContentOuter=$$`<div class="full-height dm-book__wrp-content">
-			<table class="stats stats-book stats-book--hover"><tr class="text"><td colspan="6">${this._$wrpContent}</td></tr></table>
-		</div>`;const t=$$`<div class="flex-col full-height">
+			`).appendTo($wrpCtrls).toggle(Object.keys(this.indexes).length !== 1);
+			Object.keys(this.indexes).sort().filter(it => it !== "ALL").forEach(it => {
+				$selCat.append(`<option value="${it}">${this._getCatOptionText(it)}</option>`)
+			});
+			$selCat.on("change", () => {
+				this.cat = $selCat.val();
+				this.doSearch();
+			});
+
+			const $srch = $(`<input class="ui-search__ipt-search search form-control" autocomplete="off" placeholder="Search...">`).appendTo($wrpCtrls);
+			const $results = $(`<div class="ui-search__wrp-results"/>`).appendTo($tab);
+
+			UiUtil.bindAutoSearch($srch, {
+				flags: flags,
+				search: this.doSearch,
+				showWait: showMsgDots
+			});
+
+			this.$tab = $tab;
+			this.$selCat = $selCat;
+			this.$srch = $srch;
+			this.$results = $results;
+
+			this.doSearch();
+		}
+	}
+
+	doTransitionActive () {
+		this.$srch.val("").focus();
+		if (this.doSearch) this.doSearch();
+	}
+}
+
+class RuleLoader {
+	static async pFill (book) {
+		const $$$ = RuleLoader.cache;
+		if ($$$[book]) return $$$[book];
+
+		const data = await DataUtil.loadJSON(`data/generated/${book}.json`);
+		Object.keys(data.data).forEach(b => {
+			const ref = data.data[b];
+			if (!$$$[b]) $$$[b] = {};
+			ref.forEach((c, i) => {
+				if (!$$$[b][i]) $$$[b][i] = {};
+				c.entries.forEach(s => {
+					$$$[b][i][s.name] = s;
+				});
+			});
+		});
+	}
+
+	static getFromCache (book, chapter, header) {
+		return RuleLoader.cache[book][chapter][header];
+	}
+}
+RuleLoader.cache = {};
+
+class AdventureOrBookLoader {
+	constructor (type) {
+		this._type = type;
+		this._cache = {};
+	}
+
+	_getJsonPath (bookOrAdventure) {
+		switch (this._type) {
+			case "adventure": return `data/adventure/adventure-${bookOrAdventure.toLowerCase()}.json`
+			case "book": return `data/book/book-${bookOrAdventure.toLowerCase()}.json`
+			default: throw new Error(`Unknown loader type "${this._type}"`)
+		}
+	}
+
+	async pFill (bookOrAdventure) {
+		if (this._cache[bookOrAdventure]) return this._cache[bookOrAdventure];
+
+		const data = await DataUtil.loadJSON(this._getJsonPath(bookOrAdventure));
+		this._cache[bookOrAdventure] = {};
+		data.data.forEach((chap, i) => this._cache[bookOrAdventure][i] = chap);
+	}
+
+	getFromCache (adventure, chapter) {
+		return this._cache[adventure][chapter];
+	}
+}
+
+class AdventureLoader extends AdventureOrBookLoader { constructor () { super("adventure"); } }
+class BookLoader extends AdventureOrBookLoader { constructor () { super("book"); } }
+
+const adventureLoader = new AdventureLoader();
+const bookLoader = new BookLoader();
+
+class NoteBox {
+	static make$Notebox (board, content) {
+		const $iptText = $(`<textarea class="panel-content-textarea" placeholder="Supports embedding (CTRL-click the text to activate the embed):\n • Clickable rollers,  [[1d20+2]]\n • Tags (as per the Demo page), {@creature goblin}">${content || ""}</textarea>`)
+			.on("keydown", () => {
+				board.doSaveStateDebounced();
+			})
+			.on("mousedown", (evt) => {
+				if (evt.ctrlKey) {
+					setTimeout(() => {
+						const txt = $iptText[0];
+						if (txt.selectionStart === txt.selectionEnd) {
+							const doDesel = (pos = 0) => {
+								setTimeout(() => txt.setSelectionRange(pos, pos), 1);
+							};
+
+							const pos = txt.selectionStart;
+							const text = txt.value;
+							const l = text.length;
+							let beltStack = [];
+							let braceStack = [];
+							let belts = 0;
+							let braces = 0;
+							let beltsAtPos = null;
+							let bracesAtPos = null;
+							let lastBeltPos = null;
+							let lastBracePos = null;
+							outer:
+							for (let i = 0; i < l; ++i) {
+								const c = text[i];
+								switch (c) {
+									case "[":
+										belts = Math.min(belts + 1, 2);
+										if (belts === 2) beltStack = [];
+										lastBeltPos = i;
+										break;
+									case "]":
+										belts = Math.max(belts - 1, 0);
+										if (belts === 0 && i > pos) break outer;
+										break;
+									case "{":
+										if (text[i + 1] === "@") {
+											braces = 1;
+											braceStack = [];
+											lastBracePos = i;
+										}
+										break;
+									case "}":
+										braces = 0;
+										if (i > pos) break outer;
+										break;
+									default:
+										if (belts === 2) {
+											beltStack.push(c);
+										}
+										if (braces) {
+											braceStack.push(c);
+										}
+								}
+								if (i === pos) {
+									beltsAtPos = belts;
+									bracesAtPos = braces;
+								}
+							}
+
+							if (beltsAtPos === 2 && belts === 0) {
+								const str = beltStack.join("");
+								if (/^([1-9]\d*)?d([1-9]\d*)(\s?[+-]\s?\d+)?$/i.exec(str)) {
+									Renderer.dice.roll2(str.replace(`[[`, "").replace(`]]`, ""), {
+										user: false,
+										name: "DM Screen"
+									});
+									doDesel(lastBeltPos);
+								}
+							} else if (bracesAtPos === 1 && braces === 0) {
+								const str = braceStack.join("");
+								const tag = str.split(" ")[0].replace(/^@/, "");
+								if (Renderer.HOVER_TAG_TO_PAGE[tag]) {
+									const r = Renderer.get().render(`{${str}`);
+									evt.type = "mouseover";
+									evt.shiftKey = true;
+									$(r).trigger(evt);
+								}
+								doDesel(lastBracePos);
+							}
+						}
+					}, 1); // defer slightly to allow text to be selected
+				}
+			});
+
+		return $iptText;
+	}
+}
+
+class UnitConverter {
+	static make$Converter (board, state) {
+		const units = [
+			new UnitConverterUnit("Inches", "2.54", "Centimetres", "0.394"),
+			new UnitConverterUnit("Feet", "0.305", "Metres", "3.28"),
+			new UnitConverterUnit("Miles", "1.61", "Kilometres", "0.620"),
+			new UnitConverterUnit("Pounds", "0.454", "Kilograms", "2.20"),
+			new UnitConverterUnit("Gallons", "3.79", "Litres", "0.264")
+		];
+
+		let ixConv = state.c || 0;
+		let dirConv = state.d || 0;
+
+		const $wrpConverter = $(`<div class="dm-unitconv dm__panel-bg split-column"/>`);
+
+		const $tblConvert = $(`<table class="table-striped"/>`).appendTo($wrpConverter);
+		const $tbodyConvert = $(`<tbody/>`).appendTo($tblConvert);
+		units.forEach((u, i) => {
+			const $tr = $(`<tr class="row clickable"/>`).appendTo($tbodyConvert);
+			const clickL = () => {
+				ixConv = i;
+				dirConv = 0;
+				updateDisplay();
+			};
+			const clickR = () => {
+				ixConv = i;
+				dirConv = 1;
+				updateDisplay();
+			};
+			$(`<td class="col-3">${u.n1}</td>`).click(clickL).appendTo($tr);
+			$(`<td class="col-3 code">×${u.x1.padStart(5)}</td>`).click(clickL).appendTo($tr);
+			$(`<td class="col-3">${u.n2}</td>`).click(clickR).appendTo($tr);
+			$(`<td class="col-3 code">×${u.x2.padStart(5)}</td>`).click(clickR).appendTo($tr);
+		});
+
+		const $wrpIpt = $(`<div class="split wrp-ipt"/>`).appendTo($wrpConverter);
+
+		const $wrpLeft = $(`<div class="split-column wrp-ipt-inner"/>`).appendTo($wrpIpt);
+		const $lblLeft = $(`<span class="bold"/>`).appendTo($wrpLeft);
+		const $iptLeft = $(`<textarea class="ipt form-control">${state.i || ""}</textarea>`).appendTo($wrpLeft);
+
+		const $btnSwitch = $(`<button class="btn btn-primary btn-switch">⇆</button>`).click(() => {
+			dirConv = Number(!dirConv);
+			updateDisplay();
+		}).appendTo($wrpIpt);
+
+		const $wrpRight = $(`<div class="split-column wrp-ipt-inner"/>`).appendTo($wrpIpt);
+		const $lblRight = $(`<span class="bold"/>`).appendTo($wrpRight);
+		const $iptRight = $(`<textarea class="ipt form-control" disabled style="background: #0000"/>`).appendTo($wrpRight);
+
+		const updateDisplay = () => {
+			const it = units[ixConv];
+			const [lblL, lblR] = dirConv === 0 ? [it.n1, it.n2] : [it.n2, it.n1];
+			$lblLeft.text(lblL);
+			$lblRight.text(lblR);
+			handleInput();
+		};
+
+		const mMaths = /^([0-9.+\-*/ ()e])*$/;
+		const handleInput = () => {
+			const showInvalid = () => {
+				$iptLeft.addClass(`ipt-invalid`);
+				$iptRight.val("");
+			};
+			const showValid = () => {
+				$iptLeft.removeClass(`ipt-invalid`);
+			};
+
+			const val = ($iptLeft.val() || "").trim();
+			if (!val) {
+				showValid();
+				$iptRight.val("");
+			} else if (mMaths.exec(val)) {
+				showValid();
+				const it = units[ixConv];
+				const mL = [Number(it.x1), Number(it.x2)][dirConv];
+				try {
+					/* eslint-disable */
+					const total = eval(val);
+					/* eslint-enable */
+					$iptRight.val(total * mL);
+				} catch (e) {
+					$iptLeft.addClass(`ipt-invalid`);
+					$iptRight.val("")
+				}
+			} else showInvalid();
+			board.doSaveStateDebounced();
+		};
+
+		UiUtil.bindTypingEnd($iptLeft, handleInput);
+
+		updateDisplay();
+
+		$wrpConverter.data("getState", () => {
+			return {
+				c: ixConv,
+				d: dirConv,
+				i: $iptLeft.val()
+			};
+		});
+
+		return $wrpConverter;
+	}
+}
+
+class UnitConverterUnit {
+	constructor (n1, x1, n2, x2) {
+		this.n1 = n1;
+		this.x1 = x1;
+		this.n2 = n2;
+		this.x2 = x2;
+	}
+}
+
+class AdventureOrBookView {
+	constructor (type, panel, loader, tabIx, state) {
+		this._type = type;
+		this._panel = panel;
+		this._loader = loader;
+		this._tabIx = tabIx;
+		this._state = state;
+
+		this._$wrpContent = null;
+		this._$wrpContentOuter = null;
+		this._$titlePrev = null;
+		this._$titleNext = null;
+	}
+
+	$getEle () {
+		this._$titlePrev = $(`<div class="dm-book__controls-title text-right"/>`);
+		this._$titleNext = $(`<div class="dm-book__controls-title"/>`);
+
+		const $btnPrev = $(`<button class="btn btn-xs btn-default mr-2" title="Previous Chapter"><span class="glyphicon glyphicon-chevron-left"/></button>`)
+			.click(() => this._handleButtonClick(-1));
+		const $btnNext = $(`<button class="btn btn-xs btn-default" title="Next Chapter"><span class="glyphicon glyphicon-chevron-right"/></button>`)
+			.click(() => this._handleButtonClick(1));
+
+		this._$wrpContent = $(`<div class="h-100"/>`);
+		this._$wrpContentOuter = $$`<div class="h-100 dm-book__wrp-content">
+			<table class="stats stats--book stats--book-hover"><tr class="text"><td colspan="6">${this._$wrpContent}</td></tr></table>
+		</div>`;
+
+		const $wrp = $$`<div class="flex-col h-100">
 		${this._$wrpContentOuter}
-		<div class="flex no-shrink dm-book__wrp-controls">${this._$titlePrev}${e}${n}${this._$titleNext}</div>
-		</div>`;return this._render(),t.data("getState",()=>this._state),t}_handleButtonClick(e){this._state.chapter+=e;const n=this._render();n?(this._$wrpContentOuter.scrollTop(0),this._panel.setTabTitle(this._tabIx,n.name)):this._state.chapter-=e}_getData(e){return this._loader.getFromCache(this._state[this._type],e)}_render(){const e=this._getData(this._state.chapter);if(!e)return null;this._$wrpContent.empty().append(Renderer.get().setFirstSection(!0).render(e));const n=this._getData(this._state.chapter-1),t=this._getData(this._state.chapter+1);return this._$titlePrev.text(n?n.name:"").attr("title",n?n.name:""),this._$titleNext.text(t?t.name:"").attr("title",t?t.name:""),e}}window.addEventListener("load",()=>{ExcludeUtil.pInitialise(),window.DM_SCREEN=new Board,Renderer.hover.bindDmScreen(window.DM_SCREEN),window.DM_SCREEN.pInitialise().catch(e=>{JqueryUtil.doToast({content:`Failed to load with error "${e.message}". See the console for details.`,type:"danger"}),$(`.dm-screen-loading`).find(`.initial-message`).text("Failed!"),setTimeout(()=>{throw e})})});
+		<div class="flex no-shrink dm-book__wrp-controls">${this._$titlePrev}${$btnPrev}${$btnNext}${this._$titleNext}</div>
+		</div>`;
+
+		// assumes the data has already been loaded/cached
+		this._render();
+
+		$wrp.data("getState", () => this._state);
+
+		return $wrp;
+	}
+
+	_handleButtonClick (direction) {
+		this._state.chapter += direction;
+		const renderedData = this._render();
+		if (!renderedData) this._state.chapter -= direction;
+		else {
+			this._$wrpContentOuter.scrollTop(0);
+			this._panel.setTabTitle(this._tabIx, renderedData.name);
+		}
+	}
+
+	_getData (chapter) {
+		return this._loader.getFromCache(this._state[this._type], chapter);
+	}
+
+	_render () {
+		const data = this._getData(this._state.chapter);
+		if (!data) return null;
+		this._$wrpContent.empty().append(Renderer.get().setFirstSection(true).render(data));
+
+		const dataPrev = this._getData(this._state.chapter - 1);
+		const dataNext = this._getData(this._state.chapter + 1);
+		this._$titlePrev.text(dataPrev ? dataPrev.name : "").attr("title", dataPrev ? dataPrev.name : "");
+		this._$titleNext.text(dataNext ? dataNext.name : "").attr("title", dataNext ? dataNext.name : "");
+
+		return data;
+	}
+}
+
+window.addEventListener("load", () => {
+	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
+	// expose it for dbg purposes
+	window.DM_SCREEN = new Board();
+	Renderer.hover.bindDmScreen(window.DM_SCREEN);
+	window.DM_SCREEN.pInitialise()
+		.catch(err => {
+			JqueryUtil.doToast({content: `Failed to load with error "${err.message}". ${MiscUtil.STR_SEE_CONSOLE}`, type: "danger"});
+			$(`.dm-screen-loading`).find(`.initial-message`).text("Failed!");
+			setTimeout(() => { throw err; });
+		});
+});

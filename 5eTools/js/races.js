@@ -1,36 +1,414 @@
-"use strict";const JSON_URL="data/races.json",ASI_SORT_POS={Strength:0,Dexterity:1,Constitution:2,Intelligence:3,Wisdom:4,Charisma:5};window.onload=async function(){await ExcludeUtil.pInitialise(),SortUtil.initHandleFilterButtonClicks(),DataUtil.loadJSON(JSON_URL).then(onJsonLoad)};function getAbilityObjs(a){function b(a,b){return{asi:a,amount:b,_toIdString:()=>`${a}${b}`}}const c=new CollectionUtil.ObjectSet;return a.choose&&a.choose.forEach(a=>{if(a.predefined)a.predefined.forEach(a=>{Object.keys(a).forEach(d=>c.add(b(d,a[d])))});else if(a.weighted)a.weighted.from.forEach(d=>{a.weighted.weights.forEach(a=>{c.add(b(d,a))})});else{const d=a.amount||1;a.from.forEach(a=>c.add(b(a,d)))}}),Object.keys(a).filter(a=>"choose"!==a).forEach(d=>c.add(b(d,a[d]))),Array.from(c.values())}function mapAbilityObjToFull(a){return`${Parser.attAbvToFull(a.asi)} ${0>a.amount?"":"+"}${a.amount}`}function getSpeedRating(a){return 30<a?"Walk (Fast)":30>a?"Walk (Slow)":"Walk"}function filterAscSortSize(c,d){function e(a){return"M"===a?0:"S"===a?-1:"V"===a?1:void 0}return c=c.item,d=d.item,SortUtil.ascSort(e(c),e(d))}function filterAscSortAsi(c,d){if(c=c.item,d=d.item,"Player Choice"===c)return-1;if(c.startsWith("Any")&&d.startsWith("Any")){const a=c.replace("Any","").replace("Increase","").trim(),b=d.replace("Any","").replace("Increase","").trim();return ASI_SORT_POS[a]-ASI_SORT_POS[b]}if(c.startsWith("Any"))return-1;if(d.startsWith("Any"))return 1;else{const[a,b]=c.split(" "),[e,f]=d.split(" ");return ASI_SORT_POS[a]-ASI_SORT_POS[e]||+f-+b}}let list;const sourceFilter=getSourceFilter(),sizeFilter=new Filter({header:"Size",displayFn:Parser.sizeAbvToFull,itemSortFn:filterAscSortSize}),asiFilter=new Filter({header:"Ability Bonus (Including Subrace)",items:["Player Choice","Any Strength Increase","Any Dexterity Increase","Any Constitution Increase","Any Intelligence Increase","Any Wisdom Increase","Any Charisma Increase","Strength +2","Strength +1","Dexterity +2","Dexterity +1","Constitution +2","Constitution +1","Intelligence +2","Intelligence +1","Wisdom +2","Wisdom +1","Charisma +2","Charisma +1"],itemSortFn:filterAscSortAsi}),baseRaceFilter=new Filter({header:"Base Race"});let filterBox;async function onJsonLoad(a){list=ListUtil.search({valueNames:["name","ability","size","source","clean-name","uniqueid"],listClass:"races"});const b=Renderer.race.mergeSubraces(a.race),c=new Filter({header:"Speed",items:["Climb","Fly","Swim","Walk (Fast)","Walk","Walk (Slow)"]}),d=new Filter({header:"Traits",items:["Amphibious","Armor Proficiency","Damage Resistance","Darkvision","Superior Darkvision","Dragonmark","Improved Resting","Monstrous Race","Natural Armor","NPC Race","Powerful Build","Skill Proficiency","Spellcasting","Tool Proficiency","Unarmed Strike","Uncommon Race","Weapon Proficiency"],deselFn:a=>"NPC Race"===a}),e=new Filter({header:"Languages",items:["Abyssal","Aquan","Auran","Celestial","Choose","Common","Draconic","Dwarvish","Elvish","Giant","Gnomish","Goblin","Halfling","Infernal","Orc","Other","Primordial","Sylvan","Terran","Undercommon"],umbrellaItems:["Choose"]});filterBox=await pInitFilterBox({filters:[sourceFilter,asiFilter,sizeFilter,c,d,e,baseRaceFilter]});const f=$(`.lst__wrp-search-visible`);list.on("updated",()=>{f.html(`${list.visibleItems.length}/${list.items.length}`)}),$(filterBox).on(FilterBox.EVNT_VALCHANGE,handleFilterChange);ListUtil.initSublist({valueNames:["name","ability","size","id"],listClass:"subraces",getSublistRow:getSublistItem});ListUtil.initGenericPinnable(),addRaces({race:b}),BrewUtil.pAddBrewData().then(handleBrew).then(()=>BrewUtil.bind({list})).then(()=>BrewUtil.pAddLocalBrewData()).catch(BrewUtil.pPurgeBrew).then(async()=>{BrewUtil.makeBrewButton("manage-brew"),BrewUtil.bind({filterBox,sourceFilter}),await ListUtil.pLoadState(),RollerUtil.addListRollButton(),ListUtil.addListShowHide(),History.init(!0),ExcludeUtil.checkShowAllExcluded(raceList,$(`#pagecontent`))})}function handleBrew(a){return addRaces(a),Promise.resolve()}let raceList=[],rcI=0;function addRaces(a){if(!a.race||!a.race.length)return;raceList=raceList.concat(a.race);const b=$("ul.races");let c="";for(;rcI<raceList.length;rcI++){const a=raceList[rcI];if(ExcludeUtil.isExcluded(a.name,"race",a.source))continue;const b=a.ability?Renderer.getAbilityData(a.ability):{asTextShort:"None"};if(a.ability){const b=getAbilityObjs(a.ability);a._fAbility=b.map(b=>mapAbilityObjToFull(b));const c={};b.filter(a=>0<a.amount).forEach(a=>c[a.asi]=!0),Object.keys(c).forEach(b=>a._fAbility.push(`Any ${Parser.attAbvToFull(b)} Increase`)),a.ability.choose&&a._fAbility.push("Player Choice")}else a._fAbility=[];a._fSpeed=a.speed.walk?[a.speed.climb?"Climb":null,a.speed.fly?"Fly":null,a.speed.swim?"Swim":null,getSpeedRating(a.speed.walk)].filter(a=>a):getSpeedRating(a.speed),a._fMisc=[120===a.darkvision?"Superior Darkvision":a.darkvision?"Darkvision":null,a.hasSpellcasting?"Spellcasting":null].filter(a=>a).concat(a.traitTags||[]),a._fSources=ListUtil.getCompleteFilterSources(a),a._slAbility=b.asTextShort;const d=/^(.*?) \((.*?)\)$/.exec(a.name);c+=`<li class="row" ${FLTR_ID}="${rcI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
-				<a id="${rcI}" href="#${UrlUtil.autoEncodeHash(a)}" title="${a.name}">
-					<span class="name col-4 pl-0">${a.name}</span>
-					<span class="ability col-4">${b.asTextShort}</span>
-					<span class="size col-2">${Parser.sizeAbvToFull(a.size)}</span>
-					<span class="source col-2 text-center ${Parser.sourceJsonToColor(a.source)} pr-0" title="${Parser.sourceJsonToFull(a.source)}" ${BrewUtil.sourceJsonToStyle(a.source)}>${Parser.sourceJsonToAbv(a.source)}</span>
-					${d?`<span class="clean-name hidden">${d[2]} ${d[1]}</span>`:""}
-					
-					<span class="uniqueid hidden">${a.uniqueId?a.uniqueId:rcI}</span>
-				</a>
-			</li>`,sourceFilter.addItem(a._fSources),sizeFilter.addItem(a.size),asiFilter.addItem(a._fAbility),baseRaceFilter.addItem(a._baseName)}const d=ListUtil.getSearchTermAndReset(list);b.append(c),list.reIndex(),d&&list.search(d),list.sort("name"),filterBox.render(),handleFilterChange(),ListUtil.setOptions({itemList:raceList,getSublistRow:getSublistItem,primaryLists:[list]}),ListUtil.bindPinButton(),Renderer.hover.bindPopoutButton(raceList),UrlUtil.bindLinkExportButton(filterBox),ListUtil.bindDownloadButton(),ListUtil.bindUploadButton(),Renderer.utils.bindPronounceButtons()}function handleFilterChange(){const a=filterBox.getValues();list.filter(function(b){const c=raceList[$(b.elm).attr(FLTR_ID)];return filterBox.toDisplay(a,c._fSources,c._fAbility,c.size,c._fSpeed,c._fMisc,c.languageTags,c._baseName)}),FilterBox.selectFirstVisible(raceList)}function getSublistItem(a,b){return`
-		<li class="row" ${FLTR_ID}="${b}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
-			<a href="#${UrlUtil.autoEncodeHash(a)}" title="${a.name}">
-				<span class="name col-5 pl-0">${a.name}</span>
-				<span class="ability col-5">${a._slAbility}</span>
-				<span class="size col-2 pr-0">${Parser.sizeAbvToFull(a.size)}</span>
-				<span class="id hidden">${b}</span>
+"use strict";
+
+const ASI_SORT_POS = {
+	Strength: 0,
+	Dexterity: 1,
+	Constitution: 2,
+	Intelligence: 3,
+	Wisdom: 4,
+	Charisma: 5
+};
+
+function getAbilityObjs (abils) {
+	function makeAbilObj (asi, amount) {
+		return {
+			asi: asi,
+			amount: amount,
+			_toIdString: () => {
+				return `${asi}${amount}`
+			}
+		}
+	}
+
+	const out = new CollectionUtil.ObjectSet();
+
+	(abils || []).forEach(abil => {
+		if (abil.choose) {
+			const ch = abil.choose;
+
+			if (ch.weighted) {
+				// add every ability + weight combo
+				ch.weighted.from.forEach(f => {
+					ch.weighted.weights.forEach(w => {
+						out.add(makeAbilObj(f, w));
+					});
+				});
+			} else {
+				const by = ch.amount || 1;
+				ch.from.forEach(asi => out.add(makeAbilObj(asi, by)));
+			}
+		}
+		Object.keys(abil).filter(prop => prop !== "choose").forEach(prop => out.add(makeAbilObj(prop, abil[prop])));
+	});
+
+	return Array.from(out.values());
+}
+
+function mapAbilityObjToFull (abilObj) {
+	return `${Parser.attAbvToFull(abilObj.asi)} ${abilObj.amount < 0 ? "" : "+"}${abilObj.amount}`;
+}
+
+function getSpeedRating (speed) {
+	return speed > 30 ? "Walk (Fast)" : speed < 30 ? "Walk (Slow)" : "Walk";
+}
+
+function filterAscSortSize (a, b) {
+	a = a.item;
+	b = b.item;
+
+	return SortUtil.ascSort(toNum(a), toNum(b));
+
+	function toNum (size) {
+		switch (size) {
+			case "M":
+				return 0;
+			case "S":
+				return -1;
+			case "V":
+				return 1;
+		}
+	}
+}
+
+function filterAscSortAsi (a, b) {
+	a = a.item;
+	b = b.item;
+
+	if (a === "Player Choice") return -1;
+	else if (a.startsWith("Any") && b.startsWith("Any")) {
+		const aAbil = a.replace("Any", "").replace("Increase", "").trim();
+		const bAbil = b.replace("Any", "").replace("Increase", "").trim();
+		return ASI_SORT_POS[aAbil] - ASI_SORT_POS[bAbil];
+	} else if (a.startsWith("Any")) {
+		return -1;
+	} else if (b.startsWith("Any")) {
+		return 1;
+	} else {
+		const [aAbil, aScore] = a.split(" ");
+		const [bAbil, bScore] = b.split(" ");
+		return (ASI_SORT_POS[aAbil] - ASI_SORT_POS[bAbil]) || (Number(bScore) - Number(aScore));
+	}
+}
+
+class RacesPage extends ListPage {
+	static getLanguageProficiencyTags (lProfs) {
+		if (!lProfs) return [];
+
+		const outSet = new Set();
+		lProfs.forEach(lProfGroup => {
+			Object.keys(lProfGroup).filter(k => k !== "choose").forEach(k => outSet.add(k.toTitleCase()));
+			if (lProfGroup.choose) outSet.add("Choose");
+		});
+
+		return [...outSet];
+	}
+
+	constructor () {
+		const sourceFilter = getSourceFilter();
+		const sizeFilter = new Filter({header: "Size", displayFn: Parser.sizeAbvToFull, itemSortFn: filterAscSortSize});
+		const asiFilter = new Filter({
+			header: "Ability Bonus (Including Subrace)",
+			items: [
+				"Player Choice",
+				"Any Strength Increase",
+				"Any Dexterity Increase",
+				"Any Constitution Increase",
+				"Any Intelligence Increase",
+				"Any Wisdom Increase",
+				"Any Charisma Increase",
+				"Strength +2",
+				"Strength +1",
+				"Dexterity +2",
+				"Dexterity +1",
+				"Constitution +2",
+				"Constitution +1",
+				"Intelligence +2",
+				"Intelligence +1",
+				"Wisdom +2",
+				"Wisdom +1",
+				"Charisma +2",
+				"Charisma +1"
+			],
+			itemSortFn: filterAscSortAsi
+		});
+		const baseRaceFilter = new Filter({header: "Base Race"});
+		const speedFilter = new Filter({header: "Speed", items: ["Climb", "Fly", "Swim", "Walk (Fast)", "Walk", "Walk (Slow)"]});
+		const traitFilter = new Filter({
+			header: "Traits",
+			items: [
+				"Amphibious",
+				"Armor Proficiency",
+				"Damage Resistance",
+				"Darkvision", "Superior Darkvision",
+				"Dragonmark",
+				"Improved Resting",
+				"Monstrous Race",
+				"Natural Armor",
+				"NPC Race",
+				"Powerful Build",
+				"Skill Proficiency",
+				"Spellcasting",
+				"Tool Proficiency",
+				"Unarmed Strike",
+				"Uncommon Race",
+				"Weapon Proficiency"
+			],
+			deselFn: (it) => {
+				return it === "NPC Race";
+			}
+		});
+		const languageFilter = new Filter({
+			header: "Languages",
+			items: [
+				"Abyssal",
+				"Celestial",
+				"Choose",
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Elvish",
+				"Giant",
+				"Gnomish",
+				"Goblin",
+				"Halfling",
+				"Infernal",
+				"Orc",
+				"Other",
+				"Primordial",
+				"Sylvan",
+				"Undercommon"
+			],
+			umbrellaItems: ["Choose"]
+		});
+
+		super({
+			dataSource: async () => {
+				const rawRaceData = await DataUtil.loadJSON("data/races.json");
+				const raceData = Renderer.race.mergeSubraces(rawRaceData.race);
+				return {race: raceData};
+			},
+			dataSourceFluff: "data/fluff-races.json",
+
+			filters: [
+				sourceFilter,
+				asiFilter,
+				sizeFilter,
+				speedFilter,
+				traitFilter,
+				languageFilter,
+				baseRaceFilter
+			],
+			filterSource: sourceFilter,
+
+			listValueNames: ["name", "ability", "size", "source", "clean-name", "uniqueid"],
+			listClass: "races",
+
+			sublistValueNames: ["name", "ability", "size", "id"],
+			sublistClass: "subraces",
+
+			dataProps: ["race"],
+
+			hasAudio: true
+		});
+
+		this._sourceFilter = sourceFilter;
+		this._sizeFilter = sizeFilter;
+		this._asiFilter = asiFilter;
+		this._baseRaceFilter = baseRaceFilter;
+	}
+
+	getListItem (race, rcI) {
+		const ability = race.ability ? Renderer.getAbilityData(race.ability) : {asTextShort: "None"};
+		if (race.ability) {
+			const abils = getAbilityObjs(race.ability);
+			race._fAbility = abils.map(a => mapAbilityObjToFull(a));
+			const increases = {};
+			abils.filter(it => it.amount > 0).forEach(it => increases[it.asi] = true);
+			Object.keys(increases).forEach(it => race._fAbility.push(`Any ${Parser.attAbvToFull(it)} Increase`));
+			if (race.ability.choose) race._fAbility.push("Player Choice");
+		} else race._fAbility = [];
+		race._fSpeed = race.speed.walk ? [race.speed.climb ? "Climb" : null, race.speed.fly ? "Fly" : null, race.speed.swim ? "Swim" : null, getSpeedRating(race.speed.walk)].filter(it => it) : getSpeedRating(race.speed);
+		race._fMisc = [
+			race.darkvision === 120 ? "Superior Darkvision" : race.darkvision ? "Darkvision" : null,
+			race.hasSpellcasting ? "Spellcasting" : null
+		].filter(it => it).concat(race.traitTags || []);
+		race._fSources = ListUtil.getCompleteFilterSources(race);
+		race._fLangs = RacesPage.getLanguageProficiencyTags(race.languageProficiencies);
+
+		race._slAbility = ability.asTextShort;
+
+		// convert e.g. "Elf (High)" to "High Elf" and add as a searchable field
+		const bracketMatch = /^(.*?) \((.*?)\)$/.exec(race.name);
+
+		// populate filters
+		this._sourceFilter.addItem(race._fSources);
+		this._sizeFilter.addItem(race.size);
+		this._asiFilter.addItem(race._fAbility);
+		this._baseRaceFilter.addItem(race._baseName);
+
+		return `
+		<li class="row" ${FLTR_ID}="${rcI}" onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
+			<a id="${rcI}" href="#${UrlUtil.autoEncodeHash(race)}" title="${race.name}">
+				<span class="name col-4 pl-0">${race.name}</span>
+				<span class="ability col-4">${ability.asTextShort}</span>
+				<span class="size col-2">${Parser.sizeAbvToFull(race.size)}</span>
+				<span class="source col-2 text-center ${Parser.sourceJsonToColor(race.source)} pr-0" title="${Parser.sourceJsonToFull(race.source)}" ${BrewUtil.sourceJsonToStyle(race.source)}>${Parser.sourceJsonToAbv(race.source)}</span>
+				${bracketMatch ? `<span class="clean-name hidden">${bracketMatch[2]} ${bracketMatch[1]}</span>` : ""}
+				
+				<span class="uniqueid hidden">${race.uniqueId ? race.uniqueId : rcI}</span>
+			</a>
+		</li>`;
+	}
+
+	handleFilterChange () {
+		const f = this._filterBox.getValues();
+		this._list.filter(item => {
+			const r = this._dataList[$(item.elm).attr(FLTR_ID)];
+			return this._filterBox.toDisplay(
+				f,
+				r._fSources,
+				r._fAbility,
+				r.size,
+				r._fSpeed,
+				r._fMisc,
+				r._fLangs,
+				r._baseName
+			);
+		});
+		FilterBox.selectFirstVisible(this._dataList);
+	}
+
+	getSublistItem (race, pinId) {
+		return `
+		<li class="row" ${FLTR_ID}="${pinId}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
+			<a href="#${UrlUtil.autoEncodeHash(race)}" title="${race.name}">
+				<span class="name col-5 pl-0">${race.name}</span>
+				<span class="ability col-5">${race._slAbility}</span>
+				<span class="size col-2 pr-0">${Parser.sizeAbvToFull(race.size)}</span>
+				<span class="id hidden">${pinId}</span>
 			</a>
 		</li>
-	`}const renderer=Renderer.get();function loadHash(a){function b(a){return Renderer.utils.buildFluffTab(a,d,e,c,`data/fluff-races.json`,()=>!0)}function c(a){const b=Renderer.utils.getPredefinedFluff(e,"raceFluff");if(b)return b;const c=e._baseName&&e.name.toLowerCase()===e._baseName.toLowerCase()?"":a.race.find(a=>a.name.toLowerCase()===e.name.toLowerCase()&&a.source.toLowerCase()===e.source.toLowerCase()),d=a.race.find(a=>e._baseName&&a.name.toLowerCase()===e._baseName.toLowerCase()&&e._baseSource&&a.source.toLowerCase()===e._baseSource.toLowerCase());if(!c&&!d)return null;const f=b=>a.race.find(a=>b.name.toLowerCase()===a.name.toLowerCase()&&b.source.toLowerCase()===a.source.toLowerCase()),g={type:"section"},h=(a,b)=>{if(a.entries){g.entries=g.entries||[];const c={type:"section",entries:MiscUtil.copy(a.entries)};b&&!a.entries.length&&(c.name=e._baseName),g.entries.push(c)}if(a.images&&!(b&&c&&c._excludeBaseImages)&&(g.images=g.images||[],g.images.push(...MiscUtil.copy(a.images))),a._appendCopy){const c=f(a._appendCopy);if(c.entries){g.entries=g.entries||[];const d={type:"section",entries:MiscUtil.copy(c.entries)};b&&!a.entries.length&&(d.name=e._baseName),g.entries.push(d)}c.images&&(g.images=g.images||[],g.images.push(...MiscUtil.copy(c.images)))}};if(c&&h(c),d&&h(d,!0),c&&c.uncommon||d&&d.uncommon){const b={type:"section",entries:[MiscUtil.copy(a.meta.uncommon)]};g.entries?g.entries.push(b):(g.entries=[HTML_NO_INFO],g.entries.push(...b.entries))}if(c&&c.monstrous||d&&d.monstrous){const b={type:"section",entries:[MiscUtil.copy(a.meta.monstrous)]};g.entries?g.entries.push(b):(g.entries=[HTML_NO_INFO],g.entries.push(...b.entries))}if(g.entries.length&&"section"===g.entries[0].type){const a=g.entries.splice(0,1)[0];g.entries.unshift(...a.entries)}return g}renderer.setFirstSection(!0);const d=$("#pagecontent").empty(),e=raceList[a],f=Renderer.utils.tabButton("Traits",()=>{},function(){d.append(`
-		<tbody>
-		${Renderer.utils.getBorderTr()}
-		${Renderer.utils.getNameTr(e,{pronouncePart:e.soundClip?function(){return`<button class="btn btn-xs btn-default btn-name-pronounce">
-				<span class="glyphicon glyphicon-volume-up name-pronounce-icon"></span>
-				<audio class="name-pronounce">
-				   <source src="${e.soundClip}" type="audio/mpeg">
-				   <source src="audio/races/${/^(.*?)(\(.*?\))?$/.exec(e._baseName||e.name)[1].trim().toLowerCase()}.mp3" type="audio/mpeg">
-				</audio>
-			</button>`}():""})}
-		<tr><td colspan="6"><b>Ability Scores:</b> ${(e.ability?Renderer.getAbilityData(e.ability):{asText:"None"}).asText}</td></tr>
-		<tr><td colspan="6"><b>Size:</b> ${Parser.sizeAbvToFull(e.size)}</td></tr>
-		<tr><td colspan="6"><b>Speed:</b> ${Parser.getSpeedString(e)}</td></tr>
-		<tr id="traits"><td class="divider" colspan="6"><div></div></td></tr>
-		${Renderer.utils.getBorderTr()}
-		</tbody>
-		`);const a=[];a.push("<tr class='text'><td colspan='6'>"),renderer.recursiveRender({type:"entries",entries:e.entries},a,{depth:1}),a.push("</td></tr>"),e.traitTags&&e.traitTags.includes("NPC Race")&&(a.push(`<tr class="text"><td colspan="6"><section class="text-muted">`),renderer.recursiveRender(`{@i Note: This race is listed in the {@i Dungeon Master's Guide} as an option for creating NPCs. It is not designed for use as a playable race.}`,a,{depth:2}),a.push(`</section></td></tr>`)),a.push(Renderer.utils.getPageTr(e)),d.find("tbody tr:last").before(a.join(""))}),g=Renderer.utils.tabButton("Info",()=>{},b),h=Renderer.utils.tabButton("Images",()=>{},b.bind(null,!0));Renderer.utils.bindTabButtons(f,g,h),ListUtil.updateSelected()}function loadSubHash(a){a=filterBox.setFromSubHashes(a),ListUtil.setFromSubHashes(a)}
+	`;
+	}
+
+	doLoadHash (id) {
+		const renderer = this._renderer;
+		renderer.setFirstSection(true);
+		const $content = $("#pagecontent").empty();
+		const race = this._dataList[id];
+
+		function buildStatsTab () {
+			$content.append(RenderRaces.$getRenderedRace(race));
+		}
+
+		function buildFluffTab (isImageTab) {
+			return Renderer.utils.pBuildFluffTab(
+				isImageTab,
+				$content,
+				race,
+				getFluff,
+				`data/fluff-races.json`,
+				() => true
+			);
+		}
+
+		function getFluff (fluffJson) {
+			const predefined = Renderer.utils.getPredefinedFluff(race, "raceFluff");
+			if (predefined) return predefined;
+
+			const subFluff = race._baseName && race.name.toLowerCase() === race._baseName.toLowerCase() ? "" : fluffJson.race.find(it => it.name.toLowerCase() === race.name.toLowerCase() && it.source.toLowerCase() === race.source.toLowerCase());
+
+			const baseFluff = fluffJson.race.find(it => race._baseName && it.name.toLowerCase() === race._baseName.toLowerCase() && race._baseSource && it.source.toLowerCase() === race._baseSource.toLowerCase());
+
+			if (!subFluff && !baseFluff) return null;
+
+			const findFluff = (toFind) => fluffJson.race.find(it => toFind.name.toLowerCase() === it.name.toLowerCase() && toFind.source.toLowerCase() === it.source.toLowerCase());
+
+			const fluff = {type: "section"};
+
+			const addFluff = (fluffToAdd, isBase) => {
+				if (fluffToAdd.entries) {
+					fluff.entries = fluff.entries || [];
+					const toAdd = {type: "section", entries: MiscUtil.copy(fluffToAdd.entries)};
+					if (isBase && !fluffToAdd.entries.length) toAdd.name = race._baseName;
+					fluff.entries.push(toAdd);
+				}
+				if (fluffToAdd.images && !(isBase && subFluff && subFluff._excludeBaseImages)) {
+					fluff.images = fluff.images || [];
+					fluff.images.push(...MiscUtil.copy(fluffToAdd.images));
+				}
+				if (fluffToAdd._appendCopy) {
+					const toAppend = findFluff(fluffToAdd._appendCopy);
+					if (toAppend.entries) {
+						fluff.entries = fluff.entries || [];
+						const toAdd = {type: "section", entries: MiscUtil.copy(toAppend.entries)};
+						if (isBase && !fluffToAdd.entries.length) toAdd.name = race._baseName;
+						fluff.entries.push(toAdd);
+					}
+					if (toAppend.images) {
+						fluff.images = fluff.images || [];
+						fluff.images.push(...MiscUtil.copy(toAppend.images));
+					}
+				}
+			};
+
+			if (subFluff) addFluff(subFluff);
+			if (baseFluff) addFluff(baseFluff, true);
+
+			if ((subFluff && subFluff.uncommon) || (baseFluff && baseFluff.uncommon)) {
+				const entryUncommon = {type: "section", entries: [MiscUtil.copy(fluffJson.meta.uncommon)]};
+				if (fluff.entries) {
+					fluff.entries.push(entryUncommon);
+				} else {
+					fluff.entries = [HTML_NO_INFO];
+					fluff.entries.push(...entryUncommon.entries)
+				}
+			}
+
+			if ((subFluff && subFluff.monstrous) || (baseFluff && baseFluff.monstrous)) {
+				const entryMonstrous = {type: "section", entries: [MiscUtil.copy(fluffJson.meta.monstrous)]};
+				if (fluff.entries) {
+					fluff.entries.push(entryMonstrous);
+				} else {
+					fluff.entries = [HTML_NO_INFO];
+					fluff.entries.push(...entryMonstrous.entries)
+				}
+			}
+
+			if (fluff.entries.length && fluff.entries[0].type === "section") {
+				const firstSection = fluff.entries.splice(0, 1)[0];
+				fluff.entries.unshift(...firstSection.entries);
+			}
+
+			return fluff;
+		}
+
+		const traitTab = Renderer.utils.tabButton(
+			"Traits",
+			() => {},
+			buildStatsTab
+		);
+		const infoTab = Renderer.utils.tabButton(
+			"Info",
+			() => {},
+			buildFluffTab
+		);
+		const picTab = Renderer.utils.tabButton(
+			"Images",
+			() => {},
+			buildFluffTab.bind(null, true)
+		);
+
+		Renderer.utils.bindTabButtons(traitTab, infoTab, picTab);
+
+		ListUtil.updateSelected();
+	}
+
+	doLoadSubHash (sub) {
+		sub = this._filterBox.setFromSubHashes(sub);
+		ListUtil.setFromSubHashes(sub);
+	}
+}
+
+const racesPage = new RacesPage();
+window.addEventListener("load", () => racesPage.pOnLoad());

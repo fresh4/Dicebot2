@@ -1,25 +1,1398 @@
-"use strict";window.onload=doPageInit,String.prototype.split_handleColon=String.prototype.split_handleColon||function(a,b=Number.MAX_SAFE_INTEGER){if(""===a)return this.split("");const c=`${a.trim()}:`,d=this.toLowerCase().startsWith(c.toLowerCase()),e=d?new RegExp(c,"ig"):new RegExp(a,"ig"),f=d?c:a;let g=e.exec(this),h=0;const j=[],k=[];for(;g&&h<b;)k.push(g.index),h++,g=e.exec(this);if(1===k.length)j.push(this.substring(0,k[0])),j.push(this.substring(k[0]+f.length,this.length));else for(let a=0;a<k.length-1;++a){const b=k[a];0==a&&j.push(this.substring(0,b));const c=k[a+1];j.push(this.substring(b+f.length,c)),a==k.length-2&&j.push(this.substring(c+f.length,this.length))}return j.map(a=>a.trim())},String.prototype.indexOf_handleColon=String.prototype.indexOf_handleColon||function(a){const b=`${a.trim()}:`,c=this.toLowerCase().indexOf(b.toLowerCase());return~c?c:this.toLowerCase().indexOf(a.toLowerCase())};class ConverterUi{constructor(){this._editorIn=null,this._editorOut=null,this._hasAppended=!1,this._statblockConverter=null,this._tableConverter=null,this._menuAccess=null,this._saveInputDebounced=MiscUtil.debounce(()=>StorageUtil.pSetForPage(ConverterUi.STORAGE_INPUT,this._editorIn.getValue()),50),this._storedSettings=StorageUtil.syncGetForPage(ConverterUi.STORAGE_SETTINGS)||{},this._saveSettingsDebounced=MiscUtil.debounce(()=>StorageUtil.syncSetForPage(ConverterUi.STORAGE_SETTINGS,this._storedSettings),50),this._$selSource=null}set statblockConverter(a){this._statblockConverter=a}set tableConverter(a){this._tableConverter=a}async init(){this._editorIn=ace.edit("converter_input"),this._editorIn.setOptions({wrap:!0,showPrintMargin:!1});try{const a=await StorageUtil.pGetForPage(ConverterUi.STORAGE_INPUT);a&&this._editorIn.setValue(a,-1)}catch(a){setTimeout(()=>{throw a})}this._editorIn.on("change",()=>this._saveInputDebounced()),this._editorOut=ace.edit("converter_output"),this._editorOut.setOptions({wrap:!0,showPrintMargin:!1,readOnly:!0}),$(`#editable`).click(()=>{confirm(`Edits will be overwritten as you parse new statblocks. Enable anyway?`)&&(this.outReadOnly=!1)}),$(`#save_local`).click(async()=>{const a=this.outText;if(a&&a.trim())try{const b="Statblock"===this._storedSettings.parser?"monster":"table",c=JSON.parse(`[${a}]`),d=c.map(a=>!(a.source&&BrewUtil.hasSourceJson(a.source))&&(a.name||a.caption||"(Unnamed)").trim()).filter(Boolean);if(d.length)return void JqueryUtil.doToast({content:`One or more entries have missing or unknown sources: ${d.join(", ")}`,type:"danger"});const e={},f=[],g=c.map(a=>{const b=a.source.toLowerCase(),c=a.name.toLowerCase();return e[b]=e[b]||{},e[b][c]?(f.push(a.name),null):(e[b][c]=!0,a)}).filter(Boolean);f.length&&JqueryUtil.doToast({type:"warning",content:`Ignored ${f.length} duplicate entr${1===f.length?"y":"ies"}`});const h=g.map(a=>{const c=(BrewUtil.homebrew[b]||[]).findIndex(b=>b.name.toLowerCase()===a.name.toLowerCase()&&b.source.toLowerCase()===a.source.toLowerCase());return~c?{isOverwrite:!0,ix:c,entry:a}:{entry:a,isOverwrite:!1}}).filter(Boolean),i=h.map(a=>a.isOverwrite).filter(Boolean);if(i.length&&!confirm(`This will overwrite ${i.length} entr${1===i.length?"y":"ies"}. Are you sure?`))return;await Promise.all(h.map(a=>a.isOverwrite?BrewUtil.pUpdateEntryByIx(b,a.ix,MiscUtil.copy(a.entry)):BrewUtil.pAddEntry(b,MiscUtil.copy(a.entry)))),JqueryUtil.doToast({type:"success",content:`Saved!`}),Omnisearch.pAddToIndex("monster",h.filter(a=>!a.isOverwrite).map(a=>a.entry))}catch(a){JqueryUtil.doToast({content:`Current output was not valid JSON!`,type:"danger"}),setTimeout(()=>{throw a})}else JqueryUtil.doToast({content:"Nothing to save!",type:"danger"})}),$(`#download`).click(()=>{const a=this.outText;if(a&&a.trim())try{const b="Statblock"===this._storedSettings.parser?"monster":"table",c={[b]:JSON.parse(`[${a}]`)};DataUtil.userDownload(`converter-output`,c)}catch(b){JqueryUtil.doToast({content:`Current output was not valid JSON. Downloading as <span class="code">.txt</span> instead.`,type:"warning"}),DataUtil.userDownloadText(`converter-output.txt`,a),setTimeout(()=>{throw b})}else JqueryUtil.doToast({content:"Nothing to download!",type:"danger"})});const a=a=>{try{$(`#lastWarnings`).hide().html(""),$(`#lastError`).hide().html(""),this._editorOut.resize(),a()}catch(a){const b=a.stack.split("\n"),c=1<b.length?b[1].trim():"(Unknown location)",d=`[Error] ${a.message} ${c}`;$(`#lastError`).show().html(d),this._editorOut.resize(),setTimeout(()=>{throw a})}};$("#parsestatblock").on("click",()=>{a(()=>{(!this._hasAppended||confirm("You're about to overwrite multiple entries. Are you sure?"))&&this._menuAccess.handleParse()})}),$(`#parsestatblockadd`).on("click",()=>{a(()=>this._menuAccess.handleParseAndAdd())}),this.initSideMenu()}initSideMenu(){const a=$(`.sidemenu`),b=(a,b)=>a.append(`<hr class="sidemenu__row__divider ${b?"sidemenu__row__divider--heavy":""}">`),c=this._storedSettings.parser,d=$(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Mode</div></div>`).appendTo(a),e=$(`
+"use strict";
+
+window.onload = doPageInit;
+
+String.prototype.split_handleColon = String.prototype.split_handleColon || function (str, maxSplits = Number.MAX_SAFE_INTEGER) {
+	if (str === "") return this.split("");
+
+	const colonStr = `${str.trim()}:`;
+	const isColon = this.toLowerCase().startsWith(colonStr.toLowerCase());
+
+	const re = isColon ? new RegExp(colonStr, "ig") : new RegExp(str, "ig");
+	const targetString = isColon ? colonStr : str;
+
+	let m = re.exec(this);
+	let splits = 0;
+	const out = [];
+	const indexes = [];
+
+	while (m && splits < maxSplits) {
+		indexes.push(m.index);
+
+		splits++;
+		m = re.exec(this);
+	}
+
+	if (indexes.length === 1) {
+		out.push(this.substring(0, indexes[0]));
+		out.push(this.substring(indexes[0] + targetString.length, this.length));
+	} else {
+		for (let i = 0; i < indexes.length - 1; ++i) {
+			const start = indexes[i];
+
+			if (i === 0) {
+				out.push(this.substring(0, start));
+			}
+
+			const end = indexes[i + 1];
+			out.push(this.substring(start + targetString.length, end));
+
+			if (i === indexes.length - 2) {
+				out.push(this.substring(end + targetString.length, this.length));
+			}
+		}
+	}
+
+	return out.map(it => it.trim());
+};
+
+String.prototype.indexOf_handleColon = String.prototype.indexOf_handleColon || function (str) {
+	const colonStr = `${str.trim()}:`;
+	const idxColon = this.toLowerCase().indexOf(colonStr.toLowerCase());
+	if (~idxColon) return idxColon;
+	return this.toLowerCase().indexOf(str.toLowerCase());
+};
+
+class ConverterUi {
+	constructor () {
+		this._editorIn = null;
+		this._editorOut = null;
+		this._hasAppended = false;
+
+		this._statblockConverter = null;
+		this._tableConverter = null;
+
+		this._menuAccess = null;
+
+		this._saveInputDebounced = MiscUtil.debounce(() => StorageUtil.pSetForPage(ConverterUi.STORAGE_INPUT, this._editorIn.getValue()), 50);
+
+		this._storedSettings = StorageUtil.syncGetForPage(ConverterUi.STORAGE_SETTINGS) || {};
+		this._saveSettingsDebounced = MiscUtil.debounce(() => StorageUtil.syncSetForPage(ConverterUi.STORAGE_SETTINGS, this._storedSettings), 50);
+
+		this._$selSource = null;
+	}
+
+	set statblockConverter (statblockConverter) { this._statblockConverter = statblockConverter; }
+
+	set tableConverter (tableConverter) { this._tableConverter = tableConverter; }
+
+	async init () {
+		this._editorIn = ace.edit("converter_input");
+		this._editorIn.setOptions({
+			wrap: true,
+			showPrintMargin: false
+		});
+		try {
+			const prevInput = await StorageUtil.pGetForPage(ConverterUi.STORAGE_INPUT);
+			if (prevInput) this._editorIn.setValue(prevInput, -1);
+		} catch (ignored) { setTimeout(() => { throw ignored; }) }
+		this._editorIn.on("change", () => this._saveInputDebounced());
+
+		this._editorOut = ace.edit("converter_output");
+		this._editorOut.setOptions({
+			wrap: true,
+			showPrintMargin: false,
+			readOnly: true
+		});
+
+		$(`#editable`).click(() => {
+			if (confirm(`Edits will be overwritten as you parse new statblocks. Enable anyway?`)) this.outReadOnly = false;
+		});
+
+		$(`#save_local`).click(async () => {
+			const output = this.outText;
+			if (output && output.trim()) {
+				try {
+					const prop = this._storedSettings.parser === "Statblock" ? "monster" : "table";
+					const entries = JSON.parse(`[${output}]`);
+
+					const invalidSources = entries.map(it => !it.source || !BrewUtil.hasSourceJson(it.source) ? (it.name || it.caption || "(Unnamed)").trim() : false).filter(Boolean);
+					if (invalidSources.length) {
+						JqueryUtil.doToast({
+							content: `One or more entries have missing or unknown sources: ${invalidSources.join(", ")}`,
+							type: "danger"
+						});
+						return;
+					}
+
+					// ignore duplicates
+					const _dupes = {};
+					const dupes = [];
+					const dedupedEntries = entries.map(it => {
+						const lSource = it.source.toLowerCase();
+						const lName = it.name.toLowerCase();
+						_dupes[lSource] = _dupes[lSource] || {};
+						if (_dupes[lSource][lName]) {
+							dupes.push(it.name);
+							return null;
+						} else {
+							_dupes[lSource][lName] = true;
+							return it;
+						}
+					}).filter(Boolean);
+					if (dupes.length) {
+						JqueryUtil.doToast({
+							type: "warning",
+							content: `Ignored ${dupes.length} duplicate entr${dupes.length === 1 ? "y" : "ies"}`
+						})
+					}
+
+					// handle overwrites
+					const overwriteMeta = dedupedEntries.map(it => {
+						const ix = (BrewUtil.homebrew[prop] || []).findIndex(bru => bru.name.toLowerCase() === it.name.toLowerCase() && bru.source.toLowerCase() === it.source.toLowerCase());
+						if (~ix) {
+							return {
+								isOverwrite: true,
+								ix,
+								entry: it
+							}
+						} else return {entry: it, isOverwrite: false};
+					}).filter(Boolean);
+					const willOverwrite = overwriteMeta.map(it => it.isOverwrite).filter(Boolean);
+					if (willOverwrite.length && !confirm(`This will overwrite ${willOverwrite.length} entr${willOverwrite.length === 1 ? "y" : "ies"}. Are you sure?`)) {
+						return;
+					}
+
+					await Promise.all(overwriteMeta.map(meta => {
+						if (meta.isOverwrite) {
+							return BrewUtil.pUpdateEntryByIx(prop, meta.ix, MiscUtil.copy(meta.entry));
+						} else {
+							return BrewUtil.pAddEntry(prop, MiscUtil.copy(meta.entry));
+						}
+					}));
+
+					JqueryUtil.doToast({
+						type: "success",
+						content: `Saved!`
+					});
+
+					Omnisearch.pAddToIndex("monster", overwriteMeta.filter(meta => !meta.isOverwrite).map(meta => meta.entry));
+				} catch (e) {
+					JqueryUtil.doToast({
+						content: `Current output was not valid JSON!`,
+						type: "danger"
+					});
+					setTimeout(() => { throw e });
+				}
+			} else {
+				JqueryUtil.doToast({
+					content: "Nothing to save!",
+					type: "danger"
+				});
+			}
+		});
+
+		$(`#download`).click(() => {
+			const output = this.outText;
+			if (output && output.trim()) {
+				try {
+					const prop = this._storedSettings.parser === "Statblock" ? "monster" : "table";
+					const out = {[prop]: JSON.parse(`[${output}]`)};
+					DataUtil.userDownload(`converter-output`, out);
+				} catch (e) {
+					JqueryUtil.doToast({
+						content: `Current output was not valid JSON. Downloading as <span class="code">.txt</span> instead.`,
+						type: "warning"
+					});
+					DataUtil.userDownloadText(`converter-output.txt`, output);
+					setTimeout(() => { throw e; });
+				}
+			} else {
+				JqueryUtil.doToast({
+					content: "Nothing to download!",
+					type: "danger"
+				});
+			}
+		});
+
+		/**
+		 * Wrap a function in an error handler which will wipe the error output, and append future errors to it.
+		 * @param toRun
+		 */
+		const catchErrors = (toRun) => {
+			try {
+				$(`#lastWarnings`).hide().html("");
+				$(`#lastError`).hide().html("");
+				this._editorOut.resize();
+				toRun();
+			} catch (x) {
+				const splitStack = x.stack.split("\n");
+				const atPos = splitStack.length > 1 ? splitStack[1].trim() : "(Unknown location)";
+				const message = `[Error] ${x.message} ${atPos}`;
+				$(`#lastError`).show().html(message);
+				this._editorOut.resize();
+				setTimeout(() => { throw x });
+			}
+		};
+
+		$("#parsestatblock").on("click", () => {
+			catchErrors(() => {
+				if (!this._hasAppended || confirm("You're about to overwrite multiple entries. Are you sure?")) {
+					this._menuAccess.handleParse();
+				}
+			});
+		});
+
+		$(`#parsestatblockadd`).on("click", () => {
+			catchErrors(() => this._menuAccess.handleParseAndAdd());
+		});
+
+		this.initSideMenu();
+	}
+
+	initSideMenu () {
+		const $mnu = $(`.sidemenu`);
+		const renderDivider = ($menu, heavy) => $menu.append(`<hr class="sidemenu__row__divider ${heavy ? "sidemenu__row__divider--heavy" : ""}">`);
+
+		const prevParser = this._storedSettings.parser;
+
+		const $wrpParser = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Mode</div></div>`).appendTo($mnu);
+		const $selParser = $(`
 			<select class="form-control input-sm">
 				<option>Statblock</option>
 				<option>Table</option>
 			</select>
-		`).appendTo(d).change(()=>{switch(this._storedSettings.parser=e.val(),this._saveSettingsDebounced(),e.val()){case"Statblock":g();break;case"Table":h();}});b(a,!0);const f=$(`<div/>`).appendTo(a),g=()=>{$(`#save_local`).show(),this._menuAccess={},f.empty(),$(`<div class="sidemenu__row split-v-center">
+		`).appendTo($wrpParser).change(() => {
+			this._storedSettings.parser = $selParser.val();
+			this._saveSettingsDebounced();
+			switch ($selParser.val()) {
+				case "Statblock": renderStatblockSidemenu(); break;
+				case "Table": renderTableSidemenu(); break;
+			}
+		});
+
+		renderDivider($mnu, true);
+		const $wrpCustom = $(`<div/>`).appendTo($mnu);
+
+		const renderStatblockSidemenu = () => {
+			$(`#save_local`).show();
+			this._menuAccess = {};
+
+			$wrpCustom.empty();
+			$(`<div class="sidemenu__row split-v-center">
 				<small>This parser is <span class="help" title="Notably poor at handling text split across multiple lines, as Carriage Return is used to separate blocks of text.">very particular</span> about its input. Use at your own risk.</small>
-			</div>`).appendTo(f),b(f);const a=$(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo(f),c=$(`
+			</div>`).appendTo($wrpCustom);
+
+			renderDivider($wrpCustom);
+
+			const $wrpMode = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpCustom);
+			const $selMode = $(`
 					<select class="form-control input-sm select-inline">
 							<option value="txt">Parse as Text</option>
 							<option value="md" selected>Parse as Markdown</option>
 					</select>
-				`).appendTo(a).change(()=>{this._storedSettings.statblockMode=c.val(),this._saveSettingsDebounced()}),d=this._storedSettings.statblockMode;d&&c.val(d);const e=$(`<div class="sidemenu__row split-v-center"><label class="sidemenu__row__label sidemenu__row__label--cb-label" title="Should the creature's name be converted to title-case? Useful when pasting a name which is all-caps."><span>Title-Case Name</span></label></div>`).appendTo(f),g=$(`<input type="checkbox" class="sidemenu__row__label__cb">`).change(()=>{this._storedSettings.statblockTitleCase=g.prop("checked"),this._saveSettingsDebounced()}).appendTo(e.find(`label`)).prop("checked",!!this._storedSettings.statblockTitleCase);this._menuAccess.isTitleCase=()=>!!g.prop("checked"),b(f);const h=$(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Page</div></div>`).appendTo(f),i=$(`<input class="form-control input-sm" type="number" style="max-width: 9rem;">`).change(()=>{this._storedSettings.statblockPage=i.val(),this._saveSettingsDebounced()}).appendTo(h).val(this._storedSettings.statblockPage||"0");this._menuAccess.getPage=()=>+i.val(),b(f);const j=$(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Source</div></div>`).appendTo(f);this._menuAccess.getSource=()=>this._$selSource.val();const k=$(`<div class="full-height full-width"/>`);let l=null;const m=a=>{SourceUiUtil.render({...a,$parent:k,cbConfirm:b=>{const c="edit"!==a.mode;c?BrewUtil.addSource(b):BrewUtil.updateSource(b),c&&this._$selSource.append(`<option value="${b.json.escapeQuotes()}">${b.full.escapeQuotes()}</option>`),this._$selSource.val(b.json),l&&l.data("close")()},cbConfirmExisting:a=>{this._$selSource.val(a.json),l&&l.data("close")()},cbCancel:()=>{l&&l.data("close")()}})};this._allSources=(BrewUtil.homebrewMeta.sources||[]).sort((c,a)=>SortUtil.ascSortLower(c.full,a.full)).map(a=>a.json),this._$selSource=$$`
+				`)
+				.appendTo($wrpMode)
+				.change(() => {
+					this._storedSettings.statblockMode = $selMode.val();
+					this._saveSettingsDebounced();
+				});
+			const prevMode = this._storedSettings.statblockMode;
+			if (prevMode) $selMode.val(prevMode);
+
+			const $wrpTitle = $(`<div class="sidemenu__row split-v-center"><label class="sidemenu__row__label sidemenu__row__label--cb-label" title="Should the creature's name be converted to title-case? Useful when pasting a name which is all-caps."><span>Title-Case Name</span></label></div>`).appendTo($wrpCustom);
+			const $cbTitleCase = $(`<input type="checkbox" class="sidemenu__row__label__cb">`)
+				.change(() => {
+					this._storedSettings.statblockTitleCase = $cbTitleCase.prop("checked");
+					this._saveSettingsDebounced();
+				})
+				.appendTo($wrpTitle.find(`label`))
+				.prop("checked", !!this._storedSettings.statblockTitleCase);
+			this._menuAccess.isTitleCase = () => !!$cbTitleCase.prop("checked");
+
+			renderDivider($wrpCustom);
+
+			const $wrpPage = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Page</div></div>`).appendTo($wrpCustom);
+			const $iptPage = $(`<input class="form-control input-sm" type="number" style="max-width: 9rem;">`)
+				.change(() => {
+					this._storedSettings.statblockPage = $iptPage.val();
+					this._saveSettingsDebounced();
+				})
+				.appendTo($wrpPage)
+				.val(this._storedSettings.statblockPage || "0");
+			this._menuAccess.getPage = () => Number($iptPage.val());
+
+			renderDivider($wrpCustom);
+
+			const $wrpSource = $(`<div class="sidemenu__row split-v-center"><div class="sidemenu__row__label">Source</div></div>`).appendTo($wrpCustom);
+			this._menuAccess.getSource = () => this._$selSource.val();
+
+			const $wrpSourceOverlay = $(`<div class="h-100 w-100"/>`);
+			let modalMeta = null;
+
+			const rebuildStageSource = (options) => {
+				SourceUiUtil.render({
+					...options,
+					$parent: $wrpSourceOverlay,
+					cbConfirm: (source) => {
+						const isNewSource = options.mode !== "edit";
+
+						if (isNewSource) BrewUtil.addSource(source);
+						else BrewUtil.updateSource(source);
+
+						if (isNewSource) this._$selSource.append(`<option value="${source.json.escapeQuotes()}">${source.full.escapeQuotes()}</option>`);
+						this._$selSource.val(source.json);
+						if (modalMeta) modalMeta.doClose();
+					},
+					cbConfirmExisting: (source) => {
+						this._$selSource.val(source.json);
+						if (modalMeta) modalMeta.doClose();
+					},
+					cbCancel: () => {
+						if (modalMeta) modalMeta.doClose();
+					}
+				});
+			};
+
+			this._allSources = (BrewUtil.homebrewMeta.sources || []).sort((a, b) => SortUtil.ascSortLower(a.full, b.full))
+				.map(it => it.json);
+			this._$selSource = $$`
 			<select class="form-control input-sm">
 				<option value="">(None)</option>
-				${this._allSources.map(a=>`<option value="${a.escapeQuotes()}">${Parser.sourceJsonToFull(a).escapeQuotes()}</option>`)}
-			</select>`.appendTo(j).change(()=>{this._$selSource.val()?this._storedSettings.sourceJson=this._$selSource.val():delete this._storedSettings.sourceJson,this._saveSettingsDebounced()}),this._storedSettings.sourceJson?this._$selSource.val(this._storedSettings.sourceJson):this._$selSource[0].selectedIndex=0;const n=$(`<button class="btn btn-default btn-sm mr-2">Edit Selected Source</button>`).click(()=>{const a=this._storedSettings.sourceJson;if(!a)return void JqueryUtil.doToast({type:"warning",content:"No source selected!"});const b=BrewUtil.sourceJsonToSource(a);b&&(m({mode:"edit",source:MiscUtil.copy(b)}),l=UiUtil.getShow$Modal({fullHeight:!0,fullWidth:!0,cbClose:()=>k.detach()}),k.appendTo(l))});$$`<div class="sidemenu__row">${n}</div>`.appendTo(f);const o=$(`<button class="btn btn-default btn-sm">Add New Source</button>`).click(()=>{m({mode:"add"}),l=UiUtil.getShow$Modal({fullHeight:!0,fullWidth:!0,cbClose:()=>k.detach()}),k.appendTo(l)});$$`<div class="sidemenu__row">${o}</div>`.appendTo(f),b(f);const p=$(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo(f);$(`<button class="btn btn-sm btn-default">Sample Text</button>`).appendTo(p).click(()=>{this.inText=statblockConverter.getSample("txt"),c.val("txt").change()}),$(`<button class="btn btn-sm btn-default">Sample Markdown</button>`).appendTo(p).click(()=>{this.inText=statblockConverter.getSample("md"),c.val("md").change()});const q=a=>({cbWarning:this.showWarning.bind(this),cbOutput:(a,b)=>{this.doCleanAndOutput(a,b)},source:this.source,pageNumber:this.pageNumber,isAppend:a,isTitleCaseName:this.menuAccess.isTitleCase()});this._menuAccess.handleParse=()=>{const a=q(!1);"txt"===c.val()?this._statblockConverter.doParseText(this.inText,a):this._statblockConverter.doParseMarkdown(this.inText,a)},this._menuAccess.handleParseAndAdd=()=>{const a=q(!0);"txt"===c.val()?this._statblockConverter.doParseText(this.inText,a):this._statblockConverter.doParseMarkdown(this.inText,a)}},h=()=>{$(`#save_local`).hide(),this._menuAccess={},f.empty();const a=$(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo(f),c=$(`
+				${this._allSources.map(s => `<option value="${s.escapeQuotes()}">${Parser.sourceJsonToFull(s).escapeQuotes()}</option>`)}
+			</select>`
+				.appendTo($wrpSource)
+				.change(() => {
+					if (this._$selSource.val()) this._storedSettings.sourceJson = this._$selSource.val();
+					else delete this._storedSettings.sourceJson;
+					this._saveSettingsDebounced();
+				});
+			if (this._storedSettings.sourceJson) this._$selSource.val(this._storedSettings.sourceJson);
+			else this._$selSource[0].selectedIndex = 0;
+
+			const $btnSourceEdit = $(`<button class="btn btn-default btn-sm mr-2">Edit Selected Source</button>`)
+				.click(() => {
+					const curSourceJson = this._storedSettings.sourceJson;
+					if (!curSourceJson) {
+						JqueryUtil.doToast({type: "warning", content: "No source selected!"});
+						return;
+					}
+
+					const curSource = BrewUtil.sourceJsonToSource(curSourceJson);
+					if (!curSource) return;
+					rebuildStageSource({mode: "edit", source: MiscUtil.copy(curSource)});
+					modalMeta = UiUtil.getShowModal({
+						fullHeight: true,
+						isLarge: true,
+						cbClose: () => $wrpSourceOverlay.detach()
+					});
+					$wrpSourceOverlay.appendTo(modalMeta.$modalInner);
+				});
+			$$`<div class="sidemenu__row">${$btnSourceEdit}</div>`.appendTo($wrpCustom);
+
+			const $btnSourceAdd = $(`<button class="btn btn-default btn-sm">Add New Source</button>`).click(() => {
+				rebuildStageSource({mode: "add"});
+				modalMeta = UiUtil.getShowModal({
+					fullHeight: true,
+					isLarge: true,
+					cbClose: () => $wrpSourceOverlay.detach()
+				});
+				$wrpSourceOverlay.appendTo(modalMeta.$modalInner);
+			});
+			$$`<div class="sidemenu__row">${$btnSourceAdd}</div>`.appendTo($wrpCustom);
+
+			renderDivider($wrpCustom);
+
+			const $wrpSample = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpCustom);
+			$(`<button class="btn btn-sm btn-default">Sample Text</button>`)
+				.appendTo($wrpSample).click(() => {
+					this.inText = statblockConverter.getSample("txt");
+					$selMode.val("txt").change();
+				});
+			$(`<button class="btn btn-sm btn-default">Sample Markdown</button>`)
+				.appendTo($wrpSample).click(() => {
+					this.inText = statblockConverter.getSample("md");
+					$selMode.val("md").change();
+				});
+
+			const _getStatblockParseOptions = (isAppend) => ({
+				cbWarning: this.showWarning.bind(this),
+				cbOutput: (stats, append) => {
+					this.doCleanAndOutput(stats, append);
+				},
+				source: this.source,
+				pageNumber: this.pageNumber,
+				isAppend,
+				isTitleCaseName: this.menuAccess.isTitleCase()
+			});
+
+			this._menuAccess.handleParse = () => {
+				const opts = _getStatblockParseOptions(false);
+				$selMode.val() === "txt" ? this._statblockConverter.doParseText(this.inText, opts) : this._statblockConverter.doParseMarkdown(this.inText, opts);
+			};
+
+			this._menuAccess.handleParseAndAdd = () => {
+				const opts = _getStatblockParseOptions(true);
+				$selMode.val() === "txt" ? this._statblockConverter.doParseText(this.inText, opts) : this._statblockConverter.doParseMarkdown(this.inText, opts);
+			};
+		};
+
+		const renderTableSidemenu = () => {
+			$(`#save_local`).hide();
+			this._menuAccess = {};
+
+			$wrpCustom.empty();
+
+			const $wrpMode = $(`<div class="sidemenu__row flex-vh-center-around"/>`).appendTo($wrpCustom);
+			const $selMode = $(`
 					<select class="form-control input-sm select-inline">
 							<option value="html" selected>Parse as HTML</option>
 							<option value="md">Parse as Markdown</option>
 					</select>
-				`).appendTo(a).change(()=>{this._storedSettings.tableMode=c.val(),this._saveSettingsDebounced()}),d=this._storedSettings.tableMode;d&&c.val(d),b(f);const e=$(`<div class="sidemenu__row split-v-center"/>`).appendTo(f);$(`<button class="btn btn-sm btn-default">Sample HTML</button>`).appendTo(e).click(()=>{this.inText=tableConverter.showSample("html"),c.val("html").change()}),$(`<button class="btn btn-sm btn-default">Sample Markdown</button>`).appendTo(e).click(()=>{this.inText=tableConverter.showSample("md"),c.val("md").change()});const g=a=>({cbWarning:this.showWarning.bind(this),cbOutput:(a,b)=>{this.doCleanAndOutput(a,b)},isAppend:a});this._menuAccess.handleParse=()=>{const a=g(!1);"html"===c.val()?this._tableConverter.doParseHtml(this.inText,a):this._tableConverter.doParseMarkdown(this.inText,a)},this._menuAccess.handleParseAndAdd=()=>{const a=g(!0);"html"===c.val()?this._tableConverter.doParseHtml(this.inText,a):this._tableConverter.doParseMarkdown(this.inText,a)}};c?e.val(c).change():g()}get menuAccess(){return this._menuAccess}showWarning(a){$(`#lastWarnings`).show().append(`<div>[Warning] ${a}</div>`),this._editorOut.resize()}doCleanAndOutput(a,b){const c=JSON.stringify(a,null,"\t"),d=TextClean.getCleanedJson(c);b?(this.outText=`${d},\n${ui.outText}`,this._hasAppended=!0):(this.outText=d,this._hasAppended=!1)}set outReadOnly(a){this._editorOut.setOptions({readOnly:a})}get outText(){return this._editorOut.getValue()}set outText(a){return this._editorOut.setValue(a,-1)}get inText(){return TextClean.getReplacedQuotesText((this._editorIn.getValue()||"").trim())}set inText(a){return this._editorIn.setValue(a,-1)}get pageNumber(){return this._menuAccess.getPage()?+this._menuAccess.getPage():void 0}get source(){return this._menuAccess.getSource()}}ConverterUi.STORAGE_INPUT="converterInput",ConverterUi.STORAGE_SETTINGS="converterSettings";class StatblockConverter{static _getValidOptions(a){if(a=a||{},a.isAppend=a.isAppend||!1,!a.cbWarning||!a.cbOutput)throw new Error(`Missing required callback options!`);return a}doParseText(a,b){function c(a){return!a.toUpperCase().indexOf("ACTIONS")||!a.toUpperCase().indexOf("LEGENDARY ACTIONS")||!a.toUpperCase().indexOf("REACTIONS")}if(b=StatblockConverter._getValidOptions(b),!a||!a.trim())return b.cbWarning("No input!");const d=(()=>{const b=StatblockConverter._getCleanInput(a),c=b.split(/(Challenge)/i);return c[0]=c[0].replace(/(\d\d?\s+\([-—+]\d\)\s*)+/gi,(...a)=>`${a[0].replace(/\n/g," ").replace(/\s+/g," ")}\n`),c.join("").split("\n").filter(a=>a&&a.trim())})(),e={};e.source=b.source||"",e.page=b.pageNumber;let f=null,g=null;for(let h=0;h<d.length;h++)if(f=g,g=d[h].trim(),""!==g){if(0==h){e.name=this._getCleanName(g,b);continue}if(1==h){StatblockConverter._setCleanSizeTypeAlignment(e,g,b);continue}if(2==h){e.ac=g.split_handleColon("Armor Class ",1)[1];continue}if(3==h){StatblockConverter._setCleanHp(e,g);continue}if(4==h){this._setCleanSpeed(e,g,b);continue}if(5!=h){if(6==h){const a=g.split(/ ?\(([+\-—])?[0-9]*\) ?/g);e.str=StatblockConverter._tryConvertNumber(a[0]),e.dex=StatblockConverter._tryConvertNumber(a[2]),e.con=StatblockConverter._tryConvertNumber(a[4]),e.int=StatblockConverter._tryConvertNumber(a[6]),e.wis=StatblockConverter._tryConvertNumber(a[8]),e.cha=StatblockConverter._tryConvertNumber(a[10]);continue}switch(f.toLowerCase()){case"str":e.str=StatblockConverter._tryGetStat(g);break;case"dex":e.dex=StatblockConverter._tryGetStat(g);break;case"con":e.con=StatblockConverter._tryGetStat(g);break;case"int":e.int=StatblockConverter._tryGetStat(g);break;case"wis":e.wis=StatblockConverter._tryGetStat(g);break;case"cha":e.cha=StatblockConverter._tryGetStat(g);}if(!g.indexOf_handleColon("Saving Throws ")){StatblockConverter._setCleanSaves(e,g,b);continue}if(!g.indexOf_handleColon("Skills ")){StatblockConverter._setCleanSkills(e,g);continue}if(!g.indexOf_handleColon("Damage Vulnerabilities ")){StatblockConverter._setCleanDamageVuln(e,g);continue}if(!g.indexOf_handleColon("Damage Resistance")){StatblockConverter._setCleanDamageRes(e,g);continue}if(!g.indexOf_handleColon("Damage Immunities ")){StatblockConverter._setCleanDamageImm(e,g);continue}if(!g.indexOf_handleColon("Condition Immunities ")){StatblockConverter._setCleanConditionImm(e,g);continue}if(!g.indexOf_handleColon("Senses ")){StatblockConverter._setCleanSenses(e,g);continue}if(!g.indexOf_handleColon("Languages ")){StatblockConverter._setCleanLanguages(e,g);continue}if(!g.indexOf_handleColon("Challenge ")){StatblockConverter._setCleanCr(e,g),h++,g=d[h],e.trait=[],e.action=[],e.reaction=[],e.legendary=[];let a={},f=!0,i=!1,j=!1,k=!1,l=!1;for(;h<d.length;){c(g)&&(f=!1,i=!g.toUpperCase().indexOf_handleColon("ACTIONS"),j=!g.toUpperCase().indexOf_handleColon("REACTIONS"),k=!g.toUpperCase().indexOf_handleColon("LEGENDARY ACTIONS"),l=k,h++,g=d[h]),a.name="",a.entries=[];const m=b=>{a.name=b.split(/([.!?])/g)[0],a.entries.push(b.substring(a.name.length+1,b.length).trim())};if(l){const a=g.replace(/\s*/g,"").toLowerCase();a.includes("legendary")||a.includes("action")||(l=!1)}for(l?(a.entries.push(g.trim()),l=!1):m(g),h++,g=d[h];g&&!ConvertUtil.isNameLine(g)&&!c(g);)a.entries.push(g.trim()),h++,g=d[h];(a.name||a.entries)&&(DiceConvert.convertTraitActionDice(a),f&&(a.name.toLowerCase().includes("spellcasting")?(a=this._tryParseSpellcasting(a,!1,b),a.success?e.spellcasting?e.spellcasting=e.spellcasting.concat(a.out):e.spellcasting=a.out:e.trait.push(a.out)):StatblockConverter._hasEntryContent(a)&&e.trait.push(a)),i&&StatblockConverter._hasEntryContent(a)&&e.action.push(a),j&&StatblockConverter._hasEntryContent(a)&&e.reaction.push(a),k&&StatblockConverter._hasEntryContent(a)&&e.legendary.push(a)),a={}}0===e.trait.length&&delete e.trait,0===e.reaction.length&&delete e.reaction,0===e.legendary.length&&delete e.legendary}}}(function(){e.legendary&&(e.legendary=e.legendary.map(a=>{if(!a.name.trim()&&!a.entries.length)return null;const b=/can take (\d) legendary actions/gi.exec(a.entries[0]);return!a.name.trim()&&b?("3"!==b[1]&&(e.legendaryActions=+b[1]),null):a}).filter(Boolean))})(),this._doStatblockPostProcess(e,b);const h=PropOrder.getOrdered(e,"monster");b.cbOutput(h,b.isAppend)}doParseMarkdown(a,b){function c(a){return a.replace(/^\s*>\s*/,"").trim()}function d(a){return a.replace(/\**/g,"").replace(/^-/,"").trim()}function e(a){return a.replace(/^###/,"").trim()}function f(a){const b=a.trim().startsWith("*"),c=a.replace(/^[^A-Za-z0-9]*/,"").trim();return b?c.replace(/\*/,""):c}function g(a){return a.trim().startsWith("**")}function h(a){return a.replace(/^\*\*\*?/,"").split(/.\s*\*\*\*?/).map(a=>a.trim())}function j(){9===t?k():10===t?l():11===t?m():12==t&&n()}function k(){StatblockConverter._hasEntryContent(B)&&(r.trait=r.trait||[],DiceConvert.convertTraitActionDice(B),B.name.toLowerCase().includes("spellcasting")?(B=p._tryParseSpellcasting(B,!0,b),B.success?r.spellcasting?r.spellcasting=r.spellcasting.concat(B.out):r.spellcasting=B.out:r.trait.push(B.out)):r.trait.push(B)),B=null}function l(){StatblockConverter._hasEntryContent(B)&&(r.action=r.action||[],DiceConvert.convertTraitActionDice(B),r.action.push(B)),B=null}function m(){StatblockConverter._hasEntryContent(B)&&(r.reaction=r.reaction||[],DiceConvert.convertTraitActionDice(B),r.reaction.push(B)),B=null}function n(){StatblockConverter._hasEntryContent(B)&&(r.legendary=r.legendary||[],DiceConvert.convertTraitActionDice(B),r.legendary.push(B)),B=null}function o(a){return a.trim().replace(/<br\s*(\/)?>/gi,"")}b=StatblockConverter._getValidOptions(b);const p=this;if(!a||!a.trim())return b.cbWarning("No input!");const q=StatblockConverter._getCleanInput(a).split("\n");let r=null;const s=()=>({source:b.source,page:b.pageNumber});let t=0,u=!1;const v=()=>{if(null!=B&&j(),r){this._doStatblockPostProcess(r,b);const a=PropOrder.getOrdered(r,"monster");b.cbOutput(a,b.isAppend)}r=s(),u&&(b.isAppend=!0),t=0};let w=null,x=null,y=null,z=!0,A=!0,B=null,C=0;for(;C<q.length;C++){if(w=y,x=o(q[C]),y=x,""===y||"\\pagebreak"===y.toLowerCase()||"\\columnbreak"===y.toLowerCase()){z=!0;continue}else A=!1;if(y=c(y).trim(),""===y)continue;else if("___"===y&&z||"___"===x){null!==r&&(u=!0),v(),z=A;continue}else if("___"===y){z=A;continue}if(0==t){y=y.replace(/^\s*##/,"").trim(),r.name=this._getCleanName(y,b),t++;continue}if(1==t){y=y.replace(/^\**(.*?)\**$/,"$1"),StatblockConverter._setCleanSizeTypeAlignment(r,y,b),t++;continue}if(2==t){r.ac=d(y).replace(/Armor Class/g,"").trim(),t++;continue}if(3==t){StatblockConverter._setCleanHp(r,d(y)),t++;continue}if(4==t){this._setCleanSpeed(r,d(y),b),t++;continue}if(5==t||6==t||7==t){if(y.replace(/\s*/g,"").startsWith("|STR")||y.replace(/\s*/g,"").startsWith("|:-")){t++;continue}const a=y.split("|").map(a=>a.trim()).filter(Boolean);Parser.ABIL_ABVS.map((b,c)=>r[b]=StatblockConverter._tryGetStat(a[c])),t++;continue}if(8==t){if(~y.indexOf("Saving Throws")){StatblockConverter._setCleanSaves(r,d(y),b);continue}if(~y.indexOf("Skills")){StatblockConverter._setCleanSkills(r,d(y));continue}if(~y.indexOf("Damage Vulnerabilities")){StatblockConverter._setCleanDamageVuln(r,d(y));continue}if(~y.indexOf("Damage Resistance")){StatblockConverter._setCleanDamageRes(r,d(y));continue}if(~y.indexOf("Damage Immunities")){StatblockConverter._setCleanDamageImm(r,d(y));continue}if(~y.indexOf("Condition Immunities")){StatblockConverter._setCleanConditionImm(r,d(y));continue}if(~y.indexOf("Senses")){StatblockConverter._setCleanSenses(r,d(y));continue}if(~y.indexOf("Languages")){StatblockConverter._setCleanLanguages(r,d(y));continue}if(~y.indexOf("Challenge")){StatblockConverter._setCleanCr(r,d(y)),t++;continue}}const a=e(y);if("actions"===a.toLowerCase()){j(),t=10;continue}else if("reactions"===a.toLowerCase()){j(),t=11;continue}else if("legendary actions"===a.toLowerCase()){j(),t=12;continue}if(9==t)if(g(y)){k(),B={name:"",entries:[]};const[a,b]=h(y);B.name=a,B.entries.push(f(b))}else B.entries.push(f(y));if(10==t)if(g(y)){l(),B={name:"",entries:[]};const[a,b]=h(y);B.name=a,B.entries.push(f(b))}else B.entries.push(f(y));if(11==t)if(g(y)){m(),B={name:"",entries:[]};const[a,b]=h(y);B.name=a,B.entries.push(f(b))}else B.entries.push(f(y));if(12==t)if(g(y)){n(),B={name:"",entries:[]};const[a,b]=h(y);B.name=a,B.entries.push(f(b))}else B?B.entries.push(f(y)):!y.toLowerCase().includes("can take 3 legendary actions")&&(B={name:"",entries:[f(y)]})}v()}getSample(a){switch(a){case"txt":return StatblockConverter.SAMPLE_TEXT;case"md":return StatblockConverter.SAMPLE_MARKDOWN;default:throw new Error(`Unknown format "${a}"`);}}_doStatblockPostProcess(a,b){AcConvert.tryPostProcessAc(a,a=>b.cbWarning(`AC "${a}" requires manual conversion`),a=>b.cbWarning(`Failed to parse AC "${a}"`)),TagAttack.tryTagAttacks(a,a=>b.cbWarning(`Manual attack tagging required for "${a}"`)),TagHit.tryTagHits(a),TagDc.tryTagDcs(a),TagCondition.tryTagConditions(a),TraitActionTag.tryRun(a),LanguageTag.tryRun(a),SenseTag.tryRun(a),SpellcastingTypeTag.tryRun(a),DamageTypeTag.tryRun(a),MiscTag.tryRun(a),(()=>{Object.keys(a).forEach(b=>{a[b]instanceof Array&&0===a[b].length&&delete a[b]})})()}static _tryConvertNumber(a){try{return+a.replace(/—/g,"-")}catch(b){return a}}static _tryParseType(a){try{const b=/^(.*?) (\(.*?\))\s*$/.exec(a);return b?{type:b[1].toLowerCase(),tags:b[2].split(",").map(a=>a.replace(/\(/g,"").replace(/\)/g,"").trim().toLowerCase())}:a.toLowerCase()}catch(b){return a}}static _tryGetStat(a){try{return StatblockConverter._tryConvertNumber(/(\d+) \(.*?\)/.exec(a)[1])}catch(a){return 0}}static _tryParseDamageResVulnImmune(a,b){a.toLowerCase().includes(", bludgeoning, piercing, and slashing from")&&(a=a.replace(/, (bludgeoning, piercing, and slashing from)/gi,"; $1"));const c=a.toLowerCase().split(";"),d=[];try{return c.forEach(a=>{const c={};let e=d;a.includes("from")&&(c[b]=[],e=c[b],c.note=/from .*/.exec(a)[0],a=/(.*) from /.exec(a)[1]),a=a.replace(/and/g,""),a.split(",").forEach(a=>e.push(a.trim())),"note"in c&&d.push(c)}),d}catch(b){return a}}_tryParseSpellcasting(a,b,c){return SpellcastingTraitConvert.tryParseSpellcasting(a,b,a=>c.cbWarning(a))}static _getCleanInput(a){return a.replace(/[−–‒]/g,"-")}_getCleanName(a,b){return b.isTitleCaseName?a.toLowerCase().toTitleCase():a}static _setCleanSizeTypeAlignment(a,b,c){a.size=b[0].toUpperCase(),a.type=b.split(StrUtil.COMMAS_NOT_IN_PARENTHESES_REGEX)[0].split(" ").splice(1).join(" "),a.type=StatblockConverter._tryParseType(a.type),a.alignment=b.split(StrUtil.COMMAS_NOT_IN_PARENTHESES_REGEX)[1].toLowerCase(),AlignmentConvert.tryConvertAlignment(a,a=>c.cbWarning(`Alignment "${a}" requires manual conversion`))}static _setCleanHp(a,b){const c=b.split_handleColon("Hit Points ",1)[1],d=/^(\d+) \((.*?)\)$/.exec(c);d?(a.hp={average:+d[1],formula:d[2]},DiceConvert.cleanHpDice(a)):a.hp={special:c}}_setCleanSpeed(a,b,c){a.speed=b,SpeedConvert.tryConvertSpeed(a,c.cbWarning)}static _setCleanSaves(a,b,c){if(a.save=b.split_handleColon("Saving Throws",1)[1].trim(),a.save&&a.save.trim()){const b=a.save.split(",").map(a=>a.trim().toLowerCase()).filter(a=>a),d={};b.forEach(a=>{const b=/(\w+)\s*([-+])\s*(\d+)/.exec(a);b?d[b[1]]=`${b[2]}${b[3]}`:c.cbWarning(`Save "${a}" requires manual conversion`)}),a.save=d}}static _setCleanSkills(a,b){a.skill=b.split_handleColon("Skills",1)[1].trim().toLowerCase();const c=a.skill.split(","),d={};try{c.forEach(a=>{const b=a.split(" "),c=b.pop().trim();let e=b.join(" ").toLowerCase().trim().replace(/ /g,"");e=StatblockConverter.SKILL_SPACE_MAP[e]||e,d[e]=c}),a.skill=d,a.skill[""]&&delete a.skill[""]}catch(a){return 0}}static _setCleanDamageVuln(a,b){a.vulnerable=b.split_handleColon("Vulnerabilities",1)[1].trim(),a.vulnerable=StatblockConverter._tryParseDamageResVulnImmune(a.vulnerable,"vulnerable")}static _setCleanDamageRes(a,b){a.resist=(b.toLowerCase().includes("resistances")?b.split_handleColon("Resistances",1):b.split_handleColon("Resistance",1))[1].trim(),a.resist=StatblockConverter._tryParseDamageResVulnImmune(a.resist,"resist")}static _setCleanDamageImm(a,b){a.immune=b.split_handleColon("Immunities",1)[1].trim(),a.immune=StatblockConverter._tryParseDamageResVulnImmune(a.immune,"immune")}static _setCleanConditionImm(a,b){a.conditionImmune=b.split_handleColon("Immunities",1)[1],a.conditionImmune=StatblockConverter._tryParseDamageResVulnImmune(a.conditionImmune,"conditionImmune")}static _setCleanSenses(a,b){const c=b.toLowerCase().split_handleColon("senses",1)[1].trim(),d=[];c.split(StrUtil.COMMA_SPACE_NOT_IN_PARENTHESES_REGEX).forEach(b=>{b=b.trim(),b&&(b.includes("passive perception")?a.passive=StatblockConverter._tryConvertNumber(b.split("passive perception")[1].trim()):d.push(b.trim()))}),d.length?a.senses=d:delete a.senses}static _setCleanLanguages(a,b){a.languages=b.split_handleColon("Languages",1)[1].trim(),a.languages&&/^([-–‒—]|\\u201\d)$/.exec(a.languages.trim())?delete a.languages:a.languages=a.languages.split(StrUtil.COMMA_SPACE_NOT_IN_PARENTHESES_REGEX)}static _setCleanCr(a,b){a.cr=b.split_handleColon("Challenge",1)[1].trim().split("(")[0].trim()}static _hasEntryContent(a){return a&&(a.name||1===a.entries.length&&a.entries[0]||1<a.entries.length)}}StatblockConverter.SKILL_SPACE_MAP={sleightofhand:"sleight of hand",animalhandling:"animal handling"},StatblockConverter.SAMPLE_TEXT=`Mammon
+				`)
+				.appendTo($wrpMode)
+				.change(() => {
+					this._storedSettings.tableMode = $selMode.val();
+					this._saveSettingsDebounced();
+				});
+			const prevMode = this._storedSettings.tableMode;
+			if (prevMode) $selMode.val(prevMode);
+
+			renderDivider($wrpCustom);
+
+			const $wrpSample = $(`<div class="sidemenu__row split-v-center"/>`).appendTo($wrpCustom);
+
+			$(`<button class="btn btn-sm btn-default">Sample HTML</button>`)
+				.appendTo($wrpSample).click(() => {
+					this.inText = tableConverter.showSample("html");
+					$selMode.val("html").change();
+				});
+			$(`<button class="btn btn-sm btn-default">Sample Markdown</button>`)
+				.appendTo($wrpSample).click(() => {
+					this.inText = tableConverter.showSample("md");
+					$selMode.val("md").change();
+				});
+
+			const _getTableParseOptions = (isAppend) => ({
+				cbWarning: this.showWarning.bind(this),
+				cbOutput: (table, append) => {
+					this.doCleanAndOutput(table, append);
+				},
+				isAppend
+			});
+
+			this._menuAccess.handleParse = () => {
+				const opts = _getTableParseOptions(false);
+				if ($selMode.val() === "html") this._tableConverter.doParseHtml(this.inText, opts);
+				else this._tableConverter.doParseMarkdown(this.inText, opts);
+			};
+
+			this._menuAccess.handleParseAndAdd = () => {
+				const opts = _getTableParseOptions(true);
+				if ($selMode.val() === "html") this._tableConverter.doParseHtml(this.inText, opts);
+				else this._tableConverter.doParseMarkdown(this.inText, opts);
+			};
+		};
+
+		if (prevParser) $selParser.val(prevParser).change();
+		else renderStatblockSidemenu();
+	}
+
+	get menuAccess () {
+		return this._menuAccess;
+	}
+
+	showWarning (text) {
+		$(`#lastWarnings`).show().append(`<div>[Warning] ${text}</div>`);
+		this._editorOut.resize();
+	}
+
+	doCleanAndOutput (obj, append) {
+		const asString = JSON.stringify(obj, null, "\t");
+		const asCleanString = TextClean.getCleanedJson(asString);
+		if (append) {
+			this.outText = `${asCleanString},\n${ui.outText}`;
+			this._hasAppended = true;
+		} else {
+			this.outText = asCleanString;
+			this._hasAppended = false;
+		}
+	}
+
+	set outReadOnly (val) { this._editorOut.setOptions({readOnly: val}); }
+
+	get outText () { return this._editorOut.getValue(); }
+
+	set outText (text) { return this._editorOut.setValue(text, -1); }
+
+	get inText () { return TextClean.getReplacedQuotesText((this._editorIn.getValue() || "").trim()); }
+
+	set inText (text) { return this._editorIn.setValue(text, -1); }
+
+	get pageNumber () { return this._menuAccess.getPage() ? Number(this._menuAccess.getPage()) : undefined; }
+
+	get source () { return this._menuAccess.getSource(); }
+}
+ConverterUi.STORAGE_INPUT = "converterInput";
+ConverterUi.STORAGE_SETTINGS = "converterSettings";
+
+class StatblockConverter {
+	static _getValidOptions (options) {
+		options = options || {};
+		options.isAppend = options.isAppend || false;
+		if (!options.cbWarning || !options.cbOutput) throw new Error(`Missing required callback options!`);
+		return options;
+	}
+
+	/**
+	 * Parses statblocks from raw text pastes
+	 * @param inText Input text.
+	 * @param options Options object.
+	 * @param options.cbWarning Warning callback.
+	 * @param options.cbOutput Output callback.
+	 * @param options.isAppend Default output append mode.
+	 */
+	doParseText (inText, options) {
+		options = StatblockConverter._getValidOptions(options);
+
+		function startNextPhase (cur) {
+			return (!cur.toUpperCase().indexOf("ACTIONS") || !cur.toUpperCase().indexOf("LEGENDARY ACTIONS") || !cur.toUpperCase().indexOf("REACTIONS"))
+		}
+
+		if (!inText || !inText.trim()) return options.cbWarning("No input!");
+		const toConvert = (() => {
+			const clean = StatblockConverter._getCleanInput(inText);
+			const spl = clean.split(/(Challenge)/i);
+			spl[0] = spl[0]
+				.replace(/(\d\d?\s+\([-—+]\d\)\s*)+/gi, (...m) => `${m[0].replace(/\n/g, " ").replace(/\s+/g, " ")}\n`); // collapse multi-line ability scores
+			return spl.join("").split("\n").filter(it => it && it.trim());
+		})();
+		const stats = {};
+		stats.source = options.source || "";
+		// for the user to fill out
+		stats.page = options.pageNumber;
+
+		let prevLine = null;
+		let curLine = null;
+		for (let i = 0; i < toConvert.length; i++) {
+			prevLine = curLine;
+			curLine = toConvert[i].trim();
+
+			if (curLine === "") continue;
+
+			// name of monster
+			if (i === 0) {
+				stats.name = this._getCleanName(curLine, options);
+				continue;
+			}
+
+			// size type alignment
+			if (i === 1) {
+				StatblockConverter._setCleanSizeTypeAlignment(stats, curLine, options);
+				continue;
+			}
+
+			// armor class
+			if (i === 2) {
+				stats.ac = curLine.split_handleColon("Armor Class ", 1)[1];
+				continue;
+			}
+
+			// hit points
+			if (i === 3) {
+				StatblockConverter._setCleanHp(stats, curLine);
+				continue;
+			}
+
+			// speed
+			if (i === 4) {
+				this._setCleanSpeed(stats, curLine, options);
+				continue;
+			}
+
+			// ability scores
+			if (/STR\s*DEX\s*CON\s*INT\s*WIS\s*CHA/i.test(curLine)) {
+				// skip forward a line and grab the ability scores
+				++i;
+				const abilities = toConvert[i].trim().split(/ ?\(([+\-—])?[0-9]*\) ?/g);
+				stats.str = StatblockConverter._tryConvertNumber(abilities[0]);
+				stats.dex = StatblockConverter._tryConvertNumber(abilities[2]);
+				stats.con = StatblockConverter._tryConvertNumber(abilities[4]);
+				stats.int = StatblockConverter._tryConvertNumber(abilities[6]);
+				stats.wis = StatblockConverter._tryConvertNumber(abilities[8]);
+				stats.cha = StatblockConverter._tryConvertNumber(abilities[10]);
+				continue;
+			}
+
+			// alternate ability scores (alternating lines of abbreviation and score)
+			if (Parser.ABIL_ABVS.includes(curLine.toLowerCase())) {
+				// skip forward a line and grab the ability score
+				++i;
+				switch (curLine.toLowerCase()) {
+					case "str": stats.str = StatblockConverter._tryGetStat(toConvert[i]); continue;
+					case "dex": stats.dex = StatblockConverter._tryGetStat(toConvert[i]); continue;
+					case "con": stats.con = StatblockConverter._tryGetStat(toConvert[i]); continue;
+					case "int": stats.int = StatblockConverter._tryGetStat(toConvert[i]); continue;
+					case "wis": stats.wis = StatblockConverter._tryGetStat(toConvert[i]); continue;
+					case "cha": stats.cha = StatblockConverter._tryGetStat(toConvert[i]); continue;
+				}
+			}
+
+			// saves (optional)
+			if (!curLine.indexOf_handleColon("Saving Throws ")) {
+				StatblockConverter._setCleanSaves(stats, curLine, options);
+				continue;
+			}
+
+			// skills (optional)
+			if (!curLine.indexOf_handleColon("Skills ")) {
+				StatblockConverter._setCleanSkills(stats, curLine);
+				continue;
+			}
+
+			// damage vulnerabilities (optional)
+			if (!curLine.indexOf_handleColon("Damage Vulnerabilities ")) {
+				StatblockConverter._setCleanDamageVuln(stats, curLine);
+				continue;
+			}
+
+			// damage resistances (optional)
+			if (!curLine.indexOf_handleColon("Damage Resistance")) {
+				StatblockConverter._setCleanDamageRes(stats, curLine);
+				continue;
+			}
+
+			// damage immunities (optional)
+			if (!curLine.indexOf_handleColon("Damage Immunities ")) {
+				StatblockConverter._setCleanDamageImm(stats, curLine);
+				continue;
+			}
+
+			// condition immunities (optional)
+			if (!curLine.indexOf_handleColon("Condition Immunities ")) {
+				StatblockConverter._setCleanConditionImm(stats, curLine);
+				continue;
+			}
+
+			// senses
+			if (!curLine.indexOf_handleColon("Senses ")) {
+				StatblockConverter._setCleanSenses(stats, curLine);
+				continue;
+			}
+
+			// languages
+			if (!curLine.indexOf_handleColon("Languages ")) {
+				StatblockConverter._setCleanLanguages(stats, curLine);
+				continue;
+			}
+
+			// challenges and traits
+			// goes into actions
+			if (!curLine.indexOf_handleColon("Challenge ")) {
+				StatblockConverter._setCleanCr(stats, curLine);
+				continue;
+			}
+
+			// traits
+			stats.trait = [];
+			stats.action = [];
+			stats.reaction = [];
+			stats.legendary = [];
+
+			let curTrait = {};
+
+			let isTraits = true;
+			let isActions = false;
+			let isReactions = false;
+			let isLegendaryActions = false;
+			let isLegendaryDescription = false;
+
+			// keep going through traits til we hit actions
+			while (i < toConvert.length) {
+				if (startNextPhase(curLine)) {
+					isTraits = false;
+					isActions = !curLine.toUpperCase().indexOf_handleColon("ACTIONS");
+					isReactions = !curLine.toUpperCase().indexOf_handleColon("REACTIONS");
+					isLegendaryActions = !curLine.toUpperCase().indexOf_handleColon("LEGENDARY ACTIONS");
+					isLegendaryDescription = isLegendaryActions;
+					i++;
+					curLine = toConvert[i];
+				}
+
+				curTrait.name = "";
+				curTrait.entries = [];
+
+				const parseFirstLine = line => {
+					curTrait.name = line.split(/([.!?])/g)[0];
+					curTrait.entries.push(line.substring(curTrait.name.length + 1, line.length).trim());
+				};
+
+				if (isLegendaryDescription) {
+					// usually the first paragraph is a description of how many legendary actions the creature can make
+					// but in the case that it's missing the substring "legendary" and "action" it's probably an action
+					const compressed = curLine.replace(/\s*/g, "").toLowerCase();
+					if (!compressed.includes("legendary") && !compressed.includes("action")) isLegendaryDescription = false;
+				}
+
+				if (isLegendaryDescription) {
+					curTrait.entries.push(curLine.trim());
+					isLegendaryDescription = false;
+				} else {
+					parseFirstLine(curLine);
+				}
+
+				i++;
+				curLine = toConvert[i];
+
+				// collect subsequent paragraphs
+				while (curLine && !ConvertUtil.isNameLine(curLine) && !startNextPhase(curLine)) {
+					curTrait.entries.push(curLine.trim());
+					i++;
+					curLine = toConvert[i];
+				}
+
+				if (curTrait.name || curTrait.entries) {
+					// convert dice tags
+					DiceConvert.convertTraitActionDice(curTrait);
+
+					// convert spellcasting
+					if (isTraits) {
+						if (curTrait.name.toLowerCase().includes("spellcasting")) {
+							curTrait = this._tryParseSpellcasting(curTrait, false, options);
+							if (curTrait.success) {
+								// merge in e.g. innate spellcasting
+								if (stats.spellcasting) stats.spellcasting = stats.spellcasting.concat(curTrait.out);
+								else stats.spellcasting = curTrait.out;
+							} else stats.trait.push(curTrait.out);
+						} else {
+							if (StatblockConverter._hasEntryContent(curTrait)) stats.trait.push(curTrait);
+						}
+					}
+					if (isActions && StatblockConverter._hasEntryContent(curTrait)) stats.action.push(curTrait);
+					if (isReactions && StatblockConverter._hasEntryContent(curTrait)) stats.reaction.push(curTrait);
+					if (isLegendaryActions && StatblockConverter._hasEntryContent(curTrait)) stats.legendary.push(curTrait);
+				}
+				curTrait = {};
+			}
+
+			// Remove keys if they are empty
+			if (stats.trait.length === 0) delete stats.trait;
+			if (stats.reaction.length === 0) delete stats.reaction;
+			if (stats.legendary.length === 0) delete stats.legendary;
+		}
+
+		(function doCleanLegendaryActionHeader () {
+			if (stats.legendary) {
+				stats.legendary = stats.legendary.map(it => {
+					if (!it.name.trim() && !it.entries.length) return null;
+					const m = /can take (\d) legendary actions/gi.exec(it.entries[0]);
+					if (!it.name.trim() && m) {
+						if (m[1] !== "3") stats.legendaryActions = Number(m[1]);
+						return null;
+					} else return it;
+				}).filter(Boolean);
+			}
+		})();
+
+		this._doStatblockPostProcess(stats, options);
+		const statsOut = PropOrder.getOrdered(stats, "monster");
+		options.cbOutput(statsOut, options.isAppend);
+	}
+
+	/**
+	 * Parses statblocks from Homebrewery/GM Binder Markdown
+	 * @param inText Input text.
+	 * @param options Options object.
+	 * @param options.cbWarning Warning callback.
+	 * @param options.cbOutput Output callback.
+	 * @param options.isAppend Default output append mode.
+	 */
+	doParseMarkdown (inText, options) {
+		options = StatblockConverter._getValidOptions(options);
+
+		const self = this;
+
+		function stripQuote (line) {
+			return line.replace(/^\s*>\s*/, "").trim();
+		}
+
+		function stripDashStarStar (line) {
+			return line.replace(/\**/g, "").replace(/^-/, "").trim();
+		}
+
+		function stripTripleHash (line) {
+			return line.replace(/^###/, "").trim();
+		}
+
+		function stripLeadingSymbols (line) {
+			const removeFirstInnerStar = line.trim().startsWith("*");
+			const clean = line.replace(/^[^A-Za-z0-9]*/, "").trim();
+			return removeFirstInnerStar ? clean.replace(/\*/, "") : clean;
+		}
+
+		function isInlineHeader (line) {
+			// it should really start with "***" but, homebrew
+			return line.trim().startsWith("**");
+		}
+
+		if (!inText || !inText.trim()) return options.cbWarning("No input!");
+		const toConvert = StatblockConverter._getCleanInput(inText).split("\n");
+		let stats = null;
+
+		const getNewStatblock = () => {
+			return {
+				source: options.source,
+				page: options.pageNumber
+			}
+		};
+
+		let parsed = 0;
+		let hasMultipleBlocks = false;
+		const doOutputStatblock = () => {
+			if (trait != null) doAddFromParsed();
+			if (stats) {
+				this._doStatblockPostProcess(stats, options);
+				const statsOut = PropOrder.getOrdered(stats, "monster");
+				options.cbOutput(statsOut, options.isAppend);
+			}
+			stats = getNewStatblock();
+			if (hasMultipleBlocks) options.isAppend = true; // append any further blocks we find in this parse
+			parsed = 0;
+		};
+
+		let prevLine = null;
+		let curLineRaw = null;
+		let curLine = null;
+		let prevBlank = true;
+		let nextPrevBlank = true;
+		let trait = null;
+
+		function getCleanTraitText (line) {
+			return line.replace(/^\*\*\*?/, "").split(/.\s*\*\*\*?/).map(it => it.trim());
+		}
+
+		function doAddFromParsed () {
+			if (parsed === 9) { // traits
+				doAddTrait();
+			} else if (parsed === 10) { // actions
+				doAddAction();
+			} else if (parsed === 11) { // reactions
+				doAddReaction();
+			} else if (parsed === 12) { // legendary actions
+				doAddLegendary();
+			}
+		}
+
+		function doAddTrait () {
+			if (StatblockConverter._hasEntryContent(trait)) {
+				stats.trait = stats.trait || [];
+
+				DiceConvert.convertTraitActionDice(trait);
+
+				// convert spellcasting
+				if (trait.name.toLowerCase().includes("spellcasting")) {
+					trait = self._tryParseSpellcasting(trait, true, options);
+					if (trait.success) {
+						// merge in e.g. innate spellcasting
+						if (stats.spellcasting) stats.spellcasting = stats.spellcasting.concat(trait.out);
+						else stats.spellcasting = trait.out;
+					} else stats.trait.push(trait.out);
+				} else {
+					stats.trait.push(trait)
+				}
+			}
+			trait = null;
+		}
+
+		function doAddAction () {
+			if (StatblockConverter._hasEntryContent(trait)) {
+				stats.action = stats.action || [];
+
+				DiceConvert.convertTraitActionDice(trait);
+				stats.action.push(trait);
+			}
+			trait = null;
+		}
+
+		function doAddReaction () {
+			if (StatblockConverter._hasEntryContent(trait)) {
+				stats.reaction = stats.reaction || [];
+
+				DiceConvert.convertTraitActionDice(trait);
+				stats.reaction.push(trait);
+			}
+			trait = null;
+		}
+
+		function doAddLegendary () {
+			if (StatblockConverter._hasEntryContent(trait)) {
+				stats.legendary = stats.legendary || [];
+
+				DiceConvert.convertTraitActionDice(trait);
+				stats.legendary.push(trait);
+			}
+			trait = null;
+		}
+
+		function getCleanedRaw (str) {
+			return str.trim()
+				.replace(/<br\s*(\/)?>/gi, ""); // remove <br>
+		}
+
+		let i = 0;
+		for (; i < toConvert.length; i++) {
+			prevLine = curLine;
+			curLineRaw = getCleanedRaw(toConvert[i]);
+			curLine = curLineRaw;
+
+			if (curLine === "" || curLine.toLowerCase() === "\\pagebreak" || curLine.toLowerCase() === "\\columnbreak") {
+				prevBlank = true;
+				continue;
+			} else nextPrevBlank = false;
+			curLine = stripQuote(curLine).trim();
+			if (curLine === "") continue;
+			else if (
+				(curLine === "___" && prevBlank) // handle nicely separated blocks
+				|| curLineRaw === "___" // handle multiple stacked blocks
+			) {
+				if (stats !== null) hasMultipleBlocks = true;
+				doOutputStatblock();
+				prevBlank = nextPrevBlank;
+				continue;
+			} else if (curLine === "___") {
+				prevBlank = nextPrevBlank;
+				continue;
+			}
+
+			// name of monster
+			if (parsed === 0) {
+				curLine = curLine.replace(/^\s*##/, "").trim();
+				stats.name = this._getCleanName(curLine, options);
+				parsed++;
+				continue;
+			}
+
+			// size type alignment
+			if (parsed === 1) {
+				curLine = curLine.replace(/^\**(.*?)\**$/, "$1");
+				StatblockConverter._setCleanSizeTypeAlignment(stats, curLine, options);
+				parsed++;
+				continue;
+			}
+
+			// armor class
+			if (parsed === 2) {
+				stats.ac = stripDashStarStar(curLine).replace(/Armor Class/g, "").trim();
+				parsed++;
+				continue;
+			}
+
+			// hit points
+			if (parsed === 3) {
+				StatblockConverter._setCleanHp(stats, stripDashStarStar(curLine));
+				parsed++;
+				continue;
+			}
+
+			// speed
+			if (parsed === 4) {
+				this._setCleanSpeed(stats, stripDashStarStar(curLine), options);
+				parsed++;
+				continue;
+			}
+
+			// ability scores
+			if (parsed === 5 || parsed === 6 || parsed === 7) {
+				// skip the two header rows
+				if (curLine.replace(/\s*/g, "").startsWith("|STR") || curLine.replace(/\s*/g, "").startsWith("|:-")) {
+					parsed++;
+					continue;
+				}
+				const abilities = curLine.split("|").map(it => it.trim()).filter(Boolean);
+				Parser.ABIL_ABVS.map((abi, j) => stats[abi] = StatblockConverter._tryGetStat(abilities[j]));
+				parsed++;
+				continue;
+			}
+
+			if (parsed === 8) {
+				// saves (optional)
+				if (~curLine.indexOf("Saving Throws")) {
+					StatblockConverter._setCleanSaves(stats, stripDashStarStar(curLine), options);
+					continue;
+				}
+
+				// skills (optional)
+				if (~curLine.indexOf("Skills")) {
+					StatblockConverter._setCleanSkills(stats, stripDashStarStar(curLine));
+					continue;
+				}
+
+				// damage vulnerabilities (optional)
+				if (~curLine.indexOf("Damage Vulnerabilities")) {
+					StatblockConverter._setCleanDamageVuln(stats, stripDashStarStar(curLine));
+					continue;
+				}
+
+				// damage resistances (optional)
+				if (~curLine.indexOf("Damage Resistance")) {
+					StatblockConverter._setCleanDamageRes(stats, stripDashStarStar(curLine));
+					continue;
+				}
+
+				// damage immunities (optional)
+				if (~curLine.indexOf("Damage Immunities")) {
+					StatblockConverter._setCleanDamageImm(stats, stripDashStarStar(curLine));
+					continue;
+				}
+
+				// condition immunities (optional)
+				if (~curLine.indexOf("Condition Immunities")) {
+					StatblockConverter._setCleanConditionImm(stats, stripDashStarStar(curLine));
+					continue;
+				}
+
+				// senses
+				if (~curLine.indexOf("Senses")) {
+					StatblockConverter._setCleanSenses(stats, stripDashStarStar(curLine));
+					continue;
+				}
+
+				// languages
+				if (~curLine.indexOf("Languages")) {
+					StatblockConverter._setCleanLanguages(stats, stripDashStarStar(curLine));
+					continue;
+				}
+
+				if (~curLine.indexOf("Challenge")) {
+					StatblockConverter._setCleanCr(stats, stripDashStarStar(curLine));
+					parsed++;
+					continue;
+				}
+			}
+
+			const cleanedLine = stripTripleHash(curLine);
+			if (cleanedLine.toLowerCase() === "actions") {
+				doAddFromParsed();
+				parsed = 10;
+				continue;
+			} else if (cleanedLine.toLowerCase() === "reactions") {
+				doAddFromParsed();
+				parsed = 11;
+				continue;
+			} else if (cleanedLine.toLowerCase() === "legendary actions") {
+				doAddFromParsed();
+				parsed = 12;
+				continue;
+			}
+
+			// traits
+			if (parsed === 9) {
+				if (isInlineHeader(curLine)) {
+					doAddTrait();
+					trait = {name: "", entries: []};
+					const [name, text] = getCleanTraitText(curLine);
+					trait.name = name;
+					trait.entries.push(stripLeadingSymbols(text));
+				} else {
+					trait.entries.push(stripLeadingSymbols(curLine));
+				}
+			}
+
+			// actions
+			if (parsed === 10) {
+				if (isInlineHeader(curLine)) {
+					doAddAction();
+					trait = {name: "", entries: []};
+					const [name, text] = getCleanTraitText(curLine);
+					trait.name = name;
+					trait.entries.push(stripLeadingSymbols(text));
+				} else {
+					trait.entries.push(stripLeadingSymbols(curLine));
+				}
+			}
+
+			// reactions
+			if (parsed === 11) {
+				if (isInlineHeader(curLine)) {
+					doAddReaction();
+					trait = {name: "", entries: []};
+					const [name, text] = getCleanTraitText(curLine);
+					trait.name = name;
+					trait.entries.push(stripLeadingSymbols(text));
+				} else {
+					trait.entries.push(stripLeadingSymbols(curLine));
+				}
+			}
+
+			// legendary actions
+			if (parsed === 12) {
+				if (isInlineHeader(curLine)) {
+					doAddLegendary();
+					trait = {name: "", entries: []};
+					const [name, text] = getCleanTraitText(curLine);
+					trait.name = name;
+					trait.entries.push(stripLeadingSymbols(text));
+				} else {
+					if (!trait) { // legendary action intro text
+						// ignore generic LA intro; the renderer will insert it
+						if (!curLine.toLowerCase().includes("can take 3 legendary actions")) {
+							trait = {name: "", entries: [stripLeadingSymbols(curLine)]};
+						}
+					} else trait.entries.push(stripLeadingSymbols(curLine));
+				}
+			}
+		}
+
+		doOutputStatblock();
+	}
+
+	getSample (format) {
+		switch (format) {
+			case "txt": return StatblockConverter.SAMPLE_TEXT;
+			case "md": return StatblockConverter.SAMPLE_MARKDOWN;
+			default: throw new Error(`Unknown format "${format}"`);
+		}
+	}
+
+	// SHARED UTILITY FUNCTIONS ////////////////////////////////////////////////////////////////////////////////////////
+	_doStatblockPostProcess (stats, options) {
+		const doCleanup = () => {
+			// remove any empty arrays
+			Object.keys(stats).forEach(k => {
+				if (stats[k] instanceof Array && stats[k].length === 0) {
+					delete stats[k];
+				}
+			});
+		};
+
+		if (stats.trait) stats.trait.forEach(trait => RechargeConvert.tryConvertRecharge(trait, () => {}, () => options.cbWarning(`Manual recharge tagging required for trait "${trait.name}"`)));
+		if (stats.action) stats.action.forEach(action => RechargeConvert.tryConvertRecharge(action, () => {}, () => options.cbWarning(`Manual recharge tagging required for action "${action.name}"`)));
+		AcConvert.tryPostProcessAc(
+			stats,
+			(ac) => options.cbWarning(`AC "${ac}" requires manual conversion`),
+			(ac) => options.cbWarning(`Failed to parse AC "${ac}"`)
+		);
+		TagAttack.tryTagAttacks(stats, (atk) => options.cbWarning(`Manual attack tagging required for "${atk}"`));
+		TagHit.tryTagHits(stats);
+		TagDc.tryTagDcs(stats);
+		TagCondition.tryTagConditions(stats);
+		TraitActionTag.tryRun(stats);
+		LanguageTag.tryRun(stats);
+		SenseTag.tryRun(stats);
+		SpellcastingTypeTag.tryRun(stats);
+		DamageTypeTag.tryRun(stats);
+		MiscTag.tryRun(stats);
+		doCleanup();
+	}
+
+	static _tryConvertNumber (strNumber) {
+		try {
+			return Number(strNumber.replace(/—/g, "-"))
+		} catch (e) {
+			return strNumber;
+		}
+	}
+
+	static _tryParseType (strType) {
+		try {
+			const m = /^(.*?) (\(.*?\))\s*$/.exec(strType);
+			if (m) {
+				return {type: m[1].toLowerCase(), tags: m[2].split(",").map(s => s.replace(/\(/g, "").replace(/\)/g, "").trim().toLowerCase())}
+			}
+			return strType.toLowerCase();
+		} catch (e) {
+			return strType;
+		}
+	}
+
+	static _tryGetStat (strLine) {
+		try {
+			return StatblockConverter._tryConvertNumber(/(\d+) \(.*?\)/.exec(strLine)[1]);
+		} catch (e) {
+			return 0;
+		}
+	}
+
+	/**
+	 * Tries to parse immunities, resistances, and vulnerabilities
+	 * @param strDamage The string to parse.
+	 * @param modProp the output property (e.g. "vulnerable").
+	 */
+	static _tryParseDamageResVulnImmune (strDamage, modProp) {
+		// handle the case where a comma is mistakenly used instead of a semicolon
+		if (strDamage.toLowerCase().includes(", bludgeoning, piercing, and slashing from")) {
+			strDamage = strDamage.replace(/, (bludgeoning, piercing, and slashing from)/gi, "; $1")
+		}
+
+		const splSemi = strDamage.toLowerCase().split(";");
+		const newDamage = [];
+		try {
+			splSemi.forEach(section => {
+				const tempDamage = {};
+				let pushArray = newDamage;
+				if (section.includes("from")) {
+					tempDamage[modProp] = [];
+					pushArray = tempDamage[modProp];
+					tempDamage["note"] = /from .*/.exec(section)[0];
+					section = /(.*) from /.exec(section)[1];
+				}
+				section = section.replace(/and/g, '');
+				section.split(",").forEach(s => pushArray.push(s.trim()));
+				if ("note" in tempDamage) newDamage.push(tempDamage)
+			});
+			return newDamage;
+		} catch (ignored) {
+			return strDamage;
+		}
+	}
+
+	_tryParseSpellcasting (trait, isMarkdown, options) {
+		return SpellcastingTraitConvert.tryParseSpellcasting(trait, isMarkdown, (err) => options.cbWarning(err));
+	}
+
+	// SHARED PARSING FUNCTIONS ////////////////////////////////////////////////////////////////////////////////////////
+	static _getCleanInput (ipt) {
+		return ipt
+			.replace(/[−–‒]/g, "-") // convert minus signs to hyphens
+		;
+	}
+
+	_getCleanName (line, options) {
+		return options.isTitleCaseName ? line.toLowerCase().toTitleCase() : line;
+	}
+
+	static _setCleanSizeTypeAlignment (stats, line, options) {
+		const mSidekick = /^(\d+)(?:st|nd|rd|th)\s*\W+\s*level\s+(.*)$/i.exec(line.trim());
+		if (mSidekick) {
+			// sidekicks
+			stats.level = Number(mSidekick[1]);
+			stats.size = mSidekick[2].trim()[0].toUpperCase();
+			stats.type = mSidekick[2].split(" ").splice(1).join(" ");
+		} else {
+			// regular creatures
+			stats.size = line[0].toUpperCase();
+			stats.type = line.split(StrUtil.COMMAS_NOT_IN_PARENTHESES_REGEX)[0].split(" ").splice(1).join(" ");
+
+			stats.alignment = line.split(StrUtil.COMMAS_NOT_IN_PARENTHESES_REGEX)[1].toLowerCase();
+			AlignmentConvert.tryConvertAlignment(stats, (ali) => options.cbWarning(`Alignment "${ali}" requires manual conversion`));
+		}
+		stats.type = StatblockConverter._tryParseType(stats.type);
+	}
+
+	static _setCleanHp (stats, line) {
+		const rawHp = line.split_handleColon("Hit Points ", 1)[1];
+		// split HP into average and formula
+		const m = /^(\d+) \((.*?)\)$/.exec(rawHp);
+		if (!m) stats.hp = {special: rawHp}; // for e.g. Avatar of Death
+		else {
+			stats.hp = {
+				average: Number(m[1]),
+				formula: m[2]
+			};
+			DiceConvert.cleanHpDice(stats);
+		}
+	}
+
+	_setCleanSpeed (stats, line, options) {
+		stats.speed = line;
+		SpeedConvert.tryConvertSpeed(stats, options.cbWarning);
+	}
+
+	static _setCleanSaves (stats, line, options) {
+		stats.save = line.split_handleColon("Saving Throws", 1)[1].trim();
+		// convert to object format
+		if (stats.save && stats.save.trim()) {
+			const spl = stats.save.split(",").map(it => it.trim().toLowerCase()).filter(it => it);
+			const nu = {};
+			spl.forEach(it => {
+				const m = /(\w+)\s*([-+])\s*(\d+)/.exec(it);
+				if (m) {
+					nu[m[1]] = `${m[2]}${m[3]}`;
+				} else {
+					options.cbWarning(`Save "${it}" requires manual conversion`);
+				}
+			});
+			stats.save = nu;
+		}
+	}
+
+	static _setCleanSkills (stats, line) {
+		stats.skill = line.split_handleColon("Skills", 1)[1].trim().toLowerCase();
+		const split = stats.skill.split(",");
+		const newSkills = {};
+		try {
+			split.forEach(s => {
+				const splSpace = s.split(" ");
+				const val = splSpace.pop().trim();
+				let name = splSpace.join(" ").toLowerCase().trim().replace(/ /g, "");
+				name = StatblockConverter.SKILL_SPACE_MAP[name] || name;
+				newSkills[name] = val;
+			});
+			stats.skill = newSkills;
+			if (stats.skill[""]) delete stats.skill[""]; // remove empty properties
+		} catch (ignored) {
+			return 0;
+		}
+	}
+
+	static _setCleanDamageVuln (stats, line) {
+		stats.vulnerable = line.split_handleColon("Vulnerabilities", 1)[1].trim();
+		stats.vulnerable = StatblockConverter._tryParseDamageResVulnImmune(stats.vulnerable, "vulnerable");
+	}
+
+	static _setCleanDamageRes (stats, line) {
+		stats.resist = (line.toLowerCase().includes("resistances") ? line.split_handleColon("Resistances", 1) : line.split_handleColon("Resistance", 1))[1].trim();
+		stats.resist = StatblockConverter._tryParseDamageResVulnImmune(stats.resist, "resist");
+	}
+
+	static _setCleanDamageImm (stats, line) {
+		stats.immune = line.split_handleColon("Immunities", 1)[1].trim();
+		stats.immune = StatblockConverter._tryParseDamageResVulnImmune(stats.immune, "immune");
+	}
+
+	static _setCleanConditionImm (stats, line) {
+		stats.conditionImmune = line.split_handleColon("Immunities", 1)[1];
+		stats.conditionImmune = StatblockConverter._tryParseDamageResVulnImmune(stats.conditionImmune, "conditionImmune");
+	}
+
+	static _setCleanSenses (stats, line) {
+		const senses = line.toLowerCase().split_handleColon("senses", 1)[1].trim();
+		const tempSenses = [];
+		senses.split(StrUtil.COMMA_SPACE_NOT_IN_PARENTHESES_REGEX).forEach(s => {
+			s = s.trim();
+			if (s) {
+				if (s.includes("passive perception")) stats.passive = StatblockConverter._tryConvertNumber(s.split("passive perception")[1].trim());
+				else tempSenses.push(s.trim());
+			}
+		});
+		if (tempSenses.length) stats.senses = tempSenses;
+		else delete stats.senses;
+	}
+
+	static _setCleanLanguages (stats, line) {
+		stats.languages = line.split_handleColon("Languages", 1)[1].trim();
+		if (stats.languages && /^([-–‒—]|\\u201\d)$/.exec(stats.languages.trim())) delete stats.languages;
+		else {
+			stats.languages = stats.languages
+			// Clean caps words
+				.split(/(\W)/g)
+				.map(s => {
+					return s
+						.replace(/Telepathy/g, "telepathy")
+						.replace(/All/g, "all")
+						.replace(/Understands/g, "understands")
+						.replace(/Cant/g, "cant")
+						.replace(/Can/g, "can")
+				})
+				.join("")
+				.split(StrUtil.COMMA_SPACE_NOT_IN_PARENTHESES_REGEX);
+		}
+	}
+
+	static _setCleanCr (stats, line) {
+		stats.cr = line.split_handleColon("Challenge", 1)[1].trim().split("(")[0].trim();
+	}
+
+	static _hasEntryContent (trait) {
+		return trait && (trait.name || (trait.entries.length === 1 && trait.entries[0]) || trait.entries.length > 1);
+	}
+}
+StatblockConverter.SKILL_SPACE_MAP = {
+	"sleightofhand": "sleight of hand",
+	"animalhandling": "animal handling"
+};
+StatblockConverter.SAMPLE_TEXT =
+`Mammon
 Huge fiend (devil), lawful evil
 Armor Class 20 (natural armor)
 Hit Points 378 (28d12 + 196)
@@ -55,7 +1428,9 @@ LEGENDARY ACTIONS
 Mammon can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. Mammon regains spent legendary actions at the start of his turn.
 Attack. Mammon makes one purse or molten coins attack.
 Make It Rain! Mammon casts gold and jewels into a 5-foot radius within 60 feet. One creature within 60 feet of the treasure that can see it must make a DC 24 Wisdom saving throw. On a failure, the creature must use its reaction to move its speed toward the trinkets, which vanish at the end of the turn.
-Deep Pockets (3 actions). Mammon recharges his Your Weight In Gold ability.`,StatblockConverter.SAMPLE_MARKDOWN=`___
+Deep Pockets (3 actions). Mammon recharges his Your Weight In Gold ability.`;
+StatblockConverter.SAMPLE_MARKDOWN =
+`___
 >## Lich
 >*Medium undead, any evil alignment*
 >___
@@ -109,7 +1484,142 @@ Deep Pockets (3 actions). Mammon recharges his Your Weight In Gold ability.`,Sta
 >
 >***Disrupt Life (Costs 3 Actions).*** Each non-undead creature within 20 feet of the lich must make a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.
 >
->`;class TableConverter{showSample(a){switch(a){case"html":return TableConverter.SAMPLE_HTML;case"md":return TableConverter.SAMPLE_MARKDOWN;default:throw new Error(`Unknown format "${a}"`);}}static _doCleanTable(a){if(a.caption||delete a.caption,a.colLabels&&!a.colLabels.some(Boolean)&&delete a.colLabels,a.colStyles&&!a.colStyles.some(Boolean)&&delete a.colStyles,!a.rows.some(Boolean))throw new Error("Table had no rows!")}doParseHtml(a,b){if(!a||!a.trim())return b.cbWarning("No input!");const c=(a,c)=>{const d={type:"table",caption:c,colLabels:[],colStyles:[],rows:[]},e=a=>{let b=a.text().trim();return b.toUpperCase()===b&&(b=b.toTitleCase()),b};if(a.find(`caption`)&&(d.caption=a.find(`caption`).text().trim()),a.find(`thead`)){const c=a.find(`thead tr`);1!==c.length&&b.cbWarning(`Table header had ${c.length} rows!`),c.each((a,b)=>{const c=$(b);if(0===a)c.find(`th, td`).each((a,b)=>d.colLabels.push(e($(b))));else{const a=[];c.find(`th, td`).each((b,c)=>a.push(e($(c)))),a.length&&d.rows.push(a)}}),a.find(`thead`).remove()}else a.find(`th`)&&(a.find(`th`).each((a,b)=>d.colLabels.push(e($(b)))),a.find(`th`).parent().remove());const f=(a,b)=>{const c=$(b),e=[];c.find(`td`).each((a,b)=>{const c=$(b);e.push(c.text().trim())}),d.rows.push(e)};a.find(`tbody`)?a.find(`tbody tr`).each(f):a.find(`tr`).each(f),this._postProcessTable(d),b.cbOutput(d,b.isAppend)},d=$(a);if(d.is("table"))c(d);else{d.find("table").each((a,b)=>{const d=$(b);c(d,"")})}}doParseMarkdown(a,b){if(!a||!a.trim())return b.cbWarning("No input!");const c=(a,b)=>{const c=a.filter(a=>a&&a.trim());c.every(a=>a.trim().startsWith("|"))&&(a=a.map(a=>a.replace(/^\s*\|(.*?)$/,"$1"))),c.every(a=>a.trim().endsWith("|"))&&(a=a.map(a=>a.replace(/^(.*?)\|\s*$/,"$1")));const d={type:"table",caption:b,colLabels:[],colStyles:[],rows:[]};let e=!1,f=[];return a.map(a=>a.trim()).filter(Boolean).forEach(a=>{const b=a.split("|").map(a=>a.trim());b.length&&(b.every(a=>!a||!!/^:?\s*---+\s*:?$/.exec(a))?(f=b.map(a=>a.startsWith(":")&&a.endsWith(":")?"text-center":a.startsWith(":")?"text-align-left":a.endsWith(":")?"text-right":""),e=!0):e?d.rows.push(b):d.colLabels=b)}),d.colStyles=f,this._postProcessTable(d),d},d=a.replace(/\r\n/g,"\n").replace(/\r/g,"\n").split(/\n/g),e=[];let f=null;d.forEach(a=>{a.trim().startsWith("##### ")?(f&&f.lines.length&&e.push(f),f={caption:a.trim().replace(/^##### /,""),lines:[]}):(f=f||{lines:[]},f.lines.push(a))}),f&&f.lines.length&&e.push(f);const g=e.map(a=>c(a.lines,a.caption)).reverse();g.forEach((a,c)=>{b.isAppend?b.cbOutput(a,!0):0===c?b.cbOutput(a,!1):b.cbOutput(a,!0)})}_postProcessTable(a){(function(){const b=Math.max(a.colLabels,...a.rows.map(a=>a.length));a.rows.forEach(a=>{for(;a.length<b;)a.push("")})})(),function(){const b=(()=>{if(!a.rows.length)return null;const b=[...Array(a.rows[0].length)].map(()=>0);return a.rows.forEach(a=>{a.forEach((a,c)=>{var d=Math.min;b[c]+=d(200,a.length)})}),b.map(b=>b/a.rows.length)})();if(null!=b){const c=b.reduce((c,a)=>c+a,0),d=(()=>{const a=c/12,d=b.map((a,b)=>({ix:b,val:a})).sort((c,a)=>SortUtil.ascSort(c.val,a.val));for(let b=0;b<d.length-1;++b){const c=d[b];if(c.val<a){const e=a-c.val;d[b].val=a;const f=e/d.length-(b+1);for(let a=b+1;a<d.length;++a)d[a].val-=f}}return d.sort((c,a)=>SortUtil.ascSort(c.ix,a.ix)).map(a=>a.val)})();let e=d.map(a=>a/c);for(;1<e.reduce((c,a)=>c+a,0);){const a=1-e.reduce((c,a)=>c+a,0);e=e.map(b=>b+a/e.length)}const f=e.map(a=>Math.round(12*a));f.forEach((b,c)=>{const d=`col-${b}`;a.colStyles[c]=a.colStyles[c]?`${a.colStyles[c]} ${d}`:d})}}(),function(){let b=!0;a.rows.forEach(a=>{isNaN(+a[0])&&(b=!1)}),b&&!a.colStyles.includes("text-center")&&(a.colStyles[0]+=" text-center")}(),function(){a.rows=a.rows.map(a=>a.map(a=>a.replace(RollerUtil.DICE_REGEX,`{@dice $&}`)))}(),TableConverter._doCleanTable(a)}}TableConverter.SAMPLE_HTML=`<table>
+>`;
+
+class TableConverter {
+	showSample (format) {
+		switch (format) {
+			case "html": return TableConverter.SAMPLE_HTML;
+			case "md": return TableConverter.SAMPLE_MARKDOWN;
+			default: throw new Error(`Unknown format "${format}"`)
+		}
+	}
+
+	/**
+	 * Parses tables from HTML.
+	 * @param inText Input text.
+	 * @param options Options object.
+	 * @param options.cbWarning Warning callback.
+	 * @param options.cbOutput Output callback.
+	 * @param options.isAppend Default output append mode.
+	 */
+	doParseHtml (inText, options) {
+		if (!inText || !inText.trim()) return options.cbWarning("No input!");
+
+		const handleTable = ($table, caption) => {
+			const tbl = {
+				type: "table",
+				caption,
+				colLabels: [],
+				colStyles: [],
+				rows: []
+			};
+
+			const getCleanHeaderText = ($ele) => {
+				let txt = $ele.text().trim();
+
+				// if it's all-uppercase, title-case it
+				if (txt.toUpperCase() === txt) txt = txt.toTitleCase();
+
+				return txt;
+			};
+
+			// Caption
+			if ($table.find(`caption`)) {
+				tbl.caption = $table.find(`caption`).text().trim();
+			}
+
+			// Columns
+			if ($table.find(`thead`)) {
+				const $headerRows = $table.find(`thead tr`);
+				if ($headerRows.length !== 1) options.cbWarning(`Table header had ${$headerRows.length} rows!`);
+				$headerRows.each((i, r) => {
+					const $r = $(r);
+					if (i === 0) { // use first tr as column headers
+						$r.find(`th, td`).each((i, h) => tbl.colLabels.push(getCleanHeaderText($(h))));
+					} else { // use others as rows
+						const row = [];
+						$r.find(`th, td`).each((i, h) => row.push(getCleanHeaderText($(h))));
+						if (row.length) tbl.rows.push(row);
+					}
+				});
+				$table.find(`thead`).remove();
+			} else if ($table.find(`th`)) {
+				$table.find(`th`).each((i, h) => tbl.colLabels.push(getCleanHeaderText($(h))));
+				$table.find(`th`).parent().remove();
+			}
+
+			// Rows
+			const handleTableRow = (i, r) => {
+				const $r = $(r);
+				const row = [];
+				$r.find(`td`).each((i, cell) => {
+					const $cell = $(cell);
+					row.push($cell.text().trim());
+				});
+				tbl.rows.push(row);
+			};
+
+			if ($table.find(`tbody`)) {
+				$table.find(`tbody tr`).each(handleTableRow);
+			} else {
+				$table.find(`tr`).each(handleTableRow);
+			}
+
+			MarkdownConverter.postProcessTable(tbl);
+			options.cbOutput(tbl, options.isAppend);
+		};
+
+		const $input = $(inText);
+		if ($input.is("table")) {
+			handleTable($input);
+		} else {
+			// TODO pull out any preceding text to use as the caption; pass this in
+			const caption = "";
+			$input.find("table").each((i, e) => {
+				const $table = $(e);
+				handleTable($table, caption);
+			});
+		}
+	}
+
+	/**
+	 * Parses tables from Markdown.
+	 * @param inText Input text.
+	 * @param options Options object.
+	 * @param options.cbWarning Warning callback.
+	 * @param options.cbOutput Output callback.
+	 * @param options.isAppend Default output append mode.
+	 */
+	doParseMarkdown (inText, options) {
+		if (!inText || !inText.trim()) return options.cbWarning("No input!");
+
+		const lines = inText.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split(/\n/g);
+		const stack = [];
+		let cur = null;
+		lines.forEach(l => {
+			if (l.trim().startsWith("##### ")) {
+				if (cur && cur.lines.length) stack.push(cur);
+				cur = {caption: l.trim().replace(/^##### /, ""), lines: []};
+			} else {
+				cur = cur || {lines: []};
+				cur.lines.push(l);
+			}
+		});
+		if (cur && cur.lines.length) stack.push(cur);
+
+		const toOutput = stack.map(tbl => MarkdownConverter.getConvertedTable(tbl.lines, tbl.caption)).reverse();
+		toOutput.forEach((out, i) => {
+			if (options.isAppend) options.cbOutput(out, true);
+			else {
+				if (i === 0) options.cbOutput(out, false);
+				else options.cbOutput(out, true);
+			}
+		});
+	}
+}
+TableConverter.SAMPLE_HTML =
+`<table>
   <thead>
     <tr>
       <td><p><strong>Character Level</strong></p></td>
@@ -144,9 +1654,26 @@ Deep Pockets (3 actions). Mammon recharges his Your Weight In Gold ability.`,Sta
       <td><p>20,000 gp plus 1d10 × 250 gp, three uncommon magic items, two rare items, one very rare item, normal starting equipment</p></td>
     </tr>
   </tbody>
-</table>`,TableConverter.SAMPLE_MARKDOWN=`| Character Level | Low Magic Campaign                                                                | Standard Campaign                                                                                | High Magic Campaign                                                                                                     |
+</table>`;
+TableConverter.SAMPLE_MARKDOWN =
+`| Character Level | Low Magic Campaign                                                                | Standard Campaign                                                                                | High Magic Campaign                                                                                                     |
 |-----------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | 1st–4th         | Normal starting equipment                                                         | Normal starting equipment                                                                        | Normal starting equipment                                                                                               |
 | 5th–10th        | 500 gp plus 1d10 × 25 gp, normal starting equipment                               | 500 gp plus 1d10 × 25 gp, normal starting equipment                                              | 500 gp plus 1d10 × 25 gp, one uncommon magic item, normal starting equipment                                            |
 | 11th–16th       | 5,000 gp plus 1d10 × 250 gp, one uncommon magic item, normal starting equipment   | 5,000 gp plus 1d10 × 250 gp, two uncommon magic items, normal starting equipment                 | 5,000 gp plus 1d10 × 250 gp, three uncommon magic items, one rare item, normal starting equipment                       |
-| 17th–20th       | 20,000 gp plus 1d10 × 250 gp, two uncommon magic items, normal starting equipment | 20,000 gp plus 1d10 × 250 gp, two uncommon magic items, one rare item, normal starting equipment | 20,000 gp plus 1d10 × 250 gp, three uncommon magic items, two rare items, one very rare item, normal starting equipment |`;const statblockConverter=new StatblockConverter,tableConverter=new TableConverter,ui=new ConverterUi;ui.statblockConverter=statblockConverter,ui.tableConverter=tableConverter;async function doPageInit(){ExcludeUtil.pInitialise(),await BrewUtil.pAddBrewData();const a=await SpellcastingTraitConvert.pGetSpellData();SpellcastingTraitConvert.init(a),ui.init()}
+| 17th–20th       | 20,000 gp plus 1d10 × 250 gp, two uncommon magic items, normal starting equipment | 20,000 gp plus 1d10 × 250 gp, two uncommon magic items, one rare item, normal starting equipment | 20,000 gp plus 1d10 × 250 gp, three uncommon magic items, two rare items, one very rare item, normal starting equipment |`;
+
+const statblockConverter = new StatblockConverter();
+const tableConverter = new TableConverter();
+const ui = new ConverterUi();
+
+ui.statblockConverter = statblockConverter;
+ui.tableConverter = tableConverter;
+
+async function doPageInit () {
+	ExcludeUtil.pInitialise(); // don't await, as this is only used for search
+	await BrewUtil.pAddBrewData(); // init homebrew
+	const spellData = await SpellcastingTraitConvert.pGetSpellData();
+	SpellcastingTraitConvert.init(spellData);
+	ui.init();
+}

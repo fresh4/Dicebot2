@@ -1,11 +1,100 @@
-"use strict";class BooksList{constructor(a){this.contentsUrl=a.contentsUrl,this.sortFn=a.sortFn,this.dataProp=a.dataProp,this.enhanceRowDataFn=a.enhanceRowDataFn,this.rootPage=a.rootPage,this.rowBuilderFn=a.rowBuilderFn,this.list=null,this.dataIx=0,this.dataList=[]}onPageLoad(){ExcludeUtil.pInitialise(),SortUtil.initHandleFilterButtonClicks(),DataUtil.loadJSON(this.contentsUrl).then(this.onJsonLoad.bind(this))}onJsonLoad(a){const b=(d,a,b)=>c.sortFn(c.dataList,d,a,b);this.list=new List("listcontainer",{valueNames:["name","uniqueid"],listClass:"books",sortFunction:b});const c=this;$("#filtertools").find("button.sort").click(function(){const a=$(this);$("#filtertools").find(".caret").removeClass("caret--reverse caret"),"asc"===a.attr("sortby")?(a.find("span").addClass("caret caret--reverse"),a.attr("sortby","desc")):(a.attr("sortby","asc"),a.find("span").addClass("caret")),c.list.sort(a.data("sort"),{order:a.attr("sortby"),sortFunction:b})}),this.list.sort("name"),$("#reset").click(function(){$("#search").val(""),c.list.search(),c.list.sort("name"),c.list.filter(),$(`.showhide`).each((a,b)=>{const c=$(b);c.data("hidden")||BookUtil.indexListToggle(null,b)})}),this.addData(a),BrewUtil.pAddBrewData().then(handleBrew).then(()=>BrewUtil.bind({list:this.list})).then(()=>BrewUtil.pAddLocalBrewData()).catch(BrewUtil.pPurgeBrew).then(()=>BrewUtil.makeBrewButton("manage-brew"))}addData(a){if(!a[this.dataProp]||!a[this.dataProp].length)return;this.dataList=this.dataList.concat(a[this.dataProp]);const b=$("ul.books");let c="";for(;this.dataIx<this.dataList.length;this.dataIx++){const a=this.dataList[this.dataIx];this.enhanceRowDataFn&&this.enhanceRowDataFn(a),c+=`<li ${FLTR_ID}="${this.dataIx}">
-				<a href="${this.rootPage}#${UrlUtil.encodeForHash(a.id)}" title="${a.name}" class="book-name">
-					<span class="full-width">
-						${this.rowBuilderFn(a)}
+"use strict";
+
+class BooksList {
+	constructor (options) {
+		this.contentsUrl = options.contentsUrl;
+		this.sortFn = options.sortFn;
+		this.dataProp = options.dataProp;
+		this.enhanceRowDataFn = options.enhanceRowDataFn;
+		this.rootPage = options.rootPage;
+		this.rowBuilderFn = options.rowBuilderFn;
+
+		this.list = null;
+		this.dataIx = 0;
+		this.dataList = [];
+	}
+
+	onPageLoad () {
+		ExcludeUtil.pInitialise(); // don't await, as this is only used for search
+		SortUtil.initHandleFilterButtonClicks();
+		DataUtil.loadJSON(this.contentsUrl).then(this.onJsonLoad.bind(this));
+	}
+
+	onJsonLoad (data) {
+		const sortFunction = (a, b, o) => self.sortFn(self.dataList, a, b, o);
+		this.list = new List("listcontainer", {
+			valueNames: ["name", "uniqueid"],
+			listClass: "books",
+			sortFunction
+		});
+
+		const self = this;
+		$("#filtertools").find("button.sort").click(function () {
+			const $this = $(this);
+			$('#filtertools').find('.caret').removeClass('caret--reverse caret');
+
+			if ($this.attr("sortby") === "asc") {
+				$this.find("span").addClass("caret caret--reverse");
+				$this.attr("sortby", "desc");
+			} else {
+				$this.attr("sortby", "asc");
+				$this.find("span").addClass("caret")
+			}
+			self.list.sort($this.data("sort"), {order: $this.attr("sortby"), sortFunction});
+		});
+
+		this.list.sort("name");
+		$("#reset").click(function () {
+			$("#search").val("");
+			self.list.search();
+			self.list.sort("name");
+			self.list.filter();
+			$(`.showhide`).each((i, ele) => {
+				const $ele = $(ele);
+				if (!$ele.data("hidden")) {
+					BookUtil.indexListToggle(null, ele);
+				}
+			});
+		});
+
+		this.addData(data);
+		BrewUtil.pAddBrewData()
+			.then(handleBrew)
+			.then(() => BrewUtil.bind({list: this.list}))
+			.then(() => BrewUtil.pAddLocalBrewData())
+			.catch(BrewUtil.pPurgeBrew)
+			.then(() => BrewUtil.makeBrewButton("manage-brew"));
+	}
+
+	addData (data) {
+		if (!data[this.dataProp] || !data[this.dataProp].length) return;
+
+		this.dataList = this.dataList.concat(data[this.dataProp]);
+
+		const $list = $("ul.books");
+		let tempString = "";
+		for (; this.dataIx < this.dataList.length; this.dataIx++) {
+			const it = this.dataList[this.dataIx];
+			if (this.enhanceRowDataFn) this.enhanceRowDataFn(it);
+
+			tempString +=
+				`<li ${FLTR_ID}="${this.dataIx}">
+				<a href="${this.rootPage}#${UrlUtil.encodeForHash(it.id)}" title="${it.name}" class="book-name">
+					<span class="w-100">
+						${this.rowBuilderFn(it)}
 					</span>
 					<span class="showhide" onclick="BookUtil.indexListToggle(event, this)" data-hidden="true">[+]</span>
-					<span class="source" style="display: none">${a.id}</span>
-					<span class="uniqueid" style="display: none">${a.uniqueId}</span>
+					<span class="source" style="display: none">${it.id}</span>
+					<span class="uniqueid" style="display: none">${it.uniqueId}</span>
 				</a>
-				${BookUtil.makeContentsBlock({book:a,addPrefix:this.rootPage,defaultHidden:!0})}
-			</li>`}const d=ListUtil.getSearchTermAndReset(this.list);b.append(c),this.list.reIndex(),d&&this.list.search(d),this.list.sort("name")}}
+				${BookUtil.makeContentsBlock({book: it, addPrefix: this.rootPage, defaultHidden: true})}
+			</li>`;
+		}
+		const lastSearch = ListUtil.getSearchTermAndReset(this.list);
+		$list.append(tempString);
+
+		this.list.reIndex();
+		if (lastSearch) this.list.search(lastSearch);
+		this.list.sort("name");
+	}
+}

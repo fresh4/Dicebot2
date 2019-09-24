@@ -1,55 +1,430 @@
-"use strict";window.onload=async function(){await ExcludeUtil.pInitialise(),Renderer.item.pBuildList({fnCallback:a=>populateTablesAndFilters({item:a}),isAddGroups:!0,isBlacklistVariants:!0})};function rarityValue(a){return"None"===a?0:"Common"===a?1:"Uncommon"===a?2:"Rare"===a?3:"Very Rare"===a?4:"Legendary"===a?5:"Artifact"===a?6:"Other"===a?7:"Varies"===a?8:"Unknown (Magic)"===a?9:"Unknown"===a?10:11}function sortItems(c,a,b){return"name"===b.valueName?a._values.name.toLowerCase()>c._values.name.toLowerCase()?1:-1:"type"===b.valueName?a._values.type===c._values.type?SortUtil.compareNames(c,a):a._values.type.toLowerCase()>c._values.type.toLowerCase()?1:-1:"source"===b.valueName?a._values.source===c._values.source?SortUtil.compareNames(c,a):a._values.source.toLowerCase()>c._values.source.toLowerCase()?1:-1:"rarity"===b.valueName?a._values.rarity===c._values.rarity?SortUtil.compareNames(c,a):rarityValue(a._values.rarity)>rarityValue(c._values.rarity)?1:-1:"count"===b.valueName?SortUtil.ascSort(+c.values().count,+a.values().count):"weight"===b.valueName?SortUtil.ascSort(+c.values().weight,+a.values().weight):"cost"===b.valueName?SortUtil.ascSort(+c.values().cost,+a.values().cost):0}let mundaneList,magicList;const sourceFilter=getSourceFilter(),DEFAULT_HIDDEN_TYPES=new Set(["$","Futuristic","Modern","Renaissance"]),typeFilter=new Filter({header:"Type",deselFn:a=>DEFAULT_HIDDEN_TYPES.has(a)}),tierFilter=new Filter({header:"Tier",items:["None","Minor","Major"],itemSortFn:null}),propertyFilter=new Filter({header:"Property",displayFn:StrUtil.uppercaseFirst}),costFilter=new RangeFilter({header:"Cost",min:0,max:100,isAllowGreater:!0,suffix:"gp"}),focusFilter=new Filter({header:"Spellcasting Focus",items:["Bard","Cleric","Druid","Paladin","Sorcerer","Warlock","Wizard"]}),attachedSpellsFilter=new Filter({header:"Attached Spells",displayFn:a=>a.split("|")[0].toTitleCase(),itemSortFn:SortUtil.ascSortLower}),lootTableFilter=new Filter({header:"Found On",items:["Magic Item Table A","Magic Item Table B","Magic Item Table C","Magic Item Table D","Magic Item Table E","Magic Item Table F","Magic Item Table G","Magic Item Table H","Magic Item Table I"]});let filterBox;async function populateTablesAndFilters(a){function b(a,b){0===a.visibleItems.length?a.__listVisible&&(a.__listVisible=!1,b.hide()):!a.__listVisible&&(a.__listVisible=!0,b.show())}const c=new Filter({header:"Rarity",items:["None","Common","Uncommon","Rare","Very Rare","Legendary","Artifact","Unknown","Unknown (Magic)","Other"],itemSortFn:null}),d=new Filter({header:"Attunement",items:["Yes","By...","Optional","No"],itemSortFn:null}),e=new Filter({header:"Category",items:["Basic","Generic Variant","Specific Variant","Other"],deselFn:a=>"Specific Variant"===a,itemSortFn:null}),f=new Filter({header:"Miscellaneous",items:["Ability Score Adjustment","Charges","Cursed","Magic","Mundane","Sentient"]});filterBox=await pInitFilterBox({filters:[sourceFilter,typeFilter,tierFilter,c,propertyFilter,d,e,costFilter,focusFilter,f,lootTableFilter,attachedSpellsFilter]});mundaneList=ListUtil.search({valueNames:["name","type","cost","weight","source","uniqueid"],listClass:"mundane",sortClass:"none",sortFunction:sortItems});magicList=ListUtil.search({valueNames:["name","type","weight","rarity","source","uniqueid"],listClass:"magic",sortClass:"none",sortFunction:sortItems});const g=$(`.ele-mundane`),h=$(`.ele-magic`);$(`.side-label--mundane`).click(()=>{filterBox.setFromValues({Miscellaneous:{Mundane:1}}),handleFilterChange()}),$(`.side-label--magic`).click(()=>{filterBox.setFromValues({Miscellaneous:{Magic:1}}),handleFilterChange()});const i=$(`.lst__wrp-search-visible`);mundaneList.__listVisible=!0,mundaneList.on("updated",()=>{b(mundaneList,g);const a=mundaneList.visibleItems.length+magicList.visibleItems.length,c=mundaneList.items.length+magicList.items.length;i.html(`${a}/${c}`)}),magicList.__listVisible=!0,magicList.on("updated",()=>{b(magicList,h);const a=mundaneList.visibleItems.length+magicList.visibleItems.length,c=mundaneList.items.length+magicList.items.length;i.html(`${a}/${c}`)}),$(filterBox).on(FilterBox.EVNT_VALCHANGE,handleFilterChange),$("#filtertools-mundane").find("button.sort").on("click",function(a){a.stopPropagation();const b=$(this),c="asc"===b.data("sortby")?"desc":"asc";b.data("sortby",c),SortUtil.handleFilterButtonClick.call(this,"#filtertools-mundane",b,c),mundaneList.sort(b.data("sort"),{order:b.data("sortby"),sortFunction:sortItems})}),$("#filtertools-magic").find("button.sort").on("click",function(a){a.stopPropagation();const b=$(this),c="asc"===b.data("sortby")?"desc":"asc";b.data("sortby",c),SortUtil.handleFilterButtonClick.call(this,"#filtertools-magic",b,c),magicList.sort(b.data("sort"),{order:b.data("sortby"),sortFunction:sortItems})}),$("#itemcontainer").find("h3").not(":has(input)").click(function(){return"500px"===$(this).next("ul.list").css("max-height")?void $(this).siblings("ul.list").animate({maxHeight:"250px",display:"block"}):void $(this).next("ul.list").animate({maxHeight:"500px",display:"block"}).siblings("ul.list").animate({maxHeight:"0",display:"none"})});ListUtil.initSublist({valueNames:["name","weight","price","count","id"],listClass:"subitems",sortFunction:sortItems,getSublistRow:getSublistItem,onUpdate:onSublistChange});ListUtil.initGenericAddable(),addItems(a),BrewUtil.pAddBrewData().then(handleBrew).then(()=>BrewUtil.bind({list})).then(()=>BrewUtil.pAddLocalBrewData()).catch(BrewUtil.pPurgeBrew).then(async()=>{BrewUtil.makeBrewButton("manage-brew"),BrewUtil.bind({lists:[mundaneList,magicList],filterBox,sourceFilter}),await ListUtil.pLoadState(),RollerUtil.addListRollButton(),ListUtil.addListShowHide(),History.init(!0),ExcludeUtil.checkShowAllExcluded(itemList,$(`#pagecontent`))})}async function handleBrew(a){const b=await Renderer.item.getItemsFromHomebrew(a);addItems({item:b})}let itemList=[],itI=0;function addItems(a){if(a.item&&a.item.length){itemList=itemList.concat(a.item);const b={mundane:"",magic:""};for(;itI<itemList.length;itI++){const a=itemList[itI];if(ExcludeUtil.isExcluded(a.name,"item",a.source))continue;if(a.noDisplay)continue;Renderer.item.enhanceItem(a);const c=a.name,d=[];d.push(a.tier?a.tier:"None"),a._fTier=d,a._fProperties=a.property?a.property.map(b=>a._allPropertiesPtr[b].name).filter(a=>a):[],a._fMisc=a.sentient?["Sentient"]:[],a.curse&&a._fMisc.push("Cursed");const e="None"===a.rarity||"Unknown"===a.rarity||"Basic"===a.category;if(a._fMisc.push(e?"Mundane":"Magic"),a.ability&&a._fMisc.push("Ability Score Adjustment"),a.charges&&a._fMisc.push("Charges"),a._fCost=Parser.coinValueToNumber(a.value),(a.focus||"INS"===a.type||"SCF"===a.type)&&(a._fFocus=a.focus?!0===a.focus?["Bard","Cleric","Druid","Paladin","Sorcerer","Warlock","Wizard"]:[...a.focus]:[],"INS"!==a.type||a._fFocus.includes("Bard")||a._fFocus.push("Bard"),"SCF"===a.type))switch(a.scfType){case"arcane":{a._fFocus.includes("Sorcerer")||a._fFocus.push("Sorcerer"),a._fFocus.includes("Warlock")||a._fFocus.push("Warlock"),a._fFocus.includes("Wizard")||a._fFocus.push("Wizard");break}case"druid":{a._fFocus.includes("Druid")||a._fFocus.push("Druid");break}case"holy":a._fFocus.includes("Cleric")||a._fFocus.push("Cleric"),a._fFocus.includes("Paladin")||a._fFocus.push("Paladin");}e?b.mundane+=`
+"use strict";
+
+window.onload = async function load () {
+	await ExcludeUtil.pInitialise();
+	return pPopulateTablesAndFilters({item: await Renderer.item.pBuildList({isAddGroups: true, isBlacklistVariants: true})});
+};
+
+function rarityValue (rarity) {
+	switch (rarity) {
+		case "None": return 0;
+		case "Common": return 1;
+		case "Uncommon": return 2;
+		case "Rare": return 3;
+		case "Very Rare": return 4;
+		case "Legendary": return 5;
+		case "Artifact": return 6;
+		case "Other": return 7;
+		case "Varies": return 8;
+		case "Unknown (Magic)": return 9;
+		case "Unknown": return 10;
+		default: return 11;
+	}
+}
+
+function sortItems (a, b, o) {
+	if (o.valueName === "name") return SortUtil.ascSortLower(b._values.name, a._values.name);
+	else if (o.valueName === "type") {
+		if (b._values.type === a._values.type) return SortUtil.compareNames(a, b);
+		return b._values.type.toLowerCase() > a._values.type.toLowerCase() ? 1 : -1;
+	} else if (o.valueName === "source") {
+		if (b._values.source === a._values.source) return SortUtil.compareNames(a, b);
+		return b._values.source.toLowerCase() > a._values.source.toLowerCase() ? 1 : -1;
+	} else if (o.valueName === "rarity") {
+		if (b._values.rarity === a._values.rarity) return SortUtil.compareNames(a, b);
+		return rarityValue(b._values.rarity) > rarityValue(a._values.rarity) ? 1 : -1;
+	} else if (o.valueName === "attunement") {
+		if (b._values.attunement === a._values.attunement) return SortUtil.compareNames(a, b);
+		return SortUtil.ascSort(a._values.attunement, b._values.attunement);
+	} else if (o.valueName === "count") {
+		return SortUtil.ascSort(Number(a.values().count), Number(b.values().count));
+	} else if (o.valueName === "weight") {
+		return SortUtil.ascSort(Number(a.values().weight), Number(b.values().weight));
+	} else if (o.valueName === "cost") {
+		return SortUtil.ascSort(Number(a.values().cost), Number(b.values().cost));
+	} else return 0;
+}
+
+let mundaneList;
+let magicList;
+const sourceFilter = getSourceFilter();
+const DEFAULT_HIDDEN_TYPES = new Set(["$", "Futuristic", "Modern", "Renaissance"]);
+const typeFilter = new Filter({header: "Type", deselFn: (it) => DEFAULT_HIDDEN_TYPES.has(it)});
+const tierFilter = new Filter({header: "Tier", items: ["None", "Minor", "Major"], itemSortFn: null});
+const propertyFilter = new Filter({header: "Property", displayFn: StrUtil.uppercaseFirst});
+const costFilter = new RangeFilter({header: "Cost", min: 0, max: 100, isAllowGreater: true, suffix: "gp"});
+const focusFilter = new Filter({header: "Spellcasting Focus", items: ["Bard", "Cleric", "Druid", "Paladin", "Sorcerer", "Warlock", "Wizard"]});
+const attachedSpellsFilter = new Filter({header: "Attached Spells", displayFn: (it) => it.split("|")[0].toTitleCase(), itemSortFn: SortUtil.ascSortLower});
+const lootTableFilter = new Filter({header: "Found On", items: ["Magic Item Table A", "Magic Item Table B", "Magic Item Table C", "Magic Item Table D", "Magic Item Table E", "Magic Item Table F", "Magic Item Table G", "Magic Item Table H", "Magic Item Table I"]});
+
+let filterBox;
+async function pPopulateTablesAndFilters (data) {
+	const rarityFilter = new Filter({
+		header: "Rarity",
+		items: ["None", "Common", "Uncommon", "Rare", "Very Rare", "Legendary", "Artifact", "Unknown", "Unknown (Magic)", "Other"],
+		itemSortFn: null
+	});
+	const attunementFilter = new Filter({header: "Attunement", items: ["Yes", "By...", "Optional", "No"], itemSortFn: null});
+	const categoryFilter = new Filter({
+		header: "Category",
+		items: ["Basic", "Generic Variant", "Specific Variant", "Other"],
+		deselFn: (it) => it === "Specific Variant",
+		itemSortFn: null
+	});
+	const miscFilter = new Filter({header: "Miscellaneous", items: ["Ability Score Adjustment", "Charges", "Cursed", "Magic", "Mundane", "Sentient"]});
+
+	filterBox = await pInitFilterBox({filters: [sourceFilter, typeFilter, tierFilter, rarityFilter, propertyFilter, attunementFilter, categoryFilter, costFilter, focusFilter, miscFilter, lootTableFilter, attachedSpellsFilter]});
+
+	const mundaneOptions = {
+		valueNames: ["name", "type", "cost", "weight", "source", "uniqueid"],
+		listClass: "mundane",
+		sortClass: "none",
+		sortFunction: sortItems
+	};
+	mundaneList = ListUtil.search(mundaneOptions);
+	const magicOptions = {
+		valueNames: ["name", "type", "weight", "rarity", "attunement", "source", "uniqueid"],
+		listClass: "magic",
+		sortClass: "none",
+		sortFunction: sortItems
+	};
+	magicList = ListUtil.search(magicOptions);
+
+	const $elesMundane = $(`.ele-mundane`);
+	const $elesMagic = $(`.ele-magic`);
+	const $elesMundaneAndMagic = $(`.ele-mundane-and-magic`);
+	$(`.side-label--mundane`).click(() => {
+		filterBox.setFromValues({Miscellaneous: {Mundane: 1}});
+		handleFilterChange();
+	});
+	$(`.side-label--magic`).click(() => {
+		filterBox.setFromValues({Miscellaneous: {Magic: 1}});
+		handleFilterChange();
+	});
+	const $outVisibleResults = $(`.lst__wrp-search-visible`);
+	mundaneList.on("updated", () => {
+		// Force-show the mundane list if there are no items on display
+		if (magicList.visibleItems.length) $elesMundane.toggle(!!mundaneList.visibleItems.length);
+		else $elesMundane.show();
+		$elesMundaneAndMagic.toggle(!!(mundaneList.visibleItems.length && magicList.visibleItems.length));
+
+		const current = mundaneList.visibleItems.length + magicList.visibleItems.length;
+		const total = mundaneList.items.length + magicList.items.length;
+		$outVisibleResults.html(`${current}/${total}`);
+	});
+	magicList.on("updated", () => {
+		$elesMagic.toggle(!!magicList.visibleItems.length);
+		// Force-show the mundane list if there are no items on display
+		if (!magicList.visibleItems.length) $elesMundane.show();
+		else $elesMundane.toggle(!!mundaneList.visibleItems.length);
+		$elesMundaneAndMagic.toggle(!!(mundaneList.visibleItems.length && magicList.visibleItems.length));
+
+		const current = mundaneList.visibleItems.length + magicList.visibleItems.length;
+		const total = mundaneList.items.length + magicList.items.length;
+		$outVisibleResults.html(`${current}/${total}`);
+	});
+
+	// filtering function
+	$(filterBox).on(
+		FilterBox.EVNT_VALCHANGE,
+		handleFilterChange
+	);
+
+	$("#filtertools-mundane").find("button.sort").on("click", function (evt) {
+		evt.stopPropagation();
+		const $this = $(this);
+		const direction = $this.data("sortby") === "asc" ? "desc" : "asc";
+		$this.data("sortby", direction);
+		SortUtil.handleFilterButtonClick.call(this, "#filtertools-mundane", $this, direction);
+		mundaneList.sort($this.data("sort"), {order: $this.data("sortby"), sortFunction: sortItems});
+	});
+
+	$("#filtertools-magic").find("button.sort").on("click", function (evt) {
+		evt.stopPropagation();
+		const $this = $(this);
+		const direction = $this.data("sortby") === "asc" ? "desc" : "asc";
+
+		$this.data("sortby", direction);
+		SortUtil.handleFilterButtonClick.call(this, "#filtertools-magic", $this, direction);
+		magicList.sort($this.data("sort"), {order: $this.data("sortby"), sortFunction: sortItems});
+	});
+
+	$("#itemcontainer").find("h3").not(":has(input)").click(function () {
+		if ($(this).next("ul.list").css("max-height") === "500px") {
+			$(this).siblings("ul.list").animate({
+				maxHeight: "250px",
+				display: "block"
+			});
+			return;
+		}
+		$(this).next("ul.list").animate({
+			maxHeight: "500px",
+			display: "block"
+		}).siblings("ul.list").animate({
+			maxHeight: "0",
+			display: "none"
+		});
+	});
+
+	const subList = ListUtil.initSublist(
+		{
+			valueNames: ["name", "weight", "price", "count", "id"],
+			listClass: "subitems",
+			sortFunction: sortItems,
+			getSublistRow: getSublistItem,
+			onUpdate: onSublistChange
+		}
+	);
+	ListUtil.initGenericAddable();
+
+	addItems(data);
+	BrewUtil.pAddBrewData()
+		.then(handleBrew)
+		.then(() => BrewUtil.bind({list}))
+		.then(() => BrewUtil.pAddLocalBrewData())
+		.catch(BrewUtil.pPurgeBrew)
+		.then(async () => {
+			BrewUtil.makeBrewButton("manage-brew");
+			BrewUtil.bind({lists: [mundaneList, magicList], filterBox, sourceFilter});
+			await ListUtil.pLoadState();
+			RollerUtil.addListRollButton();
+			ListUtil.addListShowHide();
+
+			Hist.init(true);
+			ExcludeUtil.checkShowAllExcluded(itemList, $(`#pagecontent`));
+		});
+}
+
+async function handleBrew (homebrew) {
+	const itemList = await Renderer.item.getItemsFromHomebrew(homebrew);
+	addItems({item: itemList});
+}
+
+let itemList = [];
+let itI = 0;
+function addItems (data) {
+	if (!data.item || !data.item.length) return;
+	itemList = itemList.concat(data.item);
+
+	let tempStackMundane = "";
+	let tempStackMagic = "";
+
+	for (; itI < itemList.length; itI++) {
+		const item = itemList[itI];
+		if (ExcludeUtil.isExcluded(item.name, "item", item.source)) continue;
+		if (item.noDisplay) continue;
+		Renderer.item.enhanceItem(item);
+
+		const name = item.name;
+		const tierTags = [];
+		tierTags.push(item.tier ? item.tier : "None");
+
+		// for filter to use
+		item._fTier = tierTags;
+		item._fProperties = item.property ? item.property.map(p => item._allPropertiesPtr[p].name).filter(n => n) : [];
+		item._fMisc = item.sentient ? ["Sentient"] : [];
+		if (item.curse) item._fMisc.push("Cursed");
+		const isMundane = item.rarity === "None" || item.rarity === "Unknown" || item.category === "Basic";
+		item._fMisc.push(isMundane ? "Mundane" : "Magic");
+		if (item.ability) item._fMisc.push("Ability Score Adjustment");
+		if (item.charges) item._fMisc.push("Charges");
+		item._fCost = Parser.coinValueToNumber(item.value);
+		if (item.focus || item.type === "INS" || item.type === "SCF") {
+			item._fFocus = item.focus ? item.focus === true ? ["Bard", "Cleric", "Druid", "Paladin", "Sorcerer", "Warlock", "Wizard"] : [...item.focus] : [];
+			if (item.type === "INS" && !item._fFocus.includes("Bard")) item._fFocus.push("Bard");
+			if (item.type === "SCF") {
+				switch (item.scfType) {
+					case "arcane": {
+						if (!item._fFocus.includes("Sorcerer")) item._fFocus.push("Sorcerer");
+						if (!item._fFocus.includes("Warlock")) item._fFocus.push("Warlock");
+						if (!item._fFocus.includes("Wizard")) item._fFocus.push("Wizard");
+						break;
+					}
+					case "druid": {
+						if (!item._fFocus.includes("Druid")) item._fFocus.push("Druid");
+						break;
+					}
+					case "holy":
+						if (!item._fFocus.includes("Cleric")) item._fFocus.push("Cleric");
+						if (!item._fFocus.includes("Paladin")) item._fFocus.push("Paladin");
+						break;
+				}
+			}
+		}
+
+		if (isMundane) {
+			tempStackMundane += `
 			<li class="row" ${FLTR_ID}=${itI} onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
-				<a id="${itI}" href="#${UrlUtil.autoEncodeHash(a)}" title="${c}">
-					<span class="name col-3 pl-0">${c}</span>
-					<span class="type col-4-3">${a.typeListText}</span>
-					<span class="col-1-5 text-center">${a.value||a.valueMult?Parser.itemValueToFull(a,!0).replace(/ +/g,"\xA0"):"\u2014"}</span>
-					<span class="col-1-5 text-center">${Parser.itemWeightToFull(a,!0)||"\u2014"}</span>
-					<span class="source col-1-7 text-center ${Parser.sourceJsonToColor(a.source)} pr-0" title="${Parser.sourceJsonToFull(a.source)}" ${BrewUtil.sourceJsonToStyle(a.source)}>${Parser.sourceJsonToAbv(a.source)}</span>
+				<a id="${itI}" href="#${UrlUtil.autoEncodeHash(item)}" title="${name}">
+					<span class="name col-3 pl-0">${name}</span>
+					<span class="type col-4-3">${item.typeListText}</span>
+					<span class="col-1-5 text-center">${item.value || item.valueMult ? Parser.itemValueToFull(item, true).replace(/ +/g, "\u00A0") : "\u2014"}</span>
+					<span class="col-1-5 text-center">${Parser.itemWeightToFull(item, true) || "\u2014"}</span>
+					<span class="source col-1-7 text-center ${Parser.sourceJsonToColor(item.source)} pr-0" title="${Parser.sourceJsonToFull(item.source)}" ${BrewUtil.sourceJsonToStyle(item.source)}>${Parser.sourceJsonToAbv(item.source)}</span>
 					
-					<span class="cost hidden">${a._fCost}</span>
-					<span class="weight hidden">${Parser.weightValueToNumber(a.weight)}</span>
-					<span class="uniqueid hidden">${a.uniqueId?a.uniqueId:itI}</span>
+					<span class="cost hidden">${item._fCost}</span>
+					<span class="weight hidden">${Parser.weightValueToNumber(item.weight)}</span>
+					<span class="uniqueid hidden">${item.uniqueId ? item.uniqueId : itI}</span>
 				</a>
-			</li>`:b.magic+=`
+			</li>`;
+		} else {
+			tempStackMagic += `
 			<li class="row" ${FLTR_ID}=${itI} onclick="ListUtil.toggleSelected(event, this)" oncontextmenu="ListUtil.openContextMenu(event, this)">
-				<a id="${itI}" href="#${UrlUtil.autoEncodeHash(a)}" title="${c}">
-					<span class="name col-3-5 pl-0">${c}</span>
-					<span class="type col-3-3">${a.typeListText}</span>
-					<span class="col-1-5 text-center">${Parser.itemWeightToFull(a,!0)||"\u2014"}</span>
-					<span class="rarity col-2">${a.rarity}</span>
-					<span class="source col-1-7 text-center ${Parser.sourceJsonToColor(a.source)} pr-0" title="${Parser.sourceJsonToFull(a.source)}" ${BrewUtil.sourceJsonToStyle(a.source)}>${Parser.sourceJsonToAbv(a.source)}</span>
+				<a id="${itI}" href="#${UrlUtil.autoEncodeHash(item)}" title="${name}">
+					<span class="name col-3-5 pl-0">${name}</span>
+					<span class="type col-3-3">${item.typeListText}</span>
+					<span class="col-1-5 text-center">${Parser.itemWeightToFull(item, true) || "\u2014"}</span>
+					<span class="attunement col-0-6 text-center">${item.attunementCategory !== "No" ? "×" : ""}</span>
+					<span class="rarity col-1-4">${item.rarity}</span>
+					<span class="source col-1-7 text-center ${Parser.sourceJsonToColor(item.source)} pr-0" title="${Parser.sourceJsonToFull(item.source)}" ${BrewUtil.sourceJsonToStyle(item.source)}>${Parser.sourceJsonToAbv(item.source)}</span>
 					
-					<span class="weight hidden">${Parser.weightValueToNumber(a.weight)}</span>
-					<span class="uniqueid hidden">${a.uniqueId?a.uniqueId:itI}</span>
+					<span class="weight hidden">${Parser.weightValueToNumber(item.weight)}</span>
+					<span class="uniqueid hidden">${item.uniqueId ? item.uniqueId : itI}</span>
 				</a>
-			</li>`,sourceFilter.addItem(a.source),a.procType.forEach(a=>typeFilter.addItem(a)),d.forEach(a=>tierFilter.addItem(a)),a._fProperties.forEach(a=>propertyFilter.addItem(a)),attachedSpellsFilter.addItem(a.attachedSpells),lootTableFilter.addItem(a.lootTables)}const c=ListUtil.getSearchTermAndReset(mundaneList,magicList);$("ul.list.mundane").append(b.mundane),$("ul.list.magic").append(b.magic),$(`h3.ele-mundane span.side-label`).text("Mundane"),$(`h3.ele-magic span.side-label`).text("Magic"),mundaneList.reIndex(),magicList.reIndex(),c&&(mundaneList.search(c),magicList.search(c)),mundaneList.sort("name",{order:"desc"}),magicList.sort("name",{order:"desc"}),filterBox.render(),handleFilterChange(),ListUtil.setOptions({itemList:itemList,getSublistRow:getSublistItem,primaryLists:[mundaneList,magicList]}),ListUtil.bindAddButton(),ListUtil.bindSubtractButton(),Renderer.hover.bindPopoutButton(itemList),UrlUtil.bindLinkExportButton(filterBox),ListUtil.bindDownloadButton(),ListUtil.bindUploadButton()}}function handleFilterChange(){function a(a){const c=itemList[$(a.elm).attr(FLTR_ID)];return filterBox.toDisplay(b,c.source,c.procType,c._fTier,c.rarity,c._fProperties,c.attunementCategory,c.category,c._fCost,c._fFocus,c._fMisc,c.lootTables,c.attachedSpells)}const b=filterBox.getValues();mundaneList.filter(a),magicList.filter(a),FilterBox.selectFirstVisible(itemList)}function onSublistChange(){const a=$(`#totalweight`),b=$(`#totalvalue`);let c=0,d=0;ListUtil.sublist.items.forEach(a=>{const b=itemList[+a._values.id],e=+$(a.elm).find(".count").text();b.weight&&(c+=+b.weight*e),b.value&&(d+=Parser.coinValueToNumber(b.value)*e)}),a.text(`${c.toLocaleString()} lb${1<c?"s":""}.`),b.text(`${d.toLocaleString()}gp`)}function getSublistItem(a,b,c){return`
-		<li class="row" ${FLTR_ID}="${b}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
-			<a href="#${UrlUtil.autoEncodeHash(a)}" title="${a.name}">
-				<span class="name col-6 pl-0">${a.name}</span>
-				<span class="weight text-center col-2">${a.weight?`${a.weight} lb${1<a.weight?"s":""}.`:"\u2014"}</span>
-				<span class="price text-center col-2">${a.value?a.value.replace(/ +/g,"\xA0"):"\u2014"}</span>
-				<span class="count text-center col-2 pr-0">${c||1}</span>
+			</li>`;
+		}
+
+		// populate filters
+		sourceFilter.addItem(item.source);
+		item.procType.forEach(t => typeFilter.addItem(t));
+		tierTags.forEach(tt => tierFilter.addItem(tt));
+		item._fProperties.forEach(p => propertyFilter.addItem(p));
+		attachedSpellsFilter.addItem(item.attachedSpells);
+		lootTableFilter.addItem(item.lootTables);
+	}
+	const lastSearch = ListUtil.getSearchTermAndReset(mundaneList, magicList);
+	// populate table
+	$("ul.list.mundane").append(tempStackMundane);
+	$("ul.list.magic").append(tempStackMagic);
+	// populate table labels
+	$(`h3.ele-mundane span.side-label`).text("Mundane");
+	$(`h3.ele-magic span.side-label`).text("Magic");
+
+	mundaneList.reIndex();
+	magicList.reIndex();
+	if (lastSearch) {
+		mundaneList.search(lastSearch);
+		magicList.search(lastSearch);
+	}
+	mundaneList.sort("name", {order: "desc"});
+	magicList.sort("name", {order: "desc"});
+	filterBox.render();
+	handleFilterChange();
+
+	ListUtil.setOptions({
+		itemList: itemList,
+		getSublistRow: getSublistItem,
+		primaryLists: [mundaneList, magicList]
+	});
+	ListUtil.bindAddButton();
+	ListUtil.bindSubtractButton();
+	Renderer.hover.bindPopoutButton(itemList);
+	UrlUtil.bindLinkExportButton(filterBox);
+	ListUtil.bindDownloadButton();
+	ListUtil.bindUploadButton();
+}
+
+function handleFilterChange () {
+	const f = filterBox.getValues();
+	function listFilter (item) {
+		const i = itemList[$(item.elm).attr(FLTR_ID)];
+		return filterBox.toDisplay(
+			f,
+			i.source,
+			i.procType,
+			i._fTier,
+			i.rarity,
+			i._fProperties,
+			i.attunementCategory,
+			i.category,
+			i._fCost,
+			i._fFocus,
+			i._fMisc,
+			i.lootTables,
+			i.attachedSpells
+		);
+	}
+	mundaneList.filter(listFilter);
+	magicList.filter(listFilter);
+	FilterBox.selectFirstVisible(itemList);
+}
+
+function onSublistChange () {
+	const totalWeight = $(`#totalweight`);
+	const totalValue = $(`#totalvalue`);
+	let weight = 0;
+	let value = 0;
+	ListUtil.sublist.items.forEach(it => {
+		const item = itemList[Number(it._values.id)];
+		const count = Number($(it.elm).find(".count").text());
+		if (item.weight) weight += Number(item.weight) * count;
+		if (item.value) value += Parser.coinValueToNumber(item.value) * count;
+	});
+	totalWeight.text(`${weight.toLocaleString()} lb${weight > 1 ? "s" : ""}.`);
+	totalValue.text(`${value.toLocaleString()}gp`)
+}
+
+function getSublistItem (item, pinId, addCount) {
+	return `
+		<li class="row" ${FLTR_ID}="${pinId}" oncontextmenu="ListUtil.openSubContextMenu(event, this)">
+			<a href="#${UrlUtil.autoEncodeHash(item)}" title="${item.name}">
+				<span class="name col-6 pl-0">${item.name}</span>
+				<span class="weight text-center col-2">${item.weight ? `${item.weight} lb${item.weight > 1 ? "s" : ""}.` : "\u2014"}</span>
+				<span class="price text-center col-2">${item.value ? item.value.replace(/ +/g, "\u00A0") : "\u2014"}</span>
+				<span class="count text-center col-2 pr-0">${addCount || 1}</span>
 				
-				<span class="cost hidden">${a._fCost}</span>
-				<span class="id hidden">${b}</span>
+				<span class="cost hidden">${item._fCost}</span>
+				<span class="id hidden">${pinId}</span>
 			</a>
 		</li>
-	`}const renderer=Renderer.get();function loadHash(a){function b(a){return Renderer.utils.buildFluffTab(a,c,d,a=>d.fluff||a.item.find(a=>a.name===d.name&&a.source===d.source),`data/fluff-items.json`,()=>!0)}renderer.setFirstSection(!0);const c=$(`#pagecontent`).empty(),d=itemList[a],e=Renderer.utils.tabButton("Item",()=>{},function(){const[a,b,e]=Renderer.item.getDamageAndPropertiesText(d),f=$(`
-		${Renderer.utils.getBorderTr()}
-		${Renderer.utils.getNameTr(d)}
-		<tr><td class="typerarityattunement" colspan="6">${Renderer.item.getTypeRarityAndAttunementText(d)}</td></tr>
-		<tr>
-			<td colspan="2">${[Parser.itemValueToFull(d),Parser.itemWeightToFull(d)].filter(Boolean).join(", ").uppercaseFirst()}</td>
-			<td class="text-right" colspan="4"><span>${a}</span> <span>${b}</span> <span>${e}</span></td>
-		</tr>
-		<tr id="text"><td class="divider" colspan="6"><div></div></td></tr>
-		${Renderer.utils.getPageTr(d)}
-		${Renderer.utils.getBorderTr()}
-		`);c.append(f);const g=d.source,h=Parser.sourceJsonToFull(g),i=d.type||"";("INS"===i||"GS"===i)&&(d.additionalSources=d.additionalSources||[]),"INS"===i?!d.additionalSources.find(a=>"XGE"===a.source&&83===a.page)&&d.additionalSources.push({source:"XGE",page:83}):"GS"===i&&!d.additionalSources.find(a=>"XGE"===a.source&&81===a.page)&&d.additionalSources.push({source:"XGE",page:81});const j=d.additionalSources?`. Additional information from ${d.additionalSources.map(a=>`<i>${Parser.sourceJsonToFull(a.source)}</i>, page ${a.page}`).join("; ")}.`:null;c.find("td#source span").html(`<i>${h}</i>${0<d.page?`, page ${d.page}${j||""}`:""}`),c.find("tr.text").remove();const k=[];if(d.entries&&d.entries.length){const a={type:"entries",entries:d.entries};renderer.recursiveRender(a,k,{depth:1})}if(d.additionalEntries){const a={type:"entries",entries:d.additionalEntries};renderer.recursiveRender(a,k,{depth:1})}d.lootTables&&k.push(`<div><span class="bold">Found On: </span>${d.lootTables.sort(SortUtil.ascSortLower).map(a=>renderer.render(`{@table ${a}}`)).join(", ")}</div>`);const l=k.join("").split(d.name.toLowerCase()).join(`<i>${d.name.toLowerCase()}</i>`).split(d.name.toLowerCase().toTitleCase()).join(`<i>${d.name.toLowerCase().toTitleCase()}</i>`);l&&l.trim()?c.find("tr#text").show().after(`
-			<tr class="text">
-				<td colspan="6" class="text1">
-					${l}
-				</td>
-			</tr>
-		`):c.find("tr#text").hide()}),f=Renderer.utils.tabButton("Info",()=>{},b),g=Renderer.utils.tabButton("Images",()=>{},b.bind(null,!0));d.fluff&&d.fluff.entries?Renderer.utils.bindTabButtons(e,f,g):Renderer.utils.bindTabButtons(e,g),ListUtil.updateSelected()}function loadSubHash(a){a=filterBox.setFromSubHashes(a),ListUtil.setFromSubHashes(a)}
+	`;
+}
+
+const renderer = Renderer.get();
+function loadHash (id) {
+	renderer.setFirstSection(true);
+	const $content = $(`#pagecontent`).empty();
+	const item = itemList[id];
+
+	function buildStatsTab () {
+		$content.append(RenderItems.$getRenderedItem(item));
+	}
+
+	function buildFluffTab (isImageTab) {
+		return Renderer.utils.pBuildFluffTab(
+			isImageTab,
+			$content,
+			item,
+			(fluffJson) => item.fluff || fluffJson.item.find(it => it.name === item.name && it.source === item.source),
+			`data/fluff-items.json`,
+			() => true
+		);
+	}
+
+	const statTab = Renderer.utils.tabButton(
+		"Item",
+		() => {},
+		buildStatsTab
+	);
+	const infoTab = Renderer.utils.tabButton(
+		"Info",
+		() => {},
+		buildFluffTab
+	);
+	const picTab = Renderer.utils.tabButton(
+		"Images",
+		() => {},
+		buildFluffTab.bind(null, true)
+	);
+
+	// only display the "Info" tab if there's some fluff info--currently (2018-12-13), no official item has text fluff
+	if (item.fluff && item.fluff.entries) Renderer.utils.bindTabButtons(statTab, infoTab, picTab);
+	else Renderer.utils.bindTabButtons(statTab, picTab);
+
+	ListUtil.updateSelected();
+}
+
+function loadSubHash (sub) {
+	sub = filterBox.setFromSubHashes(sub);
+	ListUtil.setFromSubHashes(sub);
+}

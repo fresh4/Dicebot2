@@ -1,1 +1,103 @@
-"use strict";const JSON_SRC_INDEX="index.json";function multisourceLoad(a,b,c,d,e){return new Promise(f=>{DataUtil.loadJSON(a+JSON_SRC_INDEX).then(f=>_onIndexLoad(f,a,b,c,d,e)).then(f)})}let loadedSources;function _onIndexLoad(a,b,c,d,e,f){return new Promise(async g=>{loadedSources={},Object.keys(a).forEach(c=>loadedSources[c]={url:b+a[c],loaded:!1});const h=Object.keys(a),i=h.filter(a=>defaultSourceSelFn(a)),j=History.getHashSource(),k=j?Object.keys(a).find(a=>a.toLowerCase()===j.toLowerCase()):null,l=[...new Set(((await FilterBox.pGetStoredActiveSources())||[]).concat((await ListUtil.pGetSelectedSources())||[]).concat(k?[k]:[]))],m=[];if(l&&l.filter(b=>a[b]).filter(a=>-1===$.inArray(a,m)).forEach(a=>m.push(a)),0===m.length&&i.filter(b=>a[b]).forEach(a=>m.push(a)),window.location.hash.length){const[a,...b]=History._getHashParts(),c=a.split(HASH_LIST_SEP)[1],d={};h.forEach(a=>d[UrlUtil.encodeForHash(a)]=a);const e=d[c];e&&-1===$.inArray(e,m)&&m.push(e)}const n=m.map(c=>({src:c,url:b+a[c]})),o=d(loadedSources);0<n.length?DataUtil.multiLoadJSON(n,a=>{o.then(()=>{loadedSources[a.src].loaded=!0})},a=>{o.then(()=>{let b=[];a.forEach(a=>b=b.concat(a[c])),e(b);const d=()=>new Promise(a=>{RollerUtil.addListRollButton(),ListUtil.addListShowHide(),History.init(!0),a()}),h=f?f().then(d):d;h.then(g)})}):o.then(()=>{g()})})}function loadSource(a,b){return function(c,d){const e=loadedSources[c]||loadedSources[Object.keys(loadedSources).find(a=>a.toLowerCase()===c)];e.loaded||"yes"!==d||DataUtil.loadJSON(e.url).then(function(c){b(c[a]),e.loaded=!0})}}function onFilterChangeMulti(a){FilterBox.selectFirstVisible(a)}
+"use strict";
+
+const JSON_SRC_INDEX = "index.json";
+
+/**
+ * @param jsonDir the directory containing JSON for this page
+ * @param jsonListName the name of the root JSON property for the list of data
+ * @param pPageInit promise to be run once the index has loaded, should accept an object of src:URL mappings
+ * @param dataFn function to be run when all data has been loaded, should accept a list of objects custom to the page
+ * @param pOptional optional promise to be run after dataFn, but before page history/etc is init'd
+ * (e.g. spell data objects for the spell page) which were found in the `jsonListName` list
+ */
+async function pMultisourceLoad (jsonDir, jsonListName, pPageInit, dataFn, pOptional) {
+	const index = await DataUtil.loadJSON(jsonDir + JSON_SRC_INDEX);
+	await _pOnIndexLoad(index, jsonDir, jsonListName, pPageInit, dataFn, pOptional);
+}
+
+let loadedSources;
+async function _pOnIndexLoad (src2UrlMap, jsonDir, dataProp, pPageInit, addFn, pOptional) {
+	// track loaded sources
+	loadedSources = {};
+	Object.keys(src2UrlMap).forEach(src => loadedSources[src] = {url: jsonDir + src2UrlMap[src], loaded: false});
+
+	// collect a list of sources to load
+	const sources = Object.keys(src2UrlMap);
+	const defaultSel = sources.filter(s => defaultSourceSelFn(s));
+	const hashSourceRaw = Hist.getHashSource();
+	const hashSource = hashSourceRaw ? Object.keys(src2UrlMap).find(it => it.toLowerCase() === hashSourceRaw.toLowerCase()) : null;
+	const userSel = [...new Set(
+		(await FilterBox.pGetStoredActiveSources() || []).concat(await ListUtil.pGetSelectedSources() || []).concat(hashSource ? [hashSource] : [])
+	)];
+
+	const allSources = [];
+
+	// add any sources from the user's saved filters, provided they have URLs and haven't already been added
+	if (userSel) {
+		userSel
+			.filter(src => src2UrlMap[src])
+			.filter(src => $.inArray(src, allSources) === -1)
+			.forEach(src => allSources.push(src));
+	}
+
+	// if there's no saved filters, load the defaults
+	if (allSources.length === 0) {
+		// remove any sources that don't have URLs
+		defaultSel.filter(src => src2UrlMap[src]).forEach(src => allSources.push(src));
+	}
+
+	// add source from the current hash, if there is one
+	if (window.location.hash.length) {
+		const [link, ...sub] = Hist._getHashParts();
+		const src = link.split(HASH_LIST_SEP)[1];
+		const hashSrcs = {};
+		sources.forEach(src => hashSrcs[UrlUtil.encodeForHash(src)] = src);
+		const mapped = hashSrcs[src];
+		if (mapped && !allSources.includes(mapped)) {
+			allSources.push(mapped);
+		}
+	}
+
+	// make a list of src : url objects
+	const toLoads = allSources.map(src => ({src: src, url: jsonDir + src2UrlMap[src]}));
+
+	// load the sources
+	if (toLoads.length > 0) {
+		const dataStack = (await Promise.all(toLoads.map(async toLoad => {
+			const data = await DataUtil.loadJSON(toLoad.url);
+			loadedSources[toLoad.src].loaded = true;
+			return data;
+		}))).flat();
+
+		await pPageInit(loadedSources);
+
+		let toAdd = [];
+		dataStack.forEach(d => toAdd = toAdd.concat(d[dataProp]));
+		addFn(toAdd);
+
+		if (pOptional) await pOptional();
+
+		RollerUtil.addListRollButton();
+		ListUtil.addListShowHide();
+
+		Hist.init(true);
+	} else {
+		await pPageInit(loadedSources);
+	}
+}
+
+function loadSource (jsonListName, dataFn) {
+	return function (src, val) {
+		const toLoad = loadedSources[src] || loadedSources[Object.keys(loadedSources).find(k => k.toLowerCase() === src)];
+		if (!toLoad.loaded && val === "yes") {
+			DataUtil.loadJSON(toLoad.url).then(function (data) {
+				dataFn(data[jsonListName]);
+				toLoad.loaded = true;
+			});
+		}
+	}
+}
+
+function onFilterChangeMulti (multiList) {
+	FilterBox.selectFirstVisible(multiList);
+}

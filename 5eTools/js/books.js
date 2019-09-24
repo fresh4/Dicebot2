@@ -1,1 +1,26 @@
-"use strict";class Books{static sortBooks(c,d,e){return d=c[d.elm.getAttribute(FLTR_ID)],e=c[e.elm.getAttribute(FLTR_ID)],SortUtil.ascSort(d.name,e.name)}}const booksList=new BooksList({contentsUrl:"data/books.json",sortFn:Books.sortBooks,dataProp:"book",rootPage:"book.html",rowBuilderFn:a=>`<span class="col-12 name">${a.name}</span>`});window.onload=booksList.onPageLoad.bind(booksList);function handleBrew(a){return booksList.addData(a),Promise.resolve()}
+"use strict";
+
+class Books {
+	static sortBooks (dataList, a, b) {
+		a = dataList[a.elm.getAttribute(FLTR_ID)];
+		b = dataList[b.elm.getAttribute(FLTR_ID)];
+		return SortUtil.ascSort(a.name, b.name);
+	}
+}
+
+const booksList = new BooksList({
+	contentsUrl: "data/books.json",
+	sortFn: Books.sortBooks,
+	dataProp: "book",
+	rootPage: "book.html",
+	rowBuilderFn: (bk) => {
+		return `<span class="col-12 name">${bk.name}</span>`;
+	}
+});
+
+window.onload = booksList.onPageLoad.bind(booksList);
+
+function handleBrew (homebrew) {
+	booksList.addData(homebrew);
+	return Promise.resolve();
+}

@@ -1,21 +1,793 @@
-"use strict";const BookUtil={getHeaderText(a){return a.header||a},_getSelectors(a){return[`.rd__h--0 > .entry-title-inner:textEquals("${a}")`,`.rd__h--1 > .entry-title-inner:textEquals("${a}")`,`.rd__h--2 > .entry-title-inner:textEquals("${a}")`,`.rd__h--2-inset > .entry-title-inner:textEquals("${a}")`,`.rd__h--3 > .entry-title-inner:textEquals("${a}.")`]},scrollClick(a,b){const c=BookUtil._getSelectors(a);if(b===void 0){const a=$(c[0]);if(a.length)return void a[0].scrollIntoView();const b=$(c[1]);if(b.length)return void b[0].scrollIntoView();const d=$(c[2]);if(d.length)return void d[0].scrollIntoView();const e=$(c[3]);e.length&&e[0].scrollIntoView();const f=$(c[4]);f.length&&f[0].scrollIntoView()}else{const a=$(`${c[0]}, ${c[1]}, ${c[2]}, ${c[3]}, ${c[4]}`);a.length&&(a[b]?a[b].scrollIntoView():a[0].scrollIntoView())}},scrollPageTop(a){if(a&&!~BookUtil.curRender.chapter){const b=BookUtil.thisContents.children("ul").children("li").children("a").index(a);if(~b){const a=$(`#pagecontent tr.text td`).children(`.${Renderer.HEAD_NEG_1}`)[b];a?a.scrollIntoView():setTimeout(()=>{throw new Error(`Failed to find header scroll target with index "${b}"`)})}else setTimeout(()=>{throw new Error(`Failed to find element within contents items`)})}else document.getElementById(`pagecontent`).scrollIntoView()},makeContentsBlock(a){let b=`<ul class="bk-contents" ${a.defaultHidden?`style="display: none;"`:""}>`;return a.book.contents.forEach((d,c)=>{b+=`<li>
-				<a href="${a.addPrefix||""}#${UrlUtil.encodeForHash(a.book.id)},${c}" ${a.addOnclick?`onclick="BookUtil.scrollPageTop(this)"`:""}>
-					<span class="sect">${Parser.bookOrdinalToAbv(d.ordinal)}${d.name}</span>
+"use strict";
+
+const BookUtil = {
+	getHeaderText (header) {
+		return header.header || header;
+	},
+
+	_getSelectors (scrollTo) {
+		scrollTo = scrollTo.trim().toLowerCase();
+		return [
+			`.rd__h--0 > .entry-title-inner:textEquals("${scrollTo}")`,
+			`.rd__h--1 > .entry-title-inner:textEquals("${scrollTo}")`,
+			`.rd__h--2 > .entry-title-inner:textEquals("${scrollTo}")`,
+			`.rd__h--2-inset > .entry-title-inner:textEquals("${scrollTo}")`,
+			`.rd__h--3 > .entry-title-inner:textEquals("${scrollTo}.")`
+		];
+	},
+
+	scrollClick (scrollTo, scrollIndex, ele) {
+		if (ele != null && !~BookUtil.curRender.chapter) {
+			// if in full-book mode, find the index of our header against the
+			const $list = $(ele).closest(".bk-headers");
+			const $siblings = $list.parent().children(".bk-headers").filter((i, e) => $(e).find(`[data-header="${scrollTo}"]`).length);
+			scrollIndex = $siblings.index($list);
+		}
+
+		const selectors = BookUtil._getSelectors(scrollTo);
+
+		if (scrollIndex == null) {
+			const goToSect = $(selectors[0]);
+			if (goToSect.length) {
+				goToSect[0].scrollIntoView();
+				return;
+			}
+			const goTo = $(selectors[1]);
+			if (goTo.length) {
+				goTo[0].scrollIntoView();
+				return;
+			}
+			const goToSub = $(selectors[2]);
+			if (goToSub.length) {
+				goToSub[0].scrollIntoView();
+				return;
+			}
+			const goToInset = $(selectors[3]);
+			if (goToInset.length) {
+				goToInset[0].scrollIntoView();
+			}
+			const goToInline = $(selectors[4]);
+			if (goToInline.length) {
+				goToInline[0].scrollIntoView();
+			}
+		} else {
+			const goTo = $(`${selectors[0]}, ${selectors[1]}, ${selectors[2]}, ${selectors[3]}, ${selectors[4]}`);
+			if (goTo.length) {
+				if (goTo[scrollIndex]) goTo[scrollIndex].scrollIntoView();
+				else goTo[0].scrollIntoView();
+			}
+		}
+	},
+
+	scrollPageTop (ele) {
+		if (ele && !~BookUtil.curRender.chapter) {
+			const ix = BookUtil.thisContents.children("ul").children("li").children("a").index(ele);
+			if (~ix) {
+				const ele = $(`#pagecontent tr.text td`).children(`.${Renderer.HEAD_NEG_1}`)[ix];
+				if (ele) ele.scrollIntoView();
+				else setTimeout(() => { throw new Error(`Failed to find header scroll target with index "${ix}"`) });
+			} else setTimeout(() => { throw new Error(`Failed to find element within contents items`) });
+		} else document.getElementById(`pagecontent`).scrollIntoView();
+	},
+
+	makeContentsBlock (options) {
+		let out = `<ul class="bk-contents" ${options.defaultHidden ? `style="display: none;"` : ""}>`;
+		options.book.contents.forEach((c, i) => {
+			out += `<li>
+				<a href="${options.addPrefix || ""}#${UrlUtil.encodeForHash(options.book.id)},${i}" ${options.addOnclick ? `onclick="BookUtil.scrollPageTop(this)"` : ""}>
+					<span class="sect">${Parser.bookOrdinalToAbv(c.ordinal)}${c.name}</span>
 				</a>
-			</li>`,b+=BookUtil.makeHeadersBlock(a.book.id,c,d,a.addPrefix,a.addOnclick,a.defaultHeadersHidden)}),b+="</ul>",b},makeHeadersBlock(a,b,c,d,e,f){let g=`<ul class="bk-headers" ${f?`style="display: none;"`:""}>`;return c.headers&&c.headers.forEach(c=>{const f=BookUtil.getHeaderText(c),h=c.header?`<span class="bk-contents__sub_spacer--1">\u2013</span>${c.header}`:c;g+=`
-				<li>
-					<a href="${d||""}#${a},${b},${UrlUtil.encodeForHash(f)}" data-book="${a}" data-chapter="${b}" data-header="${f}" ${e?`onclick="BookUtil.scrollClick('${f.replace(/'/g,"\\'")}')"`:""}>${h}</a>
-				</li>
-			`}),g+="</ul>",g},addHeaderHandles(a){const b=$(`ul.bk-headers`);b.prev(`li`).find(`a`).css({display:"flex","justify-content":"space-between",padding:"0"}),b.filter((a,b)=>$(b).children().length).each((b,c)=>{const d=$(c),e=d.prev(`li`).find(`a`);e.children(`.showhide`).length||e.append(`<span class="showhide" onclick="BookUtil.sectToggle(event, this)" data-hidden="true">${a?`[+]`:`[\u2013]`}</span>`)})},sectToggle(a,b){a&&(a.stopPropagation(),a.preventDefault());const c=$(b),d=c.closest(`li`).next(`ul.bk-headers`);c.data("hidden")?(d.show(),c.data("hidden",!1),c.html(`[\u2013]`)):(d.hide(),c.data("hidden",!0),c.html(`[+]`))},_buildHeaderMap(a,b){function c(a,b){if(("section"===a.type||"entries"===a.type)&&a.entries&&a.name){const e=/^([A-Z]+\d+(?:[a-z]+)?)\./.exec(a.name.trim());if(e){const c=e[1];if(d[c])throw new Error(`Header "${c}" was already defined!`);d[c]={chapter:b,entry:a}}else{const c=/^(\d+(?:[A-Za-z]+)?)\./.exec(a.name.trim());if(c){let e=`${b}>${c[1]}>0`;for(;d[e];)e=e.split(">"),e[e.length-1]=+e.last()+1,e=e.join(">");d[e]=d[e]={chapter:b,entry:a}}else d[a.name]={chapter:b,entry:a}}a.entries.forEach(a=>c(a,b))}}const d={};a.forEach((a,b)=>c(a,b));const e={},f=Object.keys(d);return f.forEach(a=>{if(a.includes(">")){const b=a.split(">").slice(0,2).join(">");(e[b]=e[b]||[]).push(a)}}),f.forEach(a=>{if(a.includes(">")){const b=a.split(">").slice(0,2).join(">");1===e[b].length&&(d[b]=d[a],delete d[a])}}),d},thisContents:null,curRender:{curBookId:"NONE",chapter:null,data:{},fromIndex:{},lastRefHeader:null,controls:{},headerMap:{}},showBookContent(a,b,c,d){function e(){$(`.${Renderer.HEAD_NEG_1}`).show(),$(`.rd__hr--section`).show()}function f(a){if(e(),a&&~BookUtil.curRender.chapter){const b=$(`.${Renderer.HEAD_NEG_1}`),c=b.filter((b,c)=>{const d=$(c),e=d.children(`.rd__h`).find(`span.entry-title-inner`).filter(`:textEquals("${a}")`);return e.length});return c.length?(BookUtil.curRender.lastRefHeader=a.toLowerCase(),b.hide(),$(`hr.rd__hr--section`).hide(),c.show(),MiscUtil.scrollPageTop()):BookUtil.curRender.lastRefHeader=null,!!c.length}}let g,h,i=0,j=!1;if(d&&0<d.length&&(i=+d[0]),d&&1<d.length?(g=$(`[href="#${c},${i},${d[1]}"]`).data("header"),BookUtil.referenceId&&f(g),!g&&(g=decodeURIComponent(d[1]),d[2]&&(h=+d[2]),j=!0)):BookUtil.referenceId&&e(),BookUtil.curRender.data=a,BookUtil.curRender.fromIndex=b,BookUtil.curRender.headerMap=BookUtil._buildHeaderMap(a),BookUtil.curRender.chapter!==i||BookUtil.curRender.curBookId!==c){if(BookUtil.thisContents.children(`ul`).children(`ul, li`).removeClass("active"),~i){BookUtil.thisContents.children(`ul`).children(`li:nth-of-type(${i+1}), ul:nth-of-type(${i+1})`).addClass("active");const a=BookUtil.thisContents.children(`ul`).children(`li:nth-of-type(${i+1})`).find(`.showhide`);a.data("hidden")&&a.click()}else BookUtil.thisContents.children(`ul`).children(`li`).find(`.showhide`).each((a,b)=>{const c=$(b);c.data("hidden")&&c.click()});BookUtil.curRender.curBookId=c,BookUtil.curRender.chapter=i,BookUtil.renderArea.html("");const d=(b.contents[i]||{}).name;document.title=`${d?`${d} - `:""}${b.name} - 5etools`;const e=a=>{const b=()=>{const b=[c,i+a];window.location.hash=b.join(HASH_PART_SEP),MiscUtil.scrollPageTop()};if(BookUtil.referenceId&&BookUtil.curRender.lastRefHeader){const d=BookUtil.curRender.fromIndex.contents[i],e=d.headers.findIndex(a=>BookUtil.getHeaderText(a).toLowerCase()===BookUtil.curRender.lastRefHeader);if(!~e)b();else if(d.headers[e+a]){const b=[c,i,BookUtil.getHeaderText(d.headers[e+a]).toLowerCase()];window.location.hash=b.join(HASH_PART_SEP)}else{b();const d=BookUtil.curRender.fromIndex.contents[i+a].headers,e=0<a?0:d.length-1,f=[c,i+a,d[e].toLowerCase()];window.location.hash=f.join(HASH_PART_SEP)}}else b()},j=b=>{const c=`padding-${b?"top":"bottom"}: 6px; padding-left: 9px; padding-right: 9px;`,d=$(`<div class="split"/>`).appendTo($(`<td colspan="6" style="${c}"/>`).appendTo($(`<tr/>`).appendTo(BookUtil.renderArea))),f=~i&&0<i;(BookUtil.curRender.controls.$btnsPrv=BookUtil.curRender.controls.$btnsPrv||[]).push($(`<button class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"></span>Previous</button>`).click(()=>e(-1)).toggle(f).appendTo(d)),(BookUtil.curRender.controls.$divsPrv=BookUtil.curRender.controls.$divsPrv||[]).push($(`<div class="bk__nav-head-foot-item"/>`).toggle(!f).appendTo(d)),b?$(`<button class="btn btn-xs btn-default ${~BookUtil.curRender.chapter?"":"active"}" title="Warning: Slow">View Entire ${BookUtil.contentType.uppercaseFirst()}</button>`).click(()=>{window.location.href=(~BookUtil.curRender.chapter?BookUtil.thisContents.find(`.bk__contents_show_all`):BookUtil.thisContents.find(`.bk__contents_header_link`)).attr("href")}).appendTo(d):$(`<button class="btn btn-xs btn-default">Back to Top</button>`).click(()=>MiscUtil.scrollPageTop()).appendTo(d);const g=~i&&i<a.length-1;(BookUtil.curRender.controls.$btnsNxt=BookUtil.curRender.controls.$btnsNxt||[]).push($(`<button class="btn btn-xs btn-default bk__nav-head-foot-item">Next<span class="glyphicon glyphicon-chevron-right"></span></button>`).click(()=>e(1)).toggle(g).appendTo(d)),(BookUtil.curRender.controls.$divsNxt=BookUtil.curRender.controls.$divsNxt||[]).push($(`<div class="bk__nav-head-foot-item"/>`).toggle(!g).appendTo(d))};BookUtil.curRender.controls={},BookUtil.renderArea.append(Renderer.utils.getBorderTr()),j(!0);const k=[];if(BookUtil._renderer.setFirstSection(!0),BookUtil._renderer.setLazyImages(!0),BookUtil._renderer.resetHeaderIndex(),-1==i?a.forEach(a=>BookUtil._renderer.recursiveRender(a,k)):BookUtil._renderer.recursiveRender(a[i],k),BookUtil.renderArea.append(`<tr class="text"><td colspan="6">${k.join("")}</td></tr>`),Renderer.initLazyImageLoaders(),BookUtil._renderer.setLazyImages(!1),j(),BookUtil.renderArea.append(Renderer.utils.getBorderTr()),g){let a=!1;BookUtil.referenceId&&(a=f(g)),a||(setTimeout(()=>{BookUtil.scrollClick(g,h)},BookUtil.isHashReload?1:75),BookUtil.isHashReload=!1)}}else 1>=d.length?~i&&(BookUtil.referenceId?MiscUtil.scrollPageTop():BookUtil.scrollPageTop()):j&&BookUtil.scrollClick(g,h);(function(){if(BookUtil.referenceId){const b=BookUtil.curRender.controls;if(~i){const c=BookUtil.curRender.fromIndex.contents[i],d=c.headers.findIndex(a=>BookUtil.getHeaderText(a).toLowerCase()===BookUtil.curRender.lastRefHeader),e=0<i||~d&&0<d,f=i<a.length-1||~d&&d<c.headers.length-1;b.$btnsPrv.forEach(a=>a.toggle(!!e)),b.$btnsNxt.forEach(a=>a.toggle(!!f)),b.$divsPrv.forEach(a=>a.toggle(!e)),b.$divsNxt.forEach(a=>a.toggle(!f))}else b.$btnsPrv.forEach(a=>a.toggle(!1)),b.$btnsNxt.forEach(a=>a.toggle(!1)),b.$divsPrv.forEach(a=>a.toggle(!0)),b.$divsNxt.forEach(a=>a.toggle(!0))}})()},indexListToggle(a,b){a&&(a.stopPropagation(),a.preventDefault());const c=$(b),d=c.closest(`li`).find(`ul.bk-contents`);c.data("hidden")?(d.show(),c.data("hidden",!1),c.html(`[\u2013]`)):(d.hide(),c.data("hidden",!0),c.html(`[+]`))},initLinkGrabbers(){const a=$(`body`);a.on(`mousedown`,`.entry-title-inner`,function(a){a.preventDefault()}),a.on(`click`,`.entry-title-inner`,async function(a){const b=$(this),c=b.text().trim().replace(/\.$/,"");if(a.shiftKey)await MiscUtil.pCopyTextToClipboard(c),JqueryUtil.showCopiedEffect(b);else{const a=[BookUtil.curRender.chapter,c,b.parent().data("title-relative-index")].map(a=>UrlUtil.encodeForHash(a)),d=[`${window.location.href.split("#")[0]}#${BookUtil.curRender.curBookId}`,...a];await MiscUtil.pCopyTextToClipboard(d.join(HASH_PART_SEP)),JqueryUtil.showCopiedEffect(b,"Copied link!")}})},baseDataUrl:"",bookIndex:[],homebrewIndex:null,homebrewData:null,renderArea:null,referenceId:!1,isHashReload:!1,contentType:null,booksHashChange(){function a(a){return a.includes(Parser.SOURCE_JSON_TO_FULL[SRC_TYP])?a.replace(Parser.SOURCE_JSON_TO_FULL[SRC_TYP],Parser.sourceJsonToAbv(SRC_TYP)):a}async function b(b,c){document.title=`${b.name} - 5etools`,$(`.book-head-header`).html(a(b.name)),$(`.book-head-message`).html("Browse content. Press F to find, and G to go to page."),await BookUtil.pLoadBook(b,f,e,c),NavBar.highlightCurrentPage()}function c(){if(!window.location.hash)window.history.back();else throw $(`.initial-message`).text(`Loading failed\u2014could not find ${Parser.getArticle(BookUtil.contentType)} ${BookUtil.contentType} with ID "${f}." You may need to load it as homebrew.`),new Error(`No book with ID: ${f}`)}const[d,...e]=window.location.hash.slice(1).split(HASH_PART_SEP),f=decodeURIComponent(d);if(-1===BookUtil.curRender.chapter&&e.length&&"-1"!==e[0]&&UrlUtil.encodeForHash(BookUtil.curRender.curBookId)===UrlUtil.encodeForHash(f))return window.history.replaceState({},document.title,`${location.origin}${location.pathname}#${[d,-1,...e.slice(1)].join(HASH_PART_SEP)}`),BookUtil.booksHashChange();const g=BookUtil.bookIndex.find(a=>UrlUtil.encodeForHash(a.id)===UrlUtil.encodeForHash(f));g&&!g.uniqueId?b(g):g&&g.uniqueId?BrewUtil.pAddBrewData().then(a=>{a[BookUtil.homebrewData]||c();const d=(a[BookUtil.homebrewData]||[]).find(a=>UrlUtil.encodeForHash(a.id)===UrlUtil.encodeForHash(f));d||c(),b(g,d)}).catch(a=>{BrewUtil.pPurgeBrew(),setTimeout(()=>{throw a})}):c()},_renderer:new Renderer().setEnumerateTitlesRel(!0),async pLoadBook(a,b,c,d){function e(d){const e=$(`.contents-item`);BookUtil.thisContents=e.filter(`[data-bookid="${UrlUtil.encodeForHash(b)}"]`),BookUtil.thisContents.show(),e.filter(`[data-bookid!="${UrlUtil.encodeForHash(b)}"]`).hide(),BookUtil.showBookContent(BookUtil.referenceId?d.data[BookUtil.referenceId]:d.data,a,b,c),BookUtil.addSearch(a,b)}if(d)e(d);else{const a=await DataUtil.loadJSON(`${BookUtil.baseDataUrl}${b.toLowerCase()}.json`);e(a)}},handleReNav(a){const b=window.location.hash.slice(1).toLowerCase(),c=$(a).attr("href").slice(1).toLowerCase();b===c&&(BookUtil.isHashReload=!0,BookUtil.booksHashChange())},_$body:null,_$findAll:null,_headerCounts:null,_lastHighlight:null,addSearch(a,b){function c(a){return`${UrlUtil.encodeForHash(b)}${HASH_PART_SEP}${~BookUtil.curRender.chapter?a.ch:-1}${a.header?`${HASH_PART_SEP}${UrlUtil.encodeForHash(a.header)}${HASH_PART_SEP}${a.headerIndex}`:""}`}function d(a){return a.name&&("entries"===a.type||"inset"===a.type||"section"===a.type)}function f(a,b,h,j,k,l){function m(a,b,c){var d=Math.min;let e=0,f=0,h="",k=b-1;for(;0<=k&&(h=a.charAt(k)+h," "===a.charAt(k)&&0===f&&e++,!(e>g));--k);h=h.trimStart();const l=0<k;e=0;let m="";const o=b===c?c+n.length:c;for(k=d(o,a.length);k<a.length&&(m+=a.charAt(k)," "===a.charAt(k)&&0===f&&e++,!(e>g));++k);m=m.trimEnd();const p=k<a.length,q=a.substr(b,j.length);return{preview:`${l?"...":""}${h}<span class="highlight">${q}</span>${m}${p?"...":""}`,match:`${h}${j}${m}`}}if(null==j)return;const n=l?+j.trim():j.toLowerCase().trim();if(!n)return;d(k)&&(BookUtil._headerCounts[k.name]===void 0?BookUtil._headerCounts[k.name]=0:BookUtil._headerCounts[k.name]++);let o;if(d(k)){o=Renderer.stripTags(k.name);const b=l?k.page===n:o.toLowerCase().includes(n);b&&h.push({ch:a,header:o,headerIndex:BookUtil._headerCounts[o],term:j.trim(),headerMatches:!0,page:k.page})}else o=b;if(k.entries)k.entries.forEach(b=>f(a,o,h,j,b,l));else if(k.items)k.items.forEach(b=>f(a,o,h,j,b,l));else if(k.rows)k.rows.forEach(b=>{const c=b.row?b.row:b;c.forEach(b=>f(a,o,h,j,b,l))});else if(k.tables)k.tables.forEach(b=>f(a,o,h,j,b,l));else if(k.entry)f(a,o,h,j,k.entry,l);else if("string"==typeof k||"number"==typeof k){if(l)return;const b=[];BookUtil._renderer.recursiveRender(k,b);const c=$(`<p>${b.join("")}</p>`).text(),d="number"==typeof k?c+"":c.toLowerCase();if(d.includes(n))if(!h.length||!(h[h.length-1].header===o&&h[h.length-1].headerIndex===BookUtil._headerCounts[o]&&h[h.length-1].previews)){const b=d.indexOf(n),e=d.lastIndexOf(n),f=[];b===e?f.push(m(c,b,b)):(f.push(m(c,b,b+n.length)),f.push(m(c,e,e+n.length))),h.push({ch:a,header:o,headerIndex:BookUtil._headerCounts[o],previews:f.map(a=>a.preview),term:j.trim(),matches:f.map(a=>a.match),headerMatches:o.toLowerCase().includes(n)})}else{const a=d.lastIndexOf(n),b=m(c,a,a+n.length),e=h[h.length-1];e.previews[1]=b.preview,e.matches[1]=b.match}}else if("image"!==k.type&&"gallery"!==k.type&&"link"!==k.type&&"abilityGeneric"!==k.type&&"cell"!==k.type)throw new Error("Unhandled entity type")}BookUtil._$body=BookUtil._$body||$(`body`),BookUtil._$body.on("click",()=>{BookUtil._$findAll&&BookUtil._$findAll.remove()}),BookUtil._$body.off("keypress"),BookUtil._$body.on("keypress",b=>{if(("f"===b.key||"g"===b.key)&&noModifierKeys(b)){if(MiscUtil.isInInput(b))return;b.preventDefault();const d="g"===b.key;$(`span.temp`).contents().unwrap(),BookUtil._lastHighlight=null,BookUtil._$findAll&&BookUtil._$findAll.remove(),BookUtil._$findAll=$(`<div class="f-all-wrapper"/>`).on("click",a=>{a.stopPropagation()});const e=$(`<div class="f-all-out">`),g=$(`<input class="form-control" placeholder="${d?"Go to page number...":"Find text..."}">`).on("keypress",b=>{if(b.stopPropagation(),"Enter"===b.key&&noModifierKeys(b)){const b=g.val();if(d&&!/^\d+$/.exec(b.trim()))return JqueryUtil.doToast({content:`Please enter a valid page number.`,type:"danger"});e.html("");const h=[],i=BookUtil.curRender.data;i.forEach((a,c)=>{BookUtil._headerCounts={},f(c,"",h,b,a,d)}),h.length?(e.show(),h.forEach(b=>{const f=$(`<p class="f-result"/>`),g=$(`<span/>`),h=b.headerMatches&&!b.page,i=$(`<a href="#${c(b)}">
-									<i>${Parser.bookOrdinalToAbv(a.contents[b.ch].ordinal)} ${a.contents[b.ch].name}${b.header?` \u2013 ${h?`<span class="highlight">`:""}${b.header}${h?`</span>`:""}`:""}</i>
-								</a>`);if(g.append(i),f.append(g),!d&&b.previews){const a=$(`<a href="#${c(b)}"/>`).click(function(){BookUtil.handleReNav(this)}),d=new RegExp(RegExp.escape(b.term),"gi");a.on("click",()=>{setTimeout(()=>{(null===BookUtil._lastHighlight||BookUtil._lastHighlight!==b.term.toLowerCase())&&(BookUtil._lastHighlight=b.term,$(`#pagecontent`).find(`p:containsInsensitive("${b.term}"), li:containsInsensitive("${b.term}"), td:containsInsensitive("${b.term}"), a:containsInsensitive("${b.term}")`).each((a,b)=>{$(b).html($(b).html().replace(d,"<span class='temp highlight'>$&</span>"))}))},15)}),a.append(`<span>${b.previews[0]}</span>`),b.previews[1]&&(a.append(" ... "),a.append(`<span>${b.previews[1]}</span>`)),f.append(a),i.on("click",()=>a.click())}else{if(b.page){const a=$(`<span>Page ${b.page}</span>`);f.append(a)}i.click(function(){BookUtil.handleReNav(this)})}e.append(f)})):e.hide()}});BookUtil._$findAll.append(g).append(e),BookUtil._$body.append(BookUtil._$findAll),g.focus()}});const g=2},getContentsItem(a,b,c){return`<li class="contents-item" data-bookid="${UrlUtil.encodeForHash(b.id)}" style="display: none;">
+			</li>`;
+			out += BookUtil.makeHeadersBlock(options.book.id, i, c, options.addPrefix, options.addOnclick, options.defaultHeadersHidden);
+		});
+		out += "</ul>";
+		return out;
+	},
+
+	makeHeadersBlock (bookId, chapterIndex, chapter, addPrefix, addOnclick, defaultHeadersHidden) {
+		let out = `<ul class="bk-headers" ${defaultHeadersHidden ? `style="display: none;"` : ""}>`;
+		chapter.headers && chapter.headers.forEach(h => {
+			const headerText = BookUtil.getHeaderText(h);
+			const displayText = h.header ? `<span class="bk-contents__sub_spacer--1">\u2013</span>${h.header}` : h; // handle entries with depth
+			out += `<li>
+				<a href="${addPrefix || ""}#${bookId},${chapterIndex},${UrlUtil.encodeForHash(headerText)}" data-book="${bookId}" data-chapter="${chapterIndex}" data-header="${headerText}" ${addOnclick ? `onclick="BookUtil.scrollClick('${headerText.replace(/'/g, "\\'")}', null, this)"` : ""}>${displayText}</a>
+			</li>`;
+		});
+		out += "</ul>";
+		return out;
+	},
+
+	addHeaderHandles (defHidden) {
+		// Add show/hide handles to section names, and update styles
+		const allHeaders = $(`ul.bk-headers`);
+		// add styles to all
+		allHeaders.prev(`li`).find(`a`).css({
+			display: "flex",
+			"justify-content": "space-between",
+			padding: "0"
+		});
+		allHeaders.filter((i, ele) => $(ele).children().length).each((i, ele) => {
+			const $ele = $(ele);
+			// add expand/collapse to only those with children
+			const $appendTo = $ele.prev(`li`).find(`a`);
+			if (!$appendTo.children(`.showhide`).length) {
+				$appendTo.append(`<span class="showhide" onclick="BookUtil.sectToggle(event, this)" data-hidden="true">${defHidden ? `[+]` : `[\u2013]`}</span>`)
+			}
+		});
+	},
+
+	sectToggle (evt, ele) {
+		if (evt) {
+			evt.stopPropagation();
+			evt.preventDefault();
+		}
+		const $ele = $(ele);
+		const $childList = $ele.closest(`li`).next(`ul.bk-headers`);
+		if ($ele.data("hidden")) {
+			$childList.show();
+			$ele.data("hidden", false);
+			$ele.html(`[\u2013]`);
+		} else {
+			$childList.hide();
+			$ele.data("hidden", true);
+			$ele.html(`[+]`);
+		}
+	},
+
+	getEntryIdLookup (bookData, doThrowError = true) {
+		const out = {};
+
+		const handlers = {
+			object: (chapIx, obj) => {
+				Renderer.ENTRIES_WITH_CHILDREN
+					.filter(meta => meta.key === "entries")
+					.forEach(meta => {
+						if (obj.type !== meta.type) return;
+						if (obj.id) {
+							if (out[obj.id]) {
+								(out.__BAD = out.__BAD || []).push(obj.id);
+							} else {
+								out[obj.id] = {
+									chapter: chapIx,
+									entry: obj
+								};
+							}
+						}
+					});
+				return obj;
+			}
+		};
+
+		bookData.forEach((chap, chapIx) => MiscUtil.getWalker().walk(chapIx, chap, handlers));
+
+		if (doThrowError) if (out.__BAD) throw new Error(`IDs were already in storage: ${out.__BAD.map(it => `"${it}"`).join(", ")}`);
+
+		return out;
+	},
+
+	thisContents: null,
+	curRender: {
+		curBookId: "NONE",
+		chapter: null, // -1 represents "entire book"
+		data: {},
+		fromIndex: {},
+		lastRefHeader: null,
+		controls: {},
+		headerMap: {}
+	},
+	_lastClickedLink: null,
+	showBookContent (data, fromIndex, bookId, hashParts) {
+		function handleQuickReferenceShowAll () {
+			$(`.${Renderer.HEAD_NEG_1}`).show();
+			$(`.rd__hr--section`).show();
+		}
+
+		/**
+		 * @param sectionHeader Section header to scroll to.
+		 * @return {boolean} True if the scroll happened, false otherwise.
+		 */
+		function handleQuickReferenceShow (sectionHeader) {
+			handleQuickReferenceShowAll();
+			if (sectionHeader && ~BookUtil.curRender.chapter) {
+				const $allSects = $(`.${Renderer.HEAD_NEG_1}`);
+				const $toShow = $allSects.filter((i, e) => {
+					const $e = $(e);
+					const cleanSectionHead = sectionHeader.trim().toLowerCase();
+					const $match = $e.children(`.rd__h`).find(`span.entry-title-inner`).filter(`:textEquals("${cleanSectionHead}")`);
+					return $match.length;
+				});
+
+				if ($toShow.length) {
+					BookUtil.curRender.lastRefHeader = sectionHeader.toLowerCase();
+					$allSects.hide();
+					$(`hr.rd__hr--section`).hide();
+					$toShow.show();
+					MiscUtil.scrollPageTop();
+				} else BookUtil.curRender.lastRefHeader = null;
+				return !!$toShow.length;
+			}
+		}
+
+		let chapter = 0;
+		let scrollTo;
+		let scrollIndex;
+		let forceScroll = false;
+		if (hashParts && hashParts.length > 0) chapter = Number(hashParts[0]);
+		if (hashParts && hashParts.length > 1) {
+			scrollTo = $(`[href="#${bookId},${chapter},${hashParts[1]}"]`).data("header");
+			if (BookUtil.referenceId) {
+				handleQuickReferenceShow(scrollTo);
+			}
+
+			// fallback to scanning the document
+			if (!scrollTo) {
+				scrollTo = decodeURIComponent(hashParts[1]);
+				if (hashParts[2]) scrollIndex = Number(hashParts[2]);
+				forceScroll = true;
+			}
+		} else if (BookUtil.referenceId) {
+			handleQuickReferenceShowAll();
+		}
+
+		BookUtil.curRender.data = data;
+		BookUtil.curRender.fromIndex = fromIndex;
+		BookUtil.curRender.headerMap = BookUtil.getEntryIdLookup(data);
+		if (BookUtil.curRender.chapter !== chapter || UrlUtil.encodeForHash(BookUtil.curRender.curBookId.toLowerCase()) !== UrlUtil.encodeForHash(bookId)) {
+			BookUtil.thisContents.children(`ul`).children(`ul, li`).removeClass("active");
+			if (~chapter) {
+				BookUtil.thisContents.children(`ul`).children(`li:nth-of-type(${chapter + 1}), ul:nth-of-type(${chapter + 1})`).addClass("active");
+				const $showHideBtn = BookUtil.thisContents.children(`ul`).children(`li:nth-of-type(${chapter + 1})`).find(`.showhide`);
+				if ($showHideBtn.data("hidden")) $showHideBtn.click();
+			} else {
+				// if displaying as one continual run, expand all
+				BookUtil.thisContents.children(`ul`).children(`li`).find(`.showhide`).each((i, e) => {
+					const $showHideBtn = $(e);
+					if ($showHideBtn.data("hidden")) $showHideBtn.click();
+				});
+			}
+
+			BookUtil.curRender.curBookId = bookId;
+			BookUtil.curRender.chapter = chapter;
+			BookUtil.renderArea.html("");
+
+			const chapterTitle = (fromIndex.contents[chapter] || {}).name;
+			document.title = `${chapterTitle ? `${chapterTitle} - ` : ""}${fromIndex.name} - 5etools`;
+
+			const goToPage = (mod) => {
+				const changeChapter = () => {
+					const newHashParts = [bookId, chapter + mod];
+					window.location.hash = newHashParts.join(HASH_PART_SEP);
+					MiscUtil.scrollPageTop();
+				};
+
+				if (BookUtil.referenceId && BookUtil.curRender.lastRefHeader) {
+					const chap = BookUtil.curRender.fromIndex.contents[chapter];
+					const ix = chap.headers.findIndex(it => BookUtil.getHeaderText(it).toLowerCase() === BookUtil.curRender.lastRefHeader);
+					if (~ix) {
+						if (chap.headers[ix + mod]) {
+							const newHashParts = [bookId, chapter, BookUtil.getHeaderText(chap.headers[ix + mod]).toLowerCase()];
+							window.location.hash = newHashParts.join(HASH_PART_SEP);
+						} else {
+							changeChapter();
+							const nxtHeaders = BookUtil.curRender.fromIndex.contents[chapter + mod].headers;
+							const nxtIx = mod > 0 ? 0 : nxtHeaders.length - 1;
+							const newHashParts = [bookId, chapter + mod, nxtHeaders[nxtIx].toLowerCase()];
+							window.location.hash = newHashParts.join(HASH_PART_SEP);
+						}
+					} else changeChapter();
+				} else changeChapter();
+			};
+
+			const renderNavButtons = (isTop) => {
+				const tdStlye = `padding-${isTop ? "top" : "bottom"}: 6px; padding-left: 9px; padding-right: 9px;`;
+				const $wrpControls = $(`<div class="split"/>`).appendTo($(`<td colspan="6" style="${tdStlye}"/>`).appendTo($(`<tr/>`).appendTo(BookUtil.renderArea)));
+
+				const showPrev = ~chapter && chapter > 0;
+				(BookUtil.curRender.controls.$btnsPrv = BookUtil.curRender.controls.$btnsPrv || [])
+					.push($(`<button class="btn btn-xs btn-default bk__nav-head-foot-item"><span class="glyphicon glyphicon-chevron-left"></span>Previous</button>`)
+						.click(() => goToPage(-1))
+						.toggle(showPrev)
+						.appendTo($wrpControls));
+				(BookUtil.curRender.controls.$divsPrv = BookUtil.curRender.controls.$divsPrv || [])
+					.push($(`<div class="bk__nav-head-foot-item"/>`)
+						.toggle(!showPrev)
+						.appendTo($wrpControls));
+
+				if (isTop) {
+					$(`<button class="btn btn-xs btn-default ${~BookUtil.curRender.chapter ? "" : "active"}" title="Warning: Slow">View Entire ${BookUtil.contentType.uppercaseFirst()}</button>`).click(() => {
+						window.location.href = (~BookUtil.curRender.chapter ? BookUtil.thisContents.find(`.bk__contents_show_all`) : BookUtil.thisContents.find(`.bk__contents_header_link`)).attr("href");
+					}).appendTo($wrpControls);
+				} else $(`<button class="btn btn-xs btn-default">Back to Top</button>`).click(() => MiscUtil.scrollPageTop()).appendTo($wrpControls);
+
+				const showNxt = ~chapter && chapter < data.length - 1;
+				(BookUtil.curRender.controls.$btnsNxt = BookUtil.curRender.controls.$btnsNxt || [])
+					.push($(`<button class="btn btn-xs btn-default bk__nav-head-foot-item">Next<span class="glyphicon glyphicon-chevron-right"></span></button>`)
+						.click(() => goToPage(1))
+						.toggle(showNxt)
+						.appendTo($wrpControls));
+				(BookUtil.curRender.controls.$divsNxt = BookUtil.curRender.controls.$divsNxt || [])
+					.push($(`<div class="bk__nav-head-foot-item"/>`)
+						.toggle(!showNxt)
+						.appendTo($wrpControls));
+			};
+
+			BookUtil.curRender.controls = {};
+			BookUtil.renderArea.append(Renderer.utils.getBorderTr());
+			renderNavButtons(true);
+			const textStack = [];
+			BookUtil._renderer.setFirstSection(true);
+			BookUtil._renderer.setLazyImages(true);
+			BookUtil._renderer.resetHeaderIndex();
+			if (chapter === -1) data.forEach(d => BookUtil._renderer.recursiveRender(d, textStack));
+			else BookUtil._renderer.recursiveRender(data[chapter], textStack);
+			BookUtil.renderArea.append(`<tr class="text"><td colspan="6" style="padding: 5px 20px;">${textStack.join("")}</td></tr>`);
+			Renderer.initLazyImageLoaders();
+			BookUtil._renderer.setLazyImages(false);
+			renderNavButtons();
+
+			BookUtil.renderArea.append(Renderer.utils.getBorderTr());
+
+			if (scrollTo) {
+				let handled = false;
+				if (BookUtil.referenceId) handled = handleQuickReferenceShow(scrollTo);
+				if (!handled) {
+					setTimeout(() => {
+						BookUtil.scrollClick(scrollTo, scrollIndex);
+					}, BookUtil.isHashReload ? 15 : 75);
+					BookUtil.isHashReload = false;
+				}
+			}
+		} else {
+			if (hashParts.length <= 1) {
+				if (~chapter) {
+					if (BookUtil.referenceId) MiscUtil.scrollPageTop();
+					else BookUtil.scrollPageTop();
+				} else {
+					if (hashParts.length === 1 && BookUtil._lastClickedLink) {
+						const $lastLink = $(BookUtil._lastClickedLink);
+						const lastHref = $lastLink.attr("href");
+						const mLink = new RegExp(`^${UrlUtil.PG_ADVENTURE}#${BookUtil.curRender.curBookId},(\\d+)$`, "i").exec(lastHref.trim());
+						if (mLink) {
+							const linkChapterIx = Number(mLink[1]);
+							const ele = $(`#pagecontent tr.text td`).children(`.${Renderer.HEAD_NEG_1}`)[linkChapterIx];
+							if (ele) ele.scrollIntoView();
+							else setTimeout(() => { throw new Error(`Failed to find header scroll target with index "${linkChapterIx}"`) });
+							return;
+						}
+					}
+				}
+			} else if (forceScroll) {
+				setTimeout(() => {
+					BookUtil.scrollClick(scrollTo, scrollIndex);
+				}, BookUtil.isHashReload ? 15 : 75);
+			}
+		}
+
+		/**
+		 * Update the Previous/Next/To Top buttons at the top/bottom of the page
+		 */
+		(function updateControls () {
+			if (BookUtil.referenceId) {
+				const cnt = BookUtil.curRender.controls;
+
+				if (~chapter) {
+					const chap = BookUtil.curRender.fromIndex.contents[chapter];
+					const headerIx = chap.headers.findIndex(it => BookUtil.getHeaderText(it).toLowerCase() === BookUtil.curRender.lastRefHeader);
+					const renderPrev = chapter > 0 || (~headerIx && headerIx > 0);
+					const renderNxt = chapter < data.length - 1 || (~headerIx && headerIx < chap.headers.length - 1);
+					cnt.$btnsPrv.forEach($it => $it.toggle(!!renderPrev));
+					cnt.$btnsNxt.forEach($it => $it.toggle(!!renderNxt));
+					cnt.$divsPrv.forEach($it => $it.toggle(!renderPrev));
+					cnt.$divsNxt.forEach($it => $it.toggle(!renderNxt));
+				} else {
+					cnt.$btnsPrv.forEach($it => $it.toggle(false));
+					cnt.$btnsNxt.forEach($it => $it.toggle(false));
+					cnt.$divsPrv.forEach($it => $it.toggle(true));
+					cnt.$divsNxt.forEach($it => $it.toggle(true));
+				}
+			}
+		})();
+	},
+
+	indexListToggle (evt, ele) {
+		if (evt) {
+			evt.stopPropagation();
+			evt.preventDefault();
+		}
+		const $ele = $(ele);
+		const $childList = $ele.closest(`li`).find(`ul.bk-contents`);
+		if ($ele.data("hidden")) {
+			$childList.show();
+			$ele.data("hidden", false);
+			$ele.html(`[\u2013]`);
+		} else {
+			$childList.hide();
+			$ele.data("hidden", true);
+			$ele.html(`[+]`);
+		}
+	},
+
+	initLinkGrabbers () {
+		const $body = $(`body`);
+		$body.on(`mousedown`, `.entry-title-inner`, function (evt) {
+			evt.preventDefault();
+		});
+		$body.on(`click`, `.entry-title-inner`, async function (evt) {
+			const $this = $(this);
+			const text = $this.text().trim().replace(/\.$/, "");
+
+			if (evt.shiftKey) {
+				await MiscUtil.pCopyTextToClipboard(text);
+				JqueryUtil.showCopiedEffect($this);
+			} else {
+				const hashParts = [BookUtil.curRender.chapter, text, $this.parent().data("title-relative-index")].map(it => UrlUtil.encodeForHash(it));
+				const toCopy = [`${window.location.href.split("#")[0]}#${BookUtil.curRender.curBookId}`, ...hashParts];
+				await MiscUtil.pCopyTextToClipboard(toCopy.join(HASH_PART_SEP));
+				JqueryUtil.showCopiedEffect($this, "Copied link!");
+			}
+		});
+	},
+
+	baseDataUrl: "",
+	bookIndex: [],
+	homebrewIndex: null,
+	homebrewData: null,
+	renderArea: null,
+	referenceId: false,
+	isHashReload: false,
+	contentType: null, // one of "book" "adventure" or "document"
+	// custom loading to serve multiple sources
+	booksHashChange () {
+		function cleanName (name) {
+			// prevent TftYP names from causing the header to wrap
+			return name.includes(Parser.SOURCE_JSON_TO_FULL[SRC_TYP]) ? name.replace(Parser.SOURCE_JSON_TO_FULL[SRC_TYP], Parser.sourceJsonToAbv(SRC_TYP)) : name;
+		}
+
+		async function pHandleFound (fromIndex, homebrewData) {
+			document.title = `${fromIndex.name} - 5etools`;
+			$(`.book-head-header`).html(cleanName(fromIndex.name));
+			$(`.book-head-message`).html("Browse content. Press F to find, and G to go to page.");
+			await BookUtil.pLoadBook(fromIndex, bookId, hashParts, homebrewData);
+			NavBar.highlightCurrentPage();
+		}
+
+		function handleNotFound () {
+			if (!window.location.hash) window.history.back();
+			else {
+				$(`.initial-message`).text(`Loading failed\u2014could not find ${Parser.getArticle(BookUtil.contentType)} ${BookUtil.contentType} with ID "${bookId}." You may need to load it as homebrew.`);
+				throw new Error(`No book with ID: ${bookId}`);
+			}
+		}
+
+		const [bookIdRaw, ...hashParts] = window.location.hash.slice(1).split(HASH_PART_SEP);
+		const bookId = decodeURIComponent(bookIdRaw);
+
+		// if current chapter is -1 (full book mode), and a chapter is specified, override + stay in full-book mode
+		if (BookUtil.curRender.chapter === -1
+			&& hashParts.length && hashParts[0] !== "-1"
+			&& UrlUtil.encodeForHash(BookUtil.curRender.curBookId) === UrlUtil.encodeForHash(bookId)) {
+			window.history.replaceState(
+				{},
+				document.title,
+				`${location.origin}${location.pathname}#${[bookIdRaw, -1, ...hashParts.slice(1)].join(HASH_PART_SEP)}`
+			);
+			return BookUtil.booksHashChange();
+		}
+
+		const fromIndex = BookUtil.bookIndex.find(bk => UrlUtil.encodeForHash(bk.id) === UrlUtil.encodeForHash(bookId));
+		if (fromIndex && !fromIndex.uniqueId) pHandleFound(fromIndex);
+		else if (fromIndex && fromIndex.uniqueId) { // it's homebrew
+			BrewUtil.pAddBrewData() // to load existing data
+				.then((brew) => {
+					if (!brew[BookUtil.homebrewData]) handleNotFound();
+					const bookData = (brew[BookUtil.homebrewData] || []).find(bk => UrlUtil.encodeForHash(bk.id) === UrlUtil.encodeForHash(bookId));
+					if (!bookData) handleNotFound();
+					pHandleFound(fromIndex, bookData);
+				})
+				.catch(e => {
+					BrewUtil.pPurgeBrew(e);
+				});
+		} else handleNotFound();
+	},
+
+	_renderer: new Renderer().setEnumerateTitlesRel(true),
+	async pLoadBook (fromIndex, bookId, hashParts, homebrewData) {
+		function doPopulate (data) {
+			const allContents = $(`.contents-item`);
+			BookUtil.thisContents = allContents.filter(`[data-bookid="${UrlUtil.encodeForHash(bookId)}"]`);
+			BookUtil.thisContents.show();
+			allContents.filter(`[data-bookid!="${UrlUtil.encodeForHash(bookId)}"]`).hide();
+			BookUtil.showBookContent(BookUtil.referenceId ? data.data[BookUtil.referenceId] : data.data, fromIndex, bookId, hashParts);
+			BookUtil.addSearch(fromIndex, bookId);
+		}
+
+		if (homebrewData) {
+			doPopulate(homebrewData);
+		} else {
+			const data = await DataUtil.loadJSON(`${BookUtil.baseDataUrl}${bookId.toLowerCase()}.json`);
+			doPopulate(data);
+		}
+	},
+
+	handleReNav (ele) {
+		const hash = window.location.hash.slice(1).toLowerCase();
+		const linkHash = $(ele).attr("href").slice(1).toLowerCase();
+		if (hash === linkHash) {
+			BookUtil.isHashReload = true;
+			BookUtil.booksHashChange();
+		}
+	},
+
+	_$body: null,
+	_$findAll: null,
+	_headerCounts: null,
+	_lastHighlight: null,
+	addSearch (indexData, bookId) {
+		function getHash (found) {
+			return `${UrlUtil.encodeForHash(bookId)}${HASH_PART_SEP}${~BookUtil.curRender.chapter ? found.ch : -1}${found.header ? `${HASH_PART_SEP}${UrlUtil.encodeForHash(found.header)}${HASH_PART_SEP}${found.headerIndex}` : ""}`
+		}
+
+		BookUtil._$body = BookUtil._$body || $(`body`);
+
+		BookUtil._$body.on("click", () => {
+			if (BookUtil._$findAll) BookUtil._$findAll.remove();
+		});
+
+		BookUtil._$body.off("keypress");
+		BookUtil._$body.on("keypress", (e) => {
+			if (((e.key === "f" || e.key === "g") && noModifierKeys(e))) {
+				if (MiscUtil.isInInput(e)) return;
+				e.preventDefault();
+
+				const isPageMode = e.key === "g";
+
+				$(`span.temp`).contents().unwrap();
+				BookUtil._lastHighlight = null;
+				if (BookUtil._$findAll) BookUtil._$findAll.remove();
+				BookUtil._$findAll = $(`<div class="f-all-wrapper"/>`).on("click", (e) => {
+					e.stopPropagation();
+				});
+
+				const $results = $(`<div class="f-all-out">`);
+				const $srch = $(`<input class="form-control" placeholder="${isPageMode ? "Go to page number..." : "Find text..."}">`).on("keypress", (e) => {
+					e.stopPropagation();
+
+					if (e.key === "Enter" && noModifierKeys(e)) {
+						const term = $srch.val();
+						if (isPageMode) {
+							if (!/^\d+$/.exec(term.trim())) {
+								return JqueryUtil.doToast({
+									content: `Please enter a valid page number.`,
+									type: "danger"
+								});
+							}
+						}
+
+						$results.html("");
+						const found = [];
+						const toSearch = BookUtil.curRender.data;
+						toSearch.forEach((section, i) => {
+							BookUtil._headerCounts = {};
+							searchEntriesFor(i, "", found, term, section, isPageMode);
+						});
+						if (found.length) {
+							$results.show();
+							found.forEach(f => {
+								const $row = $(`<p class="f-result"/>`);
+								const $ptLink = $(`<span/>`);
+								const isLitTitle = f.headerMatches && !f.page;
+								const $link = $(
+									`<a href="#${getHash(f)}">
+									<i>${Parser.bookOrdinalToAbv(indexData.contents[f.ch].ordinal)} ${indexData.contents[f.ch].name}${f.header ? ` \u2013 ${isLitTitle ? `<span class="highlight">` : ""}${f.header}${isLitTitle ? `</span>` : ""}` : ""}</i>
+								</a>`
+								);
+								$ptLink.append($link);
+								$row.append($ptLink);
+
+								if (!isPageMode && f.previews) {
+									const $ptPreviews = $(`<a href="#${getHash(f)}"/>`).click(function () {
+										BookUtil.handleReNav(this);
+									});
+									const re = new RegExp(RegExp.escape(f.term), "gi");
+
+									$ptPreviews.on("click", () => {
+										setTimeout(() => {
+											if (BookUtil._lastHighlight === null || BookUtil._lastHighlight !== f.term.toLowerCase()) {
+												BookUtil._lastHighlight = f.term;
+												$(`#pagecontent`)
+													.find(`p:containsInsensitive("${f.term}"), li:containsInsensitive("${f.term}"), td:containsInsensitive("${f.term}"), a:containsInsensitive("${f.term}")`)
+													.each((i, ele) => {
+														$(ele).html($(ele).html().replace(re, "<span class='temp highlight'>$&</span>"))
+													});
+											}
+										}, 15)
+									});
+
+									$ptPreviews.append(`<span>${f.previews[0]}</span>`);
+									if (f.previews[1]) {
+										$ptPreviews.append(" ... ");
+										$ptPreviews.append(`<span>${f.previews[1]}</span>`);
+									}
+									$row.append($ptPreviews);
+
+									$link.on("click", () => $ptPreviews.click());
+								} else {
+									if (f.page) {
+										const $ptPage = $(`<span>Page ${f.page}</span>`);
+										$row.append($ptPage);
+									}
+
+									$link.click(function () {
+										BookUtil.handleReNav(this);
+									});
+								}
+
+								$results.append($row);
+							});
+						} else {
+							$results.hide();
+						}
+					}
+				});
+				BookUtil._$findAll.append($srch).append($results);
+
+				BookUtil._$body.append(BookUtil._$findAll);
+
+				$srch.focus();
+			}
+		});
+
+		function isNamedEntry (obj) {
+			return obj.name && (obj.type === "entries" || obj.type === "inset" || obj.type === "section");
+		}
+
+		const EXTRA_WORDS = 2;
+		function searchEntriesFor (chapterIndex, prevLastName, appendTo, term, obj, isPageMode) {
+			if (term == null) return;
+			const cleanTerm = isPageMode ? Number(term.trim()) : term.toLowerCase().trim();
+			if (!cleanTerm) return;
+
+			if (isNamedEntry(obj)) {
+				if (BookUtil._headerCounts[obj.name] === undefined) BookUtil._headerCounts[obj.name] = 0;
+				else BookUtil._headerCounts[obj.name]++;
+			}
+
+			let lastName;
+			if (isNamedEntry(obj)) {
+				lastName = Renderer.stripTags(obj.name);
+				const matches = isPageMode ? obj.page === cleanTerm : lastName.toLowerCase().includes(cleanTerm);
+				if (matches) {
+					appendTo.push({
+						ch: chapterIndex,
+						header: lastName,
+						headerIndex: BookUtil._headerCounts[lastName],
+						term: term.trim(),
+						headerMatches: true,
+						page: obj.page
+					});
+				}
+			} else {
+				lastName = prevLastName;
+			}
+
+			if (obj.entries) {
+				obj.entries.forEach(e => searchEntriesFor(chapterIndex, lastName, appendTo, term, e, isPageMode))
+			} else if (obj.items) {
+				obj.items.forEach(e => searchEntriesFor(chapterIndex, lastName, appendTo, term, e, isPageMode))
+			} else if (obj.rows) {
+				obj.rows.forEach(r => {
+					const toSearch = r.row ? r.row : r;
+					toSearch.forEach(c => searchEntriesFor(chapterIndex, lastName, appendTo, term, c, isPageMode));
+				})
+			} else if (obj.tables) {
+				obj.tables.forEach(t => searchEntriesFor(chapterIndex, lastName, appendTo, term, t, isPageMode))
+			} else if (obj.entry) {
+				searchEntriesFor(chapterIndex, lastName, appendTo, term, obj.entry, isPageMode)
+			} else if (typeof obj === "string" || typeof obj === "number") {
+				if (isPageMode) return;
+
+				const renderStack = [];
+				BookUtil._renderer.recursiveRender(obj, renderStack);
+				const rendered = $(`<p>${renderStack.join("")}</p>`).text();
+
+				const toCheck = typeof obj === "number" ? String(rendered) : rendered.toLowerCase();
+				if (toCheck.includes(cleanTerm)) {
+					if (!appendTo.length || (!(appendTo[appendTo.length - 1].header === lastName && appendTo[appendTo.length - 1].headerIndex === BookUtil._headerCounts[lastName] && appendTo[appendTo.length - 1].previews))) {
+						const first = toCheck.indexOf(cleanTerm);
+						const last = toCheck.lastIndexOf(cleanTerm);
+
+						const slices = [];
+						if (first === last) {
+							slices.push(getSubstring(rendered, first, first));
+						} else {
+							slices.push(getSubstring(rendered, first, first + cleanTerm.length));
+							slices.push(getSubstring(rendered, last, last + cleanTerm.length));
+						}
+						appendTo.push({
+							ch: chapterIndex,
+							header: lastName,
+							headerIndex: BookUtil._headerCounts[lastName],
+							previews: slices.map(s => s.preview),
+							term: term.trim(),
+							matches: slices.map(s => s.match),
+							headerMatches: lastName.toLowerCase().includes(cleanTerm)
+						});
+					} else {
+						const last = toCheck.lastIndexOf(cleanTerm);
+						const slice = getSubstring(rendered, last, last + cleanTerm.length);
+						const lastItem = appendTo[appendTo.length - 1];
+						lastItem.previews[1] = slice.preview;
+						lastItem.matches[1] = slice.match;
+					}
+				}
+			} else if (!(obj.type === "image" || obj.type === "gallery" || obj.type === "link" || obj.type === "abilityGeneric" || obj.type === "cell")) {
+				throw new Error("Unhandled entity type");
+			}
+
+			function getSubstring (rendered, first, last) {
+				let spaceCount = 0;
+				let braceCount = 0;
+				let pre = "";
+				let i = first - 1;
+				for (; i >= 0; --i) {
+					pre = rendered.charAt(i) + pre;
+					if (rendered.charAt(i) === " " && braceCount === 0) {
+						spaceCount++;
+					}
+					if (spaceCount > EXTRA_WORDS) {
+						break;
+					}
+				}
+				pre = pre.trimStart();
+				const preDots = i > 0;
+
+				spaceCount = 0;
+				let post = "";
+				const start = first === last ? last + cleanTerm.length : last;
+				i = Math.min(start, rendered.length);
+				for (; i < rendered.length; ++i) {
+					post += rendered.charAt(i);
+					if (rendered.charAt(i) === " " && braceCount === 0) {
+						spaceCount++;
+					}
+					if (spaceCount > EXTRA_WORDS) {
+						break;
+					}
+				}
+				post = post.trimEnd();
+				const postDots = i < rendered.length;
+
+				const originalTerm = rendered.substr(first, term.length);
+
+				return {
+					preview: `${preDots ? "..." : ""}${pre}<span class="highlight">${originalTerm}</span>${post}${postDots ? "..." : ""}`,
+					match: `${pre}${term}${post}`
+				};
+			}
+		}
+	},
+
+	getContentsItem (ix, book, options) {
+		return `<li class="contents-item" data-bookid="${UrlUtil.encodeForHash(book.id)}" style="display: none;">
 			<div class="bk__contents-header">
-				<a id="${a}" href="#${UrlUtil.encodeForHash(b.id)}" class="bk__contents_header_link" title="${b.name}">
-					<span class="name">${b.name}</span>
+				<a id="${ix}" href="#${UrlUtil.encodeForHash(book.id)}" class="bk__contents_header_link" title="${book.name}">
+					<span class="name">${book.name}</span>
 				</a>
-				<a href="#${UrlUtil.encodeForHash(b.id)},-1" class="bk__contents_show_all" title="View Entire ${BookUtil.contentType.uppercaseFirst()} (Warning: Slow)">
+				<a href="#${UrlUtil.encodeForHash(book.id)},-1" class="bk__contents_show_all" title="View Entire ${BookUtil.contentType.uppercaseFirst()} (Warning: Slow)">
 					<span class="glyphicon glyphicon glyphicon-book" style="top: 0;"/>
 				</a>
 			</div>
-			${BookUtil.makeContentsBlock(c)}
-		</li>`}};"undefined"!=typeof module&&(module.exports.BookUtil=BookUtil);
+			${BookUtil.makeContentsBlock(options)}
+		</li>`;
+	}
+};
+
+if (typeof module !== "undefined") {
+	module.exports.BookUtil = BookUtil;
+} else {
+	window.addEventListener("load", () => $("body").on("click", "a", (evt) => {
+		let $a = $(evt.target);
+		while ($a.length && !$a.is("a")) $a = $a.parent();
+		BookUtil._lastClickedLink = $a[0];
+	}));
+}
