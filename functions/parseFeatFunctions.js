@@ -8,12 +8,12 @@ exports.parseDescription = function(entries, ability, embeddedMessage){
                     fullDescription += `• ${parseASI(ability[0])}\n\n`;
                 }
                 entry.items.forEach(item=>{
-                    fullDescription += `• ${item}\n\n`
+                    fullDescription += `• ${parse.removeFilters(item)}\n\n`
                 })
                 
             }
             else if(entry.type == "table"){
-                embeddedMessage.addField(entry.caption, parse.parseTable(entry));
+                embeddedMessage.addField(entry.caption, parse.parseTable(parse.removeFilters(entry)));
             }
             else if(entry.type == "entries"){
                 fullDescription += `**${entry.name}**\n`;
@@ -21,7 +21,7 @@ exports.parseDescription = function(entries, ability, embeddedMessage){
                     fullDescription += `${subEntry}\n`;
                 })
             }
-        } else fullDescription += `${entry}\n\n`;
+        } else fullDescription += parse.removeFilters(`${entry}\n\n`);
     })
     return fullDescription;
 }
@@ -67,7 +67,13 @@ exports.parsePrereqs = function(prereq){
     return prereqArr;
 }
 exports.ReqArrToDesc = function(arr){
-    return `*Prerequisites: ${arr}*`
+    let description = ""
+    for(i in arr){
+        if(i == arr.length -1)
+            description += `${arr[i]}`
+        else description += `${arr[i]}/`
+    }
+    return `*Prerequisites: ${description}*`
 }
 function parseAbility(prereq){
     let prereqsArr = [];

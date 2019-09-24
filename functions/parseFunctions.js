@@ -26,3 +26,19 @@ exports.parseTable = function(tableObject){
     }
     return description;
 }
+
+exports.removeFilters = function(input){
+    let description = input, filteredMessage = "";
+    if(description.match(/{@filter.*}/)){
+        description = description.split(/(?=\{@filter.*})/);
+        description.forEach(filter=>{
+            if(filter.match(/{@filter.*}/)){
+                let filteredArray = filter.split(/{@filter /)[1].split(/\|.*}/);
+                filteredArray.forEach(piece =>{
+                    filteredMessage += piece;
+                })
+            } else filteredMessage += filter;
+        })
+    } else return input;
+    return filteredMessage;
+}
