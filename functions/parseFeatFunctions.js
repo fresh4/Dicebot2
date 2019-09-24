@@ -8,12 +8,11 @@ exports.parseDescription = function(entries, ability, embeddedMessage){
                     fullDescription += `• ${parseASI(ability[0])}\n\n`;
                 }
                 entry.items.forEach(item=>{
-                    fullDescription += `• ${parse.removeFilters(item)}\n\n`
+                    fullDescription += `• ${item}\n\n`;
                 })
-                
             }
             else if(entry.type == "table"){
-                embeddedMessage.addField(entry.caption, parse.parseTable(parse.removeFilters(entry)));
+                embeddedMessage.addField(entry.caption, parse.parseTable(entry));
             }
             else if(entry.type == "entries"){
                 fullDescription += `**${entry.name}**\n`;
@@ -21,9 +20,9 @@ exports.parseDescription = function(entries, ability, embeddedMessage){
                     fullDescription += `${subEntry}\n`;
                 })
             }
-        } else fullDescription += parse.removeFilters(`${entry}\n\n`);
+        } else fullDescription += `${entry}\n\n`;
     })
-    return fullDescription;
+    return parse.removeTags(fullDescription);
 }
 
 function parseASI(ability){
@@ -96,7 +95,6 @@ function parseRace(prereq){
     }    
     return prereqsArr;
 }
-
 function parseProficiency(prereq){
     let prereqsArr = [];
     for(let i in prereq){
