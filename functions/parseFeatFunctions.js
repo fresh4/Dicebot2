@@ -1,20 +1,27 @@
-exports.parseDescription = function(entries, ability){
+var parse = require('./parseFunctions.js');
+exports.parseDescription = function(entries, ability, embeddedMessage){
     let fullDescription = "";
     entries.forEach(entry=>{
         if(entry.type){
             if(entry.type == "list"){
                 if(ability){
-                    fullDescription += `• ${parseASI(ability[0])}\n`;
+                    fullDescription += `• ${parseASI(ability[0])}\n\n`;
                 }
                 entry.items.forEach(item=>{
-                    fullDescription += `• ${item}\n`
+                    fullDescription += `• ${item}\n\n`
                 })
                 
             }
             else if(entry.type == "table"){
+                embeddedMessage.addField(entry.caption, parse.parseTable(entry));
             }
-            else if(entry.type == "entries"){}
-        } else fullDescription += `\t${entry}\n`;
+            else if(entry.type == "entries"){
+                fullDescription += `**${entry.name}**\n`;
+                entry.entries.forEach(subEntry =>{
+                    fullDescription += `${subEntry}\n`;
+                })
+            }
+        } else fullDescription += `${entry}\n\n`;
     })
     return fullDescription;
 }
@@ -40,12 +47,12 @@ function parseASI(ability){
         }
         ASI += `Increase your ${choices} score by ${ability.choose.amount}, to a maximum of 20.`;
     } else{
-        if(ability.con) ASI += `Increase you Constitution score by ${ability.con}, to a maximum of 20.`;
-        if(ability.dex) ASI += `Increase you Dexterity score by ${ability.dex}, to a maximum of 20.`;
-        if(ability.str) ASI += `Increase you Strength score by ${ability.str}, to a maximum of 20.`;
-        if(ability.wis) ASI += `Increase you Wisdom score by ${ability.wis}, to a maximum of 20.`;
-        if(ability.int) ASI += `Increase you Intelligence score by ${ability.int}, to a maximum of 20.`;
-        if(ability.cha) ASI += `Increase you Charisma score by ${ability.cha}, to a maximum of 20.`;
+        if(ability.con) ASI += `Increase your Constitution score by ${ability.con}, to a maximum of 20.`;
+        if(ability.dex) ASI += `Increase your Dexterity score by ${ability.dex}, to a maximum of 20.`;
+        if(ability.str) ASI += `Increase your Strength score by ${ability.str}, to a maximum of 20.`;
+        if(ability.wis) ASI += `Increase your Wisdom score by ${ability.wis}, to a maximum of 20.`;
+        if(ability.int) ASI += `Increase your Intelligence score by ${ability.int}, to a maximum of 20.`;
+        if(ability.cha) ASI += `Increase your Charisma score by ${ability.cha}, to a maximum of 20.`;
     }
     return ASI;
 }
