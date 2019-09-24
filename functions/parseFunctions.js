@@ -32,13 +32,22 @@ exports.removeFilters = function(input){
     if(description.match(/{@filter.*}/)){
         description = description.split(/(?=\{@filter.*})/);
         description.forEach(filter=>{
-            if(filter.match(/{@filter.*}/)){
-                let filteredArray = filter.split(/{@filter /)[1].split(/\|.*}/);
+            if(filter.match(/{@filter.*?}/)){
+                let filteredArray = jsplit(filter.split(/{@filter /)[1],/\|.*?}/g, 1);
                 filteredArray.forEach(piece =>{
                     filteredMessage += piece;
                 })
             } else filteredMessage += filter;
+            
         })
     } else return input;
     return filteredMessage;
+}
+function jsplit(str, sep, n) {
+    var out = [];
+
+    while(n--) out.push(str.slice(sep.lastIndex, sep.exec(str).index));
+
+    out.push(str.slice(sep.lastIndex));
+    return out;
 }
