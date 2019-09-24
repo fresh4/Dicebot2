@@ -38,7 +38,13 @@ class tags {
 }
 
 exports.removeTags = function(input){
-    return new tags(input).removeFilters().removeBooks().removeSpells().removeConditions().removeItems().removeDice().removeClass().toString();
+    return new tags(input).removeFilters()
+                          .removeBooks()
+                          .removeSpells()
+                          .removeConditions()
+                          .removeItems()
+                          .removeDice()
+                          .removeClass().toString();
 }
 exports.parseSources = function(source){
     let bookName = source;
@@ -72,15 +78,12 @@ function filterFunc(regex, input, isSimple){
         firstRegex = new RegExp("{@" + regex + ".*?}"),
         partialRegex = new RegExp("{@" + regex + " ");
     if(description.match(fullRegex)){
-        description = description.split(lookaheadRegex);
-        description.forEach(filter=>{
+        description.split(lookaheadRegex).forEach(filter=>{
             if(filter.match(firstRegex)){
                 let filteredArray
                 if(!isSimple) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
                 else filteredArray = jsplit(filter.split(partialRegex)[1], /}/g, 1);
-                filteredArray.forEach(piece =>{
-                    filteredMessage += piece;
-                })
+                filteredArray.forEach(piece =>{ filteredMessage += piece; })
             } else filteredMessage += filter;
         })
     } else return input;
