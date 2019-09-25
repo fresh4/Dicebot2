@@ -32,6 +32,18 @@ class tags {
         this.input = filterFunc("class", this.input, false)
         return this;
     }
+    removeDamage(){
+        this.input = filterFunc("damage", this.input, true)
+        return this
+    }
+    removeDC(){
+        this.input = filterFunc("dc", this.input, true)
+        return this
+    }
+    removeToHit(){
+        this.input = filterFunc("hit", this.input, true)
+        return this
+    }
     toString(){
         return this.input;
     }
@@ -44,7 +56,10 @@ exports.removeTags = function(input){
                           .removeConditions()
                           .removeItems()
                           .removeDice()
-                          .removeClass().toString();
+                          .removeClass()
+                          .removeDamage()
+                          //.removeDC()
+                          .removeToHit().toString();
 }
 exports.parseSources = function(source){
     let bookName = source;
@@ -71,8 +86,22 @@ exports.parseTable = function(tableObject){
     }
     return description;
 }
+exports.handleLongMessage = function(input, message, title){
+    let output = input.split("\n"), count = 0, acc = "";
+    for(let i = 0; i < output.length; i++){
+        if((acc + output[i]).length < 1024) acc += `\n${output[i]}`
+        else{
+            if(count == 0) message.addField(title, acc)
+            else message.addField("_​_", acc)
+            count++
+            acc = output[i];
+        }
+        if(i == output.length-1 && acc != "") (count == 0) ? message.addField(title, acc) : message.addField("_​_", acc)
+    }
+    return output;
+}
 function filterFunc(regex, input, isSimple){
-    let description = input, filteredMessage = "";
+    let description = input.toString(), filteredMessage = "";
     var fullRegex = new RegExp("{@" + regex + ".*}"),
         lookaheadRegex = new RegExp("(?=\\{@" + regex + ".*})"),
         firstRegex = new RegExp("{@" + regex + ".*?}"),
@@ -83,11 +112,22 @@ function filterFunc(regex, input, isSimple){
                 let filteredArray
                 if(!isSimple) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
                 else filteredArray = jsplit(filter.split(partialRegex)[1], /}/g, 1);
-                filteredArray.forEach(piece =>{ filteredMessage += piece; })
+                filteredArray.forEach(piece =>{ 
+                    //filteredMessage += `${filterSpecial(regex, piece)}`;
+                    filteredMessage += piece; 
+                })
             } else filteredMessage += filter;
         })
     } else return input;
     return filteredMessage;
+}
+function filterSpecial(regex, piece){
+    let output = piece
+    if(regex == "dc") output = `DC ${piece}`
+    if(regex == "recharge") output = `Recharge ${piece}`
+    if(regex == "atk") output = ""//do
+    if(regex == "h") output = "*Hit:*"
+    return output
 }
 function jsplit(str, sep, n) {
     var out = [];
