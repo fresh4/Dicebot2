@@ -10,3 +10,14 @@ exports.loadBestiary = function(){
     });
     return bestiary;
 }
+exports.loadSpells = function(){
+    let spells = {"spell": []};
+    fs.readdir("./5eTools/data/spells/", (err, files) => {
+        if (err) return console.error(err);
+        files.forEach(file => {
+            if (!file.endsWith(".json") || !file.startsWith('spells-')) return;
+            spells.spell = spells.spell.concat(require(`../5eTools/data/spells/${file}`).spell)
+        });
+    });
+    return spells;
+}
