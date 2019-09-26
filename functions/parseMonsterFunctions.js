@@ -29,7 +29,7 @@ exports.parsePassives = function(monster){
     if(monster.vulnerable) output += `**Damage Vulnerabilities** ${parseResistances(monster.vulnerable, "vulnerable")}\n`
     if(monster.conditionImmune) output += `**Condition Immunities** ${parseResistances(monster.conditionImmune, "conditionImmune")}\n`
     if(monster.senses || monster.passive) output += `**Senses** ${parseSenses(monster)}\n`
-    if(monster.languages) output += `**Languages** ${parseSimpleEntry(monster.languages, ", ")}\n`
+    if(monster.languages) output += `**Languages** ${parse.parseSimpleEntry(monster.languages, ", ")}\n`
     if(monster.cr) output += `**Challenge** ${parseCR(monster.cr)}\n`
     return output;
 }
@@ -45,20 +45,20 @@ exports.parseTraits = function(monster, message){
     if(monster.spellcasting){ 
         monster.spellcasting.forEach(castingInfo => {
             output += (castingInfo.name) ? `***${castingInfo.name}*** ` : ""
-            output += (castingInfo.headerEntries) ? `${parseSimpleEntry(castingInfo.headerEntries, "\n")}\n` : ""
-            output += (castingInfo.will) ? `At will: *${parseSimpleEntry(castingInfo.will, ", ")}*\n` : ""
+            output += (castingInfo.headerEntries) ? `${parse.parseSimpleEntry(castingInfo.headerEntries, "\n")}\n` : ""
+            output += (castingInfo.will) ? `At will: *${parse.parseSimpleEntry(castingInfo.will, ", ")}*\n` : ""
             if(castingInfo.daily){
-                output += (castingInfo.daily["1e"]) ? `1/day each: *${parseSimpleEntry(castingInfo.daily["1e"], ", ")}*\n` : ""
-                output += (castingInfo.daily["2e"]) ? `2/day each: *${parseSimpleEntry(castingInfo.daily["2e"], ", ")}*\n` : ""
-                output += (castingInfo.daily["3e"]) ? `3/day each: *${parseSimpleEntry(castingInfo.daily["3e"], ", ")}*\n` : ""
+                output += (castingInfo.daily["1e"]) ? `1/day each: *${parse.parseSimpleEntry(castingInfo.daily["1e"], ", ")}*\n` : ""
+                output += (castingInfo.daily["2e"]) ? `2/day each: *${parse.parseSimpleEntry(castingInfo.daily["2e"], ", ")}*\n` : ""
+                output += (castingInfo.daily["3e"]) ? `3/day each: *${parse.parseSimpleEntry(castingInfo.daily["3e"], ", ")}*\n` : ""
             }
             if(castingInfo.spells){
-                output += (castingInfo.spells["0"]) ? `Cantrips (at will): *${parseSimpleEntry(castingInfo.spells["0"].spells, ", ")}*\n` : ""
+                output += (castingInfo.spells["0"]) ? `Cantrips (at will): *${parse.parseSimpleEntry(castingInfo.spells["0"].spells, ", ")}*\n` : ""
                 for(let level = 1; level <= 9; level++){
                     num = (level == "1") ? "st" : (level == "2") ? "nd" : (level == "3") ? "rd": "th"
-                    output += (castingInfo.spells[level]) ? `${level}${num} Level (${castingInfo.spells[level].slots} slots): *${parseSimpleEntry(castingInfo.spells[level].spells, ", ")}*\n` : ""
+                    output += (castingInfo.spells[level]) ? `${level}${num} Level (${castingInfo.spells[level].slots} slots): *${parse.parseSimpleEntry(castingInfo.spells[level].spells, ", ")}*\n` : ""
                 }
-                output += (castingInfo.footerEntries) ? `${parseSimpleEntry(castingInfo.footerEntries, ", ")}\n` : "";
+                output += (castingInfo.footerEntries) ? `${parse.parseSimpleEntry(castingInfo.footerEntries, ", ")}\n` : "";
             }
         })
     }
@@ -68,7 +68,7 @@ exports.parseTraits = function(monster, message){
 }
 exports.parseActions = function(monster, message, title){
     let output = ""
-    output = parseNameEntry(monster)
+    output = parse.parseNameEntry(monster)
     output = parse.removeTags(output);
     output = parse.handleLongMessage(output, message, title);
     return output;
@@ -91,31 +91,6 @@ function parseResistances(immunity, type){
         if(immunity[i].note) output += ` ${immunity[i].note}`
     }
     return output;
-}
-function parseNameEntry(monster){
-    let output = ""
-    monster.forEach(entry =>{
-        output += (entry.name) ? `***${entry.name}.*** ` : ""
-        output += (entry.entries) ? `${parseSimpleEntry(entry.entries, "\n")}\n` : ""
-    })
-    return output
-}
-function parseSimpleEntry(entry, delim){
-    let output = ""
-    for(let i in entry){
-        output += (i > 0) ? `${delim}` : ""
-        if(entry[i].items) output += parseList(entry[i].items)
-        else output += `${entry[i].replace("*", "\\*")}`
-    }
-    return output;
-}
-function parseList(list){
-    let output = ""
-    for(let i in list){
-        output += (list[i].name) ? `**${list[i].name}** ` : ""
-        output += (list[i].entry) ? (i < list.length-1) ? `${list[i].entry}\n` : `${list[i].entry}` : ""
-    }
-    return output
 }
 function parseSenses(monster){
     let output = "";
