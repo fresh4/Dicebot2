@@ -2,7 +2,7 @@ var books = require('../5eTools/data/books.json');
 
 class tags {
     constructor(input) {
-        this.input = input;
+        this.input = replaceStupidFilters(input.toString());
     }
     removeFilters(){
         this.input = filterFunc("filter", this.input, false)
@@ -40,8 +40,20 @@ class tags {
         this.input = filterFunc("dc", this.input, true)
         return this
     }
+    removeSkill(){
+        this.input = filterFunc("skill", this.input, true)
+        return this
+    }
     removeToHit(){
         this.input = filterFunc("hit", this.input, true)
+        return this
+    }
+    removeAttack(){
+        this.input = filterFunc("atk", this.input, true)
+        return this
+    }
+    removeRecharge(){
+        this.input = filterFunc("recharge", this.input, true)
         return this
     }
     toString(){
@@ -58,8 +70,12 @@ exports.removeTags = function(input){
                           .removeDice()
                           .removeClass()
                           .removeDamage()
-                          //.removeDC()
-                          .removeToHit().toString();
+                          .removeDC()
+                          .removeToHit()
+                          .removeSkill()
+                          .removeAttack()
+                          .removeRecharge()
+                          .toString();
 }
 exports.parseSources = function(source){
     let bookName = source;
@@ -113,7 +129,6 @@ function filterFunc(regex, input, isSimple){
                 if(!isSimple) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
                 else filteredArray = jsplit(filter.split(partialRegex)[1], /}/g, 1);
                 filteredArray.forEach(piece =>{ 
-                    //filteredMessage += `${filterSpecial(regex, piece)}`;
                     filteredMessage += piece; 
                 })
             } else filteredMessage += filter;
@@ -121,19 +136,21 @@ function filterFunc(regex, input, isSimple){
     } else return input;
     return filteredMessage;
 }
-function filterSpecial(regex, piece){
-    let output = piece
-    if(regex == "dc") output = `DC ${piece}`
-    if(regex == "recharge") output = `Recharge ${piece}`
-    if(regex == "atk") output = ""//do
-    if(regex == "h") output = "*Hit:*"
+function replaceStupidFilters(input){
+    let output = input;
+    output = output.replace(/{@dc/g, "{@dc DC")
+                   .replace(/{@hit /g, "{@hit +")
+                   .replace(/{@h/g, "{@hit *Hit*: ")
+                   .replace(/{@atk mw}/g, "{@atk *Melee Weapon Attack*:} ")
+                   .replace(/{@atk rw}/g, "{@atk *Ranged Weapon Attack*:} ")
+                   .replace(/{@atk mw,rw}/g, "{@atk *Melee or Ranged Weapon Attack*:} ")
+                   .replace(/{@recharge/g, "{@recharge Recharge")
+
     return output
 }
 function jsplit(str, sep, n) {
     var out = [];
-
     while(n--) out.push(str.slice(sep.lastIndex, sep.exec(str).index));
-
     out.push(str.slice(sep.lastIndex));
     return out;
 }

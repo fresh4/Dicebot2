@@ -129,9 +129,9 @@ function parseSenses(monster){
 }
 function parseCR(cr){
     let output = "";
-    output += (cr.cr) ? `${cr.cr} (${CRtoXP(cr.cr)}xp)` : `${cr} (${CRtoXP(cr)}xp)`
-    output += (cr.lair) ? ` or ${cr.lair} (${CRtoXP(cr.lair)}xp) when in its lair` : ""
-    output += (cr.coven) ? ` or ${cr.coven} (${CRtoXP(cr.coven)}xp) when in a coven` : ""
+    output += (cr.cr) ? `${cr.cr} (${CRtoXP(cr.cr)} XP)` : `${cr} (${CRtoXP(cr)}xp)`
+    output += (cr.lair) ? ` or ${cr.lair} (${CRtoXP(cr.lair)} XP) when in its lair` : ""
+    output += (cr.coven) ? ` or ${cr.coven} (${CRtoXP(cr.coven)} XP) when in a coven` : ""
     return output;
 }
 function CRtoXP(input){
@@ -250,7 +250,23 @@ function convertSize(input){
 }
 function convertAlignment(input){ //FIX
     //"L","N","NX","NY","C","G","E","U","A"
-    return input;
+    let output = []
+    for(i in input){
+        switch(input[i]){
+            case "L": output[i] = "Lawful"; break;
+            case "N": output[i] = "Neutral"; break;
+            case "C": output[i] = "Chaotic"; break;
+            case "G": output[i] = "Good"; break;
+            case "E": output[i] = "Evil"; break;
+            case "A": output[i] = "Any Alignment"; break;
+            case "U": output[i] = "Unaligned"; break;
+            //case "NX": output[i] += `Neutral ${output[i]}`; break;
+            //case "NY": output[i] += `${output[i]} Neutral`; break;
+
+        }
+
+    }
+    return output;
 
 }
 function convertType(input){

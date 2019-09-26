@@ -2,29 +2,38 @@ var discord = require('discord.js');
 var bestiary = require('../functions/loadFunctions.js').loadBestiary();
 var parse = require('../functions/parseFunctions.js');
 var monsterParser = require('../functions/parseMonsterFunctions.js');
+var compare = require('string-similarity');
+var menu = require('../functions/lookupFunctions.js');
 exports.run = (bot, msg, args) => {
     try{
-        let monsters = bestiary.monster;
-        monsters.forEach(monster => {
-            if(monster.name.toLowerCase().split(" ").toString() == args.toString()){
-                let embeddedMessage = new discord.RichEmbed();
-                let descriptors = monsterParser.parseDescriptor(monster);
-                let physicals = monsterParser.parsePhysical(monster, embeddedMessage);
-                let scores = monsterParser.parseScores(monster);
-                let passiveInfo = monsterParser.parsePassives(monster);
-                embeddedMessage.setTitle(monster.name)
-                               .setDescription(descriptors)
-                               .addField("Ability Scores", scores)
-                               .addField("Attributes", passiveInfo);
-                let traits = (monster.trait) ? monsterParser.parseTraits(monster, embeddedMessage) : null
-                let actions = (monster.action) ? monsterParser.parseActions(monster.action, embeddedMessage, "ACTIONS") : null
-                let legendaryActions = (monster.legendary) ? monsterParser.parseActions(monster.legendary, embeddedMessage, "LEGENDARY ACTIONS") : null
-                let reactions = (monster.reaction) ? monsterParser.parseActions(monster.reaction, embeddedMessage, "REACTIONS") : null
-                msg.channel.send(embeddedMessage.setColor("f44242"))
-            }
+        let monsters = bestiary.monster, input = msg.content.split("monster ")[1], occurences = 0, monsterList = [];
+        monsters.forEach(monster => { 
+            if(compare.compareTwoStrings(monster.name.toLowerCase(), input) == 1) {
+                occurences++;     
+                monsterList.push(monster);
+            } 
+            else if(compare.compareTwoStrings(monster.name.toLowerCase(), input) >= 0.5 && compare.compareTwoStrings(monster.name.toLowerCase(), input) !=1)
+                monsterList.push(monster);
         })
+        if(occurences == 0) {
+            if(monsterList.length > 1)
+                menu.multipleMatches(monsterList, msg, monsters)
+            else 
+                msg.channel.send("Monster not found.")
+        }
+        else if(occurences == 1){
+            monsters.forEach(monster => { 
+                if(compare.compareTwoStrings(monster.name.toLowerCase(), input) == 1) {
+                    msg.channel.send(menu.monsterLookup(monster))
+                }
+            })
+        }
+        else {
+            menu.multipleMatches(monsterList, msg, monsters)
+        }
     }
     catch(Error){
         console.log(Error);
     }
 }
+
