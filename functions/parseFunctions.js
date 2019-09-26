@@ -87,34 +87,69 @@ exports.parseSources = function(source){
     return bookName;
 }
 exports.parseTable = function(tableObject){
-    let description = "";
+    let tableRows = "", tableHeader = "";
     for(let i in tableObject.colLabels){
-        if(i == tableObject.colLabels.length - 1)
-            description += `__${tableObject.colLabels[i]}__\n`;
-        else description += `__${tableObject.colLabels[i]}__ | `;
+        if(i == tableObject.colLabels.length - 1) tableHeader += `__${tableObject.colLabels[i]}__\n`;
+        else tableHeader += `__${tableObject.colLabels[i]}__ | `;
     }
     for(let i in tableObject.rows){
         for(let j = 0; j < tableObject.colLabels.length; j++){
-            if(j == tableObject.colLabels.length - 1)
-                description += `${tableObject.rows[i][j]}\n`
-            else description += `**${tableObject.rows[i][j]}** | `
+            if(j == tableObject.colLabels.length - 1){
+                tableRows += `${tableObject.rows[i][j]}\n`
+            }
+            else {
+                if(tableObject.rows[i][j].roll){
+                    if(tableObject.rows[i][j].roll.min && tableObject.rows[i][j].roll.max)
+                        tableRows += `**${tableObject.rows[i][j].roll.min} - ${tableObject.rows[i][j].roll.max}** | `
+                    else if(tableObject.rows[i][j].roll.exact) tableRows += `**${tableObject.rows[i][j].roll.exact}** | `
+                }
+                else
+                    tableRows += `**${tableObject.rows[i][j]}** | `
+            }
         }
     }
-    return description;
+    console.log(tableObject.rows[0][0])
+    return tableHeader + tableRows;
 }
 exports.handleLongMessage = function(input, message, title){
     let output = input.split("\n"), count = 0, acc = "";
     for(let i = 0; i < output.length; i++){
         if((acc + output[i]).length < 1024) acc += `\n${output[i]}`
         else{
-            if(count == 0) message.addField(title, acc)
+            if(count == 0) message.addField(`__${title}__`, acc)
             else message.addField("_​_", acc)
             count++
             acc = output[i];
         }
-        if(i == output.length-1 && acc != "") (count == 0) ? message.addField(title, acc) : message.addField("_​_", acc)
+        if(i == output.length-1 && acc != "") (count == 0) ? message.addField(`__${title}__`, acc) : message.addField("_​_", acc)
     }
     return output;
+}
+exports.parseSimpleEntry = function(entry, delim){
+    let output = ""
+    for(let i in entry){
+        output += (i > 0) ? `${delim}` : ""
+        if(entry[i].items) output += parseList(entry[i].items)
+        else if(entry[i].type) output += (entry[i].type == "table") ? this.parseTable(entry[i]) : ""
+        else output += `${entry[i].replace("*", "\\*")}`
+    }
+    return output;
+}
+exports.parseNameEntry = function(monster){
+    let output = ""
+    monster.forEach(entry =>{
+        output += (entry.name) ? `***${entry.name}.*** ` : ""
+        output += (entry.entries) ? `${this.parseSimpleEntry(entry.entries, "\n")}\n` : ""
+    })
+    return output
+}
+function parseList(list){
+    let output = ""
+    for(let i in list){
+        output += (list[i].name) ? `**${list[i].name}** ` : ""
+        output += (list[i].entry) ? (i < list.length-1) ? `${list[i].entry}\n` : `${list[i].entry}` : ""
+    }
+    return output
 }
 function filterFunc(regex, input, isSimple){
     let description = input.toString(), filteredMessage = "";
