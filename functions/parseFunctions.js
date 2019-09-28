@@ -5,59 +5,63 @@ class tags {
         this.input = replaceStupidFilters(input.toString());
     }
     removeFilters(){
-        this.input = filterFunc("filter", this.input, false)
+        this.input = filterFunc("filter", this.input)
         return this;
     }
     removeBooks(){
-        this.input = filterFunc("book", this.input, false)
+        this.input = filterFunc("book", this.input)
         return this;
     }
     removeSpells(){
-        this.input = filterFunc("spell", this.input, true)
+        this.input = filterFunc("spell", this.input)
         return this;
     }
     removeConditions(){
-        this.input = filterFunc("condition", this.input, true)
+        this.input = filterFunc("condition", this.input)
         return this;
     }
     removeItems(){
-        this.input = filterFunc("item", this.input, false)
+        this.input = filterFunc("item", this.input)
         return this;
     }
     removeDice(){
-        this.input = filterFunc("dice", this.input, true)
+        this.input = filterFunc("dice", this.input)
         return this;
     }
     removeClass(){
-        this.input = filterFunc("class", this.input, false)
+        this.input = filterFunc("class", this.input)
         return this;
     }
     removeDamage(){
-        this.input = filterFunc("damage", this.input, true)
+        this.input = filterFunc("damage", this.input)
         return this
     }
     removeDC(){
-        this.input = filterFunc("dc", this.input, true)
+        this.input = filterFunc("dc", this.input)
         return this
     }
     removeSkill(){
-        this.input = filterFunc("skill", this.input, true)
+        this.input = filterFunc("skill", this.input)
         return this
     }
     removeToHit(){
-        this.input = filterFunc("hit", this.input, true)
+        this.input = filterFunc("hit", this.input)
+        return this
+    }
+    removeOnHit(){
+        this.input = filterFunc("h", this.input)
         return this
     }
     removeAttack(){
-        this.input = filterFunc("atk", this.input, true)
+        this.input = filterFunc("atk", this.input)
         return this
     }
     removeRecharge(){
-        this.input = filterFunc("recharge", this.input, true)
+        this.input = filterFunc("recharge", this.input)
         return this
     }
     removeCreatures(){
-        this.input = filterFunc("creature", this.input, true)
+        this.input = filterFunc("creature", this.input)
         return this
     }
     toString(){
@@ -76,6 +80,7 @@ exports.removeTags = function(input){
                           .removeDamage()
                           .removeDC()
                           .removeToHit()
+                          .removeOnHit()
                           .removeSkill()
                           .removeAttack()
                           .removeRecharge()
@@ -83,7 +88,8 @@ exports.removeTags = function(input){
                           .toString();
 }
 exports.parseSources = function(source){
-    let bookName = source;
+    if(source.inherits) source = source.inherits
+    let bookName = source.source;
     books.book.forEach(book=>{
         if(source == book.id){
             bookName = book.name;
@@ -152,7 +158,7 @@ function parseList(list){
     }
     return output
 }
-function filterFunc(regex, input, isSimple){
+function filterFunc(regex, input){
     let description = input.toString(), filteredMessage = "";
     var fullRegex = new RegExp("{@" + regex + ".*}"),
         lookaheadRegex = new RegExp("(?=\\{@" + regex + ".*})"),
@@ -162,7 +168,8 @@ function filterFunc(regex, input, isSimple){
         description.split(lookaheadRegex).forEach(filter=>{
             if(filter.match(firstRegex)){
                 let filteredArray
-                if(!isSimple) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
+                //console.log(filter);
+                if(filter.match(/\|/)) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
                 else filteredArray = jsplit(filter.split(partialRegex)[1], /}/g, 1);
                 filteredArray.forEach(piece =>{ 
                     filteredMessage += piece; 
@@ -176,10 +183,12 @@ function replaceStupidFilters(input){
     let output = input;
     output = output.replace(/{@dc/g, "{@dc DC")
                    .replace(/{@hit /g, "{@hit +")
-                   .replace(/{@h/g, "{@hit *Hit*: ")
+                   .replace(/{@h}/g, "{@h }")
                    .replace(/{@atk mw}/g, "{@atk *Melee Weapon Attack*:} ")
                    .replace(/{@atk rw}/g, "{@atk *Ranged Weapon Attack*:} ")
                    .replace(/{@atk mw,rw}/g, "{@atk *Melee or Ranged Weapon Attack*:} ")
+                   .replace(/{@atk ms}/g, "{@atk *Melee Spell Attack*:} ")
+                   .replace(/{@atk rs}/g, "{@atk *Ranged Spell Attack*:} ")
                    .replace(/{@recharge/g, "{@recharge Recharge")
 
     return output
