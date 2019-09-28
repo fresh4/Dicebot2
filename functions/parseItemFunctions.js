@@ -19,6 +19,13 @@ exports.parseDescription = function(item, message){
     return output
 }
 
+exports.parseSources = function(item){
+    let output = ""
+    if(item.inherits) item = item.inherits
+    output += (item.source && item.page) ? `${parse.parseSources(item.source)} | page ${item.page}` : ""
+    return output
+}
+
 function listItems(items){
     let output = ""
     items.forEach(item => {
