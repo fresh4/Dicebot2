@@ -29,36 +29,30 @@ exports.parsePassives = function(monster){
     if(monster.vulnerable) output += `**Damage Vulnerabilities** ${parseResistances(monster.vulnerable, "vulnerable")}\n`
     if(monster.conditionImmune) output += `**Condition Immunities** ${parseResistances(monster.conditionImmune, "conditionImmune")}\n`
     if(monster.senses || monster.passive) output += `**Senses** ${parseSenses(monster)}\n`
-    if(monster.languages) output += `**Languages** ${parse.parseSimpleEntry(monster.languages, ", ")}\n`
+    if(monster.languages) output += `**Languages** ${parse.parseEntry(monster.languages, ", ")}\n`
     if(monster.cr) output += `**Challenge** ${parseCR(monster.cr)}\n`
     return output;
 }
 exports.parseTraits = function(monster, message){
     let output = ""
-    monster.trait.forEach(trait => {
-        output += (trait.name) ? `***${trait.name}*** ` : ""
-        if(trait.entries)
-            trait.entries.forEach(entry => {
-                output += `${entry}\n`
-            })
-    })
+    output += (monster.trait) ? parse.parseEntry(monster.trait, "\n") + "\n" : ""
     if(monster.spellcasting){ 
         monster.spellcasting.forEach(castingInfo => {
             output += (castingInfo.name) ? `***${castingInfo.name}*** ` : ""
-            output += (castingInfo.headerEntries) ? `${parse.parseSimpleEntry(castingInfo.headerEntries, "\n")}\n` : ""
-            output += (castingInfo.will) ? `At will: *${parse.parseSimpleEntry(castingInfo.will, ", ")}*\n` : ""
+            output += (castingInfo.headerEntries) ? `${parse.parseEntry(castingInfo.headerEntries, "\n")}\n` : ""
+            output += (castingInfo.will) ? `At will: *${parse.parseEntry(castingInfo.will, ", ")}*\n` : ""
             if(castingInfo.daily){
-                output += (castingInfo.daily["1e"]) ? `1/day each: *${parse.parseSimpleEntry(castingInfo.daily["1e"], ", ")}*\n` : ""
-                output += (castingInfo.daily["2e"]) ? `2/day each: *${parse.parseSimpleEntry(castingInfo.daily["2e"], ", ")}*\n` : ""
-                output += (castingInfo.daily["3e"]) ? `3/day each: *${parse.parseSimpleEntry(castingInfo.daily["3e"], ", ")}*\n` : ""
+                output += (castingInfo.daily["1e"]) ? `1/day each: *${parse.parseEntry(castingInfo.daily["1e"], ", ")}*\n` : ""
+                output += (castingInfo.daily["2e"]) ? `2/day each: *${parse.parseEntry(castingInfo.daily["2e"], ", ")}*\n` : ""
+                output += (castingInfo.daily["3e"]) ? `3/day each: *${parse.parseEntry(castingInfo.daily["3e"], ", ")}*\n` : ""
             }
             if(castingInfo.spells){
-                output += (castingInfo.spells["0"]) ? `Cantrips (at will): *${parse.parseSimpleEntry(castingInfo.spells["0"].spells, ", ")}*\n` : ""
+                output += (castingInfo.spells["0"]) ? `Cantrips (at will): *${parse.parseEntry(castingInfo.spells["0"].spells, ", ")}*\n` : ""
                 for(let level = 1; level <= 9; level++){
                     num = (level == "1") ? "st" : (level == "2") ? "nd" : (level == "3") ? "rd": "th"
-                    output += (castingInfo.spells[level]) ? `${level}${num} Level (${castingInfo.spells[level].slots} slots): *${parse.parseSimpleEntry(castingInfo.spells[level].spells, ", ")}*\n` : ""
+                    output += (castingInfo.spells[level]) ? `${level}${num} Level (${castingInfo.spells[level].slots} slots): *${parse.parseEntry(castingInfo.spells[level].spells, ", ")}*\n` : ""
                 }
-                output += (castingInfo.footerEntries) ? `${parse.parseSimpleEntry(castingInfo.footerEntries, ", ")}\n` : "";
+                output += (castingInfo.footerEntries) ? `${parse.parseEntry(castingInfo.footerEntries, ", ")}\n` : "";
             }
         })
     }
@@ -68,7 +62,7 @@ exports.parseTraits = function(monster, message){
 }
 exports.parseActions = function(monster, message, title){
     let output = ""
-    output = parse.parseNameEntry(monster)
+    output = parse.parseEntry(monster, "\n")
     output = parse.removeTags(output);
     output = parse.handleLongMessage(output, message, title);
     return output;

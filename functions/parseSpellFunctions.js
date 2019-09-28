@@ -10,8 +10,8 @@ exports.parseDefinitions = function(spell){
 }
 exports.parseDescription = function(spell, message){
     let output = ""
-    output = parse.parseSimpleEntry(spell.entries, "\n") + "\n";
-    output += (spell.entriesHigherLevel) ? parse.parseNameEntry(spell.entriesHigherLevel) : ""
+    output = parse.parseEntry(spell.entries, "\n") + "\n";
+    output += (spell.entriesHigherLevel) ? parse.parseEntry(spell.entriesHigherLevel, "\n") : ""
     output = parse.removeTags(output);
     output = parse.handleLongMessage(output, message, "Description");
     return output

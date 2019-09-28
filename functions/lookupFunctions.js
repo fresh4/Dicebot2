@@ -2,6 +2,7 @@ var discord = require('discord.js');
 var compare = require('string-similarity');
 var monsterParser = require('../functions/parseMonsterFunctions.js');
 var spellParser = require('../functions/parseSpellFunctions.js');
+var itemParser = require('../functions/parseItemFunctions.js');
 var parse = require('../functions/parseFunctions.js');
 
 exports.lookup = function(book, msg, input){
@@ -68,6 +69,7 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
 exports.lookupByType = function(type, entry){
     if(type == "monster") return this.monsterLookup(entry)
     if(type == "spell") return this.spellLookup(entry)
+    if(type == "item") return this.itemLookup(entry)
 }
 exports.monsterLookup = function(monster){
     let embeddedMessage = new discord.RichEmbed();
@@ -91,9 +93,19 @@ exports.spellLookup = function(spell){
     let embeddedMessage = new discord.RichEmbed();
     let definitions = spellParser.parseDefinitions(spell);
     embeddedMessage.setTitle(spell.name)
-                    .setDescription(definitions)
+                   .setDescription(definitions)
     let description = spellParser.parseDescription(spell, embeddedMessage);
     let footer = `Classes: ${spellParser.parseClassList(spell)} | ${parse.parseSources(spell.source)}, page ${(spell.page) ? spell.page : null}`
     embeddedMessage.setFooter(footer).setColor("3dff00");
+    return embeddedMessage
+}
+exports.itemLookup = function(item){
+    let embeddedMessage = new discord.RichEmbed();
+    let definitions = itemParser.parseDefinitions(item);
+    embeddedMessage.setTitle(item.name)
+                   .setDescription(definitions)
+    let description = itemParser.parseDescription(item, embeddedMessage);
+    let footer = (item.source && item.page) ? `${parse.parseSources(item.source)} | page ${item.page}` : ""
+    embeddedMessage.setFooter(footer)
     return embeddedMessage
 }
