@@ -21,3 +21,11 @@ exports.loadSpells = function(){
     });
     return spells;
 }
+
+exports.loadItems = function(){
+    let items = {"item": []};
+    items.item = items.item.concat(require(`../5eTools/data/items.json`).item);
+    items.item = items.item.concat(require(`../5eTools/data/items.json`).itemGroup)
+    items.item = items.item.concat(require(`../5eTools/data/magicvariants.json`).variant)
+    return items;
+}

@@ -56,6 +56,10 @@ class tags {
         this.input = filterFunc("recharge", this.input, true)
         return this
     }
+    removeCreatures(){
+        this.input = filterFunc("creature", this.input, true)
+        return this
+    }
     toString(){
         return this.input;
     }
@@ -75,6 +79,7 @@ exports.removeTags = function(input){
                           .removeSkill()
                           .removeAttack()
                           .removeRecharge()
+                          .removeCreatures()
                           .toString();
 }
 exports.parseSources = function(source){
@@ -87,10 +92,10 @@ exports.parseSources = function(source){
     return bookName;
 }
 exports.parseTable = function(tableObject){
-    let tableRows = "", tableHeader = "";
+    let tableRows = "", tableHeader = "\n";
     for(let i in tableObject.colLabels){
         if(i == tableObject.colLabels.length - 1) tableHeader += `__${tableObject.colLabels[i]}__\n`;
-        else tableHeader += `__${tableObject.colLabels[i]}__ | `;
+        else tableHeader += `__${tableObject.colLabels[i]}__ **|** `;
     }
     for(let i in tableObject.rows){
         for(let j = 0; j < tableObject.colLabels.length; j++){
@@ -100,15 +105,15 @@ exports.parseTable = function(tableObject){
             else {
                 if(tableObject.rows[i][j].roll){
                     if(tableObject.rows[i][j].roll.min && tableObject.rows[i][j].roll.max)
-                        tableRows += `**${tableObject.rows[i][j].roll.min} - ${tableObject.rows[i][j].roll.max}** | `
+                        tableRows += `**${tableObject.rows[i][j].roll.min} - ${tableObject.rows[i][j].roll.max}** **|** `
                     else if(tableObject.rows[i][j].roll.exact) tableRows += `**${tableObject.rows[i][j].roll.exact}** | `
                 }
                 else
-                    tableRows += `**${tableObject.rows[i][j]}** | `
+                    if(j == 0) tableRows += `**${tableObject.rows[i][j]}** **|** `
+                    else tableRows += `${tableObject.rows[i][j]} **|** `
             }
         }
     }
-    console.log(tableObject.rows[0][0])
     return tableHeader + tableRows;
 }
 exports.handleLongMessage = function(input, message, title){
@@ -125,29 +130,25 @@ exports.handleLongMessage = function(input, message, title){
     }
     return output;
 }
-exports.parseSimpleEntry = function(entry, delim){
-    let output = ""
-    for(let i in entry){
-        output += (i > 0) ? `${delim}` : ""
-        if(entry[i].items) output += parseList(entry[i].items)
+exports.parseEntry = function(entry, delim){
+    output = ""
+    for(let i in entry){  
+        output += (i > 0) ? `${delim}` : "" 
+        if(entry[i].name && entry[i].entries){
+            output += `***${entry[i].name}.*** `
+            output += this.parseEntry(entry[i].entries, "\n")
+        }
+        else if(entry[i].items) output += parseList(entry[i].items)
         else if(entry[i].type) output += (entry[i].type == "table") ? this.parseTable(entry[i]) : ""
         else output += `${entry[i].replace("*", "\\*")}`
     }
-    return output;
-}
-exports.parseNameEntry = function(monster){
-    let output = ""
-    monster.forEach(entry =>{
-        output += (entry.name) ? `***${entry.name}.*** ` : ""
-        output += (entry.entries) ? `${this.parseSimpleEntry(entry.entries, "\n")}\n` : ""
-    })
     return output
 }
 function parseList(list){
     let output = ""
     for(let i in list){
         output += (list[i].name) ? `**${list[i].name}** ` : ""
-        output += (list[i].entry) ? (i < list.length-1) ? `${list[i].entry}\n` : `${list[i].entry}` : ""
+        output += (list[i].entry) ? (i < list.length-1) ? `${list[i].entry}\n` : `${list[i].entry}` : `• ${list[i]}\n`
     }
     return output
 }
