@@ -39,7 +39,7 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
     menu.setTitle("Multiple matches found");
     var desc = "";
     for(var k = 0; k < arrayOfMatches.length; k++){
-        desc += `**[${k+1}]** - ${arrayOfMatches[k].name} *(Source: ${parse.parseSources(arrayOfMatches[k].source)})*\n`
+        desc += `**[${k+1}]** - ${arrayOfMatches[k].name} *(Source: ${parse.parseSources(arrayOfMatches[k])})*\n`
     }
     menu.setDescription(desc);
     menu.setFooter("Type the number of your selection, or press 'c' to cancel selection.");
@@ -105,7 +105,7 @@ exports.itemLookup = function(item){
     embeddedMessage.setTitle(item.name)
                    .setDescription(definitions)
     let description = itemParser.parseDescription(item, embeddedMessage);
-    let footer = (item.source && item.page) ? `${parse.parseSources(item.source)} | page ${item.page}` : ""
-    embeddedMessage.setFooter(footer)
+    let footer = itemParser.parseSources(item)
+    embeddedMessage.setFooter(footer).setColor("00b6fd")
     return embeddedMessage
 }
