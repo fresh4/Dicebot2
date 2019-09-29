@@ -7,6 +7,8 @@ const botConfig = require('./botconfig.json');
 
 const cron = require('./cron.js').cronify(bot);
 
+console.log("It worked!")
+
 bot.config = botConfig;
 bot.prefix = bot.config.prefix;
 
