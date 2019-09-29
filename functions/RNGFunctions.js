@@ -72,3 +72,8 @@ exports.numSort = function(a){
     }
     return a;
 }
+
+exports.rand = function(from, to){
+    var roll = Math.floor(Math.random() * to) + from;
+    return roll;
+}
