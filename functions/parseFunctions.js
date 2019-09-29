@@ -105,20 +105,19 @@ exports.parseTable = function(tableObject){
     }
     for(let i in tableObject.rows){
         for(let j = 0; j < tableObject.colLabels.length; j++){
-            if(j == tableObject.colLabels.length - 1){
-                tableRows += `${tableObject.rows[i][j]}\n`
+            if(tableObject.rows[i][j].roll){
+                if(tableObject.rows[i][j].roll.min && tableObject.rows[i][j].roll.max)
+                    tableRows += `**${tableObject.rows[i][j].roll.min} - ${tableObject.rows[i][j].roll.max}** **|** `
+                else if(tableObject.rows[i][j].roll.exact) tableRows += `**${tableObject.rows[i][j].roll.exact}** | `
             }
-            else {
-                if(tableObject.rows[i][j].roll){
-                    if(tableObject.rows[i][j].roll.min && tableObject.rows[i][j].roll.max)
-                        tableRows += `**${tableObject.rows[i][j].roll.min} - ${tableObject.rows[i][j].roll.max}** **|** `
-                    else if(tableObject.rows[i][j].roll.exact) tableRows += `**${tableObject.rows[i][j].roll.exact}** | `
-                }
-                else
-                    if(j == 0) tableRows += `**${tableObject.rows[i][j]}** **|** `
-                    else tableRows += `${tableObject.rows[i][j]} **|** `
+            else{
+                if(j == 0) tableRows += `**${this.removeTags(tableObject.rows[i][j])}** **|** `
+                else if(j == tableObject.colLabels.length - 1) tableRows += `${this.removeTags(tableObject.rows[i][j])}`
+                else tableRows += `${this.removeTags(tableObject.rows[i][j])} **|** `
             }
+            
         }
+        tableRows += "\n"
     }
     return tableHeader + tableRows;
 }
@@ -144,9 +143,9 @@ exports.parseEntry = function(entry, delim){
             output += `***${entry[i].name}.*** `
             output += this.parseEntry(entry[i].entries, "\n")
         }
-        else if(entry[i].items) output += parseList(entry[i].items)
+        else if(entry[i].items) output += this.removeTags(parseList(entry[i].items))
         else if(entry[i].type) output += (entry[i].type == "table") ? this.parseTable(entry[i]) : ""
-        else output += `${entry[i].replace("*", "\\*")}`
+        else output += `${this.removeTags(entry[i].replace("*", "\\*"))}`
     }
     return output
 }
@@ -168,8 +167,7 @@ function filterFunc(regex, input){
         description.split(lookaheadRegex).forEach(filter=>{
             if(filter.match(firstRegex)){
                 let filteredArray
-                //console.log(filter);
-                if(filter.match(/\|/)) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
+                if(filter.match(/\|.*?}/g)) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
                 else filteredArray = jsplit(filter.split(partialRegex)[1], /}/g, 1);
                 filteredArray.forEach(piece =>{ 
                     filteredMessage += piece; 

@@ -63,7 +63,6 @@ exports.parseTraits = function(monster, message){
 exports.parseActions = function(monster, message, title){
     let output = ""
     output = parse.parseEntry(monster, "\n")
-    output = parse.removeTags(output);
     output = parse.handleLongMessage(output, message, title);
     return output;
 }
