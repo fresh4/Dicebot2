@@ -30,3 +30,8 @@ exports.run = (bot, msg, args) => {
         }
         msg.reply(temp);
 }
+module.exports.help = {
+    name: "sdeal",
+    category: "Cards",
+    description: "Deals from an interactive deck. Cards pulled cannot be pulled again until you shuffle."
+}

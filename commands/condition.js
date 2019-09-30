@@ -27,3 +27,9 @@ exports.run = (bot, msg, args) => {
         console.log(Error)
     }
 }
+
+module.exports.help = {
+    name: "condition",
+    category: "Compendium Lookup",
+    description: "Looks up a specified condition."
+}

@@ -8,4 +8,8 @@ exports.run = (bot, msg, args) => {
         console.log(Error);
     }
 }
-
+module.exports.help = {
+    name: "item",
+    category: "Compendium Lookup",
+    description: "Looks up the specified item."
+}

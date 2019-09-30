@@ -8,3 +8,8 @@ exports.run = (bot, msg, args) => {
     serverConfig = require('../server_info.json');
     bot.prefix = prefix;
 }
+module.exports.help = {
+    name: "set prefix",
+    category: "Administrative",
+    description: "Sets the prefix for the server. Can only be used by an administrator."
+}

@@ -30,3 +30,8 @@ exports.run = (bot, msg, args = args.toString()) => {
     })
     //msg.channel.send("Feat not found.");
 }
+module.exports.help = {
+    name: "feat",
+    category: "Compendium Lookup",
+    description: "Looks up the specified feat."
+}

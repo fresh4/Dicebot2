@@ -27,3 +27,8 @@ exports.run = (bot, msg, args) => {
         console.log(Error)
     }
 }
+module.exports.help = {
+    name: "reminder",
+    category: "Utility",
+    description: "Sets a reminder for some unit of time to be sent to you in private messages."
+}

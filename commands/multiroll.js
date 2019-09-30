@@ -16,3 +16,8 @@ exports.run = (bot, msg, args) => {
         console.log(Error)
     }
 }
+module.exports.help = {
+    name: "multiroll",
+    category: "Rolling",
+    description: "Iterate a specific roll some number of times, for when you need to roll a *lot* of attacks."
+}

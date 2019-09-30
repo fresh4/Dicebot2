@@ -29,3 +29,8 @@ exports.run = (bot, msg, args) => {
         console.log(Error)
     }
 }
+module.exports.help = {
+    name: "inline roll",
+    category: "Rolling",
+    description: "Roll from within a normal message."
+}

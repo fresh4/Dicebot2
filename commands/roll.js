@@ -10,3 +10,8 @@ exports.run = (bot, msg, args) => {
         console.log(Error)
     }
 }
+module.exports.help = {
+    name: "roll",
+    category: "Rolling",
+    description: "Rolls some dice."
+}

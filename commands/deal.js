@@ -23,3 +23,8 @@ exports.run = (bot, msg, args) => {
     }
     msg.reply(temp);
 }
+module.exports.help = {
+    name: "deal",
+    category: "Cards",
+    description: "Deals the specified number of cards from a standard 52 deck (no jokers)."
+}
