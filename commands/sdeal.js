@@ -33,5 +33,7 @@ exports.run = (bot, msg, args) => {
 module.exports.help = {
     name: "sdeal",
     category: "Cards",
-    description: "Deals from an interactive deck. Cards pulled cannot be pulled again until you shuffle."
+    description: "Deals from persistent standard 52 deck (no jokers). Cards pulled cannot be pulled again until you shuffle.",
+    detailedDesc: "The deck is persistent to the server, unlike `deal`.\nAnytime you draw from the sdeal deck, that card cannot be pulled again by anyone on the server until it is shuffled.\nUse the `shuffle` command to shuffle the sdeal deck.",
+    usage: "sdeal <number>"
 }

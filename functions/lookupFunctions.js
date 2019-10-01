@@ -3,6 +3,7 @@ var compare = require('string-similarity');
 var monsterParser = require('../functions/parseMonsterFunctions.js');
 var spellParser = require('../functions/parseSpellFunctions.js');
 var itemParser = require('../functions/parseItemFunctions.js');
+var raceParser = require('../functions/parseRaceFunctions.js');
 var parse = require('../functions/parseFunctions.js');
 
 exports.lookup = function(book, msg, input){
@@ -70,6 +71,7 @@ exports.lookupByType = function(type, entry){
     if(type == "monster") return this.monsterLookup(entry)
     if(type == "spell") return this.spellLookup(entry)
     if(type == "item") return this.itemLookup(entry)
+    if(type == "race") return this.raceLookup(entry)
 }
 exports.monsterLookup = function(monster){
     let embeddedMessage = new discord.RichEmbed();
@@ -108,4 +110,13 @@ exports.itemLookup = function(item){
     let footer = itemParser.parseSources(item)
     embeddedMessage.setFooter(footer).setColor("00b6fd")
     return embeddedMessage
+}
+exports.raceLookup = function(race){
+    let embeddedMessage = new discord.RichEmbed();
+    let description = raceParser.parseDescription(race)
+    embeddedMessage.setTitle(race.name)
+                   .setDescription(description)
+    //let subraces = (race.subraces) ? raceParser.parseSubraces(race.subraces, embeddedMessage) : null;
+
+    return embeddedMessage;
 }

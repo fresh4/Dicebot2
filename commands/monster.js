@@ -11,5 +11,7 @@ exports.run = (bot, msg, args) => {
 module.exports.help = {
     name: "monster",
     category: "Compendium Lookup",
-    description: "Looks up the specified monster."
+    description: "Looks up the specified monster.",
+    detailedDesc: "",
+    usage: "monster <name>"
 }

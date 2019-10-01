@@ -31,5 +31,7 @@ exports.run = (bot, msg, args) => {
 module.exports.help = {
     name: "condition",
     category: "Compendium Lookup",
-    description: "Looks up a specified condition."
+    description: "Looks up a specified condition.",
+    detailedDesc: "",
+    usage: "condition <name>"
 }

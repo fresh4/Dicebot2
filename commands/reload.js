@@ -17,5 +17,7 @@ exports.run = (client, message, args) => {
   module.exports.help = {
     name: "reload",
     category: "IGNORE",
-    description: ""
+    description: "",
+    detailedDesc: "",
+    usage: "condition <name>"
 }

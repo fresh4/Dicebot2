@@ -8,3 +8,10 @@ exports.run = (bot, msg, args) => {
         console.log(Error)
     }
 }
+module.exports.help = {
+    name: "rollcharacter",
+    category: "Generator",
+    description: "Rolls a character of a race and class.",
+    detailedDesc: "Incomplete command.",
+    usage: "rollcharacter [race] [class]"
+}

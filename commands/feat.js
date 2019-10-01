@@ -33,5 +33,7 @@ exports.run = (bot, msg, args = args.toString()) => {
 module.exports.help = {
     name: "feat",
     category: "Compendium Lookup",
-    description: "Looks up the specified feat."
+    description: "Looks up the specified feat.",
+    detailedDesc: "",
+    usage: "feat <name>"
 }

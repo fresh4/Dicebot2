@@ -19,5 +19,7 @@ exports.run = (bot, msg, args) => {
 module.exports.help = {
     name: "multiroll",
     category: "Rolling",
-    description: "Iterate a specific roll some number of times, for when you need to roll a *lot* of attacks."
+    description: "Iterate a specific roll some number of times, for when you need to roll a *lot* of attacks.",
+    detailedDesc: "can be called with `multiroll` or `rr` command.\nRemember the space between the iterator and the dice. Example: `rr 2 d20` or `rr 6 4d6`",
+    usage: "rr <number of times to reroll> <dice to roll>"
 }

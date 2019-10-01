@@ -30,5 +30,7 @@ exports.run = (bot, msg, args) => {
 module.exports.help = {
     name: "reminder",
     category: "Utility",
-    description: "Sets a reminder for some unit of time to be sent to you in private messages."
+    description: "Sets a reminder for some unit of time to be sent to you in private messages.",
+    detailedDesc: "<number> is some number.\n<timecode> is the unit of time in seconds, minutes, hours, or days.\n[message] is the specific message to be reminded of. When the alotted time passes, I should send you a private message detailing the reminder.",
+    usage: "reminder <number> <timecode> [message]"
 }

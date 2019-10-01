@@ -26,5 +26,7 @@ exports.run = (bot, msg, args) => {
 module.exports.help = {
     name: "deal",
     category: "Cards",
-    description: "Deals the specified number of cards from a standard 52 deck (no jokers)."
+    description: "Deals a number of cards from a standard 52 deck (no jokers).",
+    detailedDesc: "The deck is volatile, in that when you deal any cards, it diplays and immediately shuffles the cards back into its deck. Use `sdeal` for server based persistence.",
+    usage: "deal <number>"
 }

@@ -30,7 +30,10 @@ exports.run = (bot, msg, args) => {
     }
 }
 module.exports.help = {
-    name: "inline roll",
+    name: "inlineroll",
     category: "Rolling",
-    description: "Roll from within a normal message."
+    description: "Roll from within a normal message.",
+    detailedDesc: "Inline rolls are a special way of rolling dice as you would via a roll command from within a normal message.\nThe message must use the format with an optional comment argument. For example [[d20+5]], [[d4+4 damage]] are valid inline rolls.",
+    usage: "normal message... [[`<dice roll> [comment]`]] ... normal message",
+    noPrefix: true
 }

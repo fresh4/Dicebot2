@@ -9,7 +9,9 @@ exports.run = (bot, msg, args) => {
     bot.prefix = prefix;
 }
 module.exports.help = {
-    name: "set prefix",
+    name: "setprefix",
     category: "Administrative",
-    description: "Sets the prefix for the server. Can only be used by an administrator."
+    description: "Sets the prefix for the server. Can only be used by an administrator.",
+    detailedDesc: "",
+    usage: "setprefix <prefix>"
 }

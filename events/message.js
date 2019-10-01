@@ -10,6 +10,8 @@ module.exports = (bot, msg) => {
 
     //No Prefix Stuff
     if(msg.content.includes("[[") || msg.content.includes("]]")) bot.commands.get("inlineroll").run(bot, msg);
+    require('../misc/eggs.js').eastereggs(bot, msg);
+    require('../misc/math.js').badMath(bot, msg);
     //End NOPREFIX
 
     if (msg.content.indexOf(bot.prefix) !== 0) return;

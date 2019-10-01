@@ -7,5 +7,7 @@ exports.run = (bot, msg, args) => {
 module.exports.help = {
     name: "shuffle",
     category: "Cards",
-    description: "Shuffles the sdeal deck, resetting the cards that have been pulled."
+    description: "Shuffles the sdeal deck.",
+    detailedDesc: "Use in tandem with `sdeal`; shuffle the deck, returning all drawn cards back into the deck.",
+    usage: "shuffle"
 }

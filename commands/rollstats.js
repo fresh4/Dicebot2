@@ -12,5 +12,7 @@ exports.run = (bot, msg, args) => {
 module.exports.help = {
     name: "rollstats",
     category: "Generator",
-    description: "Rolls 6 stats using 4d6, dropping the lowest. Determines optimal strength based on sum of the modifiers."
+    description: "Rolls 6 stats using 4d6, dropping the lowest.",
+    detailedDesc: "Shorthand way to do 4d6kh3 with the benefit of determining the stats strength based on sum of the modifiers.",
+    usage: "rollstats"
 }
