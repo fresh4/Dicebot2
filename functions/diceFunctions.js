@@ -86,6 +86,13 @@ exports.RollSingle = function(dieSide){
         final = roll;
     return final;
 }
+exports.RollX = function(num, dieSide){
+    let total = 0;
+    for(let i in num){
+        total += this.RollSingle(dieSide);
+    }
+    return total;
+}
 exports.rollKeepHighestX = function(pre, suff, keep){
     var arrayOfResults = [], tempSortedArray = [];
     for(var i = 0; i < pre; i++){
