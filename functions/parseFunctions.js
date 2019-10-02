@@ -1,5 +1,5 @@
 var books = require('../5eTools/data/books.json');
-
+var discord = require('discord.js')
 class tags {
     constructor(input) {
         this.input = replaceStupidFilters(input.toString());
@@ -89,7 +89,7 @@ exports.removeTags = function(input){
 }
 exports.parseSources = function(source){
     if(source.inherits) source = source.inherits
-    let bookName = source.source;
+    let bookName = source;
     books.book.forEach(book=>{
         if(source == book.id){
             bookName = book.name;
@@ -124,7 +124,14 @@ exports.parseTable = function(tableObject){
 exports.handleLongMessage = function(input, message, title){
     let output = input.split("\n"), count = 0, acc = "";
     for(let i = 0; i < output.length; i++){
-        if((acc + output[i]).length < 1024) acc += `\n${output[i]}`
+        if((acc + output[i]).length + message.length > 6000){
+
+            break;
+            //let message2 = new discord.RichEmbed().setColor(message.color).setDescription("...continued");
+            //acc = output[i]
+            //console.log(this.handleLongMessage(acc, message2, title))
+        }
+        else if((acc + output[i]).length < 1024) acc += `\n${output[i]}`
         else{
             if(count == 0) message.addField(`__${title}__`, acc)
             else message.addField("_​_", acc)
@@ -160,11 +167,24 @@ function parseList(list){
 function filterFunc(regex, input){
     let description = input.toString(), filteredMessage = "";
     var fullRegex = new RegExp("{@" + regex + ".*}"),
-        lookaheadRegex = new RegExp("(?=\\{@" + regex + ".*})"),
+        lookaheadRegex = new RegExp("(?={@" + regex + ".*?})"),
         firstRegex = new RegExp("{@" + regex + ".*?}"),
         partialRegex = new RegExp("{@" + regex + " ");
-    if(description.match(fullRegex)){
+    if(description.match(/{@.*?}/)){
+        description.split(/(?={@.*})/).forEach(filter => {
+            if(filter.match(firstRegex)){
+                let filteredArray
+                if(filter.match(/\|.*?}/g)) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
+                else filteredArray = jsplit(filter.split(partialRegex)[1], /}/g, 1);
+                filteredArray.forEach(piece =>{ 
+                    filteredMessage += piece; 
+                })
+            }else filteredMessage += filter
+        })
+    } else return input;
+    /*if(description.match(fullRegex)){
         description.split(lookaheadRegex).forEach(filter=>{
+            console.log(filter)
             if(filter.match(firstRegex)){
                 let filteredArray
                 if(filter.match(/\|.*?}/g)) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
@@ -174,7 +194,7 @@ function filterFunc(regex, input){
                 })
             } else filteredMessage += filter;
         })
-    } else return input;
+    } else return input;*/
     return filteredMessage;
 }
 function replaceStupidFilters(input){

@@ -56,7 +56,6 @@ exports.parseTraits = function(monster, message){
             }
         })
     }
-    output = parse.removeTags(output);
     output = parse.handleLongMessage(output, message, "TRAITS");
     return output;
 }

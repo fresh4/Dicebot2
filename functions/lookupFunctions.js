@@ -74,7 +74,7 @@ exports.lookupByType = function(type, entry){
     if(type == "race") return this.raceLookup(entry)
 }
 exports.monsterLookup = function(monster){
-    let embeddedMessage = new discord.RichEmbed();
+    let embeddedMessage = new discord.RichEmbed().setColor("f44242");
     let descriptors = monsterParser.parseDescriptor(monster);
     let physicals = monsterParser.parsePhysical(monster, embeddedMessage);
     let scores = monsterParser.parseScores(monster);
@@ -88,7 +88,7 @@ exports.monsterLookup = function(monster){
     let legendaryActions = (monster.legendary) ? monsterParser.parseActions(monster.legendary, embeddedMessage, "LEGENDARY ACTIONS") : null
     let reactions = (monster.reaction) ? monsterParser.parseActions(monster.reaction, embeddedMessage, "REACTIONS") : null
     let footer = (monster.source) ? `Source: ${parse.parseSources(monster.source)}, page ${(monster.page) ? monster.page : null}` : null 
-    embeddedMessage.setFooter(footer).setColor("f44242");
+    embeddedMessage.setFooter(footer);
     return embeddedMessage
 }
 exports.spellLookup = function(spell){
