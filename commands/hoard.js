@@ -43,7 +43,27 @@ function pickLoot(table, lootType, dice){
 }
 function rollLoot(item, type, amount){
     let output = ""
-    item.forEach(entry => {
+    type = type.split(/,/);
+    amount = amount.split(/,/)
+    for(let j in type){
+        item.forEach(entry => {
+            if(entry.type == type[j]){
+                (j > 0) ? output += "\n" : ""
+                let dice = amount[j].split("d");
+                let rollAmount = roll.RollX(dice[0], dice[1]);
+                output += `*${rollAmount}* x ${entry.name}`
+                if(type[j].match(/[A-I]/)){
+                    output += "\n"
+                    for(let i = 0; i < rollAmount; i++){
+                        if(i > 0) output += "\n";
+                        output += table.rollTable(entry.table, 100)
+                    }
+                }
+            }
+        })
+    }
+
+    /*item.forEach(entry => {
         if(entry.type == type){
             let dice = amount.split("d");
             let rollAmount = roll.RollX(dice[0], dice[1]);
@@ -58,7 +78,7 @@ function rollLoot(item, type, amount){
             
         }
        
-    })
+    })*/
     return output;
 }
 function parseCoins(coins){
