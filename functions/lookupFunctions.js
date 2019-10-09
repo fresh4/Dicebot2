@@ -4,6 +4,7 @@ var monsterParser = require('../functions/parseMonsterFunctions.js');
 var spellParser = require('../functions/parseSpellFunctions.js');
 var itemParser = require('../functions/parseItemFunctions.js');
 var raceParser = require('../functions/parseRaceFunctions.js');
+var backgroundParser = require('../functions/parseBackgroundFunctions.js');
 var parse = require('../functions/parseFunctions.js');
 
 exports.lookup = function(book, msg, input){
@@ -40,7 +41,7 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
     menu.setTitle("Multiple matches found");
     var desc = "";
     for(var k = 0; k < arrayOfMatches.length; k++){
-        desc += `**[${k+1}]** - ${arrayOfMatches[k].name} *(Source: ${parse.parseSources(arrayOfMatches[k])})*\n`
+        desc += `**[${k+1}]** - ${arrayOfMatches[k].name} *(Source: ${parse.parseSourcesName(arrayOfMatches[k])})*\n`
     }
     menu.setDescription(desc);
     menu.setFooter("Type the number of your selection, or press 'c' to cancel selection.");
@@ -72,6 +73,7 @@ exports.lookupByType = function(type, entry){
     if(type == "spell") return this.spellLookup(entry)
     if(type == "item") return this.itemLookup(entry)
     if(type == "race") return this.raceLookup(entry)
+    if(type == "background") return this.backgroundLookup(entry)
 }
 exports.monsterLookup = function(monster){
     let embeddedMessage = new discord.RichEmbed().setColor("f44242");
@@ -87,7 +89,7 @@ exports.monsterLookup = function(monster){
     let actions = (monster.action) ? monsterParser.parseActions(monster.action, embeddedMessage, "ACTIONS") : null
     let legendaryActions = (monster.legendary) ? monsterParser.parseActions(monster.legendary, embeddedMessage, "LEGENDARY ACTIONS") : null
     let reactions = (monster.reaction) ? monsterParser.parseActions(monster.reaction, embeddedMessage, "REACTIONS") : null
-    let footer = (monster.source) ? `Source: ${parse.parseSources(monster.source)}, page ${(monster.page) ? monster.page : null}` : null 
+    let footer = (monster.source) ? `Source: ${parse.parseSourcesName(monster.source)}, page ${(monster.page) ? monster.page : null}` : null 
     embeddedMessage.setFooter(footer);
     return embeddedMessage
 }
@@ -97,7 +99,7 @@ exports.spellLookup = function(spell){
     embeddedMessage.setTitle(spell.name)
                    .setDescription(definitions)
     let description = spellParser.parseDescription(spell, embeddedMessage);
-    let footer = `Classes: ${spellParser.parseClassList(spell)} | ${parse.parseSources(spell.source)}, page ${(spell.page) ? spell.page : null}`
+    let footer = `Classes: ${spellParser.parseClassList(spell)} | ${parse.parseSourcesName(spell.source)}, page ${(spell.page) ? spell.page : null}`
     embeddedMessage.setFooter(footer).setColor("3dff00");
     return embeddedMessage
 }
@@ -117,6 +119,13 @@ exports.raceLookup = function(race){
     embeddedMessage.setTitle(race.name)
                    .setDescription(description)
     //let subraces = (race.subraces) ? raceParser.parseSubraces(race.subraces, embeddedMessage) : null;
+
+    return embeddedMessage;
+}
+exports.backgroundLookup = function(background){
+    let embeddedMessage = new discord.RichEmbed();
+    let description = backgroundParser.parseDescription(background, embeddedMessage);
+    embeddedMessage.setTitle(background.name).setFooter(itemParser.parseSources(background));
 
     return embeddedMessage;
 }

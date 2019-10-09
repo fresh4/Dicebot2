@@ -87,7 +87,7 @@ exports.removeTags = function(input){
                           .removeCreatures()
                           .toString();
 }
-exports.parseSources = function(source){
+exports.parseSourcesName = function(source){
     if(source.inherits) source = source.inherits
     let bookName = source;
     books.book.forEach(book=>{

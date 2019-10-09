@@ -33,7 +33,7 @@ exports.parseDescription = function(item, message){
 exports.parseSources = function(item){
     let output = ""
     if(item.inherits) item = item.inherits
-    output += (item.source && item.page) ? `${parse.parseSources(item.source)} | page ${item.page}` : ""
+    output += (item.source && item.page) ? `${parse.parseSourcesName(item.source)} | page ${item.page}` : ""
     return output
 }
 
