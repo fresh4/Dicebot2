@@ -27,7 +27,7 @@ exports.run = (bot, msg, args) => {
                 output = `${command.help.description}\n${command.help.detailedDesc}`;
             }
         })
-        embed.setDescription(output);
+        if(output != "") embed.setDescription(output); else return msg.channel.send("Command not found.")
     }
     msg.channel.send(embed)
 }
