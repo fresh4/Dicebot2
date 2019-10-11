@@ -89,6 +89,7 @@ exports.removeTags = function(input){
 }
 exports.parseSourcesName = function(source){
     if(source.inherits) source = source.inherits
+    if(source.source) source = source.source 
     let bookName = source;
     books.book.forEach(book=>{
         if(source == book.id){
