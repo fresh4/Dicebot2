@@ -19,7 +19,7 @@ exports.run = (bot, msg, args = args.toString()) => {
                 description += funcParser.parseDescription(feat.entries, feat.ability, embeddedMessage);
             }
             if(feat.source){
-                sourceBook = `Source: ${parser.parseSources(feat.source)}, page ${feat.page}`;
+                sourceBook = `Source: ${parser.parseSourcesName(feat.source)}, page ${feat.page}`;
             }
             msg.channel.send(embeddedMessage
                                             .setTitle(feat.name)
@@ -28,7 +28,6 @@ exports.run = (bot, msg, args = args.toString()) => {
                                             .setColor("F1F21F"))
         }
     })
-    //msg.channel.send("Feat not found.");
 }
 module.exports.help = {
     name: "feat",
