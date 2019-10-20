@@ -147,15 +147,15 @@ exports.parseEntry = function(entry, delim){
     output = ""
     for(let i in entry){  
         output += (i > 0) ? `${delim}` : "" 
-        if(entry[i].name && entry[i].entries){
-            output += `***${entry[i].name}.*** `
+        if(entry[i].entries){
+            output += (entry[i].name) ? `***${entry[i].name}.*** ` : ""
             output += this.parseEntry(entry[i].entries, "\n")
         }
-        else if(entry[i].items) output += this.removeTags(parseList(entry[i].items))
+        else if(entry[i].items) output += parseList(entry[i].items)
         else if(entry[i].type) output += (entry[i].type == "table") ? this.parseTable(entry[i]) : ""
-        else output += `${this.removeTags(entry[i].replace("*", "\\*"))}`
+        else output += `${entry[i].replace("*", "\\*")}`
     }
-    return output
+    return this.removeTags(output)
 }
 function parseList(list){
     let output = ""
@@ -167,9 +167,7 @@ function parseList(list){
 }
 function filterFunc(regex, input){
     let description = input.toString(), filteredMessage = "";
-    var fullRegex = new RegExp("{@" + regex + ".*}"),
-        lookaheadRegex = new RegExp("(?={@" + regex + ".*?})"),
-        firstRegex = new RegExp("{@" + regex + ".*?}"),
+    var firstRegex = new RegExp("{@" + regex + ".*?}"),
         partialRegex = new RegExp("{@" + regex + " ");
     if(description.match(/{@.*?}/)){
         description.split(/(?={@.*})/).forEach(filter => {
@@ -183,19 +181,6 @@ function filterFunc(regex, input){
             }else filteredMessage += filter
         })
     } else return input;
-    /*if(description.match(fullRegex)){
-        description.split(lookaheadRegex).forEach(filter=>{
-            console.log(filter)
-            if(filter.match(firstRegex)){
-                let filteredArray
-                if(filter.match(/\|.*?}/g)) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
-                else filteredArray = jsplit(filter.split(partialRegex)[1], /}/g, 1);
-                filteredArray.forEach(piece =>{ 
-                    filteredMessage += piece; 
-                })
-            } else filteredMessage += filter;
-        })
-    } else return input;*/
     return filteredMessage;
 }
 function replaceStupidFilters(input){
