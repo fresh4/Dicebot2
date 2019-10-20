@@ -14,10 +14,8 @@ exports.run = (bot, msg, args) => {
                     arrayOfRolls.push(splitMessage[i].split("]]",1)[0]);
                 }
             }
-            
         }
         if(msg.content.match(/(\d|)[d]\d/)){
-            console.log("Rolls " + arrayOfRolls);
             for(var m = 0; m < arrayOfRolls.length; m++){
                 fullRollInline += `${arrayOfComments[m]}: ${dice.rollDiceFunc(arrayOfRolls[m])} \n`;
             }
