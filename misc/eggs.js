@@ -2,7 +2,7 @@ exports.eastereggs = function(bot, msg){
     if(msg.channel.id == "316969268145160200"){
         let homebrew = ["looking for","feed","anyone have","criticism","assistance","?", "help"];
         for(var i = 0; i < homebrew.length; i++){
-            if(message.includes(homebrew[i])){
+            if(msg.content.includes(homebrew[i])){
                 msg.reply("This is a friendly reminder that this channel is for completed submissions only. If you would like feedback on your content, please post it in " + bot.channels.find("name","dming_questions") + " or one of the dojos. Thank you!");
                 return;
             }
