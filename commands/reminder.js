@@ -4,11 +4,11 @@ exports.run = (bot, msg, args) => {
     try {
         var remindTime = args[0];
         var remindTimescale = args[1];
-        var remindContent = args[2];
+        var remindContent = msg.content.split(args[1])[1];
         var timeS, wait;
         var d = new Date();
         if(isNaN(remindTime)){
-            msg.reply("The format is: `!reminder <number> <time scale> <reminder content>` ie (!reminder 20 minutes prepare for dnd). Please use a number for <number>");
+            msg.reply(`The format is: \`${bot.prefix}reminder <number> <time scale> <reminder content>\` ie (${bot.prefix}reminder 20 minutes prepare for dnd). Please use a number for <number>`);
             return;
         }
         else{
