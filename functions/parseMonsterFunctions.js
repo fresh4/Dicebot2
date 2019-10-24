@@ -50,7 +50,12 @@ exports.parseTraits = function(monster, message){
                 output += (castingInfo.spells["0"]) ? `Cantrips (at will): *${parse.parseEntry(castingInfo.spells["0"].spells, ", ")}*\n` : ""
                 for(let level = 1; level <= 9; level++){
                     num = (level == "1") ? "st" : (level == "2") ? "nd" : (level == "3") ? "rd": "th"
-                    output += (castingInfo.spells[level]) ? `${level}${num} Level (${castingInfo.spells[level].slots} slots): *${parse.parseEntry(castingInfo.spells[level].spells, ", ")}*\n` : ""
+                    if(castingInfo.spells[level]){
+                        let slots = (castingInfo.spells[level].slots) ? `${castingInfo.spells[level].slots} slots` : "at will"
+                        output += `${level}${num} Level (${slots}): `+
+                                  `*${parse.parseEntry(castingInfo.spells[level].spells, ", ")}*\n`
+                    }
+                        
                 }
                 output += (castingInfo.footerEntries) ? `${parse.parseEntry(castingInfo.footerEntries, ", ")}\n` : "";
             }
@@ -159,7 +164,7 @@ function parseSkills(skill){
     output += (skill.athletics) ? `Athletics ${skill.athletics} ` : "";
     output += (skill.deception) ? `Deception ${skill.deception} ` : "";
     output += (skill.history) ? `History ${skill.history} ` : "";
-    output += (skill.insight) ? `Insigh ${skill.insight} ` : "";
+    output += (skill.insight) ? `Insight ${skill.insight} ` : "";
     output += (skill.intimidation) ? `Intimidation ${skill.intimidation} ` : "";
     output += (skill.investigation) ? `Investigation ${skill.investigation} ` : "";
     output += (skill.medicine) ? `Medicine ${skill.medicine} ` : "";
