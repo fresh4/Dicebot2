@@ -7,7 +7,7 @@ exports.parseDescriptor = function(monster){
 }
 exports.parsePhysical = function(monster, message){
     let AC = parseAC(monster.ac);
-    let hp = parseHP(monster.hp);
+    let hp = (monster.hp.special) ? `${monster.hp.special}` : parseHP(monster.hp);
     let speed = parseSpeed(monster.speed);
     message.addField("AC", AC, true).addField("HP", hp, true).addField("Speed", speed, true);
     return `**Armor Class:** ${AC}\n**HP:** ${hp}\n**Speed:** ${speed}`
