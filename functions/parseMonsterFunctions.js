@@ -7,7 +7,7 @@ exports.parseDescriptor = function(monster){
 }
 exports.parsePhysical = function(monster, message){
     let AC = parseAC(monster.ac);
-    let hp = (monster.hp.special) ? `${monster.hp.special}` : parseHP(monster.hp);
+    let hp = parseHP(monster.hp);
     let speed = parseSpeed(monster.speed);
     message.addField("AC", AC, true).addField("HP", hp, true).addField("Speed", speed, true);
     return `**Armor Class:** ${AC}\n**HP:** ${hp}\n**Speed:** ${speed}`
@@ -184,7 +184,11 @@ function toModifier(input){
 }
 function parseSpeed(input){
     let output = "";
-    if(input.walk) output += `${input.walk} ft.`; else output += "0 ft." 
+    if(input.walk) {
+        if(input.walk.number) 
+            output += `${input.walk.number} ft. ${(input.walk.condition) ? input.walk.condition : ""}`;
+        else output += `${input.walk} ft.`; 
+    } else output += "0 ft." 
     if(input.burrow) output += `, burrow ${input.burrow} ft.`
     if(input.climb) output += `, climb ${input.climb} ft.`
     if(input.swim) output += `, swim ${input.swim} ft.`
@@ -206,7 +210,7 @@ function parseAC(input){
     return output;
 }
 function parseHP(input){
-    return `${input.average} (${input.formula})`
+    return (input.special) ? input.special : `${input.average} (${input.formula})`
 }
 function convertSize(input){
     let size = "";
