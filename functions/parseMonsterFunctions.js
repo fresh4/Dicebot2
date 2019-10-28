@@ -34,7 +34,7 @@ exports.parsePassives = function(monster){
     return output;
 }
 exports.parseTraits = function(monster, message){
-    let output = ""
+    let output = "" 
     output += (monster.trait) ? parse.parseEntry(monster.trait, "\n") + "\n" : ""
     if(monster.spellcasting){ 
         monster.spellcasting.forEach(castingInfo => {

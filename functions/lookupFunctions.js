@@ -10,11 +10,12 @@ var parse = require('../functions/parseFunctions.js');
 exports.lookup = function(book, msg, input){
     let type = Object.keys(book)[0], entries = book[type], occurences = 0, listOfFoundObjects = [];
     entries.forEach(entry => { 
-        if(compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase()) == 1) {
+        const relevance = compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase());
+        if(relevance == 1) {
             occurences++;     
             listOfFoundObjects.push(entry);
         } 
-        else if(compare.compareTwoStrings(entry.name.toLowerCase(), input) >= 0.5 && compare.compareTwoStrings(entry.name.toLowerCase(), input) !=1)
+        else if(relevance >= 0.5)
             listOfFoundObjects.push(entry);
     })
     if(occurences == 0) {
@@ -85,7 +86,7 @@ exports.monsterLookup = function(monster){
                     .setDescription(descriptors)
                     .addField("Ability Scores", scores)
                     .addField("Attributes", passiveInfo);
-    let traits = (monster.trait) ? monsterParser.parseTraits(monster, embeddedMessage) : null
+    let traits = (monster.trait || monster.spellcasting) ? monsterParser.parseTraits(monster, embeddedMessage) : null
     let actions = (monster.action) ? monsterParser.parseActions(monster.action, embeddedMessage, "ACTIONS") : null
     let legendaryActions = (monster.legendary) ? monsterParser.parseActions(monster.legendary, embeddedMessage, "LEGENDARY ACTIONS") : null
     let reactions = (monster.reaction) ? monsterParser.parseActions(monster.reaction, embeddedMessage, "REACTIONS") : null
