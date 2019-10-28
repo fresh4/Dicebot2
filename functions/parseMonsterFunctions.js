@@ -183,18 +183,20 @@ function toModifier(input){
     return (val < 0) ? val : `+${val}`
 }
 function parseSpeed(input){
-    let output = "";
-    if(input.walk) {
-        if(input.walk.number) 
-            output += `${input.walk.number} ft. ${(input.walk.condition) ? input.walk.condition : ""}`;
-        else output += `${input.walk} ft.`; 
-    } else output += "0 ft." 
-    if(input.burrow) output += `, burrow ${input.burrow} ft.`
-    if(input.climb) output += `, climb ${input.climb} ft.`
-    if(input.swim) output += `, swim ${input.swim} ft.`
-    if(input.fly) {
-        output += (input.canHover) ? `, fly ${input.fly.number} ft. ${input.fly.condition} ` : `, fly ${input.fly} ft. `
-    }
+    let output = "", speeds = ["walk", "burrow", "climb", "swim", "fly"];
+
+    if(!input.walk) output += "0 ft."
+    speeds.forEach(type => {
+        if(input[type]){
+            if(type == "walk"){
+                output += `${(input.walk.number) ? input.walk.number : input.walk} ft.${(input.walk.condition) ? ` ${input.walk.condition}` : ""}`
+            } else {
+                output += (input[type].number && input[type].condition) ? 
+                            `, ${type} ${input[type].number} ft. ${input[type].condition}` : 
+                            `, ${type} ${input[type]} ft.`
+            }
+        }
+    })
     return output;
 }
 function parseAC(input){
@@ -247,5 +249,6 @@ function convertAlignment(input){ //FIX
 }
 function convertType(input){
     if(input.tags) return `${input.type} (${input.tags[0]})`
+    else if(input.type) return `${input.type}`
     else return input
 }
