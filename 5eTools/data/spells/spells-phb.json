@@ -39,6 +39,16 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
 					}
 				]
 			},
@@ -67,7 +77,8 @@
 			"miscTags": [
 				"SCL",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Aid",
@@ -117,6 +128,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -139,6 +154,16 @@
 							"name": "Solidarity (PSA)",
 							"source": "PSA"
 						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
 					}
 				]
 			},
@@ -168,7 +193,16 @@
 					"name": "Selesnya Initiate",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Alarm",
@@ -218,6 +252,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -233,7 +271,16 @@
 			"page": 211,
 			"areaTags": [
 				"C"
-			]
+			],
+			"races": [
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Alter Self",
@@ -282,6 +329,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -303,6 +354,16 @@
 						"subclass": {
 							"name": "Horizon Walker (UA)",
 							"source": "UARangerAndRogue"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
 						}
 					}
 				]
@@ -351,7 +412,8 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Animal Friendship",
@@ -433,6 +495,12 @@
 				{
 					"name": "Yuan-ti Pureblood",
 					"source": "VGM"
+				},
+				{
+					"name": "Human (Mark of Handling)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
 			],
 			"conditionInflict": [
@@ -449,7 +517,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Animal Messenger",
@@ -527,7 +596,16 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Animal Shapes",
@@ -580,7 +658,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Animate Dead",
@@ -661,6 +740,12 @@
 							"source": "GGR"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -688,7 +773,8 @@
 			"miscTags": [
 				"PRM",
 				"SMN"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Animate Objects",
@@ -738,6 +824,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -858,7 +948,8 @@
 			],
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Antilife Shell",
@@ -947,7 +1038,16 @@
 				"The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.",
 				"If you move so that an affected creature is forced to pass through the barrier, the spell ends."
 			],
-			"page": 213
+			"page": 213,
+			"races": [
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Antimagic Field",
@@ -1051,7 +1151,8 @@
 			"page": 213,
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Antipathy/Sympathy",
@@ -1094,6 +1195,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -1132,7 +1239,8 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Arcane Eye",
@@ -1179,6 +1287,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -1227,7 +1339,7 @@
 			"source": "PHB",
 			"entries": [
 				"You create an invisible, magical eye within range that hovers in the air for the duration.",
-				"You mentally receive visual information from the eye, which has normal vision and darkvision out to 30 feet. The eye can look in every direction.",
+				"You mentally receive visual information from the eye, which has normal vision and {@sense darkvision} out to 30 feet. The eye can look in every direction.",
 				"As an action, you can move the eye up to 30 feet in any direction. There is no limit to how far away from you the eye can move, but it can't enter another plane of existence. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter."
 			],
 			"page": 214,
@@ -1236,7 +1348,22 @@
 					"name": "Dimir Operative",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Arcane Gate",
@@ -1342,6 +1469,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -1363,6 +1494,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
+					"baseSource": "PHB"
 				}
 			],
 			"backgrounds": [
@@ -1370,7 +1507,8 @@
 					"name": "Azorius Functionary",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Armor of Agathys",
@@ -1481,6 +1619,12 @@
 					"name": "Tiefling (Levistus)",
 					"source": "MTF",
 					"baseName": "Tiefling",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
 					"baseSource": "PHB"
 				}
 			]
@@ -1627,7 +1771,8 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Augury",
@@ -1706,6 +1851,16 @@
 							"source": "XGE"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -1726,7 +1881,8 @@
 				"The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
 				"If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
 			],
-			"page": 215
+			"page": 215,
+			"srd": true
 		},
 		{
 			"name": "Aura of Life",
@@ -1785,6 +1941,32 @@
 							"name": "Solidarity (PSA)",
 							"source": "PSA"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Wildfire (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
 					}
 				]
 			},
@@ -1807,6 +1989,20 @@
 			],
 			"miscTags": [
 				"HL"
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Healing)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Handling)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
 			]
 		},
 		{
@@ -1856,6 +2052,22 @@
 							"name": "Battle Smith",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
 					}
 				]
 			},
@@ -1869,6 +2081,20 @@
 			],
 			"areaTags": [
 				"R"
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Healing)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
 			]
 		},
 		{
@@ -1928,6 +2154,36 @@
 							"name": "Battle Smith",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
 					}
 				]
 			},
@@ -1941,6 +2197,14 @@
 			],
 			"miscTags": [
 				"HL"
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Healing)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
 			]
 		},
 		{
@@ -1983,6 +2247,12 @@
 						"name": "Druid",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -2005,7 +2275,16 @@
 			],
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Handling)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Bane",
@@ -2100,6 +2379,16 @@
 							"name": "Divine Soul",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Onomancy (UA)",
+							"source": "UAClericDruidWizard"
+						}
 					}
 				]
 			},
@@ -2125,7 +2414,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Banishing Smite",
@@ -2182,6 +2472,16 @@
 						"subclass": {
 							"name": "Battle Smith",
 							"source": "UAArtificerRevisited"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
 						}
 					}
 				]
@@ -2383,7 +2683,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Barkskin",
@@ -2458,7 +2759,8 @@
 			"page": 217,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Beacon of Hope",
@@ -2557,7 +2859,16 @@
 			],
 			"miscTags": [
 				"HL"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Handling)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Beast Sense",
@@ -2627,6 +2938,14 @@
 				{
 					"name": "Gruul Anarch",
 					"source": "GGR"
+				}
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Handling)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
 			]
 		},
@@ -2766,7 +3085,8 @@
 					"name": "Orzhov Representative",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bigby's Hand",
@@ -2809,6 +3129,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -2868,7 +3192,16 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": "Arcane Hand"
 		},
 		{
 			"name": "Blade Barrier",
@@ -2923,7 +3256,8 @@
 			],
 			"areaTags": [
 				"W"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Blade Ward",
@@ -3058,6 +3392,16 @@
 							"name": "Divine Soul",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Onomancy (UA)",
+							"source": "UAClericDruidWizard"
+						}
 					}
 				]
 			},
@@ -3077,7 +3421,8 @@
 			"page": 219,
 			"areaTags": [
 				"MT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Blight",
@@ -3225,6 +3570,16 @@
 							"name": "Spores",
 							"source": "GGR"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -3261,7 +3616,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Blinding Smite",
@@ -3319,6 +3675,12 @@
 							"name": "Battle Smith",
 							"source": "UAArtificerRevisited"
 						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
 					}
 				]
 			},
@@ -3442,6 +3804,16 @@
 							"name": "Spores (UA)",
 							"source": "UAThreeSubclasses"
 						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Spores",
+							"source": "GGR"
+						}
 					}
 				]
 			},
@@ -3471,7 +3843,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Blink",
@@ -3519,6 +3892,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -3572,7 +3949,16 @@
 			"page": 219,
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Passage)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Blur",
@@ -3620,6 +4006,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -3650,7 +4040,8 @@
 			"entries": [
 				"Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
 			],
-			"page": 219
+			"page": 219,
+			"srd": true
 		},
 		{
 			"name": "Branding Smite",
@@ -3728,6 +4119,22 @@
 							"name": "Battle Smith",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
 					}
 				]
 			},
@@ -3761,7 +4168,8 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Burning Hands",
@@ -3909,7 +4317,8 @@
 					"name": "Rakdos Cultist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Call Lightning",
@@ -4016,7 +4425,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Calm Emotions",
@@ -4115,7 +4525,22 @@
 					"name": "Selesnya Initiate",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Handling)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Chain Lightning",
@@ -4183,7 +4608,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Charm Person",
@@ -4328,7 +4754,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Chill Touch",
@@ -4414,7 +4841,8 @@
 			],
 			"miscTags": [
 				"SCL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Chromatic Orb",
@@ -4558,7 +4986,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Circle of Power",
@@ -4616,6 +5045,16 @@
 						"subclass": {
 							"name": "Solidarity (PSA)",
 							"source": "PSA"
+						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
 						}
 					}
 				]
@@ -4729,7 +5168,34 @@
 					"name": "Azorius Functionary",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Clone",
@@ -4777,7 +5243,8 @@
 			"page": 222,
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cloud of Daggers",
@@ -4985,6 +5452,16 @@
 							"name": "Spores (UA)",
 							"source": "UAThreeSubclasses"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -5018,7 +5495,8 @@
 					"name": "Golgari Agent",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Color Spray",
@@ -5061,6 +5539,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -5083,7 +5567,8 @@
 			],
 			"areaTags": [
 				"N"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Command",
@@ -5216,6 +5701,12 @@
 							"source": "GGR"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -5289,7 +5780,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Commune",
@@ -5380,7 +5872,8 @@
 				"Divine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead.",
 				"If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret."
 			],
-			"page": 223
+			"page": 223,
+			"srd": true
 		},
 		{
 			"name": "Commune with Nature",
@@ -5498,7 +5991,22 @@
 					"name": "Selesnya Initiate",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Compelled Duel",
@@ -5590,6 +6098,14 @@
 			],
 			"miscTags": [
 				"SGT"
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
 			]
 		},
 		{
@@ -5672,7 +6188,16 @@
 				"For the duration, you understand the literal meaning of any spoken language that you hear. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text.",
 				"This spell doesn't decode secret messages in a text or a glyph, such as an arcane sigil, that isn't part of a written language."
 			],
-			"page": 224
+			"page": 224,
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Compulsion",
@@ -5775,7 +6300,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cone of Cold",
@@ -5833,6 +6359,16 @@
 							"source": "PHB"
 						},
 						"subclass": {
+							"name": "Raven Queen (UA)",
+							"source": "UAWarlockAndWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
 							"name": "Hexblade (UA)",
 							"source": "UAWarlockAndWizard"
 						}
@@ -5876,6 +6412,22 @@
 							"name": "Lurker in the Deep (UA)",
 							"source": "UASorcererAndWarlock"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
 					}
 				]
 			},
@@ -5902,7 +6454,8 @@
 			],
 			"areaTags": [
 				"N"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Confusion",
@@ -6098,7 +6651,16 @@
 					"name": "Rakdos Cultist",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Conjure Animals",
@@ -6200,7 +6762,16 @@
 			"miscTags": [
 				"SMN",
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Handling)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Conjure Barrage",
@@ -6235,6 +6806,18 @@
 						"name": "Ranger",
 						"source": "PHB"
 					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
+					}
 				]
 			},
 			"source": "PHB",
@@ -6252,6 +6835,14 @@
 				{
 					"name": "Gruul Anarch",
 					"source": "GGR"
+				}
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
 			]
 		},
@@ -6313,7 +6904,8 @@
 			"miscTags": [
 				"SMN",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Conjure Elemental",
@@ -6397,7 +6989,16 @@
 			],
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Conjure Fey",
@@ -6462,7 +7063,8 @@
 			"miscTags": [
 				"SMN",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Conjure Minor Elementals",
@@ -6546,7 +7148,16 @@
 			"miscTags": [
 				"SMN",
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Conjure Volley",
@@ -6668,7 +7279,8 @@
 			"miscTags": [
 				"SMN",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Contact Other Plane",
@@ -6708,6 +7320,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -6724,7 +7342,8 @@
 			],
 			"savingThrow": [
 				"intelligence"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Contagion",
@@ -6881,7 +7500,8 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Contingency",
@@ -6930,7 +7550,8 @@
 				"The contingent spell takes effect immediately after the circumstance is met for the first time, whether or not you want it to, and then contingency ends.",
 				"The contingent spell takes effect only on you, even if it can normally target others. You can use only one contingency spell at a time. If you cast this spell again, the effect of another contingency spell on you ends. Also, contingency ends on you if its material component is ever not on your person."
 			],
-			"page": 227
+			"page": 227,
+			"srd": true
 		},
 		{
 			"name": "Continual Flame",
@@ -6982,6 +7603,16 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
 					}
 				]
 			},
@@ -6989,7 +7620,16 @@
 			"entries": [
 				"A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched."
 			],
-			"page": 227
+			"page": 227,
+			"races": [
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Control Water",
@@ -7130,7 +7770,16 @@
 			],
 			"areaTags": [
 				"N"
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Control Weather",
@@ -7292,7 +7941,8 @@
 					]
 				}
 			],
-			"page": 228
+			"page": 228,
+			"srd": true
 		},
 		{
 			"name": "Cordon of Arrows",
@@ -7441,7 +8091,16 @@
 					"name": "Azorius Functionary",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Create Food and Water",
@@ -7478,6 +8137,10 @@
 					{
 						"name": "Paladin",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -7508,7 +8171,16 @@
 			"entries": [
 				"You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn't go bad."
 			],
-			"page": 229
+			"page": 229,
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Create Undead",
@@ -7575,7 +8247,8 @@
 			"miscTags": [
 				"PRM",
 				"SMN"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Create or Destroy Water",
@@ -7685,7 +8358,8 @@
 			],
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Creation",
@@ -7727,6 +8401,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -7807,7 +8485,16 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Crown of Madness",
@@ -8038,6 +8725,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -8103,6 +8794,12 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Halfling (Mark of Healing)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
@@ -8110,7 +8807,8 @@
 			],
 			"miscTags": [
 				"HL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dancing Lights",
@@ -8161,6 +8859,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -8195,7 +8897,8 @@
 					"name": "Golgari Agent",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Darkness",
@@ -8284,12 +8987,22 @@
 							"name": "Darkness (Twitter)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
+						}
 					}
 				]
 			},
 			"source": "PHB",
 			"entries": [
-				"Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.",
+				"Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with {@sense darkvision} can't see through this darkness, and nonmagical light can't illuminate it.",
 				"If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.",
 				"If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled."
 			],
@@ -8360,11 +9073,18 @@
 					"source": "SCAG",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Darkvision",
@@ -8421,17 +9141,22 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
 			"source": "PHB",
 			"entries": [
-				"You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has darkvision out to a range of 60 feet."
+				"You touch a willing creature to grant it the ability to see in the dark. For the duration, that creature has {@sense darkvision} out to a range of 60 feet."
 			],
 			"page": 230,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Daylight",
@@ -8555,7 +9280,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Death Ward",
@@ -8671,6 +9397,22 @@
 							"name": "Alchemist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
 					}
 				]
 			},
@@ -8693,7 +9435,16 @@
 					"name": "Orzhov Representative",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Delayed Blast Fireball",
@@ -8764,7 +9515,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Demiplane",
@@ -8805,6 +9557,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -8816,7 +9574,8 @@
 			"miscTags": [
 				"PRM",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Destructive Wave",
@@ -8977,7 +9736,16 @@
 				"For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.",
 				"The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt."
 			],
-			"page": 231
+			"page": 231,
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Detect Magic",
@@ -9042,6 +9810,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -9070,8 +9842,15 @@
 				{
 					"name": "Firbolg",
 					"source": "VGM"
+				},
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Detect Poison and Disease",
@@ -9138,7 +9917,16 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Detect Thoughts",
@@ -9252,6 +10040,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
 				}
 			],
 			"backgrounds": [
@@ -9262,7 +10056,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dimension Door",
@@ -9363,7 +10158,16 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Passage)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Disguise Self",
@@ -9415,6 +10219,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -9518,6 +10326,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
 				}
 			],
 			"backgrounds": [
@@ -9528,7 +10342,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Disintegrate",
@@ -9597,7 +10412,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dispel Evil and Good",
@@ -9670,7 +10486,8 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dispel Magic",
@@ -9731,6 +10548,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -9782,7 +10603,8 @@
 			"page": 234,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dissonant Whispers",
@@ -9939,6 +10761,16 @@
 							"subSubclass": "Grassland"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -9960,7 +10792,28 @@
 					"name": "Izzet Engineer",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Divine Favor",
@@ -10029,7 +10882,8 @@
 			"page": 234,
 			"damageInflict": [
 				"radiant"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Divine Word",
@@ -10092,7 +10946,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dominate Beast",
@@ -10207,6 +11062,12 @@
 							"source": "PSA"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -10243,7 +11104,16 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Handling)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Dominate Monster",
@@ -10324,7 +11194,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dominate Person",
@@ -10492,6 +11363,16 @@
 							"name": "Order",
 							"source": "GGR"
 						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Psionics (UA)",
+							"source": "UAFighterRogueWizard"
+						}
 					}
 				]
 			},
@@ -10533,7 +11414,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Drawmij's Instant Summons",
@@ -10585,7 +11467,8 @@
 				"If another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.",
 				"{@spell Dispel magic} or a similar effect successfully applied to the sapphire ends this spell's effect."
 			],
-			"page": 235
+			"page": 235,
+			"srd": "Instant Summons"
 		},
 		{
 			"name": "Dream",
@@ -10640,6 +11523,16 @@
 							"source": "PHB",
 							"subSubclass": "Forest"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
+						}
 					}
 				]
 			},
@@ -10659,7 +11552,16 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Druidcraft",
@@ -10730,7 +11632,8 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Earthquake",
@@ -10821,7 +11724,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Eldritch Blast",
@@ -10875,7 +11779,8 @@
 			],
 			"miscTags": [
 				"SCL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Elemental Weapon",
@@ -10916,6 +11821,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -10979,6 +11888,12 @@
 							"source": "XGE"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -11006,6 +11921,14 @@
 				{
 					"name": "Izzet Engineer",
 					"source": "GGR"
+				}
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
 			]
 		},
@@ -11065,6 +11988,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -11107,6 +12034,16 @@
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
 						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB"
 					}
 				]
 			},
@@ -11174,7 +12111,8 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Enlarge/Reduce",
@@ -11225,6 +12163,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -11248,6 +12190,16 @@
 							"name": "Destruction (Twitter)",
 							"source": "Twitter"
 						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
+						"source": "PHB"
 					}
 				]
 			},
@@ -11299,7 +12251,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ensnaring Strike",
@@ -11458,6 +12411,12 @@
 							"subSubclass": "Stone"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -11484,7 +12443,8 @@
 					"name": "Golgari Agent",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Enthrall",
@@ -11571,7 +12531,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Etherealness",
@@ -11650,7 +12611,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Evard's Black Tentacles",
@@ -11769,7 +12731,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": "Black Tentacles"
 		},
 		{
 			"name": "Expeditious Retreat",
@@ -11822,6 +12785,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -11847,7 +12814,16 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Passage)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Eyebite",
@@ -11937,7 +12913,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fabricate",
@@ -11978,6 +12955,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -12013,7 +12994,16 @@
 			"miscTags": [
 				"PRM",
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Faerie Fire",
@@ -12058,6 +13048,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -12090,6 +13084,36 @@
 							"name": "Lolth (Twitter)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Ranger",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
+						}
+					},
+					{
+						"class": {
+							"name": "Ranger (Revised)",
+							"source": "UATheRangerRevised"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
+						}
 					}
 				]
 			},
@@ -12114,11 +13138,24 @@
 					"source": "SCAG",
 					"baseName": "Half-Elf",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "False Life",
@@ -12167,6 +13204,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -12235,7 +13276,8 @@
 					]
 				}
 			],
-			"page": 239
+			"page": 239,
+			"srd": true
 		},
 		{
 			"name": "Fear",
@@ -12381,7 +13423,8 @@
 					"name": "Rakdos Cultist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Feather Fall",
@@ -12431,6 +13474,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -12453,7 +13500,16 @@
 			"page": 239,
 			"areaTags": [
 				"MT"
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Feeblemind",
@@ -12521,7 +13577,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Feign Death",
@@ -12671,6 +13728,7 @@
 			},
 			"entries": [
 				"You gain the service of a familiar, a spirit that takes an animal form you choose: {@creature bat}, {@creature cat}, {@creature crab}, {@creature frog} (toad), {@creature hawk}, {@creature lizard}, {@creature octopus}, {@creature owl}, {@creature poisonous snake}, fish ({@creature quipper}), {@creature rat}, {@creature raven}, {@creature sea horse}, {@creature spider}, or {@creature weasel}. Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though it is a celestial, fey, or fiend (your choice) instead of a beast.",
+				"{@note Additional {@filter animal form choices|bestiary|Miscellaneous=Familiar} may be available at the DM's discretion.}",
 				"Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.",
 				"When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.",
 				"While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.",
@@ -12683,7 +13741,8 @@
 				"PRM",
 				"SMN",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Find Steed",
@@ -12730,7 +13789,8 @@
 			"page": 240,
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Find Traps",
@@ -12779,7 +13839,16 @@
 				"You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the alarm spell, a glyph of warding, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.",
 				"This spell merely reveals that a trap is present. You don't learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense."
 			],
-			"page": 241
+			"page": 241,
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Find the Path",
@@ -12836,7 +13905,8 @@
 				"This spell allows you to find the shortest, most direct physical route to a specific fixed location that you are familiar with on the same plane of existence. If you name a destination on another plane of existence, a destination that moves (such as a mobile fortress), or a destination that isn't specific (such as \"a green dragon's lair\"), the spell fails.",
 				"For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. While you are traveling there, whenever you are presented with a choice of paths along the way, you automatically determine which path is the shortest and most direct route (but not necessarily the safest route) to the destination."
 			],
-			"page": 240
+			"page": 240,
+			"srd": true
 		},
 		{
 			"name": "Finger of Death",
@@ -12883,7 +13953,7 @@
 			"source": "PHB",
 			"entries": [
 				"You send negative energy coursing through a creature that you can see within range, causing it searing pain. The target must make a Constitution saving throw. It takes {@dice 7d8 + 30} necrotic damage on a failed save, or half as much damage on a successful one.",
-				"A humanoid killed by this spell rises at the start of your next turn as a zombie that is permanently under your command, following your verbal orders to the best of its ability."
+				"A humanoid killed by this spell rises at the start of your next turn as a {@creature zombie} that is permanently under your command, following your verbal orders to the best of its ability."
 			],
 			"page": 241,
 			"damageInflict": [
@@ -12898,7 +13968,8 @@
 			"miscTags": [
 				"PRM",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fire Bolt",
@@ -12939,6 +14010,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -12994,7 +14069,8 @@
 			],
 			"miscTags": [
 				"SCL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fire Shield",
@@ -13063,6 +14139,36 @@
 							"name": "Zeal (PSA)",
 							"source": "PSA"
 						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Wildfire (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
 					}
 				]
 			},
@@ -13080,7 +14186,8 @@
 			"damageResist": [
 				"cold",
 				"fire"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fire Storm",
@@ -13138,7 +14245,8 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fireball",
@@ -13228,6 +14336,26 @@
 							"name": "Artillerist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Wildfire (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -13254,7 +14382,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Flame Blade",
@@ -13293,6 +14422,12 @@
 						"name": "Druid",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -13327,7 +14462,8 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Flame Strike",
@@ -13443,6 +14579,22 @@
 							"name": "Zeal (PSA)",
 							"source": "PSA"
 						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Wildfire (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
 					}
 				]
 			},
@@ -13475,7 +14627,8 @@
 					"name": "Boros Legionnaire",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Flaming Sphere",
@@ -13571,6 +14724,22 @@
 							"source": "UAGiantSoulSorcerer",
 							"subSubclass": "Fire"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
 					}
 				]
 			},
@@ -13604,7 +14773,8 @@
 					"name": "Rakdos Cultist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Flesh to Stone",
@@ -13648,6 +14818,16 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -13670,7 +14850,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fly",
@@ -13724,6 +14905,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -13743,7 +14928,8 @@
 			"page": 243,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fog Cloud",
@@ -13837,11 +15023,18 @@
 				{
 					"name": "Triton",
 					"source": "VGM"
+				},
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Forbiddance",
@@ -13901,7 +15094,8 @@
 			],
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Forcecage",
@@ -13968,7 +15162,8 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Foresight",
@@ -14018,6 +15213,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -14028,7 +15229,8 @@
 			"page": 244,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Freedom of Movement",
@@ -14085,6 +15287,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -14193,7 +15399,16 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Passage)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Friends",
@@ -14242,6 +15457,18 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Psionics (UA)",
+							"source": "UAFighterRogueWizard"
+						}
 					}
 				]
 			},
@@ -14387,6 +15614,36 @@
 							"name": "Spores",
 							"source": "GGR"
 						}
+					},
+					{
+						"class": {
+							"name": "Ranger",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
+						}
+					},
+					{
+						"class": {
+							"name": "Ranger (Revised)",
+							"source": "UATheRangerRevised"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -14409,7 +15666,8 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gate",
@@ -14460,6 +15718,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -14472,7 +15736,8 @@
 			"page": 244,
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Geas",
@@ -14575,7 +15840,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gentle Repose",
@@ -14659,6 +15925,12 @@
 							"source": "UAThreeSubclasses"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -14669,7 +15941,8 @@
 				"You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
 				"The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead."
 			],
-			"page": 245
+			"page": 245,
+			"srd": true
 		},
 		{
 			"name": "Giant Insect",
@@ -14739,6 +16012,26 @@
 							"name": "Lolth (Twitter)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Ranger",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
+						}
+					},
+					{
+						"class": {
+							"name": "Ranger (Revised)",
+							"source": "UATheRangerRevised"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
+						}
 					}
 				]
 			},
@@ -14761,7 +16054,8 @@
 			],
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Glibness",
@@ -14807,7 +16101,8 @@
 			"entries": [
 				"Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful."
 			],
-			"page": 245
+			"page": 245,
+			"srd": true
 		},
 		{
 			"name": "Globe of Invulnerability",
@@ -14870,7 +16165,8 @@
 			"page": 245,
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Glyph of Warding",
@@ -14927,6 +16223,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -15005,7 +16305,16 @@
 					"name": "Izzet Engineer",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Goodberry",
@@ -15053,7 +16362,16 @@
 			"page": 246,
 			"miscTags": [
 				"HL"
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Grasping Vine",
@@ -15172,6 +16490,16 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
 					}
 				]
 			},
@@ -15189,7 +16517,8 @@
 			],
 			"areaTags": [
 				"Q"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Greater Invisibility",
@@ -15307,6 +16636,16 @@
 							"name": "Gloom Stalker",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
+						}
 					}
 				]
 			},
@@ -15320,7 +16659,16 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"races": [
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Greater Restoration",
@@ -15369,6 +16717,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -15392,6 +16744,12 @@
 							"source": "XGE"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -15410,7 +16768,16 @@
 			"page": 246,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Healing)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Guardian of Faith",
@@ -15545,7 +16912,16 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Guards and Wards",
@@ -15644,7 +17020,8 @@
 			],
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Guidance",
@@ -15689,6 +17066,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -15705,7 +17086,8 @@
 					"name": "Orzhov Representative",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Guiding Bolt",
@@ -15795,7 +17177,8 @@
 					"name": "Boros Legionnaire",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gust of Wind",
@@ -15886,6 +17269,12 @@
 							"source": "UASorcererAndWarlock"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -15903,11 +17292,18 @@
 				{
 					"name": "Triton",
 					"source": "VGM"
+				},
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
 				"L"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hail of Thorns",
@@ -16126,7 +17522,16 @@
 			],
 			"savingThrow": [
 				"charisma"
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Hallucinatory Terrain",
@@ -16203,7 +17608,16 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"races": [
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Harm",
@@ -16255,7 +17669,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Haste",
@@ -16306,6 +17721,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -16399,7 +17818,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Heal",
@@ -16459,7 +17879,8 @@
 			"miscTags": [
 				"HL",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Healing Word",
@@ -16500,6 +17921,18 @@
 						"name": "Druid",
 						"source": "PHB"
 					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
+						}
+					}
 				]
 			},
 			"source": "PHB",
@@ -16522,7 +17955,16 @@
 			"miscTags": [
 				"HL",
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Healing)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Heat Metal",
@@ -16569,6 +18011,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -16636,7 +18082,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hellish Rebuke",
@@ -16739,7 +18186,8 @@
 					"name": "Rakdos Cultist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Heroes' Feast",
@@ -16782,6 +18230,12 @@
 						"name": "Druid",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -16795,7 +18249,8 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Heroism",
@@ -16889,6 +18344,16 @@
 							"name": "Battle Smith",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -16914,7 +18379,8 @@
 					"name": "Boros Legionnaire",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hex",
@@ -17141,7 +18607,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hold Person",
@@ -17338,7 +18805,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Holy Aura",
@@ -17395,7 +18863,8 @@
 			],
 			"areaTags": [
 				"R"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hunger of Hadar",
@@ -17541,7 +19010,22 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Hypnotic Pattern",
@@ -17651,7 +19135,8 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ice Storm",
@@ -17756,6 +19241,16 @@
 							"name": "Artillerist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -17783,7 +19278,8 @@
 			],
 			"areaTags": [
 				"Y"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Identify",
@@ -17827,6 +19323,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -17873,7 +19373,16 @@
 			"page": 252,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Illusory Script",
@@ -17940,7 +19449,16 @@
 					"name": "Orzhov Representative",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Imprisonment",
@@ -18053,7 +19571,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Incendiary Cloud",
@@ -18096,6 +19615,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -18113,7 +19638,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Inflict Wounds",
@@ -18202,7 +19728,8 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Insect Plague",
@@ -18355,6 +19882,26 @@
 							"name": "Primeval Guardian (UA)",
 							"source": "UARangerAndRogue"
 						}
+					},
+					{
+						"class": {
+							"name": "Ranger",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
+						}
+					},
+					{
+						"class": {
+							"name": "Ranger (Revised)",
+							"source": "UATheRangerRevised"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
+						}
 					}
 				]
 			},
@@ -18387,7 +19934,8 @@
 					"name": "Golgari Agent",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Invisibility",
@@ -18445,6 +19993,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -18478,6 +20030,16 @@
 							"name": "Giant Soul (UA)",
 							"source": "UAGiantSoulSorcerer",
 							"subSubclass": "Cloud"
+						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
 						}
 					}
 				]
@@ -18532,6 +20094,12 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
 				}
 			],
 			"conditionInflict": [
@@ -18539,7 +20107,8 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Jump",
@@ -18596,6 +20165,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -18638,6 +20211,12 @@
 					"source": "MTF",
 					"baseName": "Gith",
 					"baseSource": "MTF"
+				},
+				{
+					"name": "Human (Mark of Passage)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
@@ -18648,7 +20227,8 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Knock",
@@ -18689,6 +20269,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -18701,7 +20287,16 @@
 			"page": 254,
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Legend Lore",
@@ -18806,7 +20401,16 @@
 				"Name or describe a person, place, or object. The spell brings to your mind a brief summary of the significant lore about the thing you named. The lore might consist of current tales, forgotten stories, or even secret lore that has never been widely known. If the thing you named isn't of legendary importance, you gain no information. The more information you already have about the thing, the more precise and detailed the information you receive is.",
 				"The information you learn is accurate but might be couched in figurative language. For example, if you have a mysterious magic axe on hand, the spell might yield this information: \"Woe to the evildoer whose hand touches the axe, for even the haft slices the hand of the evil ones. Only a true Child of Stone, lover and beloved of Moradin, may awaken the true powers of the axe, and only with the sacred word Rudnogg on the lips.\""
 			],
-			"page": 254
+			"page": 254,
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Leomund's Secret Chest",
@@ -18850,6 +20454,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -18880,7 +20488,16 @@
 			],
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"races": [
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": "Secret Chest"
 		},
 		{
 			"name": "Leomund's Tiny Hut",
@@ -18937,7 +20554,16 @@
 			"page": 255,
 			"areaTags": [
 				"H"
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": "Tiny Hut"
 		},
 		{
 			"name": "Lesser Restoration",
@@ -18993,6 +20619,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -19047,11 +20677,18 @@
 				{
 					"name": "Aasimar",
 					"source": "DMG"
+				},
+				{
+					"name": "Halfling (Mark of Healing)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Levitate",
@@ -19098,6 +20735,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -19135,6 +20776,12 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
@@ -19142,7 +20789,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Light",
@@ -19194,6 +20842,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -19257,7 +20909,8 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Lightning Arrow",
@@ -19428,7 +21081,8 @@
 			],
 			"areaTags": [
 				"L"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Locate Animals or Plants",
@@ -19470,6 +21124,18 @@
 						"name": "Ranger",
 						"source": "PHB"
 					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Wildfire (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					}
 				]
 			},
 			"source": "PHB",
@@ -19479,7 +21145,22 @@
 			"entries": [
 				"Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
 			],
-			"page": 256
+			"page": 256,
+			"races": [
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Locate Creature",
@@ -19619,7 +21300,22 @@
 				"The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close\u2014within 30 feet\u2014at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn't locate the creature.",
 				"This spell can't locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature."
 			],
-			"page": 256
+			"page": 256,
+			"races": [
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Locate Object",
@@ -19708,7 +21404,22 @@
 				"The spell can locate a specific object known to you, as long as you have seen it up close\u2014within 30 feet\u2014at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.",
 				"This spell can't locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object."
 			],
-			"page": 256
+			"page": 256,
+			"races": [
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Longstrider",
@@ -19765,6 +21476,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -19784,7 +21499,22 @@
 			"page": 256,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Mage Armor",
@@ -19835,7 +21565,16 @@
 			"page": 256,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"races": [
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Mage Hand",
@@ -19888,6 +21627,32 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Fighter",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Psychic Warrior (UA)",
+							"source": "UAFighterRogueWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Psionics (UA)",
+							"source": "UAFighterRogueWizard"
+						}
 					}
 				]
 			},
@@ -19953,7 +21718,8 @@
 					"name": "Dimir Operative",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Magic Circle",
@@ -20094,7 +21860,16 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Magic Jar",
@@ -20134,6 +21909,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -20152,7 +21933,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Magic Missile",
@@ -20241,7 +22023,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Magic Mouth",
@@ -20290,6 +22073,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -20305,7 +22092,16 @@
 			"page": 257,
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Magic Weapon",
@@ -20354,6 +22150,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -20427,6 +22227,12 @@
 							"source": "XGE"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -20442,7 +22248,16 @@
 					]
 				}
 			],
-			"page": 257
+			"page": 257,
+			"races": [
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Major Image",
@@ -20517,7 +22332,16 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Mass Cure Wounds",
@@ -20590,6 +22414,16 @@
 							"name": "Battle Smith",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -20613,7 +22447,8 @@
 			],
 			"miscTags": [
 				"HL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mass Heal",
@@ -20660,7 +22495,8 @@
 			"miscTags": [
 				"HL",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mass Healing Word",
@@ -20704,6 +22540,32 @@
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Order",
+							"source": "GGR"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
 					}
 				]
 			},
@@ -20727,7 +22589,16 @@
 			"miscTags": [
 				"HL",
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Healing)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Mass Suggestion",
@@ -20777,18 +22648,6 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
-				],
-				"fromSubclass": [
-					{
-						"class": {
-							"name": "Cleric",
-							"source": "PHB"
-						},
-						"subclass": {
-							"name": "Order",
-							"source": "GGR"
-						}
-					}
 				]
 			},
 			"source": "PHB",
@@ -20819,7 +22678,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Maze",
@@ -20858,6 +22718,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -20872,7 +22738,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Meld into Stone",
@@ -20926,6 +22793,12 @@
 							"subSubclass": "Mountain"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -20949,7 +22822,8 @@
 					"name": "Dimir Operative",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Melf's Acid Arrow",
@@ -21006,6 +22880,16 @@
 							"name": "Alchemist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -21031,7 +22915,8 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": "Acid Arrow"
 		},
 		{
 			"name": "Mending",
@@ -21084,6 +22969,32 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -21092,7 +23003,16 @@
 				"This spell repairs a single break or tear in an object you touch, such as broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.",
 				"This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object."
 			],
-			"page": 259
+			"page": 259,
+			"races": [
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Message",
@@ -21142,6 +23062,22 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Psionics (UA)",
+							"source": "UAFighterRogueWizard"
+						}
 					}
 				]
 			},
@@ -21157,6 +23093,12 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
@@ -21167,7 +23109,8 @@
 					"name": "Azorius Functionary",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Meteor Swarm",
@@ -21225,7 +23168,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mind Blank",
@@ -21278,7 +23222,8 @@
 			],
 			"damageImmune": [
 				"psychic"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Minor Illusion",
@@ -21378,8 +23323,15 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mirage Arcane",
@@ -21433,7 +23385,8 @@
 				"The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately.",
 				"Creatures with truesight can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
 			],
-			"page": 260
+			"page": 260,
+			"srd": true
 		},
 		{
 			"name": "Mirror Image",
@@ -21521,6 +23474,12 @@
 							"source": "PSA"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -21539,7 +23498,8 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mislead",
@@ -21580,6 +23540,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -21596,7 +23562,16 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Misty Step",
@@ -21714,11 +23689,18 @@
 					"source": "MTF",
 					"baseName": "Gith",
 					"baseSource": "MTF"
+				},
+				{
+					"name": "Human (Mark of Passage)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Modify Memory",
@@ -21803,6 +23785,12 @@
 							"source": "UASorcererAndWarlock"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -21842,7 +23830,8 @@
 			"miscTags": [
 				"PRM",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Moonbeam",
@@ -21921,7 +23910,8 @@
 			],
 			"areaTags": [
 				"Y"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mordenkainen's Faithful Hound",
@@ -21967,6 +23957,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -21982,7 +23976,16 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Dwarf (Mark of Warding)",
+					"source": "ERLW",
+					"baseName": "Dwarf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": "Faithful Hound"
 		},
 		{
 			"name": "Mordenkainen's Magnificent Mansion",
@@ -22036,7 +24039,8 @@
 				"Beyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.",
 				"You can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance."
 			],
-			"page": 261
+			"page": 261,
+			"srd": "Magnificent Mansion"
 		},
 		{
 			"name": "Mordenkainen's Private Sanctum",
@@ -22082,6 +24086,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -22093,7 +24101,7 @@
 					"type": "list",
 					"items": [
 						"Sound can't pass through the barrier at the edge of the warded area.",
-						"The barrier of the warded area appears dark and foggy, preventing vision (including darkvision) through it.",
+						"The barrier of the warded area appears dark and foggy, preventing vision (including {@sense darkvision}) through it.",
 						"Sensors created by divination spells can't appear inside the protected area or pass through the barrier at its perimeter.",
 						"Creatures in the area can't be targeted by divination spells.",
 						"Nothing can teleport into or out of the warded area.",
@@ -22114,7 +24122,16 @@
 			"page": 262,
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": "Private Sanctum"
 		},
 		{
 			"name": "Mordenkainen's Sword",
@@ -22180,7 +24197,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": "Arcane Sword"
 		},
 		{
 			"name": "Move Earth",
@@ -22241,7 +24259,8 @@
 			"page": 263,
 			"areaTags": [
 				"Q"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Nondetection",
@@ -22328,7 +24347,16 @@
 					"name": "Dimir Operative",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Nystul's Magic Aura",
@@ -22405,7 +24433,8 @@
 			],
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"srd": "Arcanist's Magic Aura"
 		},
 		{
 			"name": "Otiluke's Freezing Sphere",
@@ -22469,7 +24498,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": "Freezing Sphere"
 		},
 		{
 			"name": "Otiluke's Resilient Sphere",
@@ -22516,6 +24546,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -22585,7 +24619,8 @@
 					"name": "Izzet Engineer",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": "Resilient Sphere"
 		},
 		{
 			"name": "Otto's Irresistible Dance",
@@ -22643,7 +24678,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": "Irresistible Dance"
 		},
 		{
 			"name": "Pass without Trace",
@@ -22722,6 +24758,18 @@
 					"source": "EEPC",
 					"baseName": "Genasi",
 					"baseSource": "EEPC"
+				},
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Passage)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
 			],
 			"areaTags": [
@@ -22732,7 +24780,8 @@
 					"name": "Dimir Operative",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Passwall",
@@ -22814,7 +24863,8 @@
 			"page": 264,
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Phantasmal Force",
@@ -22977,6 +25027,12 @@
 							"source": "UAArtificerRevisited"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -23007,7 +25063,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Phantom Steed",
@@ -23058,7 +25115,16 @@
 			"page": 265,
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Passage)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Planar Ally",
@@ -23106,7 +25172,8 @@
 			"page": 265,
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Planar Binding",
@@ -23213,6 +25280,12 @@
 							"source": "XGE"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -23238,7 +25311,8 @@
 			],
 			"miscTags": [
 				"SMN"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Plane Shift",
@@ -23309,7 +25383,8 @@
 			"areaTags": [
 				"ST",
 				"MT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Plant Growth",
@@ -23397,6 +25472,16 @@
 							"name": "Archfey",
 							"source": "PHB"
 						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Wildfire (UA)",
+							"source": "UAClericDruidWizard"
+						}
 					}
 				]
 			},
@@ -23417,7 +25502,8 @@
 					"name": "Selesnya Initiate",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Poison Spray",
@@ -23466,6 +25552,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -23493,7 +25583,8 @@
 			"miscTags": [
 				"SCL",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Polymorph",
@@ -23562,7 +25653,7 @@
 			"source": "PHB",
 			"entries": [
 				"This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. The spell has no effect on a shapechanger or a creature with 0 hit points.",
-				"The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.",
+				"The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be {@filter any beast|bestiary|type=beast|miscellaneous=!swarm} whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.",
 				"The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.",
 				"The creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.",
 				"The target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment."
@@ -23582,7 +25673,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Power Word Heal",
@@ -23613,6 +25705,16 @@
 				"fromClassList": [
 					{
 						"name": "Bard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					},
+					{
+						"name": "Druid",
 						"source": "PHB"
 					}
 				]
@@ -23684,7 +25786,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Power Word Stun",
@@ -23748,7 +25851,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Prayer of Healing",
@@ -23781,6 +25885,12 @@
 						"name": "Cleric",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -23803,7 +25913,16 @@
 			"miscTags": [
 				"HL",
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Healing)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Prestidigitation",
@@ -23857,6 +25976,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -23895,8 +26018,15 @@
 					"source": "UAThatOldBlackMagic",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Prismatic Spray",
@@ -23932,6 +26062,12 @@
 					},
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
 						"source": "PHB"
 					}
 				]
@@ -24019,7 +26155,8 @@
 			],
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Prismatic Wall",
@@ -24055,6 +26192,12 @@
 				"fromClassList": [
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
 						"source": "PHB"
 					}
 				]
@@ -24141,7 +26284,8 @@
 			"miscTags": [
 				"PRM",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Produce Flame",
@@ -24216,7 +26360,8 @@
 			],
 			"miscTags": [
 				"SCL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Programmed Illusion",
@@ -24273,7 +26418,8 @@
 			"page": 269,
 			"opposedCheck": [
 				"intelligence"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Project Image",
@@ -24320,6 +26466,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -24339,7 +26491,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Protection from Energy",
@@ -24400,6 +26553,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -24510,7 +26667,16 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Protection from Evil and Good",
@@ -24676,6 +26842,16 @@
 							"source": "XGE"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -24686,7 +26862,8 @@
 			"page": 270,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Protection from Poison",
@@ -24742,6 +26919,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -24784,7 +26965,8 @@
 					"name": "Golgari Agent",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Purify Food and Drink",
@@ -24825,6 +27007,10 @@
 					{
 						"name": "Paladin",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -24850,7 +27036,16 @@
 			"page": 270,
 			"areaTags": [
 				"S"
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Raise Dead",
@@ -24937,6 +27132,26 @@
 							"name": "Alchemist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Wildfire (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -24950,7 +27165,8 @@
 			"page": 270,
 			"miscTags": [
 				"HL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Rary's Telepathic Bond",
@@ -25001,6 +27217,12 @@
 							"source": "UASorcererAndWarlock"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -25014,7 +27236,8 @@
 			"page": 270,
 			"areaTags": [
 				"MT"
-			]
+			],
+			"srd": "Telepathic Bond"
 		},
 		{
 			"name": "Ray of Enfeeblement",
@@ -25145,7 +27368,8 @@
 					"name": "Orzhov Representative",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ray of Frost",
@@ -25186,6 +27410,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -25233,7 +27461,8 @@
 			],
 			"miscTags": [
 				"SCL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ray of Sickness",
@@ -25301,6 +27530,16 @@
 						"subclass": {
 							"name": "Alchemist",
 							"source": "UAArtificerRevisited"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Alchemist",
+							"source": "ERLW"
 						}
 					}
 				]
@@ -25412,7 +27651,8 @@
 			],
 			"miscTags": [
 				"HL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Reincarnate",
@@ -25615,7 +27855,8 @@
 				},
 				"The reincarnated creature recalls its former life and experiences. It retains the capabilities it had in its original form, except it exchanges its original race for the new one and changes its racial traits accordingly."
 			],
-			"page": 271
+			"page": 271,
+			"srd": true
 		},
 		{
 			"name": "Remove Curse",
@@ -25669,7 +27910,8 @@
 			"page": 271,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Resistance",
@@ -25715,6 +27957,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -25738,7 +27984,8 @@
 			"page": 272,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Resurrection",
@@ -25793,7 +28040,8 @@
 			"page": 272,
 			"miscTags": [
 				"HL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Reverse Gravity",
@@ -25855,7 +28103,8 @@
 			],
 			"areaTags": [
 				"Y"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Revivify",
@@ -25904,6 +28153,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -25957,6 +28210,16 @@
 							"source": "XGE"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -25969,7 +28232,8 @@
 			],
 			"miscTags": [
 				"HL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Rope Trick",
@@ -26014,6 +28278,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -26076,7 +28344,8 @@
 					"name": "Izzet Engineer",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sacred Flame",
@@ -26158,7 +28427,8 @@
 			"miscTags": [
 				"SCL",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sanctuary",
@@ -26204,6 +28474,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -26250,7 +28524,8 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Scorching Ray",
@@ -26319,6 +28594,26 @@
 							"name": "Artillerist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Wildfire (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -26352,7 +28647,8 @@
 					"name": "Boros Legionnaire",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Scrying",
@@ -26473,6 +28769,16 @@
 							"name": "Vengeance",
 							"source": "PHB"
 						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Psionics (UA)",
+							"source": "UAFighterRogueWizard"
+						}
 					}
 				]
 			},
@@ -26541,7 +28847,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Searing Smite",
@@ -26630,6 +28937,12 @@
 							"source": "UAArtificerRevisited"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -26714,6 +29027,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -26724,7 +29041,16 @@
 			"page": 274,
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Detection)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Seeming",
@@ -26843,7 +29169,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sending",
@@ -26928,7 +29255,16 @@
 				"You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
 				"You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive."
 			],
-			"page": 274
+			"page": 274,
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Sequester",
@@ -26983,7 +29319,8 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Shapechange",
@@ -27029,6 +29366,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -27036,11 +29379,12 @@
 				"You assume the form of a different creature for the duration. The new form can be of any creature with a challenge rating equal to your level or lower. The creature can't be a construct or an undead, and you must have seen the sort of creature at least once. You transform into an average example of that creature, one without any class levels or the Spellcasting trait.",
 				"Your game statistics are replaced by the statistics of the chosen creature, though you retain your alignment and Intelligence, Wisdom, and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus listed in its statistics is higher than yours, use the creature's bonus in place of yours. You can't use any legendary actions or lair actions of the new form.",
 				"You assume the hit points and Hit Dice of the new form. When you revert to your normal form, you return to the number of hit points you had before you transformed. If you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked {@condition unconscious}.",
-				"You retain the benefit of any features from your class, race, or other source and can use them, provided that your new form is physically capable of doing so. You can't use any special senses you have (for example, darkvision) unless your new form also has that sense. You can only speak if the creature can normally speak.",
+				"You retain the benefit of any features from your class, race, or other source and can use them, provided that your new form is physically capable of doing so. You can't use any special senses you have (for example, {@sense darkvision}) unless your new form also has that sense. You can only speak if the creature can normally speak.",
 				"When you transform, you choose whether your equipment falls to the ground, merges into the new form, or is worn by it. Worn equipment functions as normal. The DM determines whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change shape or size to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge into your new form. Equipment that merges has no effect in that state.",
 				"During this spell's duration, you can use your action to assume a different form following the same restrictions and rules for the original form, with one exception: if your new form has more hit points than your current one, your hit points remain at their current value."
 			],
-			"page": 274
+			"page": 274,
+			"srd": true
 		},
 		{
 			"name": "Shatter",
@@ -27138,6 +29482,16 @@
 							"name": "Lurker in the Deep (UA)",
 							"source": "UASorcererAndWarlock"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -27170,7 +29524,8 @@
 					"name": "Gruul Anarch",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Shield",
@@ -27263,6 +29618,26 @@
 							"name": "Artillerist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -27283,8 +29658,15 @@
 					"source": "MTF",
 					"baseName": "Gith",
 					"baseSource": "MTF"
+				},
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Shield of Faith",
@@ -27363,7 +29745,16 @@
 			"page": 275,
 			"areaTags": [
 				"ST"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Shillelagh",
@@ -27420,7 +29811,8 @@
 			"entries": [
 				"The wood of a {@item club|phb} or {@item quarterstaff|phb} you are holding is imbued with nature's power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a {@dice d8}. The weapon also becomes magical, if it isn't already. The spell ends if you cast it again or if you let go of the weapon."
 			],
-			"page": 275
+			"page": 275,
+			"srd": true
 		},
 		{
 			"name": "Shocking Grasp",
@@ -27460,6 +29852,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -27499,7 +29895,8 @@
 			],
 			"miscTags": [
 				"SCL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Silence",
@@ -27594,7 +29991,16 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Silent Image",
@@ -27653,7 +30059,16 @@
 			"page": 276,
 			"opposedCheck": [
 				"intelligence"
-			]
+			],
+			"races": [
+				{
+					"name": "Elf (Mark of Shadow)",
+					"source": "ERLW",
+					"baseName": "Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Simulacrum",
@@ -27703,7 +30118,8 @@
 				"If the simulacrum is damaged, you can repair it in an alchemical laboratory, using rare herbs and minerals worth 100 gp per hit point it regains. The simulacrum lasts until it drops to 0 hit points, at which point it reverts to snow and melts instantly.",
 				"If you cast this spell again, any currently active duplicates you created with this spell are instantly destroyed."
 			],
-			"page": 276
+			"page": 276,
+			"srd": true
 		},
 		{
 			"name": "Sleep",
@@ -27781,6 +30197,16 @@
 							"name": "Redemption",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
+						}
 					}
 				]
 			},
@@ -27811,7 +30237,16 @@
 					"name": "Dimir Operative",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Sleet Storm",
@@ -27910,7 +30345,16 @@
 			],
 			"areaTags": [
 				"Y"
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Slow",
@@ -27997,6 +30441,12 @@
 							"source": "GGR"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -28014,7 +30464,8 @@
 			"areaTags": [
 				"MT",
 				"C"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Spare the Dying",
@@ -28050,6 +30501,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -28080,7 +30535,8 @@
 					"name": "Golgari Agent",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Speak with Animals",
@@ -28172,7 +30628,16 @@
 					"name": "Gruul Anarch",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Handling)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Speak with Dead",
@@ -28257,6 +30722,12 @@
 							"source": "UAWarlockAndWizard"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Wizard",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -28270,7 +30741,8 @@
 					"name": "Orzhov Representative",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Speak with Plants",
@@ -28332,7 +30804,22 @@
 					"name": "Selesnya Initiate",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Orc (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Half-Orc",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Finding)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Spider Climb",
@@ -28386,6 +30873,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -28442,7 +30933,8 @@
 					"name": "Golgari Agent",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Spike Growth",
@@ -28547,7 +31039,8 @@
 			],
 			"areaTags": [
 				"R"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Spirit Guardians",
@@ -28609,6 +31102,12 @@
 							"source": "SCAG"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -28644,7 +31143,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Spiritual Weapon",
@@ -28770,7 +31270,8 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Staggering Smite",
@@ -28977,7 +31478,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Stone Shape",
@@ -29026,6 +31528,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -29057,7 +31563,16 @@
 			"entries": [
 				"You touch a stone object of Medium size or smaller or a section of stone no more than 5 feet in any dimension and form it into any shape that suits your purpose. So, for example, you could shape a large rock into a weapon, idol, or coffer, or make a small passage through a wall, as long as the wall is less than 5 feet thick. You could also shape a stone door or its frame to seal the door shut. The object you create can have up to two hinges and a latch, but finer mechanical detail isn't possible."
 			],
-			"page": 278
+			"page": 278,
+			"races": [
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Stoneskin",
@@ -29119,6 +31634,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -29222,7 +31741,8 @@
 					"name": "Gruul Anarch",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Storm of Vengeance",
@@ -29315,7 +31835,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Suggestion",
@@ -29434,7 +31955,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sunbeam",
@@ -29502,7 +32024,8 @@
 			],
 			"areaTags": [
 				"L"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sunburst",
@@ -29565,7 +32088,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swift Quiver",
@@ -29664,6 +32188,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -29751,7 +32281,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Tasha's Hideous Laughter",
@@ -29835,7 +32366,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": "Hideous Laughter"
 		},
 		{
 			"name": "Telekinesis",
@@ -29889,6 +32421,16 @@
 							"name": "Great Old One",
 							"source": "PHB"
 						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Psionics (UA)",
+							"source": "UAFighterRogueWizard"
+						}
 					}
 				]
 			},
@@ -29922,7 +32464,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Telepathy",
@@ -30126,9 +32669,9 @@
 			],
 			"page": 281,
 			"miscTags": [
-				"PRM",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Teleportation Circle",
@@ -30230,6 +32773,12 @@
 							"source": "XGE"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -30241,7 +32790,16 @@
 			"page": 282,
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Passage)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Tenser's Floating Disk",
@@ -30304,11 +32862,18 @@
 					"source": "MTF",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Human (Mark of Making)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
 				}
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": "Floating Disk"
 		},
 		{
 			"name": "Thaumaturgy",
@@ -30438,7 +33003,8 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Thorn Whip",
@@ -30476,6 +33042,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -30668,6 +33238,22 @@
 							"name": "Lurker in the Deep (UA)",
 							"source": "UASorcererAndWarlock"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
 					}
 				]
 			},
@@ -30708,7 +33294,8 @@
 					"name": "Gruul Anarch",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Time Stop",
@@ -30751,7 +33338,8 @@
 				"You briefly stop the flow of time for everyone but yourself. No time passes for other creatures, while you take {@dice 1d4 + 1} turns in a row, during which you can use actions and move as normal.",
 				"This spell ends if one of the actions you use during this period, or any effects that you create during this period, affects a creature other than you or an object being worn or carried by someone other than you. In addition, the spell ends if you move to a place more than 1,000 feet from the location where you cast it."
 			],
-			"page": 283
+			"page": 283,
+			"srd": true
 		},
 		{
 			"name": "Tongues",
@@ -30816,13 +33404,28 @@
 							"source": "UAArtificerRevisited"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Ranger",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
 			"entries": [
 				"This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says."
 			],
-			"page": 283
+			"page": 283,
+			"races": [
+				{
+					"name": "Gnome (Mark of Scribing)",
+					"source": "ERLW",
+					"baseName": "Gnome",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Transport via Plants",
@@ -30866,7 +33469,8 @@
 			"entries": [
 				"This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence. You must have seen or touched the destination plant at least once before. For the duration, any creature can step into the target plant and exit from the destination plant by using 5 feet of movement."
 			],
-			"page": 283
+			"page": 283,
+			"srd": true
 		},
 		{
 			"name": "Tree Stride",
@@ -30947,7 +33551,8 @@
 				"You gain the ability to enter a tree and move from inside it to inside another tree of the same kind within 500 feet. Both trees must be living and at least the same size as you. You must use 5 feet of movement to enter a tree. You instantly know the location of all other trees of the same kind within 500 feet and, as part of the move used to enter the tree, can either pass into one of those trees or step out of the tree you're in. You appear in a spot of your choice within 5 feet of the destination tree, using another 5 feet of movement. If you have no movement left, you appear within 5 feet of the tree you entered.",
 				"You can use this transportation ability once per round for the duration. You must end each turn outside a tree."
 			],
-			"page": 283
+			"page": 283,
+			"srd": true
 		},
 		{
 			"name": "True Polymorph",
@@ -31038,7 +33643,8 @@
 				"PRM",
 				"SMN",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "True Resurrection",
@@ -31094,7 +33700,8 @@
 			],
 			"miscTags": [
 				"HL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "True Seeing",
@@ -31158,7 +33765,8 @@
 			"entries": [
 				"This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
 			],
-			"page": 284
+			"page": 284,
+			"srd": true
 		},
 		{
 			"name": "True Strike",
@@ -31222,7 +33830,8 @@
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Tsunami",
@@ -31345,7 +33954,16 @@
 					"name": "Izzet Engineer",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Halfling (Mark of Hospitality)",
+					"source": "ERLW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Vampiric Touch",
@@ -31449,6 +34067,12 @@
 							"source": "Twitter"
 						}
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -31476,7 +34100,8 @@
 			],
 			"miscTags": [
 				"HL"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Vicious Mockery",
@@ -31543,7 +34168,8 @@
 			"miscTags": [
 				"SCL",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wall of Fire",
@@ -31662,6 +34288,16 @@
 							"name": "Artillerist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -31699,7 +34335,8 @@
 					"name": "Rakdos Cultist",
 					"source": "GGR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wall of Force",
@@ -31780,6 +34417,16 @@
 							"name": "Artillerist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -31794,7 +34441,8 @@
 			],
 			"areaTags": [
 				"W"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wall of Ice",
@@ -31861,7 +34509,8 @@
 			],
 			"areaTags": [
 				"W"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wall of Stone",
@@ -31912,6 +34561,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -31957,7 +34610,8 @@
 			],
 			"miscTags": [
 				"PRM"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wall of Thorns",
@@ -32024,7 +34678,8 @@
 			],
 			"areaTags": [
 				"W"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Warding Bond",
@@ -32096,6 +34751,26 @@
 							"name": "Battle Smith",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Battle Smith",
+							"source": "ERLW"
+						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Ranger",
+						"source": "PHB"
 					}
 				]
 			},
@@ -32113,7 +34788,16 @@
 					"name": "Selesnya Initiate",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Water Breathing",
@@ -32171,6 +34855,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -32216,7 +34904,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Water Walk",
@@ -32274,6 +34963,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -32315,7 +35008,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Web",
@@ -32358,6 +35052,10 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				],
 				"fromSubclass": [
@@ -32390,6 +35088,26 @@
 						"subclass": {
 							"name": "Alchemist",
 							"source": "UAArtificerRevisited"
+						}
+					},
+					{
+						"class": {
+							"name": "Ranger",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
+						}
+					},
+					{
+						"class": {
+							"name": "Ranger (Revised)",
+							"source": "UATheRangerRevised"
+						},
+						"subclass": {
+							"name": "Swarmkeeper (UA)",
+							"source": "UAFighterRangerRogue"
 						}
 					}
 				]
@@ -32425,7 +35143,8 @@
 			],
 			"areaTags": [
 				"C"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Weird",
@@ -32464,6 +35183,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"source": "PHB",
@@ -32482,7 +35207,8 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wind Walk",
@@ -32537,7 +35263,8 @@
 			],
 			"miscTags": [
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wind Wall",
@@ -32602,6 +35329,16 @@
 							"name": "Artillerist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Artificer",
+							"source": "ERLW"
+						},
+						"subclass": {
+							"name": "Artillerist",
+							"source": "ERLW"
+						}
 					}
 				]
 			},
@@ -32626,7 +35363,16 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Wish",
@@ -32703,7 +35449,8 @@
 			"miscTags": [
 				"HL",
 				"SGT"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Witch Bolt",
@@ -32815,7 +35562,8 @@
 				"You and up to five willing creatures within 5 feet of you instantly teleport to a previously designated sanctuary. You and any creatures that teleport with you appear in the nearest unoccupied space to the spot you designated when you prepared your sanctuary (see below). If you cast this spell without first preparing a sanctuary, the spell has no effect.",
 				"You must designate a sanctuary by casting this spell within a location, such as a temple, dedicated to or strongly linked to your deity. If you attempt to cast the spell in this manner in an area that isn't dedicated to your deity, the spell has no effect."
 			],
-			"page": 289
+			"page": 289,
+			"srd": true
 		},
 		{
 			"name": "Wrathful Smite",
@@ -32893,6 +35641,12 @@
 							"name": "Destruction (Twitter)",
 							"source": "Twitter"
 						}
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
 					}
 				]
 			},
@@ -33049,7 +35803,16 @@
 					"name": "Orzhov Representative",
 					"source": "GGR"
 				}
-			]
+			],
+			"races": [
+				{
+					"name": "Human (Mark of Sentinel)",
+					"source": "ERLW",
+					"baseName": "Human",
+					"baseSource": "PHB"
+				}
+			],
+			"srd": true
 		}
 	]
 }

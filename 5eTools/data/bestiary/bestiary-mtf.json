@@ -1978,6 +1978,10 @@
 			],
 			"otherSources": [
 				{
+					"source": "OotA",
+					"page": 235
+				},
+				{
 					"source": "BGDIA"
 				}
 			]
@@ -2225,7 +2229,7 @@
 				{
 					"name": "Creeping Darkness {@recharge}",
 					"entries": [
-						"The abishai casts darkness at a point within 120 feet of it, requiring no components. Wisdom is its spellcasting ability for this spell. While the spell persists, the abishai can move the area of darkness up to 60 feet as a bonus action."
+						"The abishai casts {@spell darkness} at a point within 120 feet of it, requiring no components. Wisdom is its spellcasting ability for this spell. While the spell persists, the abishai can move the area of darkness up to 60 feet as a bonus action."
 					]
 				}
 			],
@@ -3191,6 +3195,18 @@
 				"underdark"
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/610/choker.mp3",
+			"otherSources": [
+				{
+					"source": "TftYP",
+					"page": 232
+				}
+			],
+			"altArt": [
+				{
+					"name": "Choker (Alt)",
+					"source": "TftYP"
+				}
+			],
 			"traitTags": [
 				"Spider Climb"
 			],
@@ -3668,6 +3684,12 @@
 			"size": "M",
 			"type": "undead",
 			"source": "MTF",
+			"otherSources": [
+				{
+					"source": "TftYP",
+					"page": 233
+				}
+			],
 			"alignment": [
 				"L",
 				"E"
@@ -3778,6 +3800,12 @@
 				}
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/613/deathlock-wight.mp3",
+			"altArt": [
+				{
+					"name": "Deathlock Wight (Alt)",
+					"source": "TftYP"
+				}
+			],
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -3807,6 +3835,12 @@
 				]
 			},
 			"source": "MTF",
+			"otherSources": [
+				{
+					"source": "OotA",
+					"page": 236
+				}
+			],
 			"alignment": [
 				"C",
 				"E"
@@ -7846,6 +7880,12 @@
 				]
 			},
 			"source": "MTF",
+			"otherSources": [
+				{
+					"source": "OotA",
+					"page": 238
+				}
+			],
 			"alignment": [
 				"C",
 				"E"
@@ -9482,6 +9522,12 @@
 				]
 			},
 			"source": "MTF",
+			"otherSources": [
+				{
+					"source": "OotA",
+					"page": 241
+				}
+			],
 			"alignment": [
 				"C",
 				"E"
@@ -10652,6 +10698,12 @@
 				]
 			},
 			"source": "MTF",
+			"otherSources": [
+				{
+					"source": "OotA",
+					"page": 243
+				}
+			],
 			"alignment": [
 				"C",
 				"E"
@@ -11081,7 +11133,7 @@
 					]
 				},
 				{
-					"name": "Tidal Wave {@recharge 6}",
+					"name": "Tidal Wave {@recharge}",
 					"entries": [
 						"While submerged, the leviathan magically creates a wall of water centered on itself. The wall is up 250 feet long, up to 250 feet high, and up to 50 feet thick. When the wall appears, all other creatures within its area must each make a {@dc 24} Strength saving throw. A creature takes 33 ({@damage 6d10}) bludgeoning damage on failed save, or half as much damage on a successful one.",
 						"At the start of each of the leviathan's turns after the wall appears, the wall, along with any other creatures in it, moves 50 feet away from the leviathan. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a {@dc 24} Strength saving throw or take 27 ({@damage 5d10}) bludgeoning damage. A creature takes this damage no more than once on a turn. At the end of each turn the wall moves, the wall's height is reduced by 50 feet, and the damage creatures take from the wall on subsequent rounds is reduced by {@dice 1d10}. When the wall reaches 0 feet in height, the effect ends.",
@@ -12778,7 +12830,7 @@
 				{
 					"name": "Infernal Tack",
 					"entries": [
-						"The narzugon wears spurs that are part of infernal tack, which allow it to summon its nightmare companion."
+						"The narzugon wears spurs that are part of infernal tack, which allow it to summon its {@creature nightmare} companion."
 					]
 				},
 				{
@@ -13795,6 +13847,12 @@
 				]
 			},
 			"source": "MTF",
+			"otherSources": [
+				{
+					"source": "OotA",
+					"page": 245
+				}
+			],
 			"alignment": [
 				"C",
 				"E"
@@ -14938,7 +14996,7 @@
 				{
 					"name": "Ghostly Inhabitant",
 					"entries": [
-						"The eidolon that enters the sacred statue remains inside it until the statue drops to 0 hit points, the eidolon uses a bonus action to move out of the statue, or the eidolon is turned or forced out by an effect such as the dispel evil and good spell. When the eidolon leaves the statue, it appears in an unoccupied space within 5 feet of the statue."
+						"The {@creature eidolon|MTF} that enters the sacred statue remains inside it until the statue drops to 0 hit points, the eidolon uses a bonus action to move out of the statue, or the eidolon is turned or forced out by an effect such as the {@spell dispel evil and good} spell. When the eidolon leaves the statue, it appears in an unoccupied space within 5 feet of the statue."
 					]
 				},
 				{
@@ -18510,6 +18568,12 @@
 			"size": "M",
 			"type": "undead",
 			"source": "MTF",
+			"otherSources": [
+				{
+					"source": "TftYP",
+					"page": 247
+				}
+			],
 			"alignment": [
 				"C",
 				"E"
@@ -18617,6 +18681,12 @@
 				"urban"
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/713/vampiric-mist.mp3",
+			"altArt": [
+				{
+					"name": "Vampiric Mist (Alt)",
+					"source": "TftYP"
+				}
+			],
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -19014,6 +19084,11 @@
 				"RW",
 				"MW",
 				"THW"
+			],
+			"otherSources": [
+				{
+					"source": "LR"
+				}
 			]
 		},
 		{
@@ -19546,7 +19621,7 @@
 			},
 			"str": 29,
 			"dex": 16,
-			"con": 23,
+			"con": 26,
 			"int": 15,
 			"wis": 24,
 			"cha": 15,
@@ -19715,6 +19790,10 @@
 				"RCH"
 			],
 			"otherSources": [
+				{
+					"source": "OotA",
+					"page": 247
+				},
 				{
 					"source": "BGDIA"
 				}
@@ -20141,7 +20220,7 @@
 				{
 					"name": "Horrid Touch {@recharge 5}",
 					"entries": [
-						"{@atk mw} {@hit 16} to hit, reach 10 ft., one target. {@h}44 ({@damage 8d10}) necrotic damage, and the target is {@condition poisoned} for 1 minute. While {@condition poisoned} in this way, the target is also {@condition blinded} and {@condition deafened}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"Zariel touches one creature within 10 feet of her. The target must succeed on a DC 26 Constitution saving throw or take 44 ({@damage 8d10}) necrotic damage and be {@condition poisoned} for 1 minute. While {@condition poisoned} in this way, the target is also {@condition blinded} and {@condition deafened}. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
@@ -20237,6 +20316,12 @@
 				]
 			},
 			"source": "MTF",
+			"otherSources": [
+				{
+					"source": "OotA",
+					"page": 249
+				}
+			],
 			"alignment": [
 				"C",
 				"E"

@@ -4,8 +4,7 @@
 			"name": "Agonizing Blast",
 			"prerequisite": [
 				{
-					"type": "prereqSpell",
-					"entries": [
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -21,8 +20,7 @@
 			"name": "Arcane Gunslinger",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
+					"pact": "Blade"
 				}
 			],
 			"entries": [
@@ -45,10 +43,11 @@
 			"name": "Ascendant Step",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 9,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -63,8 +62,7 @@
 			"name": "Aspect of the Moon",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Tome"
+					"pact": "Tome"
 				}
 			],
 			"entries": [
@@ -84,8 +82,7 @@
 			"name": "Aspect of the Moon",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Archfey"
+					"patron": "The Archfey"
 				}
 			],
 			"entries": [
@@ -99,8 +96,7 @@
 			"name": "Aspect of the Moon",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Tome"
+					"pact": "Tome"
 				}
 			],
 			"entries": [
@@ -132,10 +128,11 @@
 			"name": "Bewitching Whispers",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -150,8 +147,7 @@
 			"name": "Book of Ancient Secrets",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Tome"
+					"pact": "Tome"
 				}
 			],
 			"entries": [
@@ -166,8 +162,7 @@
 			"name": "Burning Hex",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Hexblade"
+					"patron": "The Hexblade"
 				}
 			],
 			"entries": [
@@ -181,8 +176,7 @@
 			"name": "Caiphon's Beacon",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Great Old One"
+					"patron": "The Great Old One"
 				}
 			],
 			"entries": [
@@ -196,14 +190,12 @@
 			"name": "Chains of Carceri",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Chain"
-				},
-				{
-					"type": "prereqLevel",
-					"level": 15,
-					"class": {
-						"name": "Warlock"
+					"pact": "Chain",
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -218,8 +210,7 @@
 			"name": "Chilling Hex",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Hexblade"
+					"patron": "The Hexblade"
 				}
 			],
 			"entries": [
@@ -233,12 +224,8 @@
 			"name": "Chronicle of the Raven Queen",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Tome"
-				},
-				{
-					"type": "prereqPatron",
-					"entry": "The Raven Queen"
+					"pact": "Tome",
+					"patron": "The Raven Queen"
 				}
 			],
 			"entries": [
@@ -252,12 +239,8 @@
 			"name": "Claw of Acamar",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqPatron",
-					"entry": "The Great Old One"
+					"pact": "Blade",
+					"patron": "The Great Old One"
 				}
 			],
 			"entries": [
@@ -271,8 +254,7 @@
 			"name": "Cloak of Baalzebul",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Fiend"
+					"patron": "The Fiend"
 				}
 			],
 			"entries": [
@@ -286,10 +268,11 @@
 			"name": "Cloak of Flies",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -312,10 +295,11 @@
 			"name": "Cloak of Flies",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -332,12 +316,8 @@
 			"name": "Curse Bringer",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqPatron",
-					"entry": "The Hexblade"
+					"pact": "Blade",
+					"patron": "The Hexblade"
 				}
 			],
 			"entries": [
@@ -361,10 +341,11 @@
 			"name": "Dreadful Word",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -388,14 +369,12 @@
 			"name": "Eldritch Smite",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"pact": "Blade",
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -416,14 +395,12 @@
 			"name": "Eldritch Smite",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"pact": "Blade",
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -438,8 +415,7 @@
 			"name": "Eldritch Spear",
 			"prerequisite": [
 				{
-					"type": "prereqSpell",
-					"entries": [
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -473,8 +449,7 @@
 			"name": "Frost Lance",
 			"prerequisite": [
 				{
-					"type": "prereqSpell",
-					"entries": [
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -496,12 +471,8 @@
 			"name": "Frost Lance",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Archfey"
-				},
-				{
-					"type": "prereqSpell",
-					"entries": [
+					"patron": "The Archfey",
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -517,15 +488,13 @@
 			"name": "Gaze of Khirad",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
-					}
-				},
-				{
-					"type": "prereqPatron",
-					"entry": "The Great Old One"
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"patron": "The Great Old One"
 				}
 			],
 			"entries": [
@@ -548,10 +517,11 @@
 			"name": "Ghostly Gaze",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -572,10 +542,11 @@
 			"name": "Ghostly Gaze",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -591,10 +562,11 @@
 			"name": "Gift of the Depths",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -615,10 +587,11 @@
 			"name": "Gift of the Depths",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -634,8 +607,7 @@
 			"name": "Gift of the Ever-Living Ones",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Chain"
+					"pact": "Chain"
 				}
 			],
 			"entries": [
@@ -655,8 +627,7 @@
 			"name": "Gift of the Ever-Living Ones",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Chain"
+					"pact": "Chain"
 				}
 			],
 			"entries": [
@@ -670,8 +641,7 @@
 			"name": "Grasp of Hadar",
 			"prerequisite": [
 				{
-					"type": "prereqSpell",
-					"entries": [
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -693,12 +663,8 @@
 			"name": "Grasp of Hadar",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Great Old One"
-				},
-				{
-					"type": "prereqSpell",
-					"entries": [
+					"patron": "The Great Old One",
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -714,8 +680,7 @@
 			"name": "Grasp of Hadar",
 			"prerequisite": [
 				{
-					"type": "prereqSpell",
-					"entries": [
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -731,8 +696,7 @@
 			"name": "Green Lord's Gift",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Archfey"
+					"patron": "The Archfey"
 				}
 			],
 			"entries": [
@@ -746,8 +710,7 @@
 			"name": "Improved Pact Weapon",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
+					"pact": "Blade"
 				}
 			],
 			"entries": [
@@ -767,14 +730,12 @@
 			"name": "Improved Pact Weapon",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"pact": "Blade",
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -789,8 +750,7 @@
 			"name": "Improved Pact Weapon",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
+					"pact": "Blade"
 				}
 			],
 			"entries": [
@@ -806,15 +766,13 @@
 			"name": "Kiss of Mephistopheles",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
-					}
-				},
-				{
-					"type": "prereqSpell",
-					"entries": [
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -836,19 +794,14 @@
 			"name": "Kiss of Mephistopheles",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
-					}
-				},
-				{
-					"type": "prereqPatron",
-					"entry": "The Fiend"
-				},
-				{
-					"type": "prereqSpell",
-					"entries": [
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"patron": "The Fiend",
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -864,8 +817,7 @@
 			"name": "Lance of Lethargy",
 			"prerequisite": [
 				{
-					"type": "prereqSpell",
-					"entries": [
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -881,15 +833,13 @@
 			"name": "Lifedrinker",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 12,
-					"class": {
-						"name": "Warlock"
-					}
-				},
-				{
-					"type": "prereqPact",
-					"entry": "Blade"
+					"level": {
+						"level": 12,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Blade"
 				}
 			],
 			"entries": [
@@ -903,12 +853,8 @@
 			"name": "Mace of Dispater",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqPatron",
-					"entry": "The Fiend"
+					"pact": "Blade",
+					"patron": "The Fiend"
 				}
 			],
 			"entries": [
@@ -922,10 +868,11 @@
 			"name": "Maddening Hex",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -946,15 +893,13 @@
 			"name": "Maddening Hex",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
-					}
-				},
-				{
-					"type": "prereqSpell",
-					"entries": [
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"spell": [
 						"hex/curse#x"
 					]
 				}
@@ -979,10 +924,11 @@
 			"name": "Master of Myriad Forms",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 15,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -997,10 +943,11 @@
 			"name": "Minions of Chaos",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 9,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1015,10 +962,11 @@
 			"name": "Mire the Mind",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1042,12 +990,8 @@
 			"name": "Moon Bow",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqPatron",
-					"entry": "The Archfey"
+					"pact": "Blade",
+					"patron": "The Archfey"
 				}
 			],
 			"entries": [
@@ -1061,10 +1005,11 @@
 			"name": "One with Shadows",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1079,10 +1024,11 @@
 			"name": "Otherworldly Leap",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 9,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1097,8 +1043,7 @@
 			"name": "Path of the Seeker",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Seeker"
+					"patron": "The Seeker"
 				}
 			],
 			"entries": [
@@ -1112,12 +1057,8 @@
 			"name": "Raven Queen's Blessing",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Raven Queen"
-				},
-				{
-					"type": "prereqSpell",
-					"entries": [
+					"patron": "The Raven Queen",
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -1133,10 +1074,11 @@
 			"name": "Relentless Hex",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1157,15 +1099,13 @@
 			"name": "Relentless Hex",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
-					}
-				},
-				{
-					"type": "prereqPatron",
-					"entry": "The Hexblade"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"patron": "The Hexblade"
 				}
 			],
 			"entries": [
@@ -1179,15 +1119,13 @@
 			"name": "Relentless Hex",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
-					}
-				},
-				{
-					"type": "prereqSpell",
-					"entries": [
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"spell": [
 						"hex/curse#x"
 					]
 				}
@@ -1203,8 +1141,7 @@
 			"name": "Repelling Blast",
 			"prerequisite": [
 				{
-					"type": "prereqSpell",
-					"entries": [
+					"spell": [
 						"eldritch blast#c"
 					]
 				}
@@ -1220,10 +1157,11 @@
 			"name": "Sculptor of Flesh",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1238,8 +1176,7 @@
 			"name": "Sea Twins' Gift",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Archfey"
+					"patron": "The Archfey"
 				}
 			],
 			"entries": [
@@ -1254,8 +1191,7 @@
 			"name": "Seeker's Speech",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Seeker"
+					"patron": "The Seeker"
 				}
 			],
 			"entries": [
@@ -1269,10 +1205,11 @@
 			"name": "Shroud of Shadow",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 15,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1293,10 +1230,11 @@
 			"name": "Shroud of Shadow",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 15,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1311,15 +1249,13 @@
 			"name": "Shroud of Ulban",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 18,
-					"class": {
-						"name": "Warlock"
-					}
-				},
-				{
-					"type": "prereqPatron",
-					"entry": "The Great Old One"
+					"level": {
+						"level": 18,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"patron": "The Great Old One"
 				}
 			],
 			"entries": [
@@ -1333,10 +1269,11 @@
 			"name": "Sign of Ill Omen",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1351,14 +1288,12 @@
 			"name": "Superior Pact Weapon",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqLevel",
-					"level": 9,
-					"class": {
-						"name": "Warlock"
+					"pact": "Blade",
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1382,14 +1317,12 @@
 			"name": "Thirsting Blade",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"pact": "Blade",
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1404,10 +1337,11 @@
 			"name": "Tomb of Levistus",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1429,8 +1363,7 @@
 			"name": "Tomb of Levistus",
 			"prerequisite": [
 				{
-					"type": "prereqPatron",
-					"entry": "The Fiend"
+					"patron": "The Fiend"
 				}
 			],
 			"entries": [
@@ -1445,10 +1378,11 @@
 			"name": "Tomb of Levistus",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 5,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1464,10 +1398,11 @@
 			"name": "Trickster's Escape",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1488,10 +1423,11 @@
 			"name": "Trickster's Escape",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 7,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1506,14 +1442,12 @@
 			"name": "Ultimate Pact Weapon",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Blade"
-				},
-				{
-					"type": "prereqLevel",
-					"level": 15,
-					"class": {
-						"name": "Warlock"
+					"pact": "Blade",
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1528,10 +1462,11 @@
 			"name": "Visions of Distant Realms",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 15,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1546,8 +1481,7 @@
 			"name": "Voice of the Chain Master",
 			"prerequisite": [
 				{
-					"type": "prereqPact",
-					"entry": "Chain"
+					"pact": "Chain"
 				}
 			],
 			"entries": [
@@ -1561,10 +1495,11 @@
 			"name": "Whispers of the Grave",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 9,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1579,10 +1514,11 @@
 			"name": "Witch Sight",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 15,
-					"class": {
-						"name": "Warlock"
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
 					}
 				}
 			],
@@ -1661,8 +1597,8 @@
 		{
 			"name": "Twinned Spell",
 			"entries": [
-				"When you cast a spell that doesn't have a range of self and is incapable of targeting more than one creature at the spell's current level, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip).",
-				"To be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, magic missile and scorching ray aren't eligible, but ray of frost and chromatic orb are."
+				"When you cast a spell that targets only one creature and doesn't have a range of self, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip).",
+				"To be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, {@spell magic missile} and {@spell scorching ray} aren't eligible, but {@spell ray of frost} and {@spell chromatic orb} are."
 			],
 			"source": "PHB",
 			"page": 102,
@@ -2309,7 +2245,7 @@
 				"At 3rd level, a character dedicated to the {@class Warlock|phb|Seeker|the Seeker (UA)|UATheFaithful} can select this option instead of one of the warlock's existing Pact Boon options.",
 				"The Seeker grants you a chain forged from starlight, decorated with seven gleaming motes of brightness. While the chain is on your person, you know the {@spell augury} spell and can cast it as a ritual. The spell doesn't count against your number of spells known.",
 				"Additionally, you can invoke the Seeker's power to gain advantage on an Intelligence check while you carry this item. Once you use this ability, you cannot use it again until you complete a short or long rest.",
-				"If you lose your Star Chain, you can perform a 1-­hour ceremony to receive a replacement from the Seeker. The ceremony can be performed during a short or long rest, and it destroys the previous chain. The chain disappears in a flash of light when you die.",
+				"If you lose your Star Chain, you can perform a 1-hour ceremony to receive a replacement from the Seeker. The ceremony can be performed during a short or long rest, and it destroys the previous chain. The chain disappears in a flash of light when you die.",
 				"The exact form of this item might be different depending on your patron. The Star Chain is inspired by the Greyhawk deity Celestian."
 			],
 			"featureType": "PB",
@@ -2317,17 +2253,29 @@
 			"source": "UATheFaithful"
 		},
 		{
+			"name": "Pact of the Talisman",
+			"source": "UAClassFeatureVariants",
+			"page": 11,
+			"entries": [
+				"Your patron gives you a special amulet, a talisman that can aid you, or anyone else who wears it, when the need is great. When the wearer makes an ability check with a skill in which they lack proficiency, they can add a {@dice d4} to the roll.",
+				"If you lose the talisman, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous amulet.",
+				"The talisman turns to ash when you die."
+			],
+			"featureType": "PB"
+		},
+		{
 			"featureType": "ED",
 			"name": "Breath of Winter",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 17,
-					"class": {
-						"name": "Monk"
-					},
-					"subclass": {
-						"name": "Four Elements"
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
 					}
 				}
 			],
@@ -2342,13 +2290,14 @@
 			"name": "Clench of the North Wind",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 6,
-					"class": {
-						"name": "Monk"
-					},
-					"subclass": {
-						"name": "Four Elements"
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
 					}
 				}
 			],
@@ -2366,7 +2315,7 @@
 				{
 					"type": "list",
 					"items": [
-						"Create a harmless, instantaneous sensory effect related to air, earth, fire, or water, such as a shower of sparks, a puff of wind, a spray of light mist, orc a gentle rumbling of stone.",
+						"Create a harmless, instantaneous sensory effect related to air, earth, fire, or water, such as a shower of sparks, a puff of wind, a spray of light mist, or a gentle rumbling of stone.",
 						"Instantaneously light or snuff out a candle, a torch, or a small campfire.",
 						"Chill or warm up to 1 pound of nonliving material for up to 1 hour.",
 						"Cause earth, fire, water, or mist that can fit within a 1-foot cube to shape itself into a crude form you designate for 1 minute."
@@ -2381,13 +2330,14 @@
 			"name": "Eternal Mountain Defense",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 17,
-					"class": {
-						"name": "Monk"
-					},
-					"subclass": {
-						"name": "Four Elements"
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
 					}
 				}
 			],
@@ -2429,13 +2379,14 @@
 			"name": "Flames of the Phoenix",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 11,
-					"class": {
-						"name": "Monk"
-					},
-					"subclass": {
-						"name": "Four Elements"
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
 					}
 				}
 			],
@@ -2450,13 +2401,14 @@
 			"name": "Gong of the Summit",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 6,
-					"class": {
-						"name": "Monk"
-					},
-					"subclass": {
-						"name": "Four Elements"
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
 					}
 				}
 			],
@@ -2471,13 +2423,14 @@
 			"name": "Mist Stance",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 11,
-					"class": {
-						"name": "Monk"
-					},
-					"subclass": {
-						"name": "Four Elements"
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
 					}
 				}
 			],
@@ -2492,13 +2445,14 @@
 			"name": "Ride the Wind",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 11,
-					"class": {
-						"name": "Monk"
-					},
-					"subclass": {
-						"name": "Four Elements"
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
 					}
 				}
 			],
@@ -2513,13 +2467,14 @@
 			"name": "River of Hungry Flame",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 17,
-					"class": {
-						"name": "Monk"
-					},
-					"subclass": {
-						"name": "Four Elements"
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
 					}
 				}
 			],
@@ -2570,13 +2525,14 @@
 			"name": "Wave of Rolling Earth",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 17,
-					"class": {
-						"name": "Monk"
-					},
-					"subclass": {
-						"name": "Four Elements"
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
 					}
 				}
 			],
@@ -2590,15 +2546,13 @@
 			"name": "Boots of the Winding Path",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 4,
-					"class": {
-						"name": "Artificer (Revisited)"
-					}
-				},
-				{
-					"type": "prereqItem",
-					"entries": [
+					"level": {
+						"level": 4,
+						"class": {
+							"name": "Artificer (Revisited)"
+						}
+					},
+					"item": [
 						"A pair of boots (requires attunement)"
 					]
 				}
@@ -2614,8 +2568,7 @@
 			"name": "Enhanced Defense",
 			"prerequisite": [
 				{
-					"type": "prereqItem",
-					"entries": [
+					"item": [
 						"A suit of armor or a shield"
 					]
 				}
@@ -2632,8 +2585,7 @@
 			"name": "Enhanced Wand",
 			"prerequisite": [
 				{
-					"type": "prereqItem",
-					"entries": [
+					"item": [
 						"A wand (requires attunement)"
 					]
 				}
@@ -2650,8 +2602,7 @@
 			"name": "Enhanced Weapon",
 			"prerequisite": [
 				{
-					"type": "prereqItem",
-					"entries": [
+					"item": [
 						"A simple or martial weapon"
 					]
 				}
@@ -2668,15 +2619,13 @@
 			"name": "Many-Handed Pouch",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 4,
-					"class": {
-						"name": "Artificer (Revisited)"
-					}
-				},
-				{
-					"type": "prereqItem",
-					"entries": [
+					"level": {
+						"level": 4,
+						"class": {
+							"name": "Artificer (Revisited)"
+						}
+					},
+					"item": [
 						"2\u20135 pouches"
 					]
 				}
@@ -2693,15 +2642,13 @@
 			"name": "Radiant Weapon",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 8,
-					"class": {
-						"name": "Artificer (Revisited)"
-					}
-				},
-				{
-					"type": "prereqItem",
-					"entries": [
+					"level": {
+						"level": 8,
+						"class": {
+							"name": "Artificer (Revisited)"
+						}
+					},
+					"item": [
 						"A simple or martial weapon (requires attunement)"
 					]
 				}
@@ -2718,8 +2665,7 @@
 			"name": "Repeating Shot",
 			"prerequisite": [
 				{
-					"type": "prereqItem",
-					"entries": [
+					"item": [
 						"A simple or martial weapon with the ammunition property (requires attunement)"
 					]
 				}
@@ -2736,9 +2682,10 @@
 			"name": "Replicate Magic Item",
 			"prerequisite": [
 				{
-					"type": "prereqSpecial",
-					"entry": "See below",
-					"entrySummary": "See text"
+					"otherSummary": {
+						"entry": "See below",
+						"entrySummary": "See text"
+					}
 				}
 			],
 			"entries": [
@@ -2987,15 +2934,13 @@
 			"name": "Repulsion Shield",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 8,
-					"class": {
-						"name": "Artificer (Revisited)"
-					}
-				},
-				{
-					"type": "prereqItem",
-					"entries": [
+					"level": {
+						"level": 8,
+						"class": {
+							"name": "Artificer (Revisited)"
+						}
+					},
+					"item": [
 						"A shield (requires attunement)"
 					]
 				}
@@ -3011,15 +2956,13 @@
 			"name": "Resistant Armor",
 			"prerequisite": [
 				{
-					"type": "prereqLevel",
-					"level": 8,
-					"class": {
-						"name": "Artificer (Revisited)"
-					}
-				},
-				{
-					"type": "prereqItem",
-					"entries": [
+					"level": {
+						"level": 8,
+						"class": {
+							"name": "Artificer (Revisited)"
+						}
+					},
+					"item": [
 						"A suit of armor (requires attunement)"
 					]
 				}
@@ -3035,8 +2978,7 @@
 			"name": "Returning Weapon",
 			"prerequisite": [
 				{
-					"type": "prereqItem",
-					"entries": [
+					"item": [
 						"A simple or martial weapon with the thrown property"
 					]
 				}
@@ -3301,6 +3243,1116 @@
 			"source": "GoS",
 			"featureType": "SHP:O",
 			"page": 198
+		},
+		{
+			"name": "Acidic Bile Sprayer",
+			"entries": [
+				"This hose weapon is attached to demonic organs that produce an acidic bile that dissolves flesh on contact.",
+				{
+					"type": "entries",
+					"name": "Acidic Bile Sprayer (Requires 1 Crew and Grants Half Cover, {@recharge 5|m})",
+					"entries": [
+						"Acidic bile sprays from a nozzle in a 30-foot cone. Each creature in the cone must make a DC 12 Dexterity saving throw, taking 40 ({@damage 9d8}) acid damage on a failed save, or half as much damage on a successful one. A creature reduced to 0 hit points by this damage is dissolved, leaving behind any objects it was carrying or wearing."
+					]
+				}
+			],
+			"source": "BGDIA",
+			"featureType": "IWM:W",
+			"page": 221
+		},
+		{
+			"name": "Flamethrower",
+			"entries": [
+				"Although useless against demons, this weapon is great against flammable creatures and objects.",
+				{
+					"type": "entries",
+					"name": "Flamethrower (Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"Fire shoots out of the weapon's nozzle in a 60-foot line that is 5 feet wide. Each creature in the line must make a DC 15 Dexterity saving throw, taking 18 ({@damage 4d8}) fire damage on a failed save, or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being carried or worn."
+					]
+				}
+			],
+			"source": "BGDIA",
+			"featureType": "IWM:W",
+			"page": 221
+		},
+		{
+			"name": "Infernal Screamer",
+			"entries": [
+				"A writhing humanoid torso made of melting wax juts out from this station, with a barbed hand crank between its shoulder blades. The figure telepathically shrieks in agony when the crank is turned.",
+				{
+					"type": "entries",
+					"name": "Infernal Screamer (Requires 1 Crew and Grants Half Cover)",
+					"entries": [
+						"The screamer's operator targets one creature it can see within 120 feet of the screamer. The target must make a DC 15 Wisdom saving throw, taking 26 ({@damage 4d12}) psychic damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"source": "BGDIA",
+			"featureType": "IWM:W",
+			"page": 221
+		},
+		{
+			"name": "Styx Sprayer",
+			"entries": [
+				"This flexible hose is connected to a tank that holds 30 gallons of water from the {@area River Styx|1a3|x}. Each use of the weapon depletes 10 gallons of the water. Refilling the tank requires access to the Styx.",
+				{
+					"type": "entries",
+					"name": "Styx Sprayer (Requires 1 Crew and Grants Half Cover; 3 Uses)",
+					"entries": [
+						"{@atk rs}: +5 to hit, range 30 ft., one creature. {@h}The creature is struck by water from the River Styx and targeted by a {@spell feeblemind} spell (save DC 20). An already feebleminded creature is immune to this effect, as is a creature adapted to the River Styx. If the target fails its saving throw and the spell's effect on it is not ended within 30 days, the effect becomes permanent, whereupon the creature loses all its memories and becomes a near-mindless shell of its former self. At that point, nothing short of divine intervention can undo the effect."
+					]
+				}
+			],
+			"source": "BGDIA",
+			"featureType": "IWM:W",
+			"page": 221
+		},
+		{
+			"name": "Canian Armor",
+			"entries": [
+				"The infernal iron used to make the vehicle was mined on Cania, the coldest layer of the Nine Hells. An infernal war machine with Canian armor has an Armor Class of 22 + its Dexterity modifier. While the vehicle is not moving, attack rolls made against it have advantage. The infernal war machine also has immunity to cold damage in addition to its other damage immunities, and it's immune to the effects of extreme cold."
+			],
+			"source": "BGDIA",
+			"featureType": "IWM:A",
+			"page": 221
+		},
+		{
+			"name": "Gilded Death Armor",
+			"entries": [
+				"Gold stolen or bartered from the archdevil Mammon plates the vehicle's exterior. This gold can't be removed without destroying the vehicle and turns to dust when the infernal war machine drops to 0 hit points. Gilded death armor grants the infernal war machine resistance to bludgeoning, piercing, and slashing damage."
+			],
+			"source": "BGDIA",
+			"featureType": "IWM:A",
+			"page": 222
+		},
+		{
+			"name": "Soul Spike Armor",
+			"entries": [
+				"The vehicle is covered with spikes inscribed with blasphemous symbols. Luminous, ghostly figures impaled on these spikes wail and reach out in agony.",
+				"If a creature that isn't a devil dies within 30 feet of the infernal war machine, its soul (if it has one) is torn from its body and joins the wailing throng impaled on the spikes. As long as its soul remains trapped, a creature can't be raised from the dead by any means. A trapped soul is freed if the vehicle is destroyed, if the spike anchoring it is the target of a {@spell remove curse} spell or similar magic, or if the spike is destroyed. Each spike is a Small object with AC 19, 15 hit points, and resistance to all damage except radiant damage."
+			],
+			"source": "BGDIA",
+			"featureType": "IWM:W",
+			"page": 222
+		},
+		{
+			"name": "Necrotic Smoke Screen",
+			"entries": [
+				"The vehicle's driver can activate this magical device as a bonus action, causing the vehicle to expel a 30-foot cube of opaque smoke directly in front of it or behind it. The cloud is stationary and lasts for 1 minute. The area within it is heavily obscured. Any creature that enters the cloud for the first time on a turn or starts its turn there takes 21 ({@damage 6d6}) necrotic damage. A strong wind disperses the cloud. This device needs 24 hours to recharge before it can be used again."
+			],
+			"source": "BGDIA",
+			"featureType": "IWM:G",
+			"page": 222
+		},
+		{
+			"name": "Teleporter",
+			"entries": [
+				"The vehicle's driver can activate this magical device as a bonus action, causing the vehicle to teleport to an unoccupied space that the driver can see up to 300 feet away from the vehicle's current position. All creatures and objects in contact with the vehicle are teleported along with it. This device needs 24 hours to recharge before it can be used again."
+			],
+			"source": "BGDIA",
+			"featureType": "IWM:G",
+			"page": 222
+		},
+		{
+			"source": "UAClericDruidWizard",
+			"page": 5,
+			"featureType": "OR",
+			"name": "Absorption",
+			"entries": [
+				"When you cast a spell that deals damage to the named target, you gain {@dice 3d6} temporary hit points. The number of temporary hit points you gain increases by {@dice 1d6} when you reach 10th level ({@dice 4d6}) and 14th level ({@dice 5d6}) in this class."
+			]
+		},
+		{
+			"source": "UAClericDruidWizard",
+			"page": 5,
+			"featureType": "OR",
+			"name": "Devastation",
+			"entries": [
+				"If the spell requires the named creature to make a saving throw, that creature has disadvantage on the first save it makes against the spell."
+			]
+		},
+		{
+			"source": "UAClericDruidWizard",
+			"page": 5,
+			"featureType": "OR",
+			"name": "Dissolution",
+			"entries": [
+				"The first time the named creature takes damage from the spell, that creature takes an extra {@dice 2d8} force damage. The extra force damage increases by {@dice 1d8} when you reach 10th level ({@dice 3d8}) and 14th level ({@dice 4d8}) in this class."
+			]
+		},
+		{
+			"source": "UAClericDruidWizard",
+			"page": 5,
+			"featureType": "OR",
+			"name": "Nullification",
+			"entries": [
+				"If the named target is affected by any other spells, you know what those spells are, and you can attempt to end one of your choice by succeeding on an Intelligence check with a DC equal to 10 + the level of the chosen spell."
+			]
+		},
+		{
+			"source": "UAClericDruidWizard",
+			"page": 5,
+			"featureType": "OR",
+			"name": "Puppetry",
+			"entries": [
+				"The first time the named creature takes damage from the spell, you can knock the creature {@condition prone} or move it up to 10 feet, either directly toward you or away from you."
+			]
+		},
+		{
+			"source": "UAClericDruidWizard",
+			"page": 5,
+			"featureType": "OR",
+			"name": "Sympathy",
+			"entries": [
+				"If the named creature is within range of the spell, you can target the creature with the spell even if you can't see the creature or it has total cover against the spell."
+			]
+		},
+		{
+			"name": "Haug (Hill Rune)",
+			"entries": [
+				"This rune's magic bestows a resilience reminiscent of a hill giant. While wearing or carrying an object inscribed with this rune, you have advantage on saving throws against being {@condition poisoned}, and you have resistance against poison damage.",
+				"In addition, you can invoke the rune as a bonus action, gaining resistance to bludgeoning, piercing, and slashing damage for 1 minute. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+			],
+			"featureType": "RN",
+			"source": "UAFighterRangerRogue",
+			"page": 1
+		},
+		{
+			"name": "Ild (Fire Rune)",
+			"entries": [
+				"This rune's magic channels the masterful craftsmanship of fire giant smiths. While wearing or carrying an object inscribed with this rune, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool.",
+				"In addition, when you hit a creature with a weapon attack, you can invoke the rune to summon fiery shackles: the target must succeed on a Strength saving throw or be {@condition restrained} for 1 minute. While {@condition restrained} by the shackles, the target takes  {@dice 2d6} fire damage at the start of each of its turns. The target can repeat the saving throw at the end of each of its turns, banishing the shackles on a success. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+			],
+			"featureType": "RN",
+			"source": "UAFighterRangerRogue",
+			"page": 1
+		},
+		{
+			"name": "Ise (Frost Rune)",
+			"entries": [
+				"This rune's magic evokes a frost giant's stoic calm. While wearing or carrying an object inscribed with this rune, you have advantage on Wisdom ({@skill Animal Handling}) checks and Charisma ({@skill Intimidation}) checks.",
+				"In addition, you can invoke the rune as a bonus action to increase your Strength score by 2 for 10 minutes. This increase can cause your score to exceed 20, but not 30. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+			],
+			"featureType": "RN",
+			"source": "UAFighterRangerRogue",
+			"page": 1
+		},
+		{
+			"name": "Skye (Cloud Rune)",
+			"entries": [
+				"This rune's magic emulates the deceptiveness of a cloud giant. While wearing or carrying an object inscribed with this rune, you have advantage on Dexterity ({@skill Sleight of Hand}) checks and Charisma ({@skill Deception}) checks.",
+				"In addition, when you or a creature you can see within 30 feet of you is hit by an attack roll, you can use your reaction to invoke the rune and cause that attack to target a different creature within 30 feet of you (other than the attacker), using the same roll. This magic can transfer the attack regardless of the attack's range. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+			],
+			"featureType": "RN",
+			"source": "UAFighterRangerRogue",
+			"page": 2
+		},
+		{
+			"name": "Stein (Stone Rune)",
+			"entries": [
+				"This rune's magic channels the insightfulness of a stone giant. While wearing or carrying an object inscribed with this rune, you have advantage on Wisdom ({@skill Insight}) checks, and you have {@sense darkvision} out to a range of 60 feet. If you already have {@sense darkvision}, its range increases by 30 feet.",
+				"In addition, when a creature you can see ends its turn within 30 feet of you, you can use your reaction to invoke the rune and force the creature to make a Wisdom saving throw. Unless the save succeeds, the creature is {@condition charmed} by you for 1 minute. While {@condition charmed} in this way, the creature has a speed of 0 and is {@condition incapacitated}, descending into a dreamy stupor. The effect ends if the {@condition charmed} creature takes any damage or if someone else uses an action to shake the creature out of its haze. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+			],
+			"featureType": "RN",
+			"source": "UAFighterRangerRogue",
+			"page": 2
+		},
+		{
+			"name": "Uvar (Storm Rune)",
+			"entries": [
+				"Using this rune, you can glimpse the future like a storm giant. While wearing or carrying an object inscribed with this rune, you have advantage on Intelligence ({@skill Arcana}) checks, and you can't be surprised as long as you are not {@condition incapacitated}.",
+				"In addition, you can invoke the rune as a bonus action to enter a prophetic state for 1 minute or until you're {@condition incapacitated}. Until the state ends, when you or another creature you can see within 60 feet of you makes an attack roll, a saving throw, or an ability check, you can use your reaction to cause the roll to have advantage or disadvantage. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+			],
+			"featureType": "RN",
+			"source": "UAFighterRangerRogue",
+			"page": 2
+		},
+		{
+			"name": "Alchemical Fire",
+			"entries": [
+				"As an action, you can reach into your Alchemist's Satchel, pull out a vial of volatile liquid, and hurl the vial at a creature, object, or surface within 30 feet of you (the vial and its contents disappear if you don't hurl the vial by the end of the current turn). On impact, the vial detonates in a 5-foot radius. Any creature in that area must succeed on a Dexterity saving throw or take {@dice 1d6} fire damage. This formula's damage increases by {@dice 1d6} when you reach certain levels in this class: 4th level ({@dice 2d6}), 7th level ({@dice 3d6}), 10th level ({@dice 4d6}), 13th level ({@dice 5d6}), 16th level ({@dice 6d6}), and 19th level ({@dice 7d6})."
+			],
+			"page": 5,
+			"source": "UAArtificer",
+			"featureType": "AF"
+		},
+		{
+			"name": "Alchemical Acid",
+			"entries": [
+				"As an action, you can reach into your Alchemist's Satchel, pull out a vial of acid, and hurl the vial at a creature or object within 30 feet of you (the vial and its contents disappear if you don't hurl the vial by the end of the current turn). The vial shatters on impact. A creature must succeed on a Dexterity saving throw or take {@dice 1d6} acid damage. An object automatically takes that damage, and the damage is maximized. This formula's damage increases by {@dice 1d6} when you reach certain levels in this class: 3rd level ({@dice 2d6}), 5th level ({@dice 3d6}), 7th level ({@dice 4d6}), 9th level ({@dice 5d6}), 11th level ({@dice 6d6}), 13th level ({@dice 7d6}), 15th level ({@dice 8d6}), 17th level ({@dice 9d6}), and 19th level ({@dice 10d6})."
+			],
+			"page": 5,
+			"source": "UAArtificer",
+			"featureType": "AF"
+		},
+		{
+			"name": "Healing Draught",
+			"entries": [
+				"As an action, you can reach into your Alchemist's Satchel and pull out a vial of healing liquid. A creature can drink it as an action to regain {@dice 1d8} hit points. The vial then disappears. Once a creature regains hit points from this alchemical formula, the creature can't do so again until it finishes a long rest. If not used, the vial and its contents disappear after 1 hour. While the vial exists, you can't use this formula. This formula's healing increases by {@dice 1d8} when you reach certain levels in this class: 3rd level ({@dice 2d8}), 5th level ({@dice 3d8}), 7th level ({@dice 4d8}), 9th level ({@dice 5d8}), 11th level ({@dice 6d8}), 13th level ({@dice 7d8}), 15th level ({@dice 8d8}), 17th level ({@dice 9d8}), and 19th level ({@dice 10d8})."
+			],
+			"page": 5,
+			"source": "UAArtificer",
+			"featureType": "AF"
+		},
+		{
+			"name": "Smoke Stick",
+			"entries": [
+				"As an action, you can reach into your Alchemist's Satchel and pull out a stick that produces a thick plume of smoke. You can hold on to the stick or throw it to a point up to 30 feet away as part of the action used to produce it. The area in a 10-foot radius around the stick is filled with thick smoke that blocks vision, including darkvision. The stick and smoke persist for 1 minute and then disappear. After using this formula, you can't do so again for 1 minute."
+			],
+			"page": 5,
+			"source": "UAArtificer",
+			"featureType": "AF"
+		},
+		{
+			"name": "Swift Step Draught",
+			"entries": [
+				"As a bonus action, you can reach into your Alchemist's Satchel and pull out a vial filled with a bubbling, brown liquid. As an action, a creature can drink it. Doing so increases the creature's speed by 20 feet for 1 minute, and the vial disappears. If not used, the vial and its contents disappear after 1 minute. After using this formula, you can't do so again for 1 minute."
+			],
+			"page": 5,
+			"source": "UAArtificer",
+			"featureType": "AF"
+		},
+		{
+			"name": "Tanglefoot",
+			"entries": [
+				"As an action, you can reach into your Alchemist's Satchel and pull out a bag filled with writhing, sticky black tar and hurl it at a point on the ground within 30 feet of you (the bag and its contents disappear if you don't hurl the bag by the end of the current turn). The bag bursts on impact and covers the ground in a 5-foot radius with sticky goo. That area becomes difficult terrain for 1 minute, and any creature that starts its turn on the ground in that area has its speed halved for that turn. After using this formula, you can't do so again for 1 minute."
+			],
+			"page": 6,
+			"source": "UAArtificer",
+			"featureType": "AF"
+		},
+		{
+			"name": "Thunderstone",
+			"entries": [
+				"As an action, you can reach into your Alchemist's Satchel and pull out a crystalline shard and hurl it at a creature, object, or surface within 30 feet of you (the shard disappears if you don't hurl it by the end of the current turn). The shard shatters on impact with a blast of concussive energy. Each creature within 10 feet of the point of impact must succeed on a Constitution saving throw or be knocked {@condition prone} and pushed 10 feet away from that point."
+			],
+			"page": 6,
+			"source": "UAArtificer",
+			"featureType": "AF"
+		},
+		{
+			"name": "Ambush",
+			"entries": [
+				"When you make a Dexterity (Stealth) check or an initiative roll, you can expend one superiority die and add the die to the roll."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 5,
+			"featureType": "MV"
+		},
+		{
+			"name": "Bait and Switch",
+			"entries": [
+				"When you're within 5 feet of an ally on your turn, you can expend one superiority die and switch places with that ally, provided you spend at least 5 feet of movement. This movement doesn't provoke opportunity attacks.",
+				"Roll the superiority die. Until the start of your next turn, the ally gains a bonus to AC equal to the number rolled."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 5,
+			"featureType": "MV"
+		},
+		{
+			"name": "Brace",
+			"entries": [
+				"When an enemy you can see moves within 5 feet of you, you can use your reaction to expend one superiority die and make one weapon attack against that creature. If the attack hits, add the superiority die to the attack's damage roll."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 5,
+			"featureType": "MV"
+		},
+		{
+			"name": "Restraining Strike",
+			"entries": [
+				"Immediately after you hit a creature with a melee weapon attack on your turn, you can expend one superiority die and use a bonus action to grapple the target (see chapter 9 in the Player's Handbook for rules on grappling). Add the superiority die to your Strength (Athletics) check. The target is also restrained while grappled in this way."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 5,
+			"featureType": "MV"
+		},
+		{
+			"name": "Silver Tongue",
+			"entries": [
+				"When you make a Charisma (Deception) check or a Charisma (Persuasion) check, you can expend one superiority die, and add the superiority die to the ability check."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 5,
+			"featureType": "MV"
+		},
+		{
+			"name": "Snipe",
+			"entries": [
+				"As a bonus action, you can expend one superiority die and make a ranged weapon attack. You can draw a thrown weapon as part of making this attack. If you hit, add the superiority die to the attack's damage roll."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 5,
+			"featureType": "MV"
+		},
+		{
+			"name": "Studious Eye",
+			"entries": [
+				"When you make a Wisdom (Insight) check or an Intelligence (Investigation) check, you can expend one superiority die, and add the superiority die to the ability check."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 5,
+			"featureType": "MV"
+		},
+		{
+			"name": "Bond of the Talisman",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 12,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Talisman"
+				}
+			],
+			"entries": [
+				"While someone else is wearing your talisman, you can use your action to teleport to the unoccupied space closest to them, provided the two of you are on the same plane of existence. The wearer of your talisman can do the same thing, using their action to teleport to you."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 11,
+			"featureType": "EI"
+		},
+		{
+			"name": "Chain Master's Fury",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Chain"
+				}
+			],
+			"entries": [
+				"As a bonus action, you can command your familiar to make one attack."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 11,
+			"featureType": "EI"
+		},
+		{
+			"name": "Eldritch Armor",
+			"prerequisite": [
+				{
+					"pact": "Blade"
+				}
+			],
+			"entries": [
+				"As an action, you can touch a suit of armor that isn't being worn or carried by anyone and instantly don it, provided you aren't wearing armor already. You are proficient with this suit of armor until it's removed."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 11,
+			"featureType": "EI"
+		},
+		{
+			"name": "Eldritch Mind",
+			"prerequisite": [
+				{
+					"pact": "Tome"
+				}
+			],
+			"entries": [
+				"You have advantage on Constitution saving throws that you make to maintain your concentration on a spell."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 11,
+			"featureType": "EI"
+		},
+		{
+			"name": "Far Scribe",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Tome"
+				}
+			],
+			"entries": [
+				"A new page appears in your Book of Shadows. With your permission, a creature can use its action to write its name on that page, which can contain a number of names equal to your Charisma modifier (minimum of 1).",
+				"You can cast the sending spell, targeting a creature whose name is on the page, without using a spell slot and without using material components. To do so, you must write the message on the page. The target hears the message in their mind, and if the target replies, their message appears on the page, rather than in your mind. The writing disappears after 1 minute.",
+				"As an action, you can magically erase a name on the page by touching the name on it."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 11,
+			"featureType": "EI"
+		},
+		{
+			"name": "Gift of the Protectors",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Tome"
+				}
+			],
+			"entries": [
+				"A new page appears in your Book of Shadows. With your permission, a creature can use its action to write its name on that page, which can contain a number of names equal to your Charisma modifier (minimum of 1).",
+				"When any creature whose name is on the page is reduced to 0 hit points but not killed outright, the creature magically drops to 1 hit point instead. Once this magic is triggered, no creature can benefit from it until you finish a long rest.",
+				"As an action, you can magically erase a name on the page by touching the name on it."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 11,
+			"featureType": "EI"
+		},
+		{
+			"name": "Investment of the Chain Master",
+			"prerequisite": [
+				{
+					"pact": "Chain"
+				}
+			],
+			"entries": [
+				"When you cast find familiar, you infuse the summoned familiar with a measure of your eldritch power, granting the creature the following benefits:",
+				"The familiar gains either a flying speed or a swimming speed (your choice) of 40 feet.",
+				"The familiar no longer needs to breathe.",
+				"The familiar's weapon attacks are considered magical for the purpose of overcoming immunity and resistance to nonmagical attacks.",
+				"If the familiar forces a creature to make a saving throw, it uses your spell save DC."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 11,
+			"featureType": "EI"
+		},
+		{
+			"name": "Protection of the Talisman",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Talisman"
+				}
+			],
+			"entries": [
+				"When the wearer of your talisman makes a saving throw in which they lack proficiency, they can add a d4 to the roll."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 12,
+			"featureType": "EI"
+		},
+		{
+			"name": "Rebuke of the Talisman",
+			"prerequisite": [
+				{
+					"pact": "Talisman"
+				}
+			],
+			"entries": [
+				"When the wearer of your talisman is hit by an attacker you can see within 30 feet of you, you can use your reaction to deal psychic damage to the attacker equal to your Charisma modifier (minimum of 1 damage) and push it up to 10 feet away from the talisman's wearer."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 12,
+			"featureType": "EI"
+		},
+		{
+			"name": "Blind Fighting",
+			"entries": [
+				"Being unable to see a creature doesn't impose disadvantage on your attack rolls against it, provided the creature isn't hidden from you."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 12,
+			"featureType": [
+				"FS:F",
+				"FS:P",
+				"FS:R"
+			]
+		},
+		{
+			"name": "Interception",
+			"entries": [
+				"When a creature you can see hits a target that is within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by {@dice 1d10} + your proficiency bonus (to a minimum of 0 damage). You must be wielding a shield or a simple or martial weapon to use this reaction."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 12,
+			"featureType": [
+				"FS:F",
+				"FS:P",
+				"FS:R"
+			]
+		},
+		{
+			"name": "Thrown Weapon Fighting",
+			"entries": [
+				"You can draw a weapon that has the thrown property as part of the attack you make with the weapon.",
+				"In addition, when you hit with a ranged attack using a thrown weapon, you gain a +1 bonus to the damage roll."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 13,
+			"featureType": [
+				"FS:F",
+				"FS:P",
+				"FS:R"
+			]
+		},
+		{
+			"name": "Unarmed Fighting",
+			"entries": [
+				"Your unarmed strikes can deal bludgeoning damage equal to {@dice 1d6} + your Strength modifier. If you strike with two free hands, the {@dice d6} becomes a {@dice d8}.",
+				"When you successfully start a grapple, you can deal {@dice 1d4} bludgeoning damage to the grappled creature. Until the grapple ends, you can also deal this damage to the creature whenever you hit it with a melee attack."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 13,
+			"featureType": [
+				"FS:F",
+				"FS:P",
+				"FS:R"
+			]
+		},
+		{
+			"name": "Superior Technique",
+			"entries": [
+				"You learn one {@filter maneuver|optionalfeatures|feature type=MV;MV:B} of your choice from among those available to the Battle Master archetype. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice).",
+				"You gain one superiority die, which is a {@dice d6} (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 5,
+			"featureType": [
+				"FS:F"
+			]
+		},
+		{
+			"name": "Blessed Warrior",
+			"entries": [
+				"You learn two cantrips of your choice from the cleric spell list. They count as paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the cleric spell list."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 6,
+			"featureType": [
+				"FS:P"
+			]
+		},
+		{
+			"name": "Druidic Warrior",
+			"entries": [
+				"You learn two cantrips of your choice from the {@filter druid spell list|spells|level=0|class=druid}. They count as druid spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list."
+			],
+			"source": "UAClassFeatureVariants",
+			"page": 7,
+			"featureType": [
+				"FS:R"
+			]
+		},
+		{
+			"name": "Elemental Spell",
+			"entries": [
+				"When you cast a spell that deals a type of damage from the following list, you can spend 1 sorcery point to change that damage type to one of the other listed types: acid, cold, fire, lightning, thunder."
+			],
+			"page": 10,
+			"source": "UAClassFeatureVariants",
+			"featureType": "MM"
+		},
+		{
+			"name": "Seeking Spell",
+			"entries": [
+				"When you cast a spell that requires you to make a spell attack roll or that forces a target to make a Dexterity saving throw, you can spend 1 sorcery point to ignore the effects of half- and three-quarters cover against targets of the spell."
+			],
+			"page": 10,
+			"source": "UAClassFeatureVariants",
+			"featureType": "MM"
+		},
+		{
+			"name": "Unerring Spell",
+			"entries": [
+				"If you make an attack roll for a spell and miss, you can spend 2 sorcery points to reroll the attack roll. You must use the result of the second roll.",
+				"You can use Unerring Spell even if you have already used a different Metamagic option during the casting of the spell."
+			],
+			"page": 10,
+			"source": "UAClassFeatureVariants",
+			"featureType": "MM"
+		},
+		{
+			"name": "Boots of the Winding Path",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer"
+						}
+					},
+					"item": [
+						"A pair of boots (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"While wearing these boots, a creature can teleport up to 15 feet as a bonus action to an unoccupied space the creature can see. The creature must have occupied that space at some point during the current turn."
+			],
+			"source": "ERLW",
+			"page": 62,
+			"featureType": "AI"
+		},
+		{
+			"name": "Enhanced Arcane Focus",
+			"prerequisite": [
+				{
+					"item": [
+						"A rod, staff, or wand (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"While holding this item, a creature gains a +1 bonus to spell attack rolls. In addition, the creature ignores half cover when making a spell attack.",
+				"The bonus increases to +2 when you reach 10th level in this class."
+			],
+			"source": "ERLW",
+			"page": 62,
+			"featureType": "AI"
+		},
+		{
+			"name": "Enhanced Defense",
+			"prerequisite": [
+				{
+					"item": [
+						"A suit of armor or a shield"
+					]
+				}
+			],
+			"entries": [
+				"A creature gains a +1 bonus to Armor Class while wearing (armor) or wielding (shield) the infused item.",
+				"The bonus increases to +2 when you reach 10th level in this class."
+			],
+			"source": "ERLW",
+			"page": 62,
+			"featureType": "AI"
+		},
+		{
+			"name": "Enhanced Weapon",
+			"prerequisite": [
+				{
+					"item": [
+						"A simple or martial weapon"
+					]
+				}
+			],
+			"entries": [
+				"This magic weapon grants a +1 bonus to attack and damage rolls made with it.",
+				"The bonus increases to +2 when you reach 10th level in this class."
+			],
+			"source": "ERLW",
+			"page": 62,
+			"featureType": "AI"
+		},
+		{
+			"name": "Homunculus Servant",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer"
+						}
+					},
+					"item": [
+						"A gem worth at least 100 gp or a dragonshard"
+					]
+				}
+			],
+			"entries": [
+				"You learn intricate methods for magically creating a special {@creature Homunculus Servant|ERLW|homunculus} that serves you. The item you infuse serves as the creature's heart, around which the creature's body instantly forms.",
+				"You determine the homunculus's appearance. Some artificers prefer mechanical-looking birds, whereas some like winged vials or miniature, animate cauldrons.",
+				"The homunculus is friendly to you and your companions, and it obeys your commands. See this creature's game statistics in the Homunculus Servant stat block.",
+				"In combat, the homunculus shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action Dodge} action, unless you take a bonus action on your turn to command it to take the action in its stat block or the {@action Dash}, {@action Disengage}, {@action Help}, {@action Hide}, or {@action Search} action.",
+				"The homunculus regains {@dice 2d6} hit points if the {@spell mending} spell is cast on it. If it dies, it vanishes, leaving its heart in its space."
+			],
+			"source": "ERLW",
+			"page": 62,
+			"featureType": "AI"
+		},
+		{
+			"name": "Radiant Weapon",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer"
+						}
+					},
+					"item": [
+						"A simple or martial weapon (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"This magic weapon grants a +1 bonus to attack and damage rolls made with it. While holding it, the wielder can take a bonus action to cause it to shed bright light in a 30-foot radius and dim light for an additional 30 feet. The wielder can extinguish the light as a bonus action.",
+				"The weapon has 4 charges. As a reaction immediately after being hit by an attack, the wielder can expend 1 charge and cause the attacker to be {@condition blinded} until the end of the attacker's next turn, unless the attacker succeeds on a Constitution saving throw against your spell save DC. The weapon regains {@dice 1d4} expended charges daily at dawn."
+			],
+			"source": "ERLW",
+			"page": 62,
+			"featureType": "AI"
+		},
+		{
+			"name": "Repeating Shot",
+			"prerequisite": [
+				{
+					"item": [
+						"A simple or martial weapon with the ammunition property (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"This magic weapon grants a +1 bonus to attack and damage rolls made with it when it's used to make a ranged attack, and it ignores the loading property if it has it.",
+				"If you load no ammunition in the weapon, it produces its own, automatically creating one piece of magic ammunition when you make a ranged attack with it. The ammunition created by the weapon vanishes the instant after it hits or misses a target."
+			],
+			"source": "ERLW",
+			"page": 62,
+			"featureType": "AI"
+		},
+		{
+			"name": "Replicate Magic Item",
+			"entries": [
+				"Using this infusion, you replicate a particular magic item. You can learn this infusion multiple times; each time you do so, choose a magic item that you can make with it, picking from the Replicable Items tables below. A table's title tells you the level you must be in the class to choose an item from the table.",
+				"In the tables, an item's entry tells you whether the item requires attunement. See the item's description in the {@book Dungeon Master's Guide|DMG} for more information about it, including the type of object required for its making.",
+				"If you have {@book Xanathar's Guide to Everything|XGE}, you can choose from among the common magic items in that book when you pick a magic item you can replicate with this infusion.",
+				{
+					"type": "table",
+					"caption": "Replicable Items (2nd-Level Artificer)",
+					"colLabels": [
+						"Magic Item",
+						"Attunement"
+					],
+					"colStyles": [
+						"col-10",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"{@item Alchemy jug}",
+							"No"
+						],
+						[
+							"{@item Armblade|ERLW} (detailed in {@book chapter 5|ERLW|13})",
+							"Yes"
+						],
+						[
+							"{@item Bag of holding}",
+							"No"
+						],
+						[
+							"{@item Cap of water breathing}",
+							"No"
+						],
+						[
+							"{@item Goggles of night}",
+							"No"
+						],
+						[
+							"{@item Prosthetic limb|ERLW} (detailed in {@book chapter 5|ERLW|13})",
+							"Yes"
+						],
+						[
+							"{@item Rope of climbing}",
+							"No"
+						],
+						[
+							"{@item Sending stones}",
+							"No"
+						],
+						[
+							"{@item Wand of magic detection}",
+							"No"
+						],
+						[
+							"{@item Wand of secrets}",
+							"No"
+						]
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Replicable Items (6th-Level Artificer)",
+					"colLabels": [
+						"Magic Item",
+						"Attunement"
+					],
+					"colStyles": [
+						"col-10",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"{@item Boots of elvenkind}",
+							"No"
+						],
+						[
+							"{@item Cloak of elvenkind}",
+							"Yes"
+						],
+						[
+							"{@item Cloak of the manta ray}",
+							"No"
+						],
+						[
+							"{@item Eyes of charming}",
+							"Yes"
+						],
+						[
+							"{@item Gloves of thievery}",
+							"No"
+						],
+						[
+							"{@item Lantern of revealing}",
+							"No"
+						],
+						[
+							"{@item Pipes of haunting}",
+							"No"
+						],
+						[
+							"{@item Ring of water walking}",
+							"No"
+						],
+						[
+							"{@item Wand sheath|ERLW} (detailed in {@book chapter 5|ERLW|13})",
+							"Yes"
+						]
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Replicable Items (10th-Level Artificer)",
+					"colLabels": [
+						"Magic Item",
+						"Attunement"
+					],
+					"colStyles": [
+						"col-11",
+						"col-2 text-center"
+					],
+					"rows": [
+						[
+							"{@item Boots of striding and springing}",
+							"Yes"
+						],
+						[
+							"{@item Boots of the winterlands}",
+							"Yes"
+						],
+						[
+							"{@item Bracers of archery}",
+							"Yes"
+						],
+						[
+							"{@item Brooch of shielding}",
+							"Yes"
+						],
+						[
+							"{@item Cloak of protection}",
+							"Yes"
+						],
+						[
+							"{@item Eyes of the eagle}",
+							"Yes"
+						],
+						[
+							"{@item Gauntlets of ogre power}",
+							"Yes"
+						],
+						[
+							"{@item Gloves of missile snaring}",
+							"Yes"
+						],
+						[
+							"{@item Gloves of swimming and climbing}",
+							"Yes"
+						],
+						[
+							"{@item Hat of disguise}",
+							"Yes"
+						],
+						[
+							"{@item Headband of intellect}",
+							"Yes"
+						],
+						[
+							"{@item Helm of telepathy}",
+							"Yes"
+						],
+						[
+							"{@item Medallion of thoughts}",
+							"Yes"
+						],
+						[
+							"{@item Periapt of wound closure}",
+							"Yes"
+						],
+						[
+							"{@item Pipes of the sewers}",
+							"Yes"
+						],
+						[
+							"{@item Quiver of Ehlonna}",
+							"No"
+						],
+						[
+							"{@item Ring of jumping}",
+							"Yes"
+						],
+						[
+							"{@item Ring of mind shielding}",
+							"Yes"
+						],
+						[
+							"{@item Slippers of spider climbing}",
+							"Yes"
+						],
+						[
+							"{@item Ventilating lungs|ERLW} (detailed in {@book chapter 5|ERLW|13})",
+							"Yes"
+						],
+						[
+							"{@item Winged boots}",
+							"Yes"
+						]
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Replicable Items (14th-Level Artificer)",
+					"colLabels": [
+						"Magic Item",
+						"Attunement"
+					],
+					"colStyles": [
+						"col-11",
+						"col-1 text-center"
+					],
+					"rows": [
+						[
+							"{@item Amulet of health}",
+							"Yes"
+						],
+						[
+							"{@item Arcane propulsion arm|ERLW} (detailed in {@book chapter 5|ERLW|13})",
+							"Yes"
+						],
+						[
+							"{@item Belt of Hill Giant Strength||Belt of hill giant strength}",
+							"Yes"
+						],
+						[
+							"{@item Boots of levitation}",
+							"Yes"
+						],
+						[
+							"{@item Boots of speed}",
+							"Yes"
+						],
+						[
+							"{@item Bracers of defense}",
+							"Yes"
+						],
+						[
+							"{@item Cloak of the bat}",
+							"Yes"
+						],
+						[
+							"{@item Dimensional shackles}",
+							"No"
+						],
+						[
+							"{@item Gem of seeing}",
+							"Yes"
+						],
+						[
+							"{@item Horn of blasting}",
+							"No"
+						],
+						[
+							"{@item Ring of free action}",
+							"Yes"
+						],
+						[
+							"{@item Ring of protection}",
+							"Yes"
+						],
+						[
+							"{@item Ring of the ram}",
+							"Yes"
+						]
+					]
+				}
+			],
+			"source": "ERLW",
+			"page": 63,
+			"featureType": "AI"
+		},
+		{
+			"name": "Repulsion Shield",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer"
+						}
+					},
+					"item": [
+						"A shield (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"A creature gains a +1 bonus to Armor Class while wielding this shield.",
+				"The shield has 4 charges. While holding it, the wielder can use a reaction immediately after being hit by a melee attack to expend 1 of the shield's charges and push the attacker up to 15 feet away. The shield regains {@dice 1d4} expended charges daily at dawn."
+			],
+			"source": "ERLW",
+			"page": 63,
+			"featureType": "AI"
+		},
+		{
+			"name": "Resistant Armor",
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer"
+						}
+					},
+					"item": [
+						"A suit of armor (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"While wearing this armor, a creature has resistance to one of the following damage types, which you choose when you infuse the item: acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, or thunder."
+			],
+			"source": "ERLW",
+			"page": 63,
+			"featureType": "AI"
+		},
+		{
+			"name": "Returning Weapon",
+			"prerequisite": [
+				{
+					"item": [
+						"A simple or martial weapon with the thrown property"
+					]
+				}
+			],
+			"entries": [
+				"This magic weapon grants a +1 bonus to attack and damage rolls made with it, and it returns to the wielder's hand immediately after it is used to make a ranged attack."
+			],
+			"source": "ERLW",
+			"page": 63,
+			"featureType": "AI"
 		}
 	]
 }

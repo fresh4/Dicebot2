@@ -822,6 +822,9 @@
 				},
 				{
 					"source": "SLW"
+				},
+				{
+					"source": "ERLW"
 				}
 			],
 			"spellcastingTags": [
@@ -2667,6 +2670,7 @@
 		},
 		{
 			"name": "Brontosaurus",
+			"group": "Dinosaurs",
 			"size": "G",
 			"type": "beast",
 			"source": "VGM",
@@ -3928,7 +3932,7 @@
 				{
 					"name": "Darkness (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The darkling elder casts darkness without any components. Wisdom is its spellcasting ability."
+						"The darkling elder casts {@spell darkness} without any components. Wisdom is its spellcasting ability."
 					]
 				}
 			],
@@ -4286,6 +4290,7 @@
 		},
 		{
 			"name": "Deinonychus",
+			"group": "Dinosaurs",
 			"size": "M",
 			"type": "beast",
 			"source": "VGM",
@@ -4474,6 +4479,7 @@
 		},
 		{
 			"name": "Dimetrodon",
+			"group": "Dinosaurs",
 			"size": "M",
 			"type": "beast",
 			"source": "VGM",
@@ -5406,6 +5412,9 @@
 				},
 				{
 					"source": "SLW"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -7501,6 +7510,7 @@
 		},
 		{
 			"name": "Hadrosaurus",
+			"group": "Dinosaurs",
 			"size": "L",
 			"type": "beast",
 			"source": "VGM",
@@ -9210,6 +9220,9 @@
 				},
 				{
 					"source": "SLW"
+				},
+				{
+					"source": "LR"
 				}
 			]
 		},
@@ -11824,6 +11837,7 @@
 		},
 		{
 			"name": "Quetzalcoatlus",
+			"group": "Dinosaurs",
 			"size": "H",
 			"type": "beast",
 			"source": "VGM",
@@ -12178,6 +12192,12 @@
 						"source": "BGDIA",
 						"page": 240
 					}
+				}
+			],
+			"altArt": [
+				{
+					"name": "Madcap",
+					"source": "BGDIA"
 				}
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/411/redcap.mp3",
@@ -12893,6 +12913,7 @@
 		},
 		{
 			"name": "Stegosaurus",
+			"group": "Dinosaurs",
 			"size": "H",
 			"type": "beast",
 			"source": "VGM",
@@ -14629,6 +14650,7 @@
 		},
 		{
 			"name": "Velociraptor",
+			"group": "Dinosaurs",
 			"size": "T",
 			"type": "beast",
 			"source": "VGM",

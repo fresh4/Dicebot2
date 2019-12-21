@@ -1949,7 +1949,7 @@
 									"id": "07b",
 									"entries": [
 										"This forest got its name from the silvery sheen that marks the leaves and bark of its trees. Long ago, elves from the Feywild crossed the planar boundaries to settle here. Today, several wood elf clans dwell in elegant, wooden structures built among the forest canopy. Not a single creature enters or leaves the forest's boundaries without the knowledge of the elves.",
-										"The elves of the Silverstand periodically send war parties to patrol the outer reaches of the Dreadwood. The Wild Flame Pact\u2014an alliance struck between the elves, the kingdom of Keo­land, and the treants of the region\u2014commits all three groups to repelling the monsters that emerge from the forest. At rare times, the elves organize patrols into the deepest, deadliest regions of the Dreadwood in hopes of defeating threats in their nascent state."
+										"The elves of the Silverstand periodically send war parties to patrol the outer reaches of the Dreadwood. The Wild Flame Pact\u2014an alliance struck between the elves, the kingdom of Keoland, and the treants of the region\u2014commits all three groups to repelling the monsters that emerge from the forest. At rare times, the elves organize patrols into the deepest, deadliest regions of the Dreadwood in hopes of defeating threats in their nascent state."
 									]
 								}
 							]
@@ -2810,7 +2810,7 @@
 									"name": "Forgotten Realms",
 									"id": "0bf",
 									"entries": [
-										"Midway between Waterdeep and Never­winter, the town of Saltmarsh and its hardy inhabitants endure both winter storms and the Mere of Dead Men to the south. Because of the politics churning in Thornhold on the far side of the marsh, help is often slow to come, and so the townsfolk have become quite self-reliant. The smugglers could be from Luskan, and their selling weapons to lizardfolk could be connected to deeper goals than simply lining their pockets."
+										"Midway between Waterdeep and Neverwinter, the town of Saltmarsh and its hardy inhabitants endure both winter storms and the Mere of Dead Men to the south. Because of the politics churning in Thornhold on the far side of the marsh, help is often slow to come, and so the townsfolk have become quite self-reliant. The smugglers could be from Luskan, and their selling weapons to lizardfolk could be connected to deeper goals than simply lining their pockets."
 									]
 								},
 								{
@@ -4274,7 +4274,7 @@
 												"Of the trays on the desktop next to the pewter container (which is nearly full of fine sand), one is empty and another contains bills and receipts for various items of marine supply. The last contains several letters of a personal and intimate nature from three different women in three different ports (each of whom is under the misapprehension that she is Mrs. Sigurd \"Snake Eyes\"), and a curious, semiliterate document requesting a further supply of ironware \"as per previous consignments and at the agreed terms.\" The signature here is in the form of a pictograph and shows a lizard with forked tongue extended.",
 												"This last document is a request from the lizardfolk for more weapons. You should exercise caution here in not making the document too explicit\u2014the lizardfolk would not want the document to fall into the wrong hands and have concealed as much of the real meaning of the request as possible\u2014for instance, using words like \"goods\" instead of \"weapons.\"",
 												"The two desk drawers are locked; a character who succeeds on a DC 10 Dexterity check using thieves' tools can open one drawer. The key to both drawers is in Captain Sigurd's belt pouch.",
-												"The first drawer contains two {@item Potion of Healing||potions of healing}, a dose of {@item antitoxin|PHB}, and the key that unlocks the chains holding Oceanus in {@area area 14|16b|x}.",
+												"The first drawer contains two {@item Potion of Healing||potions of healing}, a dose of {@item antitoxin (vial)|PHB|antitoxin}, and the key that unlocks the chains holding Oceanus in {@area area 14|16b|x}.",
 												"The second drawer contains seven maps of various sea and coastal localities, prepared by professional cartographers. Beneath these is another map, crudely drawn. This map indicates that the rendezvous point with the lizardfolk is at a small promontory beside a river in the tidal marshes, ten miles southwest of the town of Saltmarsh.",
 												"The bearskin rug covers a hatch in the floor that provides access to {@area area 13|167|x}."
 											]
@@ -5931,7 +5931,7 @@
 											"name": "Treasure",
 											"id": "1e1",
 											"entries": [
-												"The incense burner is worth 5 gp, and the silver statue is worth 50 gp. The chest contains the following items: a bolt of green velvet cloth (5 gp), a large leather sack holding 200 ep, an ivory figurine depicting Semuanya (25 gp), and a small, padded wooden box containing two doses of {@item antitoxin|PHB} (100 gp)."
+												"The incense burner is worth 5 gp, and the silver statue is worth 50 gp. The chest contains the following items: a bolt of green velvet cloth (5 gp), a large leather sack holding 200 ep, an ivory figurine depicting Semuanya (25 gp), and a small, padded wooden box containing two doses of {@item antitoxin (vial)|PHB|antitoxin} (100 gp)."
 											]
 										}
 									]
@@ -7126,7 +7126,7 @@
 							"id": "259",
 							"entries": [
 								"Manned by a crew of sturdy dwarves, {@i Soul of Winter} is a sailing ship run by her captain, Wolgar Windrune (LN male dwarf {@creature veteran}). To keep the characters from impeding his crew, he insists that they remain in their quarters, a cramped chamber below deck, during the voyage. The crew consists of thirty dwarf {@creature Guard||guards}, all of whom remain aboard {@i Soul of Winter} during the adventure, since they have not been paid for anything other than transport.",
-								"Aubreck has purchased supplies for the characters' mission aboard the derelict. This gear, already aboard, includes: {@item Studded Leather Armor|PHB|studded leather} armor for any character who wants it, two {@item Light Crossbow|PHB|light crossbows} with twenty {@item Crossbow Bolts (20)|PHB|bolts} each, five 50-foot coils of {@item Hempen Rope (50 feet)|PHB|rope}, two {@item Grappling Hook|PHB|grappling hooks}, twelve {@item Torch|PHB|torches}, two {@item Healer's Kit|PHB|healer's kits}, six {@item Antitoxin|PHB|vials of antitoxin}, two {@item Potion of Healing||potions of healing}, and two {@item Sack|PHB|sacks} for carrying treasure out of the ship."
+								"Aubreck has purchased supplies for the characters' mission aboard the derelict. This gear, already aboard, includes: {@item Studded Leather Armor|PHB|studded leather} armor for any character who wants it, two {@item Light Crossbow|PHB|light crossbows} with twenty {@item Crossbow Bolts (20)|PHB|bolts} each, five 50-foot coils of {@item Hempen Rope (50 feet)|PHB|rope}, two {@item Grappling Hook|PHB|grappling hooks}, twelve {@item Torch|PHB|torches}, two {@item Healer's Kit|PHB|healer's kits}, six {@item Antitoxin (vial)|PHB|vials of antitoxin}, two {@item Potion of Healing||potions of healing}, and two {@item Sack|PHB|sacks} for carrying treasure out of the ship."
 							]
 						}
 					]
@@ -14174,7 +14174,7 @@
 											"type": "insetReadaloud",
 											"id": "4fb",
 											"entries": [
-												"A wide flight of slippery stairs stands at the end of this ante­chamber, leading down into a pool of slimy, murky water. The shape above the stairs is a rotting shark's carcass, which hangs from the rafters on frayed, mildewed ropes. Humanoid heads in various states of decay have been crudely lashed to the shark's flanks."
+												"A wide flight of slippery stairs stands at the end of this antechamber, leading down into a pool of slimy, murky water. The shape above the stairs is a rotting shark's carcass, which hangs from the rafters on frayed, mildewed ropes. Humanoid heads in various states of decay have been crudely lashed to the shark's flanks."
 											]
 										},
 										"The stairs descend 20 feet into a completely submerged chamber that's 20 feet square. Water fills the staircase to within a foot of the top of the stairs. A 10-foot-wide tunnel (not shown on the map) extends from the west side of the chamber, leading eventually to the kraken's hiding place at Landgrave's Folly (see the \"{@area Mysterious Tunnel|4ff|x}\" section below).",

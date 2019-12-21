@@ -1067,19 +1067,6 @@
 			]
 		},
 		{
-			"name": "Feather Token",
-			"source": "UAWGE",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/Feather Token.jpg"
-					}
-				}
-			]
-		},
-		{
 			"name": "Figurine of Wondrous Power",
 			"source": "DMG",
 			"images": [
@@ -2062,7 +2049,7 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/Ring of Protection.jpg"
+						"path": "items/Ring of Protection.png"
 					}
 				}
 			]
@@ -2920,7 +2907,7 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/Wand of Magic Missiles.jpg"
+						"path": "items/Wand of Magic Missiles.png"
 					}
 				}
 			]
@@ -3076,7 +3063,7 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/Winged Boots.jpg"
+						"path": "items/Winged Boots.png"
 					}
 				}
 			]
@@ -3325,6 +3312,52 @@
 					"href": {
 						"type": "internal",
 						"path": "items/BGDIA/Sword of Zariel.jpg"
+					}
+				}
+			]
+		},
+		{
+			"name": "Double-Bladed Scimitar",
+			"source": "ERLW",
+			"entries": [
+				"The double-bladed scimitar is the signature weapon of Valenar elves. A haft of fine wood supports a long, curving blade on either end. Forged with techniques honed over centuries, these blades are strong, sharp, and remarkably light. Each scimitar is a masterpiece, and as a result the double-bladed scimitar is an expensive weapon (100 gp)\u2014few though ever have the opportunity to purchase one. A Valenar blade in the hands of a non-elf is generally assumed to have been stolen or looted from a fallen foe, and a Valenar elf might feel entitled to demand its return or challenge the bearer to prove they're worthy to wield it."
+			]
+		},
+		{
+			"name": "Prosthetic Limb",
+			"source": "ERLW",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/ERLW/Prosthetic Limb.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Dawnbringer",
+			"source": "OotA",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/OotA/Dawnbringer.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Piwafwi (Cloak of Elvenkind)",
+			"source": "OotA",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/OotA/Piwafwi (Cloak of Elvenkind).png"
 					}
 				}
 			]

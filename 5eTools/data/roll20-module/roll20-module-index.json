@@ -21,6 +21,13 @@
 			"version": "1.0",
 			"dateLastModified": 1567862109
 		},
+        {
+			"id": "ERLW",
+			"name": "Eberron: Rising from the Last War",
+			"size": 9404607,
+			"version": "1.0",
+			"dateLastModified": 1574367201
+		},
 		{
 			"id": "GoS",
 			"name": "Ghosts of Saltmarsh",
@@ -62,6 +69,13 @@
 			"size": 1510031,
 			"version": "",
 			"dateLastModified": 1536926400
+		},
+		{
+			"id": "RMBRE",
+			"name": "Rick and Morty: Big Rick Energy",
+			"size": 2441565,
+			"version": "1.0",
+			"dateLastModified": 1575323250
 		},
 		{
 			"id": "RoT",
@@ -139,6 +153,13 @@
 			"size": 26807323,
 			"version": "",
 			"dateLastModified": 1536926400
+		},
+		{
+			"id": "ToD",
+			"name": "Tyranny of Dragons",
+			"size": 19377282,
+			"version": "1",
+			"dateLastModified": 1571941394
 		},
 		{
 			"id": "WDMM",

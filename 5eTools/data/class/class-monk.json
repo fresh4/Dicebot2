@@ -350,17 +350,21 @@
 				"tools": [
 					"any one type of artisan's tools or any one musical instrument of your choice"
 				],
-				"skills": {
-					"choose": 2,
-					"from": [
-						"Acrobatics",
-						"Athletics",
-						"History",
-						"Insight",
-						"Religion",
-						"Stealth"
-					]
-				}
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"acrobatics",
+								"athletics",
+								"history",
+								"insight",
+								"religion",
+								"stealth"
+							],
+							"count": 2
+						}
+					}
+				]
 			},
 			"startingEquipment": {
 				"additionalFromBackground": true,
@@ -406,6 +410,24 @@
 							},
 							"Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama)."
 						]
+					},
+					{
+						"name": "Monk Weapons",
+						"entries": [
+							"{@i 1st-level monk feature (enhances Martial Arts)}",
+							"You can use this feature to define your monk weapons, rather than using the definition in Martial Arts.",
+							"You practice your martial arts with specially chosen weapons, which become monk weapons for you. You can choose a number of weapons to be your monk weapons equal to 5 + your Wisdom modifier (minimum of five weapons). The chosen weapons must each meet the following criteria:",
+							{
+								"type": "list",
+								"items": [
+									"The weapon must be a simple or martial weapon.",
+									"You must be proficient with the weapon.",
+									"The weapon must lack these properties: heavy, special, or two-handed."
+								]
+							}
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 6
 					}
 				],
 				[
@@ -445,6 +467,38 @@
 								]
 							}
 						]
+					},
+					{
+						"name": "Ki-Fueled Strike",
+						"entries": [
+							"{@i 2nd-level monk feature (enhances Ki)}",
+							"If you spend 1 ki or more as part of your action on your turn, you can then immediately make one unarmed strike as a bonus action."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 6
+					},
+					{
+						"name": "Ki Features",
+						"entries": [
+							"{@i 2nd-level monk feature (enhances Ki)}",
+							"When you gain the Ki feature at 2nd level, you get access to the following features.",
+							{
+								"type": "entries",
+								"name": "Distant Eye",
+								"entries": [
+									"When you make a ranged weapon attack, you can spend 1 ki point to prevent attacking at long range from imposing disadvantage on your attack rolls until the end of the current turn."
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Quickened Healing",
+								"entries": [
+									"As an action, you can spend 2 ki points and roll a Martial Arts die. You regain a number of hit points equal to the number rolled."
+								]
+							}
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 6
 					},
 					{
 						"name": "Unarmored Movement",
@@ -864,7 +918,7 @@
 															{
 																"type": "list",
 																"items": [
-																	"Create a harmless, instantaneous sensory effect related to air, earth, fire, or water, such as a shower of sparks, a puff of wind, a spray of light mist, orc a gentle rumbling of stone.",
+																	"Create a harmless, instantaneous sensory effect related to air, earth, fire, or water, such as a shower of sparks, a puff of wind, a spray of light mist, or a gentle rumbling of stone.",
 																	"Instantaneously light or snuff out a candle, a torch, or a small campfire.",
 																	"Chill or warm up to 1 pound of nonliving material for up to 1 hour.",
 																	"Cause earth, fire, water, or mist that can fit within a 1-foot cube to shape itself into a crude form you designate for 1 minute."
@@ -1805,7 +1859,7 @@
 										"name": "Aura Sight",
 										"entries": [
 											"At 6th level, you gain the ability to perceive the auras of other creatures.",
-											"As an action, select a creature that you can see. That creature makes a Wisdom saving throw, though it has no knowledge that you forced it to attempt this saving throw. On a failed save, you learn if the creature shares and aspects of its alignment with you, its current hit points, and its current attitude and intentions toward you or one other creature, object, or location of your choice. In addition, for the next 24 hours or until you use this ability again, you can use an action to determine the creature's distance and direction from you.",
+											"As an action, select a creature that you can see. That creature makes a Wisdom saving throw, though it has no knowledge that you forced it to attempt this saving throw. On a failed save, you learn if the creature shares any aspects of its alignment with you, its current hit points, and its current attitude and intentions toward you or one other creature, object, or location of your choice. In addition, for the next 24 hours or until you use this ability again, you can use an action to determine the creature's distance and direction from you.",
 											"If a creature succeeds on its saving throw against this ability, you cannot use this ability against that creature again until you complete a long rest."
 										]
 									}
@@ -1870,7 +1924,7 @@
 												"items": [
 													"You can use your Wisdom modifier in place of your Strength modifier when making Strength checks and Strength saving throws.",
 													"The arms are monk weapons and have a reach of 10 feet. The arms deal radiant or necrotic damage (your choice). When you attack with the arms, you can use your Wisdom modifier instead of your Strength or Dexterity modifier for the attack and damage rolls.",
-													"Immediately after you use the Attack action with your astral arms on your turn, you can make one extra attack with your astral arms as a bonus action. The number of extra attacks increases when you reach certain levels in this class, increasing to two at 11th level and three at17th level."
+													"Immediately after you use the Attack action with your astral arms on your turn, you can make one extra attack with your astral arms as a bonus action. The number of extra attacks increases when you reach certain levels in this class, increasing to two at 11th level and three at 17th level."
 												]
 											}
 										]
@@ -2285,3 +2339,4 @@
 		}
 	]
 }
+

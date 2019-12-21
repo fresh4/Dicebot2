@@ -95,6 +95,7 @@
 		},
 		{
 			"name": "Evil Mage",
+			"isNpc": true,
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -180,6 +181,12 @@
 				}
 			],
 			"page": 57,
+			"altArt": [
+				{
+					"name": "Evil Mage",
+					"source": "RMBRE"
+				}
+			],
 			"languageTags": [
 				"C",
 				"DR",
@@ -194,6 +201,11 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"otherSources": [
+				{
+					"source": "RMBRE"
+				}
 			]
 		},
 		{

@@ -38,6 +38,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"entries": [
@@ -112,6 +118,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -390,6 +400,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -470,6 +484,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -535,6 +553,16 @@
 					},
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					},
+					{
+						"name": "Cleric",
 						"source": "PHB"
 					}
 				]
@@ -604,6 +632,12 @@
 					},
 					{
 						"name": "Paladin",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
 						"source": "PHB"
 					}
 				]
@@ -1139,6 +1173,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -1203,6 +1241,12 @@
 				"fromClassList": [
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Warlock",
 						"source": "PHB"
 					}
 				]
@@ -1395,6 +1439,16 @@
 					},
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					},
+					{
+						"name": "Paladin",
 						"source": "PHB"
 					}
 				]
@@ -1859,6 +1913,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -2283,6 +2341,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -2357,6 +2419,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -2440,7 +2506,7 @@
 					"type": "list",
 					"items": [
 						"Your walking speed increases by 10 feet.",
-						"You gain darkvision with a range of 120 feet.",
+						"You gain {@sense darkvision} with a range of 120 feet.",
 						"You make Strength-based attack rolls with advantage.",
 						"Your melee weapon attacks deal an extra {@dice 1d6} force damage on a hit."
 					]
@@ -2536,6 +2602,10 @@
 				{
 					"source": "UAWGE",
 					"page": 107
+				},
+				{
+					"source": "ERLW",
+					"page": 50
 				}
 			],
 			"areaTags": [
@@ -2543,6 +2613,14 @@
 			],
 			"miscTags": [
 				"SGT"
+			],
+			"races": [
+				{
+					"name": "Half-Elf (Mark of Storm)",
+					"source": "ERLW",
+					"baseName": "Half-Elf",
+					"baseSource": "PHB"
+				}
 			]
 		},
 		{
@@ -2859,6 +2937,12 @@
 					},
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
 						"source": "PHB"
 					}
 				]
@@ -3449,6 +3533,16 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Paladin",
+						"source": "PHB"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB"
+					}
 				]
 			},
 			"entries": [
@@ -3520,7 +3614,7 @@
 				]
 			},
 			"entries": [
-				"Magical darkness spreads from a point you choose within range to fill a 60-foot-radius sphere until the spell ends. The darkness spreads around corners. A creature with darkvision can't see through this darkness. Non-magical light, as well as light created by spells of 8th level or lower, can't illuminate the area.",
+				"Magical darkness spreads from a point you choose within range to fill a 60-foot-radius sphere until the spell ends. The darkness spreads around corners. A creature with {@sense darkvision} can't see through this darkness. Non-magical light, as well as light created by spells of 8th level or lower, can't illuminate the area.",
 				"Shrieks, gibbering, and mad laughter can be heard within the sphere. Whenever a creature starts its turn in the sphere, it must make a Wisdom saving throw, taking {@dice 8d8} psychic damage on a failed save, or half as much damage on a successful one."
 			],
 			"page": 160,
@@ -3641,11 +3735,15 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
 			"entries": [
-				"You touch one to three pebbles and imbue them with magic. You or someone else can make a ranged spell attack with one of the pebbles by throwing it or hurling it with a sling. If thrown, a pebble has a range of 60 feet. If someone else attacks with a pebble, that attacker adds your spellcasting ability modifier, not the attacker's, to the attack roll. On a hit, the target takes bludgeoning damage equal to {@dice 1d6} + your spellcasting ability modifier. Whether the attack hits or misses, the spell then ends on the stone.",
+				"You touch one to three pebbles and imbue them with magic. You or someone else can make a ranged spell attack with one of the pebbles by throwing it or hurling it with a {@item sling|phb}. If thrown, a pebble has a range of 60 feet. If someone else attacks with a pebble, that attacker adds your spellcasting ability modifier, not the attacker's, to the attack roll. On a hit, the target takes bludgeoning damage equal to {@dice 1d6} + your spellcasting ability modifier. Whether the attack hits or misses, the spell then ends on the stone.",
 				"If you cast this spell again, the spell ends on any pebbles still affected by your previous casting."
 			],
 			"page": 160,
@@ -3712,11 +3810,17 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
+						"source": "PHB"
+					}
 				]
 			},
 			"entries": [
 				"You transform up to ten creatures of your choice that you can see within range. An unwilling target must succeed on a Wisdom saving throw to resist the transformation. An unwilling shapechanger automatically succeeds on the save.",
-				"Each target assumes a beast form of your choice, and you can choose the same form or different ones for each target. The new form can be any beast you have seen whose challenge rating is equal to or less than the target's (or half the target's level, if the target doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast, but the target retains its hit points, alignment, and personality.",
+				"Each target assumes a beast form of your choice, and you can choose the same form or different ones for each target. The new form can be {@filter any beast|bestiary|type=beast|miscellaneous=!swarm} you have seen whose challenge rating is equal to or less than the target's (or half the target's level, if the target doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast, but the target retains its hit points, alignment, and personality.",
 				"Each target gains a number of temporary hit points equal to the hit points of its new form. These temporary hit points can't be replaced by temporary hit points from another source. A target reverts to its normal form when it has no more temporary hit points or it dies. If the spell ends before then, the creature loses all its temporary hit points and reverts to its normal form.",
 				"The creature is limited in the actions it can perform by the nature of its new form. It can't speak, cast spells, or do anything else that requires hands or speech.",
 				"The target's gear melds into the new form. The target can't activate, use, wield, or otherwise benefit from any of its equipment."
@@ -3927,6 +4031,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"entries": [
@@ -4048,6 +4158,12 @@
 					},
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
 						"source": "PHB"
 					}
 				]
@@ -4250,6 +4366,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"entries": [
@@ -4297,6 +4419,12 @@
 				"fromClassList": [
 					{
 						"name": "Druid",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
 						"source": "PHB"
 					}
 				]
@@ -4491,6 +4619,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -4570,6 +4702,12 @@
 					},
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
 						"source": "PHB"
 					}
 				]
@@ -4909,6 +5047,16 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
 					}
 				]
 			},
@@ -4969,6 +5117,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -5040,6 +5192,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -5697,6 +5853,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
+					}
 				]
 			},
 			"entries": [
@@ -5763,6 +5925,12 @@
 					},
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
 						"source": "PHB"
 					}
 				]
@@ -5845,6 +6013,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -5978,6 +6150,16 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Bard",
+						"source": "PHB"
 					}
 				]
 			},
@@ -6106,6 +6288,10 @@
 					{
 						"name": "Artificer (Revisited)",
 						"source": "UAArtificerRevisited"
+					},
+					{
+						"name": "Artificer",
+						"source": "ERLW"
 					}
 				]
 			},
@@ -6279,6 +6465,12 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Cleric",
+						"source": "PHB"
+					}
 				]
 			},
 			"entries": [
@@ -6354,6 +6546,12 @@
 				"fromClassList": [
 					{
 						"name": "Wizard",
+						"source": "PHB"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Druid",
 						"source": "PHB"
 					}
 				]

@@ -2114,7 +2114,7 @@
 				},
 				{
 					"min": 71,
-					"max": 86,
+					"max": 85,
 					"item": "{@item Spell Scroll (9th level)}",
 					"spellLevel": 9
 				},
@@ -2811,7 +2811,7 @@
 				{
 					"min": 63,
 					"max": 63,
-					"item": "{@item Periapt of Proof Against Poison}"
+					"item": "{@item Periapt of Proof against Poison}"
 				},
 				{
 					"min": 64,

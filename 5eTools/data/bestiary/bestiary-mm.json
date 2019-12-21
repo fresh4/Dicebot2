@@ -259,7 +259,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Abominable Yeti",
@@ -498,8 +499,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Black Dragon",
@@ -678,7 +683,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Blue Dracolich",
@@ -858,7 +864,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Blue Dragon",
@@ -1026,7 +1033,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Brass Dragon",
@@ -1207,7 +1215,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Bronze Dragon",
@@ -1410,7 +1419,8 @@
 				{
 					"source": "SDW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Copper Dragon",
@@ -1590,7 +1600,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Gold Dragon",
@@ -1786,7 +1797,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Green Dragon",
@@ -1965,7 +1977,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Red Dragon",
@@ -2135,7 +2148,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult Silver Dragon",
@@ -2326,7 +2340,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Adult White Dragon",
@@ -2511,7 +2526,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Air Elemental",
@@ -2654,8 +2670,12 @@
 				},
 				{
 					"source": "SLW"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Allosaurus",
@@ -2901,7 +2921,8 @@
 				"MW",
 				"RCH",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ancient Blue Dragon",
@@ -3060,7 +3081,8 @@
 				"MW",
 				"RCH",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ancient Brass Dragon",
@@ -3243,7 +3265,8 @@
 				"MW",
 				"RCH",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ancient Bronze Dragon",
@@ -3437,7 +3460,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ancient Copper Dragon",
@@ -3624,7 +3648,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ancient Gold Dragon",
@@ -3815,7 +3840,8 @@
 				"MW",
 				"RCH",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ancient Green Dragon",
@@ -3994,7 +4020,8 @@
 				{
 					"source": "DIP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ancient Red Dragon",
@@ -4158,7 +4185,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ancient Silver Dragon",
@@ -4341,7 +4369,8 @@
 				"MW",
 				"RCH",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ancient White Dragon",
@@ -4511,7 +4540,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Androsphinx",
@@ -4745,7 +4775,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Animated Armor",
@@ -4867,7 +4898,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ankheg",
@@ -4956,7 +4988,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ankylosaurus",
@@ -5095,7 +5128,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Arcanaloth",
@@ -5563,8 +5597,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Assassin",
@@ -5720,7 +5758,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Awakened Shrub",
@@ -5794,7 +5833,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Awakened Tree",
@@ -5887,7 +5927,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Axe Beak",
@@ -5948,7 +5989,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Azer",
@@ -6047,7 +6089,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Baboon",
@@ -6114,7 +6157,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Badger",
@@ -6175,7 +6219,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Balor",
@@ -6341,7 +6386,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bandit",
@@ -6459,8 +6505,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bandit Captain",
@@ -6602,7 +6652,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Banshee",
@@ -6908,7 +6959,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Barlgura",
@@ -7157,7 +7209,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bat",
@@ -7233,7 +7286,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bearded Devil",
@@ -7379,7 +7433,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Behir",
@@ -7490,7 +7545,8 @@
 				{
 					"source": "TftYP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Beholder",
@@ -7627,6 +7683,9 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -7855,7 +7914,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Black Bear",
@@ -7951,7 +8011,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Black Dragon Wyrmling",
@@ -8053,7 +8114,8 @@
 				{
 					"source": "TftYP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Black Pudding",
@@ -8176,7 +8238,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Blink Dog",
@@ -8260,8 +8323,12 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Blood Hawk",
@@ -8345,7 +8412,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Blue Dragon Wyrmling",
@@ -8431,7 +8499,8 @@
 			"miscTags": [
 				"MW",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Blue Slaad",
@@ -8640,7 +8709,8 @@
 				{
 					"source": "DIP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bone Devil",
@@ -8815,7 +8885,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bone Naga (Guardian)",
@@ -9159,7 +9230,8 @@
 			"miscTags": [
 				"MW",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bronze Dragon Wyrmling",
@@ -9272,7 +9344,8 @@
 			"miscTags": [
 				"MW",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Brown Bear",
@@ -9370,7 +9443,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bugbear",
@@ -9495,8 +9569,15 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bugbear Chief",
@@ -9709,7 +9790,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Bullywug",
@@ -10091,7 +10173,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Carrion Crawler",
@@ -10208,7 +10291,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cat",
@@ -10288,7 +10372,8 @@
 				{
 					"source": "WDH"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cave Bear",
@@ -10384,7 +10469,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Centaur",
@@ -10495,7 +10581,8 @@
 				{
 					"source": "DIP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Chain Devil",
@@ -10638,7 +10725,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Chasme",
@@ -10897,7 +10985,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Chuul",
@@ -11020,7 +11109,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Clay Golem",
@@ -11168,7 +11258,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cloaker",
@@ -11301,7 +11392,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cloud Giant",
@@ -11393,7 +11485,7 @@
 					"type": "variant",
 					"name": "New Giant Options",
 					"entries": [
-						"Some adult cloud giants have the magical ability to cre­ate barriers of gale-force wind around themselves that can deflect incoming missiles. Others like to fling ene­mies through the air. These abilities are represented by the following action options.",
+						"Some adult cloud giants have the magical ability to create barriers of gale-force wind around themselves that can deflect incoming missiles. Others like to fling enemies through the air. These abilities are represented by the following action options.",
 						{
 							"name": "Fling",
 							"type": "entries",
@@ -11481,7 +11573,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cockatrice",
@@ -11541,8 +11634,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Commoner",
@@ -11658,8 +11755,15 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Constrictor Snake",
@@ -11733,7 +11837,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Copper Dragon Wyrmling",
@@ -11835,7 +11940,8 @@
 			"miscTags": [
 				"MW",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Couatl",
@@ -12003,7 +12109,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Crab",
@@ -12084,7 +12191,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Crawling Claw",
@@ -12266,7 +12374,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cult Fanatic",
@@ -12438,7 +12547,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cultist",
@@ -12509,6 +12619,10 @@
 					"name": "Diabolical Cultist",
 					"source": "MTF",
 					"page": 18
+				},
+				{
+					"name": "Cultist",
+					"source": "RMBRE"
 				}
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/109/cultist.mp3",
@@ -12561,8 +12675,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Cyclops",
@@ -12934,7 +13052,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Death Dog",
@@ -13019,7 +13138,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Death Knight",
@@ -13674,7 +13794,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Deer",
@@ -13729,7 +13850,8 @@
 				{
 					"source": "DIP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Demilich",
@@ -14080,7 +14202,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dire Wolf",
@@ -14168,7 +14291,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Displacer Beast",
@@ -14262,6 +14386,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -14429,7 +14556,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Doppelganger",
@@ -14568,7 +14696,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Draft Horse",
@@ -14631,7 +14760,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dragon Turtle",
@@ -14760,7 +14890,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dretch",
@@ -14873,7 +15004,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Drider",
@@ -15048,7 +15180,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Drow",
@@ -15205,7 +15338,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Drow Elite Warrior",
@@ -15956,7 +16090,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Dryad",
@@ -16093,7 +16228,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Duergar",
@@ -16222,7 +16358,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Duodrone",
@@ -16454,7 +16591,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Eagle",
@@ -16518,7 +16656,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Earth Elemental",
@@ -16651,7 +16790,8 @@
 				{
 					"source": "WDH"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Efreeti",
@@ -16816,7 +16956,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Elephant",
@@ -16887,7 +17028,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Elk",
@@ -16963,7 +17105,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Empyrean",
@@ -17308,7 +17451,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ettercap",
@@ -17454,7 +17598,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ettin",
@@ -17572,7 +17717,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Faerie Dragon (Blue)",
@@ -18637,7 +18783,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fire Giant",
@@ -18711,7 +18858,7 @@
 					"type": "variant",
 					"name": "New Giant Options",
 					"entries": [
-						"Some adult fire giants are trained to lay siege to strong­holds and break through enemy lines. These abilities are represented by the following traits.",
+						"Some adult fire giants are trained to lay siege to strongholds and break through enemy lines. These abilities are represented by the following traits.",
 						{
 							"type": "entries",
 							"name": "Siege Monster",
@@ -18773,7 +18920,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fire Snake",
@@ -19026,6 +19174,12 @@
 				"underdark"
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/168/flameskull.mp3",
+			"altArt": [
+				{
+					"name": "Flameskull",
+					"source": "RMBRE"
+				}
+			],
 			"traitTags": [
 				"Illumination",
 				"Magic Resistance",
@@ -19073,6 +19227,9 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "RMBRE"
 				}
 			]
 		},
@@ -19229,7 +19386,8 @@
 				{
 					"source": "SDW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Flumph",
@@ -19412,7 +19570,8 @@
 				{
 					"source": "WDH"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Flying Sword",
@@ -19535,7 +19694,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Fomorian",
@@ -19697,7 +19857,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Frost Giant",
@@ -19771,7 +19932,7 @@
 					"type": "variant",
 					"name": "New Giant Options",
 					"entries": [
-						"Some adult frost giants are skilled hunters who con­struct and hurl nets weighted down with fragments of metal or bone. This ability is represented by the follow­ing action option.",
+						"Some adult frost giants are skilled hunters who construct and hurl nets weighted down with fragments of metal or bone. This ability is represented by the following action option.",
 						{
 							"name": "Weighted Net",
 							"type": "entries",
@@ -19820,7 +19981,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Galeb Duhr",
@@ -20078,8 +20240,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gas Spore",
@@ -20272,8 +20438,12 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ghast",
@@ -20351,6 +20521,12 @@
 				"urban"
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/186/ghast.mp3",
+			"altArt": [
+				{
+					"name": "Ghoul",
+					"source": "RMBRE"
+				}
+			],
 			"traitTags": [
 				"Turn Resistance"
 			],
@@ -20398,7 +20574,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ghost",
@@ -20566,8 +20743,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ghoul",
@@ -20683,8 +20864,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Ape",
@@ -20757,7 +20942,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Badger",
@@ -20842,7 +21028,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Bat",
@@ -20921,7 +21108,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Boar",
@@ -21002,7 +21190,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Centipede",
@@ -21079,7 +21268,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Constrictor Snake",
@@ -21161,7 +21351,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Crab",
@@ -21256,7 +21447,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Crocodile",
@@ -21353,7 +21545,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Eagle",
@@ -21450,7 +21643,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Elk",
@@ -21544,7 +21738,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Fire Beetle",
@@ -21624,7 +21819,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Frog",
@@ -21726,7 +21922,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Goat",
@@ -21804,7 +22001,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Hyena",
@@ -21878,7 +22076,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Lizard",
@@ -21980,7 +22179,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Octopus",
@@ -22083,7 +22283,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Owl",
@@ -22178,8 +22379,12 @@
 			"otherSources": [
 				{
 					"source": "SKT"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Poisonous Snake",
@@ -22256,7 +22461,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Rat",
@@ -22368,7 +22574,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Scorpion",
@@ -22453,7 +22660,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Sea Horse",
@@ -22528,7 +22736,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Shark",
@@ -22621,8 +22830,12 @@
 				},
 				{
 					"source": "SDW"
+				},
+				{
+					"source": "LR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Spider",
@@ -22759,8 +22972,15 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Toad",
@@ -22854,7 +23074,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Vulture",
@@ -22958,7 +23179,8 @@
 				{
 					"source": "WDH"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Wasp",
@@ -23016,7 +23238,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Weasel",
@@ -23093,7 +23316,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Giant Wolf Spider",
@@ -23196,7 +23420,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gibbering Mouther",
@@ -23292,8 +23517,12 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Githyanki Knight",
@@ -23893,7 +24122,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gladiator",
@@ -24040,7 +24270,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gnoll",
@@ -24152,8 +24383,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gnoll Fang of Yeenoghu",
@@ -24482,7 +24717,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Goblin",
@@ -24562,6 +24798,12 @@
 				"hill"
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/234/goblin.mp3",
+			"altArt": [
+				{
+					"name": "Goblin",
+					"source": "RMBRE"
+				}
+			],
 			"languageTags": [
 				"C",
 				"GO"
@@ -24605,8 +24847,15 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Goblin Boss",
@@ -24848,7 +25097,8 @@
 			"miscTags": [
 				"MW",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gorgon",
@@ -24952,7 +25202,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Goristro",
@@ -25230,7 +25481,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gray Slaad",
@@ -25519,7 +25771,8 @@
 			"miscTags": [
 				"MW",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Green Hag",
@@ -25722,7 +25975,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Green Slaad",
@@ -26120,7 +26374,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Grick Alpha",
@@ -26330,8 +26585,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Grimlock",
@@ -26432,7 +26691,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Guard",
@@ -26541,8 +26801,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Guardian Naga",
@@ -26714,7 +26978,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Gynosphinx",
@@ -26917,7 +27182,8 @@
 				{
 					"source": "TftYP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Half-Ogre (Ogrillon)",
@@ -27013,6 +27279,9 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -27133,7 +27402,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Harpy",
@@ -27227,8 +27497,12 @@
 				},
 				{
 					"source": "DIP"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hawk",
@@ -27292,7 +27566,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hell Hound",
@@ -27419,7 +27694,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Helmed Horror",
@@ -27709,7 +27985,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hill Giant",
@@ -27823,8 +28100,12 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hippogriff",
@@ -27913,8 +28194,12 @@
 				},
 				{
 					"source": "WDH"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hobgoblin",
@@ -28032,8 +28317,15 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hobgoblin Captain",
@@ -28374,8 +28666,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hook Horror",
@@ -28624,7 +28920,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hunter Shark",
@@ -28721,7 +29018,8 @@
 				{
 					"source": "DIP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hydra",
@@ -28846,7 +29144,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Hyena",
@@ -28914,7 +29213,8 @@
 				{
 					"source": "PotA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ice Devil",
@@ -29087,7 +29387,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ice Mephit",
@@ -29228,7 +29529,8 @@
 				{
 					"source": "TftYP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Imp",
@@ -29385,7 +29687,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Incubus",
@@ -29529,8 +29832,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Intellect Devourer",
@@ -29647,6 +29954,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -29795,7 +30105,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Iron Golem",
@@ -29944,7 +30255,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Jackal",
@@ -30017,7 +30329,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Jackalwere",
@@ -30244,6 +30557,9 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -30337,7 +30653,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Knight",
@@ -30480,7 +30797,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Kobold",
@@ -30606,8 +30924,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Kraken",
@@ -30798,7 +31120,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Kuo-toa",
@@ -31545,7 +31868,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Lemure",
@@ -31644,7 +31968,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Lich",
@@ -31895,7 +32220,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Lion",
@@ -31994,7 +32320,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Lizard",
@@ -32047,7 +32374,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Lizard King",
@@ -32444,7 +32772,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Lizardfolk Shaman",
@@ -32768,8 +33097,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Magma Mephit",
@@ -32914,7 +33247,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Magmin",
@@ -33020,7 +33354,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mammoth",
@@ -33087,7 +33422,8 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Manes",
@@ -33307,7 +33643,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Marid",
@@ -33666,7 +34003,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mastiff",
@@ -33744,8 +34082,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Medusa",
@@ -33859,8 +34201,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Merfolk",
@@ -33945,7 +34291,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Merrow",
@@ -34067,7 +34414,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mezzoloth",
@@ -34389,8 +34737,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mind Flayer",
@@ -34535,6 +34887,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -34844,8 +35199,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Minotaur Skeleton",
@@ -34961,7 +35320,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Monodrone",
@@ -35256,7 +35616,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mummy",
@@ -35380,7 +35741,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Mummy Lord",
@@ -35617,7 +35979,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Myconid Adult",
@@ -35693,7 +36056,7 @@
 					"type": "variant",
 					"name": "Zuggtomoy's Empowerment",
 					"entries": [
-						"Myconids that embrace {@creature Zuggtmoy|OotA} can develop new, more destructive kinds of spores. Myconid adults can have two of the following spore effects.",
+						"Myconids that embrace {@creature Zuggtmoy|MTF} can develop new, more destructive kinds of spores. Myconid adults can have two of the following spore effects.",
 						{
 							"type": "entries",
 							"name": "Caustic Spores (1/Day)",
@@ -35705,7 +36068,7 @@
 							"type": "entries",
 							"name": "Infestation Spores (1/Day)",
 							"entries": [
-								"The myconid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a {@dc 11} Constitution saving throw. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy) and also gains a random form of indefinite madness (determined by rolling on the Madness of {@creature Zuggtmoy|OotA} table) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a humanoid or a Large or smaller beast."
+								"The myconid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a {@dc 11} Constitution saving throw. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy) and also gains a random form of indefinite madness (determined by rolling on the Madness of {@creature Zuggtmoy|MTF} table) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a humanoid or a Large or smaller beast."
 							]
 						},
 						{
@@ -35840,7 +36203,7 @@
 					"type": "variant",
 					"name": "Zuggtomoy's Empowerment",
 					"entries": [
-						"Myconids that embrace {@creature Zuggtmoy|OotA} can develop new, more destructive kinds of spores. Myconid sovereigns have all these spore effects.",
+						"Myconids that embrace {@creature Zuggtmoy|MTF} can develop new, more destructive kinds of spores. Myconid sovereigns have all these spore effects.",
 						{
 							"type": "entries",
 							"name": "Caustic Spores (1/Day)",
@@ -35852,7 +36215,7 @@
 							"type": "entries",
 							"name": "Infestation Spores (1/Day)",
 							"entries": [
-								"The myconid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a {@dc 12} Constitution saving throw. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy) and also gains a random form of indefinite madness (determined by rolling on the Madness of {@creature Zuggtmoy|OotA} table) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a humanoid or a Large or smaller beast."
+								"The myconid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a {@dc 12} Constitution saving throw. The save DC is 8 + the myconid's Constitution modifier + the myconid's proficiency bonus. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy) and also gains a random form of indefinite madness (determined by rolling on the Madness of {@creature Zuggtmoy|MTF} table) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a humanoid or a Large or smaller beast."
 							]
 						},
 						{
@@ -36136,7 +36499,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Needle Blight",
@@ -36303,7 +36667,7 @@
 				{
 					"name": "Night Hag Items",
 					"entries": [
-						"A night hag carries two very rare magic items that she must craft for herself If either object is lost, the night hag will go to great lengths to retrieve it, as creating a new tool takes time and effort.",
+						"A night hag carries two very rare magic items that she must craft for herself. If either object is lost, the night hag will go to great lengths to retrieve it, as creating a new tool takes time and effort.",
 						"Heartstone: This lustrous black gem allows a night hag to become ethereal while it is in her possession. The touch of a heartstone also cures any disease. Crafting a heartstone takes 30 days.",
 						"Soul Bag: When an evil humanoid dies as a result of a night hag's Nightmare Haunting, the hag catches the soul in this black sack made of stitched flesh. A soul bag can hold only one evil soul at a time, and only the night hag who crafted the bag can catch a soul with it. Crafting a soul bag takes 7 days and a humanoid sacrifice (whose flesh is used to make the bag)."
 					]
@@ -36463,7 +36827,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Nightmare",
@@ -36554,7 +36919,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Noble",
@@ -36669,8 +37035,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Nothic",
@@ -36792,6 +37162,9 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "RMBRE"
 				}
 			]
 		},
@@ -37102,8 +37475,15 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Octopus",
@@ -37197,7 +37577,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ogre",
@@ -37311,8 +37692,15 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ogre Zombie",
@@ -37410,7 +37798,8 @@
 				{
 					"source": "SDW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Oni",
@@ -37569,8 +37958,12 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Orc",
@@ -37701,8 +38094,15 @@
 				},
 				{
 					"source": "DIP"
+				},
+				{
+					"source": "ERLW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Orc Eye of Gruumsh",
@@ -38235,7 +38635,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Owl",
@@ -38314,7 +38715,8 @@
 				{
 					"source": "RoT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Owlbear",
@@ -38386,6 +38788,12 @@
 				"forest"
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/378/owlbear.mp3",
+			"altArt": [
+				{
+					"name": "Owlbear",
+					"source": "RMBRE"
+				}
+			],
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -38429,8 +38837,12 @@
 				},
 				{
 					"source": "SDW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Panther",
@@ -38519,7 +38931,8 @@
 				{
 					"source": "WDH"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Pegasus",
@@ -38590,7 +39003,13 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"otherSources": [
+				{
+					"source": "ERLW"
+				}
+			],
+			"srd": true
 		},
 		{
 			"name": "Pentadrone",
@@ -38933,7 +39352,8 @@
 				{
 					"source": "SDW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Piercer",
@@ -39206,7 +39626,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Pixie",
@@ -39302,6 +39723,9 @@
 			"otherSources": [
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -39465,7 +39889,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Plesiosaurus",
@@ -39543,7 +39968,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Poisonous Snake",
@@ -39613,7 +40039,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Polar Bear",
@@ -39707,7 +40134,8 @@
 				{
 					"source": "WDH"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Poltergeist",
@@ -39891,7 +40319,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Priest",
@@ -40050,8 +40479,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Pseudodragon",
@@ -40184,8 +40617,12 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Pteranodon",
@@ -40261,6 +40698,9 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -40354,7 +40794,8 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Quadrone",
@@ -40926,7 +41367,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Quipper",
@@ -41004,7 +41446,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Rakshasa",
@@ -41152,8 +41595,12 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Rat",
@@ -41232,7 +41679,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Raven",
@@ -41295,7 +41743,8 @@
 				{
 					"source": "CoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Red Dragon Wyrmling",
@@ -41392,7 +41841,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Red Slaad",
@@ -41607,7 +42057,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Remorhaz",
@@ -41706,7 +42157,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Revenant",
@@ -41860,6 +42312,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "ERLW"
 				}
 			]
 		},
@@ -41931,7 +42386,8 @@
 				{
 					"source": "WDH"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Riding Horse",
@@ -41998,7 +42454,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Roc",
@@ -42108,7 +42565,8 @@
 				{
 					"source": "DIP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Roper",
@@ -42234,7 +42692,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Rug of Smothering",
@@ -42350,7 +42809,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Rust Monster",
@@ -42443,7 +42903,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Saber-Toothed Tiger",
@@ -42519,7 +42980,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sahuagin",
@@ -42654,7 +43116,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sahuagin Baron",
@@ -43087,7 +43550,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Satyr",
@@ -43223,7 +43687,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Scarecrow",
@@ -43399,7 +43864,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Scout",
@@ -43534,7 +44000,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sea Hag",
@@ -43734,7 +44201,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sea Horse",
@@ -43775,7 +44243,8 @@
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/437/sea-horse.mp3",
 			"traitTags": [
 				"Water Breathing"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Shadow",
@@ -43911,7 +44380,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Shadow Demon",
@@ -44184,7 +44654,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Shield Guardian",
@@ -44326,7 +44797,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Shrieker",
@@ -44396,7 +44868,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Silver Dragon Wyrmling",
@@ -44502,7 +44975,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Skeleton",
@@ -44624,8 +45098,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Slaad Tadpole",
@@ -45040,7 +45518,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Spectator",
@@ -45131,6 +45610,12 @@
 				"underdark"
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/455/spectator.mp3",
+			"altArt": [
+				{
+					"name": "Spectator",
+					"source": "RMBRE"
+				}
+			],
 			"languageTags": [
 				"DS",
 				"U",
@@ -45155,6 +45640,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "RMBRE"
 				}
 			]
 		},
@@ -45311,7 +45799,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Spider",
@@ -45344,7 +45833,7 @@
 			"senses": [
 				"darkvision 30 ft."
 			],
-			"passive": 12,
+			"passive": 10,
 			"cr": "0",
 			"trait": [
 				{
@@ -45398,7 +45887,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Spined Devil",
@@ -45710,7 +46200,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Sprite",
@@ -45808,8 +46299,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Spy",
@@ -45946,8 +46441,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Steam Mephit",
@@ -46076,7 +46575,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Stirge",
@@ -46174,8 +46674,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Stone Giant",
@@ -46269,7 +46773,7 @@
 							"name": "Fling",
 							"type": "entries",
 							"entries": [
-								"The giant tries to throw a Small or Medium creature within 10 feet of it. The target must succeed on a {@dc 17} Dexterity saving throw or be hurled up to 60 feet horizontally in a direction of the giant's choice. and land {@condition prone}, taking 3 ({@damage 1d6}) bludgeoning damage for every 10 feet it was thrown."
+								"The giant tries to throw a Small or Medium creature within 10 feet of it. The target must succeed on a {@dc 17} Dexterity saving throw or be hurled up to 60 feet horizontally in a direction of the giant's choice and land {@condition prone}, taking 3 ({@damage 1d6}) bludgeoning damage for every 10 feet it was thrown."
 							]
 						},
 						{
@@ -46323,7 +46827,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Stone Golem",
@@ -46472,7 +46977,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Storm Giant",
@@ -46574,7 +47080,7 @@
 							"type": "entries",
 							"name": "Thunderous Stomp {@recharge}",
 							"entries": [
-								"The storm giant stomps the ground, triggering a thunderclap. All other creatures within 15 feet of the giant must succeed on a {@dc 17} Constitution saving throw or take 33 ({@damage 6d10}) thunder damage and be {@condition deafened} until the start of the giant's next turn. On a successful save, a crea­ture takes half as much damage and isn't {@condition deafened}. The thun­derclap can be heard out to a range of 1,200 feet."
+								"The storm giant stomps the ground, triggering a thunderclap. All other creatures within 15 feet of the giant must succeed on a {@dc 17} Constitution saving throw or take 33 ({@damage 6d10}) thunder damage and be {@condition deafened} until the start of the giant's next turn. On a successful save, a creature takes half as much damage and isn't {@condition deafened}. The thunderclap can be heard out to a range of 1,200 feet."
 							]
 						}
 					],
@@ -46644,7 +47150,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Succubus",
@@ -46794,8 +47301,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Bats",
@@ -46912,7 +47423,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Beetles",
@@ -47002,7 +47514,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Centipedes",
@@ -47103,7 +47616,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Insects",
@@ -47210,7 +47724,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Poisonous Snakes",
@@ -47311,7 +47826,8 @@
 				{
 					"source": "SDW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Quippers",
@@ -47424,8 +47940,12 @@
 				},
 				{
 					"source": "SDW"
+				},
+				{
+					"source": "LR"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Rats",
@@ -47536,7 +48056,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Ravens",
@@ -47629,7 +48150,8 @@
 				{
 					"source": "SDW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Spiders",
@@ -47761,7 +48283,8 @@
 				{
 					"source": "DIP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Swarm of Wasps",
@@ -47861,7 +48384,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Tarrasque",
@@ -48043,7 +48567,8 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Thri-kreen",
@@ -48331,7 +48856,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Tiger",
@@ -48427,7 +48953,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Treant",
@@ -48554,8 +49081,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Tribal Warrior",
@@ -48647,7 +49178,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Triceratops",
@@ -48719,7 +49251,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Tridrone",
@@ -49144,7 +49677,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Twig Blight",
@@ -49249,6 +49783,9 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "RMBRE"
 				}
 			]
 		},
@@ -49327,7 +49864,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Ultroloth",
@@ -49812,7 +50350,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Vampire",
@@ -50026,7 +50565,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Vampire Spawn",
@@ -50181,7 +50721,8 @@
 				{
 					"source": "SLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Vampire Spellcaster",
@@ -50767,8 +51308,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Vine Blight",
@@ -50961,7 +51506,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Vrock",
@@ -51126,7 +51672,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Vulture",
@@ -51207,7 +51754,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Warhorse",
@@ -51331,7 +51879,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Warhorse Skeleton",
@@ -51404,7 +51953,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Water Elemental",
@@ -51547,7 +52097,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Water Weird",
@@ -51715,7 +52266,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Werebear",
@@ -51858,7 +52410,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wereboar",
@@ -52006,7 +52559,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wererat",
@@ -52155,7 +52709,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Weretiger",
@@ -52305,7 +52860,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Werewolf",
@@ -52460,8 +53016,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "White Dragon Wyrmling",
@@ -52553,7 +53113,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wight",
@@ -52711,7 +53272,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Will-o'-Wisp",
@@ -52867,7 +53429,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Winged Kobold",
@@ -53091,7 +53654,8 @@
 				{
 					"source": "ToA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wolf",
@@ -53189,7 +53753,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Worg",
@@ -53281,8 +53846,12 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "ERLW"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wraith",
@@ -53432,7 +54001,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Wyvern",
@@ -53541,7 +54111,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Xorn",
@@ -53663,7 +54234,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Yeti",
@@ -54105,7 +54677,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Young Blue Dragon",
@@ -54229,7 +54802,8 @@
 				{
 					"source": "BGDIA"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Young Brass Dragon",
@@ -54360,7 +54934,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Young Bronze Dragon",
@@ -54505,7 +55080,8 @@
 				{
 					"source": "GoS"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Young Copper Dragon",
@@ -54636,7 +55212,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Young Gold Dragon",
@@ -54775,7 +55352,8 @@
 				"MW",
 				"RCH",
 				"AOE"
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Young Green Dragon",
@@ -54875,6 +55453,12 @@
 				"forest"
 			],
 			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/243/green-dragon.mp3",
+			"altArt": [
+				{
+					"name": "Young Green Dragon",
+					"source": "RMBRE"
+				}
+			],
 			"dragonCastingColor": "G",
 			"traitTags": [
 				"Amphibious"
@@ -54912,8 +55496,12 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Young Red Dragon",
@@ -55037,7 +55625,8 @@
 				{
 					"source": "WDMM"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Young Red Shadow Dragon",
@@ -55382,7 +55971,8 @@
 				{
 					"source": "SKT"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Young White Dragon",
@@ -55511,7 +56101,8 @@
 				{
 					"source": "DIP"
 				}
-			]
+			],
+			"srd": true
 		},
 		{
 			"name": "Yuan-ti Abomination",
@@ -56442,8 +57033,15 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ERLW"
+				},
+				{
+					"source": "RMBRE"
 				}
-			]
+			],
+			"srd": true
 		}
 	]
 }

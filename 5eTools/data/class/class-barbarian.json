@@ -171,17 +171,21 @@
 					"simple",
 					"martial"
 				],
-				"skills": {
-					"choose": 2,
-					"from": [
-						"Animal Handling",
-						"Athletics",
-						"Intimidation",
-						"Nature",
-						"Perception",
-						"Survival"
-					]
-				}
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"animal handling",
+								"athletics",
+								"intimidation",
+								"nature",
+								"perception",
+								"survival"
+							],
+							"count": 2
+						}
+					}
+				]
 			},
 			"startingEquipment": {
 				"additionalFromBackground": true,
@@ -241,6 +245,16 @@
 						]
 					},
 					{
+						"name": "Survival Instincts",
+						"entries": [
+							"{@i 2nd-level barbarian feature (replaces Danger Sense)}",
+							"You become proficient in your choice of two of the following skills: {@skill Animal Handling}, {@skill Medicine}, {@skill Nature}, {@skill Perception}, or {@skill Survival}.",
+							"Your proficiency bonus is doubled for any ability check you make that uses either of those skills."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
+					},
+					{
 						"name": "Reckless Attack",
 						"entries": [
 							"Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn."
@@ -277,6 +291,15 @@
 						"entries": [
 							"Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
 						]
+					},
+					{
+						"name": "Instinctive Pounce",
+						"entries": [
+							"{@i 5th-level barbarian feature (replaces Fast Movement)}",
+							"When a creature ends its turn within 15 feet of you, you can use your reaction to move up to half your speed to a space closer to the creature. This movement doesn't provoke opportunity attacks."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -529,7 +552,9 @@
 														"name": "Elk",
 														"entries": [
 															"While you're raging and aren't wearing heavy armor, your walking speed increases by 15 feet. The spirit of the elk makes you extraordinarily swift."
-														]
+														],
+														"source": "SCAG",
+														"page": 122
 													}
 												]
 											},
@@ -541,7 +566,9 @@
 														"name": "Tiger",
 														"entries": [
 															"While raging, you can add 10 feet to your long jump distance and 3 feet to your high jump distance. The spirit of the tiger empowers your leaps."
-														]
+														],
+														"source": "SCAG",
+														"page": 122
 													}
 												]
 											},
@@ -602,7 +629,9 @@
 														"name": "Elk",
 														"entries": [
 															"Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to ten companions while they're within 60 feet of you and you're not {@condition incapacitated}. The elk spirit helps you roam far and fast."
-														]
+														],
+														"source": "SCAG",
+														"page": 122
 													}
 												]
 											},
@@ -614,7 +643,9 @@
 														"name": "Tiger",
 														"entries": [
 															"You gain proficiency in two skills from the following list: {@skill Athletics}, {@skill Acrobatics}, {@skill Stealth}, and {@skill Survival}. The cat spirit hones your survival instincts."
-														]
+														],
+														"source": "SCAG",
+														"page": 122
 													}
 												]
 											},
@@ -688,7 +719,9 @@
 														"name": "Elk",
 														"entries": [
 															"While raging, you can use a bonus action during your move to pass through the space of a Large or smaller creature. That creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your proficiency bonus) or be knocked {@condition prone} and take bludgeoning damage equal to {@dice 1d12} + your Strength modifier."
-														]
+														],
+														"source": "SCAG",
+														"page": 122
 													}
 												]
 											},
@@ -700,7 +733,9 @@
 														"name": "Tiger",
 														"entries": [
 															"While you're raging, if you move at least 20 feet in a straight line toward a Large or smaller target right before making a melee weapon attack against it, you can use a bonus action to make an additional melee weapon attack against it."
-														]
+														],
+														"source": "SCAG",
+														"page": 122
 													}
 												]
 											},
@@ -760,7 +795,7 @@
 										"type": "entries",
 										"name": "Reckless Abandon",
 										"entries": [
-											"Beginning at 6th level, when you use Reckless {@action Attack} while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends."
+											"Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends."
 										]
 									}
 								]
@@ -1523,7 +1558,7 @@
 										"type": "entries",
 										"name": "Magic Reserves",
 										"entries": [
-											"At 6th level, you can channel the magic surging inside you into other creatures. As an action,you can touch a creature and roll a {@dice d4}. The creature recovers an expended spell slot of a level equal to the number rolled. If the creature you touch can't recover a spell slot of that level, the creature instead gains temporary hit points equal to five times the number rolled.",
+											"At 6th level, you can channel the magic surging inside you into other creatures. As an action, you can touch a creature and roll a {@dice d4}. The creature recovers an expended spell slot of a level equal to the number rolled. If the creature you touch can't recover a spell slot of that level, the creature instead gains temporary hit points equal to five times the number rolled.",
 											"You take force damage equal to five times the number rolled.",
 											"When you reach 14th level in this class, you increase the die to a {@dice d6}."
 										]
@@ -1551,7 +1586,7 @@
 										"type": "entries",
 										"name": "Chaotic Fury",
 										"entries": [
-											"At 14th level, you become a wellspring of wild magic while you are raging. As a bonus action,you can reroll on the Wild Surge table, replacing your current effect with the new one."
+											"At 14th level, you become a wellspring of wild magic while you are raging. As a bonus action, you can reroll on the Wild Surge table, replacing your current effect with the new one."
 										]
 									},
 									{
@@ -1863,3 +1898,4 @@
 		}
 	]
 }
+

@@ -16,7 +16,7 @@
 				"2H"
 			],
 			"range": "120/360",
-			"reload": "2",
+			"reload": 2,
 			"source": "DMG",
 			"page": 268,
 			"firearm": true
@@ -24,23 +24,23 @@
 		{
 			"name": "Arrow",
 			"type": "A",
-			"ammunition": true,
 			"rarity": "None",
-			"value": "5 cp",
+			"value": 5,
 			"weight": 0.05,
 			"source": "PHB",
-			"page": 150
+			"page": 150,
+			"srd": true
 		},
 		{
 			"name": "Arrows (20)",
 			"type": "A",
-			"ammunition": true,
 			"rarity": "None",
-			"value": "1 gp",
+			"value": 100,
 			"weight": 1,
 			"source": "PHB",
 			"page": 150,
-			"quantity": 20
+			"quantity": 20,
+			"srd": true
 		},
 		{
 			"name": "Automatic Pistol",
@@ -57,7 +57,7 @@
 				"RLD"
 			],
 			"range": "50/150",
-			"reload": "15",
+			"reload": 15,
 			"source": "DMG",
 			"page": 268,
 			"firearm": true
@@ -79,7 +79,7 @@
 				"2H"
 			],
 			"range": "80/240",
-			"reload": "30",
+			"reload": 30,
 			"source": "DMG",
 			"page": 268,
 			"firearm": true
@@ -91,7 +91,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 4,
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -108,7 +108,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 1,
 			"dmg1": "1",
 			"dmgType": "P",
@@ -123,30 +123,30 @@
 		{
 			"name": "Blowgun Needle",
 			"type": "A",
-			"ammunition": true,
 			"rarity": "None",
-			"value": "2 cp",
+			"value": 2,
 			"weight": 0.02,
 			"source": "PHB",
-			"page": 150
+			"page": 150,
+			"srd": true
 		},
 		{
 			"name": "Blowgun Needles (50)",
 			"type": "A",
-			"ammunition": true,
 			"rarity": "None",
-			"value": "1 gp",
+			"value": 100,
 			"weight": 1,
 			"source": "PHB",
 			"page": 150,
-			"quantity": 50
+			"quantity": 50,
+			"srd": true
 		},
 		{
 			"name": "Breastplate",
 			"type": "MA",
 			"armor": true,
 			"rarity": "None",
-			"value": "400 gp",
+			"value": 40000,
 			"weight": 20,
 			"ac": 14,
 			"source": "PHB",
@@ -160,7 +160,7 @@
 			"type": "HA",
 			"armor": true,
 			"rarity": "None",
-			"value": "75 gp",
+			"value": 7500,
 			"weight": 55,
 			"ac": 16,
 			"strength": "13",
@@ -176,7 +176,7 @@
 			"type": "MA",
 			"armor": true,
 			"rarity": "None",
-			"value": "50 gp",
+			"value": 5000,
 			"weight": 20,
 			"ac": 13,
 			"source": "PHB",
@@ -191,7 +191,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "1 sp",
+			"value": 10,
 			"weight": 2,
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "B",
@@ -204,33 +204,34 @@
 		{
 			"name": "Crossbow Bolt",
 			"type": "A",
-			"ammunition": true,
 			"rarity": "None",
-			"value": "5 cp",
+			"value": 5,
 			"weight": 0.075,
 			"source": "PHB",
-			"page": 150
+			"page": 150,
+			"srd": true
 		},
 		{
 			"name": "Crossbow Bolts (20)",
 			"type": "A",
-			"ammunition": true,
 			"rarity": "None",
-			"value": "1 gp",
+			"value": 100,
 			"weight": 1.5,
 			"source": "PHB",
 			"page": 150,
-			"quantity": 20
+			"quantity": 20,
+			"srd": true
 		},
 		{
 			"name": "Crystal",
 			"type": "SCF",
 			"scfType": "arcane",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 1,
 			"source": "PHB",
-			"page": 151
+			"page": 151,
+			"srd": true
 		},
 		{
 			"name": "Dagger",
@@ -238,7 +239,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "2 gp",
+			"value": 200,
 			"weight": 1,
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "P",
@@ -257,7 +258,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "5 cp",
+			"value": 5,
 			"weight": 0.25,
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "P",
@@ -276,31 +277,35 @@
 			"sword": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "100 gp",
+			"value": 10000,
 			"weight": 6,
 			"dmg1": "{@dice 2d4}",
-			"dmg2": "{@dice 1d4}",
 			"dmgType": "S",
 			"property": [
 				"S",
 				"2H"
 			],
-			"source": "UAWGE",
-			"page": 74,
+			"source": "ERLW",
+			"page": 21,
 			"entries": [
 				{
 					"type": "entries",
 					"name": "Special",
 					"entries": [
-						"When you take the attack action and make a two-handed attack with a double-bladed scimitar, you can use a bonus action to make a melee attack with the blade at the opposite end of the weapon. This attack uses the same ability modifier as the primary attack. The weapon's damage die for this attack is a d4, and it deals slashing damage."
+						"If you attack with a double-bladed scimitar as part of the {@action Attack} action on your turn, you can use a bonus action immediately after to make a melee attack with it. This attack deals {@dice 1d4} slashing damage on a hit, instead of {@dice 2d4}."
 					]
+				}
+			],
+			"otherSources": [
+				{
+					"source": "UAWGE",
+					"page": 74
 				}
 			]
 		},
 		{
 			"name": "Energy Cell",
 			"type": "AF",
-			"ammunition": true,
 			"age": "Futuristic",
 			"rarity": "None",
 			"weight": 0.3125,
@@ -313,7 +318,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 2,
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "B",
@@ -326,7 +331,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "20 gp",
+			"value": 2000,
 			"weight": 6,
 			"dmg1": "{@dice 1d10}",
 			"dmgType": "S",
@@ -345,7 +350,7 @@
 			"axe": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "30 gp",
+			"value": 3000,
 			"weight": 7,
 			"dmg1": "{@dice 1d12}",
 			"dmgType": "S",
@@ -362,7 +367,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "2 sp",
+			"value": 20,
 			"weight": 10,
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "B",
@@ -379,7 +384,7 @@
 			"sword": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "50 gp",
+			"value": 5000,
 			"weight": 6,
 			"dmg1": "{@dice 2d6}",
 			"dmgType": "S",
@@ -396,7 +401,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "20 gp",
+			"value": 2000,
 			"weight": 6,
 			"dmg1": "{@dice 1d10}",
 			"dmgType": "S",
@@ -413,7 +418,7 @@
 			"type": "MA",
 			"armor": true,
 			"rarity": "None",
-			"value": "750 gp",
+			"value": 75000,
 			"weight": 40,
 			"ac": 15,
 			"stealth": true,
@@ -429,7 +434,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "75 gp",
+			"value": 7500,
 			"weight": 3,
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "P",
@@ -449,7 +454,7 @@
 			"axe": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "5 gp",
+			"value": 500,
 			"weight": 2,
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "S",
@@ -467,7 +472,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "50 gp",
+			"value": 5000,
 			"weight": 18,
 			"dmg1": "{@dice 1d10}",
 			"dmgType": "P",
@@ -486,7 +491,7 @@
 			"type": "MA",
 			"armor": true,
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 12,
 			"ac": 12,
 			"source": "PHB",
@@ -529,7 +534,7 @@
 				"2H"
 			],
 			"range": "80/240",
-			"reload": "5",
+			"reload": 5,
 			"source": "DMG",
 			"page": 268,
 			"firearm": true
@@ -540,7 +545,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "5 sp",
+			"value": 50,
 			"weight": 2,
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "P",
@@ -557,7 +562,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 6,
 			"dmg1": "{@dice 1d12}",
 			"dmgType": "P",
@@ -592,7 +597,7 @@
 				"RLD"
 			],
 			"range": "30/120",
-			"reload": "50",
+			"reload": 50,
 			"source": "DMG",
 			"page": 268,
 			"firearm": true
@@ -613,7 +618,7 @@
 				"2H"
 			],
 			"range": "100/300",
-			"reload": "30",
+			"reload": 30,
 			"source": "DMG",
 			"page": 268,
 			"firearm": true
@@ -623,7 +628,7 @@
 			"type": "LA",
 			"armor": true,
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 10,
 			"ac": 11,
 			"source": "PHB",
@@ -638,7 +643,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "25 gp",
+			"value": 2500,
 			"weight": 5,
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "P",
@@ -677,7 +682,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "2 gp",
+			"value": 200,
 			"weight": 2,
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "B",
@@ -695,7 +700,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "50 gp",
+			"value": 5000,
 			"weight": 2,
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "P",
@@ -715,7 +720,7 @@
 			"sword": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "15 gp",
+			"value": 1500,
 			"weight": 3,
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -732,7 +737,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "5 gp",
+			"value": 500,
 			"weight": 4,
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "B",
@@ -745,7 +750,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 10,
 			"dmg1": "{@dice 2d6}",
 			"dmgType": "B",
@@ -759,7 +764,6 @@
 		{
 			"name": "Modern Bullets (10)",
 			"type": "AF",
-			"ammunition": true,
 			"age": "Modern",
 			"rarity": "None",
 			"weight": 1,
@@ -773,7 +777,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "15 gp",
+			"value": 1500,
 			"weight": 4,
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "P",
@@ -787,7 +791,7 @@
 			"weaponCategory": "Martial",
 			"age": "Renaissance",
 			"rarity": "None",
-			"value": "500 gp",
+			"value": 50000,
 			"weight": 10,
 			"dmg1": "{@dice 1d12}",
 			"dmgType": "P",
@@ -807,7 +811,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "1 gp",
+			"value": 100,
 			"weight": 3,
 			"property": [
 				"S",
@@ -831,17 +835,18 @@
 			"type": "SCF",
 			"scfType": "arcane",
 			"rarity": "None",
-			"value": "25 gp",
+			"value": 2500,
 			"weight": 3,
 			"source": "PHB",
-			"page": 151
+			"page": 151,
+			"srd": true
 		},
 		{
 			"name": "Padded Armor",
 			"type": "LA",
 			"armor": true,
 			"rarity": "None",
-			"value": "5 gp",
+			"value": 500,
 			"weight": 8,
 			"ac": 11,
 			"stealth": true,
@@ -857,7 +862,7 @@
 			"type": "M",
 			"weapon": true,
 			"weaponCategory": "Martial",
-			"value": "5 gp",
+			"value": 500,
 			"weight": 18,
 			"dmg1": "{@dice 1d10}",
 			"dmgType": "P",
@@ -876,7 +881,7 @@
 			"weaponCategory": "Martial",
 			"age": "Renaissance",
 			"rarity": "None",
-			"value": "250 gp",
+			"value": 25000,
 			"weight": 3,
 			"dmg1": "{@dice 1d10}",
 			"dmgType": "P",
@@ -894,7 +899,7 @@
 			"type": "HA",
 			"armor": true,
 			"rarity": "None",
-			"value": "1500 gp",
+			"value": 150000,
 			"weight": 65,
 			"ac": 18,
 			"strength": "15",
@@ -911,7 +916,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "2 sp",
+			"value": 20,
 			"weight": 4,
 			"dmg1": "{@dice 1d6}",
 			"dmg2": "{@dice 1d8}",
@@ -930,7 +935,7 @@
 			"sword": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "25 gp",
+			"value": 2500,
 			"weight": 2,
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "P",
@@ -943,10 +948,9 @@
 		{
 			"name": "Renaissance Bullets (10)",
 			"type": "AF",
-			"ammunition": true,
 			"age": "Renaissance",
 			"rarity": "None",
-			"value": "3 gp",
+			"value": 300,
 			"weight": 2,
 			"source": "DMG",
 			"page": 268,
@@ -967,7 +971,7 @@
 				"RLD"
 			],
 			"range": "40/120",
-			"reload": "6",
+			"reload": 6,
 			"source": "DMG",
 			"page": 268,
 			"firearm": true
@@ -977,7 +981,7 @@
 			"type": "HA",
 			"armor": true,
 			"rarity": "None",
-			"value": "30 gp",
+			"value": 3000,
 			"weight": 40,
 			"ac": 14,
 			"stealth": true,
@@ -992,17 +996,18 @@
 			"type": "SCF",
 			"scfType": "arcane",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 2,
 			"source": "PHB",
-			"page": 151
+			"page": 151,
+			"srd": true
 		},
 		{
 			"name": "Scale Mail",
 			"type": "MA",
 			"armor": true,
 			"rarity": "None",
-			"value": "50 gp",
+			"value": 5000,
 			"weight": 45,
 			"ac": 14,
 			"stealth": true,
@@ -1019,7 +1024,7 @@
 			"sword": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "25 gp",
+			"value": 2500,
 			"weight": 3,
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "S",
@@ -1034,7 +1039,7 @@
 			"name": "Shield",
 			"type": "S",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 6,
 			"ac": 2,
 			"source": "PHB",
@@ -1049,7 +1054,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "25 gp",
+			"value": 2500,
 			"weight": 2,
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "P",
@@ -1068,7 +1073,7 @@
 			"sword": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 2,
 			"dmg1": "{@dice 1d6}",
 			"dmgType": "P",
@@ -1095,7 +1100,7 @@
 				"2H"
 			],
 			"range": "30/90",
-			"reload": "2",
+			"reload": 2,
 			"source": "DMG",
 			"page": 268,
 			"firearm": true
@@ -1106,7 +1111,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "1 gp",
+			"value": 100,
 			"weight": 2,
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "S",
@@ -1122,7 +1127,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "1 sp",
+			"value": 10,
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "B",
 			"property": [
@@ -1135,23 +1140,23 @@
 		{
 			"name": "Sling Bullet",
 			"type": "A",
-			"ammunition": true,
 			"rarity": "None",
-			"value": "0.2 cp",
+			"value": 0.2,
 			"weight": 0.075,
 			"source": "PHB",
-			"page": 150
+			"page": 150,
+			"srd": true
 		},
 		{
 			"name": "Sling Bullets (20)",
 			"type": "A",
-			"ammunition": true,
 			"rarity": "None",
-			"value": "4 cp",
+			"value": 4,
 			"weight": 1.5,
 			"source": "PHB",
 			"page": 150,
-			"quantity": 20
+			"quantity": 20,
+			"srd": true
 		},
 		{
 			"name": "Spear",
@@ -1159,7 +1164,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "1 gp",
+			"value": 100,
 			"weight": 3,
 			"dmg1": "{@dice 1d6}",
 			"dmg2": "{@dice 1d8}",
@@ -1176,7 +1181,7 @@
 			"name": "Spiked Armor",
 			"type": "MA",
 			"armor": true,
-			"value": "75 gp",
+			"value": 7500,
 			"weight": 45,
 			"ac": 14,
 			"stealth": true,
@@ -1192,7 +1197,7 @@
 			"type": "HA",
 			"armor": true,
 			"rarity": "None",
-			"value": "200 gp",
+			"value": 20000,
 			"weight": 60,
 			"ac": 17,
 			"strength": "15",
@@ -1208,18 +1213,19 @@
 			"type": "SCF",
 			"scfType": "arcane",
 			"rarity": "None",
-			"value": "5 gp",
+			"value": 500,
 			"weight": 4,
 			"source": "PHB",
 			"page": 151,
-			"staff": true
+			"staff": true,
+			"srd": true
 		},
 		{
 			"name": "Studded Leather Armor",
 			"type": "LA",
 			"armor": true,
 			"rarity": "None",
-			"value": "45 gp",
+			"value": 4500,
 			"weight": 13,
 			"ac": 12,
 			"source": "PHB",
@@ -1234,7 +1240,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "5 gp",
+			"value": 500,
 			"weight": 4,
 			"dmg1": "{@dice 1d6}",
 			"dmg2": "{@dice 1d8}",
@@ -1252,10 +1258,11 @@
 			"type": "SCF",
 			"scfType": "arcane",
 			"rarity": "None",
-			"value": "10 gp",
+			"value": 1000,
 			"weight": 1,
 			"source": "PHB",
-			"page": 151
+			"page": 151,
+			"srd": true
 		},
 		{
 			"name": "War Pick",
@@ -1263,7 +1270,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "5 gp",
+			"value": 500,
 			"weight": 2,
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "P",
@@ -1276,7 +1283,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "15 gp",
+			"value": 1500,
 			"weight": 2,
 			"dmg1": "{@dice 1d8}",
 			"dmg2": "{@dice 1d10}",
@@ -1293,7 +1300,7 @@
 			"weapon": true,
 			"weaponCategory": "Martial",
 			"rarity": "None",
-			"value": "2 gp",
+			"value": 200,
 			"weight": 3,
 			"dmg1": "{@dice 1d4}",
 			"dmgType": "S",
@@ -1310,7 +1317,7 @@
 			"weapon": true,
 			"weaponCategory": "Simple",
 			"rarity": "None",
-			"value": "1 gp",
+			"value": 100,
 			"weight": 3,
 			"dmg1": "{@dice 1d8}",
 			"dmgType": "P",
@@ -1335,11 +1342,12 @@
 					"type": "entries",
 					"name": "Ammunition",
 					"entries": [
-						"You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield."
+						"You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield.",
+						"If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way."
 					]
-				},
-				"If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way."
-			]
+				}
+			],
+			"template": "{{prop_name}} ({{item.range}} ft.)"
 		},
 		{
 			"abbreviation": "AF",
@@ -1350,11 +1358,12 @@
 					"type": "entries",
 					"name": "Ammunition",
 					"entries": [
-						"You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. The ammunition of a firearm is destroyed upon use."
+						"You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. The ammunition of a firearm is destroyed upon use.",
+						"If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way."
 					]
-				},
-				"If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way."
-			]
+				}
+			],
+			"template": "{{prop_name}} ({{item.range}} ft.)"
 		},
 		{
 			"abbreviation": "BF",
@@ -1452,7 +1461,8 @@
 						"A limited number of shots can be made with a weapon that has the reload property. A character must then reload it using an action or a bonus action (the character's choice)."
 					]
 				}
-			]
+			],
+			"template": "{{prop_name}} ({{item.reload}} shots)"
 		},
 		{
 			"abbreviation": "S",
@@ -1472,7 +1482,8 @@
 						"If a weapon has the thrown property, you can throw the weapon to make a ranged attack. If the weapon is a melee weapon, you use the same ability modifier for that attack roll and damage roll that you would use for a melee attack with the weapon. For example, if you throw a handaxe, you use your Strength, but if you throw a dagger, you can use either your Strength or your Dexterity, since the dagger has the finesse property."
 					]
 				}
-			]
+			],
+			"template": "{{prop_name}} ({{item.range}} ft.)"
 		},
 		{
 			"abbreviation": "2H",
@@ -1500,40 +1511,11 @@
 						"This weapon can be used with one or two hands. A damage value in parentheses appears with the property\u2014the damage when the weapon is used with two hands to make a melee attack."
 					]
 				}
-			]
+			],
+			"template": "{{prop_name}} ({{item.dmg2}})"
 		}
 	],
 	"itemType": [
-		{
-			"abbreviation": "A",
-			"source": "PHB",
-			"page": 146,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Ammunition",
-					"entries": [
-						"You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. At the end of the battle, you can recover half your expended ammunition by taking a minute to search the battlefield."
-					]
-				},
-				"If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way."
-			]
-		},
-		{
-			"abbreviation": "AF",
-			"source": "DMG",
-			"page": 267,
-			"entries": [
-				{
-					"type": "entries",
-					"name": "Ammunition",
-					"entries": [
-						"You can use a weapon that has the ammunition property to make a ranged attack only if you have ammunition to fire from the weapon. Each time you attack with the weapon, you expend one piece of ammunition. Drawing the ammunition from a quiver, case, or other container is part of the attack. Loading a one-handed weapon requires a free hand. The ammunition of a firearm is destroyed upon use."
-					]
-				},
-				"If you use a weapon that has the ammunition property to make a melee attack, you treat the weapon as an improvised weapon. A sling must be loaded to deal any damage when used in this way."
-			]
-		},
 		{
 			"abbreviation": "AT",
 			"source": "PHB",
@@ -1621,7 +1603,7 @@
 					"type": "entries",
 					"name": "Damage Threshold",
 					"entries": [
-						"If a ship has a Damage Threshold, it has immunity to all damage unless it takes an amount of damage equal to or greater than its damage threshold, in which case it takes damage as normal. Any damage that fails to meet or exceed the damage threshold is considered superficial and doesn't reduce the ship's hit points"
+						"If a ship has a Damage Threshold, it has immunity to all damage unless it takes an amount of damage equal to or greater than its damage threshold, in which case it takes damage as normal. Any damage that fails to meet or exceed the damage threshold is considered superficial and doesn't reduce the ship's hit points."
 					]
 				},
 				{

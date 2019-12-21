@@ -5223,14 +5223,14 @@
 								"Benches coated with centuries of dust lie about the floor in jumbled disarray. Beyond this debris, lit by a piercing shaft of light, an altar stands upon a stone platform. The sides of the altar are carved with bas-reliefs of angelic figures entwined with grape vines. The light from above falls directly on a silver statuette. A cloaked figure is draped over the altar, and a black mace lies on the floor near its feet."
 							]
 						},
-						"The figure slumped on the altar is all that remains of Gustav Herrenghast, a lawful evil human cleric who tried to obtain the Icon of Ravenloft and did not survive the attempt. See \"Treasure\" below for more information on the icon and Gustav's possessions.",
+						"The figure slumped on the altar is all that remains of Gustav Herrenghast, a lawful evil human cleric who tried to obtain the {@item Icon of Ravenloft|CoS} and did not survive the attempt. See \"Treasure\" below for more information on the icon and Gustav's possessions.",
 						"A sculpted stone railing cordons off the upstairs balcony, which is described in {@area K28|1dc}.",
 						{
 							"type": "entries",
 							"name": "Treasure",
 							"id": "1b7",
 							"entries": [
-								"The statuette on the altar is an artifact called the Icon of Ravenloft. Any evil creature that touches the statuette must make a DC 17 Constitution saving throw, taking 88 ({@dice 16d10}) radiant damage on a failed save, or half as much damage on a successful one. The statuette is safe for all creatures to handle once it is no longer in contact with the altar.",
+								"The statuette on the altar is an artifact called the {@item Icon of Ravenloft|CoS}. Any evil creature that touches the statuette must make a DC 17 Constitution saving throw, taking 88 ({@dice 16d10}) radiant damage on a failed save, or half as much damage on a successful one. The statuette is safe for all creatures to handle once it is no longer in contact with the altar.",
 								"Gustav's corpse wears a handsome, fur-lined black cloak embroidered with golden thread (worth 250 gp) and a suit of chain mail, both nonmagical. Gustav's black mace is a {@item mace of terror}."
 							]
 						},
@@ -5664,7 +5664,7 @@
 							"id": "1e2",
 							"entries": [
 								"The room contains hundreds of worthless books and scrolls describing accounting procedures. The first character who spends at least 10 minutes searching the room and succeeds on a DC 15 Intelligence (Investigation) check finds a book with a bloodstained leather cover. The pages of this book have been hollowed out, creating a hole in which Lief has hidden the iron key that unlocks the four wooden chests in this room.",
-								"Two of the locked chests contain 10,000 cp each. A third chest contains 1,000 gp. The fourth chest holds 500 pp, hidden under which is a manual of bodily health."
+								"Two of the locked chests contain 10,000 cp each. A third chest contains 1,000 gp. The fourth chest holds 500 pp, hidden under which is a {@item manual of bodily health}."
 							]
 						}
 					]
@@ -11172,7 +11172,7 @@
 						},
 						"Baking in the oven are a dozen dream pastries. Morgantha checks on them every 10 minutes. The staircase curls up to {@area O2|413}.",
 						"The barrel holds glistening, greenish-black demon ichor. Morgantha can use the barrel as a font for a {@spell scrying} spell. She can also knock on the barrel three times as an action to summon a {@creature dretch}. The demon crawls out of the barrel at the end of Morgantha's turn and obeys the night hag's commands for 1 hour, after which it dissolves into a pool of ichor. Morgantha can summon up to nine dretches in this manner before the ichor is gone.",
-						"Morgantha's cabinet contains wooden bowls full of herbs and baking ingredients, including flour, sugar, and several gourds of powdered bone. Hanging on the inside of the cabinet doors are a dozen locks of hair. Amid various concoctions are three small, labeled containers that hold elixirs. The first elixir, labeled \"Youth,\" is a golden syrup that magically makes the imbiber appear younger and more attractive for 24 hours. The second elixir, labeled \"Laughter,\" is a nonmagical red tea that infects the imbiber with cackle fever (see \"Diseases\" in chapter 8, \"Running the Game,\" of the {@book Dungeon Master's Guide|dmg}). The third elixir, a greenish milky liquid labeled \"Mother's Milk,\" is actually a dose of pale tincture (see \"Poisons\" in chapter 8 of the {@book Dungeon Master's Guide|dmg}).",
+						"Morgantha's cabinet contains wooden bowls full of herbs and baking ingredients, including flour, sugar, and several gourds of powdered bone. Hanging on the inside of the cabinet doors are a dozen locks of hair. Amid various concoctions are three small, labeled containers that hold elixirs. The first elixir, labeled \"Youth,\" is a golden syrup that magically makes the imbiber appear younger and more attractive for 24 hours. The second elixir, labeled \"Laughter,\" is a nonmagical red tea that infects the imbiber with {@disease cackle fever} (see \"Diseases\" in chapter 8, \"Running the Game,\" of the {@book Dungeon Master's Guide|dmg}). The third elixir, a greenish milky liquid labeled \"Mother's Milk,\" is actually a dose of {@item pale tincture (ingested)||pale tincture} (see \"Poisons\" in chapter 8 of the {@book Dungeon Master's Guide|dmg}).",
 						"The chicken coop contains three chickens, a rooster, and a few laid eggs.",
 						"The wooden trunk has tiny holes bored into its lid and contains a hundred croaking {@creature frog||toads}. Several toads escape if the lid is lifted, but they are harmless."
 					]
@@ -17579,7 +17579,7 @@
 					"name": "Character Background",
 					"id": "6a7",
 					"entries": [
-						"During character creation, players can select the follow­ing background for their characters, with your approval: {@background Haunted One|CoS}. It is appropriate for any character or campaign associaed with eeriness or horror."
+						"During character creation, players can select the following background for their characters, with your approval: {@background Haunted One|CoS}. It is appropriate for any character or campaign associaed with eeriness or horror."
 					]
 				}
 			]

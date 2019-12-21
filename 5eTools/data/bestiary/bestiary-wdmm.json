@@ -1155,6 +1155,7 @@
 		},
 		{
 			"name": "Zorak Lightdrinker",
+			"isNpc": true,
 			"isNamedCreature": true,
 			"size": "M",
 			"type": {
@@ -1483,6 +1484,7 @@
 		},
 		{
 			"name": "Haungharassk",
+			"isNpc": true,
 			"size": "H",
 			"type": "beast",
 			"source": "WDMM",
@@ -1719,6 +1721,7 @@
 				"average": 264,
 				"formula": "23d12 + 115"
 			},
+			"size": "H",
 			"int": 9,
 			"cha": 9,
 			"languages": [
@@ -1867,6 +1870,7 @@
 		},
 		{
 			"name": "Shockerstomper",
+			"isNpc": true,
 			"size": "G",
 			"type": "construct",
 			"source": "WDMM",
@@ -3214,7 +3218,7 @@
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
-						"replace": "the raven",
+						"replace": "raven",
 						"with": "crow",
 						"flags": "i"
 					}
@@ -4173,14 +4177,12 @@
 					"_": {
 						"mode": "replaceSpells",
 						"spells": {
-							"4": {
-								"spells": [
-									{
-										"replace": "{@spell banishment}",
-										"with": "{@spell dimension door}"
-									}
-								]
-							}
+							"4": [
+								{
+									"replace": "{@spell banishment}",
+									"with": "{@spell dimension door}"
+								}
+							]
 						}
 					}
 				}
@@ -4327,30 +4329,24 @@
 					"_": {
 						"mode": "replaceSpells",
 						"spells": {
-							"3": {
-								"spells": [
-									{
-										"replace": "{@spell fly}",
-										"with": "{@spell animate dead}"
-									}
-								]
-							},
-							"4": {
-								"spells": [
-									{
-										"replace": "{@spell banishment}",
-										"with": "{@spell blight}"
-									}
-								]
-							},
-							"5": {
-								"spells": [
-									{
-										"replace": "{@spell scrying}",
-										"with": "{@spell Rary's telepathic bond}"
-									}
-								]
-							}
+							"3": [
+								{
+									"replace": "{@spell fly}",
+									"with": "{@spell animate dead}"
+								}
+							],
+							"4": [
+								{
+									"replace": "{@spell banishment}",
+									"with": "{@spell blight}"
+								}
+							],
+							"5": [
+								{
+									"replace": "{@spell scrying}",
+									"with": "{@spell Rary's telepathic bond}"
+								}
+							]
 						}
 					}
 				}
@@ -4681,6 +4677,7 @@
 		},
 		{
 			"name": "Sing-Along",
+			"isNpc": true,
 			"source": "WDMM",
 			"_copy": {
 				"name": "Commoner",
@@ -5003,14 +5000,12 @@
 					"_": {
 						"mode": "replaceSpells",
 						"spells": {
-							"4": {
-								"spells": [
-									{
-										"replace": "{@spell banishment}",
-										"with": "{@spell Otiluke's Resilient Sphere}"
-									}
-								]
-							}
+							"4": [
+								{
+									"replace": "{@spell banishment}",
+									"with": "{@spell Otiluke's Resilient Sphere}"
+								}
+							]
 						}
 					}
 				},
@@ -5095,14 +5090,12 @@
 					"_": {
 						"mode": "replaceSpells",
 						"spells": {
-							"4": {
-								"spells": [
-									{
-										"replace": "{@spell banishment}",
-										"with": "{@spell confusion}"
-									}
-								]
-							}
+							"4": [
+								{
+									"replace": "{@spell banishment}",
+									"with": "{@spell confusion}"
+								}
+							]
 						}
 					}
 				}
@@ -5209,14 +5202,12 @@
 					"_": {
 						"mode": "replaceSpells",
 						"spells": {
-							"4": {
-								"spells": [
-									{
-										"replace": "{@spell banishment}",
-										"with": "{@spell locate creature}"
-									}
-								]
-							}
+							"4": [
+								{
+									"replace": "{@spell banishment}",
+									"with": "{@spell locate creature}"
+								}
+							]
 						}
 					}
 				}
@@ -5250,14 +5241,12 @@
 					"_": {
 						"mode": "replaceSpells",
 						"spells": {
-							"4": {
-								"spells": [
-									{
-										"replace": "{@spell banishment}",
-										"with": "{@spell confusion}"
-									}
-								]
-							}
+							"4": [
+								{
+									"replace": "{@spell banishment}",
+									"with": "{@spell confusion}"
+								}
+							]
 						}
 					}
 				},

@@ -22,19 +22,23 @@
 					"simple",
 					"martial"
 				],
-				"skills": {
-					"choose": 2,
-					"from": [
-						"Acrobatics",
-						"Animal Handling",
-						"Athletics",
-						"History",
-						"Insight",
-						"Intimidation",
-						"Perception",
-						"Survival"
-					]
-				}
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"acrobatics",
+								"animal handling",
+								"athletics",
+								"history",
+								"insight",
+								"intimidation",
+								"perception",
+								"survival"
+							],
+							"count": 2
+						}
+					}
+				]
 			},
 			"startingEquipment": {
 				"additionalFromBackground": true,
@@ -141,10 +145,67 @@
 										"entries": [
 											"When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
 										]
+									},
+									{
+										"type": "entries",
+										"name": "Superior Technique",
+										"entries": [
+											"You learn one {@filter maneuver|optionalfeatures|feature type=MV;MV:B} of your choice from among those available to the Battle Master archetype. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice).",
+											"You gain one superiority die, which is a {@dice d6} (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest."
+										],
+										"source": "UAClassFeatureVariants",
+										"page": 5
+									},
+									{
+										"type": "entries",
+										"name": "Blind Fighting",
+										"entries": [
+											"Being unable to see a creature doesn't impose disadvantage on your attack rolls against it, provided the creature isn't hidden from you."
+										],
+										"source": "UAClassFeatureVariants",
+										"page": 12
+									},
+									{
+										"type": "entries",
+										"name": "Interception",
+										"entries": [
+											"When a creature you can see hits a target that is within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by {@dice 1d10} + your proficiency bonus (to a minimum of 0 damage). You must be wielding a shield or a simple or martial weapon to use this reaction."
+										],
+										"source": "UAClassFeatureVariants",
+										"page": 12
+									},
+									{
+										"type": "entries",
+										"name": "Thrown Weapon Fighting",
+										"entries": [
+											"You can draw a weapon that has the thrown property as part of the attack you make with the weapon.",
+											"In addition, when you hit with a ranged attack using a thrown weapon, you gain a +1 bonus to the damage roll."
+										],
+										"source": "UAClassFeatureVariants",
+										"page": 12
+									},
+									{
+										"type": "entries",
+										"name": "Unarmed Fighting",
+										"entries": [
+											"Your unarmed strikes can deal bludgeoning damage equal to {@dice 1d6} + your Strength modifier. If you strike with two free hands, the {@dice d6} becomes a {@dice d8}.",
+											"When you successfully start a grapple, you can deal {@dice 1d4} bludgeoning damage to the grappled creature. Until the grapple ends, you can also deal this damage to the creature whenever you hit it with a melee attack."
+										],
+										"source": "UAClassFeatureVariants",
+										"page": 12
 									}
 								]
 							}
 						]
+					},
+					{
+						"name": "Martial Versatility",
+						"entries": [
+							"{@i 1st-level feature (enhances Fighting Style)}",
+							"Whenever you gain a level in this class, you can replace a fighting style you know with another style available to your class. This change represents a shift of focus in your martial training and practice, causing you to lose the benefits of one style and gain the benefits of another style."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 12
 					},
 					{
 						"name": "Second Wind",
@@ -152,13 +213,22 @@
 							"You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to {@dice 1d10} + your fighter level.",
 							"Once you use this feature, you must finish a short or long rest before you can use it again."
 						]
+					},
+					{
+						"name": "Maneuver Versatility",
+						"entries": [
+							"{@i 1st-level feature (enhances Maneuvers)}",
+							"If you know any maneuvers from the fighter's Battle Master archetype, you can replace one maneuver you know with a different maneuver whenever you finish a long rest. This change reflects your physical and mental preparation for the day ahead."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 5
 					}
 				],
 				[
 					{
 						"name": "Action Surge",
 						"entries": [
-							"Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.",
+							"Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action.",
 							"Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
 						]
 					}
@@ -475,7 +545,7 @@
 									},
 									{
 										"type": "options",
-										"name": "Battle Master: Maneuvers",
+										"name": "Maneuvers",
 										"entries": [
 											{
 												"type": "entries",
@@ -671,6 +741,76 @@
 												]
 											}
 										]
+									},
+									{
+										"name": "Maneuver Options",
+										"type": "entries",
+										"entries": [
+											"{@i 1st-level feature (enhances Maneuvers)}",
+											"If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters and to characters who have the Superior Technique fighting style or the Martial Adept feat.",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "options",
+														"entries": [
+															{
+																"type": "entries",
+																"name": "Ambush",
+																"entries": [
+																	"When you make a Dexterity ({@skill Stealth}) check or an initiative roll, you can expend one superiority die and add the die to the roll."
+																]
+															},
+															{
+																"type": "entries",
+																"name": "Bait and Switch",
+																"entries": [
+																	"When you're within 5 feet of an ally on your turn, you can expend one superiority die and switch places with that ally, provided you spend at least 5 feet of movement. This movement doesn't provoke opportunity attacks.",
+																	"Roll the superiority die. Until the start of your next turn, the ally gains a bonus to AC equal to the number rolled."
+																]
+															},
+															{
+																"type": "entries",
+																"name": "Brace",
+																"entries": [
+																	"When an enemy you can see moves within 5 feet of you, you can use your reaction to expend one superiority die and make one weapon attack against that creature. If the attack hits, add the superiority die to the attack's damage roll."
+																]
+															},
+															{
+																"type": "entries",
+																"name": "Restraining Strike",
+																"entries": [
+																	"Immediately after you hit a creature with a melee weapon attack on your turn, you can expend one superiority die and use a bonus action to grapple the target (see chapter 9 in the Player's Handbook for rules on grappling). Add the superiority die to your Strength ({@skill Athletics}) check. The target is also restrained while grappled in this way."
+																]
+															},
+															{
+																"type": "entries",
+																"name": "Silver Tongue",
+																"entries": [
+																	"When you make a Charisma ({@skill Deception}) check or a Charisma ({@skill Persuasion}) check, you can expend one superiority die, and add the superiority die to the ability check."
+																]
+															},
+															{
+																"type": "entries",
+																"name": "Snipe",
+																"entries": [
+																	"As a bonus action, you can expend one superiority die and make a ranged weapon attack. You can draw a thrown weapon as part of making this attack. If you hit, add the superiority die to the attack's damage roll."
+																]
+															},
+															{
+																"type": "entries",
+																"name": "Studious Eye",
+																"entries": [
+																	"When you make a Wisdom ({@skill Insight}) check or an Intelligence ({@skill Investigation}) check, you can expend one superiority die, and add the superiority die to the ability check."
+																]
+															}
+														]
+													}
+												]
+											}
+										],
+										"source": "UAClassFeatureVariants",
+										"page": 5
 									}
 								]
 							}
@@ -1065,8 +1205,8 @@
 								}
 							],
 							"colLabels": [
-								"{@filter Cantrips Known|spells|level=0|subclass=Eldritch Knight}",
-								"{@filter Spells Known|spells|subclass=Eldritch Knight}"
+								"{@filter Cantrips Known|spells|level=0|subclass=Fighter: Eldritch Knight}",
+								"{@filter Spells Known|spells|subclass=Fighter: Eldritch Knight}"
 							],
 							"rows": [
 								[
@@ -1160,10 +1300,10 @@
 								}
 							],
 							"colLabels": [
-								"{@filter 1st|spells|level=1|subclass=Eldritch Knight}",
-								"{@filter 2nd|spells|level=2|subclass=Eldritch Knight}",
-								"{@filter 3rd|spells|level=3|subclass=Eldritch Knight}",
-								"{@filter 4th|spells|level=4|subclass=Eldritch Knight}"
+								"{@filter 1st|spells|level=1|subclass=Fighter: Eldritch Knight}",
+								"{@filter 2nd|spells|level=2|subclass=Fighter: Eldritch Knight}",
+								"{@filter 3rd|spells|level=3|subclass=Fighter: Eldritch Knight}",
+								"{@filter 4th|spells|level=4|subclass=Fighter: Eldritch Knight}"
 							],
 							"rows": [
 								[
@@ -2049,7 +2189,7 @@
 														"type": "entries",
 														"name": "Grasping Arrow",
 														"entries": [
-															"When this arrow strikes its target, conjuration magic creates grasping, thorny brambles that wrap around the target. If the arrow hits a creature, the target takes an extra {@dice 2d6} poison damage, its speed is reduced by 10 feet, and it takes {@dice 2d6} slashing damage the first time on each turn it moves 1 foot or more without teleporting. The target or any creature that can reach it can use its action to remove the brambles with a successful Strength (Athletics) check against your Arcane Shot save DC. Otherwise, the brambles last for 1 minute or until you use this option again.",
+															"When this arrow strikes its target, conjuration magic creates grasping, thorny brambles that wrap around the target. If the arrow hits a creature, the target takes an extra {@dice 2d6} poison damage, its speed is reduced by 10 feet, and it takes {@dice 2d6} slashing damage the first time on each turn it moves 1 foot or more without teleporting. The target or any creature that can reach it can use its action to remove the brambles with a successful Strength ({@skill Athletics}) check against your Arcane Shot save DC. Otherwise, the brambles last for 1 minute or until you use this option again.",
 															"The poison and slashing damage both increase to {@dice 4d6} when you reach 18th level in this class."
 														]
 													},
@@ -2484,7 +2624,7 @@
 														"type": "entries",
 														"name": "Grasping Arrow",
 														"entries": [
-															"When this arrow strikes its target, conjuration magic creates grasping, poisonous brambles, which wrap around the target. The creature hit by the arrow takes an extra {@dice 2d6} poison damage, its speed is reduced by 10 feet, and it takes {@dice 2d6} slashing damage the first time on each turn it moves 1 foot or more without teleporting. The target or any creature that can reach it can use its action to remove the brambles with a successful Strength (Athletics) check against your Arcane Shot save DC. Otherwise, the brambles last for 1 minute or until you use this option again.",
+															"When this arrow strikes its target, conjuration magic creates grasping, poisonous brambles, which wrap around the target. The creature hit by the arrow takes an extra {@dice 2d6} poison damage, its speed is reduced by 10 feet, and it takes {@dice 2d6} slashing damage the first time on each turn it moves 1 foot or more without teleporting. The target or any creature that can reach it can use its action to remove the brambles with a successful Strength ({@skill Athletics}) check against your Arcane Shot save DC. Otherwise, the brambles last for 1 minute or until you use this option again.",
 															"The poison damage and slashing damage both increase to {@dice 4d6} when you reach 18th level in this class."
 														]
 													},
@@ -3297,140 +3437,6 @@
 					"shortName": "Warlord (Stream)"
 				},
 				{
-					"name": "Psychic Warrior (Livestream)",
-					"spellcastingAbility": "int",
-					"subclassFeatures": [
-						[
-							{
-								"name": "Psychic Warrior (Livestream)",
-								"entries": [
-									"{@i Transcribed on 2018-10-13. [Square bracketed text] denotes transcriber's annotations.}",
-									"A Psychic Warrior combines the study of psionics with martial training, yielding a warrior who can transcend their physical limits while delivering skilled, deadly attacks.",
-									{
-										"type": "entries",
-										"name": "Spellcasting",
-										"entries": [
-											"When you reach 3rd level, you augment your martial prowess with the ability to cast spells.",
-											{
-												"type": "entries",
-												"name": "Cantrips",
-												"entries": [
-													"You learn two cantrips of your choice from the psionic spell list. You learn an additional wizard or psionic cantrip at 10th level."
-												]
-											},
-											{
-												"type": "entries",
-												"name": "Spell Slots",
-												"entries": [
-													"The Psychic Warrior Spellcasting table shows how many spells slots you have to case your spells of 1st level or higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest."
-												]
-											},
-											{
-												"type": "entries",
-												"name": "Spells Known of 1st-Level and Higher",
-												"entries": [
-													"You know three 1st-level spells of your choice chosen from the psionic spell list.",
-													"The Spells Known column {@i [currently unavailable]} of the Psychic Warrior Spellcasting table shows when you learn more spells of 1st level or higher. Each of these spells must be chosen from the psionic spell list, and must be of a level for which you have spell slots.",
-													"Whenever you gain a fighter level, you can replace one of the psionic spells you know with another spells of your choice from the psionic spell list."
-												]
-											},
-											{
-												"type": "entries",
-												"name": "Spellcasting Ability",
-												"entries": [
-													"Intelligence is your spellcasting ability for your spells. You use your Intelligence modifier whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a spell you cast and when making an attack roll with one.",
-													{
-														"type": "abilityDc",
-														"name": "Spell",
-														"attributes": [
-															"int"
-														]
-													},
-													{
-														"type": "abilityAttackMod",
-														"name": "Spell",
-														"attributes": [
-															"int"
-														]
-													}
-												]
-											}
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Psychic Destroyer",
-										"entries": [
-											"Starting at 3rd level, you can expend your spell energy to imbue your attacks with psychic power. Once during your turn when you hit with a weapon attack, you can expend one spell slot to deal psychic damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8."
-										]
-									},
-									{
-										"type": "entries",
-										"name": "Psychic Guardian",
-										"entries": [
-											"Starting at 3rd level, you can expend your spell energy to protect your allies from harm. When an ally you can see within 30 feet of you is hit by an attack, you can use your reaction and expend a spell slot of 1st level or higher to grant that ally a bonus to AC equal to 3 + the spell slot's level, including against the triggering attack, until the end of your next turn."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Psychic Storm",
-										"entries": [
-											"At 7th level, your aggression translates into an aura of disruptive psychic energy. If you cast a psionic cantrip or use the attack action on your turn, all hostile creatures within 10 feet of you take psychic damage equal to double your Intelligence modifier (minimum 1)."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Psionic Recovery",
-										"entries": [
-											"Starting at 10th level, when you use your Second Wind class feature you also regain an expended 1st-level spell slot."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Psionic Surge",
-										"entries": [
-											"At 15th level, you gain the ability to channel additional psionic power when you use your Action Surge class feature. Until the end of your turn, if your attack or spell causes a creature to take psychic damage, that creature takes an additional 1d10 psychic damage. A creature can take this additional damage only once during your turn."
-										]
-									}
-								]
-							}
-						],
-						[
-							{
-								"entries": [
-									{
-										"type": "entries",
-										"name": "Mind Cleaver",
-										"entries": [
-											"At 18th level, your attacks leave behind traces of disruptive, psychic energy. If you hit a creature with a weapon attack, you can cause it to become vulnerable to psychic energy until the end of your next turn. Once you use this ability, you cannot use it again until you complete a short or long rest."
-										]
-									}
-								]
-							}
-						]
-					],
-					"source": "Stream",
-					"shortName": "Psychic Warrior (Stream)"
-				},
-				{
 					"name": "Weapon Master (Livestream)",
 					"subclassFeatures": [
 						[
@@ -3778,7 +3784,7 @@
 					"subclassFeatures": [
 						[
 							{
-								"name": "Slayer (Livestream)",
+								"name": "Slayer",
 								"entries": [
 									"A slayer is a fighter who specializes in bringing down the mightiest monsters wth a few, resounding blows. Some slayers target specific types of monsters, such as dwarven giant slayers who patrol the mountain's peaks or human dragon slayers who train to defeat wyrms of all types.",
 									{
@@ -3935,6 +3941,294 @@
 					],
 					"source": "Stream",
 					"shortName": "Slayer (Stream)"
+				},
+				{
+					"name": "Rune Knight (UA)",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Rune Knight",
+								"entries": [
+									"You discovered how to enhance your martial prowess using the supernatural power of runes. The ancient practice of rune magic originated with giants. {@i Skiltgravr} (\"rune cutters\") can be found among any type of giants, and you likely learned your methods first or second hand from such a mystical artisan. Whether you found the giant's work carved into a hill or cave, learned of the runes from a traveling sage, or met the giant in person, you studied the giant's craft. In time, you learned how to carve and apply runes to your equipment and how to invoke their magic, ultimately becoming a Rune Knight.",
+									{
+										"type": "entries",
+										"name": "Bonus Proficiencies",
+										"entries": [
+											"{@i 3rd-level Rune Knight feature}",
+											"You gain proficiency with smith's tools, and you learn to speak, read, and write Giant."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Rune Magic",
+										"entries": [
+											"{@i 3rd-level Rune Knight feature}",
+											"You learn how to use runes to enhance your gear. When you gain this feature, you learn how to inscribe two runes of your choice on weapons, armor, or shields (see \"{@filter Rune Options|optionalfeatures|feature type=RN|source=UAFighterRangerRogue}\").",
+											"Whenever you finish a long rest, you can touch a number of objects equal to the number of runes you know, and you inscribe a different rune onto each of the objects. To be eligible, an object must be a weapon, a suit of armor, or a shield.",
+											"Your rune remains on an object until you finish a long rest, and an object can bear only one of your runes.",
+											"Each time you gain a level in this class, you can replace one rune you know with a different one."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Rune Options",
+										"entries": [
+											"Here are rune options for the Rune Magic feature. They are all magical effects. If a rune requires a saving throw, your Rune Magic save DC equals 8 + your proficiency bonus + your Intelligence modifier.",
+											{
+												"type": "entries",
+												"name": "Haug (Hill Rune)",
+												"entries": [
+													"This rune's magic bestows a resilience reminiscent of a hill giant. While wearing or carrying an object inscribed with this rune, you have advantage on saving throws against being {@condition poisoned}, and you have resistance against poison damage.",
+													"In addition, you can invoke the rune as a bonus action, gaining resistance to bludgeoning, piercing, and slashing damage for 1 minute. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Ild (Fire Rune)",
+												"entries": [
+													"This rune's magic channels the masterful craftsmanship of fire giant smiths. While wearing or carrying an object inscribed with this rune, your proficiency bonus is doubled for any ability check you make that uses your proficiency with a tool.",
+													"In addition, when you hit a creature with a weapon attack, you can invoke the rune to summon fiery shackles: the target must succeed on a Strength saving throw or be {@condition restrained} for 1 minute. While {@condition restrained} by the shackles, the target takes  {@dice 2d6} fire damage at the start of each of its turns. The target can repeat the saving throw at the end of each of its turns, banishing the shackles on a success. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Ise (Frost Rune)",
+												"entries": [
+													"This rune's magic evokes a frost giant's stoic calm. While wearing or carrying an object inscribed with this rune, you have advantage on Wisdom ({@skill Animal Handling}) checks and Charisma ({@skill Intimidation}) checks.",
+													"In addition, you can invoke the rune as a bonus action to increase your Strength score by 2 for 10 minutes. This increase can cause your score to exceed 20, but not 30. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Skye (Cloud Rune)",
+												"entries": [
+													"This rune's magic emulates the deceptiveness of a cloud giant. While wearing or carrying an object inscribed with this rune, you have advantage on Dexterity ({@skill Sleight of Hand}) checks and Charisma ({@skill Deception}) checks.",
+													"In addition, when you or a creature you can see within 30 feet of you is hit by an attack roll, you can use your reaction to invoke the rune and cause that attack to target a different creature within 30 feet of you (other than the attacker), using the same roll. This magic can transfer the attack regardless of the attack's range. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Stein (Stone Rune)",
+												"entries": [
+													"This rune's magic channels the insightfulness of a stone giant. While wearing or carrying an object inscribed with this rune, you have advantage on Wisdom ({@skill Insight}) checks, and you have {@sense darkvision} out to a range of 60 feet. If you already have {@sense darkvision}, its range increases by 30 feet.",
+													"In addition, when a creature you can see ends its turn within 30 feet of you, you can use your reaction to invoke the rune and force the creature to make a Wisdom saving throw. Unless the save succeeds, the creature is {@condition charmed} by you for 1 minute. While {@condition charmed} in this way, the creature has a speed of 0 and is {@condition incapacitated}, descending into a dreamy stupor. The effect ends if the {@condition charmed} creature takes any damage or if someone else uses an action to shake the creature out of its haze. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Uvar (Storm Rune)",
+												"entries": [
+													"Using this rune, you can glimpse the future like a storm giant. While wearing or carrying an object inscribed with this rune, you have advantage on Intelligence ({@skill Arcana}) checks, and you can't be surprised as long as you are not {@condition incapacitated}.",
+													"In addition, you can invoke the rune as a bonus action to enter a prophetic state for 1 minute or until you're {@condition incapacitated}. Until the state ends, when you or another creature you can see within 60 feet of you makes an attack roll, a saving throw, or an ability check, you can use your reaction to cause the roll to have advantage or disadvantage. Once you invoke the rune, you can't do so again until you finish a short or long rest."
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Giant Might",
+										"entries": [
+											"{@i 3rd-level Rune Knight feature}",
+											"You can imbue yourself with the might of giants. As a bonus action, you magically gain the following benefits, which last for 1 minute:",
+											{
+												"type": "list",
+												"items": [
+													"If you are smaller than Large, you become Large, along with anything you are wearing. If you lack the room to become Large, your size doesn't change.",
+													"You have advantage on Strength checks and Strength saving throws.",
+													"Your weapon attacks deal an extra  {@dice 1d6} damage."
+												]
+											},
+											"You can use this feature twice, and you regain all expended uses of it when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Defensive Runes",
+										"entries": [
+											"{@i 7th-level Rune Knight feature}",
+											"You learn to invoke your rune magic to protect your allies. When another creature you can see within 60 feet of you is hit by an attack roll, you can use your reaction to grant a bonus to the creature's AC against that attack. The bonus equals 1 + your Intelligence modifier (minimum of +2).",
+											"In addition, you learn one new rune of your choice from the Rune Magic feature (for a total of three)."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Great Stature",
+										"entries": [
+											"{@i 10th-level Rune Knight feature}",
+											"The magic of your runes permanently alters you. When you gain this feature, roll  {@dice 3d4}. You grow a number of inches in height equal to the roll. Moreover, the extra damage you deal with your Giant Might feature increases to  {@dice 1d8}.",
+											"In addition, you learn one new rune of your choice from your Rune Magic feature (for a total of four)."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Rune Magic Mastery",
+										"entries": [
+											"{@i 15th-level Rune Knight feature}",
+											"You can invoke each rune you know from your Rune Magic feature twice, rather than once, and you regain all expended uses when you finish a short or long rest.",
+											"In addition, you learn one new rune of your choice from the Rune Magic feature (for a total of five)."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Blessing of the All Father",
+										"entries": [
+											"{@i 18th-level Rune Knight feature}",
+											"You learn how to share your rune magic with your allies. When you use your Giant Might feature, you can choose one willing creature you can see within 60 feet of you. The chosen creature also gains the benefits of your Giant Might feature."
+										]
+									}
+								]
+							}
+						]
+					],
+					"source": "UAFighterRangerAndRogue",
+					"shortName": "Rune Knight (UA)"
+				},
+				{
+					"name": "Psychic Warrior (UA)",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Psychic Warrior",
+								"entries": [
+									"Awakening to the psionic power within themselves, a Psychic Warrior is a fighter who augments their physical might with psychically infused weapon strikes, telekinetic lashes, and barriers of mental force.",
+									"As a Psychic Warrior, you might have honed your psionic abilities through your own disciplined practice, unlocked it under the tutelage of a master, or developed it at an academy dedicated to wielding the mind's power as both weapon and shield.",
+									{
+										"type": "entries",
+										"name": "Psionic Armament",
+										"entries": [
+											"{@i 3rd-level Psychic Warrior feature}",
+											"You can channel your psychic power to magically augment your prowess. When you finish a long rest, choose whether to augment your defenses or your strikes. The chosen benefit lasts until you finish a long rest.",
+											{
+												"type": "entries",
+												"name": "Augmented Defenses",
+												"entries": [
+													"When you or a creature you can see within 30 feet of you takes damage, you can use your reaction to roll a {@dice d10} and reduce the amount of damage taken by the number rolled. When you reach 10th level in this class, the die changes to a {@dice d12}."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Augmented Strikes",
+												"entries": [
+													"Once during each of your turns when you hit a creature with a weapon attack, you can also deal {@dice 1d4} psychic damage to that target. When you reach 10th level in this class, the psychic damage increases to {@dice 1d6}."
+												]
+											}
+										]
+									},
+									{
+										"name": "Telekinetic Hand",
+										"type": "entries",
+										"entries": [
+											"{@i 3rd-level Psychic Warrior feature}",
+											"You learn the {@spell mage hand} cantrip. You can cast it without components, and you can make the spectral hand {@condition invisible}. Intelligence is your spellcasting ability for this spell."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Strength of Mind",
+										"entries": [
+											"{@i 7th-level Psychic Warrior feature}",
+											"As a bonus action, you can telekinetically lash out at a creature you can see within 20 feet of you. The target must make a Strength saving throw against a DC equal to 8 + your proficiency bonus + your Intelligence modifier. On a failed save, the target takes force damage equal to {@dice 2d6} plus your Intelligence modifier and is telekinetically moved 15 feet directly toward or away from you (your choice). On a successful save, it takes half as much damage and isn't moved.",
+											"You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Telekinetic Bulwark",
+										"entries": [
+											"{@i 10th-level Psychic Warrior feature}",
+											"When you take the {@action Attack} action, you can forgo one of your attacks to project a bastion of psionic power in a 10-foot radius around yourself. It lasts for 1 minute or until you're {@condition incapacitated}. For the duration, you and your allies in that area gain the benefits of half cover and have advantage on Strength saving throws.",
+											"Once you use this feature, you can't do so again until you finish a long rest or until after you use your Second Wind feature."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Psionic Armament Improvement",
+										"entries": [
+											"{@i 10th-level Psychic Warrior feature}",
+											"When you reach 10th level in this class, your Augmented Defenses dice increases to {@dice 1d12}, and your Augmented Strikes dice increases to a {@dice d6}."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Agonizing Strikes",
+										"entries": [
+											"{@i 15th-level Psychic Warrior feature}",
+											"Your attacks can channel psychic agony. When you hit a creature with a weapon attack, you can also deal {@dice 2d10} psychic damage to that target and force it to make a Constitution saving throw against a DC equal to 8 + your proficiency bonus + your Intelligence modifier. Unless the save succeeds, the target falls {@condition prone}, and it suffers disadvantage on ability checks until the end of your next turn.",
+											"You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Psychic Dreadnaught",
+										"entries": [
+											"{@i 18th-level Psychic Warrior feature}",
+											"The power of your mind suffuses your entire being, making you a nigh-unstoppable force on the battlefield. Using your reaction when you take damage, you can give yourself the following benefits for 1 minute or until you're {@condition incapacitated}:",
+											{
+												"type": "list",
+												"items": [
+													"At the start of each of your turns, you regain 10 hit points.",
+													"Your walking speed increases by 10 feet.",
+													"If you're {@condition prone}, you can stand up by spending 5 feet of movement."
+												]
+											},
+											"Once you activate this feature, you can't use it again until you finish a long rest."
+										]
+									}
+								]
+							}
+						]
+					],
+					"source": "UAFighterRogueWizard",
+					"shortName": "Psychic Warrior (UA)",
+					"page": 1
 				}
 			],
 			"fluff": [
@@ -4119,7 +4413,7 @@
 													"exact": 4
 												}
 											},
-											"Tribal Warrior. Your instructor grew up in a tribe, where fighting for one's life was practically an every­day occurrence."
+											"Tribal Warrior. Your instructor grew up in a tribe, where fighting for one's life was practically an everyday occurrence."
 										],
 										[
 											{
@@ -4228,3 +4522,4 @@
 		}
 	]
 }
+
