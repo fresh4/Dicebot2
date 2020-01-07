@@ -10,7 +10,7 @@ exports.run = (bot, msg, args) => {
 }
 module.exports.help = {
     name: "rollcharacter",
-    category: "Generator",
+    category: "IGNORE",
     description: "Rolls a character of a race and class.",
     detailedDesc: "Incomplete command.",
     usage: "rollcharacter [race] [class]"
