@@ -11,6 +11,7 @@ exports.run = (bot, msg, args) => {
         embed.setTitle("Commands")
              .setDescription(`Hey! This is a full list of everything I can do.\n` + 
                              `You can try \`${bot.prefix}help <command>\` to get more info for a command.\n` +
+                             `If you don't know your prefix you can start your message by pinging me instead.`+
                              `Invite me to your server [here](${invite})!`)
         categories.forEach(category => {
             let fieldOutput = ""
