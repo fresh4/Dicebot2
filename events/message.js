@@ -8,14 +8,17 @@ module.exports = (bot, msg) => {
         bot.prefix = bot.config.prefix
     }
 
+    const prefixMention = new RegExp(`^<@!?${bot.user.id}> `);
+    const prefix = msg.content.match(prefixMention) ? msg.content.match(prefixMention)[0] : bot.prefix;
+
     //No Prefix Stuff
     if(msg.content.includes("[[") || msg.content.includes("]]")) bot.commands.get("inlineroll").run(bot, msg);
     require('../misc/eggs.js').eastereggs(bot, msg);
     require('../misc/math.js').badMath(bot, msg);
     //End NOPREFIX
 
-    if (msg.content.indexOf(bot.prefix) !== 0) return;
-    let args = msg.content.toLowerCase().slice(bot.prefix.length).trim().split(/ +/g);
+    if (msg.content.indexOf(prefix) !== 0) return;
+    let args = msg.content.toLowerCase().slice(prefix.length).trim().split(/ +/g);
     let command = args.shift().toLowerCase();
     let cmd = bot.commands.get(command);
 
