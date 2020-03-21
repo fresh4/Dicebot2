@@ -3,6 +3,8 @@
 		{
 			"name": "Fighter",
 			"source": "PHB",
+			"page": 70,
+			"srd": true,
 			"hd": {
 				"number": 1,
 				"faces": 10
@@ -249,6 +251,17 @@
 							"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 4th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -267,6 +280,17 @@
 							"When you reach 6th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 6th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -285,6 +309,17 @@
 							"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 8th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -320,6 +355,17 @@
 							"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 12th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -337,6 +383,17 @@
 							"When you reach 14th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 14th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -355,6 +412,17 @@
 							"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 16th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -387,6 +455,17 @@
 							"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 19th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -402,6 +481,9 @@
 			"subclasses": [
 				{
 					"name": "Champion",
+					"shortName": "Champion",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -471,12 +553,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Champion"
+					]
 				},
 				{
 					"name": "Battle Master",
+					"shortName": "Battle Master",
+					"source": "PHB",
 					"subclassFeatures": [
 						[
 							{
@@ -487,7 +569,7 @@
 										"type": "entries",
 										"name": "Student of War",
 										"entries": [
-											"At 3rd level, you gain proficiency with one type of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan tool} of your choice."
+											"At 3rd level, you gain proficiency with one type of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools} of your choice."
 										]
 									},
 									{
@@ -914,12 +996,13 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Battle Master"
+					]
 				},
 				{
 					"name": "Cavalier (UA)",
+					"shortName": "Cavalier (UA)",
+					"source": "UAKitsOfOld",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1036,12 +1119,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAKitsOfOld",
-					"shortName": "Cavalier (UA)"
+					]
 				},
 				{
 					"name": "Cavalier v2 (UA)",
+					"shortName": "Cavalier v2 (UA)",
+					"source": "UARevisedClassOptions",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1190,12 +1274,14 @@
 								]
 							}
 						]
-					],
-					"source": "UARevisedClassOptions",
-					"shortName": "Cavalier v2 (UA)"
+					]
 				},
 				{
 					"name": "Eldritch Knight",
+					"shortName": "Eldritch Knight",
+					"source": "PHB",
+					"spellcastingAbility": "int",
+					"casterProgression": "1/3",
 					"subclassTableGroups": [
 						{
 							"subclasses": [
@@ -1429,8 +1515,6 @@
 							]
 						}
 					],
-					"spellcastingAbility": "int",
-					"casterProgression": "1/3",
 					"subclassFeatures": [
 						[
 							{
@@ -1569,12 +1653,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Eldritch Knight"
+					]
 				},
 				{
 					"name": "Monster Hunter (UA)",
+					"shortName": "Monster Hunter (UA)",
+					"source": "UAGothicHeroes",
 					"spellcastingAbility": "wis",
 					"subclassFeatures": [
 						[
@@ -1692,12 +1776,12 @@
 								]
 							}
 						]
-					],
-					"source": "UAGothicHeroes",
-					"shortName": "Monster Hunter (UA)"
+					]
 				},
 				{
 					"name": "Purple Dragon Knight (Banneret)",
+					"shortName": "Purple Dragon Knight (Banneret)",
+					"source": "SCAG",
 					"subclassFeatures": [
 						[
 							{
@@ -1780,12 +1864,12 @@
 								]
 							}
 						]
-					],
-					"source": "SCAG",
-					"shortName": "Purple Dragon Knight (Banneret)"
+					]
 				},
 				{
 					"name": "Scout (UA)",
+					"shortName": "Scout (UA)",
+					"source": "UAKitsOfOld",
 					"subclassFeatures": [
 						[
 							{
@@ -1920,12 +2004,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAKitsOfOld",
-					"shortName": "Scout (UA)"
+					]
 				},
 				{
 					"name": "Arcane Archer (UA)",
+					"shortName": "Arcane Archer (UA)",
+					"source": "UAFighter",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -2117,12 +2202,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAFighter",
-					"shortName": "Arcane Archer (UA)"
+					]
 				},
 				{
 					"name": "Arcane Archer v2 (UA)",
+					"shortName": "Arcane Archer v2 (UA)",
+					"source": "UARevisedSubclasses",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -2298,12 +2384,12 @@
 								]
 							}
 						]
-					],
-					"source": "UARevisedSubclasses",
-					"shortName": "Arcane Archer v2 (UA)"
+					]
 				},
 				{
 					"name": "Knight (UA)",
+					"shortName": "Knight (UA)",
+					"source": "UAFighter",
 					"subclassFeatures": [
 						[
 							{
@@ -2383,12 +2469,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAFighter",
-					"shortName": "Knight (UA)"
+					]
 				},
 				{
 					"name": "Samurai (UA)",
+					"shortName": "Samurai (UA)",
+					"source": "UAFighter",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -2460,12 +2547,12 @@
 								]
 							}
 						]
-					],
-					"source": "UAFighter",
-					"shortName": "Samurai (UA)"
+					]
 				},
 				{
 					"name": "Sharpshooter (UA)",
+					"shortName": "Sharpshooter (UA)",
+					"source": "UAFighter",
 					"subclassFeatures": [
 						[
 							{
@@ -2544,12 +2631,12 @@
 								]
 							}
 						]
-					],
-					"source": "UAFighter",
-					"shortName": "Sharpshooter (UA)"
+					]
 				},
 				{
 					"name": "Arcane Archer",
+					"shortName": "Arcane Archer",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -2732,12 +2819,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Arcane Archer"
+					]
 				},
 				{
 					"name": "Cavalier",
+					"shortName": "Cavalier",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -2825,12 +2912,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Cavalier"
+					]
 				},
 				{
 					"name": "Samurai",
+					"shortName": "Samurai",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -2909,12 +2996,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Samurai"
+					]
 				},
 				{
 					"name": "Brute (UA)",
+					"shortName": "Brute (UA)",
+					"source": "UAThreeSubclasses",
 					"subclassFeatures": [
 						[
 							{
@@ -3014,12 +3101,12 @@
 								]
 							}
 						]
-					],
-					"source": "UAThreeSubclasses",
-					"shortName": "Brute (UA)"
+					]
 				},
 				{
 					"name": "Warlord (Livestream)",
+					"shortName": "Warlord (Stream)",
+					"source": "Stream",
 					"subclassTableGroups": [
 						{
 							"subclasses": [
@@ -3432,12 +3519,12 @@
 								]
 							}
 						]
-					],
-					"source": "Stream",
-					"shortName": "Warlord (Stream)"
+					]
 				},
 				{
 					"name": "Weapon Master (Livestream)",
+					"shortName": "Weapon Master (Stream)",
+					"source": "Stream",
 					"subclassFeatures": [
 						[
 							{
@@ -3775,12 +3862,12 @@
 								]
 							}
 						]
-					],
-					"source": "Stream",
-					"shortName": "Weapon Master (Stream)"
+					]
 				},
 				{
 					"name": "Slayer (Livestream)",
+					"shortName": "Slayer (Stream)",
+					"source": "Stream",
 					"subclassFeatures": [
 						[
 							{
@@ -3938,12 +4025,12 @@
 								]
 							}
 						]
-					],
-					"source": "Stream",
-					"shortName": "Slayer (Stream)"
+					]
 				},
 				{
 					"name": "Rune Knight (UA)",
+					"shortName": "Rune Knight (UA)",
+					"source": "UAFighterRangerRogue",
 					"subclassFeatures": [
 						[
 							{
@@ -4103,12 +4190,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAFighterRangerAndRogue",
-					"shortName": "Rune Knight (UA)"
+					]
 				},
 				{
 					"name": "Psychic Warrior (UA)",
+					"shortName": "Psychic Warrior (UA)",
+					"source": "UAFighterRogueWizard",
+					"page": 1,
 					"subclassFeatures": [
 						[
 							{
@@ -4225,14 +4313,115 @@
 								]
 							}
 						]
-					],
-					"source": "UAFighterRogueWizard",
-					"shortName": "Psychic Warrior (UA)",
-					"page": 1
+					]
+				},
+				{
+					"name": "Echo Knight",
+					"shortName": "Echo Knight",
+					"source": "EGW",
+					"page": 0,
+					"subclassFeatures": [
+						[
+							{
+								"name": "Echo Knight",
+								"entries": [
+									"A mysterious and feared frontline warrior of the Kryn Dynasty, the Echo Knight has mastered the art of using dunamis to summon the fading shades of unrealized timelines to aid them in battle. Surrounded by echoes of their own might, they charge into the fray as a cycling swarm of shadows and strikes.",
+									{
+										"type": "entries",
+										"name": "Manifest Echo",
+										"entries": [
+											"{@i 3rd-level Echo Knight feature}",
+											"You can use a bonus action to magically manifest an echo of yourself in an unoccupied space you can see within 15 feet of you. This echo is a magical, translucent, gray image of you that lasts until it is destroyed, until you dismiss it as a bonus action, until you manifest another echo, or until you're {@condition incapacitated}.",
+											"Your echo has AC 14 + your proficiency bonus, 1 hit point, and immunity to all conditions. If it has to make a saving throw, it uses your saving throw bonus for the roll. It is the same size as you, and it occupies its space. On your turn, you can mentally command the echo to move up to 30 feet in any direction (no action required). If your echo is ever more than 30 feet from you at the end of your turn, it is destroyed.",
+											"You can use the echo in the following ways:",
+											{
+												"type": "list",
+												"items": [
+													"As a bonus action, you can teleport, magically swapping places with your echo at a cost of 15 feet of your movement, regardless of the distance between the two of you.",
+													"When you take the {@action Attack} action on your turn, any attack you make with that action can originate from your space or the echo's space. You make this choice for each attack.",
+													"When a creature that you can see within 5 feet of your echo moves at least 5 feet away from it, you can use your reaction to make an opportunity attack against that creature as if you were in the echo's space."
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Unleash Incarnation",
+										"entries": [
+											"{@i 3rd-level Echo Knight feature}",
+											"You can heighten your echo's fury. Whenever you take the {@action Attack} action, you can make one additional melee attack from the echo's position.",
+											"You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Echo Avatar",
+										"entries": [
+											"{@i 7th-level Echo Knight feature}",
+											"You can temporarily transfer your consciousness to your echo. As an action, you can see through your echo's eyes and hear through its ears. During this time, you are {@condition deafened} and {@condition blinded}. You can sustain this effect for up to 10 minutes, and you can end it at any time (requires no action). While your echo is being used in this way, it can be up to 1,000 feet away from you without being destroyed."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Shadow Martyr",
+										"entries": [
+											"{@i 10th-level Echo Knight feature}",
+											"You can make your echo throw itself in front of an attack directed at another creature that you can see. Before the attack roll is made, you can use your reaction to teleport the echo to an unoccupied space within 5 feet of the targeted creature. The attack roll that triggered the reaction is instead made against your echo.",
+											"Once you use this feature, you can't use it again until you finish a short or long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Reclaim Potential",
+										"entries": [
+											"{@i 15th-level Echo Knight feature}",
+											"You've learned to absorb the fleeting magic of your echo. When an echo of yours is destroyed by taking damage, you can gain a number of temporary hit points equal to {@dice 2d6} + your Constitution modifier, provided you don't already have temporary hit points.",
+											"You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Legion of One",
+										"entries": [
+											"{@i 18th-level Echo Knight feature}",
+											"You can use a bonus action to create two echoes with your Manifest Echo feature, and these echoes can coexist. If you try to create a third echo, the previous two echoes are destroyed. Anything you can do from one echo's position can be done from the other's instead.",
+											"In addition, when you roll initiative and have no uses of your Unleash Incarnation feature left, you regain one use of that feature."
+										]
+									}
+								]
+							}
+						]
+					]
 				}
 			],
 			"fluff": [
 				{
+					"name": "Fighter",
+					"type": "section",
 					"entries": [
 						"A human in clanging plate armor holds her shield before her as she runs toward the massed goblins. An elf behind her, clad in studded leather armor, peppers the goblins with arrows loosed from his exquisite bow. The half-orc nearby shouts orders, helping the two combatants coordinate their assault to the best advantage.",
 						"A dwarf in chain mail interposes his shield between the ogre's club and his companion, knocking the deadly blow aside. His companion, a half-elf in scale armor, swings two scimitars in a blinding whirl as she circles the ogre, looking for a blind spot in its defenses.",
@@ -4273,6 +4462,7 @@
 					"page": 70
 				},
 				{
+					"type": "section",
 					"entries": [
 						{
 							"type": "quote",
@@ -4517,9 +4707,7 @@
 					"source": "XGE",
 					"page": 27
 				}
-			],
-			"page": 70
+			]
 		}
 	]
 }
-

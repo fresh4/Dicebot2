@@ -914,7 +914,7 @@
 							"name": "Metallic Dragons",
 							"id": "05b",
 							"entries": [
-								"The good dragons of Faerûn hear the {@i Draakhorn'}s call and know what it portends. With the fate of the world hanging in the balance, the good dragons will take action to oppose the return of Tiamat. However, it remains to be seen whether they do so in concert with the humanoid factions of the Sword Coast, or whether they strike on their own with no thought or concern for the fate of the lesser races.",
+								"The good dragons of Faerûn hear the {@i Draakhorn's} call and know what it portends. With the fate of the world hanging in the balance, the good dragons will take action to oppose the return of Tiamat. However, it remains to be seen whether they do so in concert with the humanoid factions of the Sword Coast, or whether they strike on their own with no thought or concern for the fate of the lesser races.",
 								{
 									"type": "entries",
 									"name": "Using Metallic Dragons",
@@ -2945,7 +2945,7 @@
 							"id": "10f",
 							"entries": [
 								"Nothing much needs to happen on the trip north of Waterdeep. You can narrate through it quickly. At your option, use the random encounters below to spice up the journey. Roll a {@dice d20} each day and use the indicated encounter. Add 2 to the roll on days 8, 9, and 10.",
-								"Remember that the characters are just part of the convoy escort. The monsters listed on the Encounters North of Waterdeep table are those the characters must fight. At the same time, NPC members of the escort are dealing with additional monsters not listed here. Assume that monsters and the travelers are being alert before these encounters. After each encounter, roll {@dice 1d4}\u20132. The result is the number of NPC escorts killed elsewhere in the battle.",
+								"Remember that the characters are just part of the convoy escort. The monsters listed on the Encounters North of Waterdeep table are those the characters must fight. At the same time, NPC members of the escort are dealing with additional monsters not listed here. Assume that monsters and the travelers are being alert before these encounters. After each encounter, roll {@dice 1d4-2}. The result is the number of NPC escorts killed elsewhere in the battle.",
 								{
 									"type": "entries",
 									"name": "Encounters North of Waterdeep",
@@ -4963,7 +4963,7 @@
 											"name": "Rejecting the Deal",
 											"id": "1d7",
 											"entries": [
-												"Refusing Talis's generous offer triggers a fight. Talis shouts for reinforcements, which brings the gargoyles from {@area area 5,|1b4|x} the helmed horror from {@area area 6|1b7|x}, and the kobolds from {@area area 12 |1c9|x}running, and even yells out the window for Trepsin the troll. Pull out all the stops\u2014and if things go badly, Talis climbs out a window and flees into the woods or through a portal (see {@area area 1|1a7|x})."
+												"Refusing Talis's generous offer triggers a fight. Talis shouts for reinforcements, which brings the gargoyles from {@area area 5,|1b4|x} the helmed horror from {@area area 6|1b7|x}, and the kobolds from {@area area 12 |1c9|x} running, and even yells out the window for Trepsin the troll. Pull out all the stops\u2014and if things go badly, Talis climbs out a window and flees into the woods or through a portal (see {@area area 1|1a7|x})."
 											]
 										}
 									]

@@ -3,6 +3,7 @@
 		{
 			"name": "Mystic",
 			"source": "UATheMysticClass",
+			"page": 1,
 			"hd": {
 				"number": 1,
 				"faces": 8
@@ -11,6 +12,43 @@
 				"int",
 				"wis"
 			],
+			"startingProficiencies": {
+				"armor": [
+					"light"
+				],
+				"weapons": [
+					"simple"
+				],
+				"tools": [
+					"None"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"arcana",
+								"history",
+								"insight",
+								"medicine",
+								"nature",
+								"perception",
+								"religion"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) a {@item spear|phb} or (b) a {@item mace|phb}",
+					"(a) {@item leather armor|phb} or (b) {@item studded leather armor|phb}",
+					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}"
+				],
+				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+			},
 			"classTableGroups": [
 				{
 					"colLabels": [
@@ -143,43 +181,6 @@
 					]
 				}
 			],
-			"startingProficiencies": {
-				"armor": [
-					"light"
-				],
-				"weapons": [
-					"simple"
-				],
-				"tools": [
-					"None"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"arcana",
-								"history",
-								"insight",
-								"medicine",
-								"nature",
-								"perception",
-								"religion"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@item spear|phb} or (b) a {@item mace|phb}",
-					"(a) {@item leather armor|phb} or (b) {@item studded leather armor|phb}",
-					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}"
-				],
-				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
-			},
 			"classFeatures": [
 				[
 					{
@@ -371,6 +372,17 @@
 						]
 					},
 					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 4th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
+					},
+					{
 						"name": "Strength of Mind",
 						"entries": [
 							"Even the simplest psionic technique requires a deep understanding of how psionic energy can augment mind and body. This understanding allows you to alter your defenses to better deal with threats.",
@@ -395,6 +407,17 @@
 						"entries": [
 							"When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 8th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					},
 					{
 						"name": "Potent Psionics (1d8)",
@@ -431,6 +454,17 @@
 						"entries": [
 							"When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 12th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -470,6 +504,17 @@
 						"entries": [
 							"When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 16th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -487,6 +532,17 @@
 						"entries": [
 							"When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 19th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -511,6 +567,8 @@
 			"subclasses": [
 				{
 					"name": "Order of the Avatar",
+					"shortName": "Avatar",
+					"source": "UATheMysticClass",
 					"subclassFeatures": [
 						[
 							{
@@ -574,12 +632,12 @@
 								]
 							}
 						]
-					],
-					"source": "UATheMysticClass",
-					"shortName": "Avatar"
+					]
 				},
 				{
 					"name": "Order of the Awakened",
+					"shortName": "Awakened",
+					"source": "UATheMysticClass",
 					"subclassFeatures": [
 						[
 							{
@@ -648,12 +706,12 @@
 								]
 							}
 						]
-					],
-					"source": "UATheMysticClass",
-					"shortName": "Awakened"
+					]
 				},
 				{
 					"name": "Order of the Immortal",
+					"shortName": "Immortal",
+					"source": "UATheMysticClass",
 					"subclassFeatures": [
 						[
 							{
@@ -719,12 +777,12 @@
 								]
 							}
 						]
-					],
-					"source": "UATheMysticClass",
-					"shortName": "Immortal"
+					]
 				},
 				{
 					"name": "Order of the Nomad",
+					"shortName": "Nomad",
+					"source": "UATheMysticClass",
 					"subclassFeatures": [
 						[
 							{
@@ -788,12 +846,12 @@
 								]
 							}
 						]
-					],
-					"source": "UATheMysticClass",
-					"shortName": "Nomad"
+					]
 				},
 				{
 					"name": "Order of the Soul Knife",
+					"shortName": "Soul Knife",
+					"source": "UATheMysticClass",
 					"subclassFeatures": [
 						[
 							{
@@ -884,12 +942,12 @@
 								]
 							}
 						]
-					],
-					"source": "UATheMysticClass",
-					"shortName": "Soul Knife"
+					]
 				},
 				{
 					"name": "Order of the Wu Jen",
+					"shortName": "Wu Jen",
+					"source": "UATheMysticClass",
 					"subclassFeatures": [
 						[
 							{
@@ -989,13 +1047,9 @@
 								]
 							}
 						]
-					],
-					"source": "UATheMysticClass",
-					"shortName": "Wu Jen"
+					]
 				}
-			],
-			"page": 1
+			]
 		}
 	]
 }
-

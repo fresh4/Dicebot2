@@ -3,6 +3,8 @@
 		{
 			"name": "Wizard",
 			"source": "PHB",
+			"page": 112,
+			"srd": true,
 			"hd": {
 				"number": 1,
 				"faces": 6
@@ -13,6 +15,45 @@
 			],
 			"spellcastingAbility": "int",
 			"casterProgression": "full",
+			"startingProficiencies": {
+				"weapons": [
+					"daggers",
+					"darts",
+					"slings",
+					"quarterstaffs",
+					"light crossbows"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"arcana",
+								"history",
+								"insight",
+								"investigation",
+								"medicine",
+								"religion"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb}",
+					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
+					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}",
+					"A {@item spellbook|phb}"
+				],
+				"goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
+			},
+			"multiclassing": {
+				"requirements": {
+					"int": 13
+				}
+			},
 			"classTableGroups": [
 				{
 					"colLabels": [
@@ -318,45 +359,6 @@
 					]
 				}
 			],
-			"startingProficiencies": {
-				"weapons": [
-					"daggers",
-					"darts",
-					"slings",
-					"quarterstaffs",
-					"light crossbows"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"arcana",
-								"history",
-								"insight",
-								"investigation",
-								"medicine",
-								"religion"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb}",
-					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
-					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"A {@item spellbook|phb}"
-				],
-				"goldAlternative": "{@dice 4d4×10|4d4 × 10|Starting Gold}"
-			},
-			"multiclassing": {
-				"requirements": {
-					"int": 13
-				}
-			},
 			"classFeatures": [
 				[
 					{
@@ -514,6 +516,17 @@
 							"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 4th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[],
@@ -534,6 +547,17 @@
 							"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 8th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[],
@@ -554,6 +578,17 @@
 							"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 12th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[],
@@ -574,6 +609,17 @@
 							"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 16th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[],
@@ -593,6 +639,17 @@
 							"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 19th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -609,6 +666,8 @@
 			"subclasses": [
 				{
 					"name": "Artificer (UA)",
+					"shortName": "Artificer (UA)",
+					"source": "UAEberron",
 					"subclassFeatures": [
 						[
 							{
@@ -940,12 +999,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAEberron",
-					"shortName": "Artificer (UA)"
+					]
 				},
 				{
 					"name": "School of Abjuration",
+					"shortName": "Abjuration",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1012,12 +1072,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Abjuration"
+					]
 				},
 				{
 					"name": "Bladesinging",
+					"shortName": "Bladesinging",
+					"source": "SCAG",
 					"subclassFeatures": [
 						[
 							{
@@ -1130,12 +1190,13 @@
 								]
 							}
 						]
-					],
-					"source": "SCAG",
-					"shortName": "Bladesinging"
+					]
 				},
 				{
 					"name": "School of Conjuration",
+					"shortName": "Conjuration",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1200,12 +1261,13 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Conjuration"
+					]
 				},
 				{
 					"name": "School of Divination",
+					"shortName": "Divination",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1317,12 +1379,13 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Divination"
+					]
 				},
 				{
 					"name": "School of Enchantment",
+					"shortName": "Enchantment",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1389,12 +1452,13 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Enchantment"
+					]
 				},
 				{
 					"name": "School of Evocation",
+					"shortName": "Evocation",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1458,12 +1522,13 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Evocation"
+					]
 				},
 				{
 					"name": "School of Illusion",
+					"shortName": "Illusion",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1529,12 +1594,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Illusion"
+					]
 				},
 				{
 					"name": "Technomancy (UA)",
+					"shortName": "Technomancy (UA)",
+					"source": "UAModernMagic",
 					"subclassFeatures": [
 						[
 							{
@@ -1602,12 +1667,12 @@
 								]
 							}
 						]
-					],
-					"source": "UAModernMagic",
-					"shortName": "Technomancy (UA)"
+					]
 				},
 				{
 					"name": "Theurgy (UA)",
+					"shortName": "Theurgy (UA)",
+					"source": "UAWizardRevisited",
 					"subclassFeatures": [
 						[
 							{
@@ -1691,12 +1756,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAWizardRevisited",
-					"shortName": "Theurgy (UA)"
+					]
 				},
 				{
 					"name": "War Magic (UA)",
+					"shortName": "War (UA)",
+					"source": "UAWizardRevisited",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1762,12 +1828,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAWizardRevisited",
-					"shortName": "War Magic (UA)"
+					]
 				},
 				{
 					"name": "School of Transmutation",
+					"shortName": "Transmutation",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1891,12 +1958,13 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Transmutation"
+					]
 				},
 				{
 					"name": "School of Necromancy",
+					"shortName": "Necromancy",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1969,12 +2037,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Necromancy"
+					]
 				},
 				{
 					"name": "Lore Mastery (UA)",
+					"shortName": "Lore Mastery (UA)",
+					"source": "UAWarlockAndWizard",
 					"subclassFeatures": [
 						[
 							{
@@ -2052,12 +2120,12 @@
 								]
 							}
 						]
-					],
-					"source": "UAWarlockAndWizard",
-					"shortName": "Lore Mastery (UA)"
+					]
 				},
 				{
 					"name": "War Magic",
+					"shortName": "War",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -2125,12 +2193,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "War Magic"
+					]
 				},
 				{
 					"name": "School of Invention (UA)",
+					"shortName": "Invention (UA)",
+					"source": "UAThreeSubclasses",
 					"subclassFeatures": [
 						[
 							{
@@ -2535,12 +2603,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAThreeSubclasses",
-					"shortName": "Invention (UA)"
+					]
 				},
 				{
 					"name": "Onomancy (UA)",
+					"shortName": "Onomancy (UA)",
+					"source": "UAClericDruidWizard",
+					"page": 4,
 					"subclassFeatures": [
 						[
 							{
@@ -2685,13 +2754,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAClericDruidWizard",
-					"shortName": "Onomancy (UA)",
-					"page": 4
+					]
 				},
 				{
 					"name": "Psionics (UA)",
+					"shortName": "Psionics (UA)",
+					"source": "UAFighterRogueWizard",
+					"page": 3,
 					"subclassFeatures": [
 						[
 							{
@@ -2799,10 +2868,11 @@
 													{
 														"type": "item",
 														"name": "Psychic Resilience",
-														"entry": "You gain resistance to psychic damage and to bludgeoning, piercing, and slashing damage from nonmagical attacks. You can transform using this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+														"entry": "You gain resistance to psychic damage and to bludgeoning, piercing, and slashing damage from nonmagical attacks."
 													}
 												]
-											}
+											},
+											"You can transform using this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
 										]
 									}
 								]
@@ -2846,14 +2916,163 @@
 								]
 							}
 						]
-					],
-					"source": "UAFighterRogueWizard",
-					"shortName": "Psionics (UA)",
-					"page": 3
+					]
+				},
+				{
+					"name": "Chronurgy Magic",
+					"shortName": "Chronurgy",
+					"source": "EGW",
+					"page": 0,
+					"subclassFeatures": [
+						[
+							{
+								"name": "Chronurgy Magic",
+								"entries": [
+									"Focusing on the manipulation of time, those who follow the Chronurgy tradition learn to alter the pace of reality to their liking. Using the ramping of anticipatory dunamis energy, these mages can bend the flow of time as adroitly as a skilled musician plays an instrument, lending themselves and their allies an advantage in the blink of an eye.",
+									{
+										"type": "entries",
+										"name": "Chronal Shift",
+										"entries": [
+											"{@i 2nd-level Chronurgy Magic feature}",
+											"You can magically exert limited control over the flow of time around a creature. As a reaction, after you or a creature you can see within 30 feet of you makes an attack roll, an ability check, or a saving throw, you can force the creature to reroll. You make this decision after you see whether the roll succeeds or fails. The target must use the result of the second roll.",
+											"You can use this ability twice, and you regain any expended uses when you finish a long rest."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Temporal Awareness",
+										"entries": [
+											"{@i 2nd-level Chronurgy Magic feature}",
+											"You can add your Intelligence modifier to your initiative rolls."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Momentary Stasis",
+										"entries": [
+											"{@i 6th-level Chronurgy Magic feature}",
+											"As an action, you can magically force a Large or smaller creature you can see within 60 feet of you to make a Constitution saving throw against your spell save DC. Unless the saving throw is a success, the creature is encased in a field of magical energy until the end of your next turn or until the creature takes any damage. While encased in this way, the creature is {@condition incapacitated} and has a speed of 0.",
+											"You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Arcane Abeyance",
+										"entries": [
+											"{@i 10th-level Chronurgy Magic feature}",
+											"When you cast a spell using a spell slot of 4th level or lower, you can condense the spell's magic into a mote. The spell is frozen in time at the moment of casting and held within a gray bead for 1 hour. This bead is a Tiny object with AC 15 and 1 hit point, and it is immune to poison and psychic damage. When the duration ends, or if the bead is destroyed, it vanishes in a flash of light, and the spell is lost.",
+											"A creature holding the bead can use its action to release the spell within, whereupon the bead disappears. The spell uses your spell attack bonus and save DC, and the spell treats the creature who released it as the caster for all other purposes.",
+											"Once you create a bead with this feature, you can't do so again until you finish a short or long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Convergent Future",
+										"entries": [
+											"{@i 14th-level Chronurgy Magic feature}",
+											"You can peer through possible futures and magically pull one of them into events around you, ensuring a particular outcome. When you or a creature you can see within 60 feet of you makes an attack roll, an ability check, or a saving throw, you can use your reaction to ignore the die roll and decide whether the number rolled is the minimum needed to succeed or one less than that number (your choice).",
+											"When you use this feature, you gain one level of {@condition exhaustion}. Only by finishing a long rest can you remove a level of {@condition exhaustion} gained in this way."
+										]
+									}
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Graviturgy Magic",
+					"shortName": "Graviturgy",
+					"source": "EGW",
+					"page": 0,
+					"subclassFeatures": [
+						[
+							{
+								"name": "Graviturgy Magic",
+								"entries": [
+									"Understanding and mastering the forces that draw bodies of matter together or drive them apart, the students of the Graviturgy arcane tradition learn to further bend and manipulate the violent energy of gravity to their benefit, and the terrible detriment of their enemies.",
+									{
+										"type": "entries",
+										"name": "Adjust Density",
+										"entries": [
+											"{@i 2nd-level Graviturgy Magic feature}",
+											"As an action, you can magically alter the weight of one object or creature you can see within 30 feet of you. The object or creature must be Large or smaller. The target's weight is halved or doubled for up to 1 minute or until your concentration ends (as if you were concentrating on a spell).",
+											"While the weight of a creature is halved by this effect, the creature's speed increases by 10 feet, it can jump twice as far as normal, and it has disadvantage on Strength checks and Strength saving throws. While the weight of a creature is doubled by this effect, the creature's speed is reduced by 10 feet, and it has advantage on Strength checks and Strength saving throws.",
+											"Upon reaching 10th level in this class, you can target an object or a creature that is Huge or smaller."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Gravity Well",
+										"entries": [
+											"{@i 6th-level Graviturgy Magic feature}",
+											"You've learned how to manipulate gravity around a living being: whenever you cast a spell on a creature, you can move the target 5 feet to an unoccupied space of your choice if the target is willing to move, the spell hits it with an attack, or it fails a saving throw against the spell."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Violent Attraction",
+										"entries": [
+											"{@i 10th-level Graviturgy Magic feature}",
+											"When another creature that you can see within 60 feet of you hits with a weapon attack, you can use your reaction to increase the attack's velocity, causing the attack's target to take an extra {@dice 1d10} damage of the weapon's type.",
+											"Alternatively, if a creature within 60 feet of you takes damage from a fall, you can use your reaction to increase the fall's damage by {@dice 2d10}.",
+											"You can use this feature a number of times equal to your Intelligence modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Event Horizon",
+										"entries": [
+											"{@i 14th-level Graviturgy Magic feature}",
+											"As an action, you can magically emit a powerful field of gravitational energy that tugs at other creatures for up to 1 minute or until your concentration ends (as if you were concentrating on a spell). For the duration, whenever a creature hostile to you starts its turn within 30 feet of you, it must make a Strength saving throw against your spell save DC. On a failed save, it takes {@dice 2d10} force damage, and its speed is reduced to 0 until the start of its next turn. On a successful save, it takes half as much damage, and every foot it moves this turn costs 2 extra feet of movement.",
+											"Once you use this feature, you can't do so again until you finish a long rest or until you expend a spell slot of 3rd level or higher on it."
+										]
+									}
+								]
+							}
+						]
+					]
 				}
 			],
 			"fluff": [
 				{
+					"name": "Wizard",
+					"type": "section",
 					"entries": [
 						"Clad in the silver robes that denote her station, an elf closes her eyes to shut out the distractions of the battlefield and begins her quiet chant. Fingers weaving in front of her, she completes her spell and launches a tiny bead of fire toward the enemy ranks, where it erupts into a conflagration that engulfs the soldiers.",
 						"Checking and rechecking his work, a human scribes an intricate magic circle in chalk on the bare stone floor, then sprinkles powdered iron along every line and graceful curve. When the circle is complete, he drones a long incantation. A hole opens in space inside the circle, bringing a whiff of brimstone from the otherworldly plane beyond.",
@@ -2895,6 +3114,7 @@
 					"source": "PHB"
 				},
 				{
+					"type": "section",
 					"entries": [
 						{
 							"type": "quote",
@@ -3137,9 +3357,7 @@
 					"page": 58,
 					"source": "XGE"
 				}
-			],
-			"page": 112
+			]
 		}
 	]
 }
-

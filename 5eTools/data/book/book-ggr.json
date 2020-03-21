@@ -1549,8 +1549,8 @@
 					"page": 25,
 					"entries": [
 						"Two classes receive subclass options in this section: the cleric and the druid.",
-						"At 1st level, a cleric chooses a Divine Domain. This source adds the {@class cleric|phb|Order Domain|Order Domain|ggr} to the options available to the cleric making that choice.",
-						"At 2nd level, a druid chooses a Druid Circle. This source adds the {@class druid|phb|Circle of Spores|Circle of Spores|ggr} to the options available to the druid making that choice."
+						"At 1st level, a cleric chooses a Divine Domain. This source adds the {@class cleric|phb|Order Domain|Order|GGR} to the options available to the cleric making that choice.",
+						"At 2nd level, a druid chooses a Druid Circle. This source adds the {@class druid|phb|Circle of Spores|Spores|ggr} to the options available to the druid making that choice."
 					]
 				}
 			]
@@ -9983,7 +9983,7 @@
 									"name": "Izzet Items",
 									"page": 175,
 									"entries": [
-										"The Izzet League is the most prolific creator of magic items in Ravnica. Its inventions can be unpredictable and downright dangerous, but they can also be useful tools, weapons, and implements of magical manipulation. Izzet researchers are prone to giving their magic items special names, so what one person might call a {@item staff of thunder and lightning} might be an {@i electrosonic field manipulator}to its Izzet wielder.",
+										"The Izzet League is the most prolific creator of magic items in Ravnica. Its inventions can be unpredictable and downright dangerous, but they can also be useful tools, weapons, and implements of magical manipulation. Izzet researchers are prone to giving their magic items special names, so what one person might call a {@item staff of thunder and lightning} might be an {@i electrosonic field manipulator} to its Izzet wielder.",
 										{
 											"type": "table",
 											"caption": "Izzet Items",

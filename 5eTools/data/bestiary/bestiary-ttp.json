@@ -1,8 +1,16 @@
 {
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MTF": "TTP"
+			}
+		}
+	},
 	"monster": [
 		{
-			"source": "TTP",
 			"name": "Decapus",
+			"source": "TTP",
+			"page": 21,
 			"size": "L",
 			"type": "monstrosity",
 			"alignment": [
@@ -60,26 +68,30 @@
 					]
 				}
 			],
-			"page": 21,
+			"senseTags": [
+				"D"
+			],
 			"actionTags": [
 				"Multiattack",
 				"Tentacles"
 			],
-			"senseTags": [
-				"D"
-			],
 			"damageTags": [
-				"P",
-				"B"
+				"B",
+				"P"
 			],
 			"miscTags": [
 				"MW",
 				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
 			]
 		},
 		{
-			"source": "TTP",
 			"name": "Geonid",
+			"source": "TTP",
+			"page": 22,
 			"size": "S",
 			"type": "elemental",
 			"alignment": [
@@ -138,7 +150,6 @@
 					]
 				}
 			],
-			"page": 22,
 			"senseTags": [
 				"D",
 				"T"
@@ -153,9 +164,10 @@
 		{
 			"name": "Giant Slug",
 			"isNpc": true,
+			"source": "TTP",
+			"page": 18,
 			"size": "L",
 			"type": "monstrosity",
-			"source": "TTP",
 			"alignment": [
 				"U"
 			],
@@ -187,13 +199,29 @@
 			"senses": [
 				"darkvision 60 ft."
 			],
+			"passive": 13,
 			"languages": [
 				"Abyssal",
 				"Aquan",
 				"Common"
 			],
-			"passive": 13,
 			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The slug's innate spellcasting ability is Wisdom (spell save {@dc 11}, {@hit 3} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell guiding bolt}",
+							"{@spell sanctuary}",
+							"{@spell spiritual weapon}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
 			"trait": [
 				{
 					"name": "Keen Smell",
@@ -236,26 +264,12 @@
 					]
 				}
 			],
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"headerEntries": [
-						"The slug's innate spellcasting ability is Wisdom (spell save {@dc 11}, {@hit 3} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
-					],
-					"daily": {
-						"1e": [
-							"{@spell guiding bolt}",
-							"{@spell sanctuary}",
-							"{@spell spiritual weapon}"
-						]
-					},
-					"ability": "wis"
-				}
-			],
-			"page": 18,
 			"traitTags": [
 				"Keen Senses",
 				"Spider Climb"
+			],
+			"senseTags": [
+				"D"
 			],
 			"actionTags": [
 				"Multiattack",
@@ -266,25 +280,27 @@
 				"AQ",
 				"C"
 			],
-			"senseTags": [
-				"D"
+			"damageTags": [
+				"B",
+				"I",
+				"P"
 			],
 			"spellcastingTags": [
 				"I"
 			],
-			"damageTags": [
-				"I",
-				"P",
-				"B"
-			],
 			"miscTags": [
 				"MW",
 				"RCH"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
 			]
 		},
 		{
-			"source": "TTP",
 			"name": "Topi",
+			"source": "TTP",
+			"page": 22,
 			"size": "S",
 			"type": "undead",
 			"alignment": [
@@ -312,6 +328,10 @@
 			"int": 6,
 			"wis": 10,
 			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
 			"resist": [
 				"bludgeoning"
 			],
@@ -321,13 +341,9 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"senses": [
-				"darkvision 60 ft."
-			],
 			"languages": [
 				"understands the languages it knew in life but can't speak"
 			],
-			"passive": 10,
 			"cr": "1/2",
 			"trait": [
 				{
@@ -351,7 +367,6 @@
 					]
 				}
 			],
-			"page": 22,
 			"traitTags": [
 				"Turn Resistance",
 				"Undead Fortitude"
@@ -360,241 +375,18 @@
 				"D"
 			],
 			"languageTags": [
-				"CS"
+				"CS",
+				"LF"
 			],
 			"damageTags": [
-				"S",
-				"I"
+				"I",
+				"S"
 			],
 			"miscTags": [
 				"MW"
-			]
-		},
-		{
-			"source": "TTP",
-			"name": "Tortle",
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"tortle"
-				]
-			},
-			"alignment": [
-				"L",
-				"G"
 			],
-			"ac": [
-				{
-					"ac": 17,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 22,
-				"formula": "4d8 + 4"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 15,
-			"dex": 10,
-			"con": 12,
-			"int": 11,
-			"wis": 13,
-			"cha": 12,
-			"skill": {
-				"athletics": "+4",
-				"survival": "+3"
-			},
-			"languages": [
-				"Aquan",
-				"Common"
-			],
-			"passive": 11,
-			"cr": "1/4",
-			"trait": [
-				{
-					"name": "Hold Breath",
-					"entries": [
-						"The tortle can hold its breath for 1 hour."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) slashing damage."
-					]
-				},
-				{
-					"name": "Quarterstaff",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) bludgeoning damage, or 6 ({@damage 1d8 + 2}) bludgeoning damage when used with two hands."
-					]
-				},
-				{
-					"name": "Light Crossbow",
-					"entries": [
-						"{@atk rw} {@hit 2} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d8}) piercing damage."
-					]
-				},
-				{
-					"name": "Shell Defense",
-					"entries": [
-						"The tortle withdraws into its shell. Until it emerges, it gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in its shell, the tortle is {@condition prone}, its speed is 0 and can't increase, it has disadvantage on Dexterity saving throws, it can't take reactions, and the only action it can take is a bonus action to emerge."
-					]
-				}
-			],
-			"page": 23,
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/712/tortle.mp3",
-			"traitTags": [
-				"Hold Breath"
-			],
-			"languageTags": [
-				"AQ",
-				"C"
-			],
-			"damageTags": [
-				"S",
-				"B",
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"RNG"
-			]
-		},
-		{
-			"source": "TTP",
-			"name": "Tortle Druid",
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"tortle"
-				]
-			},
-			"alignment": [
-				"L",
-				"N"
-			],
-			"ac": [
-				{
-					"ac": 17,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 33,
-				"formula": "6d8 + 6"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 14,
-			"dex": 10,
-			"con": 12,
-			"int": 11,
-			"wis": 15,
-			"cha": 12,
-			"skill": {
-				"animal handling": "+4",
-				"nature": "+2",
-				"survival": "+4"
-			},
-			"languages": [
-				"Aquan",
-				"Common"
-			],
-			"passive": 12,
-			"cr": "2",
-			"spellcasting": [
-				{
-					"name": "Spellcasting",
-					"headerEntries": [
-						"The tortle is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). It has the following druid spells prepared:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell druidcraft}",
-								"{@spell guidance}",
-								"{@spell produce flame}"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell animal friendship}",
-								"{@spell cure wounds}",
-								"{@spell speak with animals}",
-								"{@spell thunderwave}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell darkvision}",
-								"{@spell hold person}"
-							]
-						}
-					},
-					"ability": "wis"
-				}
-			],
-			"trait": [
-				{
-					"name": "Hold Breath",
-					"entries": [
-						"The tortle can hold its breath for 1 hour."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) slashing damage."
-					]
-				},
-				{
-					"name": "Quarterstaff",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) bludgeoning damage, or 6 ({@damage 1d8 + 2}) bludgeoning damage when used with two hands."
-					]
-				},
-				{
-					"name": "Shell Defense",
-					"entries": [
-						"The tortle withdraws into its shell. Until it emerges, it gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in its shell, the tortle is {@condition prone}, its speed is 0 and can't increase, it has disadvantage on Dexterity saving throws, it can't take reactions, and the only action it can take is a bonus action to emerge."
-					]
-				}
-			],
-			"page": 23,
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/711/tortle-druid.mp3",
-			"traitTags": [
-				"Hold Breath"
-			],
-			"languageTags": [
-				"AQ",
-				"C"
-			],
-			"spellcastingTags": [
-				"CD"
-			],
-			"damageTags": [
-				"S",
-				"B"
-			],
-			"miscTags": [
-				"MW"
+			"conditionInflict": [
+				"poisoned"
 			]
 		}
 	]

@@ -3,6 +3,8 @@
 		{
 			"name": "Barbarian",
 			"source": "PHB",
+			"page": 46,
+			"srd": true,
 			"hd": {
 				"number": 1,
 				"faces": 12
@@ -11,6 +13,55 @@
 				"str",
 				"con"
 			],
+			"startingProficiencies": {
+				"armor": [
+					"light",
+					"medium",
+					"shields"
+				],
+				"weapons": [
+					"simple",
+					"martial"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"animal handling",
+								"athletics",
+								"intimidation",
+								"nature",
+								"perception",
+								"survival"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=sand}",
+					"(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+					"An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}"
+				],
+				"goldAlternative": "{@dice 2d4×10|2d4 × 10|Starting Gold}"
+			},
+			"multiclassing": {
+				"requirements": {
+					"str": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"shields"
+					],
+					"weapons": [
+						"simple",
+						"martial"
+					]
+				}
+			},
 			"classTableGroups": [
 				{
 					"colLabels": [
@@ -161,55 +212,6 @@
 					]
 				}
 			],
-			"startingProficiencies": {
-				"armor": [
-					"light",
-					"medium",
-					"shields"
-				],
-				"weapons": [
-					"simple",
-					"martial"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"animal handling",
-								"athletics",
-								"intimidation",
-								"nature",
-								"perception",
-								"survival"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=sand}",
-					"(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}"
-				],
-				"goldAlternative": "{@dice 2d4×10|2d4 × 10|Starting Gold}"
-			},
-			"multiclassing": {
-				"requirements": {
-					"str": 13
-				},
-				"proficienciesGained": {
-					"armor": [
-						"shields"
-					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
-				}
-			},
 			"classFeatures": [
 				[
 					{
@@ -277,6 +279,17 @@
 							"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 4th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -327,6 +340,17 @@
 							"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM uses the optional Feats, you can instead take a feat."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 8th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -363,6 +387,17 @@
 							"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM uses the optional Feats, you can instead take a feat."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 12th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -398,6 +433,17 @@
 							"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM uses the optional Feats, you can instead take a feat."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 16th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -423,6 +469,17 @@
 							"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM uses the optional Feats, you can instead take a feat."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 19th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -438,6 +495,9 @@
 			"subclasses": [
 				{
 					"name": "Path of the Berserker",
+					"shortName": "Berserker",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -494,12 +554,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Berserker"
+					]
 				},
 				{
 					"name": "Path of the Totem Warrior",
+					"shortName": "Totem Warrior",
+					"source": "PHB",
 					"subclassFeatures": [
 						[
 							{
@@ -756,12 +816,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Totem Warrior"
+					]
 				},
 				{
 					"name": "Path of the Battlerager",
+					"shortName": "Battlerager",
+					"source": "SCAG",
 					"subclassFeatures": [
 						[
 							{
@@ -827,12 +887,13 @@
 								]
 							}
 						]
-					],
-					"source": "SCAG",
-					"shortName": "Battlerager"
+					]
 				},
 				{
 					"name": "Path of the Ancestral Guardian (UA)",
+					"shortName": "Ancestral Guardian (UA)",
+					"source": "UABarbarianPrimalPaths",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -890,12 +951,12 @@
 								]
 							}
 						]
-					],
-					"source": "UABarbarianPrimalPaths",
-					"shortName": "Ancestral Guardian (UA)"
+					]
 				},
 				{
 					"name": "Path of the Ancestral Guardian v2 (UA)",
+					"shortName": "Ancestral Guardian v2 (UA)",
+					"source": "UARevisedSubclasses",
 					"spellcastingAbility": "wis",
 					"subclassFeatures": [
 						[
@@ -954,12 +1015,13 @@
 								]
 							}
 						]
-					],
-					"source": "UARevisedSubclasses",
-					"shortName": "Ancestral Guardian v2 (UA)"
+					]
 				},
 				{
 					"name": "Path of the Storm Herald (UA)",
+					"shortName": "Storm Herald (UA)",
+					"source": "UABarbarianPrimalPaths",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1124,12 +1186,13 @@
 								]
 							}
 						]
-					],
-					"source": "UABarbarianPrimalPaths",
-					"shortName": "Storm Herald (UA)"
+					]
 				},
 				{
 					"name": "Path of the Zealot (UA)",
+					"shortName": "Zealot (UA)",
+					"source": "UABarbarianPrimalPaths",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1195,12 +1258,12 @@
 								]
 							}
 						]
-					],
-					"source": "UABarbarianPrimalPaths",
-					"shortName": "Zealot (UA)"
+					]
 				},
 				{
 					"name": "Path of the Ancestral Guardian",
+					"shortName": "Ancestral Guardian",
+					"source": "XGE",
 					"spellcastingAbility": "wis",
 					"subclassFeatures": [
 						[
@@ -1260,12 +1323,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Ancestral Guardian"
+					]
 				},
 				{
 					"name": "Path of the Storm Herald",
+					"shortName": "Storm Herald",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -1402,12 +1465,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Storm Herald"
+					]
 				},
 				{
 					"name": "Path of the Zealot",
+					"shortName": "Zealot",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -1473,12 +1536,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Zealot"
+					]
 				},
 				{
 					"name": "Path of the Wild Soul (UA)",
+					"shortName": "Wild Soul (UA)",
+					"source": "UABarbarianAndMonk",
 					"subclassFeatures": [
 						[
 							{
@@ -1534,7 +1597,7 @@
 													],
 													[
 														6,
-														"Arcane energy taps into the minds of those around you. Each creature within 30 feet of you must succeed ona Wisdom saving throw or you see a glimpse of the creature's thoughts, learning how it plans to attack you. As a result, the creature has disadvantage on attack rolls against you until the start of your next."
+														"Arcane energy taps into the minds of those around you. Each creature within 30 feet of you must succeed ona Wisdom saving throw or you see a glimpse of the creature's thoughts, learning how it plans to attack you. As a result, the creature has disadvantage on attack rolls against you until the start of your next turn."
 													],
 													[
 														7,
@@ -1599,13 +1662,147 @@
 								]
 							}
 						]
-					],
-					"source": "UABarbarianAndMonk",
-					"shortName": "Wild Soul (UA)"
+					]
+				},
+				{
+					"name": "Path of the Beast (UA)",
+					"shortName": "Beast (UA)",
+					"source": "UA2020SubclassesPt1",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Path of the Beast",
+								"entries": [
+									"Barbarians who walk the Path of Beast draw their rage from a bestial spark burning within their souls. That beast howls to be released and bursts forth in the throes of rage.",
+									"Those who tread this path might be inhabited by a primal spirit or descended from shapeshifters. You can choose the origin of your feral might or determine it randomly by rolling on the Origin of the Beast table.",
+									{
+										"type": "table",
+										"caption": "Origin of the Beast",
+										"colLabels": [
+											"d4",
+											"Origin"
+										],
+										"colStyles": [
+											"col-2 text-center",
+											"col-10"
+										],
+										"rows": [
+											[
+												"1",
+												"One of your parents is a lycanthrope, and you've inherited some of the curse."
+											],
+											[
+												"2",
+												"You are descended from a legendary druid, a fact manifested by your ability to partially change shape."
+											],
+											[
+												"3",
+												"A fey spirit gifted you with the ability to adopt different bestial aspects."
+											],
+											[
+												"4",
+												"An ancient animal spirit dwells within you, allowing you to walk this path."
+											]
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Form of the Beast",
+										"entries": [
+											"{@i 3rd-level Path of the Beast feature}",
+											"When you enter your rage, you can transform, revealing the bestial power within you. Until your rage ends, you manifest a natural melee weapon, choosing one of the following options each time you rage:",
+											{
+												"type": "list",
+												"style": "list-hang-notitle",
+												"items": [
+													{
+														"type": "item",
+														"name": "Bite",
+														"entry": "Your mouth transforms into a bestial snout or great mandibles (your choice). Your bite deals {@dice 1d8} piercing damage on a hit. Once on each of your turns when you damage a creature with your bite, you regain a number of hit points equal to your Constitution modifier (minimum of 1 hit point)."
+													},
+													{
+														"type": "item",
+														"name": "Claws",
+														"entry": "Your hands transform into claws, which deal {@dice 1d6} slashing damage on a hit. When you take the {@action Attack} action on your turn and make an attack with your claws, you can make one additional attack using your claws as part of the same action."
+													},
+													{
+														"type": "item",
+														"name": "Tail",
+														"entry": "You grow a lashing, spiny tail, which deals {@dice 1d12} piercing damage on a hit and has the reach property."
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Bestial Soul",
+										"entries": [
+											"{@i 6th-level Path of the Beast feature}",
+											"The feral spirit within you grows in power, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+											"You can also call on the feral spirit to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish a short or long rest:",
+											{
+												"type": "list",
+												"items": [
+													"You gain a swimming speed equal to your walking speed, and you can breathe underwater.",
+													"You gain a climbing speed equal to your walking speed, and you can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.",
+													"When you jump, you can make a Strength ({@skill Athletics}) check and extend your jump by a number of feet equal to the check's total. You can make this special check only once per turn."
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Infectious Fury",
+										"entries": [
+											"{@i 10th-level Path of the Beast feature}",
+											"When you hit a creature with your natural weapons while you are raging, the spirit within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
+											{
+												"type": "list",
+												"items": [
+													"The target must use its reaction to make a melee attack against another creature of your choice that you can see.",
+													"Target takes {@dice 2d12} psychic damage. You can use this feature a number of times equal to your Constitution modifier (a minimum of once)."
+												]
+											},
+											"You regain all expended uses when you finish a long rest."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Call the Hunt",
+										"entries": [
+											"{@i 14th-level Path of the Beast feature}",
+											"The beast within grows so powerful that you can spread its ferocity to your allies. When you enter your rage, you can choose a number of willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature). Until your rage ends, the chosen creatures gain the Reckless {@action Attack} feature and you have advantage on saving throws against being {@condition frightened}. You also gain 5 temporary hit points for each creature that accepts the benefit. You can use this feature a number of times equal to your Constitution modifier (a minimum of once). You regain all expended uses when you finish a long rest."
+										]
+									}
+								]
+							}
+						]
+					]
 				}
 			],
 			"fluff": [
 				{
+					"name": "Barbarian",
+					"type": "section",
 					"entries": [
 						"A tall human tribesman strides through a blizzard, draped in fur and hefting his axe. He laughs as he charges toward the frost giant who dared poach his people's elk herd.",
 						"A half-orc snarls at the latest challenger to her authority over their savage tribe, ready to break his neck with her bare hands as she did to the last six rivals.",
@@ -1648,6 +1845,7 @@
 					"page": 46
 				},
 				{
+					"type": "section",
 					"entries": [
 						{
 							"type": "quote",
@@ -1893,9 +2091,7 @@
 					"source": "XGE",
 					"page": 8
 				}
-			],
-			"page": 46
+			]
 		}
 	]
 }
-

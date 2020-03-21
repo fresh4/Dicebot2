@@ -132,12 +132,19 @@
 			"senseTags": [
 				"D"
 			],
+			"languageTags": [
+				"LF"
+			],
 			"damageTags": [
 				"N",
 				"O"
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"incapacitated"
 			]
 		}
 	]

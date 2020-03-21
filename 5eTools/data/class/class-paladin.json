@@ -3,6 +3,8 @@
 		{
 			"name": "Paladin",
 			"source": "PHB",
+			"page": 82,
+			"srd": true,
 			"hd": {
 				"number": 1,
 				"faces": 10
@@ -13,6 +15,60 @@
 			],
 			"spellcastingAbility": "cha",
 			"casterProgression": "1/2",
+			"startingProficiencies": {
+				"armor": [
+					"light",
+					"medium",
+					"heavy",
+					"shields"
+				],
+				"weapons": [
+					"simple",
+					"martial"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"athletics",
+								"insight",
+								"intimidation",
+								"medicine",
+								"persuasion",
+								"religion"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
+					"(a) five {@item javelin|phb|javelins} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
+					"(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
+					"{@item Chain mail|phb} and a {@item holy symbol|phb}"
+				],
+				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+			},
+			"multiclassing": {
+				"requirements": {
+					"str": 13,
+					"cha": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"light",
+						"medium",
+						"shields"
+					],
+					"weapons": [
+						"simple",
+						"martial"
+					]
+				}
+			},
 			"classTableGroups": [
 				{
 					"title": "Spell Slots per Spell Level",
@@ -167,60 +223,6 @@
 					]
 				}
 			],
-			"startingProficiencies": {
-				"armor": [
-					"light",
-					"medium",
-					"heavy",
-					"shields"
-				],
-				"weapons": [
-					"simple",
-					"martial"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"athletics",
-								"insight",
-								"intimidation",
-								"medicine",
-								"persuasion",
-								"religion"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
-					"(a) five {@item javelin|phb|javelins} or (b) any {@filter simple melee weapon|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
-					"(a) a {@item priest's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"{@item Chain mail|phb} and a {@item holy symbol|phb}"
-				],
-				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
-			},
-			"multiclassing": {
-				"requirements": {
-					"str": 13,
-					"cha": 13
-				},
-				"proficienciesGained": {
-					"armor": [
-						"light",
-						"medium",
-						"shields"
-					],
-					"weapons": [
-						"simple",
-						"martial"
-					]
-				}
-			},
 			"classFeatures": [
 				[
 					{
@@ -468,6 +470,17 @@
 							"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 4th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -503,6 +516,17 @@
 							"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 8th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[],
@@ -530,6 +554,17 @@
 							"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 12th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[],
@@ -558,6 +593,17 @@
 							"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 16th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[],
@@ -576,6 +622,17 @@
 							"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 19th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -592,6 +649,8 @@
 			"subclasses": [
 				{
 					"name": "Oath of the Ancients",
+					"shortName": "Ancients",
+					"source": "PHB",
 					"subclassFeatures": [
 						[
 							{
@@ -764,12 +823,13 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Ancients"
+					]
 				},
 				{
 					"name": "Oath of Devotion",
+					"shortName": "Devotion",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -946,12 +1006,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Devotion"
+					]
 				},
 				{
 					"name": "Oath of Vengeance",
+					"shortName": "Vengeance",
+					"source": "PHB",
 					"subclassFeatures": [
 						[
 							{
@@ -1120,12 +1180,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Vengeance"
+					]
 				},
 				{
 					"name": "Oathbreaker",
+					"shortName": "Oathbreaker",
+					"source": "DMG",
 					"subclassFeatures": [
 						[
 							{
@@ -1233,12 +1293,12 @@
 								]
 							}
 						]
-					],
-					"source": "DMG",
-					"shortName": "Oathbreaker"
+					]
 				},
 				{
 					"name": "Oath of the Crown",
+					"shortName": "Crown",
+					"source": "SCAG",
 					"subclassFeatures": [
 						[
 							{
@@ -1406,12 +1466,13 @@
 								]
 							}
 						]
-					],
-					"source": "SCAG",
-					"shortName": "Crown"
+					]
 				},
 				{
 					"name": "Oath of Conquest (UA)",
+					"shortName": "Conquest (UA)",
+					"source": "UAPaladin",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1568,12 +1629,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAPaladin",
-					"shortName": "Conquest (UA)"
+					]
 				},
 				{
 					"name": "Oath of Conquest v2 (UA)",
+					"shortName": "Conquest v2 (UA)",
+					"source": "UARevisedClassOptions",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1731,12 +1793,12 @@
 								]
 							}
 						]
-					],
-					"source": "UARevisedClassOptions",
-					"shortName": "Conquest v2 (UA)"
+					]
 				},
 				{
 					"name": "Oath of Treachery (UA)",
+					"shortName": "Treachery (UA)",
+					"source": "UAPaladin",
 					"subclassFeatures": [
 						[
 							{
@@ -1882,12 +1944,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAPaladin",
-					"shortName": "Treachery (UA)"
+					]
 				},
 				{
 					"name": "Oath of Redemption (UA)",
+					"shortName": "Redemption (UA)",
+					"source": "UAATrioOfSubclasses",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -2069,12 +2132,12 @@
 								]
 							}
 						]
-					],
-					"source": "UAATrioOfSubclasses",
-					"shortName": "Redemption (UA)"
+					]
 				},
 				{
 					"name": "Oath of Conquest",
+					"shortName": "Conquest",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -2223,12 +2286,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Conquest"
+					]
 				},
 				{
 					"name": "Oath of Redemption",
+					"shortName": "Redemption",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -2397,12 +2460,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Redemption"
+					]
 				},
 				{
 					"name": "Oath of Heroism (UA)",
+					"shortName": "Heroism (UA)",
+					"source": "UABardAndPaladin",
 					"subclassFeatures": [
 						[
 							{
@@ -2452,7 +2515,7 @@
 											"You gain oath spells at the paladin levels listed in the Oath of Heroism Spells table.",
 											{
 												"type": "table",
-												"caption": "Oath of Conquest Spells",
+												"caption": "Oath of Heroism Spells",
 												"colLabels": [
 													"Paladin Level",
 													"Spells"
@@ -2570,13 +2633,173 @@
 								]
 							}
 						]
-					],
-					"source": "UABardAndPaladin",
-					"shortName": "Heroism (UA)"
+					]
+				},
+				{
+					"name": "Oath of the Watchers (UA)",
+					"shortName": "Watchers (UA)",
+					"source": "UA2020SubclassesPt1",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Oath of the Watchers",
+								"entries": [
+									"Paladins who vow the Oath of the Watchers seek to protect the mortal realm from the predations of extraplanar creatures, many of which can lay waste to mortal soldiers. Thus, the Watchers hone their minds, spirits, and bodies to be the ultimate weapons against such threats.",
+									"Paladins who follow the Watchers' oath are ever vigilant in spotting the influence of extraplanar forces, often establishing a network of spies and informants to gather information on suspected cults. To a Watcher, keeping a healthy suspicion and awareness about one's surroundings is as natural as wearing armor in battle.",
+									{
+										"type": "entries",
+										"name": "Tenets of the Watchers",
+										"entries": [
+											"A paladin who assumes the Oath of the Watchers swears to safeguard the mortal realm from otherworldly threats.",
+											{
+												"type": "entries",
+												"name": "Vigilance",
+												"entries": [
+													"The threats you face are cunning, powerful, and subversive. Be ever alert for their corruption."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Loyalty",
+												"entries": [
+													"Never accept gifts or favors from fiends or those who truck with them. Stay true to your order, your comrades, and your duty."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Discipline",
+												"entries": [
+													"You are the shield against the endless terrors that lie beyond the stars. Your blade must be forever sharp and your mind keen to survive what lies beyond."
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Oath Spells",
+										"entries": [
+											"{@i 3rd-level Oath of the Watchers feature}",
+											"You gain oath spells at the paladin levels listed in the Oath of the Watchers table. See the Sacred Oath class feature for how oath spells work.",
+											{
+												"type": "table",
+												"caption": "Oath of the Watchers Spells  Spells",
+												"colLabels": [
+													"Paladin Level",
+													"Spells"
+												],
+												"colStyles": [
+													"col-3 text-center",
+													"col-9"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell alarm}, {@spell chromatic orb}"
+													],
+													[
+														"5th",
+														"{@spell augury}, {@spell moonbeam}"
+													],
+													[
+														"9th",
+														"{@spell counterspell}, {@spell nondetection}"
+													],
+													[
+														"13th",
+														"{@spell aura of purity}, {@spell banishment}"
+													],
+													[
+														"17th",
+														"{@spell hold monster}, {@spell hallow}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Channel Divinity",
+										"entries": [
+											"{@i 3rd-level Oath of the Watchers feature}",
+											"You gain the following Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.",
+											{
+												"type": "entries",
+												"name": "Watcher's Will",
+												"entries": [
+													"You can use your Channel Divinity to invest your presence with the warding power of your faith. As an action, you can choose a number of creatures you can see within 30 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). For 1 minute, all the chosen creatures have advantage on Intelligence, Wisdom, and Charisma saving throws."
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Abjure the Extraplanar",
+												"entries": [
+													"You can use your Channel Divinity to castigate unworldly beings. As an action, you present your holy symbol and each elemental, fey, fiend, or aberration within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.",
+													"A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. For its action, it can use only the {@action Dash} action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the {@action Dodge} action."
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Aura of the Sentinel",
+										"entries": [
+											"{@i 7th- and 18th-level Oath of the Watchers feature}",
+											"You emit an aura of alertness while you aren't {@condition incapacitated}. When you and any creature of your choice within 10 feet of you rolls initiative, you each gain a bonus to initiative equal to your Charisma modifier (minimum of +1). At 18th level, the range of this aura increases to 30 feet."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Vigilant Rebuke",
+										"entries": [
+											"{@i 15th-level Oath of the Watchers feature}",
+											"You've learned how to magically chastise anyone who dares cast unwanted spells at you and your wards. Whenever you or a creature you can see within 30 feet of you succeeds on a saving throw against a spell, you can use your reaction to deal {@dice 2d8} + your Charisma modifier force damage to the spellcaster."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Mortal Bulwark",
+										"entries": [
+											"{@i 20th-level Oath of the Watchers feature}",
+											"You manifest a spark of your deity's power in defense of your sacred oath. As a bonus action, you gain the following benefits for 1 minute:",
+											{
+												"type": "list",
+												"items": [
+													"You gain {@sense truesight} in a 120-foot radius.",
+													"You have advantage on attack rolls against elementals, fey, fiends, and aberrations.",
+													"When you hit a creature with an attack and deal damage to it, you can also force it to make a Charisma saving throw. On a failed save, the creature is magically banished to its native plane of existence if it's currently not there. On a successful save, the creature can't be banished by this feature for 24 hours."
+												]
+											},
+											"Once you use this bonus action, you can't use it again until you finish a long rest."
+										]
+									}
+								]
+							}
+						]
+					]
 				}
 			],
 			"fluff": [
 				{
+					"name": "Paladin",
+					"type": "section",
 					"entries": [
 						"Clad in plate armor that gleams in the sunlight despite the dust and grime of long travel, a human lays down her sword and shield and places her hands on a mortally wounded man. Divine radiance shines from her hands, the man's wounds knit closed, and his eyes open wide with amazement.",
 						"A dwarf crouches behind an outcrop, his black cloak making him nearly invisible in the night, and watches an orc war band celebrating its recent victory. Silently, he stalks into their midst and whispers an oath, and two orcs are dead before they even realize he is there.",
@@ -2619,6 +2842,7 @@
 					"source": "PHB"
 				},
 				{
+					"type": "section",
 					"entries": [
 						{
 							"type": "quote",
@@ -2938,9 +3162,7 @@
 					"source": "XGE",
 					"page": 36
 				}
-			],
-			"page": 82
+			]
 		}
 	]
 }
-

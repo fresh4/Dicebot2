@@ -56,8 +56,8 @@
 									"id": "004",
 									"entries": [
 										"As the Dungeon Master, you are the final authority when it comes to rules questions or disputes during the game. Here are some guidelines to help you arbitrate issues as they come up.",
-										"{@b When in doubt, make it up!}It's better to keep the game moving than to get bogged down in the rules.",
-										"{@b It's not a competition.}The DM isn't competing against the player characters. You're there to run the monsters, referee the rules, and keep the story moving.",
+										"{@b When in doubt, make it up!} It's better to keep the game moving than to get bogged down in the rules.",
+										"{@b It's not a competition.} The DM isn't competing against the player characters. You're there to run the monsters, referee the rules, and keep the story moving.",
 										"{@b It's a shared story.} It's the group's story, so let the players contribute to the outcome through the actions of their characters. Dungeons & Dragons is about imagination and coming together to tell a story as a group. Let the players participate in the storytelling.",
 										"{@b Be consistent}. If you decide that a rule works a certain way in one session, make sure it works that way the next time it comes into play.",
 										"{@b Make sure everyone is involved.} Ensure every character has a chance to shine. If some players are reluctant to speak up, remember to ask them what their characters are doing.",
@@ -212,7 +212,7 @@
 					"name": "Pregenerated Characters",
 					"id": "010",
 					"entries": [
-						"There are five pre-generated characters available for this adventure. Click on the picture, or name of the character to download the character sheet as a PDF.",
+						"There are five pre-generated characters available for this adventure. Click on the name of the character to download the character sheet as a PDF.",
 						{
 							"type": "gallery",
 							"images": [
@@ -1101,7 +1101,7 @@
 									"id": "062",
 									"entries": [
 										"You can figure out how the characters can get Glizzlegus out of the pit. Even once that's done, though, she still needs medical assistance so that gigantic spike hole doesn't kill her. If magical healing isn't available, a successful DC 15 Wisdom ({@skill Medicine}) check is required to suture her wounds. (If Beth is playing, encourage her not to use healing magic and give her advantage on the skill check.)",
-										"If she is healed, Gliz pretends to nice until her sudden but inevitable betrayal. She doesn't know jack about the dungeon and wants all its treasure for herself. Any character who succeeds on a DC 10 Wisdom ({@skill Insight}) check figures out she's Trouble with a capital T."
+										"If she is healed, Gliz pretends to be nice until her sudden but inevitable betrayal. She doesn't know jack about the dungeon and wants all its treasure for herself. Any character who succeeds on a DC 10 Wisdom ({@skill Insight}) check figures out she's Trouble with a capital T."
 									]
 								}
 							]

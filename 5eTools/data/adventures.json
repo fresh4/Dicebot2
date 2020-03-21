@@ -4,6 +4,12 @@
 			"name": "Lost Mines of Phandelver",
 			"id": "LMoP",
 			"source": "LMoP",
+			"published": "2014-07-15",
+			"storyline": "Starter Set",
+			"level": {
+				"start": 1,
+				"end": 5
+			},
 			"contents": [
 				{
 					"name": "Introduction",
@@ -84,18 +90,18 @@
 						"identifier": "B"
 					}
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 5
-			},
-			"published": "2014-07-15",
-			"storyline": "Starter Set"
+			]
 		},
 		{
 			"name": "Hoard of the Dragon Queen",
 			"id": "HotDQ",
 			"source": "HotDQ",
+			"published": "2014-08-19",
+			"storyline": "Tyranny of Dragons",
+			"level": {
+				"start": 1,
+				"end": 7
+			},
 			"contents": [
 				{
 					"name": "Campaign Overview",
@@ -841,18 +847,18 @@
 						"Dragons"
 					]
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 7
-			},
-			"published": "2014-08-19",
-			"storyline": "Tyranny of Dragons"
+			]
 		},
 		{
 			"name": "Rise of Tiamat",
 			"id": "RoT",
 			"source": "RoT",
+			"published": "2014-11-04",
+			"storyline": "Tyranny of Dragons",
+			"level": {
+				"start": 8,
+				"end": 15
+			},
 			"contents": [
 				{
 					"name": "Campaign Overview",
@@ -1396,18 +1402,18 @@
 						"Dragons"
 					]
 				}
-			],
-			"level": {
-				"start": 8,
-				"end": 15
-			},
-			"published": "2014-11-04",
-			"storyline": "Tyranny of Dragons"
+			]
 		},
 		{
 			"name": "Princes of the Apocalypse",
 			"id": "PotA",
 			"source": "PotA",
+			"published": "2015-04-07",
+			"storyline": "Elemental Evil",
+			"level": {
+				"start": 1,
+				"end": 15
+			},
 			"contents": [
 				{
 					"name": "Rise of Elemental Evil",
@@ -1556,18 +1562,18 @@
 						"identifier": "C"
 					}
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 15
-			},
-			"published": "2015-04-07",
-			"storyline": "Elemental Evil"
+			]
 		},
 		{
 			"name": "Out of the Abyss",
 			"id": "OotA",
 			"source": "OotA",
+			"published": "2015-09-15",
+			"storyline": "Rage of Demons",
+			"level": {
+				"start": 1,
+				"end": 15
+			},
 			"contents": [
 				{
 					"name": "Prisoners of the Drow",
@@ -1865,18 +1871,18 @@
 						"identifier": "D"
 					}
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 15
-			},
-			"published": "2015-09-15",
-			"storyline": "Rage of Demons"
+			]
 		},
 		{
 			"name": "Curse of Strahd",
 			"id": "CoS",
 			"source": "CoS",
+			"published": "2016-03-15",
+			"storyline": "Curse of Strahd",
+			"level": {
+				"start": 1,
+				"end": 10
+			},
 			"contents": [
 				{
 					"name": "Introduction",
@@ -2134,18 +2140,18 @@
 						"identifier": "F"
 					}
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 10
-			},
-			"published": "2016-03-15",
-			"storyline": "Curse of Strahd"
+			]
 		},
 		{
 			"name": "Storm King's Thunder",
 			"id": "SKT",
 			"source": "SKT",
+			"published": "2016-09-06",
+			"storyline": "Storm King's Thunder",
+			"level": {
+				"start": 1,
+				"end": 11
+			},
 			"contents": [
 				{
 					"name": "The Adventure",
@@ -2695,18 +2701,18 @@
 						"identifier": "D"
 					}
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 11
-			},
-			"published": "2016-09-06",
-			"storyline": "Storm King's Thunder"
+			]
 		},
 		{
 			"name": "Tales from the Yawning Portal: Against the Giants",
 			"id": "TftYP-AtG",
 			"source": "TftYP-AtG",
+			"published": "2017-03-24",
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"start": 11,
+				"end": 14
+			},
 			"contents": [
 				{
 					"name": "Preface",
@@ -2922,18 +2928,18 @@
 						"identifier": "B"
 					}
 				}
-			],
-			"level": {
-				"start": 11,
-				"end": 14
-			},
-			"published": "2017-03-24",
-			"storyline": "Tales from the Yawning Portal"
+			]
 		},
 		{
 			"name": "Tales from the Yawning Portal: Dead in Thay",
 			"id": "TftYP-DiT",
 			"source": "TftYP-DiT",
+			"published": "2017-03-24",
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"start": 9,
+				"end": 11
+			},
 			"contents": [
 				{
 					"name": "Preface",
@@ -3119,18 +3125,18 @@
 						"identifier": "B"
 					}
 				}
-			],
-			"level": {
-				"start": 9,
-				"end": 11
-			},
-			"published": "2017-03-24",
-			"storyline": "Tales from the Yawning Portal"
+			]
 		},
 		{
 			"name": "Tales from the Yawning Portal: The Forge of Fury",
 			"id": "TftYP-TFoF",
 			"source": "TftYP-TFoF",
+			"published": "2017-03-24",
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"start": 3,
+				"end": 5
+			},
 			"contents": [
 				{
 					"name": "Preface",
@@ -3242,18 +3248,18 @@
 						"identifier": "B"
 					}
 				}
-			],
-			"level": {
-				"start": 3,
-				"end": 5
-			},
-			"published": "2017-03-24",
-			"storyline": "Tales from the Yawning Portal"
+			]
 		},
 		{
 			"name": "Tales from the Yawning Portal: The Hidden Shrine of Tamoachan",
 			"id": "TftYP-THSoT",
 			"source": "TftYP-THSoT",
+			"published": "2017-03-24",
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"start": 5,
+				"end": 8
+			},
 			"contents": [
 				{
 					"name": "Preface",
@@ -3356,18 +3362,18 @@
 						"identifier": "B"
 					}
 				}
-			],
-			"level": {
-				"start": 5,
-				"end": 8
-			},
-			"published": "2017-03-24",
-			"storyline": "Tales from the Yawning Portal"
+			]
 		},
 		{
 			"name": "Tales from the Yawning Portal: The Sunless Citadel",
 			"id": "TftYP-TSC",
 			"source": "TftYP-TSC",
+			"published": "2017-03-24",
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"start": 1,
+				"end": 3
+			},
 			"contents": [
 				{
 					"name": "Preface",
@@ -3457,18 +3463,17 @@
 						"identifier": "B"
 					}
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 3
-			},
-			"published": "2017-03-24",
-			"storyline": "Tales from the Yawning Portal"
+			]
 		},
 		{
 			"name": "Tales from the Yawning Portal: Tomb of Horrors",
 			"id": "TftYP-ToH",
 			"source": "TftYP-ToH",
+			"published": "2017-03-24",
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"custom": "Higher level"
+			},
 			"contents": [
 				{
 					"name": "Preface",
@@ -3533,17 +3538,18 @@
 						"identifier": "B"
 					}
 				}
-			],
-			"level": {
-				"custom": "Higher level"
-			},
-			"published": "2017-03-24",
-			"storyline": "Tales from the Yawning Portal"
+			]
 		},
 		{
 			"name": "Tales from the Yawning Portal: White Plume Mountain",
 			"id": "TftYP-WPM",
 			"source": "TftYP-WPM",
+			"published": "2017-03-24",
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"start": 8,
+				"end": 9
+			},
 			"contents": [
 				{
 					"name": "Preface",
@@ -3599,18 +3605,18 @@
 						"identifier": "B"
 					}
 				}
-			],
-			"level": {
-				"start": 8,
-				"end": 9
-			},
-			"published": "2017-03-24",
-			"storyline": "Tales from the Yawning Portal"
+			]
 		},
 		{
 			"name": "Tomb of Annihilation",
 			"id": "ToA",
 			"source": "ToA",
+			"published": "2017-09-19",
+			"storyline": "Tomb of Annihilation",
+			"level": {
+				"start": 1,
+				"end": 11
+			},
 			"contents": [
 				{
 					"name": "Dramatis Personae",
@@ -3750,18 +3756,18 @@
 						"identifier": "F"
 					}
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 11
-			},
-			"published": "2017-09-19",
-			"storyline": "Tomb of Annihilation"
+			]
 		},
 		{
 			"name": "The Tortle Package",
 			"id": "TTP",
 			"source": "TTP",
+			"published": "2017-11-03",
+			"storyline": "Tomb of Annihilation",
+			"level": {
+				"start": 1,
+				"end": 4
+			},
 			"contents": [
 				{
 					"name": "Introduction",
@@ -3823,18 +3829,18 @@
 				{
 					"name": "Handouts"
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 4
-			},
-			"published": "2017-11-03",
-			"storyline": "Tomb of Annihilation"
+			]
 		},
 		{
 			"name": "Waterdeep: Dragon Heist",
 			"id": "WDH",
 			"source": "WDH",
+			"published": "2018-09-18",
+			"storyline": "Waterdeep",
+			"level": {
+				"start": 1,
+				"end": 5
+			},
 			"contents": [
 				{
 					"name": "Foreword",
@@ -4068,18 +4074,133 @@
 						"identifier": "C"
 					}
 				}
-			],
+			]
+		},
+		{
+			"name": "Lost Laboratory of Kwalish",
+			"id": "LLK",
+			"source": "LLK",
+			"published": "2018-11-10",
+			"storyline": "Extra Life",
 			"level": {
-				"start": 1,
-				"end": 5
+				"start": 5,
+				"end": 10
 			},
-			"published": "2018-09-18",
-			"storyline": "Waterdeep"
+			"contents": [
+				{
+					"name": "Adventure Primer",
+					"headers": [
+						"Background",
+						"Adventure Summary",
+						"Running the Adventure",
+						"Adventure Hooks"
+					]
+				},
+				{
+					"name": "Mission to the Barrier Peaks",
+					"ordinal": {
+						"type": "part",
+						"identifier": 1
+					},
+					"headers": [
+						"The Cartophile",
+						"Hirelings",
+						"Rumors and Legends",
+						"Reaching the Peaks",
+						"Trinkets from the Barrier Peaks"
+					]
+				},
+				{
+					"name": "Monastery of the Distressed Body",
+					"ordinal": {
+						"type": "part",
+						"identifier": 2
+					},
+					"headers": [
+						"Cliff-Side Approach",
+						"The Monastery",
+						"Locations in the Monastery",
+						"Onward Journey"
+					]
+				},
+				{
+					"name": "The Ooze-Flooded City",
+					"ordinal": {
+						"type": "part",
+						"identifier": 3
+					},
+					"headers": [
+						"Daoine Gloine",
+						"Meeting Kwalish",
+						"Concluding the Adventure"
+					]
+				},
+				{
+					"name": "Random Encounters",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Further Options",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					},
+					"headers": [
+						"The Cartophile",
+						"Mary Greymalkin",
+						"The Enhanced Sphinx",
+						"The Grand Master",
+						"Brains in Jars",
+						"More Monastery",
+						"High Priest",
+						"Baubles",
+						"Abyssal Throne Gate",
+						"Kwalish"
+					]
+				},
+				{
+					"name": "Monsters and NPCs",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "C"
+					}
+				},
+				{
+					"name": "Magic Items",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "D"
+					}
+				},
+				{
+					"name": "New Spells",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "E"
+					}
+				},
+				{
+					"name": "Additional Rumors",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "F"
+					}
+				}
+			]
 		},
 		{
 			"name": "Waterdeep: Dungeon of the Mad Mage",
 			"id": "WDMM",
 			"source": "WDMM",
+			"published": "2018-11-13",
+			"storyline": "Waterdeep",
+			"level": {
+				"start": 5,
+				"end": 20
+			},
 			"contents": [
 				{
 					"name": "Undermountain Overview",
@@ -7319,18 +7440,18 @@
 						"identifier": "D"
 					}
 				}
-			],
-			"level": {
-				"start": 5,
-				"end": 20
-			},
-			"published": "2018-11-13",
-			"storyline": "Waterdeep"
+			]
 		},
 		{
 			"name": "Krenko's Way",
 			"id": "KKW",
 			"source": "KKW",
+			"published": "2018-11-20",
+			"storyline": "Ravnica",
+			"level": {
+				"start": 1,
+				"end": 2
+			},
 			"contents": [
 				{
 					"name": "Krenko's Way",
@@ -7346,133 +7467,18 @@
 						"The End?"
 					]
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 2
-			},
-			"published": "2018-11-20",
-			"storyline": "Ravnica"
-		},
-		{
-			"name": "Lost Laboratory of Kwalish",
-			"id": "LLK",
-			"source": "LLK",
-			"contents": [
-				{
-					"name": "Adventure Primer",
-					"headers": [
-						"Background",
-						"Adventure Summary",
-						"Running the Adventure",
-						"Adventure Hooks"
-					]
-				},
-				{
-					"name": "Mission to the Barrier Peaks",
-					"ordinal": {
-						"type": "part",
-						"identifier": 1
-					},
-					"headers": [
-						"The Cartophile",
-						"Hirelings",
-						"Rumors and Legends",
-						"Reaching the Peaks",
-						"Trinkets from the Barrier Peaks"
-					]
-				},
-				{
-					"name": "Monastery of the Distressed Body",
-					"ordinal": {
-						"type": "part",
-						"identifier": 2
-					},
-					"headers": [
-						"Cliff-Side Approach",
-						"The Monastery",
-						"Locations in the Monastery",
-						"Onward Journey"
-					]
-				},
-				{
-					"name": "The Ooze-Flooded City",
-					"ordinal": {
-						"type": "part",
-						"identifier": 3
-					},
-					"headers": [
-						"Daoine Gloine",
-						"Meeting Kwalish",
-						"Concluding the Adventure"
-					]
-				},
-				{
-					"name": "Random Encounters",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "A"
-					}
-				},
-				{
-					"name": "Further Options",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "B"
-					},
-					"headers": [
-						"The Cartophile",
-						"Mary Greymalkin",
-						"The Enhanced Sphinx",
-						"The Grand Master",
-						"Brains in Jars",
-						"More Monastery",
-						"High Priest",
-						"Baubles",
-						"Abyssal Throne Gate",
-						"Kwalish"
-					]
-				},
-				{
-					"name": "Monsters and NPCs",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "C"
-					}
-				},
-				{
-					"name": "Magic Items",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "D"
-					}
-				},
-				{
-					"name": "New Spells",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "E"
-					}
-				},
-				{
-					"name": "Additional Rumors",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "F"
-					}
-				}
-			],
-			"level": {
-				"start": 5,
-				"end": 10
-			},
-			"published": "2018-11-10",
-			"storyline": "Extra Life"
+			]
 		},
 		{
 			"name": "Ghosts of Saltmarsh",
 			"id": "GoS",
 			"source": "GoS",
+			"published": "2019-05-21",
+			"storyline": "Ghosts of Saltmarsh",
+			"level": {
+				"start": 1,
+				"end": 12
+			},
 			"contents": [
 				{
 					"name": "Saltmarsh",
@@ -8633,18 +8639,45 @@
 						"identifier": "C"
 					}
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 12
-			},
+			]
+		},
+		{
+			"name": "Hunt for the Thessalhydra",
+			"id": "HftT",
+			"source": "HftT",
 			"published": "2019-05-21",
-			"storyline": "Ghosts of Saltmarsh"
+			"storyline": "Stranger Things",
+			"level": {
+				"start": 3,
+				"end": 4
+			},
+			"contents": [
+				{
+					"name": "Hunt for the Thessalhydra",
+					"headers": [
+						"Notes to Myself (as Dungeon Master)",
+						"The Whole Story",
+						"Audience with Sir Tristan",
+						"Rumors on the Road",
+						"Troglodyte Caverns",
+						"The Upside Down",
+						"Upside Down Encounters",
+						"Lair of the Thessalhydra",
+						"Conclusion"
+					]
+				}
+			]
 		},
 		{
 			"name": "The Orrery of the Wanderer",
 			"id": "OoW",
 			"source": "OoW",
+			"published": "2019-06-18",
+			"storyline": "Acquisitions Incorporated",
+			"level": {
+				"start": 1,
+				"end": 6
+			},
 			"contents": [
 				{
 					"name": "The Orrery of the Wanderer",
@@ -8953,18 +8986,18 @@
 						"The Campaign to Come"
 					]
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 6
-			},
-			"published": "2019-06-18",
-			"storyline": "Acquisitions Incorporated"
+			]
 		},
 		{
 			"name": "Dragon of Icespire Peak",
 			"id": "DIP",
 			"source": "DIP",
+			"published": "2019-06-24",
+			"storyline": "Essentials Kit",
+			"level": {
+				"start": 1,
+				"end": 6
+			},
 			"contents": [
 				{
 					"name": "Running the Adventure",
@@ -9104,45 +9137,18 @@
 				{
 					"name": "Quest Cards"
 				}
-			],
-			"published": "2019-06-24",
-			"level": {
-				"start": 1,
-				"end": 6
-			},
-			"storyline": "Essentials Kit"
-		},
-		{
-			"name": "Hunt for the Thessalhydra",
-			"id": "HftT",
-			"source": "HftT",
-			"contents": [
-				{
-					"name": "Hunt for the Thessalhydra",
-					"headers": [
-						"Notes to Myself (as Dungeon Master)",
-						"The Whole Story",
-						"Audience with Sir Tristan",
-						"Rumors on the Road",
-						"Troglodyte Caverns",
-						"The Upside Down",
-						"Upside Down Encounters",
-						"Lair of the Thessalhydra",
-						"Conclusion"
-					]
-				}
-			],
-			"published": "2019-05-21",
-			"level": {
-				"start": 3,
-				"end": 4
-			},
-			"storyline": "Stranger Things"
+			]
 		},
 		{
 			"name": "Divine Contention",
 			"id": "DC",
 			"source": "DC",
+			"published": "2019-09-03",
+			"storyline": "Essentials Kit",
+			"level": {
+				"start": 11,
+				"end": 12
+			},
 			"contents": [
 				{
 					"name": "Introduction",
@@ -10140,18 +10146,18 @@
 						}
 					]
 				}
-			],
-			"published": "2019-09-03",
-			"level": {
-				"start": 11,
-				"end": 12
-			},
-			"storyline": "Essentials Kit"
+			]
 		},
 		{
 			"name": "Storm Lord's Wrath",
 			"id": "SLW",
 			"source": "SLW",
+			"published": "2019-09-03",
+			"storyline": "Essentials Kit",
+			"level": {
+				"start": 7,
+				"end": 9
+			},
 			"contents": [
 				{
 					"name": "Introduction",
@@ -10936,18 +10942,18 @@
 						}
 					]
 				}
-			],
-			"published": "2019-09-03",
-			"level": {
-				"start": 7,
-				"end": 9
-			},
-			"storyline": "Essentials Kit"
+			]
 		},
 		{
 			"name": "Sleeping Dragon's Wake",
 			"id": "SDW",
 			"source": "SDW",
+			"published": "2019-09-03",
+			"storyline": "Essentials Kit",
+			"level": {
+				"start": 9,
+				"end": 11
+			},
 			"contents": [
 				{
 					"name": "Introduction",
@@ -11661,18 +11667,18 @@
 						"identifier": "C"
 					}
 				}
-			],
-			"published": "2019-09-03",
-			"level": {
-				"start": 9,
-				"end": 11
-			},
-			"storyline": "Essentials Kit"
+			]
 		},
 		{
 			"name": "Baldur's Gate: Descent Into Avernus",
 			"id": "BGDIA",
 			"source": "BGDIA",
+			"published": "2019-09-18",
+			"storyline": "Baldur's Gate",
+			"level": {
+				"start": 1,
+				"end": 13
+			},
 			"contents": [
 				{
 					"name": "About the Adventure",
@@ -12547,18 +12553,18 @@
 						"identifier": "G"
 					}
 				}
-			],
-			"published": "2019-09-18",
-			"level": {
-				"start": 1,
-				"end": 13
-			},
-			"storyline": "Baldur's Gate"
+			]
 		},
 		{
 			"name": "Locathah Rising",
 			"id": "LR",
 			"source": "LR",
+			"published": "2019-09-19",
+			"storyline": "Extra Life",
+			"level": {
+				"start": 9,
+				"end": 9
+			},
 			"contents": [
 				{
 					"name": "Introduction",
@@ -12641,18 +12647,390 @@
 						"identifier": "B"
 					}
 				}
-			],
-			"published": "2019-09-19",
+			]
+		},
+		{
+			"name": "Infernal Machine Rebuild",
+			"id": "IMR",
+			"source": "IMR",
+			"published": "2019-11-12",
+			"storyline": "Extra Life",
 			"level": {
-				"start": 9,
-				"end": 9
+				"start": 5,
+				"end": 10
 			},
-			"storyline": "Extra Life"
+			"contents": [
+				{
+					"name": "Introduction",
+					"headers": [
+						"Background",
+						"Adventure Summary",
+						"Running the Adventure",
+						"Adventure Hooks"
+					]
+				},
+				{
+					"name": "The Unicorn and the Hags",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 1
+					},
+					"headers": [
+						"Background",
+						"Who Dwells Here?",
+						"The Three Mothers",
+						"Banrion the Unicorn",
+						"The Fey Woods",
+						"Aftermath"
+					]
+				},
+				{
+					"name": "An Invitation Extended",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 2
+					},
+					"headers": [
+						"Background",
+						"The Two Agents",
+						"Expedition Options",
+						"Manipulating Time"
+					]
+				},
+				{
+					"name": "Construction of Horrors",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 3
+					},
+					"headers": [
+						"Background",
+						"Who Dwells Here?",
+						"Missing Components",
+						"Mechanical Guide",
+						"Exploring the Tomb",
+						{
+							"depth": 1,
+							"header": "1. Office of the Artificer"
+						},
+						{
+							"depth": 1,
+							"header": "2. Umber Hulk Pen"
+						},
+						{
+							"depth": 1,
+							"header": "3. Entrance to the Tomb"
+						},
+						{
+							"depth": 1,
+							"header": "4. Side Entrance"
+						},
+						{
+							"depth": 1,
+							"header": "5. Control Room"
+						},
+						{
+							"depth": 1,
+							"header": "6. Captive Balor"
+						},
+						{
+							"depth": 1,
+							"header": "7. Forsaken Prison"
+						},
+						{
+							"depth": 1,
+							"header": "8. Sculptors' Workroom"
+						},
+						{
+							"depth": 1,
+							"header": "9. Artisans' Chambers"
+						},
+						"Exploring the Tomb (areas 10-18)",
+						{
+							"depth": 1,
+							"header": "10. Great Hall of Spheres"
+						},
+						{
+							"depth": 1,
+							"header": "11. Escape Room"
+						},
+						{
+							"depth": 1,
+							"header": "12. False Doors"
+						},
+						{
+							"depth": 1,
+							"header": "13. Chamber of Three Chests"
+						},
+						{
+							"depth": 1,
+							"header": "14. Chapel of Evil"
+						},
+						{
+							"depth": 1,
+							"header": "15. Secret Door"
+						},
+						{
+							"depth": 1,
+							"header": "16. Rift to the Lower Planes"
+						},
+						{
+							"depth": 1,
+							"header": "17. Flooding Pit"
+						},
+						{
+							"depth": 1,
+							"header": "18. Guardian Door"
+						},
+						{
+							"depth": 1,
+							"header": "18a. Gemsmith's Workshop"
+						}
+					]
+				},
+				{
+					"name": "Temple of Moloch",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 4
+					},
+					"headers": [
+						"Background",
+						"Who Dwells Here?",
+						"Missing Components",
+						"Mechanical Guide",
+						"Exploring the Temple",
+						{
+							"depth": 1,
+							"header": "1. Entry Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "2. Water Room"
+						},
+						{
+							"depth": 1,
+							"header": "3. Empty Ceremonial Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "4. Guardroom"
+						},
+						{
+							"depth": 1,
+							"header": "5. Watch Room"
+						},
+						{
+							"depth": 1,
+							"header": "6. Barracks"
+						},
+						{
+							"depth": 1,
+							"header": "7. Storage Area"
+						},
+						{
+							"depth": 1,
+							"header": "8. Office of the Torturer"
+						},
+						"Exploring the Temple (areas 9-16)",
+						{
+							"depth": 1,
+							"header": "9. Torture Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "10. Prison Cells"
+						},
+						{
+							"depth": 1,
+							"header": "11. Office of the Warden"
+						},
+						{
+							"depth": 1,
+							"header": "12. Owl Laboratory"
+						},
+						{
+							"depth": 1,
+							"header": "13. Bear Laboratory"
+						},
+						{
+							"depth": 1,
+							"header": "14. Main Laboratory (North)"
+						},
+						{
+							"depth": 1,
+							"header": "15. Thessalar's Laboratory"
+						},
+						{
+							"depth": 1,
+							"header": "16. Main Laboratory (South)"
+						},
+						"Exploring the Temple (areas 17-24)",
+						{
+							"depth": 1,
+							"header": "17. Midden"
+						},
+						{
+							"depth": 1,
+							"header": "18. Disposal Pit"
+						},
+						{
+							"depth": 1,
+							"header": "19. Sitting Room"
+						},
+						{
+							"depth": 1,
+							"header": "20. Thessalar's Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "21. Elite Guard Barracks"
+						},
+						{
+							"depth": 1,
+							"header": "22. Alchemical Lab"
+						},
+						{
+							"depth": 1,
+							"header": "23. Body Tanks"
+						},
+						{
+							"depth": 1,
+							"header": "24. Halls of Statues"
+						},
+						"Exploring the Temple (areas 25-32)",
+						{
+							"depth": 1,
+							"header": "25. Main Temple"
+						},
+						{
+							"depth": 1,
+							"header": "26. Workshop"
+						},
+						{
+							"depth": 1,
+							"header": "27. Workshop and Storage"
+						},
+						{
+							"depth": 1,
+							"header": "28. Private Chapel"
+						},
+						{
+							"depth": 1,
+							"header": "29. Secret Equipment Room"
+						},
+						{
+							"depth": 1,
+							"header": "30. Hidden Stairs"
+						},
+						{
+							"depth": 1,
+							"header": "31. Gemsmith's Cell"
+						},
+						{
+							"depth": 1,
+							"header": "32. Guardroom"
+						},
+						"Exploring the Temple (areas 33-39)",
+						{
+							"depth": 1,
+							"header": "33. Sculptors' Dormitory"
+						},
+						{
+							"depth": 1,
+							"header": "34. Guardroom"
+						},
+						{
+							"depth": 1,
+							"header": "35. Office of the Demogorgon"
+						},
+						{
+							"depth": 1,
+							"header": "36. Office of Hebediah's Steward"
+						},
+						{
+							"depth": 1,
+							"header": "37. Office of Emmanuel's Steward"
+						},
+						{
+							"depth": 1,
+							"header": "38. Treasure Vault"
+						},
+						{
+							"depth": 1,
+							"header": "39. Stairs to Underground Lake"
+						}
+					]
+				},
+				{
+					"name": "Final Showdown",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 5
+					},
+					"headers": [
+						"Special Delivery",
+						"Completing the Machine",
+						"Concluding the Adventure"
+					]
+				},
+				{
+					"name": "Further Options",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					},
+					"headers": [
+						"Chapter 1: The Unicorn and the Hags",
+						"Chapter 2: An Invitation Extended",
+						"Chapter 3: Construction of Horrors",
+						"Chapter 4: Temple of Moloch",
+						"Chapter 5: Final Showdown",
+						"Additional Locations",
+						"Additional NPCs"
+					]
+				},
+				{
+					"name": "NPCs and Monsters",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				},
+				{
+					"name": "New Magic and Special Items",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "C"
+					},
+					"headers": [
+						"Poisons",
+						"Magic Items"
+					]
+				},
+				{
+					"name": "Player Handouts",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "D"
+					},
+					"headers": [
+						"Walk-Through Map",
+						"Piece of the Infernal Machine of Lum the Mad"
+					]
+				}
+			]
 		},
 		{
 			"name": "Eberron: Forgotten Relics",
 			"id": "EFR",
 			"source": "EFR",
+			"published": "2019-11-19",
+			"storyline": "Eberron",
+			"level": {
+				"start": 1,
+				"end": 2
+			},
 			"contents": [
 				{
 					"name": "Eberron: Forgotten Relics",
@@ -12727,18 +13105,18 @@
 						"Conclusion"
 					]
 				}
-			],
-			"level": {
-				"start": 1,
-				"end": 2
-			},
-			"published": "2019-11-19",
-			"storyline": "Eberron"
+			]
 		},
 		{
 			"name": "The Lost Dungeon of Rickedness: Big Rick Energy",
 			"id": "RMBRE",
 			"source": "RMBRE",
+			"published": "2019-11-19",
+			"storyline": "Rick and Morty",
+			"level": {
+				"start": 1,
+				"end": 3
+			},
 			"contents": [
 				{
 					"name": "Introduction",
@@ -12939,13 +13317,7 @@
 						"Creature Descriptions"
 					]
 				}
-			],
-			"published": "2019-11-19",
-			"level": {
-				"start": 1,
-				"end": 3
-			},
-			"storyline": "Rick and Morty"
+			]
 		}
 	]
 }

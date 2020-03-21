@@ -3,6 +3,8 @@
 		{
 			"name": "Monk",
 			"source": "PHB",
+			"page": 76,
+			"srd": true,
 			"hd": {
 				"number": 1,
 				"faces": 8
@@ -11,6 +13,51 @@
 				"str",
 				"dex"
 			],
+			"startingProficiencies": {
+				"weapons": [
+					"simple",
+					"shortswords"
+				],
+				"tools": [
+					"any one type of artisan's tools or any one musical instrument of your choice"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"acrobatics",
+								"athletics",
+								"history",
+								"insight",
+								"religion",
+								"stealth"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) a {@item shortsword|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
+					"10 {@item dart|phb|darts}"
+				],
+				"goldAlternative": "{@dice 5d4|5d4|Starting Gold}"
+			},
+			"multiclassing": {
+				"requirements": {
+					"dex": 13,
+					"wis": 13
+				},
+				"proficienciesGained": {
+					"weapons": [
+						"simple",
+						"shortswords"
+					]
+				}
+			},
 			"classTableGroups": [
 				{
 					"colLabels": [
@@ -342,51 +389,6 @@
 					]
 				}
 			],
-			"startingProficiencies": {
-				"weapons": [
-					"simple",
-					"shortswords"
-				],
-				"tools": [
-					"any one type of artisan's tools or any one musical instrument of your choice"
-				],
-				"skills": [
-					{
-						"choose": {
-							"from": [
-								"acrobatics",
-								"athletics",
-								"history",
-								"insight",
-								"religion",
-								"stealth"
-							],
-							"count": 2
-						}
-					}
-				]
-			},
-			"startingEquipment": {
-				"additionalFromBackground": true,
-				"default": [
-					"(a) a {@item shortsword|phb} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
-					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
-					"10 {@item dart|phb|darts}"
-				],
-				"goldAlternative": "{@dice 5d4|5d4|Starting Gold}"
-			},
-			"multiclassing": {
-				"requirements": {
-					"dex": 13,
-					"wis": 13
-				},
-				"proficienciesGained": {
-					"weapons": [
-						"simple",
-						"shortswords"
-					]
-				}
-			},
 			"classFeatures": [
 				[
 					{
@@ -533,6 +535,17 @@
 						]
 					},
 					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 4th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
+					},
+					{
 						"name": "Slow Fall",
 						"entries": [
 							"Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level."
@@ -589,6 +602,17 @@
 							"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 8th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -623,6 +647,17 @@
 							"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 12th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -657,6 +692,17 @@
 							"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 16th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -684,6 +730,17 @@
 							"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
 							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
 						]
+					},
+					{
+						"type": "entries",
+						"name": "Proficiency Versatility",
+						"entries": [
+							"{@i 19th-level feature (enhances Ability Score Improvement)}",
+							"When you gain the Ability Score Improvement feature from your class, you can also replace one of your skill proficiencies with a skill proficiency offered by your class at 1st level (the proficiency you replace needn't be from the class).",
+							"This change represents one of your skills atrophying as you focus on a different skill."
+						],
+						"source": "UAClassFeatureVariants",
+						"page": 1
 					}
 				],
 				[
@@ -699,6 +756,8 @@
 			"subclasses": [
 				{
 					"name": "Way of Shadow",
+					"shortName": "Shadow",
+					"source": "PHB",
 					"subclassFeatures": [
 						[
 							{
@@ -754,12 +813,13 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Shadow"
+					]
 				},
 				{
 					"name": "Way of the Open Hand",
+					"shortName": "Open Hand",
+					"source": "PHB",
+					"srd": true,
 					"subclassFeatures": [
 						[
 							{
@@ -826,12 +886,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Open Hand"
+					]
 				},
 				{
 					"name": "Way of the Four Elements",
+					"shortName": "Four Elements",
+					"source": "PHB",
 					"spellcastingAbility": "wis",
 					"subclassFeatures": [
 						[
@@ -1073,12 +1133,12 @@
 								]
 							}
 						]
-					],
-					"source": "PHB",
-					"shortName": "Four Elements"
+					]
 				},
 				{
 					"name": "Way of the Long Death",
+					"shortName": "Long Death",
+					"source": "SCAG",
 					"subclassFeatures": [
 						[
 							{
@@ -1134,12 +1194,13 @@
 								]
 							}
 						]
-					],
-					"source": "SCAG",
-					"shortName": "Long Death"
+					]
 				},
 				{
 					"name": "Way of the Sun Soul",
+					"shortName": "Sun Soul",
+					"source": "SCAG",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1201,12 +1262,13 @@
 								]
 							}
 						]
-					],
-					"source": "SCAG",
-					"shortName": "Sun Soul"
+					]
 				},
 				{
 					"name": "Way of the Kensei (UA)",
+					"shortName": "Kensei (UA)",
+					"source": "UAMonk",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1296,12 +1358,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAMonk",
-					"shortName": "Kensei (UA)"
+					]
 				},
 				{
 					"name": "Way of the Kensei v2 (UA)",
+					"shortName": "Kensei v2 (UA)",
+					"source": "UARevisedSubclasses",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1390,12 +1453,12 @@
 								]
 							}
 						]
-					],
-					"source": "UARevisedSubclasses",
-					"shortName": "Kensei v2 (UA)"
+					]
 				},
 				{
 					"name": "Way of Tranquility (UA)",
+					"shortName": "Tranquility (UA)",
+					"source": "UAMonk",
 					"subclassFeatures": [
 						[
 							{
@@ -1466,12 +1529,13 @@
 								]
 							}
 						]
-					],
-					"source": "UAMonk",
-					"shortName": "Tranquility (UA)"
+					]
 				},
 				{
 					"name": "Way of the Drunken Master (UA)",
+					"shortName": "Drunken Master (UA)",
+					"source": "UAATrioOfSubclasses",
+					"isReprinted": true,
 					"subclassFeatures": [
 						[
 							{
@@ -1528,12 +1592,12 @@
 								]
 							}
 						]
-					],
-					"source": "UAATrioOfSubclasses",
-					"shortName": "Drunken Master (UA)"
+					]
 				},
 				{
 					"name": "Way of the Drunken Master",
+					"shortName": "Drunken Master",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -1611,12 +1675,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Drunken Master"
+					]
 				},
 				{
 					"name": "Way of the Kensei",
+					"shortName": "Kensei",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -1715,12 +1779,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Kensei"
+					]
 				},
 				{
 					"name": "Way of the Sun Soul",
+					"shortName": "Sun Soul",
+					"source": "XGE",
 					"subclassFeatures": [
 						[
 							{
@@ -1783,12 +1847,12 @@
 								]
 							}
 						]
-					],
-					"source": "XGE",
-					"shortName": "Sun Soul"
+					]
 				},
 				{
 					"name": "Way of the Soul Knife (Livestream)",
+					"shortName": "Soul Knife (Stream)",
+					"source": "Stream",
 					"subclassFeatures": [
 						[
 							{
@@ -1893,12 +1957,12 @@
 								]
 							}
 						]
-					],
-					"source": "Stream",
-					"shortName": "Soul Knife (Stream)"
+					]
 				},
 				{
 					"name": "Way of the Astral Self (UA)",
+					"shortName": "Astral Self (UA)",
+					"source": "UABarbarianAndMonk",
 					"subclassFeatures": [
 						[
 							{
@@ -2042,13 +2106,136 @@
 								]
 							}
 						]
-					],
-					"source": "UABarbarianAndMonk",
-					"shortName": "Astral Self (UA)"
+					]
+				},
+				{
+					"name": "Way of Mercy (UA)",
+					"shortName": "Mercy (UA)",
+					"source": "UA2020SubclassesPt1",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Way of Mercy",
+								"entries": [
+									"Monks of the Way of Mercy learn to manipulate the life force of others to bring aid to those in need. They are wandering physicians to the poor and hurt. However, to those beyond their help\u2014whether ailing or evil\u2014they bring a swift end as an act of mercy.",
+									"Those who follow the Way of Mercy might be humble members of a religious order, administering to those in greatest need, making grim choices rooted in reality rather than idealism. Some might be gentle-voiced healers, beloved by their communities, while others might be masked bringers of macabre mercies. The walkers of this way usually don simple robes with deep cowls, and they often conceal their faces with masks, presenting themselves as the faceless bringers of life and death. If you wear a mask, choose its appearance, or determine it randomly by rolling on the Merciful Mask table.",
+									{
+										"type": "table",
+										"caption": "Merciful Mask",
+										"colLabels": [
+											"d6",
+											"Mask Appearance"
+										],
+										"colStyles": [
+											"col-2 text-center",
+											"col-10"
+										],
+										"rows": [
+											[
+												"1",
+												"Raven"
+											],
+											[
+												"2",
+												"Blank and white"
+											],
+											[
+												"3",
+												"Crying visage"
+											],
+											[
+												"4",
+												"Laughing visage"
+											],
+											[
+												"5",
+												"Skull"
+											],
+											[
+												"6",
+												"Butterfly"
+											]
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Implements of Mercy",
+										"entries": [
+											"{@i 3rd-level Way of Mercy feature}",
+											"You gain proficiency in the {@skill Insight} or {@skill Medicine} skill (your choice), and you gain proficiency with the {@item herbalism kit|phb} and the {@item poisoner's kit|phb}."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Hands of Healing",
+										"entries": [
+											"{@i 3rd-level Way of Mercy feature}",
+											"Your mystical touch can mend wounds. As an action, you can spend 1 ki point to touch a creature and restore a number of hit points equal to a roll of your Martial Arts die + your Wisdom modifier.",
+											"When you use your Flurry of Blows, you can replace one of the unarmed strikes with a use of this feature without spending its ki cost."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Hands of Harm",
+										"entries": [
+											"{@i 3rd-level Way of Mercy feature}",
+											"You use your ki to inflict wounds. When you hit a creature with an unarmed strike, you can spend 1 ki point to deal extra necrotic damage equal to one roll of your Martial Arts die. If the creature is {@condition incapacitated} or {@condition poisoned}, the creature instead takes necrotic damage equal to three rolls of your Martial Arts die instead. You can use this feature only once on each of your turns."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Noxious Aura",
+										"entries": [
+											"{@i 6th-level Way of Mercy feature}",
+											"As a bonus action, you spend 1 ki point to turn your ki into an aura of toxic miasma. The aura extends 5 feet from you in every direction, but not through total cover. It lasts for 1 minute, until you're {@condition incapacitated}, or you dismiss it (no action required).",
+											"While your aura is active, ranged attacks have disadvantage against you. Any other creature that starts its turn in the aura must succeed on a Constitution saving throw or become {@condition poisoned} until the end of your next turn and take poison damage equal to your Wisdom modifier (minimum of 0 damage)."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Healing Technique",
+										"entries": [
+											"{@i 11th-level Way of Mercy feature}",
+											"Your skill in manipulating your ki to heal increases. When you restore hit points to a creature using your Hands of Healing, you can also end one disease or a condition from the following list affecting the target: {@condition blinded}, {@condition deafened}, {@condition paralyzed}, or {@condition poisoned}."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Hand of Mercy",
+										"entries": [
+											"{@i 17th-level Way of Mercy feature}",
+											"Your mastery of life energy opens the door to the ultimate respite technique. As an action, you can touch a creature, expend 4 ki points, and force the creature to make a Constitution saving throw (a creature can willingly fail this save). Unless the save succeeds, the creature enters a state of suspended animation for a number of days equal to your monk level or until you end the effect early (no action required). During this time, the creature is {@condition paralyzed}, has immunity to all damage, and any curse, disease, or poison affecting it is suspended. The creature appears dead to all outward inspection and to spells used to determine the creature's status.",
+											"You can have only one creature under the effect of this feature at a time."
+										]
+									}
+								]
+							}
+						]
+					]
 				}
 			],
 			"fluff": [
 				{
+					"name": "Monk",
+					"type": "section",
 					"entries": [
 						"Her fists a blur as they deflect an incoming hail of arrows, a half-elf springs over a barricade and throws herself into the massed ranks of hobgoblins on the other side. She whirls among them, knocking their blows aside and sending them reeling, until at last she stands alone.",
 						"Taking a deep breath, a human covered in tattoos settles into a battle stance. As the first charging orcs reach him, he exhales and a blast of fire roars from his mouth, engulfing his foes.",
@@ -2092,6 +2279,7 @@
 					"page": 76
 				},
 				{
+					"type": "section",
 					"entries": [
 						{
 							"type": "quote",
@@ -2334,9 +2522,7 @@
 					"source": "XGE",
 					"page": 32
 				}
-			],
-			"page": 76
+			]
 		}
 	]
 }
-

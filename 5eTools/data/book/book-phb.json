@@ -114,45 +114,51 @@
 							"page": 7,
 							"entries": [
 								"This book contains rules, especially in parts 2 and 3, that govern how the game plays. That said, many racial traits, class features, spells, magic items, monster abilities, and other game elements break the general rules in some way, creating an exception to how the rest of the game works. Remember this: If a specific rule contradicts a general rule, the specific rule wins.",
-								"Exceptions to the rules are often minor. For instance, many adventurers don't have proficiency with longbows, but every wood elf does because of a racial trait. That trait creates a minor exception in the game. Other examples of rule-breaking are more conspicuous. For instance, an adventurer can't normally pass through walls, but some spells make that possible. Magic accounts for most of the major exceptions to the rules.",
-								"Round Down",
-								"There's one more general rule you need to know at the outset. Whenever you divide a number in the game, round down if you end up with a fraction, even if the fraction is one-half or greater."
+								"Exceptions to the rules are often minor. For instance, many adventurers don't have proficiency with longbows, but every wood elf does because of a racial trait. That trait creates a minor exception in the game. Other examples of rule-breaking are more conspicuous. For instance, an adventurer can't normally pass through walls, but some spells make that possible. Magic accounts for most of the major exceptions to the rules."
 							]
 						},
 						{
-							"type": "section",
-							"name": "Adventures",
+							"type": "entries",
+							"name": "Round Down",
 							"page": 7,
 							"entries": [
-								"The Dungeons & Dragons game consists of a group of characters embarking on an adventure that the Dungeon Master presents to them. Each character brings particular capabilities to the adventure in the form of ability scores and skills, class features, racial traits, equipment, and magic items. Every character is different, with various strengths and weaknesses, so the best party of adventurers is one in which the characters complement each other and cover the weaknesses of their companions. The adventurers must cooperate to successfully complete the adventure.",
-								"The adventure is the heart of the game, a story with a beginning, a middle, and an end. An adventure might be created by the Dungeon Master or purchased off the shelf, tweaked and modified to suit the DM's needs and desires. In either case, an adventure features a fantastic setting, whether it's an underground dungeon, a crumbling castle, a stretch of wilderness, or a bustling city. It features a rich cast of characters: the adventurers created and played by the other players at the table, as well as nonplayer characters (NPCs). Those characters might be patrons, allies, enemies, hirelings, or just background extras in an adventure. Often, one of the NPCs is a villain whose agenda drives much of an adventure's action.",
-								"Over the course of their adventures, the characters are confronted by a variety of creatures, objects, and situations that they must deal with in some way. Sometimes the adventurers and other creatures do their best to kill or capture each other in combat. At other times, the adventurers talk to another creature (or even a magical object) with a goal in mind. And often, the adventurers spend time trying to solve a puzzle, bypass an obstacle, find something hidden, or unravel the current situation. Meanwhile, the adventurers explore the world, making decisions about which way to travel and what they'll try to do next.",
-								"Adventures vary in length and complexity. A short adventure might present only a few challenges, and it might take no more than a single game session to complete. A long adventure can involve hundreds of combats, interactions, and other challenges, and take dozens of sessions to play through, stretching over weeks or months of real time. Usually, the end of an adventure is marked by the adventurers heading back to civilization to rest and enjoy the spoils of their labors.",
-								"But that's not the end of the story. You can think of an adventure as a single episode of a TV series, made up of multiple exciting scenes. A campaign is the whole series\u2014a string of adventures joined together, with a consistent group of adventurers following the narrative from start to finish.",
-								{
-									"type": "entries",
-									"name": "The Three Pillars of Adventure",
-									"page": 8,
-									"entries": [
-										"Adventurers can try to do anything their players can imagine, but it can be helpful to talk about their activities in three broad categories: exploration, social interaction, and combat.",
-										"{@b Exploration} includes both the adventurers' movement through the world and their interaction with objects and situations that require their attention. Exploration is the give-and-take of the players describing what they want their characters to do, and the Dungeon Master telling the players what happens as a result.",
-										"On a large scale, that might involve the characters spending a day crossing a rolling plain or an hour making their way through caverns underground. On the smallest scale, it could mean one character pulling a lever in a dungeon room to see what happens.",
-										"{@b Social-interaction} features the adventurers talking to someone (or something) else. It might mean demanding that a captured scout reveal the secret entrance to the goblin lair, getting information from a rescued prisoner, pleading for mercy from an orc chieftain, or persuading a talkative magic mirror to show a distant location to the adventurers.",
-										"The rules in chapters 7 and 8 support exploration and social interaction, as do many class features in chapter 3 and personality traits in chapter 4.",
-										"{@b Combat,} the focus of chapter 9, involves characters and other creatures swinging weapons, casting spells, maneuvering for position, and so on-all in an effort to defeat their opponents, whether that means killing every enemy, taking captives, or forcing a rout. Combat is the most structured element of a D&D session, with creatures taking turns to make sure that everyone gets a chance to act. Even in the context of a pitched battle, there's still plenty of opportunity for adventurers to attempt wacky stunts like surfing down a flight of stairs on a shield, to examine the environment (perhaps by pulling a mysterious lever), and to interact with other creatures, including allies, enemies, and neutral parties."
-									]
-								},
-								{
-									"type": "entries",
-									"name": "The Wonders of Magic",
-									"page": 8,
-									"entries": [
-										"Few D&D adventures end without something magical happening. Whether helpful or harmful, magic appears frequently in the life of an adventurer, and it is the focus of chapters 10 and 11.",
-										"In the worlds of Dungeons & Dragons, practitioners of magic are rare, set apart from the masses of people by their extraordinary talent. Common folk might see evidence of magic on a regular basis, but it's usually minor\u2014a fantastic monster, a visibly answered prayer, a wizard walking through the streets with an animated shield guardian as a bodyguard.",
-										"For adventurers, though, magic is key to their survival. Without the healing magic of clerics and paladins, adventurers would quickly succumb to their wounds. Without the uplifting magical support of bards and clerics, warriors might be overwhelmed by powerful foes. Without the sheer magical power and versatility of wizards and druids, every threat would be magnified tenfold.",
-										"Magic is also a favored tool of villains. Many adventures are driven by the machinations of spellcasters who are hellbent on using magic for some ill end. A cult leader seeks to awaken a god who slumbers beneath the sea, a hag kidnaps youths to magically drain them of their vigor, a mad wizard labors to invest an army of automatons with a facsimile of life, a dragon begins a mystical ritual to rise up as a god of destruction\u2014these are just a few of the magical threats that adventurers might face. With magic of their own, in the form of spells and magic items, the adventurers might prevail!"
-									]
-								}
+								"There's one more general rule you need to know at the outset. Whenever you divide a number in the game, round down if you end up with a fraction, even if the fraction is one-half or greater."
+							]
+						}
+					]
+				},
+				{
+					"type": "section",
+					"name": "Adventures",
+					"page": 7,
+					"entries": [
+						"The Dungeons & Dragons game consists of a group of characters embarking on an adventure that the Dungeon Master presents to them. Each character brings particular capabilities to the adventure in the form of ability scores and skills, class features, racial traits, equipment, and magic items. Every character is different, with various strengths and weaknesses, so the best party of adventurers is one in which the characters complement each other and cover the weaknesses of their companions. The adventurers must cooperate to successfully complete the adventure.",
+						"The adventure is the heart of the game, a story with a beginning, a middle, and an end. An adventure might be created by the Dungeon Master or purchased off the shelf, tweaked and modified to suit the DM's needs and desires. In either case, an adventure features a fantastic setting, whether it's an underground dungeon, a crumbling castle, a stretch of wilderness, or a bustling city. It features a rich cast of characters: the adventurers created and played by the other players at the table, as well as nonplayer characters (NPCs). Those characters might be patrons, allies, enemies, hirelings, or just background extras in an adventure. Often, one of the NPCs is a villain whose agenda drives much of an adventure's action.",
+						"Over the course of their adventures, the characters are confronted by a variety of creatures, objects, and situations that they must deal with in some way. Sometimes the adventurers and other creatures do their best to kill or capture each other in combat. At other times, the adventurers talk to another creature (or even a magical object) with a goal in mind. And often, the adventurers spend time trying to solve a puzzle, bypass an obstacle, find something hidden, or unravel the current situation. Meanwhile, the adventurers explore the world, making decisions about which way to travel and what they'll try to do next.",
+						"Adventures vary in length and complexity. A short adventure might present only a few challenges, and it might take no more than a single game session to complete. A long adventure can involve hundreds of combats, interactions, and other challenges, and take dozens of sessions to play through, stretching over weeks or months of real time. Usually, the end of an adventure is marked by the adventurers heading back to civilization to rest and enjoy the spoils of their labors.",
+						"But that's not the end of the story. You can think of an adventure as a single episode of a TV series, made up of multiple exciting scenes. A campaign is the whole series\u2014a string of adventures joined together, with a consistent group of adventurers following the narrative from start to finish.",
+						{
+							"type": "entries",
+							"name": "The Three Pillars of Adventure",
+							"page": 8,
+							"entries": [
+								"Adventurers can try to do anything their players can imagine, but it can be helpful to talk about their activities in three broad categories: exploration, social interaction, and combat.",
+								"{@b Exploration} includes both the adventurers' movement through the world and their interaction with objects and situations that require their attention. Exploration is the give-and-take of the players describing what they want their characters to do, and the Dungeon Master telling the players what happens as a result.",
+								"On a large scale, that might involve the characters spending a day crossing a rolling plain or an hour making their way through caverns underground. On the smallest scale, it could mean one character pulling a lever in a dungeon room to see what happens.",
+								"{@b Social-interaction} features the adventurers talking to someone (or something) else. It might mean demanding that a captured scout reveal the secret entrance to the goblin lair, getting information from a rescued prisoner, pleading for mercy from an orc chieftain, or persuading a talkative magic mirror to show a distant location to the adventurers.",
+								"The rules in chapters 7 and 8 support exploration and social interaction, as do many class features in chapter 3 and personality traits in chapter 4.",
+								"{@b Combat,} the focus of chapter 9, involves characters and other creatures swinging weapons, casting spells, maneuvering for position, and so on-all in an effort to defeat their opponents, whether that means killing every enemy, taking captives, or forcing a rout. Combat is the most structured element of a D&D session, with creatures taking turns to make sure that everyone gets a chance to act. Even in the context of a pitched battle, there's still plenty of opportunity for adventurers to attempt wacky stunts like surfing down a flight of stairs on a shield, to examine the environment (perhaps by pulling a mysterious lever), and to interact with other creatures, including allies, enemies, and neutral parties."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "The Wonders of Magic",
+							"page": 8,
+							"entries": [
+								"Few D&D adventures end without something magical happening. Whether helpful or harmful, magic appears frequently in the life of an adventurer, and it is the focus of chapters 10 and 11.",
+								"In the worlds of Dungeons & Dragons, practitioners of magic are rare, set apart from the masses of people by their extraordinary talent. Common folk might see evidence of magic on a regular basis, but it's usually minor\u2014a fantastic monster, a visibly answered prayer, a wizard walking through the streets with an animated shield guardian as a bodyguard.",
+								"For adventurers, though, magic is key to their survival. Without the healing magic of clerics and paladins, adventurers would quickly succumb to their wounds. Without the uplifting magical support of bards and clerics, warriors might be overwhelmed by powerful foes. Without the sheer magical power and versatility of wizards and druids, every threat would be magnified tenfold.",
+								"Magic is also a favored tool of villains. Many adventures are driven by the machinations of spellcasters who are hellbent on using magic for some ill end. A cult leader seeks to awaken a god who slumbers beneath the sea, a hag kidnaps youths to magically drain them of their vigor, a mad wizard labors to invest an army of automatons with a facsimile of life, a dragon begins a mystical ritual to rise up as a god of destruction\u2014these are just a few of the magical threats that adventurers might face. With magic of their own, in the form of spells and magic items, the adventurers might prevail!"
 							]
 						}
 					]
@@ -621,8 +627,8 @@
 								{
 									"type": "list",
 									"items": [
-										"For attacks with {@b melee weapons,} use your Strength modifier for attack and damage rolls. A weapon that has the finesse property, such as a {@item rapier|phb}, can use your Dexterity modifier instead.",
-										"For attacks with {@b ranged weapons,} use your Dexterity modifier for attack and damage rolls. A melee weapon that has the thrown property, such as a {@item handaxe|phb}, can use your Strength modifier instead.."
+										"For attacks with {@b melee weapons}, use your Strength modifier for attack and damage rolls. A weapon that has the finesse property, such as a {@item rapier|phb}, can use your Dexterity modifier instead.",
+										"For attacks with {@b ranged weapons}, use your Dexterity modifier for attack and damage rolls. A melee weapon that has the thrown property, such as a {@item handaxe|phb}, can use your Strength modifier instead."
 									]
 								}
 							]
@@ -1381,13 +1387,13 @@
 										],
 										[
 											"Draconic",
-											"Dragons, Dragonborn",
+											"Dragons, dragonborn",
 											"Draconic"
 										],
 										[
 											"Deep Speech",
-											"Mind Flayers, Beholders",
-											"-"
+											"Mind Flayers, beholders",
+											"\u2014"
 										],
 										[
 											"Infernal",
@@ -1401,7 +1407,7 @@
 										],
 										[
 											"Sylvan",
-											"Fey Creatures",
+											"Fey creatures",
 											"Elvish"
 										],
 										[
@@ -2900,17 +2906,17 @@
 							],
 							"rows": [
 								[
-									"Abacus",
+									"{@item Abacus|PHB}",
 									"2 gp",
 									"2 lb."
 								],
 								[
-									"Acid (vial)",
+									"{@item Acid (vial)|PHB}",
 									"25 gp",
 									"1 lb."
 								],
 								[
-									"Alchemist's fire (flask)",
+									"{@item Alchemist's fire (flask)|PHB}",
 									"50 gp",
 									"1 lb."
 								],
@@ -2923,7 +2929,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Arrows (20)",
+										"{@item Arrows (20)|PHB}",
 										"1 gp",
 										"1 lb."
 									]
@@ -2932,7 +2938,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Blowgun needles (50)",
+										"{@item Blowgun needles (50)|PHB}",
 										"1 gp",
 										"1 lb."
 									]
@@ -2941,7 +2947,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Crossbow bolts (20)",
+										"{@item Crossbow bolts (20)|PHB}",
 										"1 gp",
 										"1½ lb."
 									]
@@ -2950,18 +2956,18 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Sling bullets (20)",
+										"{@item Sling bullets (20)|PHB}",
 										"4 cp",
 										"1½ lb."
 									]
 								},
 								[
-									"Antitoxin (vial)",
+									"{@item Antitoxin (vial)|PHB}",
 									"50 gp",
 									"\u2014"
 								],
 								[
-									"{@i Arcane focus}",
+									"{@i {@item Arcane focus|PHB}}",
 									"",
 									""
 								],
@@ -2969,7 +2975,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Crystal",
+										"{@item Crystal|PHB}",
 										"10 gp",
 										"1 lb."
 									]
@@ -2978,7 +2984,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Orb",
+										"{@item Orb|PHB}",
 										"20 gp",
 										"3 lb."
 									]
@@ -2987,7 +2993,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Rod",
+										"{@item Rod|PHB}",
 										"10 gp",
 										"2 lb."
 									]
@@ -2996,7 +3002,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Staff",
+										"{@item Staff|PHB}",
 										"5 gp",
 										"4 lb."
 									]
@@ -3005,133 +3011,133 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Wand",
+										"{@item Wand|PHB}",
 										"10 gp",
 										"1 lb."
 									]
 								},
 								[
-									"Backpack",
+									"{@item Backpack|PHB}",
 									"2 gp",
 									"5 lb."
 								],
 								[
-									"Ball bearings (bag of 1,000)",
+									"{@item Ball bearings (bag of 1,000)|PHB}",
 									"1 gp",
 									"2 lb."
 								],
 								[
-									"Barrel",
+									"{@item Barrel|PHB}",
 									"2 gp",
 									"70 lb."
 								],
 								[
-									"Basket",
+									"{@item Basket|PHB}",
 									"4 sp",
 									"2 lb."
 								],
 								[
-									"Bedroll",
+									"{@item Bedroll|PHB}",
 									"1 gp",
 									"7 lb."
 								],
 								[
-									"Bell",
+									"{@item Bell|PHB}",
 									"1 gp",
 									"\u2014"
 								],
 								[
-									"Blanket",
+									"{@item Blanket|PHB}",
 									"5 sp",
 									"3 lb."
 								],
 								[
-									"Block and tackle",
+									"{@item Block and tackle|PHB}",
 									"1 gp",
 									"5 lb."
 								],
 								[
-									"Book",
+									"{@item Book|PHB}",
 									"25 gp",
 									"5 lb."
 								],
 								[
-									"Bottle, glass",
+									"{@item glass bottle|PHB|Bottle, glass}",
 									"2 gp",
 									"2 lb."
 								],
 								[
-									"Bucket",
+									"{@item Bucket|PHB}",
 									"5 cp",
 									"2 lb."
 								],
 								[
-									"Caltrops (bag of 20)",
+									"{@item Caltrops (bag of 20)|PHB}",
 									"1 gp",
 									"2 lb."
 								],
 								[
-									"Candle",
+									"{@item Candle|PHB}",
 									"1 cp",
 									"\u2014"
 								],
 								[
-									"Case, crossbow bolt",
+									"{@item crossbow bolt case|PHB|Case, crossbow bolt}",
 									"1 gp",
 									"1 lb."
 								],
 								[
-									"Case, map or scroll",
+									"{@item map or scroll case|PHB|Case, map or scroll}",
 									"1 gp",
 									"1 lb."
 								],
 								[
-									"Chain (10 feet)",
+									"{@item Chain (10 feet)|PHB}",
 									"5 gp",
 									"10 lb."
 								],
 								[
-									"Chalk (1 piece)",
+									"{@item Chalk (1 piece)|PHB}",
 									"1 cp",
 									"\u2014"
 								],
 								[
-									"Chest",
+									"{@item Chest|PHB}",
 									"5 gp",
 									"25 lb."
 								],
 								[
-									"Clothes, common",
+									"{@item common clothes|PHB|Clothes, common}",
 									"5 sp",
 									"3 lb."
 								],
 								[
-									"Clothes, costume",
+									"{@item costume clothes|PHB|Clothes, costume}",
 									"5 gp",
 									"4 lb."
 								],
 								[
-									"Clothes, fine",
+									"{@item fine clothes|PHB|Clothes, fine}",
 									"15 gp",
 									"6 lb."
 								],
 								[
-									"Clothes, traveler's",
+									"{@item traveler's clothes|PHB|Clothes, traveler's}",
 									"2 gp",
 									"4 lb."
 								],
 								[
-									"Component pouch",
+									"{@item Component pouch|PHB}",
 									"25 gp",
 									"2 lb."
 								],
 								[
-									"Crowbar",
+									"{@item Crowbar|PHB}",
 									"2 gp",
 									"5 lb."
 								],
 								[
-									"{@i Druidic focus}",
+									"{@i {@item Druidic focus|PHB}}",
 									"",
 									""
 								],
@@ -3139,7 +3145,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Sprig of mistletoe",
+										"{@item Sprig of mistletoe|PHB}",
 										"1 gp",
 										"\u2014"
 									]
@@ -3148,7 +3154,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Totem",
+										"{@item Totem|PHB}",
 										"1 gp",
 										"\u2014"
 									]
@@ -3157,7 +3163,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Wooden staff",
+										"{@item Wooden staff|PHB}",
 										"5 gp",
 										"4 lb."
 									]
@@ -3166,43 +3172,43 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Yew wand",
+										"{@item Yew wand|PHB}",
 										"10 gp",
 										"1 lb."
 									]
 								},
 								[
-									"Fishing tackle",
+									"{@item Fishing tackle|PHB}",
 									"1 gp",
 									"4 lb."
 								],
 								[
-									"Flask or tankard",
+									"{@item Flask|PHB} or {@item tankard|PHB}",
 									"2 cp",
 									"1 lb."
 								],
 								[
-									"Grappling hook",
+									"{@item Grappling hook|PHB}",
 									"2 gp",
 									"4 lb."
 								],
 								[
-									"Hammer",
+									"{@item Hammer|PHB}",
 									"1 gp",
 									"3 lb."
 								],
 								[
-									"Hammer, sledge",
+									"{@item sledgehammer|PHB|Hammer, sledge}",
 									"2 gp",
 									"10 lb."
 								],
 								[
-									"Healer's Kit",
+									"{@item Healer's Kit|PHB}",
 									"5 gp",
 									"3 lb."
 								],
 								[
-									"{@i Holy symbol}",
+									"{@i {@item Holy symbol|PHB}}",
 									"",
 									""
 								],
@@ -3210,7 +3216,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Amulet",
+										"{@item Amulet|PHB}",
 										"5 gp",
 										"1 lb."
 									]
@@ -3219,7 +3225,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Emblem",
+										"{@item Emblem|PHB}",
 										"5 gp",
 										"\u2014"
 									]
@@ -3228,278 +3234,278 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Reliquary",
+										"{@item Reliquary|PHB}",
 										"5 gp",
 										"2 lb."
 									]
 								},
 								[
-									"Holy water (flask)",
+									"{@item Holy water (flask)|PHB}",
 									"25 gp",
 									"1 lb."
 								],
 								[
-									"Hourglass",
+									"{@item Hourglass|PHB}",
 									"25 gp",
 									"1 lb."
 								],
 								[
-									"Hunting trap",
+									"{@item Hunting trap|PHB}",
 									"5 gp",
 									"25 lb."
 								],
 								[
-									"Ink (1-ounce bottle)",
+									"{@item Ink (1-ounce bottle)|PHB}",
 									"10 gp",
 									"\u2014"
 								],
 								[
-									"Ink pen",
+									"{@item Ink pen|PHB}",
 									"2 cp",
 									"\u2014"
 								],
 								[
-									"Jug or pitcher",
+									"{@item Jug|PHB} or {@item pitcher|PHB}",
 									"2 cp",
 									"4 lb."
 								],
 								[
-									"Kit, climber's",
+									"{@item climber's kit|PHB|Kit, climber's}",
 									"25 gp",
 									"12 lb."
 								],
 								[
-									"Kit, disguise",
+									"{@item disguise kit|PHB|Kit, disguise}",
 									"25 gp",
 									"3 lb."
 								],
 								[
-									"Kit, forgery",
+									"{@item forgery kit|PHB|Kit, forgery}",
 									"15 gp",
 									"5 lb."
 								],
 								[
-									"Kit, herbalism",
+									"{@item herbalism kit|PHB|Kit, herbalism}",
 									"5 gp",
 									"3 lb."
 								],
 								[
-									"Kit, healer's",
+									"{@item healer's kit|PHB|Kit, healer's}",
 									"5 gp",
 									"3 lb."
 								],
 								[
-									"Kit, mess",
+									"{@item mess kit|PHB|Kit, mess}",
 									"2 sp",
 									"1 lb."
 								],
 								[
-									"Kit, poisoner's",
+									"{@item poisoner's kit|PHB|Kit, poisoner's}",
 									"50 gp",
 									"2 lb."
 								],
 								[
-									"Ladder (10-foot)",
+									"{@item Ladder (10-foot)|PHB}",
 									"1 sp",
 									"25 lb."
 								],
 								[
-									"Lamp",
+									"{@item Lamp|PHB}",
 									"5 sp",
 									"1 lb."
 								],
 								[
-									"Lantern, bullseye",
+									"{@item bullseye lantern|PHB|Lantern, bullseye}",
 									"10 gp",
 									"2 lb."
 								],
 								[
-									"Lantern, hooded",
+									"{@item hooded lantern|PHB|Lantern, hooded}",
 									"5 gp",
 									"2 lb."
 								],
 								[
-									"Lock",
+									"{@item Lock|PHB}",
 									"10 gp",
 									"1 lb."
 								],
 								[
-									"Magnifying glass",
+									"{@item Magnifying glass|PHB}",
 									"100 gp",
 									"\u2014"
 								],
 								[
-									"Manacles",
+									"{@item Manacles|PHB}",
 									"2 gp",
 									"6 lb."
 								],
 								[
-									"Mirror, steel",
+									"{@item steel mirror|PHB|Mirror, steel}",
 									"5 gp",
 									"1/2 lb."
 								],
 								[
-									"Oil (flask)",
+									"{@item Oil (flask)|PHB}",
 									"1 sp",
 									"1 lb."
 								],
 								[
-									"Paper (one sheet)",
+									"{@item Paper (one sheet)|PHB}",
 									"2 sp",
 									"\u2014"
 								],
 								[
-									"Parchment (one sheet)",
+									"{@item Parchment (one sheet)|PHB}",
 									"1 sp",
 									"\u2014"
 								],
 								[
-									"Perfume (vial)",
+									"{@item Perfume (vial)|PHB}",
 									"5 gp",
 									"\u2014"
 								],
 								[
-									"Pick, miner's",
+									"{@item miner's pick|PHB|Pick, miner's}",
 									"2 gp",
 									"10 lb."
 								],
 								[
-									"Piton",
+									"{@item Piton|PHB}",
 									"5 cp",
 									"1/4 lb."
 								],
 								[
-									"Poison, basic (vial)",
+									"{@item basic poison (vial)|PHB|Poison, basic (vial)}",
 									"100 gp",
 									"\u2014"
 								],
 								[
-									"Pole (10-foot)",
+									"{@item Pole (10-foot)|PHB}",
 									"5 cp",
 									"7 lb."
 								],
 								[
-									"Pot, iron",
+									"{@item iron pot|PHB|Pot, iron}",
 									"2 gp",
 									"10 lb."
 								],
 								[
-									"Potion of healing",
+									"{@item Potion of healing|DMG}",
 									"50 gp",
 									"1/2 lb."
 								],
 								[
-									"Pouch",
+									"{@item Pouch|PHB}",
 									"5 sp",
 									"1 lb."
 								],
 								[
-									"Quiver",
+									"{@item Quiver|PHB}",
 									"1 gp",
 									"1 lb."
 								],
 								[
-									"Ram, portable",
+									"{@item portable ram|PHB|Ram, portable}",
 									"4 gp",
 									"35 lb."
 								],
 								[
-									"Rations (1 day)",
+									"{@item Rations (1 day)|PHB}",
 									"5 sp",
 									"2 lb."
 								],
 								[
-									"Robes",
+									"{@item Robes|PHB}",
 									"1 gp",
 									"4 lb."
 								],
 								[
-									"Rope, hempen (50 feet)",
+									"{@item hempen rope (50 feet)|PHB|Rope, hempen (50 feet)}",
 									"1 gp",
 									"10 lb."
 								],
 								[
-									"Rope, silk (50 feet)",
+									"{@item silk rope (50 feet)|PHB|Rope, silk (50 feet)}",
 									"10 gp",
 									"5 lb."
 								],
 								[
-									"Sack",
+									"{@item Sack|PHB}",
 									"1 cp",
 									"1/2 lb."
 								],
 								[
-									"Scale, merchant's",
+									"{@item merchant's scale|PHB|Scale, merchant's}",
 									"5 gp",
 									"3 lb."
 								],
 								[
-									"Sealing wax",
+									"{@item Sealing wax|PHB}",
 									"5 sp",
 									"\u2014"
 								],
 								[
-									"Shovel",
+									"{@item Shovel|PHB}",
 									"2 gp",
 									"5 lb."
 								],
 								[
-									"Signal whistle",
+									"{@item Signal whistle|PHB}",
 									"5 cp",
 									"\u2014"
 								],
 								[
-									"Signet ring",
+									"{@item Signet ring|PHB}",
 									"5 gp",
 									"\u2014"
 								],
 								[
-									"Soap",
+									"{@item Soap|PHB}",
 									"2 cp",
 									"\u2014"
 								],
 								[
-									"Spellbook",
+									"{@item Spellbook|PHB}",
 									"50 gp",
 									"3 lb."
 								],
 								[
-									"Spikes, iron (10)",
+									"{@item iron spikes (10)|PHB|Spikes, iron (10)}",
 									"1 gp",
 									"5 lb."
 								],
 								[
-									"Spyglass",
+									"{@item Spyglass|PHB}",
 									"1,000 gp",
 									"1 lb."
 								],
 								[
-									"Tent, two-person",
+									"{@item two-person tent|PHB|Tent, two-person}",
 									"2 gp",
 									"20 lb."
 								],
 								[
-									"Tinderbox",
+									"{@item Tinderbox|PHB}",
 									"5 sp",
 									"1 lb."
 								],
 								[
-									"Torch",
+									"{@item Torch|PHB}",
 									"1 cp",
 									"1 lb."
 								],
 								[
-									"Vial",
+									"{@item Vial|PHB}",
 									"1 gp",
 									"\u2014"
 								],
 								[
-									"Waterskin",
+									"{@item Waterskin|PHB}",
 									"2 sp",
 									"5 lb. (full)"
 								],
 								[
-									"Whetstone",
+									"{@item Whetstone|PHB}",
 									"1 cp",
 									"1 lb."
 								]
@@ -3886,7 +3892,7 @@
 								],
 								[
 									"Bottle",
-									"1 1/2 pints liquid"
+									"1½ pints liquid"
 								],
 								[
 									"Bucket",
@@ -4565,27 +4571,27 @@
 							],
 							"rows": [
 								[
-									"Barding",
+									"{@item Barding|PHB}",
 									"×4",
 									"×2"
 								],
 								[
-									"Bit and bridle",
+									"{@item Bit and bridle|PHB}",
 									"2 gp",
 									"1 lb."
 								],
 								[
-									"Carriage",
+									"{@item Carriage|PHB}",
 									"100 gp",
 									"600 lb."
 								],
 								[
-									"Cart",
+									"{@item Cart|PHB}",
 									"15 gp",
 									"200 lb."
 								],
 								[
-									"Chariot",
+									"{@item Chariot|PHB}",
 									"250 gp",
 									"100 lb."
 								],
@@ -4603,7 +4609,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Exotic",
+										"{@item Exotic saddle|PHB|Exotic}",
 										"60 gp",
 										"40 lb."
 									]
@@ -4612,7 +4618,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Military",
+										"{@item Military saddle|PHB|Military}",
 										"20 gp",
 										"30 lb."
 									]
@@ -4621,7 +4627,7 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Pack",
+										"{@item Pack saddle|PHB|Pack}",
 										"5 gp",
 										"15 lb."
 									]
@@ -4630,18 +4636,18 @@
 									"type": "row",
 									"style": "row-indent-first",
 									"row": [
-										"Riding",
+										"{@item Riding saddle|PHB|Riding}",
 										"10 gp",
 										"25 lb."
 									]
 								},
 								[
-									"Saddlebags",
+									"{@item Saddlebags|PHB}",
 									"4 gp",
 									"8 lb."
 								],
 								[
-									"Sled",
+									"{@item Sled|PHB}",
 									"20 gp",
 									"300 lb."
 								],
@@ -4651,7 +4657,7 @@
 									"\u2014"
 								],
 								[
-									"Wagon",
+									"{@item Wagon|PHB}",
 									"35 gp",
 									"400 lb."
 								]
@@ -4672,32 +4678,32 @@
 							],
 							"rows": [
 								[
-									"Galley",
+									"{@item Galley|DMG}",
 									"30,000 gp",
 									"4 mph"
 								],
 								[
-									"Keelboat",
+									"{@item Keelboat|DMG}",
 									"3,000 gp",
 									"1 mph"
 								],
 								[
-									"Longship",
+									"{@item Longship|DMG}",
 									"10,000 gp",
 									"3 mph"
 								],
 								[
-									"Rowboat",
+									"{@item Rowboat|DMG}",
 									"50 gp",
 									"1½ mph"
 								],
 								[
-									"Sailing ship",
+									"{@item Sailing ship|DMG}",
 									"10,000 gp",
 									"2 mph"
 								],
 								[
-									"Warship",
+									"{@item Warship|DMG}",
 									"25,000 gp",
 									"2½ mph"
 								]
@@ -4814,7 +4820,7 @@
 									"rows": [
 										[
 											"Wretched",
-											"-"
+											"\u2014"
 										],
 										[
 											"Squalid",
@@ -5383,7 +5389,7 @@
 							"name": "Class Features",
 							"page": 164,
 							"entries": [
-								"When you gain a new level in a class, you get its features for that level. A few features, however, have additional rules when you're multiclassing: Channel Divinity, Extra Attack, Unarmored Defense, and Spellcasting.",
+								"When you gain a new level in a class, you get its features for that level. You don't, however, receive the class's starting equipment, and a few features have additional rules when you're multiclassing: Channel Divinity, Extra Attack, Unarmored Defense, and Spellcasting.",
 								{
 									"type": "entries",
 									"name": "Channel Divinity",
@@ -6240,7 +6246,7 @@
 									"name": "Hiding",
 									"page": 177,
 									"entries": [
-										"When you try to hide, make a Dexterity ({@skill Stealth}) check. Until you are discovered or you stop hiding, that check's total is contested by the Wisdom ({@skill Perception}) check of any creature that actively searches for signs of your presence.",
+										"The DM decides when circumstances are appropriate for hiding. When you try to hide, make a Dexterity ({@skill Stealth}) check. Until you are discovered or you stop hiding, that check's total is contested by the Wisdom ({@skill Perception}) check of any creature that actively searches for signs of your presence.",
 										"You can't hide from a creature that can see you clearly, and if you make noise (such as shouting a warning or knocking over a vase), you give away your position. An {@condition invisible} creature can't be seen, so it can always try to hide. Signs of its passage might still be noticed, however, and it still has to stay quiet.",
 										"In combat, most creatures stay alert for signs of danger all around, so if you come out of hiding and approach a creature, it usually sees you. However, under certain circumstances, the Dungeon Master might allow you to stay hidden as you approach a creature that is distracted, allowing you to gain advantage on an attack before you are seen.",
 										"Ultimately, the DM decides when circumstances are appropriate for hiding.",
@@ -6734,8 +6740,8 @@
 											"name": "High Jump",
 											"page": 182,
 											"entries": [
-												"When you make a high jump, you leap into the air a number of feet equal to 3 + your Strength modifier if you move at least 10 feet on foot immediately before the jump. After applying your Strength modifier, a high jump is a minimum of 0 feet. When you make a standing high jump, you can jump only half that distance. Either way, each foot you clear on the jump costs a foot of movement. In some circumstances, your DM might allow you to make a Strength ({@skill Athletics}) check to jump higher than you normally can.",
-												"You can extend your arms half your height above yourself during the jump. Thus, you can reach above you a difference equal to the height of the jump plus 1 1/2 times your height."
+												"When you make a high jump, you leap into the air a number of feet equal to 3 + your Strength modifier (minimum of 0 feet) if you move at least 10 feet on foot immediately before the jump. When you make a standing high jump, you can jump only half that distance. Either way, each foot you clear on the jump costs a foot of movement. In some circumstances, your DM might allow you to make a Strength ({@skill Athletics}) check to jump higher than you normally can.",
+												"You can extend your arms half your height above yourself during the jump. Thus, you can reach above you a distance equal to the height of the jump plus 1½ times your height."
 											]
 										}
 									]
@@ -6859,9 +6865,6 @@
 								"By its nature, adventuring involves delving into places that are dark, dangerous, and full of mysteries to be explored. The rules in this section cover some of the most important ways in which adventurers interact with the environment in such places. The Dungeon Master's Guide has rules covering more unusual situations.",
 								{
 									"type": "entries",
-									"data": {
-										"quickref": 3
-									},
 									"name": "Falling",
 									"page": 183,
 									"entries": [
@@ -6878,8 +6881,7 @@
 									"page": 183,
 									"entries": [
 										"A creature can hold its breath for a number of minutes equal to 1 + its Constitution modifier (minimum of 30 seconds).",
-										"When a creature runs out of breath, it can survive for a number of rounds equal to its Constitution modifier (minimum 1 round). At the start of its next turn, it drops to 0 hit points and is dying.",
-										"If you run out of breath, you can't regain hit points or be stabilized until you can breathe again.",
+										"When a creature runs out of breath or is choking, it can survive for a number of rounds equal to its Constitution modifier (minimum of 1 round). At the start of its next turn, it drops to 0 hit points and is dying, and it can't regain hit points or be stabilized until it can breathe again.",
 										"For example, a creature with a Constitution of 14 can hold its breath for 3 minutes. If it starts suffocating, it has 2 rounds to reach air before it drops to 0 hit points."
 									]
 								},
@@ -7057,14 +7059,14 @@
 							"page": 186,
 							"entries": [
 								"Heroic though they might be, adventurers can't spend every hour of the day in the thick of exploration, social interaction, and combat. They need rest-time to sleep and eat, tend their wounds, refresh their minds and spirits for spellcasting, and brace themselves for further adventure.",
-								"Adventurers can take short rests in the midst of an adventuring day and a long rest to end the day. While the text here refers to adventurers, any creature can take a short or long rest.",
+								"Adventurers, as well as other creatures, can take short rests in the midst of a day and a long rest to end it.",
 								{
 									"type": "entries",
 									"name": "Short Rest",
 									"page": 186,
 									"entries": [
 										"A short rest is a period of downtime, at least 1 hour long, during which a character does nothing more strenuous than eating, drinking, reading, and tending to wounds.",
-										"A character can spend one or more Hit Dice at the end of a short rest, up to the character's maximum number of Hit Dice, which is equal to the character's level. For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier to it. The character regains hit points equal to the total. After applying your Constitution modifier to a Hit Die roll, you regain a minimum of 0 hit points. The player can decide to spend an additional Hit Die after each roll. A character regains some spent Hit Dice upon finishing a long rest, as explained below."
+										"A character can spend one or more Hit Dice at the end of a short rest, up to the character's maximum number of Hit Dice, which is equal to the character's level. For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier to it. The character regains hit points equal to the total (minimum of 0). The player can decide to spend an additional Hit Die after each roll. A character regains some spent Hit Dice upon finishing a long rest, as explained below."
 									]
 								},
 								{
@@ -7072,7 +7074,7 @@
 									"name": "Long Rest",
 									"page": 186,
 									"entries": [
-										"A long rest is a period of extended downtime, at least 8 hours long, during which a character sleeps for at least 6 hours and performs no more than 2 hours of light activity, such as reading, talking, eating, or standing watch. If the rest is interrupted by a period of strenuous activity\u2014at least 1 hour of walking, fighting, casting spells, or similar adventuring activity, the characters must begin the rest again to gain any benefit from it.",
+										"A long rest is a period of extended downtime, at least 8 hours long, during which a character sleeps for at least 6 hours and performs no more than 2 hours of light activity, such as reading, talking, eating, or standing watch. If the rest is interrupted by a period of strenuous activity\u2014at least 1 hour of walking, fighting, casting spells, or similar adventuring activity\u2014the characters must begin the rest again to gain any benefit from it.",
 										"At the end of a long rest, a character regains all lost hit points. The character also regains spent Hit Dice, up to a number of dice equal to half of the character's total number of them. You regain at least 1 Hit Die when you finish a long rest.",
 										"For example, if a character has eight Hit Dice, he or she can regain four spent Hit Dice upon finishing a long rest.",
 										"A character can't benefit from more than one long rest in a 24-hour period, and a character must have at least 1 hit point at the start of the rest to gain its benefits."
@@ -8131,7 +8133,7 @@
 								"Regardless of how many spells a caster knows or prepares, he or she can cast only a limited number of spells before resting. Manipulating the fabric of magic and channeling its energy into even a simple spell is physically and mentally taxing, and higher level spells are even more so. Thus, each spellcasting class's description includes a table showing how many spell slots of each spell level a character can use at each character level. For example, the 3rd-level wizard Umara has four 1st-level spell slots and two 2nd-level slots.",
 								"When a character casts a spell, he or she expends a slot of that spell's level or higher, effectively \"filling\" a slot with the spell. You can think of a spell slot as a groove of a certain size\u2014small for a 1st-level slot, larger for a spell of higher level. A 1st-level spell fits into a slot of any size, but a 9th-level spell fits only in a 9th-level slot. So when Umara casts magic missile, a 1st-level spell, she spends one of her four 1st-level slots and has three remaining.",
 								"Finishing a long rest restores any expended spell slots (see chapter 8 for the rules on resting).",
-								"Some characters and monsters have special abilities that let them cast spells without using spell slots.",
+								"Some characters and monsters have special abilities that let them cast spells without using spell slots. For example, a monk who follows the Way of the Four Elements, a warlock who chooses certain eldritch invocations, and a pit fiend from the Nine Hells can all cast spells in such a way.",
 								{
 									"type": "entries",
 									"name": "Casting a Spell at a Higher Level",
