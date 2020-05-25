@@ -123,7 +123,7 @@ exports.parseTable = function(tableObject){
     return tableHeader + tableRows
 }
 exports.handleLongMessage = function(input, message, title){
-    let output = input.split(/(?<=\.|\n)/), count = 0, acc = ""
+    let output = input.split(/(?<=\.\s|\n)/), count = 0, acc = ""
     for(let i = 0; i < output.length; i++){
         if((acc + output[i]).length + message.length > 6000){
 
