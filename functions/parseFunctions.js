@@ -65,7 +65,7 @@ class tags {
         return this
     }
     toString(){
-        return this.input;
+        return this.input
     }
 }
 
@@ -85,24 +85,24 @@ exports.removeTags = function(input){
                           .removeAttack()
                           .removeRecharge()
                           .removeCreatures()
-                          .toString();
+                          .toString()
 }
 exports.parseSourcesName = function(source){
     if(source.inherits) source = source.inherits
     if(source.source) source = source.source 
-    let bookName = source;
+    let bookName = source
     books.book.forEach(book=>{
         if(source == book.id){
-            bookName = book.name;
+            bookName = book.name
         }
     })
-    return bookName;
+    return bookName
 }
 exports.parseTable = function(tableObject){
-    let tableRows = "", tableHeader = "\n";
+    let tableRows = "", tableHeader = "\n"
     for(let i in tableObject.colLabels){
-        if(i == tableObject.colLabels.length - 1) tableHeader += `__${tableObject.colLabels[i]}__\n`;
-        else tableHeader += `__${tableObject.colLabels[i]}__ **|** `;
+        if(i == tableObject.colLabels.length - 1) tableHeader += `__${tableObject.colLabels[i]}__\n`
+        else tableHeader += `__${tableObject.colLabels[i]}__ **|** `
     }
     for(let i in tableObject.rows){
         for(let j = 0; j < tableObject.colLabels.length; j++){
@@ -120,10 +120,10 @@ exports.parseTable = function(tableObject){
         }
         tableRows += "\n"
     }
-    return tableHeader + tableRows;
+    return tableHeader + tableRows
 }
 exports.handleLongMessage = function(input, message, title){
-    let output = input.split("\n"), count = 0, acc = "";
+    let output = input.split(/(?<=\.|\n)/), count = 0, acc = ""
     for(let i = 0; i < output.length; i++){
         if((acc + output[i]).length + message.length > 6000){
 
@@ -132,16 +132,16 @@ exports.handleLongMessage = function(input, message, title){
             //acc = output[i]
             //console.log(this.handleLongMessage(acc, message2, title))
         }
-        else if((acc + output[i]).length < 1024) acc += `\n${output[i]}`
+        else if((acc + output[i]).length < 1024) acc += `${output[i]}`
         else{
             if(count == 0) message.addField(`__${title}__`, acc)
             else message.addField("_​_", acc)
             count++
-            acc = output[i];
+            acc = output[i]
         }
         if(i == output.length-1 && acc != "") (count == 0) ? message.addField(`__${title}__`, acc) : message.addField("_​_", acc)
     }
-    return output;
+    return output
 }
 exports.parseEntry = function(entry, delim){
     output = ""
@@ -166,9 +166,9 @@ function parseList(list){
     return output
 }
 function filterFunc(regex, input){
-    let description = input.toString(), filteredMessage = "";
+    let description = input.toString(), filteredMessage = ""
     var firstRegex = new RegExp("{@" + regex + ".*?}"),
-        partialRegex = new RegExp("{@" + regex + " ");
+        partialRegex = new RegExp("{@" + regex + " ")
     if(description.match(/{@.*?}/)){
         description.split(/(?={@.*})/).forEach(filter => {
             if(filter.match(firstRegex)){
@@ -176,15 +176,15 @@ function filterFunc(regex, input){
                 if(filter.match(/\|.*?}/g)) filteredArray = jsplit(filter.split(partialRegex)[1], /\|.*?}/g, 1);
                 else filteredArray = jsplit(filter.split(partialRegex)[1], /}/g, 1);
                 filteredArray.forEach(piece =>{ 
-                    filteredMessage += piece; 
+                    filteredMessage += piece
                 })
             }else filteredMessage += filter
         })
-    } else return input;
-    return filteredMessage;
+    } else return input
+    return filteredMessage
 }
 function replaceStupidFilters(input){
-    let output = input;
+    let output = input
     output = output.replace(/{@dc/g, "{@dc DC")
                    .replace(/{@hit /g, "{@hit +")
                    .replace(/{@h}/g, "{@h }")
@@ -198,8 +198,8 @@ function replaceStupidFilters(input){
     return output
 }
 function jsplit(str, sep, n) {
-    var out = [];
-    while(n--) out.push(str.slice(sep.lastIndex, sep.exec(str).index));
-    out.push(str.slice(sep.lastIndex));
-    return out;
+    var out = []
+    while(n--) out.push(str.slice(sep.lastIndex, sep.exec(str).index))
+    out.push(str.slice(sep.lastIndex))
+    return out
 }
