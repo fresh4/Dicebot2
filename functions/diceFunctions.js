@@ -1,74 +1,66 @@
+var Math = require("mathjs");
+
 exports.rollDiceFunc = function(msg){
-    var rollsArray = msg.toString().concat()
-                                     .replace(/\-/g,"+-")
-                                     .split(/\+/);
-    var valueArray = [], displayArray = [], valCount = 0, displayCount = 0, isNegative = false;
-    for(var i = 0; i < rollsArray.length; i++){
-        if(rollsArray[i].match(/[d]/)){ //if it's a dice roll
-            isNegative = false;
-            var pre = rollsArray[i].split(/[d]/)[0];
-            var suff = parseInt(rollsArray[i].split(/[d]/)[1]);
-            if(pre == '') pre = 1;
-            else if(pre == '-') pre = -1;
-            pre = parseInt(pre);
-            if(pre < 0){isNegative = true; pre *= -1;}
-            if(rollsArray[i].match(/k[h|l]\d*/) || (rollsArray[i].match(/(adv|dis)/) && rollsArray[i].match(/d20/))){ //if there's any kh/kl request
-                var roll;
-                if(rollsArray[i].match(/adv/)) roll = this.rollKeepHighestX(pre = 2, suff = 20, 1);
-                else if(rollsArray[i].match(/dis/)) roll = this.rollKeepLowestX(pre = 2, suff = 20, 1);
-                else if(rollsArray[i].match(/kh\d*/)) roll = this.rollKeepHighestX(pre, suff, rollsArray[i].split(/kh/)[1]);
-                else if(rollsArray[i].match(/kl\d*/)) roll = this.rollKeepLowestX(pre, suff, rollsArray[i].split(/kl/)[1]);
-                displayArray[displayCount] = "(";
-                for(var m = 0; m < pre; m++){
-                    if(!roll[m].toString().includes("~")){
-                        valueArray[valCount] = roll[m];
-                        valCount++;
+    var diceRegex = new RegExp(/(\d*D\d*(?:kh|kl)?\d*)/, 'gi');
+    var splitByDiceString = msg.split(diceRegex), 
+        bareDiceStringMath = splitByDiceString.slice(),
+        displayArray = splitByDiceString.slice(),
+        result;
+    for(let i in splitByDiceString){
+        if(splitByDiceString[i].toString().match(diceRegex)){
+            var result = this.rollDiceString(splitByDiceString[i]);
+            if(Array.isArray(result)){
+                displayArray[i] = "(";
+                bareDiceStringMath[i] = "";
+                let tempArr = [];
+                for(let j in result){
+                    if(!result[j].toString().includes("~")){
+                        tempArr.push(result[j]);
                     }
-                    (m == pre-1) ? displayArray[displayCount] += roll[m] : displayArray[displayCount] += `${roll[m]} + `;
+                    (j == result.length-1) ? displayArray[i] += result[j] : displayArray[i] += `${result[j]} + `;
                 }
-                displayArray[displayCount] += ")";
-            }
-            else{ //if it's a normal dice roll
-                displayArray[displayCount] = "(";
-                for(var j = 0; j < pre; j++){
-                    valueArray[valCount] = this.RollSingle(suff);
-                    if(isNegative){valueArray[valCount] *= -1;}
-                    (j == pre-1) ?
-                        displayArray[displayCount] += `${valueArray[valCount]}` :
-                        displayArray[displayCount] += `${valueArray[valCount]} + `;
-                    valCount++;
+                for(let j in tempArr){
+                    (j == tempArr.length-1) ? bareDiceStringMath[i] += tempArr[j] : bareDiceStringMath[i] += `${tempArr[j]} + `;
                 }
-                displayArray[displayCount] += ")";
+                displayArray[i] += ")";
+            }else {
+                displayArray[i] = `(${result})`;
+                bareDiceStringMath[i] = Math.evaluate(result);
             }
         }
-        else{ //if we're just adding a modifier
-            var modifier = parseInt(rollsArray[i]);
-            valueArray[valCount] = modifier;
-            displayArray[displayCount] = modifier;
-            valCount++;
+    }
+    bareDiceStringMath = bareDiceStringMath.join('');
+    displayArray = displayArray.join('');
+    try{
+        result = Math.evaluate(bareDiceStringMath);
+    }catch(error){
+        return
+    }
+    return `**${result}** = ${displayArray}`;
+}
+exports.rollDiceString = function(roll){
+    roll = roll.toString();
+    var pre = parseInt(roll.split(/[d]/)[0]);
+    var suff = parseInt(roll.split(/[d]/)[1]);
+    if(isNaN(pre)) pre = 1
+    var result = "";
+    if(roll.match(/k[h|l]\d*/)){
+        if(roll.match(/kh\d*/)) result = this.rollKeepHighestX(pre, suff, roll.split(/kh/)[1]);
+        else if(roll.match(/kl\d*/)) result = this.rollKeepLowestX(pre, suff, roll.split(/kl/)[1]);
+    } else{
+        for(let i = 0; i < pre; i++){
+            if(i == pre-1) result += `${this.RollSingle(suff)}`;
+            else result += `${this.RollSingle(suff)} + `;
         }
-        displayCount++;
     }
-    //add everything up and display it
-    var totalNumber = 0, totalDisplay = "";
-    valueArray.forEach(value => {
-        totalNumber += value;
-    })
-    for(var i = 0; i < displayArray.length; i++){
-        if(i == displayArray.length - 1)
-            totalDisplay += displayArray[i];
-        else
-            totalDisplay += displayArray[i] + " + ";
-    }
-    if(isNaN(totalNumber)) throw Error;
-    return `**${totalNumber}** = ${totalDisplay}`;
+    return result;
 }
 exports.RollSingle = function(dieSide){
     return Math.floor(Math.random() * dieSide) + 1;
 }
 exports.RollX = function(num, dieSide){
     let total = 0;
-    for(let i in num){
+    for(let i = 0; i < num; i++){
         total += this.RollSingle(dieSide);
     }
     return total;
@@ -90,7 +82,7 @@ exports.rollKeepLowestX = function(pre, suff, keep){
         arrayOfResults[i] = this.RollSingle(suff);
     }
     tempSortedArray = bubbleSort(arrayOfResults);
-    for(var j = pre; j >= keep; j--){
+    for(var j = pre-1; j >= keep; j--){
         arrayOfResults[arrayOfResults.indexOf(tempSortedArray[j])] = `~~${arrayOfResults[arrayOfResults.indexOf(tempSortedArray[j])]}~~`;
     }
     return arrayOfResults;
