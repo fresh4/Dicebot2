@@ -10,7 +10,7 @@ exports.parseDefinitions = function(item){
         topLine += output[i]
     }
     output = []
-    if(item.value) output.push(`${item.value}`)
+    if(item.value) output.push(`${item.value/100}gp`)
     if(item.weight) output.push(`${item.weight} lbs`)
     for(let i in output){
         if(i > 0) botLines += ", "
