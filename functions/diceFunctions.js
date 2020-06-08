@@ -1,7 +1,7 @@
 var Math = require("mathjs");
 
 exports.rollDiceFunc = function(msg){
-    var diceRegex = new RegExp(/(\d*D\d*(?:kh|kl)?\d*)/, 'gi');
+    var diceRegex = new RegExp(/(\d*D\d*(?:kh|kl|adv|dis)?\d*)/, 'gi');
     var splitByDiceString = msg.split(diceRegex), 
         bareDiceStringMath = splitByDiceString.slice(),
         displayArray = splitByDiceString.slice(),
@@ -44,8 +44,10 @@ exports.rollDiceString = function(roll){
     var suff = parseInt(roll.split(/[d]/)[1]);
     if(isNaN(pre)) pre = 1
     var result = "";
-    if(roll.match(/k[h|l]\d*/)){
-        if(roll.match(/kh\d*/)) result = this.rollKeepHighestX(pre, suff, roll.split(/kh/)[1]);
+    if(roll.match(/k[h|l]\d*/) || roll.match(/d20(adv|dis)/)){
+        if(roll.match(/adv/)) result = this.rollKeepHighestX(pre = 2, suff = 20, 1);
+        else if(roll.match(/dis/)) result = this.rollKeepLowestX(pre = 2, suff = 20, 1);
+        else if(roll.match(/kh\d*/)) result = this.rollKeepHighestX(pre, suff, roll.split(/kh/)[1]);
         else if(roll.match(/kl\d*/)) result = this.rollKeepLowestX(pre, suff, roll.split(/kl/)[1]);
     } else{
         for(let i = 0; i < pre; i++){
