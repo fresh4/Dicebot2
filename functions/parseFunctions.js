@@ -64,6 +64,26 @@ class tags {
         this.input = filterFunc("creature", this.input)
         return this
     }
+    removeNotes(){
+        this.input = filterFunc("note", this.input)
+        return this
+    }
+    removeChance(){
+        this.input = filterFunc("chance", this.input)
+        return this
+    }
+    removeSense(){
+        this.input = filterFunc("sense", this.input)
+        return this
+    }
+    removeTable(){
+        this.input = filterFunc("table", this.input)
+        return this
+    }
+    removeBackground(){
+        this.input = filterFunc("background", this.input)
+        return this
+    }
     toString(){
         return this.input
     }
@@ -71,6 +91,7 @@ class tags {
 
 exports.removeTags = function(input){
     return new tags(input).removeFilters()
+                          .removeNotes()
                           .removeBooks()
                           .removeSpells()
                           .removeConditions()
@@ -85,6 +106,10 @@ exports.removeTags = function(input){
                           .removeAttack()
                           .removeRecharge()
                           .removeCreatures()
+                          .removeChance()
+                          .removeSense()
+                          .removeTable()
+                          .removeBackground()
                           .toString()
 }
 exports.parseSourcesName = function(source){
