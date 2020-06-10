@@ -84,6 +84,10 @@ class tags {
         this.input = filterFunc("background", this.input)
         return this
     }
+    removeAction(){
+        this.input = filterFunc("action", this.input)
+        return this
+    }
     toString(){
         return this.input
     }
@@ -110,6 +114,7 @@ exports.removeTags = function(input){
                           .removeSense()
                           .removeTable()
                           .removeBackground()
+                          .removeAction()
                           .toString()
 }
 exports.parseSourcesName = function(source){
@@ -164,7 +169,7 @@ exports.handleLongMessage = function(input, message, title){
             count++
             acc = output[i]
         }
-        if(i == output.length-1 && acc != "") (count == 0) ? message.addField(`__${title}__`, acc) : message.addField("_​_", acc)
+        if(i == output.length-1 && acc != "") (count == 0) ? message.addField(`${title}`, acc) : message.addField("_​_", acc)
     }
     return output
 }
