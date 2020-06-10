@@ -96,9 +96,15 @@ exports.parseSubclassList = function(subclasses){
             if(i < subclasses.length - 1) output += `${subclasses[i].name}, `
             else output += subclasses[i].name
         }
-        
     }
     return output
+}
+exports.parseEntries = function(listOfEntries, embeddedMessage){
+    listOfEntries.forEach(entry => {
+        let output = parse.parseEntry(entry)
+        console.log(entry[0].name);
+        output = parse.handleLongMessage(output, embeddedMessage, "Feature")
+    })
 }
 function parseAttributes(attribute){
     switch(attribute){

@@ -9,7 +9,7 @@ var backgroundParser = require('../functions/parseBackgroundFunctions.js');
 var parse = require('../functions/parseFunctions.js');
 
 exports.lookup = function(book, msg, args){
-    let input = args[0];
+    let input = args.join(' ');
     let type = Object.keys(book)[0], entries = book[type], occurences = 0, listOfFoundObjects = [];
     entries.forEach(entry => { 
         const relevance = compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase());
@@ -73,11 +73,19 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
 }
 exports.lookupByType = function(type, entry, args){
     if(type == "class") return this.classLookup(entry, args)
+    if(type == "subclass") return this.subclassLookup(entry)
     if(type == "monster") return this.monsterLookup(entry)
     if(type == "spell") return this.spellLookup(entry)
     if(type == "item") return this.itemLookup(entry)
     if(type == "race") return this.raceLookup(entry)
     if(type == "background") return this.backgroundLookup(entry)
+}
+exports.subclassLookup = function(subclass){
+    let embeddedMessage = new discord.RichEmbed();
+    let description = classParser.parseEntries(subclass.subclassFeatures, embeddedMessage);
+    embeddedMessage.setTitle(subclass.name)
+                   .setColor("fa2af3");
+    return embeddedMessage;
 }
 exports.classLookup = function(classs, args){
     let embeddedMessage = new discord.RichEmbed();

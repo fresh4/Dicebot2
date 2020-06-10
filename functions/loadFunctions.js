@@ -5,7 +5,7 @@ exports.loadClasses = function(){
     fs.readdir("./5eTools/data/class/", (err, files) => {
         if (err) return console.error(err);
         files.forEach(file => {
-            if (!file.endsWith(".json") || !file.startsWith('class-')) return;
+            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick")) return;
             classes.class = classes.class.concat(require(`../5eTools/data/class/${file}`).class)
         });
     });
