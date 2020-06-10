@@ -84,6 +84,7 @@ exports.subclassLookup = function(subclass){
     let embeddedMessage = new discord.RichEmbed();
     let description = classParser.parseEntries(subclass.subclassFeatures, embeddedMessage);
     embeddedMessage.setTitle(subclass.name)
+                   .setFooter(`Source: ${parse.parseSourcesName(subclass.source)}`)
                    .setColor("fa2af3");
     return embeddedMessage;
 }
@@ -111,6 +112,7 @@ exports.classLookup = function(classs, args){
 }
 exports.monsterLookup = function(monster){
     let embeddedMessage = new discord.RichEmbed().setColor("f44242");
+    let footer = (monster.source) ? `Source: ${parse.parseSourcesName(monster.source)}, page ${(monster.page) ? monster.page : null}` : null 
     let descriptors = monsterParser.parseDescriptor(monster);
     let physicals = monsterParser.parsePhysical(monster, embeddedMessage);
     let scores = monsterParser.parseScores(monster);
@@ -118,33 +120,36 @@ exports.monsterLookup = function(monster){
     embeddedMessage.setTitle(monster.name)
                     .setDescription(descriptors)
                     .addField("Ability Scores", scores)
-                    .addField("Attributes", passiveInfo);
+                    .addField("Attributes", passiveInfo)
+                    .setFooter(footer);
     let traits = (monster.trait || monster.spellcasting) ? monsterParser.parseTraits(monster, embeddedMessage) : null
     let actions = (monster.action) ? monsterParser.parseActions(monster.action, embeddedMessage, "ACTIONS") : null
     let legendaryActions = (monster.legendary) ? monsterParser.parseActions(monster.legendary, embeddedMessage, "LEGENDARY ACTIONS") : null
     let reactions = (monster.reaction) ? monsterParser.parseActions(monster.reaction, embeddedMessage, "REACTIONS") : null
-    let footer = (monster.source) ? `Source: ${parse.parseSourcesName(monster.source)}, page ${(monster.page) ? monster.page : null}` : null 
-    embeddedMessage.setFooter(footer);
     return embeddedMessage
 }
 exports.spellLookup = function(spell){
     let embeddedMessage = new discord.RichEmbed();
     let definitions = spellParser.parseDefinitions(spell);
-    embeddedMessage.setTitle(spell.name)
-                   .setDescription(definitions)
     let description = spellParser.parseDescription(spell, embeddedMessage);
     let footer = `Classes: ${spellParser.parseClassList(spell)} | ${parse.parseSourcesName(spell.source)}, page ${(spell.page) ? spell.page : null}`
-    embeddedMessage.setFooter(footer).setColor("3dff00");
+    embeddedMessage.setTitle(spell.name)
+                   .setDescription(definitions)
+                   .setFooter(footer)
+                   .setColor("3dff00");
     return embeddedMessage
 }
 exports.itemLookup = function(item){
     let embeddedMessage = new discord.RichEmbed();
     let definitions = itemParser.parseDefinitions(item);
+    if(item.ac) embeddedMessage.addField("AC", `${item.ac} ${(item.stealth) ? "(Disadvantage on Stealth checks)" : ""}`, true)
+    if(item.dmg1) embeddedMessage.addField("Damage", `${item.dmg1}${(item.dmg2) ? `/${item.dmg2}` : ""}`, true)
+    if(item.range) embeddedMessage.addField("Range", `${item.range} feet`, true)
+    let description = itemParser.parseDescription(item, embeddedMessage);
     embeddedMessage.setTitle(item.name)
                    .setDescription(definitions)
-    let description = itemParser.parseDescription(item, embeddedMessage);
-    let footer = itemParser.parseSources(item)
-    embeddedMessage.setFooter(footer).setColor("00b6fd")
+                   .setFooter(itemParser.parseSources(item))
+                   .setColor("00b6fd")
     return embeddedMessage
 }
 exports.raceLookup = function(race){
@@ -158,9 +163,11 @@ exports.raceLookup = function(race){
     return embeddedMessage;
 }
 exports.backgroundLookup = function(background){
-    let embeddedMessage = new discord.RichEmbed().setColor("ffffff");
+    let embeddedMessage = new discord.RichEmbed()
     let description = backgroundParser.parseDescription(background, embeddedMessage);
-    embeddedMessage.setTitle(background.name).setFooter(itemParser.parseSources(background));
+    embeddedMessage.setTitle(background.name)
+                   .setFooter(itemParser.parseSources(background))
+                   .setColor("ffffff");;
 
     return embeddedMessage;
 }

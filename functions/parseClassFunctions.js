@@ -102,7 +102,6 @@ exports.parseSubclassList = function(subclasses){
 exports.parseEntries = function(listOfEntries, embeddedMessage){
     listOfEntries.forEach(entry => {
         let output = parse.parseEntry(entry)
-        console.log(entry[0].name);
         output = parse.handleLongMessage(output, embeddedMessage, "Feature")
     })
 }

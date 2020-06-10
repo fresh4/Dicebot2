@@ -39,5 +39,6 @@ exports.loadItems = function(){
     items.item = items.item.concat(require(`../5eTools/data/items.json`).item);
     items.item = items.item.concat(require(`../5eTools/data/items.json`).itemGroup)
     items.item = items.item.concat(require(`../5eTools/data/magicvariants.json`).variant)
+    items.item = items.item.concat(require(`../5eTools/data/items-base.json`).baseitem)
     return items;
 }
