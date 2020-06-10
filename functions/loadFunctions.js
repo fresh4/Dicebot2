@@ -1,4 +1,16 @@
 var fs = require('fs')
+
+exports.loadClasses = function(){
+    let classes = {"class":[]};
+    fs.readdir("./5eTools/data/class/", (err, files) => {
+        if (err) return console.error(err);
+        files.forEach(file => {
+            if (!file.endsWith(".json") || !file.startsWith('class-')) return;
+            classes.class = classes.class.concat(require(`../5eTools/data/class/${file}`).class)
+        });
+    });
+    return classes;
+}
 exports.loadBestiary = function(){
     let bestiary = {"monster": []};
     fs.readdir("./5eTools/data/bestiary/", (err, files) => {
