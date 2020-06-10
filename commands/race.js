@@ -19,7 +19,7 @@ exports.run = (bot, msg, args) => {
         })*/
 
         if(args[0])
-            lookup.lookup(races, msg, msg.content.split("race ")[1])
+            lookup.lookup(races, msg, args)
     }
     catch(error){
         console.log(error)

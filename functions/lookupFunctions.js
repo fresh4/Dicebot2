@@ -1,5 +1,6 @@
 var discord = require('discord.js');
 var compare = require('string-similarity');
+var classParser = require('../functions/parseClassFunctions.js')
 var monsterParser = require('../functions/parseMonsterFunctions.js');
 var spellParser = require('../functions/parseSpellFunctions.js');
 var itemParser = require('../functions/parseItemFunctions.js');
@@ -7,7 +8,8 @@ var raceParser = require('../functions/parseRaceFunctions.js');
 var backgroundParser = require('../functions/parseBackgroundFunctions.js');
 var parse = require('../functions/parseFunctions.js');
 
-exports.lookup = function(book, msg, input){
+exports.lookup = function(book, msg, args){
+    let input = args[0];
     let type = Object.keys(book)[0], entries = book[type], occurences = 0, listOfFoundObjects = [];
     entries.forEach(entry => { 
         const relevance = compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase());
@@ -28,7 +30,7 @@ exports.lookup = function(book, msg, input){
     if(occurences == 1){
         entries.forEach(entry => { 
             if(compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase()) == 1) {
-                msg.channel.send(this.lookupByType(type, entry))
+                msg.channel.send(this.lookupByType(type, entry, args))
             }
         })
     }
@@ -69,12 +71,35 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
         });
     });
 }
-exports.lookupByType = function(type, entry){
+exports.lookupByType = function(type, entry, args){
+    if(type == "class") return this.classLookup(entry, args)
     if(type == "monster") return this.monsterLookup(entry)
     if(type == "spell") return this.spellLookup(entry)
     if(type == "item") return this.itemLookup(entry)
     if(type == "race") return this.raceLookup(entry)
     if(type == "background") return this.backgroundLookup(entry)
+}
+exports.classLookup = function(classs, args){
+    let embeddedMessage = new discord.RichEmbed();
+    let levelTable = classParser.parseLevelTable(classs);
+    let hitDice = classParser.parseHitDice(classs);
+    let saveProfs = classParser.parseSaveProfs(classs.proficiency);
+    let startProfs = classParser.parseStartProfs(classs.startingProficiencies)
+    let startEquipment = classParser.parseStartEquipment(classs.startingEquipment);
+    let multiclassingInfo = classParser.parseMulticlassingInfo(classs);
+    let quickStart = classParser.parseQuickStart(classs.fluff);
+    let subclassList = classParser.parseSubclassList(classs.subclasses);
+    let source = `${parse.parseSourcesName(classs.source)} p. ${classs.page}`
+    embeddedMessage.setTitle(classs.name)
+                   .setDescription(levelTable)
+                   .addField("Hit Points", hitDice)
+                   .addField("Starting Proficiencies", `${saveProfs}\n${startProfs}`)
+                   .addField("Starting Equipment", startEquipment)
+                   .addField("Multiclassing", multiclassingInfo)
+                   .addField("Quick Build", quickStart)
+                   .setFooter(`${source}\nSubclasses: ${subclassList}`)
+                   .setColor("fa2af3")
+    return embeddedMessage
 }
 exports.monsterLookup = function(monster){
     let embeddedMessage = new discord.RichEmbed().setColor("f44242");
@@ -119,12 +144,13 @@ exports.raceLookup = function(race){
     let description = raceParser.parseDescription(race)
     embeddedMessage.setTitle(race.name)
                    .setDescription(description)
+                   .setColor("fa7d2a")
     //let subraces = (race.subraces) ? raceParser.parseSubraces(race.subraces, embeddedMessage) : null;
 
     return embeddedMessage;
 }
 exports.backgroundLookup = function(background){
-    let embeddedMessage = new discord.RichEmbed();
+    let embeddedMessage = new discord.RichEmbed().setColor("ffffff");
     let description = backgroundParser.parseDescription(background, embeddedMessage);
     embeddedMessage.setTitle(background.name).setFooter(itemParser.parseSources(background));
 
