@@ -1,6 +1,6 @@
 const fs = require('fs');
 exports.run = (bot, msg, args) => {
-    if(!msg.member.hasPermission("ADMINISTRATOR") || msg.member.id != bot.config.owner) return msg.reply("You don't have permission to access this command.")
+    if(!msg.member.hasPermission("ADMINISTRATOR")) return msg.reply("You don't have permission to access this command.")
     if(args.length != 1) return msg.channel.send(`Invalid arguments. See \`${bot.prefix}help setprefix\``)
 
     let prefix = JSON.parse(fs.readFileSync("./server_info.json", "utf8"));
