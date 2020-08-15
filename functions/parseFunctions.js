@@ -88,6 +88,10 @@ class tags {
         this.input = filterFunc("action", this.input)
         return this
     }
+    removeRace(){
+        this.input = filterFunc("race", this.input);
+        return this
+    }
     toString(){
         return this.input
     }
@@ -115,6 +119,7 @@ exports.removeTags = function(input){
                           .removeTable()
                           .removeBackground()
                           .removeAction()
+                          .removeRace()
                           .toString()
 }
 exports.parseSourcesName = function(source){
@@ -132,19 +137,22 @@ exports.parseTable = function(tableObject){
     let tableRows = "", tableHeader = "\n"
     for(let i in tableObject.colLabels){
         if(i == tableObject.colLabels.length - 1) tableHeader += `__${tableObject.colLabels[i]}__\n`
-        else tableHeader += `__${tableObject.colLabels[i]}__ **|** `
+        else tableHeader += `__${tableObject.colLabels[i]}__ **\|** `
     }
     for(let i in tableObject.rows){
         for(let j = 0; j < tableObject.colLabels.length; j++){
             if(tableObject.rows[i][j].roll){
-                if(tableObject.rows[i][j].roll.min && tableObject.rows[i][j].roll.max)
-                    tableRows += `**${tableObject.rows[i][j].roll.min} - ${tableObject.rows[i][j].roll.max}** **|** `
-                else if(tableObject.rows[i][j].roll.exact) tableRows += `**${tableObject.rows[i][j].roll.exact}** | `
+                if(tableObject.rows[i][j].roll.min && tableObject.rows[i][j].roll.max != undefined){
+                    if(tableObject.rows[i][j].roll.max == 0) tableObject.rows[i][j].roll.max = 100
+                    tableRows += `**${tableObject.rows[i][j].roll.min} - ${tableObject.rows[i][j].roll.max}** **\|** `
+
+                }
+                else if(tableObject.rows[i][j].roll.exact) tableRows += `**${tableObject.rows[i][j].roll.exact}** \| `
             }
             else{
-                if(j == 0) tableRows += `**${this.removeTags(tableObject.rows[i][j])}** **|** `
+                if(j == 0) tableRows += `**${this.removeTags(tableObject.rows[i][j])}** **\|** `
                 else if(j == tableObject.colLabels.length - 1) tableRows += `${this.removeTags(tableObject.rows[i][j])}`
-                else tableRows += `${this.removeTags(tableObject.rows[i][j])} **|** `
+                else tableRows += `${this.removeTags(tableObject.rows[i][j])} **\|** `
             }
             
         }
@@ -158,7 +166,7 @@ exports.handleLongMessage = function(input, message, title){
         if((acc + output[i]).length + message.length > 6000){
 
             break;
-            //let message2 = new discord.RichEmbed().setColor(message.color).setDescription("...continued");
+            //let message2 = new discord.MessageEmbed().setColor(message.color).setDescription("...continued");
             //acc = output[i]
             //console.log(this.handleLongMessage(acc, message2, title))
         }
