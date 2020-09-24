@@ -92,6 +92,10 @@ class tags {
         this.input = filterFunc("race", this.input);
         return this
     }
+    removeScaleDamage(){
+        this.input = filterFunc("scaledamage", this.input);
+        return this
+    }
     toString(){
         return this.input
     }
@@ -120,6 +124,7 @@ exports.removeTags = function(input){
                           .removeBackground()
                           .removeAction()
                           .removeRace()
+                          .removeScaleDamage()
                           .toString()
 }
 exports.parseSourcesName = function(source){
