@@ -3,7 +3,7 @@ var fs = require('fs');
 var discord = require('discord.js')
 exports.run = (bot, msg, args) => {
 
-    let embed = new discord.RichEmbed();
+    let embed = new discord.MessageEmbed();
     let output = "", invite = "https://discordapp.com/oauth2/authorize?client_id=392081019798421515&scope=bot&permissions=0";
     let categories = ["Rolling", "Compendium Lookup", "Generator", "Utility", "Cards", "Administrative"];
 
@@ -14,7 +14,7 @@ exports.run = (bot, msg, args) => {
                              `If you don't know your prefix you can mention me (${bot.user}) in place of the prefix instead.\n`+
                              `Invite me to your server [here](${invite})!`)
              .setColor("33D7FF")
-             .setThumbnail(bot.user.avatarURL)
+             .setThumbnail(bot.user.avatarURL())
         categories.forEach(category => {
             let fieldOutput = ""
             bot.commands.forEach(command =>{

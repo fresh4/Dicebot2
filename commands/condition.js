@@ -4,7 +4,7 @@ var data = require('../5eTools/data/conditionsdiseases.json');
 exports.run = (bot, msg, args) => {
     try {
         var description = "", conditionsData = data;
-        const embeddedMessage = new discord.RichEmbed()
+        const embeddedMessage = new discord.MessageEmbed()
         for(var i = 0; i < conditionsData.condition.length; i++){
             let condition = conditionsData.condition[i];
             if(args[0] == condition.name.toLowerCase()){

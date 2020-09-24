@@ -13,7 +13,7 @@ exports.run = (bot, msg, args) => {
     let gems = pickLoot(items, "gems", d100),
         art = pickLoot(items, "artobjects", d100),
         magicItems = parse.removeTags(pickLoot(items, "magicitems", d100));
-    let embed = new discord.RichEmbed().setTitle("Loot Generator")
+    let embed = new discord.MessageEmbed().setTitle("Loot Generator")
                                        .setDescription(`Items generated for a hoard belonging to a CR ${CR} creature`)
                                        .addField("**Coins**", coins)
                                        .addField("**Gems**", gems)

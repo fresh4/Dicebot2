@@ -7,6 +7,6 @@ module.exports.help = {
     name: "class",
     category: "Compendium Lookup",
     description: "Looks up a specified class.",
-    detailedDesc: "",
-    usage: "class <class> [subclass]"
+    detailedDesc: "A list of available subclasses will be listed; use `subclass` command to look up a subclass.",
+    usage: "class <class>"
 }

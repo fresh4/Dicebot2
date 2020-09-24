@@ -12,6 +12,7 @@ exports.lookup = function(book, msg, args){
     let input = args.join(' ');
     let type = Object.keys(book)[0], entries = book[type], occurences = 0, listOfFoundObjects = [];
     entries.forEach(entry => { 
+        //console.log(entry.name)
         const relevance = compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase());
         if(relevance == 1) {
             occurences++;     
@@ -40,7 +41,7 @@ exports.lookup = function(book, msg, args){
 }
 exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
     const type = Object.keys(requestSource)[0];
-    const menu = new discord.RichEmbed().setColor("6a90ff");
+    const menu = new discord.MessageEmbed().setColor("6a90ff");
     menu.setTitle("Multiple matches found");
     var desc = "";
     for(var k = 0; k < arrayOfMatches.length; k++){
@@ -72,6 +73,7 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
     });
 }
 exports.lookupByType = function(type, entry, args){
+    if(type == "feature") return this.classFeatLookup(entry)
     if(type == "class") return this.classLookup(entry, args)
     if(type == "subclass") return this.subclassLookup(entry)
     if(type == "monster") return this.monsterLookup(entry)
@@ -80,8 +82,16 @@ exports.lookupByType = function(type, entry, args){
     if(type == "race") return this.raceLookup(entry)
     if(type == "background") return this.backgroundLookup(entry)
 }
+exports.classFeatLookup = function(classFeat){
+    let embeddedMessage = new discord.MessageEmbed();
+    embeddedMessage.setTitle(classFeat.name)
+                   .setDescription(parse.parseEntry(classFeat.entries, "\n"))
+                   .setFooter(classFeat.source)
+                   .setColor("fa2af3");
+    return embeddedMessage;
+}
 exports.subclassLookup = function(subclass){
-    let embeddedMessage = new discord.RichEmbed();
+    let embeddedMessage = new discord.MessageEmbed();
     let description = classParser.parseEntries(subclass.subclassFeatures, embeddedMessage);
     embeddedMessage.setTitle(subclass.name)
                    .setFooter(`Source: ${parse.parseSourcesName(subclass.source)}`)
@@ -89,7 +99,7 @@ exports.subclassLookup = function(subclass){
     return embeddedMessage;
 }
 exports.classLookup = function(classs, args){
-    let embeddedMessage = new discord.RichEmbed();
+    let embeddedMessage = new discord.MessageEmbed();
     let levelTable = classParser.parseLevelTable(classs);
     let hitDice = classParser.parseHitDice(classs);
     let saveProfs = classParser.parseSaveProfs(classs.proficiency);
@@ -106,12 +116,12 @@ exports.classLookup = function(classs, args){
                    .addField("Starting Equipment", startEquipment)
                    .addField("Multiclassing", multiclassingInfo)
                    .addField("Quick Build", quickStart)
-                   .setFooter(`${source}\nSubclasses: ${subclassList}`)
+                   .setFooter(`${source}\nUse the \`classfeat\` command to lookup a specific feature.\nSubclasses: ${subclassList}`)
                    .setColor("fa2af3")
     return embeddedMessage
 }
 exports.monsterLookup = function(monster){
-    let embeddedMessage = new discord.RichEmbed().setColor("f44242");
+    let embeddedMessage = new discord.MessageEmbed().setColor("f44242");
     let footer = (monster.source) ? `Source: ${parse.parseSourcesName(monster.source)}, page ${(monster.page) ? monster.page : null}` : null 
     let descriptors = monsterParser.parseDescriptor(monster);
     let physicals = monsterParser.parsePhysical(monster, embeddedMessage);
@@ -129,7 +139,7 @@ exports.monsterLookup = function(monster){
     return embeddedMessage
 }
 exports.spellLookup = function(spell){
-    let embeddedMessage = new discord.RichEmbed();
+    let embeddedMessage = new discord.MessageEmbed();
     let definitions = spellParser.parseDefinitions(spell);
     let description = spellParser.parseDescription(spell, embeddedMessage);
     let footer = `Classes: ${spellParser.parseClassList(spell)} | ${parse.parseSourcesName(spell.source)}, page ${(spell.page) ? spell.page : null}`
@@ -140,7 +150,7 @@ exports.spellLookup = function(spell){
     return embeddedMessage
 }
 exports.itemLookup = function(item){
-    let embeddedMessage = new discord.RichEmbed();
+    let embeddedMessage = new discord.MessageEmbed();
     let definitions = itemParser.parseDefinitions(item);
     if(item.ac) embeddedMessage.addField("AC", `${item.ac} ${(item.stealth) ? "(Disadvantage on Stealth checks)" : ""}`, true)
     if(item.dmg1) embeddedMessage.addField("Damage", `${item.dmg1}${(item.dmg2) ? `/${item.dmg2}` : ""}`, true)
@@ -153,7 +163,7 @@ exports.itemLookup = function(item){
     return embeddedMessage
 }
 exports.raceLookup = function(race){
-    let embeddedMessage = new discord.RichEmbed();
+    let embeddedMessage = new discord.MessageEmbed();
     let description = raceParser.parseDescription(race)
     embeddedMessage.setTitle(race.name)
                    .setDescription(description)
@@ -163,7 +173,7 @@ exports.raceLookup = function(race){
     return embeddedMessage;
 }
 exports.backgroundLookup = function(background){
-    let embeddedMessage = new discord.RichEmbed()
+    let embeddedMessage = new discord.MessageEmbed()
     let description = backgroundParser.parseDescription(background, embeddedMessage);
     embeddedMessage.setTitle(background.name)
                    .setFooter(itemParser.parseSources(background))

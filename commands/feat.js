@@ -7,7 +7,7 @@ exports.run = (bot, msg, args = args.toString()) => {
         if(feat.name.toLowerCase().split(" ").toString() == args){
             if(feat.source == "UAFeatsForRaces") return;
             let sourceBook = "", description = "";
-            let embeddedMessage = new discord.RichEmbed();
+            let embeddedMessage = new discord.MessageEmbed();
             if(feat.prerequisite){
                 let prereqsArr = []
                 feat.prerequisite.forEach(prereq => {
