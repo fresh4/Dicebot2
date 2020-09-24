@@ -1,31 +1,13 @@
-var classes = require('../functions/loadFunctions.js').loadClasses();
+var classes = require('../functions/loadFunctions.js').loadClassFeatures();
+var subclasses = require('../functions/loadFunctions.js').loadSubclassFeatures();
 var lookup = require('../functions/lookupFunctions.js')
 exports.run = (bot, msg, args) => {
     let features = {"feature": []};
-    classes.class.forEach(classs => {
-        classs.classFeatures.forEach(level => {
-            level.forEach(classFeature => {
-                if(classFeature.name) features.feature.push({
-                    "name": classFeature.name, 
-                    "entries": classFeature.entries,
-                    "source": classs.name
-                    })
-            })
-        })
-
-        classs.subclasses.forEach(subclass => {
-            subclass.subclassFeatures.forEach(level => {
-                level.forEach(subclassFeature => {
-                    subclassFeature.entries.forEach(feature => {
-                        if(feature.type && feature.name) features.feature.push({
-                            "name": feature.name, 
-                            "entries": feature.entries,
-                            "source": `${classs.name} (${subclass.name})`
-                        })
-                    })
-                })
-            })
-        })
+    classes.classfeatures.forEach(feature =>{
+        features.feature.push(feature)
+    })
+    subclasses.subclassfeatures.forEach(feature =>{
+        if(feature) features.feature.push(feature)
     })
 
     lookup.lookup(features, msg, args)

@@ -12,7 +12,6 @@ exports.lookup = function(book, msg, args){
     let input = args.join(' ');
     let type = Object.keys(book)[0], entries = book[type], occurences = 0, listOfFoundObjects = [];
     entries.forEach(entry => { 
-        //console.log(entry.name)
         const relevance = compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase());
         if(relevance == 1) {
             occurences++;     
@@ -86,13 +85,13 @@ exports.classFeatLookup = function(classFeat){
     let embeddedMessage = new discord.MessageEmbed();
     embeddedMessage.setTitle(classFeat.name)
                    .setDescription(parse.parseEntry(classFeat.entries, "\n"))
-                   .setFooter(classFeat.source)
+                   .setFooter(`Source: ${parse.parseSourcesName(classFeat.source)}`)
                    .setColor("fa2af3");
     return embeddedMessage;
 }
 exports.subclassLookup = function(subclass){
     let embeddedMessage = new discord.MessageEmbed();
-    let description = classParser.parseEntries(subclass.subclassFeatures, embeddedMessage);
+    let description = classParser.parseSubclassEntries(subclass, embeddedMessage);
     embeddedMessage.setTitle(subclass.name)
                    .setFooter(`Source: ${parse.parseSourcesName(subclass.source)}`)
                    .setColor("fa2af3");
@@ -116,7 +115,7 @@ exports.classLookup = function(classs, args){
                    .addField("Starting Equipment", startEquipment)
                    .addField("Multiclassing", multiclassingInfo)
                    .addField("Quick Build", quickStart)
-                   .setFooter(`${source}\nUse the \`classfeat\` command to lookup a specific feature.\nSubclasses: ${subclassList}`)
+                   .setFooter(`${source}\nUse the classfeat command to lookup a specific feature.\nSubclasses: ${subclassList}`)
                    .setColor("fa2af3")
     return embeddedMessage
 }

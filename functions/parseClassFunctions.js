@@ -1,14 +1,21 @@
 var parse = require('../functions/parseFunctions.js');
+var classFeatures = require('../functions/loadFunctions.js').loadClassFeatures();
+var subclassFeatures = require('../functions/loadFunctions.js').loadSubclassFeatures();
 exports.parseLevelTable = function(classs){
     let output = "",
-    features = classs.classFeatures;
-    for(var i = 0; i < features.length; i++){
+    features = classFeatures.classfeatures;
+    for(var i = 0; i < 20; i++){
         output += `\`${i+1}\`: `
-        if(features[i].length == 0) output += "\n";
-        for(var j = 0; j < features[i].length; j++){
-            if(j < features[i].length - 1) output += `${features[i][j].name}, `
-            else output += `${features[i][j].name}\n`
+        for(var j = 0; j < features.length; j++){
+            if(features[j].className == classs.name){
+                if(features[j].level == i+1) {
+                    if(features[j+1] && features[j+1].level == i+1) output +=`${features[j].name}, `
+                    else output += `${features[j].name}\n`
+                }
+            }
         }
+        if(output.charAt(output.length-1) == " ") output += "\n"
+
     }
     return output
 }
@@ -104,6 +111,16 @@ exports.parseEntries = function(listOfEntries, embeddedMessage){
         let output = parse.parseEntry(entry)
         output = parse.handleLongMessage(output, embeddedMessage, "Feature")
     })
+}
+exports.parseSubclassEntries = function(subclass, embeddedMessage){
+    let output = []
+    subclassFeatures.subclassfeatures.forEach(feature => {
+        if(feature){
+            if(feature.subclassShortName == subclass.subclassShortName)
+                output.push(feature.entries)
+        }
+    })
+    return this.parseEntries(output, embeddedMessage)
 }
 function parseAttributes(attribute){
     switch(attribute){

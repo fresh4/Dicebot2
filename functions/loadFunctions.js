@@ -1,5 +1,29 @@
 var fs = require('fs')
 
+exports.loadClassFeatures = function(){
+    let classes = {"classfeatures":[]};
+    fs.readdir("./5eTools/data/class/", (err, files) => {
+        if (err) return console.error(err);
+        files.forEach(file => {
+            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick")) return;
+            classes.classfeatures = classes.classfeatures.concat(require(`../5eTools/data/class/${file}`).classFeature)
+        });
+    });
+    return classes
+}
+
+exports.loadSubclassFeatures = function(){
+    let classes = {"subclassfeatures":[]};
+    fs.readdir("./5eTools/data/class/", (err, files) => {
+        if (err) return console.error(err);
+        files.forEach(file => {
+            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick")) return;
+            classes.subclassfeatures = classes.subclassfeatures.concat(require(`../5eTools/data/class/${file}`).subclassFeature)
+        });
+    });
+    return classes
+}
+
 exports.loadClasses = function(){
     let classes = {"class":[]};
     fs.readdir("./5eTools/data/class/", (err, files) => {
