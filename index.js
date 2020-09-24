@@ -5,8 +5,6 @@ const fs = require('fs');
 const bot = new discord.Client();
 const botConfig = require('./botconfig.json');
 
-const cron = require('./cron.js').cronify(bot);
-
 bot.config = botConfig;
 bot.prefix = bot.config.prefix;
 
