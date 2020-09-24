@@ -113,14 +113,16 @@ exports.parseEntries = function(listOfEntries, embeddedMessage){
     })
 }
 exports.parseSubclassEntries = function(subclass, embeddedMessage){
-    let output = []
+    let output = ""
     subclassFeatures.subclassfeatures.forEach(feature => {
         if(feature){
-            if(feature.subclassShortName == subclass.subclassShortName)
-                output.push(feature.entries)
+            if(feature.subclassShortName == subclass.subclassShortName){
+                //console.log(parse.parseEntry(feature.entries))
+                output += `***${feature.name}.*** ${parse.parseEntry(feature.entries)}\n`
+            }
         }
     })
-    return this.parseEntries(output, embeddedMessage)
+    output = parse.handleLongMessage(output, embeddedMessage, "Subclass Features")
 }
 function parseAttributes(attribute){
     switch(attribute){

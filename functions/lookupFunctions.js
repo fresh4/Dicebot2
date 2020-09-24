@@ -11,6 +11,7 @@ var parse = require('../functions/parseFunctions.js');
 exports.lookup = function(book, msg, args){
     let input = args.join(' ');
     let type = Object.keys(book)[0], entries = book[type], occurences = 0, listOfFoundObjects = [];
+    console.log(type)
     entries.forEach(entry => { 
         const relevance = compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase());
         if(relevance == 1) {
