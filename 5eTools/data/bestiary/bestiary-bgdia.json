@@ -111,6 +111,7 @@
 				}
 			],
 			"familiar": true,
+			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -207,6 +208,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -276,7 +278,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -284,12 +287,17 @@
 				"necrotic",
 				"poison"
 			],
+			"hasToken": true,
 			"damageTags": [
 				"B",
 				"C",
 				"F",
 				"N",
 				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
 			]
 		},
 		{
@@ -352,7 +360,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -393,13 +402,13 @@
 				{
 					"name": "Hand of Vecna",
 					"entries": [
-						"The Hand of Vecna has 8 charges and regains {@dice 1d4 + 4} expended charges daily at dawn. Arkhan can cast the following spells from the hand by expending the specified number of charges (spell save {@dc 18}): finger of death (5 charges), sleep (1 charge), slow (2 charges), and teleport (3 charges)."
+						"The Hand of Vecna has 8 charges and regains {@dice 1d4 + 4} expended charges daily at dawn. Arkhan can cast the following spells from the hand by expending the specified number of charges (spell save {@dc 18}): {@spell finger of death} (5 charges), {@spell sleep} (1 charge), {@spell slow} (2 charges), and {@spell teleport} (3 charges)."
 					]
 				},
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Arkhan wields Fane-Eater and wears a suit of Obsidian Flint Dragon Plate. The armor gives Arkhan advantage on ability checks and saving throws made to avoid or end the {@condition grappled} condition on him."
+						"Arkhan wields {@item Fane-Eater|bgdia} and wears a suit of {@item Obsidian Flint Dragon Plate|bgdia}. The armor gives Arkhan advantage on ability checks and saving throws made to avoid or end the {@condition grappled} condition on him."
 					]
 				}
 			],
@@ -419,10 +428,11 @@
 				{
 					"name": "Javelin",
 					"entries": [
-						"{@atk mw,rw} {@hit 10} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}8 ({@damage 1d6 + 5}) piercing damage, plus 4 piercing damage and 9 ({@damage 2d8}) cold damage if the javelin was used to make a melee"
+						"{@atk mw,rw} {@hit 10} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}8 ({@damage 1d6 + 5}) piercing damage, plus 4 piercing damage and 9 ({@damage 2d8}) cold damage if the javelin was used to make a melee attack."
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -446,6 +456,9 @@
 				"MW",
 				"RW",
 				"THW"
+			],
+			"conditionInflictSpell": [
+				"charmed"
 			]
 		},
 		{
@@ -492,10 +505,10 @@
 				"wis": "+12"
 			},
 			"skill": {
-				"arcana": "+14",
-				"deception": "+15",
-				"insight": "+11",
-				"persuasion": "+15"
+				"arcana": "+15",
+				"deception": "+16",
+				"insight": "+12",
+				"persuasion": "+16"
 			},
 			"senses": [
 				"truesight 120 ft."
@@ -509,7 +522,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -619,6 +633,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -649,6 +664,13 @@
 			"conditionInflict": [
 				"frightened",
 				"stunned"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"invisible",
+				"paralyzed",
+				"restrained"
 			]
 		},
 		{
@@ -667,7 +689,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Black Gauntlet of Bane",
@@ -796,6 +819,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -812,6 +836,11 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"paralyzed"
 			]
 		},
 		{
@@ -878,6 +907,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Spider Climb"
 			],
@@ -935,7 +965,8 @@
 						]
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Chukka",
@@ -961,6 +992,10 @@
 						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d10}) piercing damage."
 					]
 				}
+			],
+			"hasToken": true,
+			"miscTags": [
+				"MW"
 			]
 		},
 		{
@@ -988,8 +1023,12 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"damageTags": [
 				"B"
+			],
+			"miscTags": [
+				"MW"
 			]
 		},
 		{
@@ -1048,7 +1087,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -1105,10 +1145,11 @@
 				{
 					"name": "Disgorge Allies {@recharge}",
 					"entries": [
-						"Crokek'toeck opens its mouth and disgorges {@dice 1d4} barlguras, {@dice 3d6} gnolls led by 1 gnoll fang of Yeenoghu, {@dice 6d6} dretches, or {@dice 1d3} vrocks. Each creature it disgorges appears in an unoccupied space within 30 feet of Crokek'toeck's mouth, or the next closest unoccupied space."
+						"Crokek'toeck opens its mouth and disgorges {@dice 1d4} {@creature barlgura||barlguras}, {@dice 3d6} {@creature gnoll||gnolls} led by 1 {@creature gnoll fang of Yeenoghu}, {@dice 6d6} {@creature dretch||dretches}, or {@dice 1d3} {@creature vrock||vrocks}. Each creature it disgorges appears in an unoccupied space within 30 feet of Crokek'toeck's mouth, or the next closest unoccupied space."
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Magic Resistance",
@@ -1216,6 +1257,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -1254,7 +1296,8 @@
 						"with": "dryad"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Duke Thalamra Vanthampur",
@@ -1345,6 +1388,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Devil's Sight"
 			],
@@ -1400,6 +1444,13 @@
 						"{@atk mw,rw} {@hit 5} to hit, reach 10 ft. or range 20/60 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage."
 					]
 				}
+			],
+			"hasToken": true,
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW",
+				"THW"
 			]
 		},
 		{
@@ -1428,7 +1479,8 @@
 			"alignment": [
 				"N",
 				"E"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Fiendish Flesh Golem",
@@ -1482,7 +1534,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine or silvered"
+					"note": "from nonmagical attacks that aren't adamantine or silvered",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -1543,6 +1596,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Damage Absorption",
 				"Immutable Form",
@@ -1632,6 +1686,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -1675,6 +1730,7 @@
 				"average": 7,
 				"formula": "3d4"
 			},
+			"hasToken": true,
 			"damageTags": [
 				"P"
 			]
@@ -1726,7 +1782,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -1773,6 +1830,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Regeneration"
 			],
@@ -1819,9 +1877,14 @@
 					"human"
 				]
 			},
+			"hasToken": true,
 			"damageTags": [
 				"B",
 				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RNG"
 			]
 		},
 		{
@@ -1907,6 +1970,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Weapons"
 			],
@@ -1939,7 +2003,8 @@
 			"_copy": {
 				"name": "Giant Centipede",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Hollyphant",
@@ -1986,7 +2051,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2066,6 +2132,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Weapons"
 			],
@@ -2087,6 +2154,9 @@
 			],
 			"conditionInflict": [
 				"deafened"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
 			]
 		},
 		{
@@ -2168,6 +2238,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -2248,7 +2319,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -2339,6 +2411,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -2539,6 +2612,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Hold Breath"
 			],
@@ -2557,6 +2631,14 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"incapacitated",
+				"paralyzed",
+				"poisoned",
+				"stunned"
 			]
 		},
 		{
@@ -2575,7 +2657,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Mad Maggie",
@@ -2593,7 +2676,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Mahadi the Rakshasa",
@@ -2648,7 +2732,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"vulnerable": [
@@ -2656,7 +2741,8 @@
 					"vulnerable": [
 						"piercing"
 					],
-					"note": "from magic weapons wielded by good creatures"
+					"note": "from magic weapons wielded by good creatures",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -2736,6 +2822,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Weapons"
 			],
@@ -2888,6 +2975,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -2909,6 +2997,9 @@
 				"MW"
 			],
 			"conditionInflict": [
+				"poisoned"
+			],
+			"conditionInflictSpell": [
 				"poisoned"
 			]
 		},
@@ -2981,6 +3072,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3053,6 +3145,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"AB",
 				"C",
@@ -3103,9 +3196,9 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"damageTags": [
 				"A",
-				"F",
 				"N",
 				"P"
 			]
@@ -3169,6 +3262,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3275,6 +3369,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3305,7 +3400,8 @@
 						"with": "peacock"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Princeps Kovik",
@@ -3323,7 +3419,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Raggadragga",
@@ -3345,7 +3442,8 @@
 			"hp": {
 				"average": 120,
 				"formula": "12d8 + 24"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reaper of Bhaal",
@@ -3436,6 +3534,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3455,6 +3554,9 @@
 				"MW",
 				"RW",
 				"THW"
+			],
+			"conditionInflictSpell": [
+				"charmed"
 			]
 		},
 		{
@@ -3551,6 +3653,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3578,7 +3681,8 @@
 			"type": {
 				"type": "undead",
 				"swarmSize": "T"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Skull Lasher of Myrkul",
@@ -3679,6 +3783,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3699,6 +3804,9 @@
 				"MW"
 			],
 			"conditionInflict": [
+				"poisoned"
+			],
+			"conditionInflictSpell": [
 				"poisoned"
 			]
 		},
@@ -3722,7 +3830,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item leather armor +2||+2 leather armor}"
+						"{@item +2 leather armor}"
 					]
 				}
 			],
@@ -3754,7 +3862,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -3821,6 +3930,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -3886,6 +3996,7 @@
 				"Infernal",
 				"Primordial"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"AB",
 				"C",
@@ -3956,6 +4067,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"AB",
 				"C",
@@ -4055,6 +4167,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"E",
@@ -4065,6 +4178,9 @@
 			],
 			"spellcastingTags": [
 				"CC"
+			],
+			"conditionInflictSpell": [
+				"prone"
 			]
 		},
 		{
@@ -4137,7 +4253,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Torogar wears gauntlets of flaming fury and a belt of fire giant strength. Without the belt, his Strength is 21. He also carries a soul coin."
+						"Torogar wears {@item gauntlets of flaming fury|bgdia} and a {@item belt of fire giant strength}. Without the belt, his Strength is 21. He also carries a {@item soul coin|bgdia}."
 					]
 				}
 			],
@@ -4161,6 +4277,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -4226,6 +4343,7 @@
 				"Halfling",
 				"Troglodyte"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -4248,7 +4366,8 @@
 				"name": "Tressym",
 				"source": "SKT"
 			},
-			"type": "monstrosity"
+			"type": "monstrosity",
+			"hasToken": true
 		},
 		{
 			"name": "Ulder Ravengard",
@@ -4329,6 +4448,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -4361,7 +4481,8 @@
 			"type": "undead",
 			"resist": [
 				"necrotic"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

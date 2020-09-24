@@ -51,7 +51,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -122,6 +123,7 @@
 				"name": "Ancient Deep Crow",
 				"source": "AI"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -232,6 +234,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -352,12 +355,13 @@
 					]
 				},
 				{
-					"name": "Song of Domination (3/day)",
+					"name": "Song of Domination (3/Day)",
 					"entries": [
 						"Brahma targets one creature that can see or hear her, which must succeed on a {@dc 13} Wisdom saving throw or be {@condition charmed} by her for 1 minute. The target can repeat the save at the end of each of its turns, ending the effect on itself on a success. It has disadvantage on these saves if being {@condition charmed} by Brahma is something the target openly or secretly desires. For 1 hour after the charm effect ends, the target has disadvantage on Intelligence, Wisdom, or Charisma checks made as part of a contest with Brahma."
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -376,6 +380,11 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"unconscious"
 			]
 		},
 		{
@@ -447,6 +456,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -552,6 +562,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -660,6 +671,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Sunlight Sensitivity"
@@ -805,6 +817,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -824,6 +837,10 @@
 				"AOE",
 				"MW",
 				"RCH"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"prone"
 			]
 		},
 		{
@@ -945,6 +962,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"DR",
@@ -1096,6 +1114,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -1248,10 +1267,17 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"K'thriss makes two attacks with his sickle. Sickle. Melee Weapon Attack: {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) slashing damage."
+						"K'thriss makes two attacks with his sickle."
+					]
+				},
+				{
+					"name": "Sickle",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) slashing damage."
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -1274,6 +1300,9 @@
 			"spellcastingTags": [
 				"CL",
 				"I"
+			],
+			"miscTags": [
+				"MW"
 			]
 		},
 		{
@@ -1320,7 +1349,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -1376,6 +1406,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1529,6 +1560,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -1557,6 +1589,9 @@
 				"MW",
 				"RNG",
 				"RW"
+			],
+			"conditionInflictSpell": [
+				"charmed"
 			]
 		},
 		{
@@ -1607,7 +1642,7 @@
 			"wis": 13,
 			"cha": 11,
 			"skill": {
-				"nature": "+3",
+				"nature": "+4",
 				"perception": "+3",
 				"performance": "+2",
 				"stealth": "+5",
@@ -1654,12 +1689,13 @@
 			],
 			"reaction": [
 				{
-					"name": "Return the Favor (3/day)",
+					"name": "Return the Favor (3/Day)",
 					"entries": [
 						"When Oak takes damage from a melee weapon attack, he can make a hooked dagger attack."
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Keen Senses"
@@ -1842,6 +1878,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -1865,6 +1902,11 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"deafened",
+				"paralyzed",
+				"prone"
 			]
 		},
 		{
@@ -1956,7 +1998,7 @@
 			],
 			"trait": [
 				{
-					"name": "Echo Spell (1/day)",
+					"name": "Echo Spell (1/Day)",
 					"entries": [
 						"Pendragon can cast the spell he cast on his last turn, whose casting time becomes 1 bonus action. This bonus casting uses a spell slot as normal."
 					]
@@ -1970,6 +2012,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"DR",
@@ -2072,7 +2115,7 @@
 			],
 			"trait": [
 				{
-					"name": "Divine Display (1/day)",
+					"name": "Divine Display (1/Day)",
 					"entries": [
 						"As a bonus action, Phoenix causes his shield to flare with divine light. Each creature of his choice within 30 feet of him must succeed on a {@dc 13} Wisdom saving throw or be {@condition blinded} for 1 minute. A creature can repeat the save at the end of each of its turns, ending the effect on itself with a success."
 					]
@@ -2092,6 +2135,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -2110,6 +2154,9 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
 			]
 		},
 		{
@@ -2194,6 +2241,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sneak Attack"
 			],
@@ -2212,9 +2260,6 @@
 			],
 			"miscTags": [
 				"MW"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			]
 		},
 		{
@@ -2482,6 +2527,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -2499,6 +2545,10 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"deafened",
+				"prone"
 			]
 		},
 		{
@@ -2589,7 +2639,7 @@
 					]
 				},
 				{
-					"name": "Word From Beyond (1/day)",
+					"name": "Word From Beyond (1/Day)",
 					"entries": [
 						"Splugoth remembers and repeats aloud a few words from a place he entered while walking back from the next world to this one. Each creature of his choice within 30 feet of him that can hear him must succeed on a {@dc 12} Wisdom saving throw or be {@condition stunned} until the end of its next turn."
 					]
@@ -2603,6 +2653,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2645,13 +2696,13 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item studded leather armor +1||+1 studded leather}"
+						"{@item +1 Studded Leather Armor||+1 studded leather}"
 					]
 				},
 				{
 					"ac": 19,
 					"from": [
-						"{@item studded leather armor +1||+1 studded leather}"
+						"{@item +1 Studded Leather Armor||+1 studded leather}"
 					],
 					"condition": "while wielding two melee weapons",
 					"braces": true
@@ -2744,6 +2795,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sneak Attack"
 			],
@@ -2762,9 +2814,6 @@
 				"MW",
 				"RW",
 				"THW"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			]
 		},
 		{
@@ -2917,6 +2966,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -2943,6 +2993,9 @@
 				"MW",
 				"RNG",
 				"RW"
+			],
+			"conditionInflictSpell": [
+				"restrained"
 			]
 		}
 	]

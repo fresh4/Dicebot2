@@ -20,6 +20,11 @@
 			"name": "Amphisbaena",
 			"source": "GoS",
 			"page": 230,
+			"otherSources": [
+				{
+					"source": "MOT"
+				}
+			],
 			"size": "M",
 			"type": "monstrosity",
 			"alignment": [
@@ -72,6 +77,13 @@
 					]
 				}
 			],
+			"hasToken": true,
+			"altArt": [
+				{
+					"name": "Amphisbaena",
+					"source": "MOT"
+				}
+			],
 			"senseTags": [
 				"B"
 			],
@@ -111,6 +123,7 @@
 			"languages": [
 				"Common"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			]
@@ -217,6 +230,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -349,6 +363,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Brute"
@@ -397,6 +412,7 @@
 				"C",
 				"E"
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -487,7 +503,7 @@
 				{
 					"name": "Unarmed Strike",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract bluerot (see the \"Bluerot\" in notes)."
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract {@disease bluerot|GoS} (see the \"Bluerot\" in notes)."
 					]
 				}
 			],
@@ -499,6 +515,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Undead Fortitude"
 			],
@@ -607,13 +624,13 @@
 				{
 					"name": "Hand Crossbow",
 					"entries": [
-						"{@atk rw} {@hit 5} to hit, range 30/120 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 3 ({@damage 1d6}) poison damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract bluerot (see the \"Bluerot\" in notes)."
+						"{@atk rw} {@hit 5} to hit, range 30/120 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 3 ({@damage 1d6}) poison damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract {@disease bluerot|GoS} (see the \"Bluerot\" in notes)."
 					]
 				},
 				{
 					"name": "Dagger",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage plus 9 ({@damage 2d8}) poison damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract bluerot (see the \"Bluerot\" in notes)."
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) piercing damage plus 9 ({@damage 2d8}) poison damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract {@disease bluerot|GoS} (see the \"Bluerot\" in notes)."
 					]
 				},
 				{
@@ -623,6 +640,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Undead Fortitude"
 			],
@@ -729,10 +747,11 @@
 				{
 					"name": "Rusted Longsword",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract bluerot (see the \"Bluerot\" in notes)."
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract {@disease bluerot|GoS} (see the \"Bluerot\" in notes)."
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Undead Fortitude"
 			],
@@ -840,7 +859,7 @@
 				{
 					"name": "Greatsword",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) slashing damage plus 14 ({@damage 4d6}) cold damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract bluerot (see the \"Bluerot\" in notes)."
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d6 + 3}) slashing damage plus 14 ({@damage 4d6}) cold damage, and the target must succeed on a {@dc 12} Constitution saving throw or contract {@disease bluerot|GoS} (see the \"Bluerot\" in notes)."
 					]
 				},
 				{
@@ -856,6 +875,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Undead Fortitude"
 			],
@@ -904,6 +924,7 @@
 				}
 			},
 			"action": null,
+			"hasToken": true,
 			"damageTags": [],
 			"miscTags": []
 		},
@@ -949,6 +970,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -1021,6 +1043,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Water Breathing"
 			],
@@ -1071,6 +1094,7 @@
 				"perception": "+2",
 				"stealth": "+4"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Water Breathing"
 			],
@@ -1129,7 +1153,7 @@
 				{
 					"name": "Luring Maestro",
 					"entries": [
-						"While within 60 feet of the matriarch, creatures have disadvantage on saving throws against the matriarch's"
+						"While within 60 feet of the matriarch, creatures have disadvantage on saving throws against the matriarch's Luring Song."
 					]
 				},
 				{
@@ -1173,6 +1197,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -1251,7 +1276,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -1336,6 +1362,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1449,6 +1476,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1564,6 +1592,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1630,6 +1659,7 @@
 				"Common",
 				"Orc"
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1726,6 +1756,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1838,6 +1869,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Immutable Form"
 			],
@@ -1923,6 +1955,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Hold Breath"
 			],
@@ -2030,6 +2063,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Hold Breath"
 			],
@@ -2140,6 +2174,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Hold Breath"
 			],
@@ -2274,6 +2309,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Hold Breath"
 			],
@@ -2291,6 +2327,11 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"conditionInflictSpell": [
+				"deafened",
+				"paralyzed",
+				"prone"
 			]
 		},
 		{
@@ -2375,6 +2416,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -2475,6 +2517,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -2520,7 +2563,8 @@
 			"alignment": [
 				"L",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Maw of Sekolah",
@@ -2626,6 +2670,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Water Breathing"
@@ -2722,6 +2767,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -2767,6 +2813,7 @@
 				"C",
 				"E"
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Keen Senses"
@@ -2869,6 +2916,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Immutable Form"
 			],
@@ -2922,7 +2970,7 @@
 			"wis": 14,
 			"cha": 10,
 			"save": {
-				"str": "+9",
+				"str": "+8",
 				"dex": "+6",
 				"wis": "+6"
 			},
@@ -3003,6 +3051,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Flyby",
 				"Keen Senses",
@@ -3142,6 +3191,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -3252,6 +3302,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -3376,6 +3427,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -3473,12 +3525,13 @@
 			],
 			"reaction": [
 				{
-					"name": "Shape Up, Ye Dog (2/day)",
+					"name": "Shape Up, Ye Dog (2/Day)",
 					"entries": [
 						"Whenever a friendly creature within 30 feet of the captain that can hear it misses with an attack, the captain can yell perilous threats to allow that creature to reroll the attack roll."
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3592,6 +3645,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -3672,6 +3726,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3782,6 +3837,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"AQ",
 				"C"
@@ -3904,6 +3960,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -4015,6 +4072,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -4134,6 +4192,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Siege Monster"
 			],
@@ -4277,6 +4336,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -4388,6 +4448,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Water Breathing"
 			],
@@ -4553,6 +4614,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -4683,7 +4745,7 @@
 					]
 				},
 				{
-					"name": "Whirlpool (1/day)",
+					"name": "Whirlpool (1/Day)",
 					"entries": [
 						"The wave shaper targets a body of water at least 50 feet square and 25 feet deep, causing a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, 25 feet tall, and lasts for 1 minute or until the wave shaper is {@condition incapacitated}. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by succeeding on a {@dc 14} Strength (Athletics) check.",
 						"When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a {@dc 14} Strength saving throw. On a failed save, the creature takes 9 ({@damage 2d8}) bludgeoning damage and is caught in the vortex until it ends. On a success, the creature takes half damage and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but it has disadvantage on the Strength (Athletics) check to do so.",
@@ -4691,6 +4753,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -4795,6 +4858,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -4863,6 +4927,90 @@
 			]
 		},
 		{
+			"name": "Sea Lion",
+			"source": "GoS",
+			"page": 252,
+			"size": "L",
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 15,
+				"formula": "2d10 + 4"
+			},
+			"speed": {
+				"walk": 15,
+				"swim": 30
+			},
+			"str": 17,
+			"dex": 10,
+			"con": 14,
+			"int": 5,
+			"wis": 10,
+			"cha": 12,
+			"save": {
+				"dex": "+2",
+				"con": "+4"
+			},
+			"skill": {
+				"athletics": "+5",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"The sea lion can hold its breath for 15 minutes."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The sea lion makes three attacks: one with its bite and two with its claws."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) slashing damage, and the target is pushed up to 5 feet away from the sea lion."
+					]
+				}
+			],
+			"hasToken": true,
+			"traitTags": [
+				"Hold Breath"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
 			"name": "Shell Shark",
 			"source": "GoS",
 			"page": 252,
@@ -4928,10 +5076,17 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The shark makes two bite attacks. Bite. Melee Weapon Attack: {@hit 4} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d10 + 2}) piercing damage."
+						"The shark makes two bite attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d10 + 2}) piercing damage."
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Water Breathing"
@@ -4944,6 +5099,9 @@
 			],
 			"damageTags": [
 				"P"
+			],
+			"miscTags": [
+				"MW"
 			]
 		},
 		{
@@ -5021,6 +5179,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -5128,6 +5287,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -5233,6 +5393,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -5337,6 +5498,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -5459,6 +5621,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Hold Breath",
 				"Legendary Resistances"
@@ -5585,6 +5748,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Immutable Form",
 				"Legendary Resistances"

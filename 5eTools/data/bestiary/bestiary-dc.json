@@ -55,7 +55,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -125,6 +126,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement",
 				"Legendary Resistances"

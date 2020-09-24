@@ -161,8 +161,10 @@
 				"name": "Sapphire Dragon",
 				"source": "SADS"
 			},
+			"hasToken": true,
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Spider Climb"
 			],
 			"senseTags": [
 				"B",
@@ -194,6 +196,12 @@
 			"conditionInflict": [
 				"frightened",
 				"incapacitated"
+			],
+			"conditionInflictLegendary": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
+				"restrained"
 			]
 		}
 	]

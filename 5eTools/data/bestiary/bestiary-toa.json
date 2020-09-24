@@ -77,7 +77,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -263,6 +264,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Rejuvenation",
@@ -296,6 +298,11 @@
 			"conditionInflict": [
 				"frightened",
 				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"paralyzed",
+				"poisoned"
 			]
 		},
 		{
@@ -384,6 +391,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -471,6 +479,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -553,6 +562,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -632,6 +642,7 @@
 				}
 			],
 			"familiar": true,
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -702,6 +713,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Undead Fortitude"
 			],
@@ -834,6 +846,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -942,7 +955,7 @@
 				{
 					"name": "Dive Attack",
 					"entries": [
-						"If the aarakocra is flying and dives at least 30 ft. straight toward a target and then hits it with a melee weapon attack, the attack deals an extra 3 ({@dice 1d6}) damage to the target."
+						"If the aarakocra is flying and dives at least 30 feet straight toward a target and then hits it with a melee weapon attack, the attack deals an extra 3 ({@dice 1d6}) damage to the target."
 					]
 				},
 				{
@@ -974,6 +987,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"AU",
 				"C"
@@ -1067,6 +1081,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -1140,7 +1155,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"vulnerable": [
@@ -1222,6 +1238,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Turn Resistance"
@@ -1264,7 +1281,8 @@
 			"alignment": [
 				"N",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Bag of Nails",
@@ -1379,6 +1397,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sneak Attack"
 			],
@@ -1402,9 +1421,6 @@
 				"MW",
 				"RNG",
 				"RW"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			]
 		},
 		{
@@ -1414,7 +1430,14 @@
 			"page": 164,
 			"_copy": {
 				"name": "Zombie",
-				"source": "MM"
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "zombie",
+						"with": "artist"
+					}
+				}
 			},
 			"senses": [
 				"blindsight 30 ft. (blind beyond this radius)"
@@ -1423,6 +1446,9 @@
 				"blinded",
 				"poisoned"
 			],
+			"cr": "0",
+			"action": null,
+			"hasToken": true,
 			"senseTags": [
 				"B"
 			]
@@ -1453,10 +1479,17 @@
 					}
 				}
 			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
 			"alignment": [
 				"N",
 				"E"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Chwinga",
@@ -1528,7 +1561,7 @@
 				{
 					"name": "Magical Gift (1/Day)",
 					"entries": [
-						"The chwinga targets a humanoid it can see within 5 feet of it. The target gains a supernatural charm of the DM's choice. See chapter 7 of the Dungeon Masters Guide for more information on supernatural charms."
+						"The chwinga targets a humanoid it can see within 5 feet of it. The target gains a {@filter supernatural charm|rewards|type=charm} of the DM's choice. See {@book chapter 7|DMG|7|Other Rewards} of the Dungeon Masters Guide for more information on supernatural charms."
 					]
 				},
 				{
@@ -1538,6 +1571,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -1644,6 +1678,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Brute"
 			],
@@ -1660,39 +1695,6 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
-		},
-		{
-			"name": "Clay No-Face",
-			"isNpc": true,
-			"source": "ToA",
-			"page": 179,
-			"size": "T",
-			"type": "construct",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				10
-			],
-			"hp": {
-				"special": "1"
-			},
-			"speed": {
-				"walk": 10
-			},
-			"str": 10,
-			"dex": 10,
-			"con": 10,
-			"int": 10,
-			"wis": 10,
-			"cha": 10,
-			"passive": 10,
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"poisoned"
 			]
 		},
 		{
@@ -1780,6 +1782,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -1819,7 +1822,8 @@
 			"alignment": [
 				"N",
 				"E"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Eblis",
@@ -1887,6 +1891,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -1930,7 +1935,8 @@
 			"alignment": [
 				"L",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Eku",
@@ -1948,7 +1954,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Elok Jaharwon",
@@ -1970,7 +1977,8 @@
 			"alignment": [
 				"N",
 				"E"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Faroul",
@@ -1998,7 +2006,8 @@
 			"alignment": [
 				"N",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Fenthaza",
@@ -2016,7 +2025,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Flask of Wine",
@@ -2034,7 +2044,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Flying Monkey",
@@ -2088,6 +2099,7 @@
 				}
 			],
 			"familiar": true,
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -2147,7 +2159,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with adamantine weapons"
+					"note": "from nonmagical attacks not made with adamantine weapons",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2190,6 +2203,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -2272,6 +2286,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -2362,6 +2377,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Aggressive",
 				"Undead Fortitude"
@@ -2409,6 +2425,7 @@
 				"average": 13,
 				"formula": "3d6 + 3"
 			},
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"H",
@@ -2431,7 +2448,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Grandfather Zitembe",
@@ -2459,7 +2477,8 @@
 			"alignment": [
 				"L",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Hew Hackinstone",
@@ -2534,6 +2553,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Reckless"
 			],
@@ -2577,7 +2597,8 @@
 			"alignment": [
 				"N",
 				"E"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Jaculi",
@@ -2648,6 +2669,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -2686,7 +2708,8 @@
 			},
 			"alignment": [
 				"N"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Jobal",
@@ -2714,40 +2737,8 @@
 			"alignment": [
 				"N",
 				"E"
-			]
-		},
-		{
-			"name": "Joho",
-			"isNpc": true,
-			"source": "ToA",
-			"page": 179,
-			"size": "T",
-			"type": "construct",
-			"alignment": [
-				"N"
 			],
-			"ac": [
-				10
-			],
-			"hp": {
-				"special": "1"
-			},
-			"speed": {
-				"walk": 10
-			},
-			"str": 10,
-			"dex": 10,
-			"con": 10,
-			"int": 10,
-			"wis": 10,
-			"cha": 10,
-			"passive": 10,
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"poisoned"
-			]
+			"hasToken": true
 		},
 		{
 			"name": "Kamadan",
@@ -2831,6 +2822,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses",
 				"Pounce"
@@ -2940,6 +2932,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -2956,10 +2949,6 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			],
-			"conditionInflict": [
-				"grappled",
-				"restrained"
 			]
 		},
 		{
@@ -2978,7 +2967,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Kwayothé",
@@ -3006,7 +2996,8 @@
 			"alignment": [
 				"N",
 				"E"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Laskilar",
@@ -3043,7 +3034,8 @@
 			"alignment": [
 				"N",
 				"E"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Liara Portyr",
@@ -3139,6 +3131,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3185,7 +3178,7 @@
 			"cha": 2,
 			"skill": {
 				"perception": "+4",
-				"stealth": "+7"
+				"stealth": "+6"
 			},
 			"senses": [
 				"tremorsense 30 ft."
@@ -3220,6 +3213,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -3253,7 +3247,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Musharib",
@@ -3275,7 +3270,8 @@
 			"alignment": [
 				"L",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Mwaxanaré",
@@ -3356,6 +3352,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"AU",
 				"C",
@@ -3409,6 +3406,7 @@
 				"Common"
 			],
 			"cr": "0",
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			]
@@ -3429,7 +3427,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Nepartak",
@@ -3452,6 +3451,7 @@
 				"Common",
 				"telepathy 30 ft."
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"TP"
@@ -3483,7 +3483,8 @@
 			"alignment": [
 				"L",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Ortimay Swift and Dark",
@@ -3510,6 +3511,7 @@
 				"C",
 				"G"
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3548,6 +3550,7 @@
 				"Common",
 				"Grung"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"OTH"
@@ -3628,6 +3631,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3673,7 +3677,8 @@
 			"alignment": [
 				"N",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Ras Nsi",
@@ -3865,6 +3870,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Shapechanger"
@@ -3897,6 +3903,12 @@
 			"conditionInflict": [
 				"grappled",
 				"restrained"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"paralyzed"
 			]
 		},
 		{
@@ -3915,7 +3927,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Salida",
@@ -3943,7 +3956,8 @@
 				"perception": "+3",
 				"stealth": "+3",
 				"survival": "+5"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Sekelok",
@@ -4015,6 +4029,7 @@
 					"ability": "cha"
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -4061,7 +4076,8 @@
 				"athletics": "+10",
 				"intimidation": "+5",
 				"survival": "+7"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Skeleton Key",
@@ -4103,11 +4119,15 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Spider Climb"
 			],
 			"actionTags": [
 				"Multiattack"
+			],
+			"miscTags": [
+				"MW"
 			]
 		},
 		{
@@ -4148,7 +4168,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -4222,6 +4243,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Damage Absorption",
 				"Immutable Form",
@@ -4269,7 +4291,7 @@
 			"speed": {
 				"walk": {
 					"number": 50,
-					"condition": " (in one direction chosen at the start of its turn)"
+					"condition": "(in one direction chosen at the start of its turn)"
 				}
 			},
 			"str": 16,
@@ -4290,7 +4312,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with adamantine weapons"
+					"note": "from nonmagical attacks not made with adamantine weapons",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -4339,6 +4362,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Immutable Form",
 				"Regeneration",
@@ -4355,39 +4379,6 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
-		},
-		{
-			"name": "Strawbundle",
-			"isNpc": true,
-			"source": "ToA",
-			"page": 179,
-			"size": "T",
-			"type": "construct",
-			"alignment": [
-				"N"
-			],
-			"ac": [
-				10
-			],
-			"hp": {
-				"special": "1"
-			},
-			"speed": {
-				"walk": 10
-			},
-			"str": 10,
-			"dex": 10,
-			"con": 10,
-			"int": 10,
-			"wis": 10,
-			"cha": 10,
-			"passive": 10,
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"poisoned"
 			]
 		},
 		{
@@ -4449,6 +4440,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -4496,6 +4488,7 @@
 				"Elvish",
 				"Halfling"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -4588,6 +4581,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -4688,6 +4682,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -4754,6 +4749,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"damageTags": [
 				"P"
 			]
@@ -4805,7 +4801,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -4853,6 +4850,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -4914,7 +4912,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -4981,6 +4980,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Damage Absorption",
 				"Immutable Form",
@@ -5065,6 +5065,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -5159,6 +5160,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Undead Fortitude"
 			],
@@ -5220,7 +5222,7 @@
 				"wis": "+9"
 			},
 			"skill": {
-				"arcana": "+18",
+				"arcana": "+19",
 				"history": "+12",
 				"insight": "+9",
 				"perception": "+9"
@@ -5242,7 +5244,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -5413,6 +5416,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Rejuvenation",
@@ -5439,6 +5443,11 @@
 			"conditionInflict": [
 				"frightened",
 				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"stunned"
 			]
 		},
 		{
@@ -5536,6 +5545,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -5579,11 +5589,11 @@
 			"alignment": [
 				"L",
 				"N"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Wild Dog",
-			"isNpc": true,
 			"source": "ToA",
 			"page": 96,
 			"_copy": {
@@ -5596,7 +5606,8 @@
 						"with": "dog"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Wine Weird",
@@ -5613,7 +5624,8 @@
 						"with": "wine weird"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Withers",
@@ -5663,7 +5675,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -5768,6 +5781,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -5919,6 +5933,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -6001,6 +6016,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"False Appearance",
 				"Regeneration"
@@ -6068,6 +6084,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Undead Fortitude"
 			],
@@ -6100,7 +6117,8 @@
 				"_preserve": {
 					"variant": true
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Yuan-ti Priest",
@@ -6136,6 +6154,7 @@
 					"ability": "cha"
 				}
 			],
+			"hasToken": true,
 			"miscTags": [
 				"MW"
 			]
@@ -6156,7 +6175,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Zaroum Al-Saryak",
@@ -6184,7 +6204,8 @@
 			"alignment": [
 				"L",
 				"E"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Zebra",
@@ -6193,7 +6214,8 @@
 			"_copy": {
 				"name": "Riding Horse",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Zhanthi",
@@ -6221,7 +6243,8 @@
 			"alignment": [
 				"N",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Zindar",
@@ -6388,6 +6411,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"B",
 				"D"
@@ -6468,6 +6492,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],

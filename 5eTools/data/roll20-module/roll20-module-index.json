@@ -21,6 +21,13 @@
 			"version": "1.0",
 			"dateLastModified": 1567862109
 		},
+		{
+			"id": "EGW",
+			"name": "Explorer's Guide to Wildemount",
+			"size": 14806900,
+			"version": "1.0",
+			"dateLastModified": 1585160628
+		},
         {
 			"id": "ERLW",
 			"name": "Eberron: Rising from the Last War",
@@ -48,6 +55,27 @@
 			"size": 3474873,
 			"version": "1.5",
 			"dateLastModified": 1543605262
+		},
+		{
+			"id": "IDRotF",
+			"name": "Icewind Dale: Rime of the Frostmaiden",
+			"size": 23813901,
+			"version": "1.0",
+			"dateLastModified": 1600193295
+		},
+		{
+			"id": "MOT",
+			"name": "Mythic Odysseys of Theros",
+			"size": 12978753,
+			"version": "1.0",
+			"dateLastModified": 1591307071
+		},
+		{
+			"id": "OotA",
+			"name": "Out of the Abyss",
+			"size": 20717393,
+			"version": "1.0",
+			"dateLastModified": 1589562120
 		},
 		{
 			"id": "OotW",

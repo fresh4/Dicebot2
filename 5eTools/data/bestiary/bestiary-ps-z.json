@@ -52,7 +52,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -129,6 +130,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -291,6 +293,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons",
@@ -300,7 +303,8 @@
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"Multiattack",
+				"Teleport"
 			],
 			"languageTags": [
 				"CE",
@@ -315,9 +319,6 @@
 			],
 			"miscTags": [
 				"MW"
-			],
-			"conditionInflict": [
-				"prone"
 			]
 		},
 		{
@@ -420,7 +421,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/304/kraken.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/kraken.mp3"
+			},
 			"traitTags": [
 				"Amphibious"
 			],
@@ -445,10 +450,6 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			],
-			"conditionInflict": [
-				"grappled",
-				"restrained"
 			]
 		}
 	]

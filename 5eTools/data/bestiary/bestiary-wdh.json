@@ -122,6 +122,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -268,6 +269,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"DR",
@@ -301,7 +303,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Avi",
@@ -353,6 +356,7 @@
 				"Common",
 				"Primordial"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"P"
@@ -364,7 +368,6 @@
 		},
 		{
 			"name": "Awakened Rat",
-			"isNpc": true,
 			"source": "WDH",
 			"page": 102,
 			"size": "T",
@@ -412,7 +415,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/405/rat.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/rat.mp3"
+			},
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -550,6 +557,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -623,6 +631,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"H"
@@ -730,6 +739,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sneak Attack"
 			],
@@ -747,9 +757,6 @@
 				"MW",
 				"RNG",
 				"RW"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			]
 		},
 		{
@@ -775,7 +782,8 @@
 			"speed": {
 				"walk": 20
 			},
-			"cr": "4"
+			"cr": "4",
+			"hasToken": true
 		},
 		{
 			"name": "Bonnie",
@@ -797,7 +805,8 @@
 			"speed": {
 				"walk": 20
 			},
-			"cr": "4"
+			"cr": "4",
+			"hasToken": true
 		},
 		{
 			"name": "Davil Starsong",
@@ -937,6 +946,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -957,6 +967,11 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"unconscious"
 			]
 		},
 		{
@@ -982,6 +997,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"damageTags": [
 				"P"
 			]
@@ -1081,7 +1097,9 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
+				"False Appearance",
 				"Shapechanger"
 			],
 			"senseTags": [
@@ -1215,6 +1233,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
@@ -1331,6 +1350,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -1382,6 +1402,7 @@
 				"Common"
 			],
 			"cr": "Unknown",
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			]
@@ -1435,6 +1456,7 @@
 					"ability": "con"
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1464,7 +1486,8 @@
 			"alignment": [
 				"N",
 				"E"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Engineer",
@@ -1555,6 +1578,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1677,6 +1701,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -1696,6 +1721,9 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"restrained"
 			]
 		},
 		{
@@ -1713,7 +1741,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Fel'rekt Lafeen",
@@ -1735,7 +1764,8 @@
 			"alignment": [
 				"N",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Floon Blagmaar",
@@ -1755,7 +1785,8 @@
 			"alignment": [
 				"N",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Flying Staff",
@@ -1836,6 +1867,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Antimagic Susceptibility",
 				"False Appearance"
@@ -1915,6 +1947,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -1960,6 +1993,7 @@
 				"Halfling",
 				"Undercommon"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -2054,6 +2088,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2102,7 +2137,8 @@
 				"medicine": "+4",
 				"religion": "+2",
 				"insight": "+4"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Hlam",
@@ -2296,6 +2332,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -2317,6 +2354,9 @@
 			"conditionInflict": [
 				"prone",
 				"stunned"
+			],
+			"conditionInflictSpell": [
+				"deafened"
 			]
 		},
 		{
@@ -2403,6 +2443,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2571,6 +2612,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2589,6 +2631,11 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"deafened",
+				"incapacitated",
+				"paralyzed"
 			]
 		},
 		{
@@ -2685,6 +2732,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -2819,6 +2867,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2838,6 +2887,10 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed",
+				"prone"
 			]
 		},
 		{
@@ -2861,7 +2914,7 @@
 				{
 					"ac": 24,
 					"from": [
-						"{@item leather armor +3||+3 leather armor}",
+						"{@item +3 leather armor}",
 						"Suave Defense"
 					]
 				}
@@ -2927,7 +2980,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Jarlaxle wears {@item leather armor +3||+3 leather armor}, a {@item hat of disguise}, a {@item bracer of flying daggers|wdh}, a {@item cloak of invisibility}, a {@item knave's eye patch|wdh}, and a {@item ring of truth telling|wdh}. He wields a {@item rapier +3||+3 rapier} and carries a {@item portable hole} and a {@item wand of web}. His hat is adorned with a {@item feather of diatryma summoning|wdh}."
+						"Jarlaxle wears {@item +3 leather armor}, a {@item hat of disguise}, a {@item bracer of flying daggers|wdh}, a {@item cloak of invisibility}, a {@item knave's eye patch|wdh}, and a {@item ring of truth telling|wdh}. He wields a {@item +3 rapier} and carries a {@item portable hole} and a {@item wand of web}. His hat is adorned with a {@item feather of diatryma summoning|wdh}."
 					]
 				},
 				{
@@ -3007,6 +3060,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Legendary Resistances",
@@ -3037,9 +3091,6 @@
 				"MW",
 				"RW",
 				"THW"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			]
 		},
 		{
@@ -3073,7 +3124,8 @@
 			"wis": 10,
 			"cha": 10,
 			"passive": 10,
-			"cr": "Unknown"
+			"cr": "Unknown",
+			"hasToken": true
 		},
 		{
 			"name": "Kaevja Cynavern",
@@ -3203,6 +3255,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -3343,6 +3396,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -3363,6 +3417,11 @@
 				"MW",
 				"RNG",
 				"RW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"unconscious"
 			]
 		},
 		{
@@ -3385,7 +3444,8 @@
 			"alignment": [
 				"C",
 				"N"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Lady Gondafrey",
@@ -3431,7 +3491,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -3474,6 +3535,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -3709,6 +3771,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -3740,6 +3803,15 @@
 			],
 			"conditionInflict": [
 				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"incapacitated",
+				"invisible",
+				"petrified",
+				"restrained",
+				"stunned"
 			]
 		},
 		{
@@ -3861,6 +3933,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3880,6 +3953,10 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed",
+				"prone"
 			]
 		},
 		{
@@ -4014,6 +4091,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"H"
@@ -4098,6 +4176,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -4250,6 +4329,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"H"
@@ -4262,6 +4342,9 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"invisible"
 			]
 		},
 		{
@@ -4444,6 +4527,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -4502,16 +4586,16 @@
 			"wis": 15,
 			"cha": 16,
 			"save": {
-				"str": "+2",
-				"dex": "+4",
-				"con": "+3",
-				"int": "+13",
-				"wis": "+9",
-				"cha": "+5"
+				"str": "+3",
+				"dex": "+5",
+				"con": "+4",
+				"int": "+12",
+				"wis": "+8",
+				"cha": "+6"
 			},
 			"skill": {
-				"arcana": "+11",
-				"history": "+11"
+				"arcana": "+12",
+				"history": "+12"
 			},
 			"senses": [
 				"darkvision 60 ft."
@@ -4530,7 +4614,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Manshoon is an 18th-level spellcaster. His spellcasting ability is Intelligence. He has the following wizard spells prepared:"
+						"Manshoon is an 18th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 21}, {@hit 15} to hit with spell attacks). He has the following wizard spells prepared:"
 					],
 					"spells": {
 						"0": {
@@ -4595,6 +4679,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -4642,7 +4727,8 @@
 			"alignment": [
 				"L",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Maxeene",
@@ -4683,6 +4769,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -4695,7 +4782,6 @@
 		},
 		{
 			"name": "Mechanical Bird",
-			"isNpc": true,
 			"source": "WDH",
 			"page": 46,
 			"size": "T",
@@ -4734,6 +4820,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"damageTags": [
 				"P"
 			],
@@ -4842,6 +4929,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -4860,6 +4948,9 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"restrained"
 			]
 		},
 		{
@@ -4951,6 +5042,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -5024,7 +5116,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Mirt wears {@item bracers of defense} and a {@item ring of regeneration}. He wields a {@item longsword +1||+1 longsword} and a {@item dagger +1||+1 dagger}."
+						"Mirt wears {@item bracers of defense} and a {@item ring of regeneration}. He wields a {@item +1 longsword} and a {@item +1 dagger}."
 					]
 				},
 				{
@@ -5074,6 +5166,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Brute",
 				"Sneak Attack"
@@ -5092,9 +5185,6 @@
 			],
 			"miscTags": [
 				"MW"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			]
 		},
 		{
@@ -5256,6 +5346,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
@@ -5280,6 +5371,10 @@
 			],
 			"conditionInflict": [
 				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"restrained"
 			]
 		},
 		{
@@ -5313,7 +5408,8 @@
 			"wis": 10,
 			"cha": 10,
 			"passive": 10,
-			"cr": "Unknown"
+			"cr": "Unknown",
+			"hasToken": true
 		},
 		{
 			"name": "Nihiloor",
@@ -5331,7 +5427,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Nimblewright",
@@ -5381,7 +5478,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -5448,6 +5546,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons"
@@ -5561,6 +5660,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -5610,7 +5710,8 @@
 			"alignment": [
 				"N",
 				"G"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Obliteros",
@@ -5678,6 +5779,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Water Breathing"
 			],
@@ -5760,6 +5862,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Parry"
 			],
@@ -5789,7 +5892,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Ott Steeltoes",
@@ -5866,6 +5970,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -5965,6 +6070,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"D"
@@ -6138,6 +6244,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -6159,6 +6266,15 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"petrified",
+				"restrained",
+				"stunned",
+				"unconscious"
 			]
 		},
 		{
@@ -6245,6 +6361,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -6383,6 +6500,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -6476,6 +6594,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -6513,6 +6632,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"languageTags": [
 				"H",
 				"X"
@@ -6525,7 +6645,8 @@
 			"_copy": {
 				"name": "Guard",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Shard Shunner",
@@ -6574,7 +6695,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "damage from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -6635,12 +6757,16 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses",
 				"Shapechanger"
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Multiattack"
 			],
 			"languageTags": [
 				"C",
@@ -6786,6 +6912,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -6932,6 +7059,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
@@ -6990,7 +7118,8 @@
 			"wis": 10,
 			"cha": 10,
 			"passive": 10,
-			"cr": "Unknown"
+			"cr": "Unknown",
+			"hasToken": true
 		},
 		{
 			"name": "Swarm of Books",
@@ -7057,6 +7186,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -7166,6 +7296,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Spider Climb",
 				"Web Sense",
@@ -7229,6 +7360,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Water Breathing"
 			],
@@ -7299,6 +7431,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -7406,6 +7539,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -7457,6 +7591,7 @@
 				"Common"
 			],
 			"cr": "Unknown",
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			]
@@ -7521,6 +7656,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -7603,6 +7739,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Reckless"
 			],
@@ -7738,6 +7875,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -7757,6 +7895,10 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed",
+				"prone"
 			]
 		},
 		{
@@ -7859,6 +8001,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sneak Attack"
 			],
@@ -7878,9 +8021,6 @@
 				"MW",
 				"RNG",
 				"RW"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			]
 		},
 		{
@@ -8046,7 +8186,7 @@
 				{
 					"name": "Staff Spells",
 					"entries": [
-						"While holding the blackstaff, Vajra can use an action to expend 1 or more of its charges to cast one of the following spells from it, using her spell save DC and spell attack bonus: cone of cold (5 charges), fireball (5th-level version, 5 charges), globe of invulnerability (6 charges), hold monster (5 charges), levitate (2 charges), lightning bolt (5th-level version, 5 charges), magic missile (1 charge), Ray of Enfeeblement (1 charge), or wall of force (5 charges)."
+						"While holding the blackstaff, Vajra can use an action to expend 1 or more of its charges to cast one of the following spells from it, using her spell save DC and spell attack bonus: {@spell cone of cold} (5 charges), {@spell fireball} (5th-level version, 5 charges), {@spell globe of invulnerability} (6 charges), {@spell hold monster} (5 charges), {@spell levitate} (2 charges), {@spell lightning bolt} (5th-level version, 5 charges), {@spell magic missile} (1 charge), {@spell ray of enfeeblement} (1 charge), or {@spell wall of force} (5 charges)."
 					]
 				}
 			],
@@ -8058,6 +8198,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -8118,7 +8259,7 @@
 			"skill": {
 				"medicine": "+7",
 				"persuasion": "+3",
-				"religion": "+4"
+				"religion": "+5"
 			},
 			"passive": 13,
 			"resist": [
@@ -8191,6 +8332,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"DR"
@@ -8402,10 +8544,11 @@
 				{
 					"name": "Summon Devil (Recharges after 9 Days)",
 					"entries": [
-						"Victoro summons a barbed devil. The devil appears in an unoccupied space within 30 feet of Victoro, acts as Victoro's ally, and can't summon other devils. It remains for 1 minute, until it or Victoro dies, or until Victoro dismisses it as an action."
+						"Victoro summons a {@creature barbed devil}. The devil appears in an unoccupied space within 30 feet of Victoro, acts as Victoro's ally, and can't summon other devils. It remains for 1 minute, until it or Victoro dies, or until Victoro dismisses it as an action."
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -8432,6 +8575,14 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"incapacitated",
+				"prone",
+				"stunned"
 			]
 		},
 		{
@@ -8450,7 +8601,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Walking Statue of Waterdeep",
@@ -8500,7 +8652,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with adamantine weapons"
+					"note": "from nonmagical attacks not made with adamantine weapons",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -8559,6 +8712,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Immutable Form",
 				"Magic Resistance",
@@ -8594,7 +8748,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Xanathar",
@@ -8621,7 +8776,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Yagra Stonefist",
@@ -8711,6 +8867,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -8776,7 +8933,7 @@
 			"cha": 16,
 			"skill": {
 				"deception": "+5",
-				"insight": "+4",
+				"insight": "+5",
 				"persuasion": "+5"
 			},
 			"passive": 13,
@@ -8801,6 +8958,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Parry"
 			],
@@ -8898,6 +9056,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -9022,6 +9181,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -9063,7 +9223,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"{@item leather armor +2||+2 leather armor}"
+						"{@item +2 leather armor}"
 					]
 				}
 			],
@@ -9158,6 +9318,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -9182,6 +9343,10 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"prone"
 			]
 		}
 	]

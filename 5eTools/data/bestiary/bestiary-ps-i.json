@@ -48,7 +48,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -99,6 +100,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -347,6 +349,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement"
 			],
@@ -493,7 +496,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -597,6 +601,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Damage Absorption",
 				"Immutable Form",
@@ -670,7 +675,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with living wood weapons"
+					"note": "from nonmagical attacks not made with living wood weapons",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -761,6 +767,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Regeneration"
 			],
@@ -818,7 +825,7 @@
 			"speed": {
 				"walk": {
 					"number": 30,
-					"condition": " (40 ft. in canid form)"
+					"condition": "(40 ft. in canid form)"
 				}
 			},
 			"str": 15,
@@ -839,7 +846,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with silvered weapons"
+					"note": "from nonmagical attacks not made with silvered weapons",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -915,9 +923,13 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses",
 				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
 			],
 			"languageTags": [
 				"C",

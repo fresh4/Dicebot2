@@ -45,12 +45,29 @@
 			"damageInflict": [
 				"force"
 			],
+			"conditionInflict": [
+				"deafened"
+			],
 			"savingThrow": [
 				"constitution"
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Fortune's Favor",
@@ -106,7 +123,31 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"source": "EGW"
+						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Gift of Alacrity",
@@ -144,7 +185,21 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Gravity Fissure",
@@ -159,9 +214,10 @@
 				}
 			],
 			"range": {
-				"type": "point",
+				"type": "line",
 				"distance": {
-					"type": "self"
+					"type": "feet",
+					"amount": 100
 				}
 			},
 			"components": {
@@ -195,7 +251,21 @@
 			],
 			"areaTags": [
 				"L"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Gravity Sinkhole",
@@ -249,7 +319,21 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Immovable Object",
@@ -300,12 +384,26 @@
 					]
 				}
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Magnify Gravity",
@@ -363,7 +461,21 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Pulse Wave",
@@ -378,9 +490,10 @@
 				}
 			],
 			"range": {
-				"type": "point",
+				"type": "cone",
 				"distance": {
-					"type": "self"
+					"type": "feet",
+					"amount": 30
 				}
 			},
 			"components": {
@@ -413,7 +526,31 @@
 			],
 			"areaTags": [
 				"N"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"source": "EGW"
+						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Ravenous Void",
@@ -457,10 +594,13 @@
 			"damageInflict": [
 				"force"
 			],
+			"conditionInflict": [
+				"restrained"
+			],
 			"savingThrow": [
 				"strength"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"miscTags": [
@@ -468,7 +608,21 @@
 			],
 			"areaTags": [
 				"S"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Reality Break",
@@ -552,9 +706,26 @@
 				"wisdom",
 				"dexterity"
 			],
+			"miscTags": [
+				"SGT"
+			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Sapping Sting",
@@ -600,6 +771,9 @@
 			"damageInflict": [
 				"necrotic"
 			],
+			"conditionInflict": [
+				"prone"
+			],
 			"savingThrow": [
 				"constitution"
 			],
@@ -609,7 +783,31 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"source": "EGW"
+						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Temporal Shunt",
@@ -661,7 +859,21 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Tether Essence",
@@ -713,7 +925,31 @@
 			],
 			"areaTags": [
 				"MT"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"source": "EGW"
+						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Time Ravage",
@@ -749,7 +985,7 @@
 				}
 			],
 			"entries": [
-				"You target a creature you can see within range, putting its physical form through the devastation of rapid aging. The target must make a Constitution saving throw, taking {@damage 10d12} necrotic damage on a failed save, or half as much damage on a successful one. If the save fails, the target also ages to the point where it has only 30 days left before it dies of old age. In this aged state, the target has disadvantage on attack rolls, ability checks, and saving throws, and its walking speed is halved. Only the wish spell or the greater restoration cast with a 9th-level spell slot can end these effects and restore the target to its previous age."
+				"You target a creature you can see within range, putting its physical form through the devastation of rapid aging. The target must make a Constitution saving throw, taking {@damage 10d12} necrotic damage on a failed save, or half as much damage on a successful one. If the save fails, the target also ages to the point where it has only 30 days left before it dies of old age. In this aged state, the target has disadvantage on attack rolls, ability checks, and saving throws, and its walking speed is halved. Only the wish spell or the {@spell greater restoration} cast with a 9th-level spell slot can end these effects and restore the target to its previous age."
 			],
 			"damageInflict": [
 				"necrotic"
@@ -762,7 +998,21 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		},
 		{
 			"name": "Wristpocket",
@@ -804,7 +1054,31 @@
 			],
 			"areaTags": [
 				"ST"
-			]
+			],
+			"classes": {
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Chronurgy",
+							"source": "EGW"
+						}
+					},
+					{
+						"class": {
+							"name": "Wizard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Graviturgy",
+							"source": "EGW"
+						}
+					}
+				]
+			}
 		}
 	]
 }

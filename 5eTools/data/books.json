@@ -4,7 +4,7 @@
 			"name": "Player's Handbook",
 			"id": "PHB",
 			"source": "PHB",
-			"image": "assets/misc/covers/book-phb.png",
+			"coverUrl": "img/covers/PHB.png",
 			"published": "2014-08-19",
 			"author": "Wizards RPG Team",
 			"contents": [
@@ -153,6 +153,13 @@
 					}
 				},
 				{
+					"name": "Spells",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 11
+					}
+				},
+				{
 					"name": "Conditions",
 					"ordinal": {
 						"type": "appendix",
@@ -183,7 +190,7 @@
 			"name": "Monster Manual",
 			"id": "MM",
 			"source": "MM",
-			"image": "assets/misc/covers/book-mm.png",
+			"coverUrl": "img/covers/MM.png",
 			"published": "2014-09-30",
 			"author": "Wizards RPG Team",
 			"contents": [
@@ -220,7 +227,7 @@
 			"name": "Dungeon Master's Guide",
 			"id": "DMG",
 			"source": "DMG",
-			"image": "assets/misc/covers/book-dmg.png",
+			"coverUrl": "img/covers/DMG.png",
 			"published": "2014-12-09",
 			"author": "Wizards RPG Team",
 			"contents": [
@@ -312,7 +319,7 @@
 						"Wilderness",
 						"Mapping a Wilderness",
 						"Wilderness Survival",
-						"Settlements",
+						"Settlement",
 						"Mapping a Settlement",
 						"Urban Encounters",
 						"Unusual Environments",
@@ -432,6 +439,7 @@
 			"name": "Dungeon Master's Screen",
 			"id": "Screen",
 			"source": "Screen",
+			"coverUrl": "img/covers/Screen.png",
 			"published": "2015-01-20",
 			"contents": [
 				{
@@ -443,7 +451,7 @@
 			"name": "Sword Coast Adventurer's Guide",
 			"id": "SCAG",
 			"source": "SCAG",
-			"image": "assets/misc/covers/book-scag.png",
+			"coverUrl": "img/covers/SCAG.png",
 			"published": "2015-11-03",
 			"author": "Wizards RPG Team",
 			"contents": [
@@ -550,6 +558,7 @@
 			"name": "Adventurers League",
 			"id": "AL",
 			"source": "AL",
+			"coverUrl": "img/covers/AL.png",
 			"published": "2016-08-26",
 			"contents": [
 				{
@@ -573,7 +582,7 @@
 			"name": "Volo's Guide to Monsters",
 			"id": "VGM",
 			"source": "VGM",
-			"image": "assets/misc/covers/book-vgm.png",
+			"coverUrl": "img/covers/VGM.png",
 			"published": "2016-11-15",
 			"author": "Wizards RPG Team",
 			"contents": [
@@ -604,6 +613,27 @@
 					"headers": [
 						"Height and Weight"
 					]
+				},
+				{
+					"name": "Bestiary",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 3
+					}
+				},
+				{
+					"name": "Assorted Beasts",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Nonplayer Characters",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
 				}
 			]
 		},
@@ -611,7 +641,7 @@
 			"name": "Xanathar's Guide to Everything",
 			"id": "XGE",
 			"source": "XGE",
-			"image": "assets/misc/covers/book-xge.png",
+			"coverUrl": "img/covers/XGE.png",
 			"published": "2017-11-21",
 			"author": "Wizards RPG Team",
 			"contents": [
@@ -687,7 +717,7 @@
 			"name": "Mordenkainen's Tome of Foes",
 			"id": "MTF",
 			"source": "MTF",
-			"image": "assets/misc/covers/book-mtf.png",
+			"coverUrl": "img/covers/MTF.png",
 			"published": "2018-05-29",
 			"author": "Wizards RPG Team",
 			"contents": [
@@ -773,6 +803,13 @@
 						"type": "chapter",
 						"identifier": 5
 					}
+				},
+				{
+					"name": "Bestiary",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 6
+					}
 				}
 			]
 		},
@@ -780,6 +817,7 @@
 			"name": "Guildmasters' Guide to Ravnica",
 			"id": "GGR",
 			"source": "GGR",
+			"coverUrl": "img/covers/GGR.png",
 			"published": "2018-11-20",
 			"contents": [
 				{
@@ -906,6 +944,7 @@
 			"name": "Sage Advice Compendium",
 			"id": "SAC",
 			"source": "SAC",
+			"coverUrl": "img/covers/SAC.png",
 			"published": "2019-01-31",
 			"contents": [
 				{
@@ -935,6 +974,7 @@
 			"name": "Acquisitions Incorporated",
 			"id": "AI",
 			"source": "AI",
+			"coverUrl": "img/covers/AI.png",
 			"published": "2019-06-18",
 			"contents": [
 				{
@@ -1062,6 +1102,7 @@
 			"name": "Eberron: Rising from the Last War",
 			"id": "ERLW",
 			"source": "ERLW",
+			"coverUrl": "img/covers/ERLW.png",
 			"published": "2019-11-19",
 			"contents": [
 				{
@@ -1308,7 +1349,8 @@
 				{
 					"name": "Friends and Foes",
 					"headers": [
-						"Daelkyr"
+						"Daelkyr",
+						"Living Spells"
 					]
 				}
 			]
@@ -1317,6 +1359,7 @@
 			"name": "Dungeons & Dragons vs. Rick and Morty: Basic Rules",
 			"id": "RMR",
 			"source": "RMR",
+			"coverUrl": "img/covers/RMR.png",
 			"published": "2019-11-19",
 			"contents": [
 				{
@@ -1435,6 +1478,7 @@
 			"name": "Explorer's Guide to Wildemount",
 			"id": "EGW",
 			"source": "EGW",
+			"coverUrl": "img/covers/EGW.png",
 			"published": "2020-03-17",
 			"contents": [
 				{
@@ -1588,387 +1632,6 @@
 					]
 				},
 				{
-					"name": "Tide of Retribution",
-					"headers": [
-						"Story Overview",
-						"Adventure Summary",
-						"Setup and Starting Points",
-						"That Sinking Feeling",
-						{
-							"depth": 1,
-							"header": "P1. South Shore"
-						},
-						{
-							"depth": 1,
-							"header": "P2. West Shore"
-						},
-						{
-							"depth": 1,
-							"header": "P3. North Shore"
-						},
-						{
-							"depth": 1,
-							"header": "P4. East Shore"
-						},
-						{
-							"depth": 1,
-							"header": "P5. Bridge"
-						},
-						{
-							"depth": 1,
-							"header": "P6. Cliffs."
-						},
-						{
-							"depth": 1,
-							"header": "P7. Farmer's Cottage"
-						},
-						{
-							"depth": 1,
-							"header": "P8. Docks"
-						},
-						{
-							"depth": 1,
-							"header": "P9. Tavern"
-						},
-						{
-							"depth": 1,
-							"header": "P10. Public Square"
-						},
-						"Seafarers",
-						"Hunger of the Deep",
-						"Ambush at Palma Flora",
-						"Concluding the Adventure",
-						"Character Advancement"
-					]
-				},
-				{
-					"name": "Dangerous Designs",
-					"headers": [
-						"Story Overview",
-						"A Boom in the Night",
-						{
-							"depth": 1,
-							"header": "H1. Ironlot Streets"
-						},
-						{
-							"depth": 1,
-							"header": "H2. Gearhole Prison"
-						},
-						{
-							"depth": 1,
-							"header": "H3. The Builder's Plot"
-						},
-						{
-							"depth": 1,
-							"header": "H4. Lay of the Land Herbalist"
-						},
-						{
-							"depth": 1,
-							"header": "H5. Firemark Facility"
-						},
-						{
-							"depth": 1,
-							"header": "H6. Nima Cinnarid's House"
-						},
-						{
-							"depth": 1,
-							"header": "H10. Ironside Barracks"
-						},
-						"Ascending the Mountain",
-						"Stahlmast's Lair",
-						{
-							"depth": 1,
-							"header": "L1. Turret Cavern"
-						},
-						{
-							"depth": 1,
-							"header": "L2. Armory"
-						},
-						{
-							"depth": 1,
-							"header": "L3. Volatile Materials Storage"
-						},
-						{
-							"depth": 1,
-							"header": "L4. Recreation Room"
-						},
-						{
-							"depth": 1,
-							"header": "L5. Stahlmast's Workroom"
-						},
-						{
-							"depth": 1,
-							"header": "L6. Kitchen"
-						},
-						{
-							"depth": 1,
-							"header": "L7. Prison Cells"
-						},
-						"Stahlmast's Lair (areas L8-L14)",
-						{
-							"depth": 1,
-							"header": "L8. Shark Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "L9. Training Room"
-						},
-						{
-							"depth": 1,
-							"header": "L10. Ambassador's Bedroom"
-						},
-						{
-							"depth": 1,
-							"header": "L11. Kobold Barracks"
-						},
-						{
-							"depth": 1,
-							"header": "L12. Steam Trap"
-						},
-						{
-							"depth": 1,
-							"header": "L13. Blacksmith's Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "L14. Smithy"
-						},
-						"Stahlmast's Lair (areas L15-L20)",
-						{
-							"depth": 1,
-							"header": "L15. Storage Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "L16. Infirmary"
-						},
-						{
-							"depth": 1,
-							"header": "L17. Surgery"
-						},
-						{
-							"depth": 1,
-							"header": "L18. Stahlmast's Bedroom"
-						},
-						{
-							"depth": 1,
-							"header": "L19. Clockwork Forge"
-						},
-						{
-							"depth": 1,
-							"header": "L20. Passage to the Underdark"
-						},
-						"Concluding the Adventure",
-						"Character Advancement"
-					]
-				},
-				{
-					"name": "Frozen Sick",
-					"headers": [
-						"Story Overview",
-						"Mystery in Palebank Village",
-						"Croaker Cave",
-						{
-							"depth": 1,
-							"header": "C1. Entrance Pool"
-						},
-						{
-							"depth": 1,
-							"header": "C2. Training Pool"
-						},
-						{
-							"depth": 1,
-							"header": "C3. Bat Cavern"
-						},
-						{
-							"depth": 1,
-							"header": "C4. Bandit Camp"
-						},
-						{
-							"depth": 1,
-							"header": "C5. Old Croaker's Pool"
-						},
-						{
-							"depth": 1,
-							"header": "C6. Hulil's Cavern"
-						},
-						"Jolly Dwarf",
-						"Traveling to Eiselcross",
-						"Syrinlya",
-						"Into the Wilds",
-						"Salsvault",
-						{
-							"depth": 1,
-							"header": "S1. Entrance Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "S2. Ransacked Frigid Woe Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S3. Animated Armor Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S4. Frigid Woe Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S5. Disease Storage"
-						},
-						{
-							"depth": 1,
-							"header": "S6. North Hall"
-						},
-						"Salsvault (areas S7-S12)",
-						{
-							"depth": 1,
-							"header": "S7. Unoccupied Dorm"
-						},
-						{
-							"depth": 1,
-							"header": "S8. Ruined Dorm"
-						},
-						{
-							"depth": 1,
-							"header": "S9. Zombie Dorm"
-						},
-						{
-							"depth": 1,
-							"header": "S10. Ferol Sal's Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "S11. Kitchen"
-						},
-						{
-							"depth": 1,
-							"header": "S12. Dining Hall"
-						},
-						"Salsvault (areas S13-S18)",
-						{
-							"depth": 1,
-							"header": "S13. Drowned Library"
-						},
-						{
-							"depth": 1,
-							"header": "S14. South Hall"
-						},
-						{
-							"depth": 1,
-							"header": "S15. Animated Weapon Storage"
-						},
-						{
-							"depth": 1,
-							"header": "S16. Golem Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S17. Ferol's Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S18. Drowned Curative Laboratory"
-						},
-						"Concluding the Adventure"
-					]
-				},
-				{
-					"name": "Unwelcome Spirits",
-					"headers": [
-						"Story Overview",
-						"Adventure Summary",
-						"Setup and Starting Points",
-						"Mission in Urzin",
-						"Exploring Brokenveil Marsh",
-						{
-							"depth": 1,
-							"header": "B1. Urzin's March"
-						},
-						{
-							"depth": 1,
-							"header": "B2. Withered Grove"
-						},
-						{
-							"depth": 1,
-							"header": "B3. Sunken Boneyard"
-						},
-						{
-							"depth": 1,
-							"header": "B4. Crumbling Tower"
-						},
-						{
-							"depth": 1,
-							"header": "B5. Bullywug Cave"
-						},
-						{
-							"depth": 1,
-							"header": "B6. Ritual Stone"
-						},
-						{
-							"depth": 1,
-							"header": "B7. Brokenveil Bluffs"
-						},
-						{
-							"depth": 1,
-							"header": "B8. The Mossback Steward"
-						},
-						{
-							"depth": 1,
-							"header": "B9. Fort Venture"
-						},
-						"Infiltrating Fort Venture",
-						{
-							"depth": 1,
-							"header": "V1. Palisade"
-						},
-						{
-							"depth": 1,
-							"header": "V2. Tent Yard"
-						},
-						{
-							"depth": 1,
-							"header": "V3. Commander's Quarters"
-						},
-						{
-							"depth": 1,
-							"header": "V4. Training Yard"
-						},
-						{
-							"depth": 1,
-							"header": "V5. Main Hall"
-						},
-						"Infiltrating Fort Venture (V6-V11)",
-						{
-							"depth": 1,
-							"header": "V6. Chapel"
-						},
-						{
-							"depth": 1,
-							"header": "V7. Armory Tent"
-						},
-						{
-							"depth": 1,
-							"header": "V8. Jail"
-						},
-						{
-							"depth": 1,
-							"header": "V9. Storehouse"
-						},
-						{
-							"depth": 1,
-							"header": "V10. Kennels"
-						},
-						{
-							"depth": 1,
-							"header": "V11. Latrines"
-						},
-						"Return to Urzin",
-						"Concluding the Adventure"
-					]
-				},
-				{
 					"name": "Wildemount Treasures",
 					"headers": [
 						"Magic Items of Wildemount",
@@ -1985,6 +1648,167 @@
 				},
 				{
 					"name": "Maps"
+				}
+			]
+		},
+		{
+			"name": "Mythic Odysseys of Theros",
+			"id": "MOT",
+			"source": "MOT",
+			"coverUrl": "img/covers/MOT.png",
+			"published": "2020-06-02",
+			"contents": [
+				{
+					"name": "Welcome to Theros",
+					"headers": [
+						"Dreams of Divinity",
+						"History and Myth",
+						"Languages"
+					]
+				},
+				{
+					"name": "Character Creation",
+					"headers": [
+						"Heroic Drive",
+						"Supernatural Gifts",
+						"Races",
+						"Subclass Options",
+						"Background"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 1
+					}
+				},
+				{
+					"name": "Gods of Theros",
+					"headers": [
+						"Divine Characteristics",
+						"Worship",
+						"Clerics and Champions",
+						"Piety",
+						"The Gods"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 2
+					}
+				},
+				{
+					"name": "Realms of Gods and Mortals",
+					"headers": [
+						"The Mortal Realm",
+						"Akros",
+						"Meletis",
+						"Setessa",
+						"Oreskos",
+						"Phoberos and Skophos",
+						"Realms of the Returned",
+						"The Siren Sea",
+						"Skola Vale",
+						"The Katachthon Mountains",
+						"The Oraniad Mountains",
+						"Realms of the Gods"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 3
+					}
+				},
+				{
+					"name": "Creating Theros Adventures",
+					"headers": [
+						"God-Based Adventures",
+						"Divine Assistance",
+						"Athreos",
+						"Ephara",
+						"Erebos",
+						"Heliod",
+						"Iroas",
+						"Karametra",
+						"Keranos",
+						"Klothys",
+						"Kruphix",
+						"Mogis",
+						"Nylea",
+						"Pharika",
+						"Phenax",
+						"Purphoros",
+						"Thassa",
+						"Nautical Adventures",
+						"Underworld Adventures",
+						"No Silent Secret",
+						"Story Overview",
+						"Running the Adventure",
+						"Starting the Adventure",
+						"What the Dead See",
+						"Into the Wilds",
+						"The Court of Orestes",
+						{
+							"depth": 1,
+							"header": "1. Khystonos Riverbank"
+						},
+						{
+							"depth": 1,
+							"header": "2. Antechamber"
+						},
+						{
+							"depth": 1,
+							"header": "3. Viewing Room"
+						},
+						{
+							"depth": 1,
+							"header": "4. Flooded Catacomb"
+						},
+						{
+							"depth": 1,
+							"header": "5. Crypts of the Deathless"
+						},
+						{
+							"depth": 1,
+							"header": "6. Shrine of Phenax"
+						},
+						{
+							"depth": 1,
+							"header": "7. Tomb of Orestes"
+						},
+						{
+							"depth": 1,
+							"header": "8. Cave and Tunnel"
+						},
+						"Deciphering the Mask",
+						"Myths to Be Told"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 4
+					}
+				},
+				{
+					"name": "Treasures",
+					"headers": [
+						"Magic Items",
+						"Magic Item Descriptions",
+						"Artifacts",
+						"Artifact Descriptions"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 5
+					}
+				},
+				{
+					"name": "Friends and Foes",
+					"headers": [
+						"Nyxborn Creatures",
+						"Classic Monsters",
+						"Bestiary",
+						"Mythic Monsters"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 6
+					}
 				}
 			]
 		}

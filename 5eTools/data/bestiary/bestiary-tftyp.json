@@ -39,6 +39,7 @@
 				}
 			},
 			"cr": "3",
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			]
@@ -120,6 +121,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Antimagic Susceptibility",
 				"Charge",
@@ -155,6 +157,7 @@
 				"C",
 				"E"
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
@@ -179,7 +182,8 @@
 			"_copy": {
 				"name": "Orc",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Belak the Outcast",
@@ -269,6 +273,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"DU",
 				"X"
@@ -303,6 +308,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"damageTags": [
 				"P",
 				"S"
@@ -334,6 +340,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"damageTags": [
 				"P",
 				"S"
@@ -416,6 +423,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"B",
 				"D"
@@ -477,7 +485,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -533,6 +542,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Charge"
 			],
@@ -584,7 +594,8 @@
 					]
 				}
 			],
-			"immune": null
+			"immune": null,
+			"hasToken": true
 		},
 		{
 			"name": "Cloud Giant Noble",
@@ -601,7 +612,8 @@
 						"{@item chain mail|phb}"
 					]
 				}
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Curran Corvalin",
@@ -616,6 +628,7 @@
 					"source": "PHB"
 				}
 			},
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"H",
@@ -652,6 +665,11 @@
 					}
 				}
 			},
+			"hp": {
+				"average": 30,
+				"formula": "8d10 + 40"
+			},
+			"hasToken": true,
 			"actionTags": []
 		},
 		{
@@ -736,6 +754,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Undead Fortitude"
 			],
@@ -779,6 +798,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"languageTags": [
 				"H",
 				"X"
@@ -837,7 +857,8 @@
 			"hp": {
 				"average": 110,
 				"formula": "11d8 + 22"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Duergar Spy",
@@ -954,6 +975,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sneak Attack",
 				"Sunlight Sensitivity"
@@ -975,9 +997,6 @@
 				"MW",
 				"RNG",
 				"RW"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			]
 		},
 		{
@@ -1031,7 +1050,7 @@
 				{
 					"name": "Martial Advantage",
 					"entries": [
-						"Once per turn, the hobgoblin can deal an extra 7 ({@dice 2d6}) damage to a creature it hits with a weapon attack if that creature is within 5 ft. of an ally of the hobgoblin that isn't {@condition incapacitated}."
+						"Once per turn, the hobgoblin can deal an extra 7 ({@dice 2d6}) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't {@condition incapacitated}."
 					]
 				}
 			],
@@ -1049,6 +1068,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1074,6 +1094,10 @@
 			"_copy": {
 				"name": "Druid",
 				"source": "MM",
+				"_trait": {
+					"name": "Wood Elf",
+					"source": "PHB"
+				},
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
@@ -1082,7 +1106,11 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true,
+			"traitTags": [
+				"Fey Ancestry"
+			]
 		},
 		{
 			"name": "Elder Black Pudding",
@@ -1096,7 +1124,8 @@
 			"hp": {
 				"average": 130,
 				"formula": "10d12 + 30"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Elder Giant Lizard",
@@ -1121,6 +1150,7 @@
 			"senses": [
 				"darkvision 60 ft."
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			]
@@ -1212,6 +1242,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1265,6 +1296,7 @@
 			],
 			"spellcasting": null,
 			"trait": null,
+			"hasToken": true,
 			"traitTags": [],
 			"spellcastingTags": []
 		},
@@ -1299,7 +1331,8 @@
 						}
 					]
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Fire Giant Servant",
@@ -1335,7 +1368,8 @@
 			},
 			"immune": [
 				"fire"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Flying Shield",
@@ -1354,6 +1388,7 @@
 				}
 			},
 			"action": null,
+			"hasToken": true,
 			"miscTags": []
 		},
 		{
@@ -1399,7 +1434,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -1442,6 +1478,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -1472,7 +1509,8 @@
 			},
 			"immune": [
 				"cold"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Gargantuan Rug of Smothering",
@@ -1486,7 +1524,8 @@
 			"hp": {
 				"average": 63,
 				"formula": "6d20"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Giant Crayfish",
@@ -1549,6 +1588,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1644,6 +1684,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1732,6 +1773,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Water Breathing"
 			],
@@ -1846,6 +1888,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Turn Immunity"
@@ -1931,6 +1974,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack",
 				"Swallow"
@@ -1975,6 +2019,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1992,6 +2037,10 @@
 			"_copy": {
 				"name": "Priest",
 				"source": "MM",
+				"_trait": {
+					"name": "Mountain Dwarf",
+					"source": "PHB"
+				},
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
@@ -2000,7 +2049,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Great Ulfe",
@@ -2029,6 +2079,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"damageTags": [
 				"P",
 				"S"
@@ -2129,6 +2180,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Turn Resistance",
 				"Undead Fortitude"
@@ -2247,6 +2299,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2282,7 +2335,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Guthash",
@@ -2323,6 +2377,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2349,7 +2404,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Hill Giant Sergeant",
@@ -2370,7 +2426,8 @@
 			"hp": {
 				"average": 115,
 				"formula": "10d12 + 40"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Hill Giant Servant",
@@ -2386,7 +2443,8 @@
 						"with": "giant"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Hill Giant Subchief",
@@ -2396,7 +2454,8 @@
 				"name": "Stone Giant",
 				"source": "MM"
 			},
-			"trait": null
+			"trait": null,
+			"hasToken": true
 		},
 		{
 			"name": "Huge Giant Crab",
@@ -2435,7 +2494,7 @@
 			"wis": 9,
 			"cha": 3,
 			"skill": {
-				"stealth": "+4"
+				"stealth": "+5"
 			},
 			"senses": [
 				"blindsight 30 ft."
@@ -2469,6 +2528,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -2498,7 +2558,8 @@
 			"hp": {
 				"average": 51,
 				"formula": "6d12 + 12"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Huge Polar Bear",
@@ -2512,7 +2573,8 @@
 			"hp": {
 				"average": 65,
 				"formula": "5d12 + 15"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Irisoth",
@@ -2527,6 +2589,7 @@
 					"source": "PHB"
 				}
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -2597,6 +2660,7 @@
 			],
 			"spellcasting": null,
 			"trait": null,
+			"hasToken": true,
 			"traitTags": [],
 			"damageTags": [
 				"B",
@@ -2620,7 +2684,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Kaarghaz",
@@ -2716,7 +2781,7 @@
 				{
 					"name": "Stench",
 					"entries": [
-						"Any creature other than a troglodyte that starts its turn within 5 ft. of the troglodyte must succeed on a {@dc 12} Constitution saving throw or be {@condition poisoned} until the start of the creature's next turn. On a successful saving throw, the creature is immune to the stench of all troglodytes for 1 hour."
+						"Any creature other than a troglodyte that starts its turn within 5 feet of the troglodyte must succeed on a {@dc 12} Constitution saving throw or be {@condition poisoned} until the start of the creature's next turn. On a successful saving throw, the creature is immune to the stench of all troglodytes for 1 hour."
 					]
 				},
 				{
@@ -2746,6 +2811,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -2768,6 +2834,10 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"unconscious"
 			]
 		},
 		{
@@ -2849,6 +2919,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"False Appearance"
@@ -2921,6 +2992,7 @@
 				}
 			],
 			"trait": null,
+			"hasToken": true,
 			"damageTags": [
 				"B",
 				"S"
@@ -3023,6 +3095,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"False Appearance"
@@ -3063,6 +3136,7 @@
 					"source": "PHB"
 				}
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -3089,7 +3163,8 @@
 				"tags": [
 					"human"
 				]
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "King Snurre",
@@ -3130,6 +3205,7 @@
 				"Giant"
 			],
 			"cr": "11",
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"GI"
@@ -3164,6 +3240,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics",
 				"Sunlight Sensitivity"
@@ -3188,12 +3265,18 @@
 			"hp": {
 				"average": 7,
 				"formula": "2d6 - 2"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Lacedon",
 			"source": "TftYP",
 			"page": 147,
+			"otherSources": [
+				{
+					"source": "EGW"
+				}
+			],
 			"_copy": {
 				"name": "Ghoul",
 				"source": "MM",
@@ -3209,7 +3292,8 @@
 			"speed": {
 				"walk": 30,
 				"swim": 30
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Lahnis",
@@ -3227,7 +3311,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Lesser Mummy Lord",
@@ -3238,6 +3323,7 @@
 				"source": "MM"
 			},
 			"spellcasting": null,
+			"hasToken": true,
 			"spellcastingTags": []
 		},
 		{
@@ -3256,7 +3342,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Malformed Kraken",
@@ -3308,7 +3395,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -3369,6 +3457,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Siege Monster"
@@ -3416,7 +3505,14 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Nahual",
@@ -3501,10 +3597,11 @@
 				{
 					"name": "Read Thoughts",
 					"entries": [
-						"The doppelganger magically reads the surface thoughts of one creature within 60 ft. of it. The effect can penetrate barriers, but 3 ft. of wood or dirt, 2 ft. of stone, 2 inches of metal, or a thin sheet of lead blocks it. While the target is in range, the doppelganger can continue reading its thoughts, as long as the doppelganger's concentration isn't broken (as if concentrating on a spell). While reading the target's mind, the doppelganger has advantage on Wisdom ({@skill Insight}) and Charisma ({@skill Deception}, {@skill Intimidation}, and {@skill Persuasion}) checks against the target."
+						"The doppelganger magically reads the surface thoughts of one creature within 60 feet of it. The effect can penetrate barriers, but 3 feet of wood or dirt, 2 feet of stone, 2 inches of metal, or a thin sheet of lead blocks it. While the target is in range, the doppelganger can continue reading its thoughts, as long as the doppelganger's concentration isn't broken (as if concentrating on a spell). While reading the target's mind, the doppelganger has advantage on Wisdom ({@skill Insight}) and Charisma ({@skill Deception}, {@skill Intimidation}, and {@skill Persuasion}) checks against the target."
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Ambusher",
 				"Shapechanger"
@@ -3560,7 +3657,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Nereid",
@@ -3630,7 +3728,7 @@
 				{
 					"name": "Shape Water",
 					"entries": [
-						"The nereid can cast control water at will, requiring no components. Its spellcasting ability for it is Charisma. This use of the spell has a range of 30 feet and can affect a cube of water no larger than 30 feet on a side."
+						"The nereid can cast {@spell control water} at will, requiring no components. Its spellcasting ability for it is Charisma. This use of the spell has a range of 30 feet and can affect a cube of water no larger than 30 feet on a side."
 					]
 				},
 				{
@@ -3660,6 +3758,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -3689,17 +3788,35 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 54,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"dwarf"
-				]
+			"_copy": {
+				"name": "Duergar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the duergar",
+						"with": "Nimira",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"name": "Multiattack",
+								"entries": [
+									"Multiattack. Nimira makes two greatsword attacks."
+								]
+							},
+							{
+								"name": "Greatsword",
+								"entries": [
+									"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) slashing damage, or 16 ({@damage 4d6 + 2}) slashing damage while enlarged."
+								]
+							}
+						]
+					}
+				}
 			},
-			"alignment": [
-				"L",
-				"E"
-			],
 			"ac": [
 				{
 					"ac": 17,
@@ -3712,100 +3829,10 @@
 				"average": 52,
 				"formula": "8d8 + 16"
 			},
-			"speed": {
-				"walk": 25
-			},
-			"str": 14,
-			"dex": 11,
-			"con": 14,
-			"int": 11,
-			"wis": 10,
-			"cha": 9,
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 10,
-			"resist": [
-				"poison"
-			],
-			"languages": [
-				"Dwarvish",
-				"Undercommon"
-			],
 			"cr": "3",
-			"trait": [
-				{
-					"name": "Duergar Resilience",
-					"entries": [
-						"The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being {@condition charmed} or {@condition paralyzed}."
-					]
-				},
-				{
-					"name": "Sunlight Sensitivity",
-					"entries": [
-						"While in sunlight, the duergar has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Enlarge (Recharges after a Short or Long Rest)",
-					"entries": [
-						"For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available."
-					]
-				},
-				{
-					"name": "Multiattack",
-					"entries": [
-						"Multiattack. Nimira makes two greatsword attacks."
-					]
-				},
-				{
-					"name": "Greatsword",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d6 + 2}) slashing damage, or 16 ({@damage 4d6 + 2}) slashing damage while enlarged."
-					]
-				},
-				{
-					"name": "War Pick",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage, or 11 ({@damage 2d8 + 2}) piercing damage while enlarged."
-					]
-				},
-				{
-					"name": "Javelin",
-					"entries": [
-						"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage, or 9 ({@damage 2d6 + 2}) piercing damage while enlarged."
-					]
-				},
-				{
-					"name": "Invisibility (Recharges after a Short or Long Rest)",
-					"entries": [
-						"The duergar magically turns {@condition invisible} until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is {@condition invisible} with it."
-					]
-				}
-			],
-			"traitTags": [
-				"Sunlight Sensitivity"
-			],
-			"senseTags": [
-				"SD"
-			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
-			],
-			"languageTags": [
-				"D",
-				"U"
-			],
-			"damageTags": [
-				"P",
-				"S"
-			],
-			"miscTags": [
-				"MW",
-				"RW",
-				"THW"
 			]
 		},
 		{
@@ -3816,6 +3843,10 @@
 			"_copy": {
 				"name": "Assassin",
 				"source": "MM",
+				"_trait": {
+					"name": "Mountain Dwarf",
+					"source": "PHB"
+				},
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
@@ -3836,7 +3867,8 @@
 				}
 			},
 			"str": 16,
-			"cha": 16
+			"cha": 16,
+			"hasToken": true
 		},
 		{
 			"name": "Ogre Skeleton",
@@ -3850,6 +3882,7 @@
 					"source": "DMG"
 				}
 			},
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"CS",
@@ -3910,7 +3943,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -4028,6 +4062,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Spider Climb"
 			],
@@ -4049,6 +4084,12 @@
 			"miscTags": [
 				"MW",
 				"RCH"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened",
+				"poisoned",
+				"restrained"
 			]
 		},
 		{
@@ -4063,6 +4104,7 @@
 					"source": "DMG"
 				}
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Aggressive"
 			],
@@ -4091,7 +4133,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Phaia",
@@ -4109,7 +4152,14 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Aboleth",
@@ -4122,7 +4172,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Basilisk",
@@ -4135,7 +4186,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Behir",
@@ -4158,6 +4210,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -4177,7 +4230,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Black Pudding",
@@ -4190,7 +4244,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Carrion Crawler",
@@ -4203,7 +4258,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Clay Golem",
@@ -4216,7 +4272,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Darkmantle",
@@ -4229,7 +4286,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Displacer Beast",
@@ -4242,7 +4300,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Dragon Turtle",
@@ -4276,6 +4335,7 @@
 					]
 				}
 			},
+			"hasToken": true,
 			"damageTags": [
 				"F",
 				"P",
@@ -4294,6 +4354,7 @@
 					"source": "TftYP"
 				}
 			},
+			"hasToken": true,
 			"damageTags": [
 				"I",
 				"P",
@@ -4311,7 +4372,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Glabrezu",
@@ -4324,7 +4386,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Gray Ooze",
@@ -4338,6 +4401,7 @@
 					"source": "TftYP"
 				}
 			},
+			"hasToken": true,
 			"damageTags": [
 				"A",
 				"B"
@@ -4354,7 +4418,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Hezrou",
@@ -4367,7 +4432,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Hook Horror",
@@ -4380,7 +4446,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Ochre Jelly",
@@ -4393,7 +4460,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Otyugh",
@@ -4426,7 +4494,11 @@
 						}
 					]
 				}
-			}
+			},
+			"hasToken": true,
+			"conditionInflict": [
+				"poisoned"
+			]
 		},
 		{
 			"name": "Reduced-Threat Owlbear",
@@ -4439,7 +4511,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Peryton",
@@ -4452,7 +4525,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Remorhaz",
@@ -4465,7 +4539,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Stone Golem",
@@ -4478,7 +4553,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Vrock",
@@ -4491,7 +4567,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Wight",
@@ -4504,7 +4581,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Reduced-Threat Wyvern",
@@ -4517,7 +4595,8 @@
 					"name": "Reduced Threat",
 					"source": "TftYP"
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Scrag",
@@ -4530,16 +4609,14 @@
 			"speed": {
 				"walk": 30,
 				"swim": 30
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Sea Lion",
 			"source": "TftYP",
 			"page": 242,
 			"otherSources": [
-				{
-					"source": "GoS"
-				},
 				{
 					"source": "LR"
 				}
@@ -4623,12 +4700,7 @@
 					]
 				}
 			],
-			"altArt": [
-				{
-					"name": "Sea Lion (Alt)",
-					"source": "GoS"
-				}
-			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Keen Senses",
@@ -4662,6 +4734,7 @@
 			"languages": [
 				"Common"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -4688,6 +4761,7 @@
 			"languages": [
 				"Common"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			]
@@ -4699,8 +4773,16 @@
 			"page": 119,
 			"_copy": {
 				"name": "Knight",
-				"source": "MM"
-			}
+				"source": "MM",
+				"_trait": {
+					"name": "High Elf",
+					"source": "PHB"
+				}
+			},
+			"hasToken": true,
+			"traitTags": [
+				"Fey Ancestry"
+			]
 		},
 		{
 			"name": "Sharwyn Hucrele",
@@ -4806,6 +4888,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"DR",
@@ -4904,6 +4987,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -4919,6 +5003,11 @@
 			"isNpc": true,
 			"source": "TftYP",
 			"page": 243,
+			"otherSources": [
+				{
+					"source": "MOT"
+				}
+			],
 			"size": "M",
 			"type": "fey",
 			"alignment": [
@@ -5003,6 +5092,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Magic Resistance"
@@ -5027,6 +5117,10 @@
 			],
 			"conditionInflict": [
 				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible"
 			]
 		},
 		{
@@ -5067,7 +5161,7 @@
 			"speed": {
 				"walk": {
 					"number": 30,
-					"condition": " (40 ft. in wolf form)"
+					"condition": "(40 ft. in wolf form)"
 				}
 			},
 			"str": 15,
@@ -5077,7 +5171,7 @@
 			"wis": 11,
 			"cha": 10,
 			"skill": {
-				"perception": "+4"
+				"perception": "+3"
 			},
 			"passive": 14,
 			"immune": [
@@ -5087,7 +5181,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -5177,9 +5272,13 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses",
 				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
 			],
 			"languageTags": [
 				"C",
@@ -5213,7 +5312,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Snurrevin",
@@ -5339,6 +5439,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -5359,6 +5460,10 @@
 				"MW",
 				"RW",
 				"THW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"paralyzed"
 			]
 		},
 		{
@@ -5381,10 +5486,11 @@
 				{
 					"name": "Steam Breath",
 					"entries": [
-						"The statue exhales steam in a line that is 30 ft. long and 10 ft. wide. Each creature in that area must make a {@dc 15} Constitution saving throw, taking 7 ({@damage 2d4 + 2}) fire damage on a failed save, or half as much damage on a successful one."
+						"The statue exhales steam in a line that is 30 feet long and 10 feet wide. Each creature in that area must make a {@dc 15} Constitution saving throw, taking 7 ({@damage 2d4 + 2}) fire damage on a failed save, or half as much damage on a successful one."
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [],
 			"damageTags": [
 				"F"
@@ -5449,7 +5555,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -5597,6 +5704,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Rejuvenation",
@@ -5621,6 +5729,9 @@
 			"conditionInflict": [
 				"frightened",
 				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"restrained"
 			]
 		},
 		{
@@ -5669,7 +5780,8 @@
 					"resist": [
 						"bludgeoning"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -5726,6 +5838,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Spider Climb"
@@ -5848,6 +5961,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"OTH"
@@ -5947,6 +6061,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -5980,6 +6095,7 @@
 					"source": "PHB"
 				}
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
@@ -6054,6 +6170,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -6110,7 +6227,7 @@
 			},
 			"skill": {
 				"perception": "+3",
-				"stealth": "+7"
+				"stealth": "+6"
 			},
 			"senses": [
 				"darkvision 60 ft."
@@ -6124,7 +6241,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -6207,6 +6325,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Regeneration",
 				"Shapechanger",
@@ -6229,6 +6348,9 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
 			]
 		},
 		{
@@ -6247,7 +6369,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Werejaguar",
@@ -6264,7 +6387,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "White Maw",
@@ -6353,6 +6477,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amorphous",
 				"False Appearance"
@@ -6389,7 +6514,8 @@
 					}
 				}
 			},
-			"int": 2
+			"int": 2,
+			"hasToken": true
 		},
 		{
 			"name": "Yeti Leader",
@@ -6422,7 +6548,8 @@
 						}
 					]
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Young Fire Giant",
@@ -6442,7 +6569,8 @@
 			},
 			"immune": [
 				"fire"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Young Frost Giant",
@@ -6462,7 +6590,8 @@
 			},
 			"immune": [
 				"cold"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Young Hill Giant",
@@ -6479,7 +6608,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Young Ogre Servant",
@@ -6496,7 +6626,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Young Troglodyte",
@@ -6513,7 +6644,14 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"troglodyte"
+				]
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Young Winter Wolf",
@@ -6522,7 +6660,8 @@
 			"_copy": {
 				"name": "Dire Wolf",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Yusdrayl",
@@ -6612,7 +6751,7 @@
 				{
 					"name": "Pack Tactics",
 					"entries": [
-						"Yusdrayl has advantage on an attack roll against a creature if at least one of her allies is within 5 ft. of the creature and the ally isn't {@condition incapacitated}."
+						"Yusdrayl has advantage on an attack roll against a creature if at least one of her allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
 					]
 				}
 			],
@@ -6624,6 +6763,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics",
 				"Sunlight Sensitivity"

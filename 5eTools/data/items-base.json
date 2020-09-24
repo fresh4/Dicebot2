@@ -5,10 +5,10 @@
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 10,
-			"weaponCategory": "Martial",
-			"age": "Futuristic",
+			"weaponCategory": "martial",
+			"age": "futuristic",
 			"property": [
 				"AF",
 				"RLD",
@@ -19,7 +19,8 @@
 			"dmg1": "6d8",
 			"dmgType": "N",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "energy cell"
 		},
 		{
 			"name": "Arrow",
@@ -27,7 +28,7 @@
 			"page": 150,
 			"srd": true,
 			"type": "A",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 0.05,
 			"value": 5
 		},
@@ -37,20 +38,25 @@
 			"page": 150,
 			"srd": true,
 			"type": "A",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 1,
 			"value": 100,
-			"quantity": 20
+			"packContents": [
+				{
+					"item": "arrow|phb",
+					"quantity": 20
+				}
+			]
 		},
 		{
 			"name": "Automatic Pistol",
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
-			"weaponCategory": "Martial",
-			"age": "Modern",
+			"weaponCategory": "martial",
+			"age": "modern",
 			"property": [
 				"AF",
 				"RLD"
@@ -60,17 +66,18 @@
 			"dmg1": "2d6",
 			"dmgType": "P",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "modern bullet"
 		},
 		{
 			"name": "Automatic Rifle",
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 8,
-			"weaponCategory": "Martial",
-			"age": "Modern",
+			"weaponCategory": "martial",
+			"age": "modern",
 			"property": [
 				"AF",
 				"BF",
@@ -82,17 +89,19 @@
 			"dmg1": "2d8",
 			"dmgType": "P",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "modern bullet"
 		},
 		{
 			"name": "Battleaxe",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 4,
 			"value": 1000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"V"
 			],
@@ -106,11 +115,12 @@
 			"name": "Blowgun",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 1,
 			"value": 1000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"A",
 				"LD"
@@ -118,7 +128,8 @@
 			"range": "25/100",
 			"dmg1": "1",
 			"dmgType": "P",
-			"weapon": true
+			"weapon": true,
+			"ammoType": "blowgun needle|phb"
 		},
 		{
 			"name": "Blowgun Needle",
@@ -126,7 +137,7 @@
 			"page": 150,
 			"srd": true,
 			"type": "A",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 0.02,
 			"value": 2
 		},
@@ -136,17 +147,23 @@
 			"page": 150,
 			"srd": true,
 			"type": "A",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 1,
 			"value": 100,
-			"quantity": 50
+			"packContents": [
+				{
+					"item": "blowgun needle|phb",
+					"quantity": 50
+				}
+			]
 		},
 		{
 			"name": "Breastplate",
 			"source": "PHB",
 			"page": 145,
+			"srd": true,
 			"type": "MA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 20,
 			"value": 40000,
 			"ac": 14,
@@ -159,8 +176,9 @@
 			"name": "Chain Mail",
 			"source": "PHB",
 			"page": 145,
+			"srd": true,
 			"type": "HA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 55,
 			"value": 7500,
 			"ac": 16,
@@ -175,8 +193,9 @@
 			"name": "Chain Shirt",
 			"source": "PHB",
 			"page": 144,
+			"srd": true,
 			"type": "MA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 20,
 			"value": 5000,
 			"ac": 13,
@@ -189,16 +208,18 @@
 			"name": "Club",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 10,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"L"
 			],
 			"dmg1": "1d4",
 			"dmgType": "B",
+			"club": true,
 			"weapon": true
 		},
 		{
@@ -207,7 +228,7 @@
 			"page": 150,
 			"srd": true,
 			"type": "A",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 0.075,
 			"value": 5
 		},
@@ -217,10 +238,15 @@
 			"page": 150,
 			"srd": true,
 			"type": "A",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 1.5,
 			"value": 100,
-			"quantity": 20
+			"packContents": [
+				{
+					"item": "crossbow bolt|phb",
+					"quantity": 20
+				}
+			]
 		},
 		{
 			"name": "Crystal",
@@ -229,7 +255,7 @@
 			"srd": true,
 			"type": "SCF",
 			"scfType": "arcane",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 1,
 			"value": 1000
 		},
@@ -237,11 +263,12 @@
 			"name": "Dagger",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 1,
 			"value": 200,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"F",
 				"L",
@@ -250,17 +277,19 @@
 			"range": "20/60",
 			"dmg1": "1d4",
 			"dmgType": "P",
+			"dagger": true,
 			"weapon": true
 		},
 		{
 			"name": "Dart",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 0.25,
 			"value": 5,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"F",
 				"T"
@@ -281,10 +310,10 @@
 				}
 			],
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 6,
 			"value": 10000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"S",
 				"2H"
@@ -308,19 +337,20 @@
 			"source": "DMG",
 			"page": 268,
 			"type": "AF",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 0.3125,
-			"age": "Futuristic"
+			"age": "futuristic"
 		},
 		{
 			"name": "Flail",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 1000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"dmg1": "1d8",
 			"dmgType": "B",
 			"weapon": true
@@ -329,11 +359,12 @@
 			"name": "Glaive",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 6,
 			"value": 2000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"H",
 				"R",
@@ -347,11 +378,12 @@
 			"name": "Greataxe",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 7,
 			"value": 3000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"H",
 				"2H"
@@ -365,27 +397,30 @@
 			"name": "Greatclub",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 10,
 			"value": 20,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"2H"
 			],
 			"dmg1": "1d8",
 			"dmgType": "B",
+			"club": true,
 			"weapon": true
 		},
 		{
 			"name": "Greatsword",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 6,
 			"value": 5000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"H",
 				"2H"
@@ -399,11 +434,12 @@
 			"name": "Halberd",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 6,
 			"value": 2000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"H",
 				"R",
@@ -417,8 +453,9 @@
 			"name": "Half Plate Armor",
 			"source": "PHB",
 			"page": 145,
+			"srd": true,
 			"type": "MA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 40,
 			"value": 75000,
 			"ac": 15,
@@ -432,11 +469,12 @@
 			"name": "Hand Crossbow",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
 			"value": 7500,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"A",
 				"L",
@@ -445,17 +483,20 @@
 			"range": "30/120",
 			"dmg1": "1d6",
 			"dmgType": "P",
-			"weapon": true
+			"crossbow": true,
+			"weapon": true,
+			"ammoType": "crossbow bolt|phb"
 		},
 		{
 			"name": "Handaxe",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 500,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"L",
 				"T"
@@ -470,11 +511,12 @@
 			"name": "Heavy Crossbow",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 18,
 			"value": 5000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"A",
 				"H",
@@ -484,14 +526,17 @@
 			"range": "100/400",
 			"dmg1": "1d10",
 			"dmgType": "P",
-			"weapon": true
+			"crossbow": true,
+			"weapon": true,
+			"ammoType": "crossbow bolt|phb"
 		},
 		{
 			"name": "Hide Armor",
 			"source": "PHB",
 			"page": 144,
+			"srd": true,
 			"type": "MA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 12,
 			"value": 1000,
 			"ac": 12,
@@ -505,9 +550,9 @@
 			"source": "OotA",
 			"page": 224,
 			"type": "M",
-			"rarity": "Unknown",
+			"rarity": "unknown",
 			"weight": 2,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"L"
 			],
@@ -523,10 +568,10 @@
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 8,
-			"weaponCategory": "Martial",
-			"age": "Modern",
+			"weaponCategory": "martial",
+			"age": "modern",
 			"property": [
 				"AF",
 				"RLD",
@@ -537,34 +582,38 @@
 			"dmg1": "2d10",
 			"dmgType": "P",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "modern bullet"
 		},
 		{
 			"name": "Javelin",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 50,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"T"
 			],
 			"range": "30/120",
 			"dmg1": "1d6",
 			"dmgType": "P",
+			"spear": true,
 			"weapon": true
 		},
 		{
 			"name": "Lance",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 6,
 			"value": 1000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"R",
 				"S"
@@ -587,10 +636,10 @@
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
-			"weaponCategory": "Martial",
-			"age": "Futuristic",
+			"weaponCategory": "martial",
+			"age": "futuristic",
 			"property": [
 				"AF",
 				"RLD"
@@ -600,17 +649,18 @@
 			"dmg1": "3d6",
 			"dmgType": "R",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "energy cell"
 		},
 		{
 			"name": "Laser Rifle",
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 7,
-			"weaponCategory": "Martial",
-			"age": "Futuristic",
+			"weaponCategory": "martial",
+			"age": "futuristic",
 			"property": [
 				"AF",
 				"RLD",
@@ -621,14 +671,16 @@
 			"dmg1": "3d8",
 			"dmgType": "R",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "energy cell"
 		},
 		{
 			"name": "Leather Armor",
 			"source": "PHB",
 			"page": 144,
+			"srd": true,
 			"type": "LA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 10,
 			"value": 1000,
 			"ac": 11,
@@ -641,11 +693,12 @@
 			"name": "Light Crossbow",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 5,
 			"value": 2500,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"A",
 				"LD",
@@ -654,17 +707,20 @@
 			"range": "80/320",
 			"dmg1": "1d8",
 			"dmgType": "P",
-			"weapon": true
+			"crossbow": true,
+			"weapon": true,
+			"ammoType": "crossbow bolt|phb"
 		},
 		{
 			"name": "Light Hammer",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 200,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"L",
 				"T"
@@ -672,6 +728,7 @@
 			"range": "20/60",
 			"dmg1": "1d4",
 			"dmgType": "B",
+			"hammer": true,
 			"weapon": true
 		},
 		{
@@ -679,9 +736,9 @@
 			"source": "OotA",
 			"page": 224,
 			"type": "R",
-			"rarity": "Unknown",
+			"rarity": "unknown",
 			"weight": 5,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"A",
 				"2H"
@@ -689,20 +746,23 @@
 			"range": "40/160",
 			"dmg1": "1d8",
 			"dmgType": "P",
+			"crossbow": true,
 			"weapon": true,
 			"entries": [
 				"This crossbow is fitted with a cartridge that can hold up to six crossbow bolts. It automatically reloads after firing until the cartridge runs out of ammunition. Reloading the cartridge takes an action."
-			]
+			],
+			"ammoType": "crossbow bolt|phb"
 		},
 		{
 			"name": "Longbow",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 5000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"A",
 				"H",
@@ -711,17 +771,20 @@
 			"range": "150/600",
 			"dmg1": "1d8",
 			"dmgType": "P",
-			"weapon": true
+			"bow": true,
+			"weapon": true,
+			"ammoType": "arrow|phb"
 		},
 		{
 			"name": "Longsword",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
 			"value": 1500,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"V"
 			],
@@ -735,53 +798,73 @@
 			"name": "Mace",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 4,
 			"value": 500,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"dmg1": "1d6",
 			"dmgType": "B",
+			"mace": true,
 			"weapon": true
 		},
 		{
 			"name": "Maul",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 10,
 			"value": 1000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"H",
 				"2H"
 			],
 			"dmg1": "2d6",
 			"dmgType": "B",
+			"hammer": true,
 			"weapon": true
+		},
+		{
+			"name": "Modern Bullet",
+			"source": "DMG",
+			"page": 268,
+			"type": "AF",
+			"rarity": "none",
+			"weight": 0.1,
+			"age": "modern"
 		},
 		{
 			"name": "Modern Bullets (10)",
 			"source": "DMG",
 			"page": 268,
 			"type": "AF",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 1,
-			"quantity": 10,
-			"age": "Modern"
+			"age": "modern",
+			"packContents": [
+				{
+					"item": "modern bullet",
+					"quantity": 10
+				}
+			]
 		},
 		{
 			"name": "Morningstar",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 4,
 			"value": 1500,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"dmg1": "1d8",
 			"dmgType": "P",
+			"mace": true,
 			"weapon": true
 		},
 		{
@@ -789,11 +872,11 @@
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 10,
 			"value": 50000,
-			"weaponCategory": "Martial",
-			"age": "Renaissance",
+			"weaponCategory": "martial",
+			"age": "renaissance",
 			"property": [
 				"AF",
 				"LD",
@@ -803,22 +886,25 @@
 			"dmg1": "1d12",
 			"dmgType": "P",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "renaissance bullet"
 		},
 		{
 			"name": "Net",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
 			"value": 100,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"S",
 				"T"
 			],
 			"range": "5/15",
+			"net": true,
 			"weapon": true,
 			"entries": [
 				{
@@ -837,16 +923,17 @@
 			"srd": true,
 			"type": "SCF",
 			"scfType": "arcane",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
-			"value": 2500
+			"value": 2000
 		},
 		{
 			"name": "Padded Armor",
 			"source": "PHB",
 			"page": 144,
+			"srd": true,
 			"type": "LA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 8,
 			"value": 500,
 			"ac": 11,
@@ -860,11 +947,12 @@
 			"name": "Pike",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 18,
 			"value": 500,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"H",
 				"R",
@@ -879,11 +967,11 @@
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
 			"value": 25000,
-			"weaponCategory": "Martial",
-			"age": "Renaissance",
+			"weaponCategory": "martial",
+			"age": "renaissance",
 			"property": [
 				"AF",
 				"LD"
@@ -892,14 +980,16 @@
 			"dmg1": "1d10",
 			"dmgType": "P",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "renaissance bullet"
 		},
 		{
 			"name": "Plate Armor",
 			"source": "PHB",
 			"page": 145,
+			"srd": true,
 			"type": "HA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 65,
 			"value": 150000,
 			"ac": 18,
@@ -914,11 +1004,12 @@
 			"name": "Quarterstaff",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 4,
 			"value": 20,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"V"
 			],
@@ -931,11 +1022,12 @@
 			"name": "Rapier",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 2500,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"F"
 			],
@@ -945,25 +1037,40 @@
 			"weapon": true
 		},
 		{
+			"name": "Renaissance Bullet",
+			"source": "DMG",
+			"page": 268,
+			"type": "AF",
+			"rarity": "none",
+			"weight": 0.2,
+			"value": 30,
+			"age": "renaissance"
+		},
+		{
 			"name": "Renaissance Bullets (10)",
 			"source": "DMG",
 			"page": 268,
 			"type": "AF",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 300,
-			"quantity": 10,
-			"age": "Renaissance"
+			"age": "renaissance",
+			"packContents": [
+				{
+					"item": "renaissance bullet",
+					"quantity": 10
+				}
+			]
 		},
 		{
 			"name": "Revolver",
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
-			"weaponCategory": "Martial",
-			"age": "Modern",
+			"weaponCategory": "martial",
+			"age": "modern",
 			"property": [
 				"AF",
 				"RLD"
@@ -973,14 +1080,16 @@
 			"dmg1": "2d8",
 			"dmgType": "P",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "modern bullet"
 		},
 		{
 			"name": "Ring Mail",
 			"source": "PHB",
 			"page": 145,
+			"srd": true,
 			"type": "HA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 40,
 			"value": 3000,
 			"ac": 14,
@@ -997,7 +1106,7 @@
 			"srd": true,
 			"type": "SCF",
 			"scfType": "arcane",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 1000
 		},
@@ -1005,8 +1114,9 @@
 			"name": "Scale Mail",
 			"source": "PHB",
 			"page": 144,
+			"srd": true,
 			"type": "MA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 45,
 			"value": 5000,
 			"ac": 14,
@@ -1020,11 +1130,12 @@
 			"name": "Scimitar",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
 			"value": 2500,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"F",
 				"L"
@@ -1038,8 +1149,9 @@
 			"name": "Shield",
 			"source": "PHB",
 			"page": 144,
+			"srd": true,
 			"type": "S",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 6,
 			"value": 1000,
 			"ac": 2,
@@ -1051,11 +1163,12 @@
 			"name": "Shortbow",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 2500,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"A",
 				"2H"
@@ -1063,17 +1176,20 @@
 			"range": "80/320",
 			"dmg1": "1d6",
 			"dmgType": "P",
-			"weapon": true
+			"bow": true,
+			"weapon": true,
+			"ammoType": "arrow|phb"
 		},
 		{
 			"name": "Shortsword",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 1000,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"F",
 				"L"
@@ -1088,10 +1204,10 @@
 			"source": "DMG",
 			"page": 268,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 7,
-			"weaponCategory": "Martial",
-			"age": "Modern",
+			"weaponCategory": "martial",
+			"age": "modern",
 			"property": [
 				"AF",
 				"RLD",
@@ -1102,17 +1218,19 @@
 			"dmg1": "2d8",
 			"dmgType": "P",
 			"firearm": true,
-			"weapon": true
+			"weapon": true,
+			"ammoType": "modern bullet"
 		},
 		{
 			"name": "Sickle",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 100,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"L"
 			],
@@ -1124,17 +1242,19 @@
 			"name": "Sling",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "R",
-			"rarity": "None",
+			"rarity": "none",
 			"value": 10,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"A"
 			],
 			"range": "30/120",
 			"dmg1": "1d4",
 			"dmgType": "B",
-			"weapon": true
+			"weapon": true,
+			"ammoType": "sling bullet|phb"
 		},
 		{
 			"name": "Sling Bullet",
@@ -1142,7 +1262,7 @@
 			"page": 150,
 			"srd": true,
 			"type": "A",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 0.075,
 			"value": 0.2
 		},
@@ -1152,20 +1272,26 @@
 			"page": 150,
 			"srd": true,
 			"type": "A",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 1.5,
 			"value": 4,
-			"quantity": 20
+			"packContents": [
+				{
+					"item": "sling bullet|phb",
+					"quantity": 20
+				}
+			]
 		},
 		{
 			"name": "Spear",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
 			"value": 100,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"T",
 				"V"
@@ -1174,6 +1300,7 @@
 			"dmg1": "1d6",
 			"dmgType": "P",
 			"dmg2": "1d8",
+			"spear": true,
 			"weapon": true
 		},
 		{
@@ -1181,7 +1308,7 @@
 			"source": "SCAG",
 			"page": 121,
 			"type": "MA",
-			"rarity": "Unknown",
+			"rarity": "unknown",
 			"weight": 45,
 			"value": 7500,
 			"ac": 14,
@@ -1195,8 +1322,9 @@
 			"name": "Splint Armor",
 			"source": "PHB",
 			"page": 145,
+			"srd": true,
 			"type": "HA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 60,
 			"value": 20000,
 			"ac": 17,
@@ -1214,7 +1342,7 @@
 			"srd": true,
 			"type": "SCF",
 			"scfType": "arcane",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 4,
 			"value": 500,
 			"staff": true
@@ -1223,8 +1351,9 @@
 			"name": "Studded Leather Armor",
 			"source": "PHB",
 			"page": 144,
+			"srd": true,
 			"type": "LA",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 13,
 			"value": 4500,
 			"ac": 12,
@@ -1237,11 +1366,12 @@
 			"name": "Trident",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 4,
 			"value": 500,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"T",
 				"V"
@@ -1259,7 +1389,7 @@
 			"srd": true,
 			"type": "SCF",
 			"scfType": "arcane",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 1,
 			"value": 1000
 		},
@@ -1267,11 +1397,12 @@
 			"name": "War Pick",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 500,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"dmg1": "1d8",
 			"dmgType": "P",
 			"weapon": true
@@ -1280,28 +1411,31 @@
 			"name": "Warhammer",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 2,
 			"value": 1500,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"V"
 			],
 			"dmg1": "1d8",
 			"dmgType": "B",
 			"dmg2": "1d10",
+			"hammer": true,
 			"weapon": true
 		},
 		{
 			"name": "Whip",
 			"source": "PHB",
 			"page": 149,
+			"srd": true,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
 			"value": 200,
-			"weaponCategory": "Martial",
+			"weaponCategory": "martial",
 			"property": [
 				"F",
 				"R"
@@ -1315,10 +1449,10 @@
 			"source": "ToA",
 			"page": 32,
 			"type": "M",
-			"rarity": "None",
+			"rarity": "none",
 			"weight": 3,
 			"value": 100,
-			"weaponCategory": "Simple",
+			"weaponCategory": "simple",
 			"property": [
 				"T"
 			],
@@ -1401,7 +1535,7 @@
 					"type": "entries",
 					"name": "Heavy",
 					"entries": [
-						"Small creatures have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small creature to use effectively."
+						"Creatures that are Small or Tiny have disadvantage on attack rolls with heavy weapons. A heavy weapon's size and bulk make it too large for a Small or Tiny creature to use effectively."
 					]
 				}
 			]

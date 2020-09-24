@@ -65,7 +65,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/591/abyssal-wretch.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/abyssal-wretch.mp3"
+			},
 			"senseTags": [
 				"SD"
 			],
@@ -166,7 +170,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/592/adult-kruthik.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/adult-kruthik.mp3"
+			},
 			"traitTags": [
 				"Keen Senses",
 				"Pack Tactics"
@@ -317,7 +325,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/673/oblex-adult.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/oblex-adult.mp3"
+			},
 			"traitTags": [
 				"Amorphous"
 			],
@@ -343,6 +355,11 @@
 			],
 			"conditionInflict": [
 				"unconscious"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"paralyzed"
 			]
 		},
 		{
@@ -408,7 +425,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -453,7 +471,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/593/air-elemental-myrmidon.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/air-elemental-myrmidon.mp3"
+			},
 			"traitTags": [
 				"Magic Weapons"
 			],
@@ -543,7 +565,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -603,7 +626,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/594/alkilith.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/alkilith.mp3"
+			},
 			"traitTags": [
 				"Amorphous",
 				"False Appearance",
@@ -690,7 +717,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -745,7 +773,11 @@
 				"swamp",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/595/allip.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/allip.mp3"
+			},
 			"traitTags": [
 				"Incorporeal Movement"
 			],
@@ -826,7 +858,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -847,7 +880,7 @@
 				{
 					"name": "Innate Spellcasting",
 					"headerEntries": [
-						"The amnizu's innate spellcasting ability is Intelligence (spell save 19, {@hit 11} to hit with spell attacks). The amnizu can innately cast the following spells, requiring no material components:"
+						"The amnizu's innate spellcasting ability is Intelligence (spell save {@dc 19}, {@hit 11} to hit with spell attacks). The amnizu can innately cast the following spells, requiring no material components:"
 					],
 					"will": [
 						"{@spell charm person}",
@@ -936,7 +969,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/596/amnizu.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/amnizu.mp3"
+			},
 			"traitTags": [
 				"Devil's Sight",
 				"Magic Resistance"
@@ -967,6 +1004,10 @@
 			"conditionInflict": [
 				"blinded",
 				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"prone"
 			]
 		},
 		{
@@ -1074,7 +1115,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/597/armanite.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/armanite.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons"
@@ -1157,7 +1202,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -1250,7 +1296,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/598/astral-dreadnought.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/astral-dreadnought.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Weapons"
@@ -1327,7 +1377,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -1406,7 +1457,11 @@
 			"environment": [
 				"forest"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/599/autumn-eladrin.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/autumn-eladrin.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -1433,6 +1488,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"conditionInflictSpell": [
+				"unconscious"
 			]
 		},
 		{
@@ -1495,7 +1553,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -1628,7 +1687,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/600/bael.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/bael.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -1656,6 +1719,14 @@
 			"miscTags": [
 				"MW",
 				"RCH"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"stunned",
+				"unconscious"
 			]
 		},
 		{
@@ -1765,7 +1836,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/601/balhannoth.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/balhannoth.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -1791,6 +1866,9 @@
 			"conditionInflict": [
 				"grappled",
 				"restrained"
+			],
+			"conditionInflictLegendary": [
+				"invisible"
 			]
 		},
 		{
@@ -1865,7 +1943,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -1992,6 +2071,7 @@
 				"name": "Baphomet",
 				"source": "MTF"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Charge",
 				"Legendary Resistances",
@@ -2024,6 +2104,9 @@
 			"conditionInflict": [
 				"frightened",
 				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed"
 			]
 		},
 		{
@@ -2126,7 +2209,11 @@
 			"environment": [
 				"desert"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/602/berbalang.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/berbalang.mp3"
+			},
 			"senseTags": [
 				"U"
 			],
@@ -2204,7 +2291,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2276,7 +2364,11 @@
 			"environment": [
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/603/black-abishai.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/black-abishai.mp3"
+			},
 			"traitTags": [
 				"Devil's Sight",
 				"Magic Resistance",
@@ -2358,7 +2450,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2493,7 +2586,11 @@
 				"coastal",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/604/blue-abishai.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/blue-abishai.mp3"
+			},
 			"traitTags": [
 				"Devil's Sight",
 				"Magic Resistance",
@@ -2583,7 +2680,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -2645,7 +2743,11 @@
 				"desert",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/605/boneclaw.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/boneclaw.mp3"
+			},
 			"traitTags": [
 				"Rejuvenation"
 			],
@@ -2712,7 +2814,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -2761,7 +2864,11 @@
 				"hill",
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/606/bronze-scout.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/bronze-scout.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -2870,7 +2977,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/607/bulezau.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/bulezau.mp3"
+			},
 			"senseTags": [
 				"SD"
 			],
@@ -2934,7 +3045,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -2959,7 +3071,7 @@
 				{
 					"name": "Summon Specters (Recharges after a Short or Long Rest)",
 					"entries": [
-						"As a bonus action, the cadaver collector calls up the enslaved spirits of those it has slain; {@dice 1d6} specters (without Sunlight Sensitivity) arise in unoccupied spaces within 15 feet of the cadaver collector. The specters act right after the cadaver collector on the same initiative count and fight until they're destroyed. They disappear when the cadaver collector is destroyed."
+						"As a bonus action, the cadaver collector calls up the enslaved spirits of those it has slain; {@dice 1d6} {@creature specter||specters} (without Sunlight Sensitivity) arise in unoccupied spaces within 15 feet of the cadaver collector. The specters act right after the cadaver collector on the same initiative count and fight until they're destroyed. They disappear when the cadaver collector is destroyed."
 					]
 				}
 			],
@@ -2986,7 +3098,11 @@
 			"environment": [
 				"grassland"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/608/cadaver-collector.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/cadaver-collector.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -3067,7 +3183,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -3140,7 +3257,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/609/canoloth.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/canoloth.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons"
@@ -3257,7 +3378,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/610/choker.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/choker.mp3"
+			},
 			"altArt": [
 				{
 					"name": "Choker (Alt)",
@@ -3379,7 +3504,11 @@
 				"swamp",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/611/corpse-flower.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/corpse-flower.mp3"
+			},
 			"traitTags": [
 				"Spider Climb"
 			],
@@ -3453,7 +3582,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -3546,7 +3676,11 @@
 			"environment": [
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/614/deathlock.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/deathlock.mp3"
+			},
 			"traitTags": [
 				"Turn Resistance"
 			],
@@ -3624,7 +3758,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -3728,7 +3863,11 @@
 			"environment": [
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/612/deathlock-mastermind.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/deathlock-mastermind.mp3"
+			},
 			"traitTags": [
 				"Turn Resistance"
 			],
@@ -3750,6 +3889,11 @@
 			],
 			"conditionInflict": [
 				"restrained"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"paralyzed"
 			]
 		},
 		{
@@ -3808,7 +3952,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -3872,7 +4017,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/613/deathlock-wight.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/deathlock-wight.mp3"
+			},
 			"altArt": [
 				{
 					"name": "Deathlock Wight (Alt)",
@@ -3972,7 +4121,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -4079,6 +4229,7 @@
 				"name": "Demogorgon",
 				"source": "MTF"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -4108,8 +4259,13 @@
 			],
 			"conditionInflict": [
 				"charmed",
-				"incapacitated",
 				"stunned"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"frightened",
+				"restrained"
 			]
 		},
 		{
@@ -4198,7 +4354,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/616/derro.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/derro.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Sunlight Sensitivity"
@@ -4342,7 +4502,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/615/derro-savant.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/derro-savant.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Sunlight Sensitivity"
@@ -4418,7 +4582,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -4495,7 +4660,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/617/dhergoloth.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/dhergoloth.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons"
@@ -4572,7 +4741,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -4630,7 +4800,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/618/dire-troll.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/dire-troll.mp3"
+			},
 			"traitTags": [
 				"Keen Senses",
 				"Regeneration"
@@ -4839,7 +5013,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/619/drow-arachnomancer.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/drow-arachnomancer.mp3"
+			},
 			"traitTags": [
 				"Fey Ancestry",
 				"Spider Climb",
@@ -4873,6 +5051,14 @@
 				"paralyzed",
 				"poisoned",
 				"restrained"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened",
+				"invisible",
+				"paralyzed",
+				"restrained",
+				"unconscious"
 			]
 		},
 		{
@@ -5056,7 +5242,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/620/drow-favored-consort.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/drow-favored-consort.mp3"
+			},
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
@@ -5088,6 +5278,9 @@
 			"conditionInflict": [
 				"poisoned",
 				"unconscious"
+			],
+			"conditionInflictSpell": [
+				"invisible"
 			]
 		},
 		{
@@ -5220,7 +5413,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/621/drow-house-captain.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/drow-house-captain.mp3"
+			},
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
@@ -5249,10 +5446,6 @@
 				"RCH",
 				"RNG",
 				"RW"
-			],
-			"conditionInflict": [
-				"poisoned",
-				"unconscious"
 			]
 		},
 		{
@@ -5462,7 +5655,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/622/drow-inquisitor.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/drow-inquisitor.mp3"
+			},
 			"traitTags": [
 				"Fey Ancestry",
 				"Magic Resistance",
@@ -5489,6 +5686,13 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"incapacitated",
+				"poisoned",
+				"stunned"
 			]
 		},
 		{
@@ -5739,7 +5943,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/623/drow-matron-mother.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/drow-matron-mother.mp3"
+			},
 			"traitTags": [
 				"Fey Ancestry",
 				"Magic Resistance",
@@ -5769,6 +5977,16 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"incapacitated",
+				"paralyzed",
+				"poisoned",
+				"prone",
+				"stunned"
 			]
 		},
 		{
@@ -5903,7 +6121,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/624/drow-shadowblade.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/drow-shadowblade.mp3"
+			},
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
@@ -5932,10 +6154,6 @@
 				"MW",
 				"RNG",
 				"RW"
-			],
-			"conditionInflict": [
-				"poisoned",
-				"unconscious"
 			]
 		},
 		{
@@ -6067,7 +6285,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/625/duergar-despot.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/duergar-despot.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Sunlight Sensitivity"
@@ -6093,15 +6315,17 @@
 			],
 			"miscTags": [
 				"MW"
-			],
-			"conditionInflict": [
-				"prone"
 			]
 		},
 		{
 			"name": "Duergar Hammerer",
 			"source": "MTF",
 			"page": 188,
+			"otherSources": [
+				{
+					"source": "IDRotF"
+				}
+			],
 			"size": "M",
 			"type": "construct",
 			"alignment": [
@@ -6186,7 +6410,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/626/duergar-hammerer.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/duergar-hammerer.mp3"
+			},
 			"traitTags": [
 				"Siege Monster"
 			],
@@ -6312,7 +6540,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/627/duergar-kavalrachni.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/duergar-kavalrachni.mp3"
+			},
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -6340,6 +6572,11 @@
 			"name": "Duergar Mind Master",
 			"source": "MTF",
 			"page": 189,
+			"otherSources": [
+				{
+					"source": "IDRotF"
+				}
+			],
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -6442,7 +6679,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/628/duergar-mind-master.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/duergar-mind-master.mp3"
+			},
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -6546,7 +6787,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/629/duergar-screamer.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/duergar-screamer.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -6686,7 +6931,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/630/duergar-soulblade.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/duergar-soulblade.mp3"
+			},
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -6813,7 +7062,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/631/duergar-stone-guard.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/duergar-stone-guard.mp3"
+			},
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -6946,7 +7199,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/632/duergar-warlord.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/duergar-warlord.mp3"
+			},
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -7069,7 +7326,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/633/duergar-xarrorn.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/duergar-xarrorn.mp3"
+			},
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -7147,7 +7408,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -7228,7 +7490,11 @@
 				"desert",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/634/dybbuk.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/dybbuk.mp3"
+			},
 			"traitTags": [
 				"Incorporeal Movement",
 				"Magic Resistance"
@@ -7252,6 +7518,9 @@
 				"MW"
 			],
 			"conditionInflict": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
 				"frightened"
 			]
 		},
@@ -7302,7 +7571,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -7347,7 +7617,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/635/earth-elemental-myrmidon.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/earth-elemental-myrmidon.mp3"
+			},
 			"traitTags": [
 				"Magic Weapons"
 			],
@@ -7433,7 +7707,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -7492,7 +7767,11 @@
 				"mountain",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/636/eidolon.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/eidolon.mp3"
+			},
 			"traitTags": [
 				"Incorporeal Movement",
 				"Turn Resistance"
@@ -7637,7 +7916,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/637/elder-oblex.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/elder-oblex.mp3"
+			},
 			"traitTags": [
 				"Amorphous"
 			],
@@ -7664,6 +7947,13 @@
 			],
 			"conditionInflict": [
 				"unconscious"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened",
+				"incapacitated",
+				"paralyzed",
+				"restrained"
 			]
 		},
 		{
@@ -7711,7 +8001,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -7810,7 +8101,11 @@
 				"hill",
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/638/elder-tempest.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/elder-tempest.mp3"
+			},
 			"traitTags": [
 				"Flyby",
 				"Legendary Resistances",
@@ -7913,7 +8208,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/639/female-steeder.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/female-steeder.mp3"
+			},
 			"traitTags": [
 				"Spider Climb"
 			],
@@ -7978,7 +8277,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -8036,7 +8336,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/640/fire-elemental-myrmidon.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/fire-elemental-myrmidon.mp3"
+			},
 			"traitTags": [
 				"Illumination",
 				"Magic Weapons"
@@ -8132,7 +8436,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -8242,6 +8547,7 @@
 				"name": "Fraz-Urb'luu",
 				"source": "MTF"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -8271,6 +8577,13 @@
 			"conditionInflict": [
 				"grappled",
 				"restrained"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"incapacitated",
+				"invisible"
 			]
 		},
 		{
@@ -8364,7 +8677,11 @@
 			"environment": [
 				"arctic"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/641/frost-salamander.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/frost-salamander.mp3"
+			},
 			"senseTags": [
 				"D",
 				"T"
@@ -8445,7 +8762,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -8581,7 +8899,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/642/geryon.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/geryon.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -8616,6 +8938,19 @@
 				"grappled",
 				"poisoned",
 				"restrained"
+			],
+			"conditionInflictLegendary": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"stunned",
+				"unconscious"
 			]
 		},
 		{
@@ -8694,7 +9029,7 @@
 					]
 				},
 				{
-					"name": "Fragmentation Grenade (1/day)",
+					"name": "Fragmentation Grenade (1/Day)",
 					"entries": [
 						"The giff throws a grenade up to 60 feet. Each creature within 20 feet of the grenade's detonation must make a {@dc 15} Dexterity saving throw, taking 17 ({@damage 5d6}) piercing damage on a failed save, or half as much damage on a successful one."
 					]
@@ -8703,7 +9038,11 @@
 			"environment": [
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/643/giff.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/giff.mp3"
+			},
 			"actionTags": [
 				"Multiattack"
 			],
@@ -8877,7 +9216,11 @@
 				"mountain",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/644/githyanki-gish.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/githyanki-gish.mp3"
+			},
 			"actionTags": [
 				"Multiattack"
 			],
@@ -9006,7 +9349,11 @@
 				"mountain",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/645/githyanki-kith_rak.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/githyanki-kith_rak.mp3"
+			},
 			"actionTags": [
 				"Multiattack",
 				"Parry"
@@ -9024,6 +9371,9 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"restrained"
 			]
 		},
 		{
@@ -9150,7 +9500,11 @@
 				"mountain",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/646/githyanki-supreme-commander.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/githyanki-supreme-commander.mp3"
+			},
 			"actionTags": [
 				"Multiattack",
 				"Parry"
@@ -9296,7 +9650,11 @@
 				"name": "Githzerai Anarch",
 				"source": "MTF"
 			},
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/647/githzerai-anarch.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/githzerai-anarch.mp3"
+			},
 			"actionTags": [
 				"Multiattack"
 			],
@@ -9422,7 +9780,11 @@
 				"mountain",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/648/githzerai-enlightened.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/githzerai-enlightened.mp3"
+			},
 			"actionTags": [
 				"Multiattack"
 			],
@@ -9596,7 +9958,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/649/gloom-weaver.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/gloom-weaver.mp3"
+			},
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -9620,6 +9986,12 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened",
+				"incapacitated",
+				"invisible"
 			]
 		},
 		{
@@ -9697,7 +10069,11 @@
 				"forest",
 				"hill"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/650/gray-render.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/gray-render.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -9789,7 +10165,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -9909,6 +10286,7 @@
 				"name": "Graz'zt",
 				"source": "MTF"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -9936,6 +10314,11 @@
 			"miscTags": [
 				"MW",
 				"RCH"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"restrained"
 			]
 		},
 		{
@@ -9997,7 +10380,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -10081,7 +10465,11 @@
 			"environment": [
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/651/green-abishai.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/green-abishai.mp3"
+			},
 			"traitTags": [
 				"Devil's Sight",
 				"Magic Resistance",
@@ -10111,6 +10499,10 @@
 			],
 			"conditionInflict": [
 				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened"
 			]
 		},
 		{
@@ -10162,7 +10554,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -10200,7 +10593,7 @@
 				{
 					"name": "Flesh-Crushing Stride",
 					"entries": [
-						"The hellfire engine moves up to its speed in a straight line. During this move, it can enter Large or smaller creatures' spaces. A creature whose space the hellfire engine enters must make a {@dc 18} Dexterity saving throw. On a successful save, the creature is pushed 5 feet to the nearest space out of the hellfire engine's path. On a failed save, the creature falls {@condition prone} and takes 28 ({@damage 8d6}) bludgeoning damage.",
+						"The hellfire engine moves up to its speed in a straight line. During this move, it can enter Large or smaller creatures' spaces. A creature whose space the hellfire engine enters must make a {@dc 18} Dexterity saving throw. On a successful save, the creature is pushed to the nearest space out of the hellfire engine's path. On a failed save, the creature falls {@condition prone} and takes 28 ({@damage 8d6}) bludgeoning damage.",
 						"If the hellfire engine remains in the {@condition prone} creature's space, the creature is also {@condition restrained} until it's no longer in the same space as the hellfire engine. While {@condition restrained} in this way, the creature, or another creature within 5 feet of it, can make a {@dc 18} Strength check. On a success, the creature is shunted to an unoccupied space of its choice within 5 feet of the hellfire engine and is no longer {@condition restrained}."
 					]
 				},
@@ -10232,7 +10625,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/652/hellfire-engine.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/hellfire-engine.mp3"
+			},
 			"traitTags": [
 				"Immutable Form",
 				"Magic Resistance"
@@ -10309,7 +10706,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -10353,7 +10751,11 @@
 				"hill",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/653/howler.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/howler.mp3"
+			},
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -10438,7 +10840,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -10582,7 +10985,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/654/hutijin.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/hutijin.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -10618,6 +11025,14 @@
 			"conditionInflict": [
 				"frightened",
 				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"paralyzed",
+				"stunned",
+				"unconscious"
 			]
 		},
 		{
@@ -10670,7 +11085,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -10778,7 +11194,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/655/hydroloth.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/hydroloth.mp3"
+			},
 			"traitTags": [
 				"Amphibious",
 				"Magic Resistance",
@@ -10853,7 +11273,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -10893,7 +11314,11 @@
 				"hill",
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/656/iron-cobra.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/iron-cobra.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -10982,7 +11407,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -11107,6 +11533,7 @@
 				"name": "Juiblex",
 				"source": "MTF"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -11137,6 +11564,15 @@
 			],
 			"conditionInflict": [
 				"poisoned"
+			],
+			"conditionInflictLegendary": [
+				"prone",
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"poisoned",
+				"stunned"
 			]
 		},
 		{
@@ -11231,7 +11667,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/657/kruthik-hive-lord.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/kruthik-hive-lord.mp3"
+			},
 			"traitTags": [
 				"Keen Senses",
 				"Pack Tactics"
@@ -11298,7 +11738,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -11388,7 +11829,11 @@
 				"coastal",
 				"underwater"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/658/leviathan.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/leviathan.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Siege Monster"
@@ -11485,7 +11930,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/659/male-steeder.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/male-steeder.mp3"
+			},
 			"traitTags": [
 				"Spider Climb"
 			],
@@ -11566,7 +12015,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -11642,7 +12092,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/660/marut.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/marut.mp3"
+			},
 			"traitTags": [
 				"Immutable Form",
 				"Legendary Resistances",
@@ -11663,9 +12117,6 @@
 			"miscTags": [
 				"AOE",
 				"MW"
-			],
-			"conditionInflict": [
-				"stunned"
 			]
 		},
 		{
@@ -11722,7 +12173,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -11783,7 +12235,11 @@
 				"swamp",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/661/maurezhi.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/maurezhi.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -11891,7 +12347,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/662/meazel.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/meazel.mp3"
+			},
 			"senseTags": [
 				"SD"
 			],
@@ -11963,7 +12423,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -12021,7 +12482,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/663/merregon.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/merregon.mp3"
+			},
 			"traitTags": [
 				"Devil's Sight",
 				"Magic Resistance"
@@ -12105,7 +12570,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -12192,7 +12658,11 @@
 			"environment": [
 				"coastal"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/664/merrenoloth.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/merrenoloth.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons"
@@ -12220,6 +12690,12 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"conditionInflictLegendary": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed"
 			]
 		},
 		{
@@ -12282,7 +12758,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -12412,7 +12889,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/665/moloch.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/moloch.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -12446,6 +12927,13 @@
 			],
 			"conditionInflict": [
 				"frightened"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened",
+				"incapacitated",
+				"stunned",
+				"unconscious"
 			]
 		},
 		{
@@ -12507,7 +12995,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -12631,7 +13120,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/666/molydeus.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/molydeus.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -12717,7 +13210,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -12779,7 +13273,7 @@
 				{
 					"name": "Soul-Stealing Gaze",
 					"entries": [
-						"The nabassu targets one creature it can see within 30 feet of it. If the target can see the nabassu and isn't a construct or an undead, it must succeed on a {@dc 16} Charisma saving throw or reduce its hit point maximum by 13 ({@dice 2d12}) damage and give the nabassu an equal number of temporary hit points. This reduction lasts until the target finishes a short or long rest. The target dies if its hit point maximum is reduced to 0, and if the target is a humanoid, it immediately rises as a ghoul under the nabassu's control."
+						"The nabassu targets one creature it can see within 30 feet of it. If the target can see the nabassu and isn't a construct or an undead, it must succeed on a {@dc 16} Charisma saving throw or reduce its hit point maximum by 13 ({@dice 2d12}) damage and give the nabassu an equal number of temporary hit points. This reduction lasts until the target finishes a short or long rest. The target dies if its hit point maximum is reduced to 0, and if the target is a humanoid, it immediately rises as a {@creature ghoul} under the nabassu's control."
 					]
 				}
 			],
@@ -12788,7 +13282,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/667/nabassu.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/nabassu.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons"
@@ -12979,7 +13477,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/668/nagpa.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/nagpa.mp3"
+			},
 			"senseTags": [
 				"U"
 			],
@@ -12999,6 +13501,13 @@
 			"conditionInflict": [
 				"charmed",
 				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"paralyzed",
+				"petrified",
+				"restrained"
 			]
 		},
 		{
@@ -13064,7 +13573,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -13136,7 +13646,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/669/narzugon.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/narzugon.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -13209,7 +13723,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -13267,7 +13782,11 @@
 				"swamp",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/670/nightwalker.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/nightwalker.mp3"
+			},
 			"senseTags": [
 				"SD"
 			],
@@ -13343,7 +13862,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -13382,7 +13902,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/671/nupperibo.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/nupperibo.mp3"
+			},
 			"senseTags": [
 				"B"
 			],
@@ -13439,7 +13963,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -13494,7 +14019,11 @@
 				"hill",
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/672/oaken-bolter.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/oaken-bolter.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -13589,7 +14118,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/674/oblex-spawn.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/oblex-spawn.mp3"
+			},
 			"traitTags": [
 				"Amorphous"
 			],
@@ -13671,7 +14204,11 @@
 				"hill",
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/675/ogre-battering-ram.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/ogre-battering-ram.mp3"
+			},
 			"traitTags": [
 				"Siege Monster"
 			],
@@ -13748,7 +14285,11 @@
 				"hill",
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/676/ogre-bolt-launcher.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/ogre-bolt-launcher.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -13830,7 +14371,11 @@
 				"hill",
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/677/ogre-chain-brute.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/ogre-chain-brute.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -13910,7 +14455,11 @@
 				"grassland",
 				"hill"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/678/ogre-howdah.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/ogre-howdah.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -13985,7 +14534,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -14082,7 +14632,11 @@
 				"desert",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/679/oinoloth.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/oinoloth.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons"
@@ -14114,6 +14668,9 @@
 				"charmed",
 				"poisoned",
 				"restrained"
+			],
+			"conditionInflictSpell": [
+				"invisible"
 			]
 		},
 		{
@@ -14170,8 +14727,8 @@
 				"wis": "+13"
 			},
 			"skill": {
-				"arcana": "+12",
-				"perception": "+12"
+				"arcana": "+13",
+				"perception": "+13"
 			},
 			"senses": [
 				"truesight 120 ft."
@@ -14191,7 +14748,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -14304,6 +14862,7 @@
 				"name": "Orcus",
 				"source": "MTF"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -14399,7 +14958,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -14494,7 +15054,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/680/orthon.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/orthon.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -14532,6 +15096,11 @@
 			"name": "Phoenix",
 			"source": "MTF",
 			"page": 199,
+			"otherSources": [
+				{
+					"source": "MOT"
+				}
+			],
 			"size": "G",
 			"type": "elemental",
 			"alignment": [
@@ -14569,7 +15138,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -14670,7 +15240,11 @@
 				"desert",
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/681/phoenix.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/phoenix.mp3"
+			},
 			"traitTags": [
 				"Flyby",
 				"Illumination",
@@ -14750,7 +15324,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -14808,7 +15383,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 12} to hit, reach 5 ft., one target. {@h}22 ({@damage 5d10 + 6}) piercing damage plus 38 ({@damage 7d10}) fire damage."
+						"{@atk mw} {@hit 12} to hit, reach 5 ft., one target. {@h}22 ({@damage 3d10 + 6}) piercing damage plus 38 ({@damage 7d10}) fire damage."
 					]
 				},
 				{
@@ -14834,7 +15409,11 @@
 				"mountain",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/682/red-abishai.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/red-abishai.mp3"
+			},
 			"traitTags": [
 				"Devil's Sight",
 				"Magic Resistance",
@@ -14921,7 +15500,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -14992,7 +15572,11 @@
 				"forest",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/683/retriever.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/retriever.mp3"
+			},
 			"senseTags": [
 				"B",
 				"D"
@@ -15019,6 +15603,9 @@
 			],
 			"conditionInflict": [
 				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"restrained"
 			]
 		},
 		{
@@ -15108,7 +15695,11 @@
 				"swamp",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/684/rot-troll.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/rot-troll.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -15191,11 +15782,15 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}12 ({@damage 3d6 + 2}) piercing damage. If the target is a creature, it must succeed on a {@dc 13} Constitution saving throw against disease or become {@condition poisoned}. At the end of each long rest, the {@condition poisoned} target can repeat the saving throw, ending the effect on itself on a success. If the target is reduced to 0 hit points while {@condition poisoned} in this way, it dies and instantly transforms into a living abyssal wretch. The transformation of the body can be undone only by a {@spell wish} spell. (See notes)"
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}12 ({@damage 3d6 + 2}) piercing damage. If the target is a creature, it must succeed on a {@dc 13} Constitution saving throw against disease or become {@condition poisoned}. At the end of each long rest, the {@condition poisoned} target can repeat the saving throw, ending the effect on itself on a success. If the target is reduced to 0 hit points while {@condition poisoned} in this way, it dies and instantly transforms into a living {@creature abyssal wretch|mtf}. The transformation of the body can be undone only by a {@spell wish} spell. (See notes)"
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/685/rutterkin.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/rutterkin.mp3"
+			},
 			"senseTags": [
 				"SD"
 			],
@@ -15275,7 +15870,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -15334,7 +15930,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/686/sacred-statue.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/sacred-statue.mp3"
+			},
 			"traitTags": [
 				"False Appearance"
 			],
@@ -15455,7 +16055,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/687/shadow-dancer.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/shadow-dancer.mp3"
+			},
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -15552,7 +16156,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -15765,7 +16370,11 @@
 			"environment": [
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/688/sibriex.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/sibriex.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -15796,6 +16405,11 @@
 				"deafened",
 				"exhaustion",
 				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"paralyzed",
+				"prone"
 			]
 		},
 		{
@@ -15881,7 +16495,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/689/skulk.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/skulk.mp3"
+			},
 			"senseTags": [
 				"SD"
 			],
@@ -15947,7 +16565,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -16092,7 +16711,7 @@
 				{
 					"name": "Summon Undead (Costs 3 Actions)",
 					"entries": [
-						"Up to five skeletons or zombies appear in unoccupied spaces within 30 feet of the skull lord and remain until destroyed. Undead summoned in this way roll initiative and act in the next available turn. The skull lord can have up to five undead summoned by this ability at a time."
+						"Up to five {@creature skeleton||skeletons} or {@creature zombie||zombies} appear in unoccupied spaces within 30 feet of the skull lord and remain until destroyed. Undead summoned in this way roll initiative and act in the next available turn. The skull lord can have up to five undead summoned by this ability at a time."
 					]
 				}
 			],
@@ -16101,7 +16720,11 @@
 				"swamp",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/690/skull-lord.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/skull-lord.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -16162,11 +16785,11 @@
 			"cha": 13,
 			"save": {
 				"dex": "+7",
-				"wis": "+7",
+				"wis": "+6",
 				"cha": "+5"
 			},
 			"skill": {
-				"perception": "+7"
+				"perception": "+6"
 			},
 			"senses": [
 				"darkvision 60 ft."
@@ -16259,7 +16882,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/691/soul-monger.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/soul-monger.mp3"
+			},
 			"traitTags": [
 				"Fey Ancestry",
 				"Magic Resistance"
@@ -16288,6 +16915,9 @@
 			],
 			"conditionInflict": [
 				"exhaustion"
+			],
+			"conditionInflictSpell": [
+				"frightened"
 			]
 		},
 		{
@@ -16342,7 +16972,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -16398,7 +17029,11 @@
 				"swamp",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/692/spirit-troll.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/spirit-troll.mp3"
+			},
 			"traitTags": [
 				"Incorporeal Movement",
 				"Regeneration"
@@ -16474,7 +17109,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -16552,7 +17188,11 @@
 				"forest",
 				"grassland"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/693/spring-eladrin.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/spring-eladrin.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -16582,6 +17222,11 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated",
+				"prone"
 			]
 		},
 		{
@@ -16641,7 +17286,11 @@
 				"mountain",
 				"swamp"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/694/star-spawn-grue.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/star-spawn-grue.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -16704,7 +17353,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -16743,7 +17393,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/695/star-spawn-hulk.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/star-spawn-hulk.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -16822,7 +17476,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -16917,7 +17572,11 @@
 			"environment": [
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/696/star-spawn-larva-mage.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/star-spawn-larva-mage.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -16939,6 +17598,9 @@
 				"blinded",
 				"poisoned",
 				"restrained"
+			],
+			"conditionInflictSpell": [
+				"charmed"
 			]
 		},
 		{
@@ -17039,7 +17701,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/697/star-spawn-mangler.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/star-spawn-mangler.mp3"
+			},
 			"traitTags": [
 				"Ambusher"
 			],
@@ -17112,7 +17778,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -17175,7 +17842,11 @@
 				"swamp",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/698/star-spawn-seer.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/star-spawn-seer.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -17255,7 +17926,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -17329,7 +18001,11 @@
 			"environment": [
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/699/steel-predator.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/steel-predator.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons"
@@ -17356,9 +18032,6 @@
 			"miscTags": [
 				"AOE",
 				"MW"
-			],
-			"conditionInflict": [
-				"stunned"
 			]
 		},
 		{
@@ -17437,7 +18110,11 @@
 				"mountain",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/700/stone-cursed.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/stone-cursed.mp3"
+			},
 			"traitTags": [
 				"False Appearance"
 			],
@@ -17497,7 +18174,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -17548,7 +18226,11 @@
 				"hill",
 				"mountain"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/701/stone-defender.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/stone-defender.mp3"
+			},
 			"traitTags": [
 				"False Appearance",
 				"Magic Resistance"
@@ -17620,7 +18302,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -17681,7 +18364,11 @@
 				"desert",
 				"forest"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/702/summer-eladrin.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/summer-eladrin.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -17769,7 +18456,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -17821,7 +18509,7 @@
 				{
 					"name": "Call to Honor (1/Day)",
 					"entries": [
-						"To use this action, the sword wraith must have taken damage during the current combat. If the sword wraith can use this action, it gives itself advantage on attack rolls until the end of its next turn, and {@dice 1d4 + 1} sword wraith warriors appear in unoccupied spaces within 30 feet of it. The warriors last until they drop to 0 hit points, and they take their turns immediately after the commander's turn on the same initiative count."
+						"To use this action, the sword wraith must have taken damage during the current combat. If the sword wraith can use this action, it gives itself advantage on attack rolls until the end of its next turn, and {@dice 1d4 + 1} {@creature sword wraith warrior|mtf|sword wraith warriors} appear in unoccupied spaces within 30 feet of it. The warriors last until they drop to 0 hit points, and they take their turns immediately after the commander's turn on the same initiative count."
 					]
 				}
 			],
@@ -17829,7 +18517,11 @@
 				"grassland",
 				"swamp"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/703/sword-wraith-commander.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/sword-wraith-commander.mp3"
+			},
 			"traitTags": [
 				"Turn Resistance"
 			],
@@ -17908,7 +18600,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -17950,7 +18643,11 @@
 				"grassland",
 				"swamp"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/704/sword-wraith-warrior.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/sword-wraith-warrior.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -18012,7 +18709,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "while in dim light or darkness"
+					"note": "while in dim light or darkness",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -18052,7 +18750,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/705/the-angry.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/the-angry.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -18112,7 +18814,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "while in dim light or darkness"
+					"note": "while in dim light or darkness",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -18152,7 +18855,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/706/the-hungry.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/the-hungry.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -18218,7 +18925,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "while in dim light or darkness"
+					"note": "while in dim light or darkness",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -18267,7 +18975,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/707/the-lonely.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/the-lonely.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -18334,7 +19046,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "while in dim light or darkness"
+					"note": "while in dim light or darkness",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -18378,7 +19091,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/708/the-lost.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/the-lost.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -18442,7 +19159,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "while in dim light or darkness"
+					"note": "while in dim light or darkness",
+					"cond": true
 				}
 			],
 			"cr": "1/4",
@@ -18468,7 +19186,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/709/the-wretched.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/the-wretched.mp3"
+			},
 			"senseTags": [
 				"D"
 			],
@@ -18542,7 +19264,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -18674,7 +19397,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/710/titivilus.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/titivilus.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -18705,6 +19432,16 @@
 			"conditionInflict": [
 				"charmed",
 				"frightened"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"incapacitated",
+				"invisible",
+				"stunned",
+				"unconscious"
 			]
 		},
 		{
@@ -18796,7 +19533,11 @@
 			"environment": [
 				"coastal"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/712/tortle.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/tortle.mp3"
+			},
 			"traitTags": [
 				"Hold Breath"
 			],
@@ -18933,7 +19674,11 @@
 			"environment": [
 				"coastal"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/711/tortle-druid.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/tortle-druid.mp3"
+			},
 			"traitTags": [
 				"Hold Breath"
 			],
@@ -18950,6 +19695,10 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"paralyzed"
 			]
 		},
 		{
@@ -19008,7 +19757,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -19069,7 +19819,11 @@
 				"underdark",
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/713/vampiric-mist.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/vampiric-mist.mp3"
+			},
 			"altArt": [
 				{
 					"name": "Vampiric Mist (Alt)",
@@ -19185,7 +19939,11 @@
 				"swamp",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/714/venom-troll.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/venom-troll.mp3"
+			},
 			"traitTags": [
 				"Keen Senses",
 				"Regeneration"
@@ -19267,7 +20025,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -19341,7 +20100,11 @@
 				"underdark",
 				"underwater"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/715/wastrilith.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/wastrilith.mp3"
+			},
 			"traitTags": [
 				"Amphibious",
 				"Magic Resistance"
@@ -19422,7 +20185,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -19467,7 +20231,11 @@
 					]
 				}
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/716/water-elemental-myrmidon.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/water-elemental-myrmidon.mp3"
+			},
 			"traitTags": [
 				"Magic Weapons"
 			],
@@ -19547,7 +20315,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -19627,7 +20396,11 @@
 			"environment": [
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/717/white-abishai.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/white-abishai.mp3"
+			},
 			"traitTags": [
 				"Devil's Sight",
 				"Magic Resistance",
@@ -19702,7 +20475,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -19777,7 +20551,11 @@
 				"arctic",
 				"forest"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/718/winter-eladrin.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/winter-eladrin.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -19801,9 +20579,6 @@
 				"MW",
 				"RNG",
 				"RW"
-			],
-			"conditionInflict": [
-				"charmed"
 			]
 		},
 		{
@@ -19869,7 +20644,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -19961,7 +20737,11 @@
 			"environment": [
 				"urban"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/719/yagnoloth.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/yagnoloth.mp3"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Magic Weapons"
@@ -19993,6 +20773,9 @@
 			],
 			"conditionInflict": [
 				"stunned"
+			],
+			"conditionInflictSpell": [
+				"invisible"
 			]
 		},
 		{
@@ -20067,7 +20850,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -20176,6 +20960,7 @@
 				"name": "Yeenoghu",
 				"source": "MTF"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -20206,6 +20991,13 @@
 			"conditionInflict": [
 				"paralyzed",
 				"prone"
+			],
+			"conditionInflictLegendary": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"invisible"
 			]
 		},
 		{
@@ -20282,7 +21074,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/720/young-kruthik.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/young-kruthik.mp3"
+			},
 			"traitTags": [
 				"Keen Senses",
 				"Pack Tactics"
@@ -20351,7 +21147,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -20473,7 +21270,11 @@
 				"mountain",
 				"underdark"
 			],
-			"soundClip": "https://media-waterdeep.cursecdn.com/file-attachments/0/721/zaratan.mp3",
+			"hasToken": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/zaratan.mp3"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Weapons",
@@ -20562,7 +21363,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -20651,7 +21453,7 @@
 				{
 					"name": "Javelin",
 					"entries": [
-						"{@atk mw,rw} {@hit 16} to hit, range 30/120 ft., one target. {@h}15 ({@damage 2d6 + 8}) piercing damage plus 36 ({@damage 8d8}) fire damage."
+						"{@atk mw,rw} {@hit 16} to hit, reach 10 ft. or range 30/120 ft., one target. {@h}15 ({@damage 2d6 + 8}) piercing damage plus 36 ({@damage 8d8}) fire damage."
 					]
 				},
 				{
@@ -20685,6 +21487,7 @@
 				"name": "Zariel",
 				"source": "MTF"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Devil's Sight",
 				"Legendary Resistances",
@@ -20722,6 +21525,12 @@
 				"blinded",
 				"deafened",
 				"poisoned"
+			],
+			"conditionInflictLegendary": [
+				"frightened"
+			],
+			"conditionInflictSpell": [
+				"invisible"
 			]
 		},
 		{
@@ -20792,7 +21601,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -20904,6 +21714,7 @@
 				"name": "Zuggtmoy",
 				"source": "MTF"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -20933,6 +21744,10 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"conditionInflictSpell": [
+				"poisoned",
+				"restrained"
 			]
 		}
 	]

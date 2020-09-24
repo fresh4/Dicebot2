@@ -301,6 +301,16 @@
 							"name": "Clockwork Soul (UA)",
 							"source": "UA2020SubclassesPt2"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
 			},
@@ -443,6 +453,12 @@
 				{
 					"name": "Simic Scientist",
 					"source": "GGR"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Master of Myriad Forms",
+					"source": "PHB"
 				}
 			]
 		},
@@ -1031,6 +1047,9 @@
 				"The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.",
 				"If you move so that an affected creature is forced to pass through the barrier, the spell ends."
 			],
+			"areaTags": [
+				"S"
+			],
 			"classes": {
 				"fromClassList": [
 					{
@@ -1077,6 +1096,16 @@
 						"subclass": {
 							"name": "Grave",
 							"source": "XGE"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
 						}
 					}
 				]
@@ -1414,6 +1443,12 @@
 					"name": "Dimir Operative",
 					"source": "GGR"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Visions of Distant Realms",
+					"source": "PHB"
+				}
 			]
 		},
 		{
@@ -1511,7 +1546,7 @@
 				}
 			],
 			"entries": [
-				"You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting knock on the object suppresses arcane lock for 10 minutes.",
+				"You touch a closed door, window, gate, chest, or other entryway, and it becomes locked for the duration. You and the creatures you designate when you cast this spell can open the object normally. You can also set a password that, when spoken within 5 feet of the object, suppresses this spell for 1 minute. Otherwise, it is impassable until it is broken or the spell is dispelled or suppressed. Casting {@spell knock} on the object suppresses {@spell arcane lock} for 10 minutes.",
 				"While affected by this spell, the object is more difficult to break or force open; the DC to break it or pick any locks on it increases by 10."
 			],
 			"classes": {
@@ -1607,6 +1642,9 @@
 			],
 			"damageInflict": [
 				"cold"
+			],
+			"miscTags": [
+				"THP"
 			],
 			"classes": {
 				"fromClassList": [
@@ -1727,7 +1765,7 @@
 				"strength"
 			],
 			"areaTags": [
-				"R"
+				"S"
 			],
 			"classes": {
 				"fromClassList": [
@@ -1785,7 +1823,7 @@
 				"s": true,
 				"m": {
 					"text": "for each creature you affect with this spell, you must provide one jacinth worth at least 1,000 gp and one ornately carved bar of silver worth at least 100 gp, all of which the spell consumes",
-					"cost": 100000,
+					"cost": 110000,
 					"consume": true
 				}
 			},
@@ -1921,6 +1959,16 @@
 							"name": "Ancestral Guardian",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -1977,7 +2025,7 @@
 				"HL"
 			],
 			"areaTags": [
-				"R"
+				"S"
 			],
 			"classes": {
 				"fromClassList": [
@@ -2025,6 +2073,16 @@
 						"subclass": {
 							"name": "Wildfire (UA)",
 							"source": "UAClericDruidWizard"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
 						}
 					}
 				],
@@ -2095,7 +2153,7 @@
 				"poison"
 			],
 			"areaTags": [
-				"R"
+				"S"
 			],
 			"classes": {
 				"fromClassList": [
@@ -2143,6 +2201,16 @@
 						"subclass": {
 							"name": "Love (UA)",
 							"source": "UA2020SubclassesPt2"
+						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
 						}
 					}
 				],
@@ -2207,7 +2275,7 @@
 				"HL"
 			],
 			"areaTags": [
-				"R"
+				"S"
 			],
 			"classes": {
 				"fromClassList": [
@@ -2484,9 +2552,25 @@
 							"name": "Onomancy (UA)",
 							"source": "UAClericDruidWizard"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
+						}
 					}
 				]
-			}
+			},
+			"eldritchInvocations": [
+				{
+					"name": "Thief of Five Fates",
+					"source": "PHB"
+				}
+			]
 		},
 		{
 			"name": "Banishing Smite",
@@ -2773,6 +2857,16 @@
 							"name": "Fey Wanderer (UA)",
 							"source": "UA2020SubclassesPt3"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
 			}
@@ -3016,7 +3110,7 @@
 				"ritual": true
 			},
 			"entries": [
-				"You touch a willing beast. For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses. While perceiving through the beast's senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings."
+				"You touch a willing beast. For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses. While perceiving through the beast's senses, you gain the benefits of any special senses possessed by that creature, though you are {@condition blinded} and {@condition deafened} to your own surroundings."
 			],
 			"areaTags": [
 				"ST"
@@ -3197,6 +3291,12 @@
 					"name": "Orzhov Representative",
 					"source": "GGR"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Sign of Ill Omen",
+					"source": "PHB"
+				}
 			]
 		},
 		{
@@ -3236,7 +3336,7 @@
 			],
 			"entries": [
 				"You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the spell's duration, and it moves at your command, mimicking the movements of your own hand.",
-				"The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The hand doesn't fill its space.",
+				"The hand is an object that has AC 20 and hit points equal to your hit point maximum. If it drops to 0 hit points, the spell ends. It has a Strength of 26 ({@d20 8}) and a Dexterity of 10 ({@d20 0}). The hand doesn't fill its space.",
 				"When you cast the spell and as a bonus action on your subsequent turns, you can move the hand up to 60 feet and then cause one of the following effects with it.",
 				{
 					"type": "entries",
@@ -3249,7 +3349,7 @@
 					"type": "entries",
 					"name": "Forceful Hand",
 					"entries": [
-						"The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it."
+						"The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength ({@skill Athletics}) check of the target. If the target is Medium or smaller, you have advantage on the check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it."
 					]
 				},
 				{
@@ -3283,7 +3383,7 @@
 			"spellAttack": [
 				"M"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"miscTags": [
@@ -3302,6 +3402,18 @@
 					{
 						"name": "Artificer",
 						"source": "ERLW"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
 			},
@@ -3953,6 +4065,16 @@
 							"name": "Spores",
 							"source": "GGR"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
+						}
 					}
 				]
 			}
@@ -4104,7 +4226,7 @@
 				}
 			],
 			"entries": [
-				"Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight."
+				"Your body becomes blurred, shifting and wavering to all who can see you. For the duration, any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with {@sense truesight}."
 			],
 			"classes": {
 				"fromClassList": [
@@ -4149,6 +4271,17 @@
 						"subclass": {
 							"name": "Hexblade",
 							"source": "XGE"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Marid"
 						}
 					}
 				]
@@ -4394,6 +4527,17 @@
 							"name": "Giant Soul (UA)",
 							"source": "UAGiantSoulSorcerer",
 							"subSubclass": "Fire"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Efreeti"
 						}
 					}
 				]
@@ -5065,6 +5209,18 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
+					}
 				]
 			}
 		},
@@ -5175,8 +5331,7 @@
 				"Divine energy radiates from you, distorting and diffusing magical energy within 30 feet of you. Until the spell ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw."
 			],
 			"areaTags": [
-				"S",
-				"R"
+				"S"
 			],
 			"classes": {
 				"fromClassList": [
@@ -5260,7 +5415,7 @@
 			"entries": [
 				"You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The sensor remains in place for the duration, and it can't be attacked or otherwise interacted with.",
 				"When you cast the spell, you choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As your action, you can switch between seeing and hearing.",
-				"A creature that can see the sensor (such as a creature benefiting from {@spell see invisibility} or truesight) sees a luminous, intangible orb about the size of your fist."
+				"A creature that can see the sensor (such as a creature benefiting from {@spell see invisibility} or {@sense truesight}) sees a luminous, intangible orb about the size of your fist."
 			],
 			"classes": {
 				"fromClassList": [
@@ -5637,6 +5792,16 @@
 						"subclass": {
 							"name": "Alchemist",
 							"source": "ERLW"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
 						}
 					}
 				]
@@ -6021,6 +6186,16 @@
 							"name": "Order",
 							"source": "GGR"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
+						}
 					}
 				]
 			}
@@ -6133,6 +6308,16 @@
 						"subclass": {
 							"name": "Lurker in the Deep (UA)",
 							"source": "UASorcererAndWarlock"
+						}
+					},
+					{
+						"class": {
+							"name": "Barbarian",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Totem Warrior",
+							"source": "PHB"
 						}
 					}
 				]
@@ -6443,6 +6628,16 @@
 							"name": "Aberrant Mind (UA)",
 							"source": "UASorcererAndWarlock"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
+						}
 					}
 				]
 			},
@@ -6450,6 +6645,12 @@
 				{
 					"name": "Azorius Functionary",
 					"source": "GGR"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Bewitching Whispers",
+					"source": "PHB"
 				}
 			]
 		},
@@ -6596,6 +6797,17 @@
 						"subclass": {
 							"name": "Artillerist",
 							"source": "ERLW"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Marid"
 						}
 					}
 				],
@@ -6820,6 +7032,12 @@
 					"name": "Rakdos Cultist",
 					"source": "GGR"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Dreadful Word",
+					"source": "PHB"
+				}
 			]
 		},
 		{
@@ -6881,8 +7099,8 @@
 				}
 			],
 			"miscTags": [
-				"SMN",
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassList": [
@@ -7055,8 +7273,8 @@
 				}
 			],
 			"miscTags": [
-				"SMN",
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassList": [
@@ -7158,6 +7376,12 @@
 					"name": "Izzet Engineer",
 					"source": "GGR"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Minions of Chaos",
+					"source": "PHB"
+				}
 			]
 		},
 		{
@@ -7210,8 +7434,8 @@
 				}
 			],
 			"miscTags": [
-				"SMN",
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassList": [
@@ -7285,8 +7509,8 @@
 				}
 			],
 			"miscTags": [
-				"SMN",
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassList": [
@@ -7426,8 +7650,8 @@
 				}
 			],
 			"miscTags": [
-				"SMN",
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassList": [
@@ -7855,8 +8079,8 @@
 					"type": "entries",
 					"name": "Whirlpool",
 					"entries": [
-						"This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength (Athletics) check against your spell save DC.",
-						"When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes {@damage 2d8} bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength (Athletics) check to do so.",
+						"This effect requires a body of water at least 50 feet square and 25 feet deep. You cause a whirlpool to form in the center of the area. The whirlpool forms a vortex that is 5 feet wide at the base, up to 50 feet wide at the top, and 25 feet tall. Any creature or object in the water and within 25 feet of the vortex is pulled 10 feet toward it. A creature can swim away from the vortex by making a Strength ({@skill Athletics}) check against your spell save DC.",
+						"When a creature enters the vortex for the first time on a turn or starts its turn there, it must make a Strength saving throw. On a failed save, the creature takes {@damage 2d8} bludgeoning damage and is caught in the vortex until the spell ends. On a successful save, the creature takes half damage, and isn't caught in the vortex. A creature caught in the vortex can use its action to try to swim away from the vortex as described above, but has disadvantage on the Strength ({@skill Athletics}) check to do so.",
 						"The first time each turn that an object enters the vortex, the object takes {@damage 2d8} bludgeoning damage; this damage occurs each round it remains in the vortex."
 					]
 				}
@@ -7867,7 +8091,7 @@
 			"savingThrow": [
 				"strength"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"areaTags": [
@@ -7928,6 +8152,17 @@
 						"subclass": {
 							"name": "Lurker in the Deep (UA)",
 							"source": "UASorcererAndWarlock"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Marid"
 						}
 					}
 				]
@@ -8254,6 +8489,16 @@
 							"name": "Clockwork Soul (UA)",
 							"source": "UA2020SubclassesPt2"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
 			},
@@ -8339,6 +8584,26 @@
 						"subclass": {
 							"name": "Alchemist",
 							"source": "UAArtificerRevisited"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited"
 						}
 					}
 				]
@@ -8648,6 +8913,26 @@
 							"name": "Forge",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited"
+						}
 					}
 				]
 			},
@@ -8808,7 +9093,7 @@
 				"radiant"
 			],
 			"areaTags": [
-				"R"
+				"S"
 			],
 			"classes": {
 				"fromClassList": [
@@ -9588,6 +9873,16 @@
 							"name": "Alchemist",
 							"source": "ERLW"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -9790,7 +10085,7 @@
 			],
 			"areaTags": [
 				"MT",
-				"R"
+				"S"
 			],
 			"classes": {
 				"fromClassList": [
@@ -9906,6 +10201,18 @@
 						"name": "Paladin",
 						"source": "PHB"
 					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited"
+						}
+					}
 				]
 			},
 			"races": [
@@ -10019,6 +10326,12 @@
 					"source": "ERLW",
 					"baseName": "Half-Elf",
 					"baseSource": "PHB"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Eldritch Sight",
+					"source": "PHB"
 				}
 			]
 		},
@@ -10142,7 +10455,7 @@
 			"savingThrow": [
 				"wisdom"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"miscTags": [
@@ -10374,9 +10687,9 @@
 			"entries": [
 				"You make yourself\u2014including your clothing, armor, weapons, and other belongings on your person\u2014look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.",
 				"The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.",
-				"To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC."
+				"To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence ({@skill Investigation}) check against your spell save DC."
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"miscTags": [
@@ -10513,6 +10826,12 @@
 					"name": "Dimir Operative",
 					"source": "GGR"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Mask of Many Faces",
+					"source": "PHB"
+				}
 			]
 		},
 		{
@@ -10546,9 +10865,9 @@
 				}
 			],
 			"entries": [
-				"A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by wall of force.",
+				"A thin green ray springs from your pointing finger to a target that you can see within range. The target can be a creature, an object, or a creation of magical force, such as the wall created by {@spell wall of force}.",
 				"A creature targeted by this spell must make a Dexterity saving throw. On a failed save, the target takes {@damage 10d6 + 40} force damage. The target is disintegrated if this damage leaves it with 0 hit points.",
-				"A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a true resurrection or a {@spell wish} spell.",
+				"A disintegrated creature and everything it is wearing and carrying, except magic items, are reduced to a pile of fine gray dust. The creature can be restored to life only by means of a {@spell true resurrection} or a {@spell wish} spell.",
 				"This spell automatically disintegrates a Large or smaller nonmagical object or a creation of magical force. If the target is a Huge or larger object or creation of force, this spell disintegrates a 10-foot-cube portion of it. A magic item is unaffected by this spell."
 			],
 			"entriesHigherLevel": [
@@ -11877,7 +12196,7 @@
 					"type": "entries",
 					"name": "Structures",
 					"entries": [
-						"The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes {@damage 5d6} bludgeoning damage, is knocked {@condition prone}, and is buried in the rubble, requiring a DC 20 Strength (Athletics) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall {@condition prone} or become buried."
+						"The tremor deals 50 bludgeoning damage to any structure in contact with the ground in the area when you cast the spell and at the start of each of your turns until the spell ends. If a structure drops to 0 hit points, it collapses and potentially damages nearby creatures. A creature within half the distance of a structure's height must make a Dexterity saving throw. On a failed save, the creature takes {@damage 5d6} bludgeoning damage, is knocked {@condition prone}, and is buried in the rubble, requiring a DC 20 Strength ({@skill Athletics}) check as an action to escape. The DM can adjust the DC higher or lower, depending on the nature of the rubble. On a successful save, the creature takes half as much damage and doesn't fall {@condition prone} or become buried."
 					]
 				}
 			],
@@ -11891,7 +12210,7 @@
 				"constitution",
 				"dexterity"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"miscTags": [
@@ -11970,7 +12289,13 @@
 						"source": "PHB"
 					}
 				]
-			}
+			},
+			"eldritchInvocations": [
+				{
+					"name": "Repelling Blast",
+					"source": "PHB"
+				}
+			]
 		},
 		{
 			"name": "Elemental Weapon",
@@ -12210,6 +12535,9 @@
 					]
 				}
 			],
+			"miscTags": [
+				"THP"
+			],
 			"areaTags": [
 				"ST"
 			],
@@ -12283,6 +12611,16 @@
 						"subclass": {
 							"name": "Order (UA)",
 							"source": "UAOrderDomain"
+						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
 						}
 					}
 				],
@@ -12410,6 +12748,16 @@
 							"name": "Destruction (Twitter)",
 							"source": "Twitter"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -12497,7 +12845,7 @@
 			"savingThrow": [
 				"strength"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"classes": {
@@ -12576,7 +12924,7 @@
 			"savingThrow": [
 				"strength"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"areaTags": [
@@ -12670,7 +13018,7 @@
 				}
 			],
 			"entries": [
-				"You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw. Any creature that can't be {@condition charmed} succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom (Perception) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are {@condition incapacitated} or can no longer speak."
+				"You weave a distracting string of words, causing creatures of your choice that you can see within range and that can hear you to make a Wisdom saving throw. Any creature that can't be {@condition charmed} succeeds on this saving throw automatically, and if you or your companions are fighting a creature, it has advantage on the save. On a failed save, the target has disadvantage on Wisdom ({@skill Perception}) checks made to perceive any creature other than you until the spell ends or until the target can no longer hear you. The spell ends if you are {@condition incapacitated} or can no longer speak."
 			],
 			"savingThrow": [
 				"wisdom"
@@ -12863,7 +13211,7 @@
 			"savingThrow": [
 				"dexterity"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength",
 				"dexterity"
 			],
@@ -13402,6 +13750,9 @@
 					]
 				}
 			],
+			"miscTags": [
+				"THP"
+			],
 			"classes": {
 				"fromClassList": [
 					{
@@ -13475,9 +13826,25 @@
 							"name": "Grave",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
+						}
 					}
 				]
-			}
+			},
+			"eldritchInvocations": [
+				{
+					"name": "Fiendish Vigor",
+					"source": "PHB"
+				}
+			]
 		},
 		{
 			"name": "Fear",
@@ -13925,15 +14292,15 @@
 				"{@note Additional {@filter animal form choices|bestiary|Miscellaneous=Familiar} may be available at the DM's discretion.}",
 				"Your familiar acts independently of you, but it always obeys your commands. In combat, it rolls its own initiative and acts on its own turn. A familiar can't attack, but it can take other actions as normal.",
 				"When the familiar drops to 0 hit points, it disappears, leaving behind no physical form. It reappears after you cast this spell again.",
-				"While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are deaf and blind with regard to your own senses.",
+				"While your familiar is within 100 feet of you, you can communicate with it telepathically. Additionally, as an action, you can see through your familiar's eyes and hear what it hears until the start of your next turn, gaining the benefits of any special senses that the familiar has. During this time, you are {@condition deafened||deaf} and {@condition blinded||blind} with regard to your own senses.",
 				"As an action, you can temporarily dismiss your familiar. It disappears into a pocket dimension where it awaits your summons. Alternatively, you can dismiss it forever. As an action while it is temporarily dismissed, you can cause it to reappear in any unoccupied space within 30 feet of you.",
 				"You can't have more than one familiar at a time. If you cast this spell while you already have a familiar, you instead cause it to adopt a new form. Choose one of the forms from the above list. Your familiar transforms into the chosen creature.",
 				"Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast it. If the spell requires an attack roll, you use your attack modifier for the roll."
 			],
 			"miscTags": [
 				"PRM",
-				"SMN",
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassList": [
@@ -14161,7 +14528,8 @@
 			],
 			"miscTags": [
 				"PRM",
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"areaTags": [
 				"ST"
@@ -14406,6 +14774,17 @@
 							"name": "Armorer (UA)",
 							"source": "UA2020SubclassesPt3"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Efreeti"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -14612,9 +14991,26 @@
 							"name": "Artillerist",
 							"source": "ERLW"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Efreeti"
+						}
 					}
 				]
-			}
+			},
+			"eldritchInvocations": [
+				{
+					"name": "Kiss of Mephistopheles",
+					"source": "UAWarlockAndWizard"
+				}
+			]
 		},
 		{
 			"name": "Flame Blade",
@@ -14845,6 +15241,27 @@
 							"name": "Wildfire (UA)",
 							"source": "UAClericDruidWizard"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Efreeti"
+						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -15056,6 +15473,7 @@
 				"constitution"
 			],
 			"miscTags": [
+				"PRM",
 				"SGT"
 			],
 			"areaTags": [
@@ -15251,6 +15669,27 @@
 							"source": "UAGiantSoulSorcerer",
 							"subSubclass": "Cloud"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Marid"
+						}
 					}
 				]
 			},
@@ -15307,7 +15746,7 @@
 				"ritual": true
 			},
 			"entries": [
-				"You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can't teleport into the area or use portals, such as those created by the gate spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the plane shift spell.",
+				"You create a ward against magical travel that protects up to 40,000 square feet of floor space to a height of 30 feet above the floor. For the duration, creatures can't teleport into the area or use portals, such as those created by the {@spell gate} spell, to enter the area. The spell proofs the area against planar travel, and therefore prevents creatures from accessing the area by way of the Astral Plane, Ethereal Plane, Feywild, Shadowfell, or the plane shift spell.",
 				"In addition, the spell damages types of creatures that you choose when you cast it. Choose one or more of the following: celestials, elementals, fey, fiends, and undead. When a chosen creature enters the spell's area for the first time on a turn or starts its turn there, the creature takes {@damage 5d10} radiant or necrotic damage (your choice when you cast this spell).",
 				"When you cast this spell, you can designate a password. A creature that speaks the password as it enters the area takes no damage from the spell.",
 				"The spell's area can't overlap with the area of another forbiddance spell. If you cast forbiddance every day for 30 days in the same location, the spell lasts until it is dispelled, and the material components are consumed on the last casting."
@@ -15619,6 +16058,16 @@
 							"name": "Zeal (PSA)",
 							"source": "PSA"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
+						}
 					}
 				]
 			},
@@ -15638,6 +16087,12 @@
 				{
 					"name": "Simic Scientist",
 					"source": "GGR"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Trickster's Escape",
+					"source": "XGE"
 				}
 			]
 		},
@@ -16438,7 +16893,7 @@
 			],
 			"entries": [
 				"When you cast this spell, you inscribe a glyph that later unleashes a magical effect. You inscribe it either on a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.",
-				"The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.",
+				"The glyph is nearly invisible and requires a successful Intelligence ({@skill Investigation}) check against your spell save DC to be found.",
 				"You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.",
 				"You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password.",
 				"When you inscribe the glyph, choose explosive runes or a spell glyph.",
@@ -16476,7 +16931,7 @@
 			"savingThrow": [
 				"dexterity"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"areaTags": [
@@ -16909,6 +17364,27 @@
 							"name": "Armorer (UA)",
 							"source": "UA2020SubclassesPt3"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Djinni"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
+						}
 					}
 				]
 			},
@@ -17255,7 +17731,7 @@
 					"type": "entries",
 					"name": "Doors",
 					"entries": [
-						"All doors in the warded area are magically locked, as if sealed by an {@spell arcane lock} spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the minor illusion spell) to make them appear as plain sections of wall."
+						"All doors in the warded area are magically locked, as if sealed by an {@spell arcane lock} spell. In addition, you can cover up to ten doors with an illusion (equivalent to the illusory object function of the {@spell minor illusion} spell) to make them appear as plain sections of wall."
 					]
 				},
 				{
@@ -17451,6 +17927,16 @@
 							"name": "Celestial",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
+						}
 					}
 				]
 			},
@@ -17563,6 +18049,17 @@
 						"subclass": {
 							"name": "Lurker in the Deep (UA)",
 							"source": "UASorcererAndWarlock"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Djinni"
 						}
 					}
 				],
@@ -17802,6 +18299,16 @@
 							"name": "Fiend",
 							"source": "PHB"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
 			},
@@ -17850,9 +18357,9 @@
 			],
 			"entries": [
 				"You make natural terrain in a 150-foot cube in range look, sound, and smell like some other sort of natural terrain. Thus, open fields or a road can be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road. Manufactured structures, equipment, and creatures within the area aren't changed in appearance.",
-				"The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence (Investigation) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain."
+				"The tactile characteristics of the terrain are unchanged, so creatures entering the area are likely to see through the illusion. If the difference isn't obvious by touch, a creature carefully examining the illusion can attempt an Intelligence ({@skill Investigation}) check against your spell save DC to disbelieve it. A creature who discerns the illusion for what it is, sees it as a vague image superimposed on the terrain."
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"areaTags": [
@@ -18092,6 +18599,16 @@
 							"name": "Horizon Walker",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
+						}
 					}
 				]
 			},
@@ -18132,7 +18649,7 @@
 				}
 			],
 			"entries": [
-				"Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends blindness, deafness, and any diseases affecting the target. This spell has no effect on constructs or undead."
+				"Choose a creature that you can see within range. A surge of positive energy washes through the creature, causing it to regain 70 hit points. This spell also ends {@condition blinded||blindness}, {@condition deafened||deafness}, and any diseases affecting the target. This spell has no effect on constructs or undead."
 			],
 			"entriesHigherLevel": [
 				{
@@ -18588,6 +19105,9 @@
 					]
 				}
 			],
+			"miscTags": [
+				"THP"
+			],
 			"areaTags": [
 				"ST"
 			],
@@ -18683,6 +19203,16 @@
 							"name": "Love (UA)",
 							"source": "UA2020SubclassesPt2"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
+						}
 					}
 				]
 			},
@@ -18776,6 +19306,12 @@
 					"source": "PSZ",
 					"baseName": "Elf (Zendikar)",
 					"baseSource": "PSZ"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Relentless Hex",
+					"source": "XGE"
 				}
 			]
 		},
@@ -18927,9 +19463,25 @@
 							"name": "Love (UA)",
 							"source": "UA2020SubclassesPt2"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
-			}
+			},
+			"eldritchInvocations": [
+				{
+					"name": "Chains of Carceri",
+					"source": "PHB"
+				}
+			]
 		},
 		{
 			"name": "Hold Person",
@@ -19176,7 +19728,7 @@
 				"constitution"
 			],
 			"areaTags": [
-				"R"
+				"S"
 			],
 			"classes": {
 				"fromClassList": [
@@ -19293,7 +19845,7 @@
 				}
 			],
 			"entries": [
-				"You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra {@damage 1d6} damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom (Perception) or Wisdom (Survival) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature."
+				"You choose a creature you can see within range and mystically mark it as your quarry. Until the spell ends, you deal an extra {@damage 1d6} damage to the target whenever you hit it with a weapon attack, and you have advantage on any Wisdom ({@skill Perception}) or Wisdom ({@skill Survival}) check you make to find it. If the target drops to 0 hit points before this spell ends, you can use a bonus action on a subsequent turn of yours to mark a new creature."
 			],
 			"entriesHigherLevel": [
 				{
@@ -19304,7 +19856,7 @@
 					]
 				}
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"wisdom"
 			],
 			"miscTags": [
@@ -19768,7 +20320,7 @@
 				"You write on parchment, paper, or some other suitable writing material and imbue it with a potent illusion that lasts for the duration.",
 				"To you and any creatures you designate when you cast the spell, the writing appears normal, written in your hand, and conveys whatever meaning you intended when you wrote the text. To all others, the writing appears as if it were written in an unknown or magical script that is unintelligible. Alternatively, you can cause the writing to appear to be an entirely different message, written in a different hand and language, though the language must be one you know.",
 				"Should the spell be dispelled, the original script and the illusion both disappear.",
-				"A creature with truesight can read the hidden message."
+				"A creature with {@sense truesight} can read the hidden message."
 			],
 			"classes": {
 				"fromClassList": [
@@ -20449,6 +21001,12 @@
 					"baseName": "Elf",
 					"baseSource": "PHB"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Shroud of Shadow",
+					"source": "XGE"
+				}
 			]
 		},
 		{
@@ -20485,7 +21043,7 @@
 				}
 			],
 			"entries": [
-				"You touch a creature. The creature's jump distance is tripled until the spell ends."
+				"You touch a creature. The creature's {@book jump distance|phb|8|Jumping} is tripled until the spell ends."
 			],
 			"areaTags": [
 				"ST"
@@ -20569,6 +21127,12 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Otherworldly Leap",
+					"source": "PHB"
+				}
 			]
 		},
 		{
@@ -20600,9 +21164,9 @@
 				}
 			],
 			"entries": [
-				"Choose an object that you can see within range. The object can be a door, a box, a chest, a set of manacles, a padlock, or another object that contains a mundane or magical means that prevents access.",
+				"Choose an object that you can see within range. The object can be a door, a box, a {@item chest|phb}, a set of {@item manacles|phb}, a padlock, or another object that contains a mundane or magical means that prevents access.",
 				"A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked.",
-				"If you choose a target that is held shut with arcane lock, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally.",
+				"If you choose a target that is held shut with {@spell arcane lock}, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally.",
 				"When you cast the spell, a loud knock, audible from as far away as 300 feet, emanates from the target object."
 			],
 			"miscTags": [
@@ -20895,6 +21459,18 @@
 						"name": "Wizard",
 						"source": "PHB"
 					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Cleric",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Twilight (UA)",
+							"source": "UAClericDruidWizard"
+						}
+					}
 				]
 			},
 			"races": [
@@ -21130,6 +21706,12 @@
 					"source": "ERLW",
 					"baseName": "Half-Elf",
 					"baseSource": "PHB"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Ascendant Step",
+					"source": "PHB"
 				}
 			]
 		},
@@ -21549,7 +22131,7 @@
 			],
 			"entries": [
 				"Describe or name a creature that is familiar to you. You sense the direction to the creature's location, as long as that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.",
-				"The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close\u2014within 30 feet\u2014at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn't locate the creature.",
+				"The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a {@creature unicorn}), so long as you have seen such a creature up close\u2014within 30 feet\u2014at least once. If the creature you described or named is in a different form, such as being under the effects of a {@spell polymorph} spell, this spell doesn't locate the creature.",
 				"This spell can't locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature."
 			],
 			"classes": {
@@ -21925,6 +22507,12 @@
 					"baseName": "Dwarf",
 					"baseSource": "PHB"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Armor of Shadows",
+					"source": "PHB"
+				}
 			]
 		},
 		{
@@ -22259,7 +22847,7 @@
 			],
 			"entries": [
 				"Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or use reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoids body.",
-				"You can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a protection from evil and good or magic circle spell can't be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.",
+				"You can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a {@spell protection from evil and good} or {@spell magic circle} spell can't be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.",
 				"Once you possess a creature's body, you control it. Your game statistics are replaced by the statistics of the creature, though you retain your alignment and your Intelligence, Wisdom, and Charisma scores. You retain the benefit of your own class features. If the target has any class levels, you can't use any of its class features.",
 				"Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move or take actions at all.",
 				"While possessing a body, you can use your action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you must make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.",
@@ -22602,6 +23190,16 @@
 							"name": "Forge",
 							"source": "XGE"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -22656,9 +23254,9 @@
 				}
 			],
 			"entries": [
-				"You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a troglodyte's stench).",
+				"You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a {@creature troglodyte||troglodyte's} stench).",
 				"As long as you are within range of the illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.",
-				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature."
+				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature."
 			],
 			"entriesHigherLevel": [
 				{
@@ -22669,7 +23267,7 @@
 					]
 				}
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"miscTags": [
@@ -23009,9 +23607,6 @@
 					]
 				}
 			],
-			"conditionInflict": [
-				"charmed"
-			],
 			"savingThrow": [
 				"wisdom"
 			],
@@ -23078,7 +23673,7 @@
 			],
 			"entries": [
 				"You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze.",
-				"The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a minotaur or goristro demon automatically succeeds).",
+				"The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a {@creature minotaur} or {@creature goristro} demon automatically succeeds).",
 				"When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space."
 			],
 			"miscTags": [
@@ -23139,7 +23734,7 @@
 			},
 			"entries": [
 				"You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.",
-				"While merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move.",
+				"While merged with the stone, you can't see what occurs outside it, and any Wisdom ({@skill Perception}) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move.",
 				"Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals {@damage 6d6} bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall {@condition prone} in an unoccupied space closest to where you first entered."
 			],
 			"damageInflict": [
@@ -23169,6 +23764,17 @@
 							"name": "Land",
 							"source": "PHB",
 							"subSubclass": "Mountain"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Dao"
 						}
 					}
 				],
@@ -23570,9 +24176,6 @@
 			"damageImmune": [
 				"psychic"
 			],
-			"damageInflict": [
-				"psychic"
-			],
 			"classes": {
 				"fromClassList": [
 					{
@@ -23623,9 +24226,9 @@
 				"You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.",
 				"If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.",
 				"If you create an image of an object\u2014such as a chair, muddy footprints, or a small chest\u2014it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.",
-				"If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature."
+				"If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature."
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"classes": {
@@ -23730,7 +24333,7 @@
 				"You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. The terrain's general shape remains the same, however. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road.",
 				"Similarly, you can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal, or add creatures.",
 				"The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately.",
-				"Creatures with truesight can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
+				"Creatures with {@sense truesight} can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
 			],
 			"classes": {
 				"fromClassList": [
@@ -23786,7 +24389,7 @@
 				"Each time a creature targets you with an attack during the spell's duration, roll a {@dice d20} to determine whether the attack instead targets one of your duplicates.",
 				"If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.",
 				"A duplicate's AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed.",
-				"A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with truesight."
+				"A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with {@sense truesight}."
 			],
 			"classes": {
 				"fromClassList": [
@@ -24322,6 +24925,16 @@
 							"name": "Ancients",
 							"source": "PHB"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
 			}
@@ -24516,6 +25129,9 @@
 			],
 			"miscTags": [
 				"PRM"
+			],
+			"areaTags": [
+				"C"
 			],
 			"classes": {
 				"fromClassList": [
@@ -24753,6 +25369,16 @@
 							"name": "Knowledge (PSA)",
 							"source": "PSA"
 						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Watchers (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
 			},
@@ -24811,7 +25437,7 @@
 					"type": "entries",
 					"name": "False Aura",
 					"entries": [
-						"You change the way the target appears to spells and magical effects, such as detect magic, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item."
+						"You change the way the target appears to spells and magical effects, such as {@spell detect magic}, that detect magical auras. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a specific school of magic that you choose. When you use this effect on an object, you can make the false magic apparent to any creature that handles the item."
 					]
 				},
 				{
@@ -24899,7 +25525,7 @@
 			"savingThrow": [
 				"constitution"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"areaTags": [
@@ -25336,7 +25962,7 @@
 			"entries": [
 				"You craft an illusion that takes root in the mind of a creature that you can see within range. The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.",
 				"The phantasm includes sound, temperature, and other stimuli, also evident only to the creature.",
-				"The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.",
+				"The target can use its action to examine the phantasm with an Intelligence ({@skill Investigation}) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.",
 				"While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall\u2014it was pushed, it slipped, or a strong wind might have knocked it off.",
 				"An affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal {@damage 1d6} psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion."
 			],
@@ -25346,7 +25972,7 @@
 			"savingThrow": [
 				"intelligence"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"miscTags": [
@@ -25386,6 +26012,36 @@
 						"subclass": {
 							"name": "Great Old One",
 							"source": "PHB"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
 						}
 					}
 				]
@@ -25489,6 +26145,26 @@
 							"name": "Archivist",
 							"source": "UAArtificerRevisited"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -25547,6 +26223,18 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
+						}
 					}
 				]
 			},
@@ -25647,7 +26335,7 @@
 				}
 			],
 			"entries": [
-				"With this spell, you attempt to bind a {@filter celestial|bestiary|type=celestial|miscellaneous=!swarm}, an {@filter elemental|bestiary|type=elemental|miscellaneous=!swarm}, a {@filter fey|bestiary|type=fey|miscellaneous=!swarm}, or a {@filter fiend|bestiary|type=fiend|miscellaneous=!swarm} to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of an inverted magic circle in order to keep it trapped while this spell is cast.) At the completion of the casting, the target must make a Charisma saving throw. On a failed save, it is bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell.",
+				"With this spell, you attempt to bind a {@filter celestial|bestiary|type=celestial|miscellaneous=!swarm}, an {@filter elemental|bestiary|type=elemental|miscellaneous=!swarm}, a {@filter fey|bestiary|type=fey|miscellaneous=!swarm}, or a {@filter fiend|bestiary|type=fiend|miscellaneous=!swarm} to your service. The creature must be within range for the entire casting of the spell. (Typically, the creature is first summoned into the center of an inverted {@spell magic circle} in order to keep it trapped while this spell is cast.) At the completion of the casting, the target must make a Charisma saving throw. On a failed save, it is bound to serve you for the duration. If the creature was summoned or created by another spell, that spell's duration is extended to match the duration of this spell.",
 				"A bound creature must follow your instructions to the best of its ability. You might command the creature to accompany you on an adventure, to guard a location, or to deliver a message. The creature obeys the letter of your instructions, but if the creature is hostile to you, it strives to twist your words to achieve its own objectives. If the creature carries out your instructions completely before the spell ends, it travels to you to report this fact if you are on the same plane of existence. If you are on a different plane of existence, it returns to the place where you bound it and remains there until the spell ends."
 			],
 			"entriesHigherLevel": [
@@ -26108,6 +26796,16 @@
 							"name": "Trickery",
 							"source": "PHB"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
 			},
@@ -26115,6 +26813,12 @@
 				{
 					"name": "Simic Scientist",
 					"source": "GGR"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Sculptor of Flesh",
+					"source": "PHB"
 				}
 			]
 		},
@@ -26854,9 +27558,9 @@
 				"You create an illusion of an object, a creature, or some other visible phenomenon within range that activates when a specific condition occurs. The illusion is imperceptible until then. It must be no larger than a 30-foot cube, and you decide when you cast the spell how the illusion behaves and what sounds it makes. This scripted performance can last up to 5 minutes.",
 				"When the condition you specify occurs, the illusion springs into existence and performs in the manner you described. Once the illusion finishes performing, it disappears and remains dormant for 10 minutes. After this time, the illusion can be activated again.",
 				"The triggering condition can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the area. For example, you could create an illusion of yourself to appear and warn off others who attempt to open a trapped door, or you could set the illusion to trigger only when a creature says the correct word or phrase.",
-				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
+				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"classes": {
@@ -26914,13 +27618,13 @@
 				"You create an illusory copy of yourself that lasts for the duration. The copy can appear at any location within range that you have seen before, regardless of intervening obstacles. The illusion looks and sounds like you but is intangible. If the illusion takes any damage, it disappears, and the spell ends.",
 				"You can use your action to move this illusion up to twice your speed, and make it gesture, speak, and behave in whatever way you choose. It mimics your mannerisms perfectly.",
 				"You can see through its eyes and hear through its ears as if you were in its space. On your turn as a bonus action, you can switch from using its senses to using your own, or back again. While you are using its senses, you are {@condition blinded} and {@condition deafened} in regard to your own surroundings.",
-				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
+				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and any noise it makes sounds hollow to the creature."
 			],
 			"conditionInflict": [
 				"blinded",
 				"deafened"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"miscTags": [
@@ -27116,6 +27820,26 @@
 						"subclass": {
 							"name": "Horizon Walker (UA)",
 							"source": "UARangerAndRogue"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
+					},
+					{
+						"class": {
+							"name": "Paladin",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Glory",
+							"source": "MOT"
 						}
 					}
 				]
@@ -28329,6 +29053,9 @@
 				},
 				"The reincarnated creature recalls its former life and experiences. It retains the capabilities it had in its original form, except it exchanges its original race for the new one and changes its racial traits accordingly."
 			],
+			"miscTags": [
+				"HL"
+			],
 			"classes": {
 				"fromClassList": [
 					{
@@ -29008,6 +29735,17 @@
 							"name": "Raven Queen (UA)",
 							"source": "UAWarlockAndWizard"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Dao"
+						}
 					}
 				]
 			}
@@ -29124,6 +29862,17 @@
 						"subclass": {
 							"name": "Artillerist",
 							"source": "ERLW"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Efreeti"
 						}
 					}
 				]
@@ -29574,12 +30323,12 @@
 				"This spell allows you to change the appearance of any number of creatures that you can see within range. You give each target you choose a new, illusory appearance. An unwilling target can make a Charisma saving throw, and if it succeeds, it is unaffected by this spell.",
 				"The spell disguises physical appearance as well as clothing, armor, weapons, and equipment. You can make each creature seem 1 foot shorter or taller and appear thin, fat, or in between. You can't change a target's body type, so you must choose a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you. The spell lasts for the duration, unless you use your action to dismiss it sooner.",
 				"The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to a creature's outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel the creature's head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.",
-				"A creature can use its action to inspect a target and make an Intelligence (Investigation) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised."
+				"A creature can use its action to inspect a target and make an Intelligence ({@skill Investigation}) check against your spell save DC. If it succeeds, it becomes aware that the target is disguised."
 			],
 			"savingThrow": [
 				"charisma"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"miscTags": [
@@ -29652,6 +30401,17 @@
 						"subclass": {
 							"name": "Gloom Stalker",
 							"source": "XGE"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Djinni"
 						}
 					}
 				]
@@ -29758,6 +30518,12 @@
 					"source": "ERLW",
 					"baseName": "Gnome",
 					"baseSource": "PHB"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Far Scribe",
+					"source": "UAClassFeatureVariants"
 				}
 			]
 		},
@@ -30574,9 +31340,9 @@
 			"entries": [
 				"You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 15-foot cube. The image appears at a spot within range and lasts for the duration. The image is purely visual; it isn't accompanied by sound, smell, or other sensory effects.",
 				"You can use your action to cause the image to move to any spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking.",
-				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence (Investigation) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image."
+				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image."
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"classes": {
@@ -30601,6 +31367,12 @@
 					"source": "ERLW",
 					"baseName": "Elf",
 					"baseSource": "PHB"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Misty Visions",
+					"source": "PHB"
 				}
 			]
 		},
@@ -30645,6 +31417,9 @@
 				"The simulacrum is friendly to you and creatures you designate. It obeys your spoken commands, moving and acting in accordance with your wishes and acting on your turn in combat. The simulacrum lacks the ability to learn or become more powerful, so it never increases its level or other abilities, nor can it regain expended spell slots.",
 				"If the simulacrum is damaged, you can repair it in an alchemical laboratory, using rare herbs and minerals worth 100 gp per hit point it regains. The simulacrum lasts until it drops to 0 hit points, at which point it reverts to snow and melts instantly.",
 				"If you cast this spell again, any currently active duplicates you created with this spell are instantly destroyed."
+			],
+			"areaTags": [
+				"ST"
 			],
 			"classes": {
 				"fromClassList": [
@@ -30764,6 +31539,16 @@
 							"name": "Twilight (UA)",
 							"source": "UAClericDruidWizard"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Noble Genie (UA)",
+							"source": "UA2020SubclassesPt1"
+						}
 					}
 				]
 			},
@@ -30878,6 +31663,17 @@
 							"name": "Lurker in the Deep (UA)",
 							"source": "UASorcererAndWarlock"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Marid"
+						}
 					}
 				]
 			},
@@ -30932,8 +31728,7 @@
 				"A creature affected by this spell makes another Wisdom saving throw at the end of each of its turns. On a successful save, the effect ends for it."
 			],
 			"savingThrow": [
-				"wisdom",
-				"dexterity"
+				"wisdom"
 			],
 			"areaTags": [
 				"MT",
@@ -30999,7 +31794,13 @@
 						"source": "PHB"
 					}
 				]
-			}
+			},
+			"eldritchInvocations": [
+				{
+					"name": "Mire the Mind",
+					"source": "PHB"
+				}
+			]
 		},
 		{
 			"name": "Spare the Dying",
@@ -31171,6 +31972,12 @@
 					"name": "Gruul Anarch",
 					"source": "GGR"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Beast Speech",
+					"source": "PHB"
+				}
 			]
 		},
 		{
@@ -31262,6 +32069,16 @@
 							"name": "Raven Queen (UA)",
 							"source": "UAWarlockAndWizard"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead (UA)",
+							"source": "UA2020SubclassesPt4"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -31275,6 +32092,12 @@
 				{
 					"name": "Orzhov Representative",
 					"source": "GGR"
+				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Whispers of the Grave",
+					"source": "PHB"
 				}
 			]
 		},
@@ -31507,12 +32330,12 @@
 			],
 			"entries": [
 				"The ground in a 20-foot radius centered on a point within range twists and sprouts hard spikes and thorns. The area becomes difficult terrain for the duration. When a creature moves into or within the area, it takes {@damage 2d4} piercing damage for every 5 feet it travels.",
-				"The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is cast must make a Wisdom (Perception) check against your spell save DC to recognize the terrain as hazardous before entering it."
+				"The transformation of the ground is camouflaged to look natural. Any creature that can't see the area at the time the spell is cast must make a Wisdom ({@skill Perception}) check against your spell save DC to recognize the terrain as hazardous before entering it."
 			],
 			"damageInflict": [
 				"piercing"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"wisdom"
 			],
 			"areaTags": [
@@ -31571,6 +32394,17 @@
 							"name": "Giant Soul (UA)",
 							"source": "UAGiantSoulSorcerer",
 							"subSubclass": "Stone"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Dao"
 						}
 					}
 				]
@@ -32095,6 +32929,17 @@
 							"name": "Land",
 							"source": "PHB",
 							"subSubclass": "Underdark"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Dao"
 						}
 					}
 				]
@@ -32713,7 +33558,7 @@
 			],
 			"entries": [
 				"When you cast this spell, you inscribe a harmful glyph either on a surface (such as a section of floor, a wall, or a table) or within an object that can be closed to conceal the glyph (such as a book, a scroll, or a treasure chest). If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If you choose an object, that object must remain in its place; if the object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.",
-				"The glyph is nearly invisible, requiring an Intelligence (Investigation) check against your spell save DC to find it.",
+				"The glyph is nearly invisible, requiring an Intelligence ({@skill Investigation}) check against your spell save DC to find it.",
 				"You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or stepping on the glyph, removing another object covering it, approaching within a certain distance of it, or manipulating the object that holds it. For glyphs inscribed within an object, the most common triggers are opening the object, approaching within a certain distance of it, or seeing or reading the glyph.",
 				"You can further refine the trigger so the spell is activated only under certain circumstances or according to a creature's physical characteristics (such as height or weight), or physical kind (for example, the ward could be set to affect hags or shapechangers). You can also specify creatures that don't trigger the glyph, such as those who say a certain password.",
 				"When you inscribe the glyph, choose one of the options below for its effect. Once triggered, the glyph glows, filling a 60-foot-radius sphere with dim light for 10 minutes, after which time the spell ends. Each creature in the sphere when the glyph activates is targeted by its effect, as is a creature that enters the sphere for the first time on a turn or ends its turn there.",
@@ -32789,7 +33634,7 @@
 				"charisma",
 				"intelligence"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"intelligence"
 			],
 			"areaTags": [
@@ -33816,6 +34661,17 @@
 							"name": "Artillerist",
 							"source": "ERLW"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Djinni"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -34169,8 +35025,8 @@
 			],
 			"miscTags": [
 				"PRM",
-				"SMN",
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"areaTags": [
 				"ST"
@@ -34287,7 +35143,7 @@
 				}
 			],
 			"entries": [
-				"This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has truesight, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
+				"This spell gives the willing creature you touch the ability to see things as they actually are. For the duration, the creature has {@sense truesight}, notices secret doors hidden by magic, and can see into the Ethereal Plane, all out to a range of 120 feet."
 			],
 			"classes": {
 				"fromClassList": [
@@ -34415,7 +35271,7 @@
 				"A wall of water springs into existence at a point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration.",
 				"When the wall appears, each creature within its area must make a Strength saving throw. On a failed save, a creature takes {@damage 6d10} bludgeoning damage, or half as much damage on a successful save.",
 				"At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a Strength saving throw or take {@damage 5d10} bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by {@dice 1d10}. When the wall reaches 0 feet in height, the spell ends.",
-				"A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength (Athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground."
+				"A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful Strength ({@skill Athletics}) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground."
 			],
 			"damageInflict": [
 				"bludgeoning"
@@ -34423,7 +35279,7 @@
 			"savingThrow": [
 				"strength"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"areaTags": [
@@ -35184,6 +36040,17 @@
 							"source": "PHB",
 							"subSubclass": "Mountain"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Dao"
+						}
 					}
 				]
 			}
@@ -35500,6 +36367,12 @@
 					"name": "Simic Scientist",
 					"source": "GGR"
 				}
+			],
+			"eldritchInvocations": [
+				{
+					"name": "Sea Twins' Gift",
+					"source": "UAWarlockAndWizard"
+				}
 			]
 		},
 		{
@@ -35657,7 +36530,7 @@
 			"savingThrow": [
 				"dexterity"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"strength"
 			],
 			"areaTags": [
@@ -35951,6 +36824,17 @@
 							"name": "Artillerist",
 							"source": "ERLW"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Djinni"
+						}
 					}
 				]
 			},
@@ -36043,6 +36927,18 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Genie (UA)",
+							"source": "UA2020SubclassesRevisited"
+						}
 					}
 				]
 			}
@@ -36203,7 +37099,7 @@
 			"savingThrow": [
 				"wisdom"
 			],
-			"opposedCheck": [
+			"abilityCheck": [
 				"wisdom"
 			],
 			"classes": {

@@ -311,6 +311,7 @@
 				"name": "Bronze Dragon",
 				"source": "MM"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Legendary Resistances",
@@ -346,6 +347,14 @@
 			"conditionInflict": [
 				"frightened",
 				"prone"
+			],
+			"conditionInflictLegendary": [
+				"deafened"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"unconscious"
 			]
 		}
 	]

@@ -189,6 +189,7 @@
 				"name": "Belashyrra",
 				"source": "ERLW"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -218,6 +219,9 @@
 				"charmed",
 				"exhaustion",
 				"stunned"
+			],
+			"conditionInflictLegendary": [
+				"charmed"
 			]
 		},
 		{
@@ -341,6 +345,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -441,6 +446,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -535,6 +541,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"altArt": [
 				{
 					"name": "Clawfoot Raptor",
@@ -588,6 +595,7 @@
 				"average": 21,
 				"formula": "6d6"
 			},
+			"hasToken": true,
 			"languageTags": [
 				"H",
 				"X"
@@ -681,6 +689,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -779,6 +788,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -914,6 +924,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -938,7 +949,9 @@
 			"miscTags": [
 				"MW"
 			],
-			"conditionInflict": [
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated",
 				"unconscious"
 			]
 		},
@@ -1094,6 +1107,7 @@
 				"name": "Dyrrn",
 				"source": "ERLW"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -1123,6 +1137,9 @@
 			"conditionInflict": [
 				"grappled",
 				"stunned"
+			],
+			"conditionInflictLegendary": [
+				"restrained"
 			]
 		},
 		{
@@ -1193,6 +1210,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Flyby"
 			],
@@ -1250,6 +1268,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"damageTags": [
 				"P"
 			],
@@ -1270,7 +1289,8 @@
 				"C",
 				"E"
 			],
-			"int": 14
+			"int": 14,
+			"hasToken": true
 		},
 		{
 			"name": "Hashalaq Quori",
@@ -1376,7 +1396,7 @@
 					"name": "Possession {@recharge}",
 					"entries": [
 						"One humanoid that the quori can see within 5 feet of it must succeed on a {@dc 16} Charisma saving throw or be possessed by the quori; the quori then disappears, and the target is {@condition incapacitated} and loses control of its body. The quori now controls the body but doesn't deprive the target of awareness. The quori can't be targeted by any attack, spell, or other effect, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being {@condition charmed} and {@condition frightened}. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.",
-						"The possession lasts until the body drops to 0 hit points, the quori ends it as a bonus action, or the quori is forced out by an effect like the dispel evil and good spell. When the possession ends, the quori reappears in an unoccupied space within 5 feet of the body. The target is immune to this quori's Possession for 24 hours after succeeding on the saving throw or after the possession ends."
+						"The possession lasts until the body drops to 0 hit points, the quori ends it as a bonus action, or the quori is forced out by an effect like the {@spell dispel evil and good} spell. When the possession ends, the quori reappears in an unoccupied space within 5 feet of the body. The target is immune to this quori's Possession for 24 hours after succeeding on the saving throw or after the possession ends."
 					]
 				}
 			],
@@ -1388,6 +1408,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1408,6 +1429,9 @@
 			"conditionInflict": [
 				"incapacitated",
 				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed"
 			]
 		},
 		{
@@ -1480,7 +1504,7 @@
 				{
 					"name": "Force Strike",
 					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 30 ft., one target you can see. {@h}{@dice 1d4 + 2} force damage."
+						"{@atk rw} {@hit 4} to hit, range 30 ft., one target you can see. {@h}{@damage 1d4 + 2} force damage."
 					]
 				}
 			],
@@ -1614,36 +1638,55 @@
 					"entries": [
 						"The Inspired are vessels for quori spirits, allowing the quori to manifest a portion of their power while the vessel is possessed. An Inspired can gain benefits depending on the type of quori possessing it. The quori also gains access to the Inspired's knowledge and features.",
 						{
-							"type": "entries",
-							"name": "Suggestion (3/Day)",
+							"type": "variantInner",
+							"name": "Hashalaq",
 							"entries": [
-								"The Inspired can cast the {@spell suggestion} spell (spell save DC 13), requiring no material components."
+								{
+									"type": "entries",
+									"name": "Suggestion (3/Day)",
+									"entries": [
+										"The Inspired can cast the {@spell suggestion} spell (spell save {@dc 13}), requiring no material components."
+									]
+								}
 							]
 						},
 						{
-							"type": "entries",
-							"name": "All Around Vision",
+							"type": "variantInner",
+							"name": "Kalaraq",
 							"entries": [
-								"The Inspired can't be surprised."
+								{
+									"type": "entries",
+									"name": "All Around Vision",
+									"entries": [
+										"The Inspired can't be surprised."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Arcane Eye (3/Day)",
+									"entries": [
+										"The Inspired can cast the {@spell arcane eye} spell, requiring no material components."
+									]
+								}
 							]
 						},
 						{
-							"type": "entries",
-							"name": "Arcane Eye (3/Day)",
+							"type": "variantInner",
+							"name": "Tsucora",
 							"entries": [
-								"The Inspired can cast the {@spell arcane eye} spell, requiring no material components."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Fear (1/Day)",
-							"entries": [
-								"The Inspired can cast the {@spell fear} spell (spell save DC 13), requiring no material components."
+								{
+									"type": "entries",
+									"name": "Fear (1/Day)",
+									"entries": [
+										"The Inspired can cast the {@spell fear} spell (spell save {@dc 13}), requiring no material components."
+									]
+								}
 							]
 						}
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -1695,7 +1738,7 @@
 			"wis": 11,
 			"cha": 7,
 			"skill": {
-				"perception": "+3",
+				"perception": "+4",
 				"stealth": "+4"
 			},
 			"senses": [
@@ -1735,6 +1778,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -1816,7 +1860,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -1898,7 +1943,7 @@
 					"name": "Mind Seed (1/Day)",
 					"entries": [
 						"The quori touches one humanoid, which must succeed on a {@dc 21} Intelligence saving throw or be cursed. The curse lasts until it's removed by a remove curse or greater restoration spell.",
-						"The cursed target suffers 1 level of {@condition exhaustion} every 24 hours, and finishing a long rest doesn't reduce its {@condition exhaustion}. If the cursed target reaches {@condition exhaustion} level 6, it doesn't die; it instead becomes a thrall under the quori's control, and all its {@condition exhaustion} is removed. Only the wish spell can free the thrall from this control."
+						"The cursed target suffers 1 level of {@condition exhaustion} every 24 hours, and finishing a long rest doesn't reduce its {@condition exhaustion}. If the cursed target reaches {@condition exhaustion} level 6, it doesn't die; it instead becomes a thrall under the quori's control, and all its {@condition exhaustion} is removed. Only the {@spell wish} spell can free the thrall from this control."
 					]
 				},
 				{
@@ -1911,10 +1956,11 @@
 					"name": "Possession {@recharge}",
 					"entries": [
 						"One humanoid that the quori can see within 5 feet of it must succeed on a {@dc 21} Charisma saving throw or be possessed by the quori; the quori then disappears, and the target is {@condition incapacitated} and loses control of its body. The quori now controls the body but doesn't deprive the target of awareness. The quori can't be targeted by any attack, spell, or other effect, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being {@condition charmed} and {@condition frightened}. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.",
-						"The possession lasts until the body drops to 0 hit points, the quori ends it as a bonus action, or the quori is forced out by an effect like the dispel evil and good spell. When the possession ends, the quori reappears in an unoccupied space within 5 feet of the body. The target is immune to this quori's Possession for 24 hours after succeeding on the saving throw or after the possession ends."
+						"The possession lasts until the body drops to 0 hit points, the quori ends it as a bonus action, or the quori is forced out by an effect like the {@spell dispel evil and good} spell. When the possession ends, the quori reappears in an unoccupied space within 5 feet of the body. The target is immune to this quori's Possession for 24 hours after succeeding on the saving throw or after the possession ends."
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement",
 				"Magic Resistance"
@@ -1944,6 +1990,10 @@
 			"conditionInflict": [
 				"blinded",
 				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"unconscious"
 			]
 		},
 		{
@@ -2012,6 +2062,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"TP"
@@ -2120,6 +2171,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics",
 				"Undead Fortitude"
@@ -2205,7 +2257,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -2386,6 +2439,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -2416,6 +2470,13 @@
 				"frightened",
 				"paralyzed",
 				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"paralyzed",
+				"petrified",
+				"restrained",
+				"unconscious"
 			]
 		},
 		{
@@ -2460,7 +2521,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2505,6 +2567,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amorphous",
 				"Magic Resistance"
@@ -2561,7 +2624,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2613,6 +2677,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amorphous",
 				"Magic Resistance"
@@ -2672,7 +2737,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2723,6 +2789,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amorphous",
 				"Magic Resistance"
@@ -2788,8 +2855,8 @@
 						"{@spell mage hand}",
 						"{@spell prestidigitation}"
 					],
-					"footerEntries": [
-						"Rituals: knock"
+					"ritual": [
+						"{@spell knock}"
 					],
 					"ability": "int"
 				}
@@ -2802,6 +2869,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -2870,7 +2938,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"vulnerable": [
@@ -2878,7 +2947,8 @@
 					"vulnerable": [
 						"piercing"
 					],
-					"note": "from magic weapons wielded by good creatures"
+					"note": "from magic weapons wielded by good creatures",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -2959,6 +3029,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3033,7 +3104,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -3104,6 +3176,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -3129,6 +3202,9 @@
 				"MW"
 			],
 			"conditionInflict": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
 				"charmed"
 			]
 		},
@@ -3200,7 +3276,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -3310,6 +3387,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -3343,7 +3421,8 @@
 			"_copy": {
 				"name": "Guard",
 				"source": "MM"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Shifter",
@@ -3416,6 +3495,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3500,7 +3580,7 @@
 				{
 					"name": "Force-Empowered Rend",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target you can see. {@h}{@dice 1d8 + 2} force damage."
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target you can see. {@h}{@damage 1d8 + 2} force damage."
 					]
 				},
 				{
@@ -3518,6 +3598,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3592,7 +3673,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -3716,6 +3798,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -3739,6 +3822,12 @@
 			"miscTags": [
 				"AOE",
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"unconscious"
 			]
 		},
 		{
@@ -3847,6 +3936,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -4073,6 +4163,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Charge"
 			],
@@ -4090,13 +4181,13 @@
 				"O",
 				"S"
 			],
+			"spellcastingTags": [
+				"CA"
+			],
 			"miscTags": [
 				"MW",
 				"RCH",
 				"RW"
-			],
-			"conditionInflict": [
-				"prone"
 			]
 		},
 		{
@@ -4201,10 +4292,11 @@
 					"name": "Possession {@recharge}",
 					"entries": [
 						"One humanoid that the quori can see within 5 feet of it must succeed on a {@dc 14} Charisma saving throw or be possessed by the quori; the quori then disappears, and the target is {@condition incapacitated} and loses control of its body. The quori now controls the body but doesn't deprive the target of awareness. The quori can't be targeted by any attack, spell, or other effect, and it retains its alignment, Intelligence, Wisdom, Charisma, and immunity to being {@condition charmed} and {@condition frightened}. It otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.",
-						"The possession lasts until the body drops to 0 hit points, the quori ends it as a bonus action, or the quori is forced out by an effect like the dispel evil and good spell. When the possession ends, the quori reappears in an unoccupied space within 5 feet of the body. The target is immune to this quori's Possession for 24 hours after succeeding on the saving throw or after the possession ends."
+						"The possession lasts until the body drops to 0 hit points, the quori ends it as a bonus action, or the quori is forced out by an effect like the {@spell dispel evil and good} spell. When the possession ends, the quori reappears in an unoccupied space within 5 feet of the body. The target is immune to this quori's Possession for 24 hours after succeeding on the saving throw or after the possession ends."
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -4232,6 +4324,10 @@
 				"frightened",
 				"grappled",
 				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"frightened"
 			]
 		},
 		{
@@ -4428,6 +4524,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -4453,6 +4550,11 @@
 			],
 			"conditionInflict": [
 				"blinded"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"paralyzed",
+				"prone"
 			]
 		},
 		{
@@ -4505,7 +4607,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -4551,6 +4654,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Illumination",
 				"Turn Resistance"
@@ -4634,6 +4738,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -4712,6 +4817,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -4782,6 +4888,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"CS",
@@ -4843,7 +4950,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -4925,6 +5033,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Immutable Form",
 				"Legendary Resistances",
@@ -5042,6 +5151,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -5149,6 +5259,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Siege Monster"
 			],
@@ -5220,7 +5331,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"vulnerable": [
@@ -5228,7 +5340,8 @@
 					"vulnerable": [
 						"piercing"
 					],
-					"note": "from magic weapons wielded by good creatures"
+					"note": "from magic weapons wielded by good creatures",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -5294,6 +5407,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Weapons"
 			],
@@ -5318,9 +5432,6 @@
 				"MW",
 				"RW",
 				"THW"
-			],
-			"conditionInflict": [
-				"prone"
 			]
 		}
 	]

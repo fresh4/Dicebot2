@@ -74,6 +74,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Aggressive",
 				"Siege Monster"
@@ -140,7 +141,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -220,6 +222,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -238,6 +241,9 @@
 			],
 			"conditionInflict": [
 				"charmed",
+				"prone"
+			],
+			"conditionInflictSpell": [
 				"prone"
 			]
 		},
@@ -283,7 +289,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -340,6 +347,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Flyby",
 				"Illumination"
@@ -416,7 +424,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -507,6 +516,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -624,6 +634,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Flyby",
 				"Magic Resistance"
@@ -798,6 +809,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -855,7 +867,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -909,6 +922,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Illumination"
 			],
@@ -985,7 +999,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -1026,6 +1041,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1168,6 +1184,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Devil's Sight"
 			],
@@ -1260,6 +1277,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"GI"
 			],
@@ -1407,6 +1425,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Siege Monster"
@@ -1491,7 +1510,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -1550,6 +1570,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -1630,6 +1651,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1704,6 +1726,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1784,6 +1807,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1926,6 +1950,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -1953,6 +1978,9 @@
 				"RW"
 			],
 			"conditionInflict": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
 				"restrained"
 			]
 		},
@@ -2047,6 +2075,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -2147,6 +2176,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -2218,7 +2248,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -2293,6 +2324,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Flyby",
 				"Magic Resistance"
@@ -2319,6 +2351,10 @@
 			],
 			"conditionInflict": [
 				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"prone"
 			]
 		},
 		{
@@ -2374,7 +2410,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2520,6 +2557,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Regeneration",
@@ -2542,6 +2580,11 @@
 			],
 			"conditionInflict": [
 				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"poisoned",
+				"restrained"
 			]
 		},
 		{
@@ -2684,6 +2727,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Siege Monster"
 			],
@@ -2798,6 +2842,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses",
 				"Pounce"
@@ -2951,6 +2996,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3022,7 +3068,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -3087,6 +3134,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Flyby",
 				"Magic Resistance"
@@ -3199,6 +3247,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -3258,7 +3307,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -3307,6 +3357,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3402,6 +3453,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -3505,6 +3557,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -3617,6 +3670,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"P",
@@ -3680,7 +3734,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -3713,6 +3768,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Death Burst"
 			],
@@ -3779,7 +3835,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -3835,6 +3892,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Flyby",
 				"Sunlight Sensitivity"
@@ -3990,6 +4048,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -4010,6 +4069,10 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"poisoned",
+				"restrained"
 			]
 		},
 		{
@@ -4088,6 +4151,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -4194,6 +4258,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -4275,6 +4340,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -4352,6 +4418,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -4445,6 +4512,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -4536,6 +4604,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Illumination"
 			],
@@ -4631,6 +4700,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Spider Climb"
 			],
@@ -4693,7 +4763,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -4732,6 +4803,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement"
 			],
@@ -4803,7 +4875,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -4973,6 +5046,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -5053,7 +5127,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -5224,6 +5299,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -5254,6 +5330,11 @@
 			],
 			"conditionInflict": [
 				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"poisoned",
+				"restrained",
+				"unconscious"
 			]
 		},
 		{
@@ -5376,6 +5457,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics",
 				"Spider Climb"
@@ -5397,6 +5479,9 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"poisoned"
 			]
 		},
 		{
@@ -5482,6 +5567,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics",
 				"Spider Climb"
@@ -5610,6 +5696,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -5780,6 +5867,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -5802,6 +5890,10 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated"
 			]
 		},
 		{
@@ -5866,7 +5958,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -5939,6 +6032,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -5966,6 +6060,9 @@
 				"THW"
 			],
 			"conditionInflict": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
 				"charmed"
 			]
 		},
@@ -6086,6 +6183,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -6110,6 +6208,11 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"paralyzed",
+				"unconscious"
 			]
 		},
 		{
@@ -6206,6 +6309,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -6275,7 +6379,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -6325,6 +6430,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -6446,6 +6552,7 @@
 								"{@spell blur}",
 								"{@spell enlarge/reduce}",
 								"{@spell flaming sphere}",
+								"{@spell hold person}",
 								"{@spell scorching ray}"
 							]
 						},
@@ -6454,7 +6561,6 @@
 							"spells": [
 								"{@spell counterspell}",
 								"{@spell fireball}",
-								"{@spell hold person}",
 								"{@spell lightning bolt}",
 								"{@spell slow}"
 							]
@@ -6594,6 +6700,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -6625,6 +6732,14 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"paralyzed",
+				"petrified",
+				"restrained",
+				"stunned"
 			]
 		},
 		{
@@ -6712,6 +6827,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -6794,7 +6910,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -6921,6 +7038,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement",
 				"Legendary Resistances"
@@ -7015,6 +7133,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -7127,6 +7246,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"U"
 			],
@@ -7143,9 +7263,6 @@
 			],
 			"miscTags": [
 				"MW"
-			],
-			"conditionInflict": [
-				"stunned"
 			]
 		},
 		{
@@ -7209,7 +7326,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -7314,6 +7432,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -7339,10 +7458,6 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			],
-			"conditionInflict": [
-				"charmed",
-				"poisoned"
 			]
 		},
 		{
@@ -7434,6 +7549,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -7515,6 +7631,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -7604,6 +7721,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -7688,6 +7806,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -7813,6 +7932,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -7914,6 +8034,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Ambusher",
 				"Siege Monster"
@@ -7992,6 +8113,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -8063,6 +8185,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -8170,6 +8293,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement",
 				"Sunlight Sensitivity"
@@ -8209,6 +8333,7 @@
 				"Common",
 				"Merfolk"
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C"
 			]
@@ -8273,7 +8398,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -8343,6 +8469,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -8457,6 +8584,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Spider Climb",
 				"Sunlight Sensitivity"
@@ -8547,6 +8675,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -8628,6 +8757,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -8653,6 +8783,11 @@
 			"name": "Soldier",
 			"source": "GGR",
 			"page": 226,
+			"otherSources": [
+				{
+					"source": "MOT"
+				}
+			],
 			"size": "M",
 			"type": {
 				"type": "humanoid",
@@ -8716,6 +8851,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -8792,7 +8928,8 @@
 					},
 					"ability": "int"
 				}
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Sunder Shaman",
@@ -8882,6 +9019,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Reckless",
 				"Siege Monster"
@@ -9008,6 +9146,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -9208,6 +9347,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
@@ -9236,10 +9376,6 @@
 			"miscTags": [
 				"AOE",
 				"MW"
-			],
-			"conditionInflict": [
-				"grappled",
-				"restrained"
 			]
 		},
 		{
@@ -9338,6 +9474,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -9359,10 +9496,6 @@
 			],
 			"miscTags": [
 				"MW"
-			],
-			"conditionInflict": [
-				"petrified",
-				"restrained"
 			]
 		},
 		{
@@ -9431,6 +9564,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -9516,6 +9650,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Siege Monster"
 			],
@@ -9741,6 +9876,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Legendary Resistances",
@@ -9769,6 +9905,12 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"petrified",
+				"restrained"
 			]
 		}
 	]

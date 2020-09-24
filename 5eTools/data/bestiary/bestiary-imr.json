@@ -373,6 +373,9 @@
 			"conditionInflict": [
 				"poisoned",
 				"unconscious"
+			],
+			"conditionInflictSpell": [
+				"restrained"
 			]
 		},
 		{
@@ -485,10 +488,6 @@
 						"If the medusa sees itself reflected on a polished surface within 30 feet of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze."
 					]
 				}
-			],
-			"conditionInflict": [
-				"petrified",
-				"restrained"
 			]
 		},
 		{
@@ -838,6 +837,9 @@
 				"S",
 				"Y"
 			],
+			"spellcastingTags": [
+				"CA"
+			],
 			"miscTags": [
 				"MW"
 			]
@@ -965,6 +967,10 @@
 				"poisoned",
 				"restrained",
 				"stunned"
+			],
+			"conditionInflictSpell": [
+				"paralyzed",
+				"prone"
 			]
 		},
 		{
@@ -1269,6 +1275,9 @@
 			"damageTags": [
 				"S",
 				"Y"
+			],
+			"miscTags": [
+				"MW"
 			]
 		},
 		{
@@ -1468,6 +1477,9 @@
 			"damageTags": [
 				"P"
 			],
+			"spellcastingTags": [
+				"CA"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -1497,6 +1509,10 @@
 			"damageTags": [
 				"A",
 				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
 			]
 		},
 		{
@@ -1634,7 +1650,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
