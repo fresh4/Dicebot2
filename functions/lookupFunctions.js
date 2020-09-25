@@ -40,27 +40,53 @@ exports.lookup = function(book, msg, args){
 }
 exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
     const type = Object.keys(requestSource)[0];
-    const menu = new discord.MessageEmbed().setColor("6a90ff");
-    menu.setTitle("Multiple matches found");
-    var desc = "";
-    /*if(type == "feature"){
-        arrayOfMatches.forEach(match => {
-            if(match.source.match(/\(([^\)]+)\)/)) console.log(match.name)
-        })
-    }*/
-    for(var k = 0; k < arrayOfMatches.length && k < 25; k++){
-        if(type == "feature"){
-            desc += `**[${k+1}]** - ${arrayOfMatches[k].className} ${arrayOfMatches[k].level}: ${arrayOfMatches[k].name} *(Source: ${parse.parseSourcesName(arrayOfMatches[k])})*\n`
+    const generateEmbed = (start) => {
+        var desc = "";
+        let iterator = 0;
+        if(start + 10 <= arrayOfMatches.length) iterator = start + 10
+        else iterator = start + (arrayOfMatches.length % 10)
+        console.log(`${iterator} : ${arrayOfMatches.length}`)
+
+        for(var k = start; k < iterator ; k++){
+            if(type == "feature" && arrayOfMatches[k].className){
+                desc += `**[${k+1}]** - ${arrayOfMatches[k].className} ${arrayOfMatches[k].level}: ${arrayOfMatches[k].name} *(Source: ${parse.parseSourcesName(arrayOfMatches[k])})*\n`
+            }
+            else desc += `**[${k+1}]** - ${arrayOfMatches[k].name} *(Source: ${parse.parseSourcesName(arrayOfMatches[k])})*\n`
         }
-        else desc += `**[${k+1}]** - ${arrayOfMatches[k].name} *(Source: ${parse.parseSourcesName(arrayOfMatches[k])})*\n`
+        const embed = new discord.MessageEmbed()
+            .setTitle(`Multiple matches found`)
+            .setDescription(`${desc}\nPage ${parseInt(start/10)+1}/${parseInt(arrayOfMatches.length/10)+1}`)
+            .setFooter("Type the number of your selection, or press 'c' to cancel selection.");
+        return embed
     }
-    menu.setDescription(desc);
-    menu.setFooter("Type the number of your selection, or press 'c' to cancel selection.");
-    msg.channel.send(menu).then((msg2) => {
+    msg.channel.send(generateEmbed(0)).then((msg2) => {
         const filter = m => m.author.id === msg.author.id;
+        if(arrayOfMatches.length > 10){
+            msg2.react('⬅️')
+            msg2.react('➡️')
+        }
+        const collector = msg2.createReactionCollector(
+            // only collect left and right arrow reactions from the message author
+            (reaction, user) => ['⬅️', '➡️'].includes(reaction.emoji.name) && user.id === msg.author.id,
+            // time out after a minute
+            {time: 60000}
+        )
+        let currentIndex = 0
+        collector.on('collect', reaction => {
+              // increase/decrease index
+                reaction.emoji.name === '⬅️' ? currentIndex -= 10 : currentIndex += 10
+
+                if(currentIndex < 0) currentIndex = (parseInt(arrayOfMatches.length/10)*10)
+                if(currentIndex > arrayOfMatches.length) currentIndex = 0
+                msg2.edit(generateEmbed(currentIndex))
+                // react with left arrow if it isn't the start (await is used so that the right arrow always goes after the left)
+                if (currentIndex !== 0) msg2.react('⬅️')
+                // react with right arrow if it isn't the end
+                if (currentIndex + 10 < arrayOfMatches.length) msg2.react('➡️')
+        })
         msg.channel.awaitMessages(filter, {
             max: 1,
-            time: 30000
+            time: 60000
         })
         .then(collected => {
             var selectedItem = arrayOfMatches[parseInt(collected.first().content)-1];
