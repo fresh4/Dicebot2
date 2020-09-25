@@ -11,7 +11,6 @@ var parse = require('../functions/parseFunctions.js');
 exports.lookup = function(book, msg, args){
     let input = args.join(' ');
     let type = Object.keys(book)[0], entries = book[type], occurences = 0, listOfFoundObjects = [];
-    console.log(type)
     entries.forEach(entry => { 
         const relevance = compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase());
         if(relevance == 1) {
@@ -44,8 +43,16 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
     const menu = new discord.MessageEmbed().setColor("6a90ff");
     menu.setTitle("Multiple matches found");
     var desc = "";
-    for(var k = 0; k < arrayOfMatches.length; k++){
-        desc += `**[${k+1}]** - ${arrayOfMatches[k].name} *(Source: ${parse.parseSourcesName(arrayOfMatches[k])})*\n`
+    /*if(type == "feature"){
+        arrayOfMatches.forEach(match => {
+            if(match.source.match(/\(([^\)]+)\)/)) console.log(match.name)
+        })
+    }*/
+    for(var k = 0; k < arrayOfMatches.length && k < 25; k++){
+        if(type == "feature"){
+            desc += `**[${k+1}]** - ${arrayOfMatches[k].className} ${arrayOfMatches[k].level}: ${arrayOfMatches[k].name} *(Source: ${parse.parseSourcesName(arrayOfMatches[k])})*\n`
+        }
+        else desc += `**[${k+1}]** - ${arrayOfMatches[k].name} *(Source: ${parse.parseSourcesName(arrayOfMatches[k])})*\n`
     }
     menu.setDescription(desc);
     menu.setFooter("Type the number of your selection, or press 'c' to cancel selection.");
@@ -60,7 +67,12 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
             if(selectedItem != 'c'){
                 requestSource[type].forEach(entry => { 
                     if(compare.compareTwoStrings(entry.name, selectedItem.name) == 1 && entry.source == selectedItem.source){
-                        msg2.edit(this.lookupByType(type, entry));
+                        if(entry.level){
+                            if(entry.level == selectedItem.level)
+                                msg2.edit(this.lookupByType(type, entry));
+                        }
+                        else 
+                            msg2.edit(this.lookupByType(type, entry));
                     }
                 })
             }
