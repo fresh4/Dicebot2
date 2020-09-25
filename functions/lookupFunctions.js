@@ -125,8 +125,9 @@ exports.lookupByType = function(type, entry, args){
 }
 exports.classFeatLookup = function(classFeat){
     let embeddedMessage = new discord.MessageEmbed();
+    let description = classParser.parseEntries(classFeat.entries, embeddedMessage)
     embeddedMessage.setTitle(classFeat.name)
-                   .setDescription(parse.parseEntry(classFeat.entries, "\n"))
+                   //.setDescription(parse.parseEntry(classFeat.entries, "\n"))
                    .setFooter(`Source: ${parse.parseSourcesName(classFeat.source)}`)
                    .setColor("fa2af3");
     return embeddedMessage;
