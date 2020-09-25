@@ -45,7 +45,6 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
         let iterator = 0;
         if(start + 10 <= arrayOfMatches.length) iterator = start + 10
         else iterator = start + (arrayOfMatches.length % 10)
-        console.log(`${iterator} : ${arrayOfMatches.length}`)
 
         for(var k = start; k < iterator ; k++){
             if(type == "feature" && arrayOfMatches[k].className){
@@ -94,11 +93,15 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
                 requestSource[type].forEach(entry => { 
                     if(compare.compareTwoStrings(entry.name, selectedItem.name) == 1 && entry.source == selectedItem.source){
                         if(entry.level){
-                            if(entry.level == selectedItem.level)
-                                msg2.edit(this.lookupByType(type, entry));
+                            if(entry.level == selectedItem.level){
+                                msg2.delete()
+                                msg2.channel.send(this.lookupByType(type, entry));
+                            }
                         }
-                        else 
-                            msg2.edit(this.lookupByType(type, entry));
+                        else {
+                            msg2.delete()
+                            msg2.channel.send(this.lookupByType(type, entry));
+                        }
                     }
                 })
             }

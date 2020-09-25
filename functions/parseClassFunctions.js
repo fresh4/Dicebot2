@@ -117,8 +117,7 @@ exports.parseSubclassEntries = function(subclass, embeddedMessage){
     subclassFeatures.subclassfeatures.forEach(feature => {
         if(feature){
             if(feature.subclassShortName == subclass.subclassShortName){
-                //console.log(parse.parseEntry(feature.entries))
-                output += `***${feature.name}.*** ${parse.parseEntry(feature.entries)}\n`
+                output += `***${feature.name}.*** ${parse.parseEntry(feature.entries).replace(/undefined/g, '')}\n`
             }
         }
     })
