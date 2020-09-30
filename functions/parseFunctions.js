@@ -195,7 +195,10 @@ exports.parseEntry = function(entry, delim){
             output += this.parseEntry(entry[i].entries, "\n")
         }
         else if(entry[i].items) output += parseList(entry[i].items)
-        else if(entry[i].type) output += (entry[i].type == "table") ? this.parseTable(entry[i]) : ""
+        else if(entry[i].type) {
+            output += (entry[i].type == "table") ? this.parseTable(entry[i]) : ""
+            //output += (entry[i].type == "options") ? this.parseEntry(entry[i].entries, "\n") : ""
+        }
         else output += `${entry[i].replace("*", "\\*")}`
     }
     return this.removeTags(output)
@@ -237,6 +240,7 @@ function replaceStupidFilters(input){
                    .replace(/{@atk ms}/g, "{@atk *Melee Spell Attack*:} ")
                    .replace(/{@atk rs}/g, "{@atk *Ranged Spell Attack*:} ")
                    .replace(/{@recharge/g, "{@recharge Recharge")
+                   .replace(/{@scaledamage .*?}/g, `{@scaledamage ${input.match(/(\d*\w*)}/g)}`)
 
     return output
 }
