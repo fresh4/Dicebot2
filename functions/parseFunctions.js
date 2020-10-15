@@ -1,5 +1,5 @@
 var books = require('../5eTools/data/books.json');
-var discord = require('discord.js')
+var discord = require('discord.js');
 class tags {
     constructor(input) {
         this.input = replaceStupidFilters(input.toString());
@@ -194,7 +194,7 @@ exports.parseEntry = function(entry, delim){
             output += (entry[i].name) ? `***${entry[i].name}.*** ` : ""
             output += this.parseEntry(entry[i].entries, "\n")
         }
-        else if(entry[i].items) output += parseList(entry[i].items)
+        else if(entry[i].items) output += this.parseList(entry[i].items)
         else if(entry[i].type) {
             output += (entry[i].type == "table") ? this.parseTable(entry[i]) : ""
             //output += (entry[i].type == "options") ? this.parseEntry(entry[i].entries, "\n") : ""
@@ -203,11 +203,15 @@ exports.parseEntry = function(entry, delim){
     }
     return this.removeTags(output)
 }
-function parseList(list){
+ exports.parseList =function(list){
     let output = ""
     for(let i in list){
         output += (list[i].name) ? `**${list[i].name}** ` : ""
-        output += (list[i].entry) ? (i < list.length-1) ? `${list[i].entry}\n` : `${list[i].entry}` : `• ${list[i]}\n`
+        if(list[i].entry){
+            output +=  (i < list.length-1) ? `${list[i].entry}\n` : `${list[i].entry}`
+        } else if(list[i].entries){
+            output += `${this.parseEntry(list[i].entries)}\n`;
+        } else output += `• ${list[i]}\n`
     }
     return output
 }
