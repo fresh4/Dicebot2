@@ -118,6 +118,9 @@
 					]
 				}
 			],
+			"miscTags": [
+				"MAC"
+			],
 			"areaTags": [
 				"ST"
 			],

@@ -1,11 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		}
-	},
 	"monster": [
 		{
 			"name": "Anarch",
@@ -2364,7 +2357,7 @@
 			"size": "M",
 			"type": "undead",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -3385,7 +3378,7 @@
 			"size": "M",
 			"type": "aberration",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -3790,7 +3783,7 @@
 			"size": "L",
 			"type": "undead",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -3926,7 +3919,7 @@
 				]
 			},
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -5081,7 +5074,7 @@
 			"size": "M",
 			"type": "undead",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -5349,7 +5342,7 @@
 				]
 			},
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -5496,7 +5489,7 @@
 				]
 			},
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -5724,7 +5717,7 @@
 				]
 			},
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -6073,7 +6066,7 @@
 			"size": "M",
 			"type": "undead",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -6227,7 +6220,7 @@
 				]
 			},
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -6334,7 +6327,7 @@
 			"size": "M",
 			"type": "undead",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -8207,7 +8200,7 @@
 			"size": "L",
 			"type": "aberration",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -8504,7 +8497,7 @@
 			"size": "H",
 			"type": "aberration",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -9057,7 +9050,7 @@
 				]
 			},
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [
@@ -9385,7 +9378,7 @@
 			"size": "M",
 			"type": "monstrosity",
 			"alignment": [
-				"L",
+				"N",
 				"E"
 			],
 			"ac": [

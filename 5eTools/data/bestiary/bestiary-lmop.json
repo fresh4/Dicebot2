@@ -1,16 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"MM": "LMoP"
-			}
-		}
-	},
 	"monster": [
 		{
 			"name": "Ash Zombie",

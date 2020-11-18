@@ -1,11 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		}
-	},
 	"monster": [
 		{
 			"name": "Adult Amonkhet Dragon",

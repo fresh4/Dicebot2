@@ -1,18 +1,4 @@
 {
-	"_meta": {
-		"otherSources": {
-			"monster": {
-				"MM": "SDW",
-				"VGM": "SDW",
-				"MTF": "SDW",
-				"SKT": "SDW",
-				"ToA": "SDW",
-				"TftYP": "SDW",
-				"DIP": "SDW",
-				"GoS": "SDW"
-			}
-		}
-	},
 	"monster": [
 		{
 			"name": "Giant Shark Skeleton",

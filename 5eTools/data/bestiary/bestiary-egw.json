@@ -1,20 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"MM": "EGW",
-				"TftYP": "EGW"
-			}
-		},
-		"internalCopies": [
-			"monster"
-		]
-	},
 	"monster": [
 		{
 			"name": "Aeorian Absorber",

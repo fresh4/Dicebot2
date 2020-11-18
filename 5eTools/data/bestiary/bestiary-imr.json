@@ -1,29 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM",
-				"LLK",
-				"VGM"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"MM": "IMR",
-				"VGM": "IMR",
-				"TftYP": "IMR",
-				"GoS": "IMR",
-				"MFF": "IMR",
-				"HftT": "IMR",
-				"MTF": "IMR",
-				"LLK": "IMR",
-				"BGDIA": "IMR"
-			}
-		},
-		"internalCopies": [
-			"monster"
-		]
-	},
 	"monster": [
 		{
 			"name": "\"The Demogorgon\"",

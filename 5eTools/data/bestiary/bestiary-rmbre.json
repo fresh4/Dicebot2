@@ -1,17 +1,4 @@
 {
-	"_meta": {
-		"otherSources": {
-			"monster": {
-				"MM": "RMBRE",
-				"LMoP": "RMBRE"
-			}
-		},
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		}
-	},
 	"monster": [
 		{
 			"name": "Billy Beaver",
@@ -562,6 +549,7 @@
 		},
 		{
 			"name": "Tommy Two-Butts",
+			"isNpc": true,
 			"source": "RMBRE",
 			"page": 18,
 			"_copy": {

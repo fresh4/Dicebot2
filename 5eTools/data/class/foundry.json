@@ -56,6 +56,14 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Unerring Spell|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Seeking Spell|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Transmuted Spell|TCE"
 						}
 					]
 				}
@@ -64,6 +72,14 @@
 		{
 			"name": "Metamagic Options",
 			"source": "UAClassFeatureVariants",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"level": 3,
+			"isIgnored": true
+		},
+		{
+			"name": "Metamagic Options",
+			"source": "TCE",
 			"className": "Sorcerer",
 			"classSource": "PHB",
 			"level": 3,
@@ -123,6 +139,14 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Unerring Spell|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Seeking Spell|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Transmuted Spell|TCE"
 						}
 					]
 				}
@@ -182,6 +206,14 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Unerring Spell|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Seeking Spell|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Transmuted Spell|TCE"
 						}
 					]
 				}
@@ -189,10 +221,10 @@
 		},
 		{
 			"name": "Infusions Known",
-			"source": "ERLW",
+			"source": "TCE",
 			"page": 54,
 			"className": "Artificer",
-			"classSource": "ERLW",
+			"classSource": "TCE",
 			"level": 2,
 			"entries": [
 				{
@@ -201,47 +233,482 @@
 					"entries": [
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Boots of the Winding Path|ERLW"
+							"optionalfeature": "Boots of the Winding Path|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Enhanced Arcane Focus|ERLW"
+							"optionalfeature": "Enhanced Arcane Focus|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Enhanced Defense|ERLW"
+							"optionalfeature": "Enhanced Defense|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Enhanced Weapon|ERLW"
+							"optionalfeature": "Enhanced Weapon|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Homunculus Servant|ERLW"
+							"optionalfeature": "Homunculus Servant|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Radiant Weapon|ERLW"
+							"optionalfeature": "Radiant Weapon|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Repeating Shot|ERLW"
+							"optionalfeature": "Repeating Shot|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Replicate Magic Item|ERLW"
+							"optionalfeature": "Replicate Magic Item|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Repulsion Shield|ERLW"
+							"optionalfeature": "Repulsion Shield|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Resistant Armor|ERLW"
+							"optionalfeature": "Resistant Armor|TCE"
 						},
 						{
 							"type": "refOptionalfeature",
-							"optionalfeature": "Returning Weapon|ERLW"
+							"optionalfeature": "Returning Weapon|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Eldritch Invocations",
+			"source": "PHB",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.",
+				"At 2nd level, you gain two eldritch invocations of your choice. Your invocation options are detailed at the end of the class description. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.",
+				"Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.",
+				"If an eldritch invocation has prerequisites, you must meet them to learn it. You can learn the invocation at the same time that you meet its prerequisites. A level prerequisite refers to your level in this class.",
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Agonizing Blast"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Arcane Gunslinger|UAModernMagic"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Armor of Shadows"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ascendant Step"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Aspect of the Moon|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Aspect of the Moon|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Aspect of the Moon|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Beast Speech"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Beguiling Influence"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bewitching Whispers"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bond of the Talisman|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Book of Ancient Secrets"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Burning Hex|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Caiphon's Beacon|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Chain Master's Fury|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Chains of Carceri"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Chilling Hex|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Chronicle of the Raven Queen|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Claw of Acamar|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Cloak of Baalzebul|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Cloak of Flies|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Cloak of Flies|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Curse Bringer|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Devil's Sight"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Dreadful Word"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eldritch Armor|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eldritch Mind|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eldritch Sight"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eldritch Smite|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eldritch Smite|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eldritch Spear"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eyes of the Rune Keeper"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Far Scribe|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fiendish Vigor"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Frost Lance|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Frost Lance|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gaze of Khirad|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gaze of Two Minds"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ghostly Gaze|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ghostly Gaze|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gift of the Depths|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gift of the Depths|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gift of the Ever-Living Ones|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gift of the Ever-Living Ones|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gift of the Protectors|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grasp of Hadar|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grasp of Hadar|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grasp of Hadar|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Green Lord's Gift|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Improved Pact Weapon|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Improved Pact Weapon|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Improved Pact Weapon|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Investment of the Chain Master|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Kiss of Mephistopheles|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Kiss of Mephistopheles|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Lance of Lethargy|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Lifedrinker"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Mace of Dispater|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Maddening Hex|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Maddening Hex|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Mask of Many Faces"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Master of Myriad Forms"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Minions of Chaos"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Mire the Mind"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Misty Visions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Moon Bow|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "One with Shadows"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Otherworldly Leap"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Path of the Seeker|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Protection of the Talisman|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Raven Queen's Blessing|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Rebuke of the Talisman|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Relentless Hex|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Relentless Hex|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Relentless Hex|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Repelling Blast"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Sculptor of Flesh"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Sea Twins' Gift|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Seeker's Speech|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shroud of Shadow|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shroud of Shadow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shroud of Ulban|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Sign of Ill Omen"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Superior Pact Weapon|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Thief of Five Fates"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Thirsting Blade"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Tomb of Levistus|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Tomb of Levistus|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Tomb of Levistus|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Trickster's Escape|UARevisedClassOptions"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Trickster's Escape|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ultimate Pact Weapon|UAWarlockAndWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Visions of Distant Realms"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Voice of the Chain Master"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Whispers of the Grave"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Witch Sight"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bond of the Talisman|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Eldritch Mind|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Far Scribe|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Gift of the Protectors|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Investment of the Chain Master|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Protection of the Talisman|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Rebuke of the Talisman|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Undying Servitude|TCE"
 						}
 					]
 				}
@@ -367,6 +834,34 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Studious Eye|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ambush|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bait and Switch|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Brace|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Commanding Presence|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grappling Strike|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Quick Toss|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Tactical Assessment|TCE"
 						}
 					]
 				}
@@ -476,6 +971,34 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Studious Eye|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ambush|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bait and Switch|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Brace|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Commanding Presence|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grappling Strike|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Quick Toss|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Tactical Assessment|TCE"
 						}
 					]
 				}
@@ -585,6 +1108,34 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Studious Eye|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ambush|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bait and Switch|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Brace|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Commanding Presence|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grappling Strike|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Quick Toss|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Tactical Assessment|TCE"
 						}
 					]
 				}
@@ -694,6 +1245,34 @@
 						{
 							"type": "refOptionalfeature",
 							"optionalfeature": "Studious Eye|UAClassFeatureVariants"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ambush|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bait and Switch|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Brace|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Commanding Presence|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grappling Strike|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Quick Toss|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Tactical Assessment|TCE"
 						}
 					]
 				}
@@ -710,12 +1289,22 @@
 			"isIgnored": true
 		},
 		{
+			"name": "Maneuver Options",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"isIgnored": true
+		},
+		{
 			"name": "Chemical Mastery",
-			"source": "ERLW",
+			"source": "TCE",
 			"className": "Artificer",
-			"classSource": "ERLW",
+			"classSource": "TCE",
 			"subclassShortName": "Alchemist",
-			"subclassSource": "ERLW",
+			"subclassSource": "TCE",
 			"level": 15,
 			"actorDataMod": {
 				"traits.dr.value": [
@@ -1108,11 +1697,11 @@
 		},
 		{
 			"name": "Channel Divinity: Order's Demand",
-			"source": "GGR",
+			"source": "TCE",
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Order",
-			"subclassSource": "GGR",
+			"subclassSource": "TCE",
 			"level": 2,
 			"data": {
 				"target.value": 30,
@@ -1122,11 +1711,11 @@
 		},
 		{
 			"name": "Divine Strike",
-			"source": "GGR",
+			"source": "TCE",
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Order",
-			"subclassSource": "GGR",
+			"subclassSource": "TCE",
 			"level": 8,
 			"data": {
 				"damage.parts": [
@@ -1277,11 +1866,11 @@
 		},
 		{
 			"name": "Halo of Spores",
-			"source": "GGR",
+			"source": "TCE",
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Spores",
-			"subclassSource": "GGR",
+			"subclassSource": "TCE",
 			"level": 2,
 			"data": {
 				"target.value": 10,
@@ -1292,11 +1881,11 @@
 		},
 		{
 			"name": "Spreading Spores",
-			"source": "GGR",
+			"source": "TCE",
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Spores",
-			"subclassSource": "GGR",
+			"subclassSource": "TCE",
 			"level": 10,
 			"data": {
 				"target.value": 10,
@@ -1310,11 +1899,11 @@
 		},
 		{
 			"name": "Fungal Body",
-			"source": "GGR",
+			"source": "TCE",
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Spores",
-			"subclassSource": "GGR",
+			"subclassSource": "TCE",
 			"level": 14,
 			"actorDataMod": {
 				"traits.ci.value": [
@@ -1548,11 +2137,11 @@
 		},
 		{
 			"name": "Inspiring Smite",
-			"source": "MOT",
+			"source": "TCE",
 			"className": "Paladin",
 			"classSource": "PHB",
 			"subclassShortName": "Glory",
-			"subclassSource": "MOT",
+			"subclassSource": "TCE",
 			"level": 3,
 			"data": {
 				"target.value": 30,
@@ -1562,11 +2151,11 @@
 		},
 		{
 			"name": "Glorious Defense",
-			"source": "MOT",
+			"source": "TCE",
 			"className": "Paladin",
 			"classSource": "PHB",
 			"subclassShortName": "Glory",
-			"subclassSource": "MOT",
+			"subclassSource": "TCE",
 			"level": 15,
 			"data": {
 				"range.value": 10,
@@ -2156,6 +2745,394 @@
 				"target.value": 3,
 				"target.type": "creature",
 				"range.value": 60,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Call the Hunt",
+			"source": "TCE",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Beast",
+			"subclassSource": "TCE",
+			"level": 14,
+			"data": {
+				"target.value": 30,
+				"target.units": "ft"
+			}
+		},
+		{
+			"name": "Magic Awareness",
+			"source": "TCE",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Wild Magic",
+			"subclassSource": "TCE",
+			"level": 3,
+			"data": {
+				"target.value": 60,
+				"target.units": "ft"
+			}
+		},
+		{
+			"name": "Performance of Creation",
+			"source": "TCE",
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "College of Creation",
+			"subclassSource": "TCE",
+			"level": 3,
+			"data": {
+				"target.value": 1,
+				"target.type": "object",
+				"range.value": 10,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Animating Performance",
+			"source": "TCE",
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "College of Creation",
+			"subclassSource": "TCE",
+			"level": 6,
+			"data": {
+				"target.value": 1,
+				"target.type": "object",
+				"range.value": 30,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Unsettling Words",
+			"source": "TCE",
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence",
+			"subclassSource": "TCE",
+			"level": 3,
+			"data": {
+				"target.value": 1,
+				"target.type": "creature",
+				"range.value": 60,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Universal Speech",
+			"source": "TCE",
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence",
+			"subclassSource": "TCE",
+			"level": 6,
+			"data": {
+				"target.type": "creature",
+				"range.value": 60,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Infectious Inspiration",
+			"source": "TCE",
+			"className": "Bard",
+			"classSource": "PHB",
+			"subclassShortName": "Eloquence",
+			"subclassSource": "TCE",
+			"level": 14,
+			"data": {
+				"target.value": 1,
+				"target.type": "creature",
+				"range.value": 60,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Emboldening Bond",
+			"source": "TCE",
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Peace Domain",
+			"subclassSource": "TCE",
+			"level": 1,
+			"data": {
+				"target.type": "creature",
+				"range.value": 30,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Eyes of Night",
+			"source": "TCE",
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Twilight Domain",
+			"subclassSource": "TCE",
+			"level": 1,
+			"actorTokenMod": {
+				"dimSight": {
+					"mode": "setMax",
+					"value": 300
+				}
+			},
+			"data": {
+				"target.type": "creature",
+				"range.value": 10,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Summon Wildfire Spirit",
+			"source": "TCE",
+			"className": "Druid",
+			"classSource": "PHB",
+			"subclassShortName": "Wildfire",
+			"subclassSource": "TCE",
+			"level": 2,
+			"data": {
+				"target.type": "space",
+				"range.value": 30,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Guarded Mind",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 10,
+			"actorDataMod": {
+				"traits.dr.value": [
+					{
+						"mode": "appendIfNotExistsArr",
+						"items": [
+							"psychic"
+						]
+					}
+				]
+			}
+		},
+		{
+			"name": "Bulwark of Force",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 15,
+			"data": {
+				"target.type": "creature",
+				"range.value": 30,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Runic Shield",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 7,
+			"data": {
+				"target.value": 1,
+				"target.type": "creature",
+				"range.value": 60,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Vigilant Rebuke",
+			"source": "TCE",
+			"className": "Paladin",
+			"classSource": "PHB",
+			"subclassShortName": "Watchers",
+			"subclassSource": "TCE",
+			"level": 15,
+			"data": {
+				"target.value": 1,
+				"target.type": "creature",
+				"range.value": 30,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Beguiling Twist",
+			"source": "TCE",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "TCE",
+			"level": 7,
+			"data": {
+				"target.value": 1,
+				"target.type": "creature",
+				"range.value": 120,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Wails from the Grave",
+			"source": "TCE",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Phantom",
+			"subclassSource": "TCE",
+			"level": 3,
+			"data": {
+				"target.value": 1,
+				"target.type": "creature",
+				"range.value": 30,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Telepathic Speech",
+			"source": "TCE",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Aberrant Mind",
+			"subclassSource": "TCE",
+			"level": 1,
+			"data": {
+				"target.value": 1,
+				"target.type": "creature",
+				"range.value": 30,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Warping Implosion",
+			"source": "TCE",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Aberrant Mind",
+			"subclassSource": "TCE",
+			"level": 18,
+			"data": {
+				"target.value": 1,
+				"target.type": "space",
+				"range.value": 120,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Restore Balance",
+			"source": "TCE",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Clockwork Soul",
+			"subclassSource": "TCE",
+			"level": 1,
+			"data": {
+				"target.value": 1,
+				"target.type": "creature",
+				"range.value": 60,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Bastion of Law",
+			"source": "TCE",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Clockwork Soul",
+			"subclassSource": "TCE",
+			"level": 6,
+			"data": {
+				"target.value": 1,
+				"target.type": "creature",
+				"range.value": 30,
+				"range.units": "ft"
+			}
+		},
+		{
+			"name": "Clockwork Cavalcade",
+			"source": "TCE",
+			"className": "Sorcerer",
+			"classSource": "PHB",
+			"subclassShortName": "Clockwork Soul",
+			"subclassSource": "TCE",
+			"level": 18,
+			"data": {
+				"target.value": 30,
+				"target.units": "ft",
+				"target.type": "cube"
+			}
+		},
+		{
+			"name": "Tentacle of the Deeps",
+			"source": "TCE",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Fathomless",
+			"subclassSource": "TCE",
+			"level": 1,
+			"data": {
+				"target.value": 1,
+				"target.type": "space",
+				"range.value": 60,
+				"range.units": "ft"
+			},
+			"actorDataMod": {
+				"attributes.movement.swim": [
+					{
+						"mode": "setMax",
+						"value": 40
+					}
+				]
+			}
+		},
+		{
+			"name": "Oceanic Soul",
+			"source": "TCE",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Fathomless",
+			"subclassSource": "TCE",
+			"level": 6,
+			"actorDataMod": {
+				"traits.dr.value": [
+					{
+						"mode": "appendIfNotExistsArr",
+						"items": [
+							"cold"
+						]
+					}
+				]
+			}
+		},
+		{
+			"name": "Fathomless Plunge",
+			"source": "TCE",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Fathomless",
+			"subclassSource": "TCE",
+			"level": 14,
+			"data": {
+				"target.value": 30,
+				"target.units": "ft",
+				"target.type": "radius",
+				"range.value": 1,
+				"range.units": "mi"
+			}
+		},
+		{
+			"name": "Sanctuary Vessel",
+			"source": "TCE",
+			"className": "Warlock",
+			"classSource": "PHB",
+			"subclassShortName": "Genie",
+			"subclassSource": "TCE",
+			"level": 10,
+			"data": {
+				"target.value": 5,
+				"target.type": "creature",
+				"range.value": 30,
 				"range.units": "ft"
 			}
 		}

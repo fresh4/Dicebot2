@@ -1,23 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM",
-				"VGM",
-				"MTF"
-			]
-		},
-		"internalCopies": [
-			"monster"
-		],
-		"otherSources": {
-			"monster": {
-				"MM": "TftYP",
-				"VGM": "TftYP",
-				"MTF": "TftYP"
-			}
-		}
-	},
 	"monster": [
 		{
 			"name": "Amphisbaena",
@@ -4619,6 +4600,10 @@
 			"otherSources": [
 				{
 					"source": "LR"
+				},
+				{
+					"source": "GoS",
+					"page": 252
 				}
 			],
 			"size": "L",
@@ -4701,6 +4686,12 @@
 				}
 			],
 			"hasToken": true,
+			"altArt": [
+				{
+					"name": "Sea Lion",
+					"source": "GoS"
+				}
+			],
 			"traitTags": [
 				"Amphibious",
 				"Keen Senses",

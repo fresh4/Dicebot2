@@ -1,18 +1,4 @@
 {
-	"_meta": {
-		"otherSources": {
-			"monster": {
-				"SKT": "DC",
-				"MM": "DC",
-				"MTF": "DC",
-				"VGM": "DC",
-				"TftYP": "DC",
-				"GoS": "DC",
-				"DIP": "DC",
-				"RoT": "DC"
-			}
-		}
-	},
 	"monster": [
 		{
 			"name": "Ebondeath",

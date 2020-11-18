@@ -1,24 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM",
-				"VGM",
-				"PHB",
-				"MTF"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"MM": "WDMM",
-				"VGM": "WDMM",
-				"MTF": "WDMM"
-			}
-		},
-		"internalCopies": [
-			"monster"
-		]
-	},
 	"monster": [
 		{
 			"name": "Al'chaia",
@@ -1634,9 +1614,7 @@
 				"P"
 			],
 			"miscTags": [
-				"MW",
-				"RCH",
-				"THW"
+				"MW"
 			]
 		},
 		{
@@ -3763,7 +3741,6 @@
 		},
 		{
 			"name": "Rowboat Mimic",
-			"isNpc": true,
 			"source": "WDMM",
 			"page": 76,
 			"_copy": {
@@ -4931,6 +4908,7 @@
 		},
 		{
 			"name": "Werebat",
+			"group": "Lycanthropes",
 			"source": "WDMM",
 			"page": 317,
 			"size": "S",

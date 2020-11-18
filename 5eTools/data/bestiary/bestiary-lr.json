@@ -1,20 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"VGM"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"GoS": "LR",
-				"MM": "LR",
-				"VGM": "LR",
-				"MTF": "LR",
-				"TftYP": "LR"
-			}
-		}
-	},
 	"monster": [
 		{
 			"name": "Amble",
@@ -437,7 +421,6 @@
 						}
 					},
 					"footerEntries": [
-						"scrying*, tree stride",
 						"*Circle spells don't count against spells prepared."
 					],
 					"ability": "wis"

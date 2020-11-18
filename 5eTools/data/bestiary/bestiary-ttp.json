@@ -1,11 +1,4 @@
 {
-	"_meta": {
-		"otherSources": {
-			"monster": {
-				"MTF": "TTP"
-			}
-		}
-	},
 	"monster": [
 		{
 			"name": "Decapus",
@@ -165,7 +158,6 @@
 		},
 		{
 			"name": "Giant Slug",
-			"isNpc": true,
 			"source": "TTP",
 			"page": 18,
 			"size": "L",

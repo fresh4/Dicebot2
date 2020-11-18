@@ -1,17 +1,4 @@
 {
-	"_meta": {
-		"otherSources": {
-			"monster": {
-				"SKT": "SLW",
-				"MM": "SLW",
-				"VGM": "SLW",
-				"PotA": "SLW",
-				"MTF": "SLW",
-				"GoS": "SLW",
-				"TftYP": "SLW"
-			}
-		}
-	},
 	"monster": [
 		{
 			"name": "Expert",

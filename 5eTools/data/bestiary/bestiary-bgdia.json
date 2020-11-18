@@ -1,26 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM",
-				"SKT",
-				"MTF"
-			]
-		},
-		"otherSources": {
-			"monster": {
-				"MM": "BGDIA",
-				"ToA": "BGDIA",
-				"MTF": "BGDIA",
-				"VGM": "BGDIA",
-				"RoT": "BGDIA",
-				"DMG": "BGDIA"
-			}
-		},
-		"internalCopies": [
-			"monster"
-		]
-	},
 	"monster": [
 		{
 			"name": "Abyssal Chicken",

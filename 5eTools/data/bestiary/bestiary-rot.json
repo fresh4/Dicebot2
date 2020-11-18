@@ -1,20 +1,4 @@
 {
-	"_meta": {
-		"dependencies": {
-			"monster": [
-				"MM"
-			]
-		},
-		"internalCopies": [
-			"monster"
-		],
-		"otherSources": {
-			"monster": {
-				"HotDQ": "RoT",
-				"MM": "RoT"
-			}
-		}
-	},
 	"monster": [
 		{
 			"name": "Animated Tile Chimera",
