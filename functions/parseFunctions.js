@@ -191,7 +191,7 @@ exports.parseEntry = function(entry, delim){
     for(let i in entry){  
         output += (i > 0) ? `${delim}` : "" 
         if(entry[i].entries){
-            output += (entry[i].name) ? `***${entry[i].name}.*** ` : ""
+            output += (entry[i].name) ? `\n***${entry[i].name}.*** ` : ""
             output += this.parseEntry(entry[i].entries, "\n")
         }
         else if(entry[i].items) output += this.parseList(entry[i].items)
