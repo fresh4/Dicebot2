@@ -52,6 +52,10 @@ class tags {
         this.input = filterFunc("h", this.input)
         return this
     }
+    removeHazard(){
+        this.input = filterFunc("hazard", this.input)
+        return this
+    }
     removeAttack(){
         this.input = filterFunc("atk", this.input)
         return this
@@ -112,6 +116,7 @@ exports.removeTags = function(input){
                           .removeClass()
                           .removeDamage()
                           .removeDC()
+                          .removeHazard()
                           .removeToHit()
                           .removeOnHit()
                           .removeSkill()
@@ -245,7 +250,6 @@ function replaceStupidFilters(input){
                    .replace(/{@atk rs}/g, "{@atk *Ranged Spell Attack*:} ")
                    .replace(/{@recharge/g, "{@recharge Recharge")
                    .replace(/{@scaledamage .*?}/g, `{@scaledamage ${input.match(/(\d*\w*)}/g)}`)
-
     return output
 }
 function jsplit(str, sep, n) {
