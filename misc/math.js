@@ -5,7 +5,7 @@ exports.badMath = function(bot, msg){
     try{
         result = Math.evaluate(message)
         //if(isNaN(result)) throw error
-        msg.channel.send(result)
+        //msg.channel.send(result)
     } catch(error){
         return
     }
