@@ -1,8 +1,22 @@
 {
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"MM": "TCE",
+				"DMG": "TCE"
+			}
+		},
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
 	"monster": [
 		{
 			"name": "Aberrant Spirit",
 			"source": "TCE",
+			"page": 109,
 			"size": "M",
 			"type": "aberration",
 			"alignment": [
@@ -93,6 +107,10 @@
 			"languageTags": [
 				"DS"
 			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
 			"miscTags": [
 				"MW"
 			]
@@ -100,6 +118,7 @@
 		{
 			"name": "Adult Red Dracolich",
 			"source": "TCE",
+			"page": 137,
 			"_copy": {
 				"name": "Adult Red Dragon",
 				"source": "MM",
@@ -112,6 +131,7 @@
 		{
 			"name": "Beast of the Land",
 			"source": "TCE",
+			"page": 61,
 			"size": "M",
 			"type": "beast",
 			"alignment": [
@@ -160,7 +180,7 @@
 				{
 					"name": "Maul",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 2} slashing damage."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 2 + PB} slashing damage."
 					]
 				}
 			],
@@ -169,6 +189,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"S"
 			],
 			"miscTags": [
 				"MW"
@@ -180,6 +203,7 @@
 		{
 			"name": "Beast of the Sea",
 			"source": "TCE",
+			"page": 61,
 			"size": "M",
 			"type": "beast",
 			"alignment": [
@@ -228,7 +252,7 @@
 				{
 					"name": "Binding Strike",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 2} + PB piercing damage or {@damage 1d6 + 2} + PB bludgeoning damage (your choice), and the target is {@condition grappled} (escape DC equal to your spellcasting save DC). Until this grapple ends, the beast can't use this attack on another target."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 2 + PB} piercing damage or {@damage 1d6 + 2 + PB} bludgeoning damage (your choice), and the target is {@condition grappled} (escape DC equal to your spellcasting save DC). Until this grapple ends, the beast can't use this attack on another target."
 					]
 				}
 			],
@@ -237,6 +261,10 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"B",
+				"P"
 			],
 			"miscTags": [
 				"MW"
@@ -248,6 +276,7 @@
 		{
 			"name": "Beast of the Sky",
 			"source": "TCE",
+			"page": 61,
 			"size": "S",
 			"type": "beast",
 			"alignment": [
@@ -296,7 +325,7 @@
 				{
 					"name": "Shred",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d4 + 3} + PB slashing damage"
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d4 + 3 + PB} slashing damage"
 					]
 				}
 			],
@@ -306,6 +335,9 @@
 			"senseTags": [
 				"D"
 			],
+			"damageTags": [
+				"S"
+			],
 			"miscTags": [
 				"MW"
 			]
@@ -313,6 +345,7 @@
 		{
 			"name": "Bestial Spirit",
 			"source": "TCE",
+			"page": 109,
 			"size": "S",
 			"type": "beast",
 			"alignment": [
@@ -324,7 +357,7 @@
 				}
 			],
 			"hp": {
-				"special": "20 + 5 for each spell level above 2nd"
+				"special": "20 (Air only) or 30 (Land and Water only) + 5 for each spell level above 2nd"
 			},
 			"speed": {
 				"walk": 30,
@@ -399,6 +432,9 @@
 			"actionTags": [
 				"Multiattack"
 			],
+			"damageTags": [
+				"P"
+			],
 			"miscTags": [
 				"MW"
 			]
@@ -406,6 +442,7 @@
 		{
 			"name": "Celestial Spirit",
 			"source": "TCE",
+			"page": 110,
 			"size": "L",
 			"type": "celestial",
 			"alignment": [
@@ -413,7 +450,7 @@
 			],
 			"ac": [
 				{
-					"special": "11 + the level of the spell (natural armor)"
+					"special": "11 + the level of the spell (natural armor) + 2 (Defender only)"
 				}
 			],
 			"hp": {
@@ -479,6 +516,9 @@
 			"languageTags": [
 				"CE"
 			],
+			"damageTags": [
+				"R"
+			],
 			"miscTags": [
 				"MW",
 				"RW"
@@ -487,6 +527,7 @@
 		{
 			"name": "Construct Spirit",
 			"source": "TCE",
+			"page": 111,
 			"size": "M",
 			"type": "construct",
 			"alignment": [
@@ -570,6 +611,10 @@
 			"actionTags": [
 				"Multiattack"
 			],
+			"damageTags": [
+				"B",
+				"F"
+			],
 			"miscTags": [
 				"MW"
 			]
@@ -577,6 +622,7 @@
 		{
 			"name": "Dancing Item",
 			"source": "TCE",
+			"page": 29,
 			"size": "L",
 			"sizeNote": "or smaller",
 			"type": "construct",
@@ -643,7 +689,7 @@
 				{
 					"name": "Force-Empowered Slam",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target you can see. {@h}{@damage 1d10} + PB force damage."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target you can see. {@h}{@damage 1d10 + PB} force damage."
 					]
 				}
 			],
@@ -653,6 +699,9 @@
 			"senseTags": [
 				"D"
 			],
+			"damageTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			]
@@ -660,6 +709,7 @@
 		{
 			"name": "Elemental Spirit",
 			"source": "TCE",
+			"page": 111,
 			"size": "M",
 			"type": "elemental",
 			"alignment": [
@@ -705,21 +755,23 @@
 						"lightning",
 						"thunder"
 					],
-					"note": "(air only)"
+					"cond": true,
+					"note": "(Air only)"
 				},
-				"piercing",
 				{
 					"resist": [
 						"piercing",
 						"slashing"
 					],
-					"note": "(earth only)"
+					"cond": true,
+					"note": "(Earth only)"
 				},
 				{
 					"resist": [
 						"acid"
 					],
-					"note": "(water only)"
+					"cond": true,
+					"note": "(Water only)"
 				}
 			],
 			"immune": [
@@ -728,7 +780,8 @@
 					"immune": [
 						"fire"
 					],
-					"note": "(fire only)"
+					"cond": true,
+					"note": "(Fire only)"
 				}
 			],
 			"conditionImmune": [
@@ -760,7 +813,7 @@
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 4} + the spell's level bludgeoning damage"
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 4} + the spell's level bludgeoning damage (Air, Earth, and Water only) or fire damage (Fire only)."
 					]
 				}
 			],
@@ -776,6 +829,10 @@
 			"languageTags": [
 				"P"
 			],
+			"damageTags": [
+				"B",
+				"F"
+			],
 			"miscTags": [
 				"MW"
 			]
@@ -783,6 +840,7 @@
 		{
 			"name": "Fey Spirit",
 			"source": "TCE",
+			"page": 112,
 			"size": "S",
 			"type": "fey",
 			"alignment": [
@@ -868,6 +926,10 @@
 			"languageTags": [
 				"S"
 			],
+			"damageTags": [
+				"O",
+				"P"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -879,6 +941,7 @@
 		{
 			"name": "Fiendish Spirit",
 			"source": "TCE",
+			"page": 112,
 			"size": "L",
 			"type": "fiend",
 			"alignment": [
@@ -890,7 +953,7 @@
 				}
 			],
 			"hp": {
-				"special": "50 + 15 for each spell level above 6th"
+				"special": "50 (Demon only) or 40 (Devil only) or 60 (Yugoloth only) + 15 for each spell level above 6th"
 			},
 			"speed": {
 				"walk": 40,
@@ -989,13 +1052,117 @@
 				"I",
 				"TP"
 			],
+			"damageTags": [
+				"F",
+				"N",
+				"S"
+			],
 			"miscTags": [
 				"MW"
 			]
 		},
 		{
+			"name": "Homunculus Servant",
+			"source": "TCE",
+			"page": 22,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 62
+				}
+			],
+			"size": "T",
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"special": "1 + your Intelligence modifier + your artificer level (the homunculus has a number of Hit Dice [d4s] equal to your artificer level)"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 30
+			},
+			"str": 4,
+			"dex": 15,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 7,
+			"save": {
+				"dex": "+2 plus PB"
+			},
+			"skill": {
+				"perception": "+0 plus PB × 2",
+				"stealth": "+2 plus PB"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": "10 + (PB × 2)",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Might of the Master",
+					"entries": [
+						"The following numbers increase by 1 when your proficiency bonus increases by 1: the homunculus's skill and saving throw bonuses (above) and the bonuses to hit and damage of its attack (below)."
+					]
+				}
+			],
+			"actionNote": "Requires Your Bonus Action",
+			"action": [
+				{
+					"name": "Force Strike",
+					"entries": [
+						"{@atk rw} {@hitYourSpellAttack} to hit, range 30 ft., one target you can see. {@h}{@damage 1d4 + PB} force damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Channel Magic",
+					"entries": [
+						"The homunculus delivers a spell you cast that has a range of touch. The homunculus must be within 120 feet of you."
+					]
+				}
+			],
+			"hasToken": true,
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"RW"
+			],
+			"hasFluffImages": true
+		},
+		{
 			"name": "Juvenile Mimic",
 			"source": "TCE",
+			"page": 167,
 			"size": "T",
 			"type": {
 				"type": "monstrosity",
@@ -1041,6 +1208,7 @@
 				"Undercommon",
 				"telepathy 120 ft."
 			],
+			"cr": "0",
 			"trait": [
 				{
 					"name": "False Appearance (Object Form Only)",
@@ -1092,6 +1260,7 @@
 		{
 			"name": "Mighty Servant of Leuk-o",
 			"source": "TCE",
+			"page": 131,
 			"size": "H",
 			"type": "construct",
 			"alignment": [
@@ -1196,7 +1365,7 @@
 				{
 					"name": "Destructive Fist",
 					"entries": [
-						"{@atk mw} {@hit 17} to hit, reach 10 ft., one target. {@h}36 ({@damage 4d12 + 10}) force damage. Or Ranged Weapon Attack: {@hit 17} to hit, range 120 ft., one target. {@h}36 ({@damage 4d12 + 10}) force damage. If the target is an object, it takes triple damage. If the target is an object, it takes triple damage."
+						"{@atk mw} {@hit 17} to hit, reach 10 ft., one target. {@h}36 ({@damage 4d12 + 10}) force damage. Or Ranged Weapon Attack: {@hit 17} to hit, range 120 ft., one target. {@h}36 ({@damage 4d12 + 10}) force damage. If the target is an object, it takes triple damage."
 					]
 				},
 				{
@@ -1226,11 +1395,13 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Reflection",
 			"source": "TCE",
+			"page": 158,
 			"_copy": {
 				"name": "Shadow",
 				"source": "MM",
@@ -1265,6 +1436,7 @@
 		{
 			"name": "Shadow Spirit",
 			"source": "TCE",
+			"page": 114,
 			"size": "M",
 			"type": "monstrosity",
 			"alignment": [
@@ -1351,6 +1523,9 @@
 			"languageTags": [
 				"C"
 			],
+			"damageTags": [
+				"C"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -1359,8 +1534,108 @@
 			]
 		},
 		{
+			"name": "Steel Defender",
+			"source": "TCE",
+			"page": 19,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 61
+				}
+			],
+			"size": "M",
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"special": "2 + your Intelligence modifier + five times your artificer level (the defender has a number of Hit Dice [ d8s] equal to your artificer level)"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 4,
+			"wis": 10,
+			"cha": 6,
+			"save": {
+				"dex": "+1 plus PB",
+				"con": "+2 plus PB"
+			},
+			"skill": {
+				"athletics": "+2 plus PB",
+				"perception": "+0 plus PB × 2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": "10 + (PB × 2)",
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you speak"
+			],
+			"pbNote": "equals your bonus",
+			"trait": [
+				{
+					"name": "Vigilant",
+					"entries": [
+						"The defender can't be surprised."
+					]
+				}
+			],
+			"actionNote": "Requires Your Bonus Action",
+			"action": [
+				{
+					"name": "Force-Empowered Rend",
+					"entries": [
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target you can see. {@h}{@damage 1d8 + PB} force damage."
+					]
+				},
+				{
+					"name": "Repair (3/Day)",
+					"entries": [
+						"The magical mechanisms inside the defender restore {@dice 2d8 + PB} hit points to itself or to one construct or object within 5 feet of it."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Deflect Attack",
+					"entries": [
+						"The defender imposes disadvantage on the attack roll of one creature it can see that is within 5 feet of it, provided the attack roll is against a creature other than the defender."
+					]
+				}
+			],
+			"hasToken": true,
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluffImages": true
+		},
+		{
 			"name": "Undead Spirit",
 			"source": "TCE",
+			"page": 114,
 			"size": "M",
 			"type": "undead",
 			"alignment": [
@@ -1372,7 +1647,7 @@
 				}
 			],
 			"hp": {
-				"special": "30 + 10 for each spell level above 3rd"
+				"special": "30 (Ghostly and Putrid only) or 20 (Skeletal only) + 10 for each spell level above 3rd"
 			},
 			"speed": {
 				"walk": 30,
@@ -1457,6 +1732,11 @@
 			"languageTags": [
 				"C"
 			],
+			"damageTags": [
+				"N",
+				"O",
+				"S"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -1469,6 +1749,7 @@
 		{
 			"name": "Wildfire Spirit",
 			"source": "TCE",
+			"page": 40,
 			"size": "S",
 			"type": "elemental",
 			"alignment": [
@@ -1516,36 +1797,25 @@
 			"languages": [
 				"understands the languages you speak"
 			],
-			"trait": [
-				{
-					"name": "Appearance",
-					"entries": [
-						"Each creature within 10 feet of the spirit (other than you) when it appears must succeed on a DC Player Dexterity saving throw or take {@damage 2d6} fire damage."
-					]
-				}
-			],
 			"action": [
-				{
-					"name": "Dodge",
-					"entries": [
-						"On its turn, unless otherwise commanded, the Spirit takes the dodge action."
-					]
-				},
 				{
 					"name": "Flame Seed",
 					"entries": [
-						"{@atk rw} {@hitYourSpellAttack} to hit, range 60 ft., one target you can see. {@h}{@damage 1d6} + PB fire damage."
+						"{@atk rw} {@hitYourSpellAttack} to hit, range 60 ft., one target you can see. {@h}{@damage 1d6 + PB} fire damage."
 					]
 				},
 				{
 					"name": "Fiery Teleportation",
 					"entries": [
-						"The spirit and each willing creature of your choice within 5 feet of it teleport up to 15 feet to unoccupied spaces you can see. Then each creature within 5 feet of the space that the spirit left must succeed on a Dexterity saving throw against your spell save DC or take {@damage 1d6} + PB fire damage."
+						"The spirit and each willing creature of your choice within 5 feet of it teleport up to 15 feet to unoccupied spaces you can see. Then each creature within 5 feet of the space that the spirit left must succeed on a Dexterity saving throw against your spell save DC or take {@damage 1d6 + PB} fire damage."
 					]
 				}
 			],
 			"senseTags": [
 				"D"
+			],
+			"damageTags": [
+				"F"
 			],
 			"miscTags": [
 				"AOE",

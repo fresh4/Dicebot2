@@ -15,26 +15,49 @@
 			],
 			"spellcastingAbility": "wis",
 			"casterProgression": "full",
+			"preparedSpells": "<$level$> + <$wis_mod$>",
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
 			"startingProficiencies": {
 				"armor": [
 					"light",
 					"medium",
 					{
-						"proficiency": "shields",
+						"proficiency": "{@item shield|phb|shields}",
 						"full": "shields (druids will not wear armor or use shields made of metal)"
 					}
 				],
 				"weapons": [
-					"clubs",
-					"daggers",
-					"darts",
-					"javelins",
-					"maces",
-					"quarterstaffs",
-					"scimitars",
-					"sickles",
-					"slings",
-					"spears"
+					"{@item club|phb|clubs}",
+					"{@item dagger|phb|daggers}",
+					"{@item dart|phb|darts}",
+					"{@item javelin|phb|javelins}",
+					"{@item mace|phb|maces}",
+					"{@item quarterstaff|phb|quarterstaffs}",
+					"{@item scimitar|phb|scimitars}",
+					"{@item sickle|phb|sickles}",
+					"{@item sling|phb|slings}",
+					"{@item spear|phb|spears}"
 				],
 				"tools": [
 					"{@item Herbalism kit|PHB}"
@@ -57,6 +80,11 @@
 					}
 				]
 			},
+			"languageProficiencies": [
+				{
+					"druidic": true
+				}
+			],
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
@@ -104,7 +132,7 @@
 						"light",
 						"medium",
 						{
-							"proficiency": "shields",
+							"proficiency": "{@item shield|phb|shields}",
 							"full": "shields (druids will not wear armor or use shields made of metal)"
 						}
 					]
@@ -815,6 +843,7 @@
 					"name": "Circle of Spores",
 					"shortName": "Spores",
 					"source": "TCE",
+					"page": 36,
 					"otherSources": [
 						{
 							"source": "GGR",
@@ -854,6 +883,7 @@
 					"name": "Circle of Stars",
 					"shortName": "Stars",
 					"source": "TCE",
+					"page": 38,
 					"subclassFeatures": [
 						"Circle of Stars|Druid||Stars|TCE|2",
 						"Cosmic Omen|Druid||Stars|TCE|6",
@@ -865,6 +895,7 @@
 					"name": "Circle of Wildfire",
 					"shortName": "Wildfire",
 					"source": "TCE",
+					"page": 39,
 					"additionalSpells": [
 						{
 							"prepared": {
@@ -938,6 +969,24 @@
 										"You can make a druid quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Constitution. Second, choose the {@background hermit} background."
 									]
 								}
+							]
+						},
+						{
+							"type": "inset",
+							"name": "Sacred Plants and Wood",
+							"entries": [
+								"A druid holds certain plants to be sacred, particularly alder, ash, birch, elder, hazel, holly, juniper, mistletoe, oak, rowan, willow, and yew. Druids often use such plants as part of a spellcasting focus, incorporating lengths of oak or yew or sprigs of mistletoe.",
+								"Similarly, a druid uses such woods to make other objects, such as weapons and shields. Yew is associated with death and rebirth, so weapon handles for scimitars or sickles might be fashioned from it. Ash is associated with life and oak with strength. These woods make excellent hafts or whole weapons, such as clubs or quarterstaffs, as well as shields. Alder is associated with air, and it might be used for thrown weapons, such as darts or javelins.",
+								"Druids from regions that lack the plants described here have chosen other plants to take on similar uses. For instance, a druid of a desert region might value the yucca tree and cactus plants."
+							]
+						},
+						{
+							"type": "inset",
+							"name": "Druids and the Gods",
+							"entries": [
+								"Some druids venerate the forces of nature themselves, but most druids are devoted to one of the many nature deities worshiped in the multiverse (the lists of gods in appendix B include many such deities). The worship of these deities is often considered a more ancient tradition than the faiths of clerics and urbanized peoples. In fact, in the world of Greyhawk, the druidic faith is called the Old Faith, and it claims many adherents among farmers, foresters, fishers, and others who live closely with nature. This tradition includes the worship of Nature as a primal force beyond personification, but also encompasses the worship of Beory, the Oerth Mother, as well as devotees of Obad-Hai, Ehlonna, and Ulaa.",
+								"In the worlds of Greyhawk and the Forgotten Realms, druidic circles are not usually connected to the faith of a single nature deity. Any given circle in the Forgotten Realms, for example, might include druids who revere Silvanus, Mielikki, Eldath, Chauntea, or even the harsh Gods of Fury: Talos, Malar, Auril, and Umberlee. These nature gods are often called the First Circle, the first among the druids, and most druids count them all (even the violent ones) as worthy of veneration.",
+								"The druids of Eberron hold animistic beliefs completely unconnected to the Sovereign Host, the Dark Six, or any of the other religions of the world. They believe that every living thing and every natural phenomenon\u2014sun, moon, wind, fire, and the world itself\u2014has a spirit. Their spells, then, are a means to communicate with and command these spirits. Different druidic sects, though, hold different philosophies about the proper relationship of these spirits to each other and to the forces of civilization. The Ashbound, for example, believe that arcane magic is an abomination against nature, the Children of Winter venerate the forces of death, and the Gatekeepers preserve ancient traditions meant to protect the world from the incursion of aberrations."
 							]
 						}
 					],
@@ -2385,6 +2434,7 @@
 		{
 			"name": "Wild Companion",
 			"source": "TCE",
+			"page": 35,
 			"className": "Druid",
 			"classSource": "PHB",
 			"level": 2,
@@ -2486,6 +2536,7 @@
 		{
 			"name": "Cantrip Versatility",
 			"source": "TCE",
+			"page": 35,
 			"className": "Druid",
 			"classSource": "PHB",
 			"level": 4,
@@ -3229,6 +3280,7 @@
 		{
 			"name": "Circle of Spores",
 			"source": "TCE",
+			"page": 36,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -3261,6 +3313,7 @@
 		{
 			"name": "Circle Spells",
 			"source": "TCE",
+			"page": 36,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -3311,6 +3364,7 @@
 		{
 			"name": "Halo of Spores",
 			"source": "TCE",
+			"page": 36,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -3330,6 +3384,7 @@
 		{
 			"name": "Symbiotic Entity",
 			"source": "TCE",
+			"page": 36,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -3357,6 +3412,7 @@
 		{
 			"name": "Fungal Infestation",
 			"source": "TCE",
+			"page": 36,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -3378,6 +3434,7 @@
 		{
 			"name": "Spreading Spores",
 			"source": "TCE",
+			"page": 36,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -3399,6 +3456,7 @@
 		{
 			"name": "Fungal Body",
 			"source": "TCE",
+			"page": 36,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -3418,6 +3476,7 @@
 		{
 			"name": "Circle of Stars",
 			"source": "TCE",
+			"page": 38,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Stars",
@@ -3439,6 +3498,7 @@
 		{
 			"name": "Star Map",
 			"source": "TCE",
+			"page": 38,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Stars",
@@ -3501,6 +3561,7 @@
 		{
 			"name": "Starry Form",
 			"source": "TCE",
+			"page": 38,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Stars",
@@ -3538,6 +3599,7 @@
 		{
 			"name": "Cosmic Omen",
 			"source": "TCE",
+			"page": 38,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Stars",
@@ -3569,6 +3631,7 @@
 		{
 			"name": "Twinkling Constellations",
 			"source": "TCE",
+			"page": 38,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Stars",
@@ -3584,6 +3647,7 @@
 		{
 			"name": "Full of Stars",
 			"source": "TCE",
+			"page": 38,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Stars",
@@ -3598,6 +3662,7 @@
 		{
 			"name": "Circle of Wildfire",
 			"source": "TCE",
+			"page": 39,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Wildfire",
@@ -3618,6 +3683,7 @@
 		{
 			"name": "Circle Spells",
 			"source": "TCE",
+			"page": 39,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Wildfire",
@@ -3667,6 +3733,7 @@
 		{
 			"name": "Summon Wildfire Spirit",
 			"source": "TCE",
+			"page": 39,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Wildfire",
@@ -3685,6 +3752,7 @@
 		{
 			"name": "Enhanced Bond",
 			"source": "TCE",
+			"page": 39,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Wildfire",
@@ -3700,6 +3768,7 @@
 		{
 			"name": "Cauterizing Flames",
 			"source": "TCE",
+			"page": 39,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Wildfire",
@@ -3715,6 +3784,7 @@
 		{
 			"name": "Blazing Revival",
 			"source": "TCE",
+			"page": 39,
 			"className": "Druid",
 			"classSource": "PHB",
 			"subclassShortName": "Wildfire",

@@ -1,4 +1,11 @@
 {
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
 	"monster": [
 		{
 			"name": "Homarid",

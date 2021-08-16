@@ -19,10 +19,10 @@
 				],
 				"weapons": [
 					"simple",
-					"hand crossbows",
-					"longswords",
-					"rapiers",
-					"shortswords"
+					"{@item hand crossbow|phb|hand crossbows}",
+					"{@item longsword|phb|longswords}",
+					"{@item rapier|phb|rapiers}",
+					"{@item shortsword|phb|shortswords}"
 				],
 				"tools": [
 					"{@item thieves' tools|PHB}"
@@ -48,6 +48,11 @@
 					}
 				]
 			},
+			"languageProficiencies": [
+				{
+					"thieves' cant": true
+				}
+			],
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
@@ -413,6 +418,50 @@
 					"page": 97,
 					"spellcastingAbility": "int",
 					"casterProgression": "1/3",
+					"cantripProgression": [
+						0,
+						0,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						3,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4,
+						4
+					],
+					"spellsKnownProgression": [
+						0,
+						0,
+						3,
+						4,
+						4,
+						4,
+						5,
+						6,
+						6,
+						7,
+						8,
+						8,
+						9,
+						10,
+						10,
+						11,
+						11,
+						11,
+						12,
+						13
+					],
 					"additionalSpells": [
 						{
 							"prepared": {
@@ -829,6 +878,7 @@
 					"name": "Phantom",
 					"shortName": "Phantom",
 					"source": "TCE",
+					"page": 62,
 					"subclassFeatures": [
 						"Phantom|Rogue||Phantom|TCE|3",
 						"Tokens of the Departed|Rogue||Phantom|TCE|9",
@@ -840,6 +890,7 @@
 					"name": "Soulknife",
 					"shortName": "Soulknife",
 					"source": "TCE",
+					"page": 63,
 					"subclassFeatures": [
 						"Soulknife|Rogue||Soulknife|TCE|3",
 						"Soul Blades|Rogue||Soulknife|TCE|9",
@@ -1224,6 +1275,7 @@
 		{
 			"name": "Steady Aim",
 			"source": "TCE",
+			"page": 62,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 3,
@@ -1894,6 +1946,7 @@
 		{
 			"name": "Phantom",
 			"source": "TCE",
+			"page": 62,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Phantom",
@@ -1916,6 +1969,7 @@
 		{
 			"name": "Wails from the Grave",
 			"source": "TCE",
+			"page": 62,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Phantom",
@@ -1931,6 +1985,7 @@
 		{
 			"name": "Whispers of the Dead",
 			"source": "TCE",
+			"page": 62,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Phantom",
@@ -1945,6 +2000,7 @@
 		{
 			"name": "Tokens of the Departed",
 			"source": "TCE",
+			"page": 62,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Phantom",
@@ -1968,6 +2024,7 @@
 		{
 			"name": "Ghost Walk",
 			"source": "TCE",
+			"page": 62,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Phantom",
@@ -1983,6 +2040,7 @@
 		{
 			"name": "Death's Friend",
 			"source": "TCE",
+			"page": 62,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Phantom",
@@ -2004,6 +2062,7 @@
 		{
 			"name": "Soulknife",
 			"source": "TCE",
+			"page": 63,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Soulknife",
@@ -2026,6 +2085,7 @@
 		{
 			"name": "Psionic Power",
 			"source": "TCE",
+			"page": 63,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Soulknife",
@@ -2039,22 +2099,15 @@
 				"When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level ({@dice d8}), 11th level ({@dice d10}), and 17th level ({@dice d12}).",
 				"The powers below use your Psionic Energy dice.",
 				{
-					"type": "entries",
+					"type": "options",
 					"entries": [
 						{
-							"type": "entries",
-							"name": "Psi-Bolstered Knack",
-							"entries": [
-								"When your nonpsionic training fails you, your psionic power can help: if you fail an ability check using a skill or tool with which you have proficiency, you can roll one Psionic Energy die and add the number rolled to the check, potentially turning failure into success. You expend the die only if the roll succeeds."
-							]
+							"type": "refSubclassFeature",
+							"subclassFeature": "Psi-Bolstered Knack|Rogue|TCE|Soulknife|TCE|3"
 						},
 						{
-							"type": "entries",
-							"name": "Psychic Whispers",
-							"entries": [
-								"You can establish telepathic communication between yourself and others-perfect for quiet infiltration. As an action, choose one or more creatures you can see, up to a number of creatures equal to your proficiency bonus, and then roll one Psionic Energy die. For a number of hours equal to the number rolled, the chosen creatures can speak telepathically with you, and you can speak telepathically with them. To send or receive a message (no action required), you and the other creature must be within 1 mile of each other. A creature can't use this telepathy if it can't speak any languages, and a creature can end the telepathic connection at any time (no action required). You and the creature don't need to speak a common language to understand each other.",
-								"The first time you use this power after each long rest, you don't expend the Psionic Energy die. All other times you use the power, you expend the die."
-							]
+							"type": "refSubclassFeature",
+							"subclassFeature": "Psychic Whispers|Rogue|TCE|Soulknife|TCE|3"
 						}
 					]
 				}
@@ -2063,6 +2116,7 @@
 		{
 			"name": "Psychic Blades",
 			"source": "TCE",
+			"page": 63,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Soulknife",
@@ -2078,6 +2132,7 @@
 		{
 			"name": "Soul Blades",
 			"source": "TCE",
+			"page": 63,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Soulknife",
@@ -2088,21 +2143,15 @@
 				"{@i 9th-level Soulknife feature}",
 				"Your Psychic Blades are now an expression of your psi-suffused soul, giving you these powers that use your Psionic Energy dice:",
 				{
-					"type": "entries",
+					"type": "options",
 					"entries": [
 						{
-							"type": "entries",
-							"name": "Homing Strikes",
-							"entries": [
-								"If you make an attack roll with your Psychic Blades and miss the target, you can roll one Psionic Energy die and add the number rolled to the attack roll. If this causes the attack to hit, you expend the Psionic Energy die."
-							]
+							"type": "refSubclassFeature",
+							"subclassFeature": "Homing Strikes|Rogue|TCE|Soulknife|TCE|9"
 						},
 						{
-							"type": "entries",
-							"name": "Psychic Teleportation",
-							"entries": [
-								"As a bonus action, you manifest one of your Psychic Blades, expend one Psionic Energy die and roll it, and throw the blade at an unoccupied space you can see, up to a number of feet away equal to 10 times the number rolled. You then teleport to that space, and the blade vanishes."
-							]
+							"type": "refSubclassFeature",
+							"subclassFeature": "Psychic Teleportation|Rogue|TCE|Soulknife|TCE|9"
 						}
 					]
 				}
@@ -2111,6 +2160,7 @@
 		{
 			"name": "Psychic Veil",
 			"source": "TCE",
+			"page": 63,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Soulknife",
@@ -2126,6 +2176,7 @@
 		{
 			"name": "Rend Mind",
 			"source": "TCE",
+			"page": 63,
 			"className": "Rogue",
 			"classSource": "PHB",
 			"subclassShortName": "Soulknife",
@@ -3257,6 +3308,59 @@
 			"header": 2,
 			"entries": [
 				"Beginning at 17th level, your mastery of the blade lets you turn failure into success in combat. If you miss with an attack roll, you can roll it again with advantage. Once you do so, you can't use this feature again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "Psi-Bolstered Knack",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "TCE",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"When your nonpsionic training fails you, your psionic power can help: if you fail an ability check using a skill or tool with which you have proficiency, you can roll one Psionic Energy die and add the number rolled to the check, potentially turning failure into success. You expend the die only if the roll succeeds."
+			]
+		},
+		{
+			"name": "Psychic Whispers",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "TCE",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"You can establish telepathic communication between yourself and others-perfect for quiet infiltration. As an action, choose one or more creatures you can see, up to a number of creatures equal to your proficiency bonus, and then roll one Psionic Energy die. For a number of hours equal to the number rolled, the chosen creatures can speak telepathically with you, and you can speak telepathically with them. To send or receive a message (no action required), you and the other creature must be within 1 mile of each other. A creature can't use this telepathy if it can't speak any languages, and a creature can end the telepathic connection at any time (no action required). You and the creature don't need to speak a common language to understand each other.",
+				"The first time you use this power after each long rest, you don't expend the Psionic Energy die. All other times you use the power, you expend the die."
+			]
+		},
+		{
+			"name": "Homing Strikes",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "TCE",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 9,
+			"entries": [
+				"If you make an attack roll with your Psychic Blades and miss the target, you can roll one Psionic Energy die and add the number rolled to the attack roll. If this causes the attack to hit, you expend the Psionic Energy die."
+			]
+		},
+		{
+			"name": "Psychic Teleportation",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "TCE",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 9,
+			"entries": [
+				"As a bonus action, you manifest one of your Psychic Blades, expend one Psionic Energy die and roll it, and throw the blade at an unoccupied space you can see, up to a number of feet away equal to 10 times the number rolled. You then teleport to that space, and the blade vanishes."
 			]
 		}
 	]

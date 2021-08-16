@@ -15,11 +15,34 @@
 			],
 			"spellcastingAbility": "wis",
 			"casterProgression": "full",
+			"preparedSpells": "<$level$> + <$wis_mod$>",
+			"cantripProgression": [
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5
+			],
 			"startingProficiencies": {
 				"armor": [
 					"light",
 					"medium",
-					"shields"
+					"{@item shield|phb|shields}"
 				],
 				"weapons": [
 					"simple"
@@ -104,7 +127,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"shields"
+						"{@item shield|phb|shields}"
 					]
 				}
 			},
@@ -1440,6 +1463,7 @@
 					"name": "Order Domain",
 					"shortName": "Order",
 					"source": "TCE",
+					"page": 31,
 					"otherSources": [
 						{
 							"source": "GGR",
@@ -1486,6 +1510,7 @@
 					"name": "Peace Domain",
 					"shortName": "Peace",
 					"source": "TCE",
+					"page": 32,
 					"additionalSpells": [
 						{
 							"prepared": {
@@ -1513,17 +1538,19 @@
 						}
 					],
 					"subclassFeatures": [
-						"Peace Domain|Cleric||Peace Domain|TCE|1",
-						"Channel Divinity: Balm of Peace|Cleric||Peace Domain|TCE|2",
-						"Protective Bond|Cleric||Peace Domain|TCE|6",
-						"Potent Spellcasting|Cleric||Peace Domain|TCE|8",
-						"Expansive Bond|Cleric||Peace Domain|TCE|17"
+						"Peace Domain|Cleric||Peace|TCE|1",
+						"Channel Divinity: Balm of Peace|Cleric||Peace|TCE|2",
+						"Protective Bond|Cleric||Peace|TCE|6",
+						"Potent Spellcasting|Cleric||Peace|TCE|8",
+						"Blessed Strikes|Cleric||Peace|TCE|8|TCE",
+						"Expansive Bond|Cleric||Peace|TCE|17"
 					]
 				},
 				{
 					"name": "Twilight Domain",
 					"shortName": "Twilight",
 					"source": "TCE",
+					"page": 34,
 					"additionalSpells": [
 						{
 							"prepared": {
@@ -1551,11 +1578,12 @@
 						}
 					],
 					"subclassFeatures": [
-						"Twilight Domain|Cleric||Twilight Domain|TCE|1",
-						"Channel Divinity: Twilight Sanctuary|Cleric||Twilight Domain|TCE|2",
-						"Steps of Night|Cleric||Twilight Domain|TCE|6",
-						"Divine Strike (Twilight)|Cleric||Twilight Domain|TCE|8",
-						"Twilight Shroud|Cleric||Twilight Domain|TCE|17"
+						"Twilight Domain|Cleric||Twilight|TCE|1",
+						"Channel Divinity: Twilight Sanctuary|Cleric||Twilight|TCE|2",
+						"Steps of Night|Cleric||Twilight|TCE|6",
+						"Divine Strike|Cleric||Twilight|TCE|8",
+						"Blessed Strikes|Cleric||Twilight|TCE|8|TCE",
+						"Twilight Shroud|Cleric||Twilight|TCE|17"
 					]
 				}
 			],
@@ -1982,6 +2010,7 @@
 		{
 			"name": "Channel Divinity: Harness Divine Power",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"level": 2,
@@ -2046,6 +2075,7 @@
 		{
 			"name": "Cantrip Versatility",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"level": 4,
@@ -2179,7 +2209,7 @@
 			"classSource": "PHB",
 			"level": 11,
 			"entries": [
-				"Starting at 11th level, when an {@filter undead of CR 2 or lower|bestiary|challenge rating=[&0;&2]|type=undead|miscellaneous=!swarm} or lower fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
+				"Starting at 11th level, when an {@filter undead of CR 2 or lower|bestiary|challenge rating=[&0;&2]|type=undead|miscellaneous=!swarm} fails its saving throw against your Turn Undead feature, the creature is instantly destroyed."
 			]
 		},
 		{
@@ -2406,7 +2436,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"At 1st level, the cleric learns one necromancy cantrip of his or her choice from any spell list. When the cleric casts a necromancy cantrip that normally targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other."
+				"At 1st level, the cleric learns one {@filter necromancy cantrip|spells|level=0|school=N} of his or her choice from any spell list. When the cleric casts a necromancy cantrip that normally targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other."
 			]
 		},
 		{
@@ -2441,6 +2471,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Death",
@@ -2598,6 +2629,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Knowledge",
@@ -2800,6 +2832,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Life",
@@ -2975,6 +3008,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Light",
@@ -3147,6 +3181,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Nature",
@@ -3320,6 +3355,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Tempest",
@@ -3476,6 +3512,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Trickery",
@@ -3647,6 +3684,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "War",
@@ -3804,6 +3842,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Ambition (PSA)",
@@ -4048,6 +4087,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Solidarity (PSA)",
@@ -4220,6 +4260,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Strength (PSA)",
@@ -4394,6 +4435,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Zeal (PSA)",
@@ -4587,6 +4629,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Arcana",
@@ -4646,6 +4689,7 @@
 		{
 			"name": "Order Domain",
 			"source": "TCE",
+			"page": 31,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -4709,6 +4753,7 @@
 		{
 			"name": "Bonus Proficiencies",
 			"source": "TCE",
+			"page": 31,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -4728,6 +4773,7 @@
 		{
 			"name": "Voice of Authority",
 			"source": "TCE",
+			"page": 31,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -4748,6 +4794,7 @@
 		{
 			"name": "Channel Divinity: Order's Demand",
 			"source": "TCE",
+			"page": 31,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -4768,6 +4815,7 @@
 		{
 			"name": "Embodiment of the Law",
 			"source": "TCE",
+			"page": 31,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -4789,6 +4837,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 31,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Order",
@@ -4804,7 +4853,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "UAClassFeatureVariants",
-			"page": 4,
+			"page": 31,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Order",
@@ -4820,6 +4869,7 @@
 		{
 			"name": "Divine Strike",
 			"source": "TCE",
+			"page": 31,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -4839,6 +4889,7 @@
 		{
 			"name": "Order's Wrath",
 			"source": "TCE",
+			"page": 31,
 			"otherSources": [
 				{
 					"source": "GGR",
@@ -4858,9 +4909,10 @@
 		{
 			"name": "Peace Domain",
 			"source": "TCE",
+			"page": 32,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Peace Domain",
+			"subclassShortName": "Peace",
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
@@ -4956,20 +5008,21 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Implement of Peace|Cleric||Peace Domain|TCE|1"
+					"subclassFeature": "Implement of Peace|Cleric||Peace|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Emboldening Bond|Cleric||Peace Domain|TCE|1"
+					"subclassFeature": "Emboldening Bond|Cleric||Peace|TCE|1"
 				}
 			]
 		},
 		{
 			"name": "Emboldening Bond",
 			"source": "TCE",
+			"page": 32,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Peace Domain",
+			"subclassShortName": "Peace",
 			"subclassSource": "TCE",
 			"level": 1,
 			"header": 1,
@@ -4982,9 +5035,10 @@
 		{
 			"name": "Implement of Peace",
 			"source": "TCE",
+			"page": 32,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Peace Domain",
+			"subclassShortName": "Peace",
 			"subclassSource": "TCE",
 			"level": 1,
 			"header": 1,
@@ -4996,9 +5050,10 @@
 		{
 			"name": "Channel Divinity: Balm of Peace",
 			"source": "TCE",
+			"page": 32,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Peace Domain",
+			"subclassShortName": "Peace",
 			"subclassSource": "TCE",
 			"level": 2,
 			"header": 2,
@@ -5010,9 +5065,10 @@
 		{
 			"name": "Protective Bond",
 			"source": "TCE",
+			"page": 32,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Peace Domain",
+			"subclassShortName": "Peace",
 			"subclassSource": "TCE",
 			"level": 6,
 			"header": 2,
@@ -5022,11 +5078,28 @@
 			]
 		},
 		{
-			"name": "Potent Spellcasting",
+			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 32,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Peace Domain",
+			"subclassShortName": "Peace",
+			"subclassSource": "TCE",
+			"level": 8,
+			"isClassFeatureVariant": true,
+			"header": 2,
+			"entries": [
+				"{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Potent Spellcasting feature}",
+				"You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
+			]
+		},
+		{
+			"name": "Potent Spellcasting",
+			"source": "TCE",
+			"page": 32,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Peace",
 			"subclassSource": "TCE",
 			"level": 8,
 			"header": 2,
@@ -5038,9 +5111,10 @@
 		{
 			"name": "Expansive Bond",
 			"source": "TCE",
+			"page": 32,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Peace Domain",
+			"subclassShortName": "Peace",
 			"subclassSource": "TCE",
 			"level": 17,
 			"header": 2,
@@ -5052,9 +5126,10 @@
 		{
 			"name": "Twilight Domain",
 			"source": "TCE",
+			"page": 34,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Twilight Domain",
+			"subclassShortName": "Twilight",
 			"subclassSource": "TCE",
 			"level": 1,
 			"entries": [
@@ -5150,24 +5225,25 @@
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Bonus Proficiencies|Cleric||Twilight Domain|TCE|1"
+					"subclassFeature": "Bonus Proficiencies|Cleric||Twilight|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Eyes of Night|Cleric||Twilight Domain|TCE|1"
+					"subclassFeature": "Eyes of Night|Cleric||Twilight|TCE|1"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Vigilant Blessing|Cleric||Twilight Domain|TCE|1"
+					"subclassFeature": "Vigilant Blessing|Cleric||Twilight|TCE|1"
 				}
 			]
 		},
 		{
 			"name": "Bonus Proficiencies",
 			"source": "TCE",
+			"page": 34,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Twilight Domain",
+			"subclassShortName": "Twilight",
 			"subclassSource": "TCE",
 			"level": 1,
 			"header": 1,
@@ -5179,9 +5255,10 @@
 		{
 			"name": "Eyes of Night",
 			"source": "TCE",
+			"page": 34,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Twilight Domain",
+			"subclassShortName": "Twilight",
 			"subclassSource": "TCE",
 			"level": 1,
 			"header": 1,
@@ -5194,9 +5271,10 @@
 		{
 			"name": "Vigilant Blessing",
 			"source": "TCE",
+			"page": 34,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Twilight Domain",
+			"subclassShortName": "Twilight",
 			"subclassSource": "TCE",
 			"level": 1,
 			"header": 1,
@@ -5208,9 +5286,10 @@
 		{
 			"name": "Channel Divinity: Twilight Sanctuary",
 			"source": "TCE",
+			"page": 34,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Twilight Domain",
+			"subclassShortName": "Twilight",
 			"subclassSource": "TCE",
 			"level": 2,
 			"header": 2,
@@ -5230,9 +5309,10 @@
 		{
 			"name": "Steps of Night",
 			"source": "TCE",
+			"page": 34,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Twilight Domain",
+			"subclassShortName": "Twilight",
 			"subclassSource": "TCE",
 			"level": 6,
 			"header": 2,
@@ -5242,11 +5322,28 @@
 			]
 		},
 		{
-			"name": "Divine Strike (Twilight)",
+			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 34,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Twilight Domain",
+			"subclassShortName": "Twilight",
+			"subclassSource": "TCE",
+			"level": 8,
+			"isClassFeatureVariant": true,
+			"header": 2,
+			"entries": [
+				"{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Divine Strike feature}",
+				"You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
+			]
+		},
+		{
+			"name": "Divine Strike",
+			"source": "TCE",
+			"page": 34,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Twilight",
 			"subclassSource": "TCE",
 			"level": 8,
 			"header": 2,
@@ -5258,9 +5355,10 @@
 		{
 			"name": "Twilight Shroud",
 			"source": "TCE",
+			"page": 34,
 			"className": "Cleric",
 			"classSource": "PHB",
-			"subclassShortName": "Twilight Domain",
+			"subclassShortName": "Twilight",
 			"subclassSource": "TCE",
 			"level": 17,
 			"header": 2,
@@ -5442,6 +5540,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Love (UA)",
@@ -5665,6 +5764,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Unity (UA)",
@@ -5858,6 +5958,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Forge (UA)",
@@ -6051,6 +6152,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Grave (UA)",
@@ -6223,6 +6325,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Protection (UA)",
@@ -6434,6 +6537,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Twilight (UA)",
@@ -6628,6 +6732,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "City (UA)",
@@ -6803,6 +6908,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Order (UA)",
@@ -6984,6 +7090,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Forge",
@@ -7165,6 +7272,7 @@
 		{
 			"name": "Blessed Strikes",
 			"source": "TCE",
+			"page": 30,
 			"className": "Cleric",
 			"classSource": "PHB",
 			"subclassShortName": "Grave",

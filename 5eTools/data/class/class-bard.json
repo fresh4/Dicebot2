@@ -15,16 +15,60 @@
 			],
 			"spellcastingAbility": "cha",
 			"casterProgression": "full",
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"spellsKnownProgression": [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				14,
+				15,
+				15,
+				16,
+				18,
+				19,
+				19,
+				20,
+				22,
+				22,
+				22
+			],
 			"startingProficiencies": {
 				"armor": [
 					"light"
 				],
 				"weapons": [
 					"simple",
-					"hand crossbows",
-					"longswords",
-					"rapiers",
-					"shortswords"
+					"{@item hand crossbow|phb|hand crossbows}",
+					"{@item longsword|phb|longswords}",
+					"{@item rapier|phb|rapiers}",
+					"{@item shortsword|phb|shortswords}"
 				],
 				"tools": [
 					"three {@item musical instrument|PHB|musical instruments} of your choice"
@@ -684,6 +728,7 @@
 					"name": "College of Creation",
 					"shortName": "Creation",
 					"source": "TCE",
+					"page": 28,
 					"subclassFeatures": [
 						"College of Creation|Bard||College of Creation|TCE|3",
 						"Animating Performance|Bard||College of Creation|TCE|6",
@@ -694,6 +739,7 @@
 					"name": "College of Eloquence",
 					"shortName": "Eloquence",
 					"source": "TCE",
+					"page": 29,
 					"otherSources": [
 						{
 							"source": "MOT",
@@ -1165,6 +1211,7 @@
 		{
 			"name": "Magical Inspiration",
 			"source": "TCE",
+			"page": 27,
 			"className": "Bard",
 			"classSource": "PHB",
 			"level": 2,
@@ -1228,6 +1275,7 @@
 		{
 			"name": "Bardic Versatility",
 			"source": "TCE",
+			"page": 27,
 			"className": "Bard",
 			"classSource": "PHB",
 			"level": 4,
@@ -1716,6 +1764,7 @@
 		{
 			"name": "College of Creation",
 			"source": "TCE",
+			"page": 27,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "College of Creation",
@@ -1738,6 +1787,7 @@
 		{
 			"name": "Mote of Potential",
 			"source": "TCE",
+			"page": 27,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "College of Creation",
@@ -1774,6 +1824,7 @@
 		{
 			"name": "Performance of Creation",
 			"source": "TCE",
+			"page": 27,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "College of Creation",
@@ -1790,6 +1841,7 @@
 		{
 			"name": "Animating Performance",
 			"source": "TCE",
+			"page": 27,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "College of Creation",
@@ -1807,6 +1859,7 @@
 		{
 			"name": "Creative Crescendo",
 			"source": "TCE",
+			"page": 27,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "College of Creation",
@@ -1822,7 +1875,7 @@
 		{
 			"name": "College of Eloquence",
 			"source": "TCE",
-			"page": 28,
+			"page": 29,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Eloquence",
@@ -1843,7 +1896,7 @@
 		{
 			"name": "Silver Tongue",
 			"source": "TCE",
-			"page": 28,
+			"page": 29,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Eloquence",
@@ -1858,7 +1911,7 @@
 		{
 			"name": "Unsettling Words",
 			"source": "TCE",
-			"page": 28,
+			"page": 29,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Eloquence",
@@ -1873,7 +1926,7 @@
 		{
 			"name": "Unfailing Inspiration",
 			"source": "TCE",
-			"page": 28,
+			"page": 29,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Eloquence",
@@ -1888,7 +1941,7 @@
 		{
 			"name": "Universal Speech",
 			"source": "TCE",
-			"page": 28,
+			"page": 29,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Eloquence",
@@ -1904,7 +1957,7 @@
 		{
 			"name": "Infectious Inspiration",
 			"source": "TCE",
-			"page": 28,
+			"page": 29,
 			"className": "Bard",
 			"classSource": "PHB",
 			"subclassShortName": "Eloquence",

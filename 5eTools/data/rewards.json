@@ -447,6 +447,15 @@
 			]
 		},
 		{
+			"name": "Charm of the Mirage",
+			"source": "CM",
+			"type": "Charm",
+			"entries": [
+				"{@note This charm can be bestowed by a {@creature chwinga|CM} living a desert by using their Magical Gift action.}",
+				"This charm allows you to cast the hallucinatory terrain spell (save DC 15) as an action. Once used, this charm vanishes from you."
+			]
+		},
+		{
 			"name": "Charm of the Slayer",
 			"source": "DMG",
 			"page": 228,
@@ -500,6 +509,15 @@
 			"entries": [
 				"{@note This charm can be bestowed by a {@creature chwinga|ToA} living in Icewind Dale or other cold regions by using their Magical Gift action.}",
 				"This charm has 3 charges. As an action, you can expend 1 of the charm's charges to cast the {@spell Leomund's tiny hut} spell, no components required. Once all its charges have been expended, this charm vanishes from you."
+			]
+		},
+		{
+			"name": "Charm of the Water Bearer",
+			"source": "CM",
+			"type": "Charm",
+			"entries": [
+				"{@note This charm can be bestowed by a {@creature chwinga|CM} living a desert by using their Magical Gift action.}",
+				"This charm allows you to create up to 1 gallon of fresh water, which fills one or more empty containers in your possession. You can do this up to thrice per day for 10 days, after which this charm vanishes from you."
 			]
 		},
 		{
@@ -1218,6 +1236,15 @@
 						}
 					]
 				}
+			]
+		},
+		{
+			"name": "Vlagomir's Spark",
+			"source": "IDRotF",
+			"page": 228,
+			"type": "Charm",
+			"entries": [
+				"You gain 1 foot of height every hour and become proportionately heavier until you stand 21 feet tall and weigh 7,700 pounds. When you are 9 feet tall, your Strength becomes 19 unless it is already higher. For every 3 additional feet of height you gain, your Strength increases by 1, to a maximum of 23. Armor and clothing you are wearing and weapons you are carrying magically increase in size to match your growth. If you are the recipient of a {@spell greater restoration} spell or similar magic, this charm vanishes from you, and you immediately shrink back to normal size, along with any armor, clothing, and weapons in your possession."
 			]
 		},
 		{

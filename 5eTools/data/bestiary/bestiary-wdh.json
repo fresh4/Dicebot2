@@ -1,4 +1,21 @@
 {
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"VGM"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"MM": "WDH",
+				"VGM": "WDH"
+			}
+		}
+	},
 	"monster": [
 		{
 			"name": "Ahmaergo",
@@ -125,7 +142,9 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ammalia Cassalanter",
@@ -267,7 +286,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Aurinax",
@@ -347,7 +367,8 @@
 			"miscTags": [
 				"AOE",
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Awakened Rat",
@@ -557,7 +578,9 @@
 				"MW",
 				"RW",
 				"THW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Bepis Honeymaker",
@@ -618,7 +641,8 @@
 			"languageTags": [
 				"C",
 				"H"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Black Viper",
@@ -740,7 +764,9 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Blinded Troll",
@@ -955,7 +981,9 @@
 				"charmed",
 				"invisible",
 				"unconscious"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Diatryma",
@@ -1241,7 +1269,9 @@
 			"miscTags": [
 				"MW",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Durnan",
@@ -1348,7 +1378,9 @@
 			"miscTags": [
 				"MW",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Elzerina Cassalanter",
@@ -1449,7 +1481,8 @@
 			],
 			"spellcastingTags": [
 				"I"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Emmek Frewn",
@@ -1577,7 +1610,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Fala Lefaliir",
@@ -1707,7 +1741,8 @@
 			],
 			"conditionInflictSpell": [
 				"restrained"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Falcon",
@@ -1941,7 +1976,9 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Grinda Garloth",
@@ -2087,7 +2124,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Hester Barch",
@@ -2340,7 +2378,9 @@
 			],
 			"conditionInflictSpell": [
 				"deafened"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hrabbaz",
@@ -2442,7 +2482,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Istrid Horn",
@@ -2619,7 +2661,9 @@
 				"deafened",
 				"incapacitated",
 				"paralyzed"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Jalester Silvermane",
@@ -2729,7 +2773,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Jandar Chergoba",
@@ -2874,7 +2920,8 @@
 			"conditionInflictSpell": [
 				"paralyzed",
 				"prone"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Jarlaxle Baenre",
@@ -3074,7 +3121,9 @@
 				"MW",
 				"RW",
 				"THW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Jenks",
@@ -3253,7 +3302,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Kalain",
@@ -3405,7 +3455,8 @@
 				"charmed",
 				"invisible",
 				"unconscious"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Krebbyg Masq'il'yr",
@@ -3537,7 +3588,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Laeral Silverhand",
@@ -3795,7 +3847,9 @@
 				"petrified",
 				"restrained",
 				"stunned"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Laiba \"Nana\" Rosse",
@@ -3940,7 +3994,8 @@
 			"conditionInflictSpell": [
 				"paralyzed",
 				"prone"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Losser Mirklav",
@@ -4087,7 +4142,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Magister Umbero Zastro",
@@ -4178,7 +4234,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Manafret Cherryport",
@@ -4328,7 +4385,8 @@
 			],
 			"conditionInflictSpell": [
 				"invisible"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Manshoon",
@@ -4534,7 +4592,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Manshoon Simulacrum",
@@ -4682,7 +4742,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Mattrim \"Threestrings\" Mereg",
@@ -4761,7 +4822,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Mechanical Bird",
@@ -4934,7 +4996,8 @@
 			],
 			"conditionInflictSpell": [
 				"restrained"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Meloon Wardragon",
@@ -5039,7 +5102,9 @@
 			],
 			"damageTags": [
 				"S"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Mirt",
@@ -5168,7 +5233,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nar'l Xibrindas",
@@ -5358,7 +5425,9 @@
 			"conditionInflictSpell": [
 				"invisible",
 				"restrained"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nat",
@@ -5549,7 +5618,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Noska Ur'gray",
@@ -5665,7 +5736,9 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Obaya Uday",
@@ -5777,7 +5850,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Orond Gralhund",
@@ -5857,7 +5931,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Osvaldo Cassalanter",
@@ -5966,7 +6042,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Panopticus Wizard",
@@ -6066,7 +6144,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Remallia Haventree",
@@ -6258,7 +6337,8 @@
 				"restrained",
 				"stunned",
 				"unconscious"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Renaer Neverember",
@@ -6356,7 +6436,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Rishaal the Page-Turner",
@@ -6499,7 +6581,8 @@
 			"miscTags": [
 				"AOE",
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Saeth Cromley",
@@ -6592,7 +6675,9 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Samara Strongbones",
@@ -6763,7 +6848,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Skeemo Weirdbottle",
@@ -6913,7 +6999,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Soluun Xibrindas",
@@ -7068,7 +7156,8 @@
 			"miscTags": [
 				"MW",
 				"RW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Squiddly",
@@ -7178,7 +7267,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Swarm of Mechanical Spiders",
@@ -7293,7 +7383,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Sylgar",
@@ -7355,7 +7446,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Talisolvanar \"Tally\" Fellbranch",
@@ -7430,7 +7522,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Tashlyn Yafeera",
@@ -7537,7 +7630,9 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Terenzio Cassalanter",
@@ -7652,7 +7747,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Thrakkus",
@@ -7737,7 +7834,8 @@
 			"miscTags": [
 				"AOE",
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Tissina Khyret",
@@ -7882,7 +7980,8 @@
 			"conditionInflictSpell": [
 				"paralyzed",
 				"prone"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Urstul Floxin",
@@ -8004,7 +8103,9 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Vajra Safahr",
@@ -8201,7 +8302,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Valetta",
@@ -8330,7 +8433,8 @@
 			"miscTags": [
 				"AOE",
 				"MW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Victoro Cassalanter",
@@ -8566,7 +8670,8 @@
 				"incapacitated",
 				"prone",
 				"stunned"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Vincent Trench",
@@ -8713,7 +8818,9 @@
 			"miscTags": [
 				"MW",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Willifort Crowelle",
@@ -8763,7 +8870,8 @@
 					"legendaryGroup": true
 				}
 			},
-			"hasToken": true
+			"hasToken": true,
+			"hasFluff": true
 		},
 		{
 			"name": "Yagra Stonefist",
@@ -8875,7 +8983,9 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yalah Gralhund",
@@ -8957,7 +9067,9 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yorn",
@@ -9064,7 +9176,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Zhent Martial Arts Adept",
@@ -9187,7 +9300,8 @@
 			"conditionInflict": [
 				"prone",
 				"stunned"
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Ziraj the Hunter",
@@ -9333,7 +9447,9 @@
 			"conditionInflictSpell": [
 				"blinded",
 				"prone"
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }

@@ -228,7 +228,8 @@ function convertSize(input){
 }
 function convertAlignment(input){ //FIX
     //"L","N","NX","NY","C","G","E","U","A"
-    let output = []
+    if(input == undefined) return "Unaligned";
+    let output = [];
     for(i in input){
         switch(input[i]){
             case "L": output[i] = "Lawful"; break;
@@ -240,7 +241,6 @@ function convertAlignment(input){ //FIX
             case "U": output[i] = "Unaligned"; break;
             //case "NX": output[i] += `Neutral ${output[i]}`; break;
             //case "NY": output[i] += `${output[i]} Neutral`; break;
-
         }
 
     }

@@ -115,6 +115,7 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
 }
 exports.lookupByType = function(type, entry, args){
     if(type == "feature") return this.classFeatLookup(entry)
+    if(type == "feat") return this.FeatLookup(entry)
     if(type == "class") return this.classLookup(entry, args)
     if(type == "subclass") return this.subclassLookup(entry)
     if(type == "monster") return this.monsterLookup(entry)

@@ -38,12 +38,16 @@ exports.parseStartProfs = function(startProfs){
 function parseProf(startProfs, input){
     var output = "", 
         prof = (startProfs[input.toString()]) ? startProfs[input.toString()] : output = "None"; 
+    console.log(prof)
     if(output == "None") return output;
     for(var i = 0; i < prof.length; i++){
+        if(prof[i].full) prof[i] = prof[i].full
         if(prof[i].choose) output = `Choose ${prof[i].choose.count} from ${parseProf(prof[i].choose, "from")}`
-        else if(i < prof.length - 1) output += `and ${prof[i]}, `
-        else output += `${prof[i]}`
+        else if(prof.length == 1) output = `${prof[i]}`
+        else if(i < prof.length - 1) output += `${prof[i]}, `
+        else output += `and ${prof[i]}`
     }
+    output = parse.removeTags(output)
     return output
 }
 exports.parseStartEquipment = function(startingEquipment){

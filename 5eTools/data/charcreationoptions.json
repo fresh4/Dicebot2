@@ -4,6 +4,7 @@
 			"name": "Anvilwrought",
 			"source": "MOT",
 			"page": 12,
+			"optionType": "SG",
 			"entries": [
 				"You were forged in the fires of Purphoros's forge. Your appearance bears a metallic sheen and visible joints. The Anvilwrought Characteristics table suggests details of your life or origins. Additionally, you gain the following traits.",
 				{
@@ -76,9 +77,28 @@
 			]
 		},
 		{
+			"name": "Cult of the Dragon Infiltrator",
+			"source": "HotDQ",
+			"page": 87,
+			"optionType": "OF",
+			"entries": [
+				"You have infiltrated the ranks of the Cult of the Dragon. Having spied on the organization for quite some time, you are familiar with its inner workings and customs. You have a second identity as an initiate of the cult, enough of a facade to blend in as a simple grunt or servant."
+			]
+		},
+		{
+			"name": "Dragon Scholar",
+			"source": "HotDQ",
+			"page": 87,
+			"optionType": "OF",
+			"entries": [
+				"You have studied dragons and their lore for many years. You can automatically identify locations built or used by dragons and can identify dragon eggs and scales by sight. If you fail an Intelligence check to recall lore relating to dragons, you know someone or some book you can consult for the answer unless the DM rules that the lore is unknown."
+			]
+		},
+		{
 			"name": "Heroic Destiny",
 			"source": "MOT",
 			"page": 12,
+			"optionType": "SG",
 			"entries": [
 				"Great deeds lie in your future, and it will take extraordinary effort to kill you before you accomplish those deeds. Choose or roll a random destiny using the Heroic Destiny table. Additionally, you gain the following traits.",
 				{
@@ -138,12 +158,14 @@
 						]
 					]
 				}
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hollow One",
 			"source": "EGW",
 			"page": 182,
+			"optionType": "SG",
 			"entries": [
 				"As a Hollow One, the void left behind by your departed soul is filled with the strange magic of Blightshore. Becoming a Hollow One is a supernatural gift that bestows upon you the following traits.",
 				{
@@ -185,6 +207,7 @@
 			"name": "Iconoclast",
 			"source": "MOT",
 			"page": 12,
+			"optionType": "SG",
 			"entries": [
 				"No one can deny the reality of the gods of Theros, whose presence and deeds are visible in the night sky and sometimes directly in the mortal realm. But some people refute the idea that the gods are worthy of reverence. Such iconoclasts are common among the leonin, but members of any culture can adopt this supernatural gift. The Iconoclast Characteristics table presents suggestions for why you've become an iconoclast.",
 				"Your denial of the gods gives you supernatural power to resist their influence in the world. You gain the following traits.",
@@ -281,6 +304,7 @@
 			"name": "Inscrutable",
 			"source": "MOT",
 			"page": 14,
+			"optionType": "SG",
 			"entries": [
 				"Like a sphinx, you have a mind like a maze, impenetrable to mortal scrutiny. This might be a gift or training from an actual sphinx, the blessing (or curse) of a god, or an inexplicable talent. The Inscrutable Characteristics table suggests options for what makes you inscrutable. Additionally, you gain the following trait.",
 				{
@@ -347,6 +371,7 @@
 			"name": "Lifelong Companion",
 			"source": "MOT",
 			"page": 14,
+			"optionType": "SG",
 			"entries": [
 				"Behind many heroes is another hero whose greatness comes from the support and love they offer. Haktos had his beloved Perynes, Renata was accompanied by her servant Karados, and Siona sailed with her devoted crew. Like these partners, you are great and make others great. Consider the Companion Relationships table when determining your legendary connection. Any relationship with another player's character requires that player's consent. Additionally, you gain the following traits.",
 				{
@@ -407,12 +432,14 @@
 						]
 					]
 				}
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nyxborn",
 			"source": "MOT",
 			"page": 14,
+			"optionType": "SG",
 			"entries": [
 				"Born from the minds of the gods, the creatures that populate the gods' realm are called Nyxborn. Nyxborn creatures resemble mortal beings, but philosophers debate their true character. Are they idealized forms of mortal beings, free from the imperfections and transience that causes mortals to suffer and die? Or are they hollow and soulless shades, lacking the authenticity and pathos that make mortal existence worthwhile?",
 				"A Nyxborn is like a fragment of divinity, an idea or a dream that is incarnate. You embody an idea\u2014like the way leaves turn toward the sun or the feeling of ocean sand between the toes, the way the heart stirs when the tide of battle changes or the sadness that lingers when remembering a happy moment of childhood.",
@@ -519,6 +546,7 @@
 			"name": "Oracle",
 			"source": "MOT",
 			"page": 15,
+			"optionType": "SG",
 			"entries": [
 				"You possess a precious gift coveted not just by mortals but by the gods themselves: the gift of clear communication between the mortal and divine realms. As an oracle, you can perceive the whims of the gods and petition them for glimpses of their vast insight. This gift also comes with a curse, though, which typically takes the form of dire insights. Consult the Oracle Curse table to determine what unwanted revelations you receive.",
 				"The gods seek mortal oracles to act as their agents. As a result, most oracles devote themselves to the service of a single god and learn to ignore the voices of all others. Occasionally, two gods agree to share the services of an oracle. Oracles who try to remain independent often find themselves pursued by the agents of evil gods who would bind them to the god's service, if necessary.",
@@ -634,12 +662,14 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Pious",
 			"source": "MOT",
 			"page": 17,
+			"optionType": "SG",
 			"entries": [
 				"Born with a particular connection to a deity, you have been winning favor with your god since birth. Consult the Pious Quirks table to determine how your faith might influence your personality. Additionally, you gain the following traits.",
 				{
@@ -713,6 +743,7 @@
 			"name": "Unscarred",
 			"source": "MOT",
 			"page": 17,
+			"optionType": "SG",
 			"entries": [
 				"Like the great hero Haktos, you are resistant to physical harm. Use the Unscarred Origin table to determine how you gained your legendary invulnerability. Additionally, you gain the following trait.",
 				{

@@ -3,6 +3,7 @@
 		{
 			"name": "Blade of Disaster",
 			"source": "TCE",
+			"page": 106,
 			"otherSources": [
 				{
 					"source": "IDRotF",
@@ -78,6 +79,7 @@
 		{
 			"name": "Booming Blade",
 			"source": "TCE",
+			"page": 106,
 			"otherSources": [
 				{
 					"source": "SCAG",
@@ -100,8 +102,11 @@
 				}
 			},
 			"components": {
-				"v": true,
-				"m": "a melee weapon worth at least 1 sp"
+				"s": true,
+				"m": {
+					"text": "a melee weapon worth at least 1 sp",
+					"cost": 10
+				}
 			},
 			"duration": [
 				{
@@ -152,15 +157,35 @@
 					},
 					{
 						"name": "Sorcerer",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
 					},
 					{
 						"name": "Warlock",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
 					},
 					{
 						"name": "Wizard",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB",
+						"definedInSource": "TCE"
 					}
 				]
 			}
@@ -168,6 +193,7 @@
 		{
 			"name": "Dream of the Blue Veil",
 			"source": "TCE",
+			"page": 106,
 			"level": 7,
 			"school": "C",
 			"time": [
@@ -228,11 +254,13 @@
 						"definedInSource": "TCE"
 					}
 				]
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Green-Flame Blade",
 			"source": "TCE",
+			"page": 107,
 			"otherSources": [
 				{
 					"source": "SCAG",
@@ -255,8 +283,11 @@
 				}
 			},
 			"components": {
-				"v": true,
-				"m": "a melee weapon worth at least 1 sp"
+				"s": true,
+				"m": {
+					"text": "a melee weapon worth at least 1 sp",
+					"cost": 10
+				}
 			},
 			"duration": [
 				{
@@ -265,7 +296,7 @@
 			],
 			"entries": [
 				"You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects, and you can cause green fire to leap from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.",
-				"This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra 1d8 fire damage to the target on a hit, and the fire damage to the second creature increases to {@damage 1d8} + your spellcasting ability modifier. Both damage rolls increase by {@damage 1d8} at 11th level ({@damage 2d8} and {@damage 2d8}) and 17th level ({@damage 3d8} and {@damage 3d8})."
+				"This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} fire damage to the target on a hit, and the fire damage to the second creature increases to {@damage 1d8} + your spellcasting ability modifier. Both damage rolls increase by {@damage 1d8} at 11th level ({@damage 2d8} and {@damage 2d8}) and 17th level ({@damage 3d8} and {@damage 3d8})."
 			],
 			"scalingLevelDice": [
 				{
@@ -305,15 +336,35 @@
 					},
 					{
 						"name": "Sorcerer",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
 					},
 					{
 						"name": "Warlock",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
 					},
 					{
 						"name": "Wizard",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB",
+						"definedInSource": "TCE"
 					}
 				]
 			}
@@ -321,6 +372,7 @@
 		{
 			"name": "Intellect Fortress",
 			"source": "TCE",
+			"page": 107,
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -370,13 +422,16 @@
 			"damageVulnerable": [
 				"psychic"
 			],
-			"savingThrow": [
-				"charisma"
-			],
 			"miscTags": [
 				"SGT"
 			],
 			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				],
 				"fromClassListVariant": [
 					{
 						"name": "Bard",
@@ -399,11 +454,13 @@
 						"definedInSource": "TCE"
 					}
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Lightning Lure",
 			"source": "TCE",
+			"page": 107,
 			"otherSources": [
 				{
 					"source": "SCAG",
@@ -453,6 +510,7 @@
 				"strength"
 			],
 			"miscTags": [
+				"FMV",
 				"SCL",
 				"SGT"
 			],
@@ -462,16 +520,40 @@
 			"classes": {
 				"fromClassList": [
 					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
 						"name": "Sorcerer",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
 					},
 					{
 						"name": "Warlock",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
 					},
 					{
 						"name": "Wizard",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB",
+						"definedInSource": "TCE"
 					}
 				]
 			}
@@ -479,6 +561,7 @@
 		{
 			"name": "Mind Sliver",
 			"source": "TCE",
+			"page": 108,
 			"level": 0,
 			"school": "E",
 			"time": [
@@ -559,11 +642,13 @@
 						}
 					}
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Spirit Shroud",
 			"source": "TCE",
+			"page": 108,
 			"level": 3,
 			"school": "N",
 			"time": [
@@ -602,12 +687,16 @@
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@dice 1d8} for every two slot levels above 3rd."
+						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 1d8|3,5,7,9|1d8} for every two slot levels above 3rd."
 					]
 				}
 			],
+			"damageInflict": [
+				"radiant",
+				"necrotic",
+				"cold"
+			],
 			"miscTags": [
-				"HL",
 				"SGT"
 			],
 			"classes": {
@@ -638,6 +727,7 @@
 		{
 			"name": "Summon Aberration",
 			"source": "TCE",
+			"page": 109,
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -685,7 +775,8 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromSubclass": [
@@ -717,6 +808,7 @@
 		{
 			"name": "Summon Beast",
 			"source": "TCE",
+			"page": 109,
 			"level": 2,
 			"school": "C",
 			"time": [
@@ -764,7 +856,8 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassListVariant": [
@@ -784,6 +877,7 @@
 		{
 			"name": "Summon Celestial",
 			"source": "TCE",
+			"page": 110,
 			"level": 5,
 			"school": "C",
 			"time": [
@@ -831,7 +925,8 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassListVariant": [
@@ -846,11 +941,13 @@
 						"definedInSource": "TCE"
 					}
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Summon Construct",
 			"source": "TCE",
+			"page": 111,
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -898,9 +995,16 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
+				"fromClassList": [
+					{
+						"name": "Artificer",
+						"source": "TCE"
+					}
+				],
 				"fromSubclass": [
 					{
 						"class": {
@@ -915,11 +1019,6 @@
 				],
 				"fromClassListVariant": [
 					{
-						"name": "Artificer",
-						"source": "TCE",
-						"definedInSource": "TCE"
-					},
-					{
 						"name": "Wizard",
 						"source": "PHB",
 						"definedInSource": "TCE"
@@ -930,6 +1029,7 @@
 		{
 			"name": "Summon Elemental",
 			"source": "TCE",
+			"page": 111,
 			"level": 4,
 			"school": "C",
 			"time": [
@@ -977,7 +1077,8 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromSubclass": [
@@ -1014,6 +1115,7 @@
 		{
 			"name": "Summon Fey",
 			"source": "TCE",
+			"page": 112,
 			"level": 3,
 			"school": "C",
 			"time": [
@@ -1061,7 +1163,8 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassListVariant": [
@@ -1091,6 +1194,7 @@
 		{
 			"name": "Summon Fiend",
 			"source": "TCE",
+			"page": 112,
 			"level": 6,
 			"school": "C",
 			"time": [
@@ -1138,7 +1242,8 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassListVariant": [
@@ -1158,6 +1263,7 @@
 		{
 			"name": "Summon Shadowspawn",
 			"source": "TCE",
+			"page": 113,
 			"level": 3,
 			"school": "C",
 			"time": [
@@ -1205,7 +1311,8 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassListVariant": [
@@ -1220,11 +1327,13 @@
 						"definedInSource": "TCE"
 					}
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Summon Undead",
 			"source": "TCE",
+			"page": 114,
 			"level": 3,
 			"school": "N",
 			"time": [
@@ -1272,12 +1381,18 @@
 				}
 			],
 			"miscTags": [
-				"SGT"
+				"SGT",
+				"SMN"
 			],
 			"classes": {
 				"fromClassListVariant": [
 					{
 						"name": "Warlock",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
+						"name": "Wizard",
 						"source": "PHB",
 						"definedInSource": "TCE"
 					}
@@ -1287,6 +1402,7 @@
 		{
 			"name": "Sword Burst",
 			"source": "TCE",
+			"page": 115,
 			"otherSources": [
 				{
 					"source": "SCAG",
@@ -1317,7 +1433,7 @@
 				}
 			],
 			"entries": [
-				"You create a momentary circle of spectral blades that sweep around you. All other creatures within 5 feet of you must succeed on a Dexterity saving throw or take {@damage 1d6} force damage",
+				"You create a momentary circle of spectral blades that sweep around you. All other creatures within 5 feet of you must succeed on a Dexterity saving throw or take {@damage 1d6} force damage.",
 				"This spell's damage increases by {@dice 1d6} when you reach 5th level ({@damage 2d6}), 11th level ({@damage 3d6}), and 17th level ({@damage 4d6})."
 			],
 			"scalingLevelDice": {
@@ -1344,16 +1460,40 @@
 			"classes": {
 				"fromClassList": [
 					{
+						"name": "Artificer",
+						"source": "TCE"
+					},
+					{
 						"name": "Sorcerer",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
 					},
 					{
 						"name": "Warlock",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
 					},
 					{
 						"name": "Wizard",
-						"source": "PHB"
+						"source": "PHB",
+						"definedInSource": "SCAG"
+					}
+				],
+				"fromClassListVariant": [
+					{
+						"name": "Sorcerer",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
+						"name": "Warlock",
+						"source": "PHB",
+						"definedInSource": "TCE"
+					},
+					{
+						"name": "Wizard",
+						"source": "PHB",
+						"definedInSource": "TCE"
 					}
 				]
 			}
@@ -1361,6 +1501,7 @@
 		{
 			"name": "Tasha's Caustic Brew",
 			"source": "TCE",
+			"page": 115,
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -1410,12 +1551,13 @@
 				"dexterity"
 			],
 			"classes": {
-				"fromClassListVariant": [
+				"fromClassList": [
 					{
 						"name": "Artificer",
-						"source": "TCE",
-						"definedInSource": "TCE"
-					},
+						"source": "TCE"
+					}
+				],
+				"fromClassListVariant": [
 					{
 						"name": "Sorcerer",
 						"source": "PHB",
@@ -1432,6 +1574,7 @@
 		{
 			"name": "Tasha's Mind Whip",
 			"source": "TCE",
+			"page": 115,
 			"level": 2,
 			"school": "E",
 			"time": [
@@ -1493,11 +1636,13 @@
 						"definedInSource": "TCE"
 					}
 				]
-			}
+			},
+			"hasFluffImages": true
 		},
 		{
 			"name": "Tasha's Otherworldly Guise",
 			"source": "TCE",
+			"page": 116,
 			"level": 6,
 			"school": "T",
 			"time": [

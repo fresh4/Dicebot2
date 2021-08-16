@@ -16,7 +16,7 @@
 			"startingProficiencies": {
 				"weapons": [
 					"simple",
-					"shortswords"
+					"{@item shortsword|phb|shortswords}"
 				],
 				"tools": [
 					"any one type of {@item artisan's tools|PHB} or any one {@item musical instrument|PHB} of your choice"
@@ -82,7 +82,7 @@
 				"proficienciesGained": {
 					"weapons": [
 						"simple",
-						"shortswords"
+						"{@item shortsword|phb|shortswords}"
 					]
 				}
 			},
@@ -659,6 +659,7 @@
 					"name": "Way of Mercy",
 					"shortName": "Mercy",
 					"source": "TCE",
+					"page": 49,
 					"subclassFeatures": [
 						"Way of Mercy|Monk||Mercy|TCE|3",
 						"Physician's Touch|Monk||Mercy|TCE|6",
@@ -670,6 +671,7 @@
 					"name": "Way of the Astral Self",
 					"shortName": "Astral Self",
 					"source": "TCE",
+					"page": 50,
 					"subclassFeatures": [
 						"Way of the Astral Self|Monk||Astral Self|TCE|3",
 						"Visage of the Astral Self|Monk||Astral Self|TCE|6",
@@ -1031,6 +1033,7 @@
 		{
 			"name": "Dedicated Weapon",
 			"source": "TCE",
+			"page": 48,
 			"className": "Monk",
 			"classSource": "PHB",
 			"level": 2,
@@ -1161,6 +1164,7 @@
 		{
 			"name": "Ki-Fueled Attack",
 			"source": "TCE",
+			"page": 48,
 			"className": "Monk",
 			"classSource": "PHB",
 			"level": 3,
@@ -1212,6 +1216,7 @@
 		{
 			"name": "Quickened Healing",
 			"source": "TCE",
+			"page": 48,
 			"className": "Monk",
 			"classSource": "PHB",
 			"level": 4,
@@ -1248,6 +1253,7 @@
 		{
 			"name": "Focused Aim",
 			"source": "TCE",
+			"page": 48,
 			"className": "Monk",
 			"classSource": "PHB",
 			"level": 5,
@@ -1995,20 +2001,17 @@
 		{
 			"name": "Way of the Astral Self",
 			"source": "TCE",
+			"page": 50,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Astral Self",
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"A monk who follows the Way of the Astral Self believes their body is an illusion. They see their ki as a representation of their true form, an astral self. This astral self has the capacity to be a force of order or disorder, with some monasteries training students to use their power to protect the weak and other instructing aspirants in how to manifest their rue selves in service to the mighty.",
+				"A monk who follows the Way of the Astral Self believes their body is an illusion. They see their ki as a representation of their true form, an astral self. This astral self has the capacity to be a force of order or disorder, with some monasteries training students to use their power to protect the weak and other instructing aspirants in how to manifest their true selves in service to the mighty.",
 				{
-					"type": "inset",
-					"name": "Forms of Your Astral Self",
-					"entries": [
-						"The astral self is a translucent embodiment of the monk's soul. As a result, an astral self can reflect aspects of a monk's background, ideals, flaws, and bonds, and an astral self doesn't necessarily look anything like the monk. For example, the astral self of a lanky human might be reminiscent of a minotaur-the strength of which the monk feels within. Similarly, an orc monk might manifest gossamer arms and a delicate visage, representing the gentle beauty of the orc's soul. Each astral self is unique, and some of the monks of this monastic tradition are known more for the appearance of their astral self than for their physical appearance.",
-						"When choosing this path, consider the quirks that define your monk. Are you obsessed with something? Are you driven by justice or a selfish desire? Any of these motivations could manifest in the form of your astral self."
-					]
+					"type": "refSubclassFeature",
+					"subclassFeature": "Forms of Your Astral Self|Monk||Astral Self|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
@@ -2019,6 +2022,7 @@
 		{
 			"name": "Arms of the Astral Self",
 			"source": "TCE",
+			"page": 50,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Astral Self",
@@ -2042,8 +2046,25 @@
 			]
 		},
 		{
+			"name": "Forms of Your Astral Self",
+			"source": "TCE",
+			"page": 50,
+			"className": "Monk",
+			"classSource": "PHB",
+			"subclassShortName": "Astral Self",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"type": "inset",
+			"entries": [
+				"The astral self is a translucent embodiment of the monk's soul. As a result, an astral self can reflect aspects of a monk's background, ideals, flaws, and bonds, and an astral self doesn't necessarily look anything like the monk. For example, the astral self of a lanky human might be reminiscent of a minotaur-the strength of which the monk feels within. Similarly, an orc monk might manifest gossamer arms and a delicate visage, representing the gentle beauty of the orc's soul. Each astral self is unique, and some of the monks of this monastic tradition are known more for the appearance of their astral self than for their physical appearance.",
+				"When choosing this path, consider the quirks that define your monk. Are you obsessed with something? Are you driven by justice or a selfish desire? Any of these motivations could manifest in the form of your astral self."
+			]
+		},
+		{
 			"name": "Visage of the Astral Self",
 			"source": "TCE",
+			"page": 50,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Astral Self",
@@ -2081,6 +2102,7 @@
 		{
 			"name": "Body of the Astral Self",
 			"source": "TCE",
+			"page": 50,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Astral Self",
@@ -2110,6 +2132,7 @@
 		{
 			"name": "Awakened Astral Self",
 			"source": "TCE",
+			"page": 50,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Astral Self",
@@ -2139,6 +2162,7 @@
 		{
 			"name": "Way of Mercy",
 			"source": "TCE",
+			"page": 49,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Mercy",
@@ -2165,6 +2189,7 @@
 		{
 			"name": "Hand of Harm",
 			"source": "TCE",
+			"page": 49,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Mercy",
@@ -2179,6 +2204,7 @@
 		{
 			"name": "Hand of Healing",
 			"source": "TCE",
+			"page": 49,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Mercy",
@@ -2194,6 +2220,7 @@
 		{
 			"name": "Implements of Mercy",
 			"source": "TCE",
+			"page": 49,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Mercy",
@@ -2247,6 +2274,7 @@
 		{
 			"name": "Physician's Touch",
 			"source": "TCE",
+			"page": 49,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Mercy",
@@ -2263,6 +2291,7 @@
 		{
 			"name": "Flurry of Healing and Harm",
 			"source": "TCE",
+			"page": 49,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Mercy",
@@ -2278,6 +2307,7 @@
 		{
 			"name": "Hand of Ultimate Mercy",
 			"source": "TCE",
+			"page": 49,
 			"className": "Monk",
 			"classSource": "PHB",
 			"subclassShortName": "Mercy",

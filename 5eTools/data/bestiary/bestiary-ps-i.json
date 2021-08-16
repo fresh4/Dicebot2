@@ -1,4 +1,12 @@
 {
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"CoS"
+			]
+		}
+	},
 	"monster": [
 		{
 			"name": "Creepy Doll",
@@ -232,7 +240,12 @@
 						}
 					}
 				}
-			}
+			},
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			]
 		},
 		{
 			"name": "Geist",

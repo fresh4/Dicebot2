@@ -247,7 +247,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Anthropologist",
@@ -523,7 +524,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Archaeologist",
@@ -826,7 +828,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Athlete",
@@ -1141,7 +1144,9 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Augen Trust (Spy)",
@@ -1150,7 +1155,8 @@
 			"_copy": {
 				"name": "Variant Criminal (Spy)",
 				"source": "PHB"
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Azorius Functionary",
@@ -1548,7 +1554,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Acolyte",
@@ -1580,7 +1587,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Charlatan",
@@ -1613,7 +1621,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Criminal",
@@ -1700,7 +1709,9 @@
 						]
 					}
 				}
-			}
+			},
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Baldur's Gate Entertainer",
@@ -1732,7 +1743,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Folk Hero",
@@ -1811,7 +1823,8 @@
 						]
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Guild Artisan",
@@ -1843,7 +1856,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Hermit",
@@ -1922,7 +1936,8 @@
 						]
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Noble",
@@ -1954,7 +1969,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Outlander",
@@ -2033,7 +2049,8 @@
 						]
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Sage",
@@ -2065,7 +2082,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Sailor",
@@ -2097,7 +2115,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Soldier",
@@ -2156,7 +2175,8 @@
 						]
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Baldur's Gate Urchin",
@@ -2188,7 +2208,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Black Fist Double Agent",
@@ -2452,7 +2473,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Boros Legionnaire",
@@ -2875,7 +2897,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Caravan Specialist",
@@ -3126,7 +3149,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Celebrity Adventurer's Scion",
@@ -3360,7 +3384,9 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Charlatan",
@@ -3652,7 +3678,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "City Watch",
@@ -3730,7 +3757,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Clan Crafter",
@@ -3817,7 +3845,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Cloistered Scholar",
@@ -3913,7 +3942,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Cobalt Scholar (Sage)",
@@ -3922,7 +3952,8 @@
 			"_copy": {
 				"name": "Sage",
 				"source": "PHB"
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Cormanthor Refugee",
@@ -4168,7 +4199,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Courtier",
@@ -4228,17 +4260,16 @@
 			],
 			"startingEquipment": [
 				{
-					"a": [
-						"fine clothes|phb"
-					],
-					"b": [
+					"_": [
+						"fine clothes|phb",
 						{
 							"item": "pouch|phb",
 							"containsValue": 500
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Criminal",
@@ -4518,7 +4549,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Dimir Operative",
@@ -4920,7 +4952,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Dissenter",
@@ -4956,7 +4989,8 @@
 					"history": true,
 					"religion": true
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Dragon Casualty",
@@ -5366,7 +5400,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Earthspur Miner",
@@ -5613,7 +5648,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Entertainer",
@@ -5903,7 +5939,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Faceless",
@@ -6198,7 +6235,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Faction Agent",
@@ -6288,7 +6326,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Failed Merchant",
@@ -6525,7 +6564,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Far Traveler",
@@ -6818,7 +6858,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Fisher",
@@ -7111,7 +7152,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Folk Hero",
@@ -7400,7 +7442,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Gambler",
@@ -7639,7 +7682,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Gate Urchin",
@@ -7902,7 +7946,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Golgari Agent",
@@ -8326,7 +8371,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Grinner",
@@ -8558,7 +8604,9 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Gruul Anarch",
@@ -8977,7 +9025,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Guild Artisan",
@@ -9318,7 +9367,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Harborfolk",
@@ -9563,7 +9613,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Haunted One",
@@ -9869,7 +9920,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Hermit",
@@ -10163,7 +10215,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Hillsfar Merchant",
@@ -10416,7 +10469,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Hillsfar Smuggler",
@@ -10667,7 +10721,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "House Agent",
@@ -11070,7 +11125,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Inheritor",
@@ -11217,7 +11273,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Initiate",
@@ -11496,7 +11553,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Inquisitor",
@@ -11558,7 +11616,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Iron Route Bandit",
@@ -11800,7 +11859,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Izzet Engineer",
@@ -12219,7 +12279,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Knight of the Order",
@@ -12313,7 +12374,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Luxonborn (Acolyte)",
@@ -12322,7 +12384,8 @@
 			"_copy": {
 				"name": "Acolyte",
 				"source": "PHB"
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Marine",
@@ -12601,7 +12664,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Mercenary Veteran",
@@ -12679,7 +12743,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Mulmaster Aristocrat",
@@ -12928,7 +12993,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Myriad Operative (Criminal)",
@@ -12937,7 +13003,8 @@
 			"_copy": {
 				"name": "Criminal",
 				"source": "PHB"
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Noble",
@@ -13174,7 +13241,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Orzhov Representative",
@@ -13573,7 +13641,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Outlander",
@@ -13871,7 +13940,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Phlan Insurgent",
@@ -14184,7 +14254,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Phlan Refugee",
@@ -14436,7 +14507,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Plaintiff",
@@ -14675,7 +14747,9 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Rakdos Cultist",
@@ -15155,7 +15229,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Revelry Pirate (Sailor)",
@@ -15164,7 +15239,8 @@
 			"_copy": {
 				"name": "Sailor",
 				"source": "PHB"
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Rival Intern",
@@ -15403,7 +15479,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Sage",
@@ -15435,7 +15512,7 @@
 					"name": "Feature: Researcher",
 					"type": "entries",
 					"entries": [
-						"When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature, Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign."
+						"When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign."
 					],
 					"data": {
 						"isFeature": true
@@ -15688,7 +15765,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Sailor",
@@ -15921,7 +15999,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Secret Identity",
@@ -16163,7 +16242,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Selesnya Initiate",
@@ -16580,7 +16660,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Shade Fanatic",
@@ -16831,7 +16912,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Shipwright",
@@ -17113,7 +17195,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Simic Scientist",
@@ -17578,7 +17661,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Smuggler",
@@ -17861,7 +17945,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Soldier",
@@ -18154,7 +18239,8 @@
 						"playing card set|phb"
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Stojanow Prisoner",
@@ -18399,7 +18485,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Ticklebelly Nomad",
@@ -18652,7 +18739,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Trade Sheriff",
@@ -18905,7 +18993,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Urban Bounty Hunter",
@@ -18986,7 +19075,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Urchin",
@@ -19222,7 +19312,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Uthgardt Tribe Member",
@@ -19320,7 +19411,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Variant City Watch (Investigator)",
@@ -19398,7 +19490,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Variant Criminal (Spy)",
@@ -19423,7 +19516,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Variant Entertainer (Gladiator)",
@@ -19479,7 +19573,8 @@
 						}
 					]
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Variant Guild Artisan (Guild Merchant)",
@@ -19538,7 +19633,8 @@
 						]
 					}
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Variant Noble (Knight)",
@@ -19578,7 +19674,8 @@
 						}
 					]
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Variant Sailor (Pirate)",
@@ -19603,7 +19700,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasFluff": true
 		},
 		{
 			"name": "Vizier",
@@ -19853,7 +19951,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Volstrucker Agent",
@@ -20067,7 +20166,9 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Waterdhavian Noble",
@@ -20167,7 +20268,8 @@
 						}
 					]
 				}
-			]
+			],
+			"hasFluff": true
 		}
 	]
 }

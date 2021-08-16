@@ -43,7 +43,7 @@ function pickLoot(table, lootType, dice){
 }
 function rollLoot(item, type, amount){
     let output = ""
-    type = type.split(/,/);
+    type = type.toString().split(/,/);
     amount = amount.split(/,/)
     for(let j in type){
         item.forEach(entry => {

@@ -15,6 +15,92 @@
 			],
 			"spellcastingAbility": "cha",
 			"casterProgression": "pact",
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"spellsKnownProgression": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				10,
+				11,
+				11,
+				12,
+				12,
+				13,
+				13,
+				14,
+				14,
+				15,
+				15
+			],
+			"spellsKnownProgressionFixedByLevel": {
+				"11": {
+					"6": 1
+				},
+				"13": {
+					"7": 1
+				},
+				"15": {
+					"8": 1
+				},
+				"17": {
+					"9": 1
+				}
+			},
+			"optionalfeatureProgression": [
+				{
+					"name": "Eldritch Invocations",
+					"featureType": "EI",
+					"progression": [
+						0,
+						2,
+						2,
+						2,
+						3,
+						3,
+						4,
+						4,
+						5,
+						5,
+						5,
+						6,
+						6,
+						6,
+						7,
+						7,
+						7,
+						8,
+						8,
+						8
+					]
+				}
+			],
 			"startingProficiencies": {
 				"armor": [
 					"light"
@@ -1007,6 +1093,7 @@
 					"name": "The Fathomless",
 					"shortName": "Fathomless",
 					"source": "TCE",
+					"page": 72,
 					"additionalSpells": [
 						{
 							"expanded": {
@@ -1045,6 +1132,7 @@
 					"name": "The Genie",
 					"shortName": "Genie",
 					"source": "TCE",
+					"page": 73,
 					"additionalSpells": [
 						{
 							"expanded": {
@@ -1528,14 +1616,9 @@
 			"level": 2,
 			"entries": [
 				"In your study of occult lore, you have unearthed eldritch invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.",
-				{
-					"type": "inlineBlock",
-					"entries": [
-						"At 2nd level, you gain two eldritch invocations of your choice. A list of the available options can be found on the {@filter Optional Features|optionalfeatures|Feature Type=EI} page. When you gain certain warlock levels, you gain additional invocations of your choice."
-					]
-				},
+				"At 2nd level, you gain two eldritch invocations of your choice. A list of the available options can be found on the {@filter Optional Features|optionalfeatures|Feature Type=EI} page. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table.",
 				"Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level.",
-				"A level prerequisite in an invocation refers to warlock level, not character level."
+				"If an eldritch invocation has prerequisites, you must meet them to learn it. You can learn the invocation at the same time that you meet its prerequisites. A level prerequisite refers to your level in this class."
 			]
 		},
 		{
@@ -1596,6 +1679,7 @@
 		{
 			"name": "Eldritch Versatility",
 			"source": "TCE",
+			"page": 70,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"level": 4,
@@ -1608,9 +1692,10 @@
 					"items": [
 						"Replace one cantrip you learned from this class's Pact Magic feature with another cantrip from the {@filter warlock spell list|spells|level=0|class=Warlock}.",
 						"Replace the option you chose for the Pact Boon feature with one of that feature's other options.",
-						"If you're 12th level or higher, replace one spell from your Mystic Arcanum feature with another warlock spell of the same level. If this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify."
+						"If you're 12th level or higher, replace one spell from your Mystic Arcanum feature with another warlock spell of the same level."
 					]
-				}
+				},
+				"If this change makes you ineligible for any of your Eldritch Invocations, you must also replace them now, choosing invocations for which you qualify."
 			]
 		},
 		{
@@ -2147,7 +2232,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"Starting at 1st level, your alien knowledge gives you the ability to touch the minds of other creatures. You can communicate telepathically with any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language."
+				"Starting at 1st level, your alien knowledge gives you the ability to touch the minds of other creatures. You can telepathically speak to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand your telepathic utterances, but the creature must be able to understand at least one language."
 			]
 		},
 		{
@@ -2316,6 +2401,7 @@
 		{
 			"name": "The Fathomless",
 			"source": "TCE",
+			"page": 72,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Fathomless",
@@ -2380,6 +2466,7 @@
 		{
 			"name": "Gift of the Sea",
 			"source": "TCE",
+			"page": 72,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Fathomless",
@@ -2394,6 +2481,7 @@
 		{
 			"name": "Tentacle of the Deeps",
 			"source": "TCE",
+			"page": 72,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Fathomless",
@@ -2411,6 +2499,7 @@
 		{
 			"name": "Guardian Coil",
 			"source": "TCE",
+			"page": 72,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Fathomless",
@@ -2425,6 +2514,7 @@
 		{
 			"name": "Oceanic Soul",
 			"source": "TCE",
+			"page": 72,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Fathomless",
@@ -2439,6 +2529,7 @@
 		{
 			"name": "Grasping Tentacles",
 			"source": "TCE",
+			"page": 72,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Fathomless",
@@ -2454,6 +2545,7 @@
 		{
 			"name": "Fathomless Plunge",
 			"source": "TCE",
+			"page": 72,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Fathomless",
@@ -2469,6 +2561,7 @@
 		{
 			"name": "The Genie",
 			"source": "TCE",
+			"page": 73,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Genie",
@@ -2600,6 +2693,7 @@
 		{
 			"name": "Genie's Vessel",
 			"source": "TCE",
+			"page": 73,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Genie",
@@ -2649,31 +2743,27 @@
 				},
 				"While you are touching the vessel, you can use it in the following ways:",
 				{
-					"type": "entries",
+					"type": "options",
+					"style": "list-hang-notitle",
 					"entries": [
 						{
-							"type": "entries",
-							"name": "Bottled Respite",
-							"entries": [
-								"As an action, you can magically vanish and enter your vessel, which remains in the space you left. The interior of the vessel is an extradimensional space in the shape of a 20-foot-radius cylinder, 20 feet high, and resembles your vessel. The interior is appointed with cushions and low tables and is a comfortable temperature. While inside, you can hear the area around your vessel as if you were in its space. You can remain inside the vessel up to a number of hours equal to twice your proficiency bonus. You exit the vessel early if you use a bonus action to leave, if you die, or if the vessel is destroyed. When you exit the vessel, you appear in the unoccupied space closest to it. Any objects left in the vessel remain there until carried out, and if the vessel is destroyed, every object stored there harmlessly appears in the unoccupied spaces closest to the vessel's former space. Once you enter the vessel, you can't enter again until you finish a long rest."
-							]
+							"type": "refSubclassFeature",
+							"subclassFeature": "Bottled Respite|Warlock|TCE|Genie|TCE|1"
 						},
 						{
-							"type": "entries",
-							"name": "Genie's Wrath",
-							"entries": [
-								"Once during each of your turns when you hit with an attack roll, you can deal extra damage to the target equal to your proficiency bonus. The type of this damage is determined by your patron: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid).",
-								"The vessel's AC equals your spell save DC. Its hit points equal your warlock level plus your proficiency bonus, and it is immune to poison and psychic damage.",
-								"If the vessel is destroyed or you lose it, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and the previous vessel is destroyed if it still exists. The vessel vanishes in a flare of elemental power when you die."
-							]
+							"type": "refSubclassFeature",
+							"subclassFeature": "Genie's Wrath|Warlock|TCE|Genie|TCE|1"
 						}
 					]
-				}
+				},
+				"The vessel's AC equals your spell save DC. Its hit points equal your warlock level plus your proficiency bonus, and it is immune to poison and psychic damage.",
+				"If the vessel is destroyed or you lose it, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and the previous vessel is destroyed if it still exists. The vessel vanishes in a flare of elemental power when you die."
 			]
 		},
 		{
 			"name": "Elemental Gift",
 			"source": "TCE",
+			"page": 73,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Genie",
@@ -2689,6 +2779,7 @@
 		{
 			"name": "Sanctuary Vessel",
 			"source": "TCE",
+			"page": 73,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Genie",
@@ -2705,6 +2796,7 @@
 		{
 			"name": "Limited Wish",
 			"source": "TCE",
+			"page": 73,
 			"className": "Warlock",
 			"classSource": "PHB",
 			"subclassShortName": "Genie",
@@ -4599,6 +4691,32 @@
 			"header": 2,
 			"entries": [
 				"Starting at 14th level, you can spread your Hexblade's Curse from a slain creature to another creature. When the creature cursed by your Hexblade's Curse dies, you can apply the curse to a different creature you can see within 30 feet of you, provided you aren't {@condition incapacitated}. When you apply the curse in this way, you don't regain hit points from the death of the previously cursed creature."
+			]
+		},
+		{
+			"name": "Bottled Respite",
+			"source": "TCE",
+			"page": 73,
+			"className": "Warlock",
+			"classSource": "TCE",
+			"subclassShortName": "Genie",
+			"subclassSource": "TCE",
+			"level": 1,
+			"entries": [
+				"As an action, you can magically vanish and enter your vessel, which remains in the space you left. The interior of the vessel is an extradimensional space in the shape of a 20-foot-radius cylinder, 20 feet high, and resembles your vessel. The interior is appointed with cushions and low tables and is a comfortable temperature. While inside, you can hear the area around your vessel as if you were in its space. You can remain inside the vessel up to a number of hours equal to twice your proficiency bonus. You exit the vessel early if you use a bonus action to leave, if you die, or if the vessel is destroyed. When you exit the vessel, you appear in the unoccupied space closest to it. Any objects left in the vessel remain there until carried out, and if the vessel is destroyed, every object stored there harmlessly appears in the unoccupied spaces closest to the vessel's former space. Once you enter the vessel, you can't enter again until you finish a long rest."
+			]
+		},
+		{
+			"name": "Genie's Wrath",
+			"source": "TCE",
+			"page": 73,
+			"className": "Warlock",
+			"classSource": "TCE",
+			"subclassShortName": "Genie",
+			"subclassSource": "TCE",
+			"level": 1,
+			"entries": [
+				"Once during each of your turns when you hit with an attack roll, you can deal extra damage to the target equal to your proficiency bonus. The type of this damage is determined by your patron: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid)."
 			]
 		}
 	]

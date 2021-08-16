@@ -15,12 +15,13 @@
 			],
 			"spellcastingAbility": "cha",
 			"casterProgression": "1/2",
+			"preparedSpells": "<$level$> / 2 + <$cha_mod$>",
 			"startingProficiencies": {
 				"armor": [
 					"light",
 					"medium",
 					"heavy",
-					"shields"
+					"{@item shield|phb|shields}"
 				],
 				"weapons": [
 					"simple",
@@ -104,7 +105,7 @@
 					"armor": [
 						"light",
 						"medium",
-						"shields"
+						"{@item shield|phb|shields}"
 					],
 					"weapons": [
 						"simple",
@@ -814,6 +815,7 @@
 					"name": "Oath of Glory",
 					"shortName": "Glory",
 					"source": "TCE",
+					"page": 53,
 					"otherSources": [
 						{
 							"source": "MOT",
@@ -857,6 +859,7 @@
 					"name": "Oath of the Watchers",
 					"shortName": "Watchers",
 					"source": "TCE",
+					"page": 54,
 					"additionalSpells": [
 						{
 							"prepared": {
@@ -1445,6 +1448,7 @@
 		{
 			"name": "Channel Divinity: Harness Divine Power",
 			"source": "TCE",
+			"page": 52,
 			"className": "Paladin",
 			"classSource": "PHB",
 			"level": 3,
@@ -1542,6 +1546,7 @@
 		{
 			"name": "Martial Versatility",
 			"source": "TCE",
+			"page": 52,
 			"className": "Paladin",
 			"classSource": "PHB",
 			"level": 4,
@@ -2831,6 +2836,7 @@
 		{
 			"name": "Oath of Glory",
 			"source": "TCE",
+			"page": 53,
 			"otherSources": [
 				{
 					"source": "MOT",
@@ -2861,6 +2867,7 @@
 		{
 			"name": "Channel Divinity",
 			"source": "TCE",
+			"page": 53,
 			"otherSources": [
 				{
 					"source": "MOT",
@@ -2889,6 +2896,7 @@
 		{
 			"name": "Oath Spells",
 			"source": "TCE",
+			"page": 53,
 			"otherSources": [
 				{
 					"source": "MOT",
@@ -2943,6 +2951,7 @@
 		{
 			"name": "Tenets of Glory",
 			"source": "TCE",
+			"page": 53,
 			"otherSources": [
 				{
 					"source": "MOT",
@@ -2990,6 +2999,7 @@
 		{
 			"name": "Inspiring Smite",
 			"source": "TCE",
+			"page": 53,
 			"otherSources": [
 				{
 					"source": "MOT",
@@ -3009,6 +3019,7 @@
 		{
 			"name": "Peerless Athlete",
 			"source": "TCE",
+			"page": 53,
 			"otherSources": [
 				{
 					"source": "MOT",
@@ -3028,6 +3039,7 @@
 		{
 			"name": "Aura of Alacrity",
 			"source": "TCE",
+			"page": 53,
 			"otherSources": [
 				{
 					"source": "MOT",
@@ -3049,6 +3061,7 @@
 		{
 			"name": "Glorious Defense",
 			"source": "TCE",
+			"page": 53,
 			"otherSources": [
 				{
 					"source": "MOT",
@@ -3070,6 +3083,7 @@
 		{
 			"name": "Living Legend",
 			"source": "TCE",
+			"page": 53,
 			"otherSources": [
 				{
 					"source": "MOT",
@@ -3099,6 +3113,7 @@
 		{
 			"name": "Oath of the Watchers",
 			"source": "TCE",
+			"page": 54,
 			"className": "Paladin",
 			"classSource": "PHB",
 			"subclassShortName": "Watchers",
@@ -3124,6 +3139,7 @@
 		{
 			"name": "Channel Divinity",
 			"source": "TCE",
+			"page": 54,
 			"className": "Paladin",
 			"classSource": "PHB",
 			"subclassShortName": "Watchers",
@@ -3153,6 +3169,7 @@
 		{
 			"name": "Oath Spells",
 			"source": "TCE",
+			"page": 54,
 			"className": "Paladin",
 			"classSource": "PHB",
 			"subclassShortName": "Watchers",
@@ -3201,6 +3218,7 @@
 		{
 			"name": "Tenets of the Watchers",
 			"source": "TCE",
+			"page": 54,
 			"className": "Paladin",
 			"classSource": "PHB",
 			"subclassShortName": "Watchers",
@@ -3235,6 +3253,7 @@
 		{
 			"name": "Aura of the Sentinel",
 			"source": "TCE",
+			"page": 54,
 			"className": "Paladin",
 			"classSource": "PHB",
 			"subclassShortName": "Watchers",
@@ -3250,6 +3269,7 @@
 		{
 			"name": "Vigilant Rebuke",
 			"source": "TCE",
+			"page": 54,
 			"className": "Paladin",
 			"classSource": "PHB",
 			"subclassShortName": "Watchers",
@@ -3264,6 +3284,7 @@
 		{
 			"name": "Mortal Bulwark",
 			"source": "TCE",
+			"page": 54,
 			"className": "Paladin",
 			"classSource": "PHB",
 			"subclassShortName": "Watchers",

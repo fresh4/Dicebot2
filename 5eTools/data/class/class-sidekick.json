@@ -54,6 +54,50 @@
 			"source": "UASidekicks",
 			"page": 4,
 			"isSidekick": true,
+			"cantripProgression": [
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5
+			],
+			"spellsKnownProgression": [
+				3,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				12,
+				13,
+				13,
+				14,
+				14,
+				15,
+				15,
+				16,
+				16
+			],
 			"classTableGroups": [
 				{
 					"colLabels": [
@@ -509,6 +553,7 @@
 		{
 			"name": "Expert Sidekick",
 			"source": "TCE",
+			"page": 142,
 			"isSidekick": true,
 			"classFeatures": [
 				"Sidekick Class|Expert Sidekick|TCE|1",
@@ -543,7 +588,52 @@
 		{
 			"name": "Spellcaster Sidekick",
 			"source": "TCE",
+			"page": 144,
 			"isSidekick": true,
+			"cantripProgression": [
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4
+			],
+			"spellsKnownProgression": [
+				1,
+				2,
+				3,
+				3,
+				4,
+				4,
+				5,
+				5,
+				6,
+				6,
+				7,
+				7,
+				8,
+				8,
+				9,
+				9,
+				10,
+				10,
+				11,
+				11
+			],
 			"classTableGroups": [
 				{
 					"colLabels": [
@@ -859,6 +949,7 @@
 		{
 			"name": "Warrior Sidekick",
 			"source": "TCE",
+			"page": 146,
 			"isSidekick": true,
 			"classFeatures": [
 				"Sidekick Class|Warrior Sidekick|TCE|1",
@@ -896,6 +987,7 @@
 		{
 			"name": "Bonus Proficiencies",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 1,
@@ -908,6 +1000,7 @@
 		{
 			"name": "Helpful",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 1,
@@ -919,6 +1012,7 @@
 		{
 			"name": "Sidekick Class",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 1,
@@ -931,6 +1025,7 @@
 		{
 			"name": "Cunning Action",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 2,
@@ -942,6 +1037,7 @@
 		{
 			"name": "Expertise",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 3,
@@ -954,6 +1050,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 4,
@@ -965,6 +1062,7 @@
 		{
 			"name": "Coordinated Strike",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 6,
@@ -976,6 +1074,7 @@
 		{
 			"name": "Evasion",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 7,
@@ -987,6 +1086,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 8,
@@ -998,6 +1098,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 10,
@@ -1009,6 +1110,7 @@
 		{
 			"name": "Inspiring Help",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 11,
@@ -1021,6 +1123,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 12,
@@ -1032,6 +1135,7 @@
 		{
 			"name": "Reliable Talent",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 14,
@@ -1043,6 +1147,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 16,
@@ -1054,6 +1159,7 @@
 		{
 			"name": "Sharp Mind",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 18,
@@ -1065,6 +1171,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 19,
@@ -1076,6 +1183,7 @@
 		{
 			"name": "Inspiring Help Improvement",
 			"source": "TCE",
+			"page": 142,
 			"className": "Expert Sidekick",
 			"classSource": "TCE",
 			"level": 20,
@@ -1087,6 +1195,7 @@
 		{
 			"name": "Bonus Proficiencies",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 1,
@@ -1100,6 +1209,7 @@
 		{
 			"name": "Sidekick Class",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 1,
@@ -1112,12 +1222,13 @@
 		{
 			"name": "Spellcasting",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 1,
 			"entries": [
 				"{@i 1st-level Spellcaster feature}",
-				"The sidekick gains the ability to cast spells. Your spellcasting ability is Intelligence. (If the creature already has the Spellcasting trait, this feature replaces that trait.) Choose the Spellcaster's role: Mage, Healer, or Prodigy. This choice determines the spell list and spellcasting ability used by the sidekick, as shown on the Spellcasting table.",
+				"The sidekick gains the ability to cast spells. (If the creature already has the Spellcasting trait, this feature replaces that trait.) Choose the Spellcaster's role: Mage, Healer, or Prodigy. This choice determines the spell list and spellcasting ability used by the sidekick, as shown on the Spellcasting table.",
 				{
 					"type": "table",
 					"caption": "Spellcasting",
@@ -1225,6 +1336,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 4,
@@ -1236,6 +1348,7 @@
 		{
 			"name": "Potent Cantrips",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 6,
@@ -1247,6 +1360,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 8,
@@ -1258,6 +1372,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 12,
@@ -1269,6 +1384,7 @@
 		{
 			"name": "Empowered Spells",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 14,
@@ -1280,6 +1396,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 16,
@@ -1291,6 +1408,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 18,
@@ -1302,6 +1420,7 @@
 		{
 			"name": "Focused Casting",
 			"source": "TCE",
+			"page": 144,
 			"className": "Spellcaster Sidekick",
 			"classSource": "TCE",
 			"level": 20,
@@ -1313,6 +1432,7 @@
 		{
 			"name": "Bonus Proficiencies",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 1,
@@ -1326,6 +1446,7 @@
 		{
 			"name": "Martial Role",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 1,
@@ -1353,6 +1474,7 @@
 		{
 			"name": "Sidekick Class",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 1,
@@ -1364,6 +1486,7 @@
 		{
 			"name": "Second Wind",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 2,
@@ -1376,6 +1499,7 @@
 		{
 			"name": "Improved Critical",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 3,
@@ -1387,6 +1511,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 4,
@@ -1398,6 +1523,7 @@
 		{
 			"name": "Extra Attack",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 6,
@@ -1411,6 +1537,7 @@
 		{
 			"name": "Battle Readiness",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 7,
@@ -1422,6 +1549,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 8,
@@ -1433,6 +1561,7 @@
 		{
 			"name": "Improved Defense",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 10,
@@ -1444,6 +1573,7 @@
 		{
 			"name": "Indomitable",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 11,
@@ -1456,6 +1586,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 12,
@@ -1467,6 +1598,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 14,
@@ -1478,6 +1610,7 @@
 		{
 			"name": "Extra Attack Improvement",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 15,
@@ -1491,6 +1624,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 16,
@@ -1502,6 +1636,7 @@
 		{
 			"name": "Indomitable Improvement",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 18,
@@ -1514,6 +1649,7 @@
 		{
 			"name": "Ability Score Improvement",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 19,
@@ -1525,6 +1661,7 @@
 		{
 			"name": "Second Wind Improvement",
 			"source": "TCE",
+			"page": 146,
 			"className": "Warrior Sidekick",
 			"classSource": "TCE",
 			"level": 20,
