@@ -38,7 +38,6 @@ exports.parseStartProfs = function(startProfs){
 function parseProf(startProfs, input){
     var output = "", 
         prof = (startProfs[input.toString()]) ? startProfs[input.toString()] : output = "None"; 
-    console.log(prof)
     if(output == "None") return output;
     for(var i = 0; i < prof.length; i++){
         if(prof[i].full) prof[i] = prof[i].full

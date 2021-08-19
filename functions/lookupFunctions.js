@@ -8,6 +8,13 @@ var raceParser = require('../functions/parseRaceFunctions.js');
 var backgroundParser = require('../functions/parseBackgroundFunctions.js');
 var parse = require('../functions/parseFunctions.js');
 
+/*
+FUCKING READ THIS YOU DIMWIT
+COME BACK HERE AND REFORMAT THE EMBEDS
+PASS IN EMBED ARRAYS INSTEAD SO YOU CAN RETURN THEM IN THE PARSE METHODS FOR WHEN THE MESSAGES ARE TOO LONG
+DON'T FUCKING FORGET
+*/ 
+
 exports.lookup = function(book, msg, args){
     let input = args.join(' ');
     let type = Object.keys(book)[0], entries = book[type], occurences = 0, listOfFoundObjects = [];
@@ -56,7 +63,8 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
             .setTitle(`Multiple matches found`)
             .setDescription(`${desc}\nPage ${parseInt(start/10)+1}/${parseInt(arrayOfMatches.length/10)+1}`)
             .setFooter("Type the number of your selection, or press 'c' to cancel selection.");
-        return embed
+        const embeds = {embeds: [embed]}
+        return embeds
     }
     msg.channel.send(generateEmbed(0)).then((msg2) => {
         const filter = m => m.author.id === msg.author.id;
@@ -64,26 +72,22 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
             msg2.react('⬅️')
             msg2.react('➡️')
         }
-        const collector = msg2.createReactionCollector(
-            // only collect left and right arrow reactions from the message author
-            (reaction, user) => ['⬅️', '➡️'].includes(reaction.emoji.name) && user.id === msg.author.id,
-            // time out after a minute
-            {time: 60000}
-        )
+        const collector = msg2.createReactionCollector({filter:(reaction, user) => 
+            ['⬅️', '➡️'].includes(reaction.emoji.name) && user.id === msg.author.id, 
+            time: 60000} )
         let currentIndex = 0
-        collector.on('collect', reaction => {
-              // increase/decrease index
-                reaction.emoji.name === '⬅️' ? currentIndex -= 10 : currentIndex += 10
-
-                if(currentIndex < 0) currentIndex = (parseInt(arrayOfMatches.length/10)*10)
-                if(currentIndex > arrayOfMatches.length) currentIndex = 0
-                msg2.edit(generateEmbed(currentIndex))
-                // react with left arrow if it isn't the start (await is used so that the right arrow always goes after the left)
-                if (currentIndex !== 0) msg2.react('⬅️')
-                // react with right arrow if it isn't the end
-                if (currentIndex + 10 < arrayOfMatches.length) msg2.react('➡️')
+        collector.on('collect', (reaction, user) => {
+            // increase/decrease index
+            reaction.emoji.name === '⬅️' ? currentIndex -= 10 : currentIndex += 10
+            if(currentIndex < 0) currentIndex = (parseInt(arrayOfMatches.length/10)*10)
+            if(currentIndex > arrayOfMatches.length) currentIndex = 0
+            msg2.edit(generateEmbed(currentIndex))
+            // react with left arrow if it isn't the start (await is used so that the right arrow always goes after the left)
+            if (currentIndex !== 0) msg2.react('⬅️')
+            // react with right arrow if it isn't the end
+            if (currentIndex + 10 < arrayOfMatches.length) msg2.react('➡️')
         })
-        msg.channel.awaitMessages(filter, {
+        msg.channel.awaitMessages({filter, 
             max: 1,
             time: 60000
         })
@@ -125,24 +129,27 @@ exports.lookupByType = function(type, entry, args){
     if(type == "background") return this.backgroundLookup(entry)
 }
 exports.classFeatLookup = function(classFeat){
-    let embeddedMessage = new discord.MessageEmbed();
+    let embeddedMessage = new discord.MessageEmbed(),
+        embeddedMessages = {embeds: [embeddedMessage]};
     let description = classParser.parseEntries(classFeat.entries, embeddedMessage)
     embeddedMessage.setTitle(classFeat.name)
                    //.setDescription(parse.parseEntry(classFeat.entries, "\n"))
                    .setFooter(`Source: ${parse.parseSourcesName(classFeat.source)}`)
                    .setColor("fa2af3");
-    return embeddedMessage;
+    return embeddedMessages;
 }
 exports.subclassLookup = function(subclass){
-    let embeddedMessage = new discord.MessageEmbed();
+    let embeddedMessage = new discord.MessageEmbed(),
+        embeddedMessages = {embeds: [embeddedMessage]};
     let description = classParser.parseSubclassEntries(subclass, embeddedMessage);
     embeddedMessage.setTitle(subclass.name)
                    .setFooter(`Source: ${parse.parseSourcesName(subclass.source)}`)
                    .setColor("fa2af3");
-    return embeddedMessage;
+    return embeddedMessages;
 }
 exports.classLookup = function(classs, args){
-    let embeddedMessage = new discord.MessageEmbed();
+    let embeddedMessage = new discord.MessageEmbed(),
+        embeddedMessages = {embeds: [embeddedMessage]};;
     let levelTable = classParser.parseLevelTable(classs);
     let hitDice = classParser.parseHitDice(classs);
     let saveProfs = classParser.parseSaveProfs(classs.proficiency);
@@ -161,10 +168,11 @@ exports.classLookup = function(classs, args){
                    .addField("Quick Build", quickStart)
                    .setFooter(`${source}\nUse the classfeat command to lookup a specific feature.\nSubclasses: ${subclassList}`)
                    .setColor("fa2af3")
-    return embeddedMessage
+    return embeddedMessages;
 }
 exports.monsterLookup = function(monster){
-    let embeddedMessage = new discord.MessageEmbed().setColor("f44242");
+    let embeddedMessage = new discord.MessageEmbed().setColor("f44242"),
+        embeddedMessages = {embeds: [embeddedMessage]};
     let footer = (monster.source) ? `Source: ${parse.parseSourcesName(monster.source)}, page ${(monster.page) ? monster.page : null}` : null 
     let descriptors = monsterParser.parseDescriptor(monster);
     let physicals = monsterParser.parsePhysical(monster, embeddedMessage);
@@ -179,10 +187,11 @@ exports.monsterLookup = function(monster){
     let actions = (monster.action) ? monsterParser.parseActions(monster.action, embeddedMessage, "ACTIONS") : null
     let legendaryActions = (monster.legendary) ? monsterParser.parseActions(monster.legendary, embeddedMessage, "LEGENDARY ACTIONS") : null
     let reactions = (monster.reaction) ? monsterParser.parseActions(monster.reaction, embeddedMessage, "REACTIONS") : null
-    return embeddedMessage
+    return embeddedMessages;
 }
 exports.spellLookup = function(spell){
-    let embeddedMessage = new discord.MessageEmbed();
+    let embeddedMessage = new discord.MessageEmbed(),
+        embeddedMessages = {embeds: [embeddedMessage]};
     let definitions = spellParser.parseDefinitions(spell);
     let description = spellParser.parseDescription(spell, embeddedMessage);
     let footer = `Classes: ${spellParser.parseClassList(spell)} | ${parse.parseSourcesName(spell.source)}, page ${(spell.page) ? spell.page : null}`
@@ -190,10 +199,11 @@ exports.spellLookup = function(spell){
                    .setDescription(definitions)
                    .setFooter(footer)
                    .setColor("3dff00");
-    return embeddedMessage
+    return embeddedMessages;
 }
 exports.itemLookup = function(item){
-    let embeddedMessage = new discord.MessageEmbed();
+    let embeddedMessage = new discord.MessageEmbed(),
+        embeddedMessages = {embeds: [embeddedMessage]};
     let definitions = itemParser.parseDefinitions(item);
     if(item.ac) embeddedMessage.addField("AC", `${item.ac} ${(item.stealth) ? "(Disadvantage on Stealth checks)" : ""}`, true)
     if(item.dmg1) embeddedMessage.addField("Damage", `${item.dmg1}${(item.dmg2) ? `/${item.dmg2}` : ""}`, true)
@@ -203,24 +213,26 @@ exports.itemLookup = function(item){
                    .setDescription(definitions)
                    .setFooter(itemParser.parseSources(item))
                    .setColor("00b6fd")
-    return embeddedMessage
+    return embeddedMessages
 }
 exports.raceLookup = function(race){
-    let embeddedMessage = new discord.MessageEmbed();
+    let embeddedMessage = new discord.MessageEmbed(),
+        embeddedMessages = {embeds: [embeddedMessage]};
     let description = raceParser.parseDescription(race)
     embeddedMessage.setTitle(race.name)
                    .setDescription(description)
                    .setColor("fa7d2a")
     //let subraces = (race.subraces) ? raceParser.parseSubraces(race.subraces, embeddedMessage) : null;
 
-    return embeddedMessage;
+    return embeddedMessages;
 }
 exports.backgroundLookup = function(background){
-    let embeddedMessage = new discord.MessageEmbed()
+    let embeddedMessage = new discord.MessageEmbed(),
+        embeddedMessages = {embeds: [embeddedMessage]};
     let description = backgroundParser.parseDescription(background, embeddedMessage);
     embeddedMessage.setTitle(background.name)
                    .setFooter(itemParser.parseSources(background))
                    .setColor("ffffff");;
 
-    return embeddedMessage;
+    return embeddedMessages;
 }

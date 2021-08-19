@@ -20,7 +20,7 @@ exports.run = (bot, msg, args) => {
                                        .addField("**Art**", art)
                                        .addField("**Magic Items**", magicItems)
                                        .setColor("808080")
-    msg.channel.send(embed)
+    msg.channel.send({embeds: [embed]})
 }
 function pickLoot(table, lootType, dice){
     let output = ""

@@ -7,7 +7,8 @@ exports.run = (bot, msg, args = args.toString()) => {
         if(feat.name.toLowerCase().split(" ").toString() == args){
             if(feat.source == "UAFeatsForRaces") return;
             let sourceBook = "", description = "";
-            let embeddedMessage = new discord.MessageEmbed();
+            let embeddedMessage = new discord.MessageEmbed(),
+                embeddedMessages = {embeds: [embeddedMessage]};
             if(feat.prerequisite){
                 let prereqsArr = []
                 feat.prerequisite.forEach(prereq => {
@@ -21,11 +22,11 @@ exports.run = (bot, msg, args = args.toString()) => {
             if(feat.source){
                 sourceBook = `Source: ${parser.parseSourcesName(feat.source)}, page ${feat.page}`;
             }
-            msg.channel.send(embeddedMessage
-                                            .setTitle(feat.name)
-                                            .setDescription(description)
-                                            .setFooter(sourceBook)
-                                            .setColor("F1F21F"))
+            embeddedMessage.setTitle(feat.name)
+                           .setDescription(description)
+                           .setFooter(sourceBook)
+                           .setColor("F1F21F")
+            msg.channel.send(embeddedMessages)
         }
     })
 }

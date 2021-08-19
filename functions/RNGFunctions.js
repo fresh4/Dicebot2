@@ -19,7 +19,7 @@ exports.rollStats = function(){
     }
     var total = this.totalModifierSum(this.calculateModifier(score));
     if(total < 0){
-        score = rollStats();
+        score = this.rollStats();
     }
     return score;
 }

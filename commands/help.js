@@ -3,7 +3,8 @@ var fs = require('fs');
 var discord = require('discord.js')
 exports.run = (bot, msg, args) => {
 
-    let embed = new discord.MessageEmbed();
+    let embed = new discord.MessageEmbed(),
+        embeds = {embeds: [embed]};
     let output = "", invite = "https://discordapp.com/oauth2/authorize?client_id=392081019798421515&scope=bot&permissions=0";
     let categories = ["Rolling", "Compendium Lookup", "Generator", "Utility", "Cards", "Administrative"];
 
@@ -32,7 +33,7 @@ exports.run = (bot, msg, args) => {
         })
         if(output != "") embed.setDescription(output); else return msg.channel.send("Command not found.")
     }
-    msg.channel.send(embed)
+    msg.channel.send(embeds)
 }
 module.exports.help = {
     name: "help",

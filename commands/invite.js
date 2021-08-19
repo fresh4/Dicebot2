@@ -11,7 +11,7 @@ exports.run = (bot, msg, args) => {
          .setFooter(`Join the other ${bot.guilds.cache.size} servers and invite me!`, bot.user.avatarURL())
          .setColor("33D7FF")
 
-    msg.channel.send(embed)
+    msg.channel.send({embeds: [embed]})
 }
 module.exports.help = {
     name: "invite",

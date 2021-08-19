@@ -4,7 +4,9 @@ var data = require('../5eTools/data/conditionsdiseases.json');
 exports.run = (bot, msg, args) => {
     try {
         var description = "", conditionsData = data;
-        const embeddedMessage = new discord.MessageEmbed()
+        const embeddedMessage = new discord.MessageEmbed(),
+              embeddedMessages = {embeds: [embeddedMessage]};
+
         for(var i = 0; i < conditionsData.condition.length; i++){
             let condition = conditionsData.condition[i];
             if(args[0] == condition.name.toLowerCase()){
@@ -16,10 +18,12 @@ exports.run = (bot, msg, args) => {
                     condition.entries.forEach(entry =>{
                         description += `${entry}\n`
                     });
-                return msg.channel.send(embeddedMessage.setTitle(condition.name)
-                                                       .setDescription(parse.removeTags(description))
-                                                       .setColor(3447003));
+                embeddedMessage.setTitle(condition.name)
+                               .setDescription(parse.removeTags(description))
+                               .setColor(3447003)    
+                return msg.channel.send(embeddedMessages);
             }
+            
         }
         msg.channel.send("Condition not found.")
     }
