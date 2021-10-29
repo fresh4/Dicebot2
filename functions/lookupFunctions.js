@@ -95,7 +95,7 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
             var selectedItem = arrayOfMatches[parseInt(collected.first().content)-1];
             if(selectedItem != 'c'){
                 requestSource[type].forEach(entry => { 
-                    if(compare.compareTwoStrings(entry.name, selectedItem.name) == 1 && entry.source == selectedItem.source){
+                    if(compare.compareTwoStrings(entry.name, selectedItem.name) == 1 && entry.source == selectedItem.source && entry.className == selectedItem.className){
                         if(entry.level){
                             if(entry.level == selectedItem.level){
                                 msg2.delete()
@@ -111,7 +111,7 @@ exports.multipleMatches = function(arrayOfMatches, msg, requestSource){
             }
         })
         .catch(err => {
-            console.log(err)
+            //console.log(err)
             msg2.delete();
             msg.channel.send("Selection canceled or timed out.");
         });
