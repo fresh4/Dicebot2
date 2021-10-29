@@ -102,7 +102,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -114,7 +113,8 @@
 				"RNG",
 				"RW",
 				"THW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Shark Skeleton",
@@ -414,7 +414,6 @@
 				"name": "Bronze Dragon",
 				"source": "MM"
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Legendary Resistances",
@@ -425,8 +424,10 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -459,6 +460,7 @@
 				"invisible",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -572,7 +574,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -587,7 +588,8 @@
 			],
 			"conditionInflictSpell": [
 				"incapacitated"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Spellcaster (Mage)",
@@ -699,7 +701,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -715,7 +716,8 @@
 			"conditionInflictSpell": [
 				"invisible",
 				"unconscious"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Warrior",
@@ -830,7 +832,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -842,7 +843,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

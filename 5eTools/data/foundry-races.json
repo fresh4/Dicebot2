@@ -11,6 +11,34 @@
 			}
 		},
 		{
+			"name": "Hooves",
+			"source": "GGR",
+			"raceName": "Centaur",
+			"raceSource": "GGR",
+			"data": {
+				"activation.type": "action",
+				"activation.cost": 1
+			}
+		},
+		{
+			"name": "Dwarven Toughness",
+			"source": "PHB",
+			"raceName": "Dwarf (Hill)",
+			"raceSource": "PHB",
+			"effects": [
+				{
+					"name": "HP Increase",
+					"changes": [
+						{
+							"key": "data.attributes.hp.max",
+							"mode": "ADD",
+							"value": "@details.level"
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Monastic Training",
 			"source": "UAEladrinAndGith",
 			"raceName": "Gith (Githzerai)",
@@ -20,7 +48,7 @@
 					"name": "Lightly Armored Defense",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 1
 						}
@@ -38,8 +66,13 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
-							"mode": "UPGRADE",
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "custom"
+						},
+						{
+							"key": "data.attributes.ac.formula",
+							"mode": "OVERRIDE",
 							"value": "11 + @abilities.dex.mod"
 						}
 					]
@@ -56,7 +89,7 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 3
 						}
@@ -74,8 +107,13 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
-							"mode": "UPGRADE",
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "custom"
+						},
+						{
+							"key": "data.attributes.ac.formula",
+							"mode": "OVERRIDE",
 							"value": "13 + @abilities.dex.mod"
 						}
 					]
@@ -92,8 +130,13 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
-							"mode": "UPGRADE",
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "custom"
+						},
+						{
+							"key": "data.attributes.ac.formula",
+							"mode": "OVERRIDE",
 							"value": "12 + @abilities.dex.mod"
 						}
 					]
@@ -110,8 +153,13 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
-							"mode": "UPGRADE",
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "custom"
+						},
+						{
+							"key": "data.attributes.ac.formula",
+							"mode": "OVERRIDE",
 							"value": "12 + @abilities.con.mod"
 						}
 					]
@@ -128,8 +176,13 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
-							"mode": "UPGRADE",
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "custom"
+						},
+						{
+							"key": "data.attributes.ac.formula",
+							"mode": "OVERRIDE",
 							"value": "13 + @abilities.dex.mod"
 						}
 					]
@@ -146,7 +199,7 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 1
 						}
@@ -165,7 +218,7 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 1
 						}
@@ -184,7 +237,7 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 1
 						}
@@ -203,7 +256,7 @@
 					"name": "Carapace",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 1
 						}
@@ -222,7 +275,7 @@
 					"name": "Carapace",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 1
 						}
@@ -241,9 +294,14 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
-							"mode": "UPGRADE",
-							"value": 17
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "custom"
+						},
+						{
+							"key": "data.attributes.ac.formula",
+							"mode": "OVERRIDE",
+							"value": "17"
 						}
 					]
 				}
@@ -259,7 +317,7 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 4
 						}
@@ -278,7 +336,7 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 1
 						}
@@ -296,7 +354,7 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 1
 						}
@@ -314,7 +372,7 @@
 					"name": "Natural Armor",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
+							"key": "data.attributes.ac.bonus",
 							"mode": "ADD",
 							"value": 1
 						}
@@ -332,8 +390,13 @@
 					"name": "Darkwood Core",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
-							"mode": "UPGRADE",
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "custom"
+						},
+						{
+							"key": "data.attributes.ac.formula",
+							"mode": "OVERRIDE",
 							"value": "11 + @abilities.dex.mod + @prof"
 						}
 					],
@@ -343,8 +406,13 @@
 					"name": "Composite Plating",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
-							"mode": "UPGRADE",
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "custom"
+						},
+						{
+							"key": "data.attributes.ac.formula",
+							"mode": "OVERRIDE",
 							"value": "13 + {2, @abilities.dex.mod}kl + @prof"
 						}
 					],
@@ -354,8 +422,13 @@
 					"name": "Heavy Plating",
 					"changes": [
 						{
-							"key": "data.attributes.ac.value",
-							"mode": "UPGRADE",
+							"key": "data.attributes.ac.calc",
+							"mode": "OVERRIDE",
+							"value": "custom"
+						},
+						{
+							"key": "data.attributes.ac.formula",
+							"mode": "OVERRIDE",
 							"value": "16 + @prof"
 						}
 					],

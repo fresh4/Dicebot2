@@ -851,7 +851,7 @@
 									"name": "Elf Names",
 									"page": 14,
 									"entries": [
-										"If the tradition of using child names for young elves, as described in the {@book Player's Handbook|PHB}{@i }, was ever practiced on Ravnica, it has long since died out. Some traditional Elvish names remain in use, often modified by the influence of human names. Most elves don't use family names.",
+										"If the tradition of using child names for young elves, as described in the {@book Player's Handbook|PHB}{@i}, was ever practiced on Ravnica, it has long since died out. Some traditional Elvish names remain in use, often modified by the influence of human names. Most elves don't use family names.",
 										{
 											"type": "list",
 											"style": "list-hang-notitle",
@@ -2773,7 +2773,7 @@
 									"name": "Joining the Golgari Swarm",
 									"page": 52,
 									"entries": [
-										"Similar to a swarm of insects, the Golgari collectively behave more like a single organism than a scattering of individuals. New members aren't recruited or initiated into the Golgari Swarm; you have been absorbed and incorporated, and the biological system of the swarm funneled you to where your talents are most needed to contribute to the health of the guild. Your position within the guild is defined by your capabilities.",
+										"Similar to a {@creature swarm of insects}, the Golgari collectively behave more like a single organism than a scattering of individuals. New members aren't recruited or initiated into the Golgari Swarm; you have been absorbed and incorporated, and the biological system of the swarm funneled you to where your talents are most needed to contribute to the health of the guild. Your position within the guild is defined by your capabilities.",
 										"You might act as a shaman of the Golgari if you are a spellcaster\u2014perhaps a wizard specialized in the School of Necromancy, a druid of the Circle of the Land, or a druid of the Circle of Spores (described in {@book chapter 1|GGR|1}). In this revered position, you teach and advise other members of the swarm, keeping them attuned to the natural cycle of death and regrowth. You might manipulate that natural cycle by wielding the magic of death, snuffing out life and reanimating the dead. Or you might wield your magic to spread fungal rot and noxious gases, preparing parts of the city for annexation.",
 										"If you aren't adept at magic, the swarm still needs you. Golgari warriors both defend the guild's territory and, when necessary, take offensive action. If you are a fighter (typically of the Champion archetype), you can serve as a shock trooper, perhaps fighting alongside kraul and trolls on behalf of the swarm. If you are a ranger (likely of the Beast Master archetype) or a rogue (of the Thief or Assassin archetype), you are more of a skirmisher. Golgari rangers favor insects and reptiles as companions."
 									],
@@ -3442,7 +3442,7 @@
 									"page": 69,
 									"entries": [
 										"{@i Prerequisite: Renown 3 or higher in the Izzet League}",
-										"Scorchbringers are soldiers assigned to protect Izzet laboratories. As a scorchbringer, you are given a {@item pyroconverger|GGR} (described in {@book chapter 5|GGR|5|Pyroconverger}) and are expected to use it in the defense of Izzet property{@i }. If your {@item pyroconverger|GGR} is lost or destroyed, you can get a replacement for 50 gp."
+										"Scorchbringers are soldiers assigned to protect Izzet laboratories. As a scorchbringer, you are given a {@item pyroconverger|GGR} (described in {@book chapter 5|GGR|5|Pyroconverger}) and are expected to use it in the defense of Izzet property{@i}. If your {@item pyroconverger|GGR} is lost or destroyed, you can get a replacement for 50 gp."
 									],
 									"id": "098"
 								},
@@ -5472,7 +5472,7 @@
 							"name": "Law and Crime",
 							"page": 111,
 							"entries": [
-								"Most of Precinct Three is policed by its residents, occasionally supplemented by Boros troops when a serious threat rears its head. Each block elects a watch captain, who receives weapon training from Selesnya soldiers. The captain can call on additional citizens for support in case of a crisis. The typical response to a reported crime takes about {@dice 1d8} minutes, and the squad consists of a watch captain (a {@creature scout}){@b } with two {@creature guard||guards} or two {@creature Wolf||wolves}. In Concordance, it's either a {@creature knight} or a Selesnya {@creature druid} with a topiary guardian ({@creature awakened tree}). See the {@book Monster Manual|MM} for these creatures' stat blocks.",
+								"Most of Precinct Three is policed by its residents, occasionally supplemented by Boros troops when a serious threat rears its head. Each block elects a watch captain, who receives weapon training from Selesnya soldiers. The captain can call on additional citizens for support in case of a crisis. The typical response to a reported crime takes about {@dice 1d8} minutes, and the squad consists of a watch captain (a {@creature scout}) with two {@creature guard||guards} or two {@creature Wolf||wolves}. In Concordance, it's either a {@creature knight} or a Selesnya {@creature druid} with a topiary guardian ({@creature awakened tree}). See the {@book Monster Manual|MM} for these creatures' stat blocks.",
 								"Crime usually takes one of two forms in Precinct Three. Some residents engage in outright banditry, but they typically target visitors or go outside the precinct to do their dirty work. More common are incidents of livestock theft, which sometimes lead to outbreaks of violence between neighbors, particularly in Beast Haven."
 							],
 							"id": "114"
@@ -5701,7 +5701,7 @@
 									"width": 1000,
 									"height": 879
 								},
-								"Much of Precinct Four is a war zone, and mundane methods of law enforcement aren't always effective in such an environment. No one takes the constant patrolling of the Boros Legion as a guarantee of their safety, and almost all folk know how to fight to some degree. Typical threats include giant monsters, unstable elementals, and Gruul raiding parties, and a curfew system is often instituted when a neighborhood is beset by one of these dangers. The only area that is usually safe from external threats is Tin Street. Petty crimes aren't given much attention, since the soldiers are primarily concerned with curbing violence and mayhem. The typical response to a reported crime or a dangerous threat is {@dice 1d8} minutes, and the squad consists of a Boros Legion {@creature knight} (from the {@book Monster Manual|MM}){@b } leading {@dice 4d4} {@creature soldier|GGR|soldiers}.",
+								"Much of Precinct Four is a war zone, and mundane methods of law enforcement aren't always effective in such an environment. No one takes the constant patrolling of the Boros Legion as a guarantee of their safety, and almost all folk know how to fight to some degree. Typical threats include giant monsters, unstable elementals, and Gruul raiding parties, and a curfew system is often instituted when a neighborhood is beset by one of these dangers. The only area that is usually safe from external threats is Tin Street. Petty crimes aren't given much attention, since the soldiers are primarily concerned with curbing violence and mayhem. The typical response to a reported crime or a dangerous threat is {@dice 1d8} minutes, and the squad consists of a Boros Legion {@creature knight} (from the {@book Monster Manual|MM}){@b} leading {@dice 4d4} {@creature soldier|GGR|soldiers}.",
 								"The Red Wastes is a lawless region mostly beyond the reach of Boros patrols and Azorius laws. In other parts of the precinct, goblin gangs shake down locals whenever possible and skirmish against each other over turf. The Shattergang Brothers are a notorious goblin gang that haunts Tin Street in this precinct, dealing in weapons and explosives."
 							],
 							"id": "11f"
@@ -11372,7 +11372,7 @@
 									"page": 184,
 									"entries": [
 										"Beetles, centipedes, spiders, and countless other insects and arachnids infest Golgari warrens. These creatures, often associated with decay and rebirth, are prized by the guild. Giant bugs serve as beasts of burden, companions, steeds, and guardians. Among the largest of these is the Deadbridge goliath beetle (equivalent to the triceratops in the {@i Monster Manual}).",
-										"Piranha beetles (best represented as a swarm of insects, from the {@book Monster Manual|MM}) burrow through the soft earth and gather into swarms to overtake their victims and strip the flesh from them. Skein spiders (as giant spiders, from the {@book Monster Manual|MM}) are an important part of Golgari reclamation work: fungus grows rapidly along the silken spiderwebs, expanding to engulf architecture and hasten the Golgari annexation process."
+										"Piranha beetles (best represented as a {@creature swarm of insects}, from the {@book Monster Manual|MM}) burrow through the soft earth and gather into swarms to overtake their victims and strip the flesh from them. Skein spiders (as giant spiders, from the {@book Monster Manual|MM}) are an important part of Golgari reclamation work: fungus grows rapidly along the silken spiderwebs, expanding to engulf architecture and hasten the Golgari annexation process."
 									],
 									"id": "1b9"
 								},

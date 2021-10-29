@@ -15,6 +15,7 @@
 	"monster": [
 		{
 			"name": "Billy Beaver",
+			"isNpc": true,
 			"source": "RMBRE",
 			"page": 27,
 			"size": "L",
@@ -84,7 +85,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -100,10 +100,12 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Buster the Bear",
+			"isNpc": true,
 			"source": "RMBRE",
 			"page": 27,
 			"size": "M",
@@ -176,7 +178,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -189,6 +190,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -219,13 +221,14 @@
 				"walk": 0
 			},
 			"cr": "3",
-			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Layla the Lizard",
+			"isNpc": true,
 			"source": "RMBRE",
 			"page": 28,
 			"size": "M",
@@ -286,7 +289,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -300,6 +302,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -368,7 +371,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -385,6 +387,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -403,6 +406,7 @@
 		},
 		{
 			"name": "Piggy Wiggle Butt",
+			"isNpc": true,
 			"source": "RMBRE",
 			"page": 28,
 			"size": "M",
@@ -473,7 +477,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Aggressive"
 			],
@@ -489,10 +492,12 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Thomas T. Toad",
+			"isNpc": true,
 			"source": "RMBRE",
 			"page": 28,
 			"size": "L",
@@ -552,7 +557,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -565,6 +569,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{

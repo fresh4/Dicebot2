@@ -928,7 +928,7 @@
 									"id": "042",
 									"entries": [
 										"This large brick building contains the offices of the town council and the chamber where they meet to discuss the town business. The hall is built from sturdy stone from the nearby cliffs and a variety of hardwood from the nearby Hool Marshes. A wooden sign depicting a net filled with fish hangs above the double doors leading into the hall. A small tower rises from the building, housing a horn at the top, which is blown to announce the beginning of a council session or other significant events.",
-										"The town has a sturdy but weatherbeaten platform and gallows in front of the hall for use in the event of an execution. Such punishments are rare, but when they do occur, they draw a large crowd. In any given week, there is a 2 percent chance of an execution, usually of some bandit or other non-native ne'er-do-well."
+										"The town has a sturdy but weatherbeaten platform and gallows in front of the hall for use in the event of an execution. Such punishments are rare, but when they do occur, they draw a large crowd. In any given week, there is a {@chance 2|2 percent} chance of an execution, usually of some bandit or other non-native ne'er-do-well."
 									]
 								},
 								{
@@ -1060,18 +1060,7 @@
 									"id": "04c",
 									"entries": [
 										"Just east of the docks, built along the shores of a secluded bay, are a handful of buildings known collectively as Crabber's Cove. The buildings are weathered, abandoned by the residents of Saltmarsh years ago. Since then, thousands of crabs have taken up residence in the crumbling remains. Crabbers from Saltmarsh are cautious about the cove, as more than one overeager fisher has disappeared into the clacking darkness, never to be seen again. Unknown to the folk of Saltmarsh, a {@creature vampire} named Xolec is trapped in a hidden cellar beneath one of the old cabins. Xolec was buried in an ancient tomb, unleashed on Saltmarsh decades ago when his sealed coffin was brought to town by a trader and opened. A cleric of St. Cuthbert confronted him, but she wasn't able to destroy him. Instead, she trapped him here by means of a powerful curse: Xolec can leave the cellar only if someone pure of heart carries him from it.",
-										"Xolec is best left trapped, except for one detail: by a stroke of fate, agents of the Scarlet Brotherhood use the cabin above him for clandestine meetings. He knows the full details of their operation and Skerrin's role in it. He trades this information for his freedom if confronted by adventurers.",
-										{
-											"type": "inset",
-											"name": "Procan, Sailor of Sea and Sky",
-											"id": "04d",
-											"entries": [
-												"Procan is a chaotic neutral deity of the sea and weather. He offers his clerics access to the Tempest domain. He is embodied in the sudden storm that overtakes a ship, battering it with monstrous waves and howling winds that give way to peaceful waters and calm weather in the space of a moment.",
-												"Procan's domain is the sea, and whatever the oceans touch, he bears witness to. His mood shifts to darkness as he witnesses a brutal murder on the docks of a squalid port, then lifts in pride as he watches a brave mariner leap into the sea and save a drowning child. Every story of the oceans courses through his mind, and he in each moment curses and blesses mortals for their endless follies, heroism, and hatreds.",
-												"When the sea reaches its limit at the shore, so too does Procan's power. His clerics and priests rarely venture inland, and he cares little for what happens beyond his waters. At sea, he expects sacrifices in the form of fine food, potent alcohol, or valuable treasures thrown overboard at the start of a voyage. Due to this ritual, Procan holds all treasures lost at sea as part of his domain. He curses those who plunder shipwrecks without the blessings of his clerics, dogging their steps with wretched weather until his attention is drawn elsewhere.",
-												"Procan's clerics reflect their deity's chaotic nature. They seek omens of his moods in the weather and sky, and mirror their own demeanor to match their deity's."
-											]
-										}
+										"Xolec is best left trapped, except for one detail: by a stroke of fate, agents of the Scarlet Brotherhood use the cabin above him for clandestine meetings. He knows the full details of their operation and Skerrin's role in it. He trades this information for his freedom if confronted by adventurers."
 									]
 								},
 								{
@@ -1089,7 +1078,18 @@
 									"id": "04f",
 									"entries": [
 										"Services at this long-standing sea god's temple are well attended. The congregation is led by a one-legged former whaler: Wellgar Brinehanded (CG male human {@creature priest}), an older human man with a sharp memory for every storm, lost ship, and enormous catch ever brought into Saltmarsh harbor. He knows many fanciful stories of shipwrecks, lucky escapes, and famous captains. Matters ashore rarely interest him, but the temple and its bell tower are also served by a half-dozen novitiates and laypeople who keep things running smoothly.",
-										"Wellgar uses the blessings of Procan to seek out shipwrecks in order to recover the remains of sailors for a proper burial. He is willing to trade cleric spells of up to 5th level, including {@spell raise dead}, in return for recovery of the remains he seeks."
+										"Wellgar uses the blessings of Procan to seek out shipwrecks in order to recover the remains of sailors for a proper burial. He is willing to trade cleric spells of up to 5th level, including {@spell raise dead}, in return for recovery of the remains he seeks.",
+										{
+											"type": "inset",
+											"name": "Procan, Sailor of Sea and Sky",
+											"id": "04d",
+											"entries": [
+												"Procan is a chaotic neutral deity of the sea and weather. He offers his clerics access to the Tempest domain. He is embodied in the sudden storm that overtakes a ship, battering it with monstrous waves and howling winds that give way to peaceful waters and calm weather in the space of a moment.",
+												"Procan's domain is the sea, and whatever the oceans touch, he bears witness to. His mood shifts to darkness as he witnesses a brutal murder on the docks of a squalid port, then lifts in pride as he watches a brave mariner leap into the sea and save a drowning child. Every story of the oceans courses through his mind, and he in each moment curses and blesses mortals for their endless follies, heroism, and hatreds.",
+												"When the sea reaches its limit at the shore, so too does Procan's power. His clerics and priests rarely venture inland, and he cares little for what happens beyond his waters. At sea, he expects sacrifices in the form of fine food, potent alcohol, or valuable treasures thrown overboard at the start of a voyage. Due to this ritual, Procan holds all treasures lost at sea as part of his domain. He curses those who plunder shipwrecks without the blessings of his clerics, dogging their steps with wretched weather until his attention is drawn elsewhere.",
+												"Procan's clerics reflect their deity's chaotic nature. They seek omens of his moods in the weather and sky, and mirror their own demeanor to match their deity's."
+											]
+										}
 									]
 								},
 								{
@@ -1321,7 +1321,7 @@
 							"name": "Roads and Pathways",
 							"id": "05e",
 							"entries": [
-								"The roads around Saltmarsh are heavily patrolled, part of the crown's effort to make its influence felt in the region. Travel along these thoroughfares is usually safe, with most encounters involving merchant caravans, guard patrols, and fellow travelers. Small farms and manors cluster near the roads, relying on passing guard patrols for their safety. Where these settlements grow more widely spaced, bandit raids become more likely. Travelers on the road meet {@dice 1d4} caravans per day and have a 5 percent chance of being the target of an ambush by {@dice 2d4} {@creature Bandit||bandits} led by a {@creature bandit captain}. In addition, each day on the road a party passes {@dice 1d3} small villages or manors. There is a 25 percent chance that any such location is inhabited by halflings. Otherwise, the location is a human enclave."
+								"The roads around Saltmarsh are heavily patrolled, part of the crown's effort to make its influence felt in the region. Travel along these thoroughfares is usually safe, with most encounters involving merchant caravans, guard patrols, and fellow travelers. Small farms and manors cluster near the roads, relying on passing guard patrols for their safety. Where these settlements grow more widely spaced, bandit raids become more likely. Travelers on the road meet {@dice 1d4} caravans per day and have a {@chance 5|5 percent} chance of being the target of an ambush by {@dice 2d4} {@creature Bandit||bandits} led by a {@creature bandit captain}. In addition, each day on the road a party passes {@dice 1d3} small villages or manors. There is a {@chance 25|25 percent} chance that any such location is inhabited by halflings. Otherwise, the location is a human enclave."
 							]
 						},
 						{
@@ -2153,7 +2153,8 @@
 										"The Salted Glade is a galleon made from the base of a massive, buoyant tree. A grove of smaller trees grows from its deck, their boughs catching the winds to propel the ship. From a distance, the two {@creature treant||treants} who serve as the ship's main artillery are visible moving on deck.",
 										"The Salted Glade is captained by Mithina Greyheart (NE halfelf female {@creature druid}), whose grove was destroyed by a massive tidal wave nearly twenty years ago. Mithina's heart sank with her grove, and her mind turned to vengeance. She has since turned to piracy to fund her search for a legendary island known as Procan's Bloom, where she hopes to chastise the god Ehlonna for the destruction of her home. Aiding her is the corrupted {@creature dryad} Filios, who dwells in a shriveled oak growing from the ship's center.",
 										"A black leafless branch stitched on a field of blue flaps from the highest boughs of the Salted Glade."
-									]
+									],
+									"id": "54b"
 								},
 								{
 									"type": "entries",
@@ -3229,7 +3230,7 @@
 												"What was once a fine master bedroom now stands decayed. Some of the floorboards are missing, and there is rubbish scattered around. A tall wooden wardrobe stands against the wall opposite the fireplace, its door closed."
 											]
 										},
-										"The wardrobe contains two items: a pair of old, cracked leather boots with no value or special properties, and a ragged, stained cloak hanging on a peg. The cloak is tooled with a design of coiling ivy leaves and appears harmless but the inner folds are covered in yellow mold (see \"{@book Dungeon Hazards|DMG|5|Dungeon Hazards}\" in chapter 5 of the {@book Dungeon Master's Guide|DMG})."
+										"The wardrobe contains two items: a pair of old, cracked leather boots with no value or special properties, and a ragged, stained cloak hanging on a peg. The cloak is tooled with a design of coiling ivy leaves and appears harmless but the inner folds are covered in {@hazard yellow mold} (see \"{@book Dungeon Hazards|DMG|5|Dungeon Hazards}\" in chapter 5 of the {@book Dungeon Master's Guide|DMG})."
 									]
 								},
 								{
@@ -3748,7 +3749,7 @@
 												"This uneven, naturally formed cavern is about twenty feet in diameter."
 											]
 										},
-										"Two patches of green slime (see \"{@book Dungeon Hazards|DMG|5|Dungeon Hazards}\" in chapter 5 of the {@book Dungeon Master's Guide|DMG}) hang at a point on the ceiling roughly halfway between the two passage mouths. They drop on characters (or smugglers) who pass below, landing with a distinctively soggy slap."
+										"Two patches of {@hazard green slime} (see \"{@book Dungeon Hazards|DMG|5|Dungeon Hazards}\" in chapter 5 of the {@book Dungeon Master's Guide|DMG}) hang at a point on the ceiling roughly halfway between the two passage mouths. They drop on characters (or smugglers) who pass below, landing with a distinctively soggy slap."
 									]
 								},
 								{
@@ -5185,7 +5186,7 @@
 											"name": "Green Slime",
 											"id": "19f",
 											"entries": [
-												"Patches of green slime (see \"{@book Dungeon Hazards|DMG|5|Dungeon Hazards}\" in chapter 5 of the {@book Dungeon Master's Guide|DMG}) coat the overhead branches of dead trees. The slime falls on creatures passing below."
+												"Patches of {@hazard green slime} (see \"{@book Dungeon Hazards|DMG|5|Dungeon Hazards}\" in chapter 5 of the {@book Dungeon Master's Guide|DMG}) coat the overhead branches of dead trees. The slime falls on creatures passing below."
 											]
 										},
 										{
@@ -6369,7 +6370,7 @@
 											"id": "20f",
 											"entries": [
 												"The scroll the old lizardfolk minister peruses is written in Common and was sent by the local locathah chief to the lizardfolk queen. It identifies the locathah currently present in the lair as the chief's ambassadors and authorizes them to act on his behalf in all matters pertaining to the alliance. It has no specifics regarding the nature of the alliance or those against whom the alliance is directed; the word \"sahuagin\" is never used.",
-												"The book on the table, {@i Power Politics} by Abel Mackie, is written in Common{@i }. It discusses the trickier and more devious side of political life. It can be sold for 5 gp.",
+												"The book on the table, {@i Power Politics} by Abel Mackie, is written in Common{@i}. It discusses the trickier and more devious side of political life. It can be sold for 5 gp.",
 												{
 													"type": "inset",
 													"name": "The Cooperative Minister",
@@ -6927,7 +6928,7 @@
 											"name": "Trudging Through the Marsh",
 											"id": "24c",
 											"entries": [
-												"The marsh is difficult terrain, which turns the 12-mile trek into an 8-hour journey (assuming a normal pace). For each hour the characters travel this way, they have a 50 percent chance of facing a random encounter (see the Marsh Random Encounters table).",
+												"The marsh is difficult terrain, which turns the 12-mile trek into an 8-hour journey (assuming a normal pace). For each hour the characters travel this way, they have a {@chance 50|50 percent} chance of facing a random encounter (see the Marsh Random Encounters table).",
 												{
 													"type": "table",
 													"caption": "Marsh Random Encounters",
@@ -6982,7 +6983,7 @@
 											"name": "Following the Riverbank",
 											"id": "24d",
 											"entries": [
-												"The river snakes through the marsh for nearly twenty miles before arriving at Thousand Teeth's pool. The riverbank is difficult terrain, and following it from the lizardfolk lair to the pool takes 13 hours (at normal pace). The riverbank route offers a better chance of avoiding random encounters. For every 3 hours the characters travel along the riverbank, they have a 50 percent chance of facing a random encounter."
+												"The river snakes through the marsh for nearly twenty miles before arriving at Thousand Teeth's pool. The riverbank is difficult terrain, and following it from the lizardfolk lair to the pool takes 13 hours (at normal pace). The riverbank route offers a better chance of avoiding random encounters. For every 3 hours the characters travel along the riverbank, they have a {@chance 50|50 percent} chance of facing a random encounter."
 											]
 										}
 									]
@@ -6996,8 +6997,7 @@
 											"type": "insetReadaloud",
 											"id": "24f",
 											"entries": [
-												"The ground slopes downward into a tangle of marsh trees and a blanket of mist. Squishing your way into the",
-												"shallow valley, you arrive at a large pool of brackish water. The pool is sixty feet in diameter and shaded by a canopy of vines and twisting branches. A gurgling stream at its northern edge feeds the pool.",
+												"The ground slopes downward into a tangle of marsh trees and a blanket of mist. Squishing your way into the shallow valley, you arrive at a large pool of brackish water. The pool is sixty feet in diameter and shaded by a canopy of vines and twisting branches. A gurgling stream at its northern edge feeds the pool.",
 												"A few yellowed bones are visible in the shallows, and you see a great muddy mound rising from the pool's center."
 											]
 										},
@@ -8099,7 +8099,7 @@
 								"The survivors keep a low profile. They stay close to the ruins of the abbey and keep out of sight of passing boats. They do not hail ships or light signal fires. Trapped on the island since the pirate attack, they are unaware that the pirates have been destroyed. They are therefore hesitant to make their presence known for fear the pirates will return and finish them off.",
 								"Even though the survivors desperately want to leave the island, their superiors would not approve of their abandoning the island to the mariners. The clerics and the surviving guards would be severely punished (perhaps by death) if they left. Therefore, they have resolved to capture or kill anyone coming to the island. If any of the characters are captured, they are kept alive only if they can be used in negotiations to extract a ransom. Ransom demands are likely to include a boat or at least transportation to the mainland.",
 								"The survivors' main goal is to get word to their superiors while still retaining possession of the island. They have sent missives by means of {@spell sending} and {@spell animal messenger} spells (using seagulls), but they have received no response. Nonetheless, they still hope to be sent reinforcements, laborers, and material for rebuilding the abbey.",
-								"They typically keep watch on the Skull Dunes during the day, but have grown lax in that duty as boredom and hunger overtake them. Therefore, there is a 50 percent chance that the characters will land unseen at the Skull Dunes during the day. The survivors do not keep watch at night, meaning that the party has a 100 percent chance of landing unnoticed when it's dark.",
+								"They typically keep watch on the Skull Dunes during the day, but have grown lax in that duty as boredom and hunger overtake them. Therefore, there is a {@chance 50|50 percent} chance that the characters will land unseen at the Skull Dunes during the day. The survivors do not keep watch at night, meaning that the party has a {@chance 100|100 percent} chance of landing unnoticed when it's dark.",
 								"During the day, the survivors might be above ground getting water, fishing, or gardening, or they might be in {@area area 2|2bf|x} of the ruins. At night they stay in their rooms.",
 								"The major personalities among the survivors are detailed below.",
 								{
@@ -10231,7 +10231,7 @@
 											"id": "37b",
 											"entries": [
 												"These rare plants grow along isolated stony shelves in underwater trenches. A creature that consumes the fronds of rapture weed becomes {@condition poisoned} for 6 hours, during which time it experiences occasional hallucinations and a feeling of euphoria. Sahuagin priests often use rapture weed in their worship (as does the priestess in area 36) .",
-												"Any creature that consumes rapture weed has a 1 percent chance of instead becoming {@condition incapacitated} for the duration of the plant's effect. During this time it experiences terrifying visions of an enormous shark devouring great amounts of prey.",
+												"Any creature that consumes rapture weed has a {@chance 1|1 percent} chance of instead becoming {@condition incapacitated} for the duration of the plant's effect. During this time it experiences terrifying visions of an enormous shark devouring great amounts of prey.",
 												"When the effect wears off or is negated, the creature must succeed on a DC 15 Wisdom saving throw or be afflicted with a form of long-term madness (see \"{@book Madness|DMG|8|Madness}\" in chapter 8 of the {@book Dungeon Master's Guide|DMG})."
 											]
 										}
@@ -11997,7 +11997,7 @@
 											"name": "Ladder",
 											"id": "425",
 											"entries": [
-												"A rung at the top of the ladder has rotted, and it breaks if more than 50 pounds of weight are placed on it. A character who succeeds on a DC 14 Wisdom ({@skill Perception}) check notices the weak rung. Any character who breaks the rung while climbing falls 10 feet and has a 50 percent chance of landing in the waste pile."
+												"A rung at the top of the ladder has rotted, and it breaks if more than 50 pounds of weight are placed on it. A character who succeeds on a DC 14 Wisdom ({@skill Perception}) check notices the weak rung. Any character who breaks the rung while climbing falls 10 feet and has a {@chance 50|50 percent} chance of landing in the waste pile."
 											]
 										},
 										{
@@ -13648,7 +13648,7 @@
 							"name": "District Garrison",
 							"id": "4c8",
 							"entries": [
-								"If the characters visit the district garrison, there's a 30 percent chance that Constable Jute is there. Otherwise, she's on patrol and returns in {@dice 1d8} hours. As long as the characters don't proclaim that they're investigating the Lantern Ghost case, the militia guards are fairly friendly toward them. (It's their policy not to antagonize powerful-looking strangers.) If the guards realize what the party is up to, they immediately suspect the characters are out to make them look bad. In that case, they become surly and tight-lipped.",
+								"If the characters visit the district garrison, there's a {@chance 30|30 percent} chance that Constable Jute is there. Otherwise, she's on patrol and returns in {@dice 1d8} hours. As long as the characters don't proclaim that they're investigating the Lantern Ghost case, the militia guards are fairly friendly toward them. (It's their policy not to antagonize powerful-looking strangers.) If the guards realize what the party is up to, they immediately suspect the characters are out to make them look bad. In that case, they become surly and tight-lipped.",
 								"All the militia guards have been assured by their commanders (all of whom were bribed by Mr. Dory) that the Lantern Ghost was executed, the murders have been solved, and anyone who wants to dig deeper into the matter must be a troublemaker trying to stir up dissent.",
 								{
 									"type": "entries",
@@ -13787,7 +13787,7 @@
 											"name": "Fire Hazard",
 											"id": "4d5",
 											"entries": [
-												"The alchemical contents of the crates make the warehouse a risky place to have a fight. At the end of each round in which weapon damage or the movement of combatants might accidentally disturb a pile of crates, or if any effect deals damage in an area other than necrotic, poison, or psychic damage, there's a 20 percent chance that a nearby crate explodes, setting off a chain reaction that engulfs the entire warehouse in flames. The initial explosion deals 28 ({@dice 8d6}) fire damage to each creature in the warehouse, or half damage to creatures that succeed on a DC 15 Dexterity saving throw.",
+												"The alchemical contents of the crates make the warehouse a risky place to have a fight. At the end of each round in which weapon damage or the movement of combatants might accidentally disturb a pile of crates, or if any effect deals damage in an area other than necrotic, poison, or psychic damage, there's a {@chance 20|20 percent} chance that a nearby crate explodes, setting off a chain reaction that engulfs the entire warehouse in flames. The initial explosion deals 28 ({@dice 8d6}) fire damage to each creature in the warehouse, or half damage to creatures that succeed on a DC 15 Dexterity saving throw.",
 												"Every creature that starts its turn in the burning warehouse takes 3 ({@dice 1d6}) fire damage. Additionally, the upper floors of the warehouse collapse {@dice 2d4} rounds after the fire starts. Each creature in the warehouse when it collapses takes 14 ({@dice 4d6}) fire damage and must make a DC 15 Dexterity saving throw. On a failed save, a creature takes an additional 28 ({@dice 8d6}) bludgeoning damage and is {@condition restrained} beneath the rubble. On a successful save, the creature takes half the bludgeoning damage and is not {@condition restrained}.",
 												"The collapse makes the entire area of the warehouse difficult terrain, and each creature that starts its turn in the warehouse thereafter takes 7 ({@dice 2d6}) fire damage. A {@condition restrained} creature can escape by using an action and succeeding on a DC 15 Strength or Dexterity check, or can be pulled free by another creature within 5 feet that uses an action and succeeds on a DC 15 Strength check.",
 												"If the warehouse catches fire, a huge crowd gathers to help put out the flames before they spread to nearby buildings. This firefighting effort takes up to an hour, so it won't help characters who were trapped in the blaze. The crane holding Dory's home aloft is made mostly of metal, so it doesn't collapse in the fire. Dory's minions aboard the ship prevent the fire from spreading to it. Then they spend the next several days repairing the crane, clearing rubble, and installing rickety ladders to replace the stairs, while Dory devotes himself to plotting revenge on whoever he suspects of burning down his warehouse."

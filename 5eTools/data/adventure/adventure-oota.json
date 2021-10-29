@@ -622,7 +622,7 @@
 					"id": "023",
 					"entries": [
 						"This cave serves as a gathering and eating place for the drow warriors of the outpost. It has four circular tables carved from zurkhwood, each surrounded by five chairs. Part of the hall is used as a food preparation and storage area, containing stocks of dried and fresh fungi, dried fruits, cheeses, preserved meat, and a few clay jars of spices. A heavy iron brazier provides heat for cooking along with dim light, but much of the food is served cold.",
-						"At any time, there is a 25 percent chance that 1d4 {@creature drow} are in the main hall eating or entertaining themselves with dice or card games. If any drow are present, 1d4 {@creature quaggoth||quaggoths} are also on hand, serving and cleaning. If there are no drow in the main hall, there is a 25 percent chance that a lone quaggoth is here performing its duties.",
+						"At any time, there is a {@chance 25|25 percent} chance that 1d4 {@creature drow} are in the main hall eating or entertaining themselves with dice or card games. If any drow are present, 1d4 {@creature quaggoth||quaggoths} are also on hand, serving and cleaning. If there are no drow in the main hall, there is a {@chance 25|25 percent} chance that a lone quaggoth is here performing its duties.",
 						{
 							"type": "entries",
 							"name": "Treasure",
@@ -639,7 +639,7 @@
 					"id": "025",
 					"entries": [
 						"The two hanging towers flanking the platform are the quarters of the elite warriors of the outpost, except for the commander's lieutenant (currently Shoor Vandree) who has his own quarters in the priestess's tower. Each hanging tower has two chambers, with a rope ladder running between the upper and lower chamber through a zurkhwood trapdoor. The elite warriors have finer furniture, including zurkhwood chairs and small tables around which they sit.",
-						"One off-duty {@creature drow elite warrior} rests in one of the chambers here at any given time. There is a 50 percent chance that one {@creature quaggoth} is also present, carrying out chores such as cleaning up or delivering water. Either reacts hostilely to intruders, but they might choose to flee and warn the outpost rather than attack, depending on the odds.",
+						"One off-duty {@creature drow elite warrior} rests in one of the chambers here at any given time. There is a {@chance 50|50 percent} chance that one {@creature quaggoth} is also present, carrying out chores such as cleaning up or delivering water. Either reacts hostilely to intruders, but they might choose to flee and warn the outpost rather than attack, depending on the odds.",
 						{
 							"type": "entries",
 							"name": "Treasure",
@@ -1966,7 +1966,7 @@
 					"name": "Ruins",
 					"id": "078",
 					"entries": [
-						"The adventurers come across a small ruin hidden in the Underdark. This might be the creation of a subterranean race or a surface ruin that collapsed and sank long ago. If the characters search the ruins, there is a 50 percent chance of them finding 1d4 trinkets (see chapter 5, \"Equipment,\" of the {@i Player's Handbook}). Roll on the Trinkets table or choose appropriate ones."
+						"The adventurers come across a small ruin hidden in the Underdark. This might be the creation of a subterranean race or a surface ruin that collapsed and sank long ago. If the characters search the ruins, there is a {@chance 50|50 percent} chance of them finding 1d4 trinkets (see chapter 5, \"Equipment,\" of the {@i Player's Handbook}). Roll on the Trinkets table or choose appropriate ones."
 					]
 				},
 				{
@@ -2210,7 +2210,7 @@
 					"id": "081",
 					"entries": [
 						"The characters encounter a {@creature carrion crawler} scouring tunnels and caves for food.",
-						"There is a 25 percent chance that the crawler is domesticated and outfitted with a leather saddle and harness, though there's no sign of the rider. A character can approach and mount the carrion crawler without being attacked by succeeding on a DC 13 Wisdom (Animal Handling) check. While in the saddle and harness, a rider can remain mounted on the carrion crawler as it crawls across walls and ceilings."
+						"There is a {@chance 25|25 percent} chance that the crawler is domesticated and outfitted with a leather saddle and harness, though there's no sign of the rider. A character can approach and mount the carrion crawler without being attacked by succeeding on a DC 13 Wisdom (Animal Handling) check. While in the saddle and harness, a rider can remain mounted on the carrion crawler as it crawls across walls and ceilings."
 					]
 				},
 				{
@@ -2283,7 +2283,7 @@
 								]
 							]
 						},
-						"There's a 25 percent chance that a gas spore carries a memory fragment from a dead beholder in its spores (see the gas spore's description in the \"Fungi\" entry of Monster Manual). This memory can be of anything you wish, or you can roll a d4 and consult the Beholder Memories table.",
+						"There's a {@chance 25|25 percent} chance that a gas spore carries a memory fragment from a dead beholder in its spores (see the gas spore's description in the \"Fungi\" entry of Monster Manual). This memory can be of anything you wish, or you can roll a d4 and consult the Beholder Memories table.",
 						{
 							"type": "table",
 							"caption": "Beholder Memories",
@@ -2647,7 +2647,7 @@
 								]
 							]
 						},
-						"Deep gnome and drow traders have a 50 percent chance of having half their number in giant lizards as mounts and pack animals. Duergar traders have a 50 percent chance of having half their number in male steeders as pack animals. If there are male steeders present, there is a 50 percent chance that the traders are escorted by a duergar kavalrachni astride a female steeder (see appendix C for both).",
+						"Deep gnome and drow traders have a {@chance 50|50 percent} chance of having half their number in giant lizards as mounts and pack animals. Duergar traders have a {@chance 50|50 percent} chance of having half their number in male steeders as pack animals. If there are male steeders present, there is a {@chance 50|50 percent} chance that the traders are escorted by a duergar kavalrachni astride a female steeder (see appendix C for both).",
 						"The traders carry goods worth 5d4 × 10 gp plus ten days of provisions per member of their party; they are willing to sell up to 20 percent of either. If drow traders see the adventurers and have the opportunity to report it, increase the drow pursuit level by 1."
 					]
 				},
@@ -2763,7 +2763,7 @@
 					"id": "092",
 					"entries": [
 						"As characters traverse the Silken Paths, keep in mind the following features.",
-						"{@b Difficult Terrain.} Any creature with a climbing speed can walk along the webs at that speed. For all other creatures, the webs are difficult terrain. Any creature that falls can potentially become entangled in the webs (see \"Falling\").",
+						"{@b Difficult Terrain.} Any creature with a climbing speed can walk along the webs at that speed. For all other creatures, the webs are difficult terrain. Any creature that falls can potentially become entangled in the {@hazard webs} (see \"Falling\").",
 						"{@b Falling.} Whenever a creature takes damage while traversing the Silken Paths, or whenever the webs upon which it is walking break, the creature must make a DC 15 Dexterity saving throw. On a successful save, the creature manages to avoid a fall by grabbing nearby web strands. On a failure, the creature falls 1d10 × 10 feet. If the distance fallen is less than the distance to the chasm floor, the creature becomes entangled in webs and restrained; otherwise, it hits the floor and takes damage from the fall as normal. A restrained creature can make a DC 12 Strength saving throw at the end of each of its turns, freeing itself and ending the restrained condition on a success. Another creature can use its action to help a restrained creature within its reach, granting advantage on that creature's next saving throw to end the effect.",
 						"{@b Light.} The chasm is dark. Carrying a light source attracts hostile creatures, increasing the chance of an encounter to 1-3 on a d6.",
 						"{@b Fire.} Webs burn away when exposed to any attack or effect that deals fire damage. This causes several strands to break, and all creatures within 30 feet of the affected area must make a saving throw to avoid falling (see \"Falling\")."
@@ -2980,7 +2980,7 @@
 					"id": "0a2",
 					"entries": [
 						"The sandy floor of this cavern holds a clutch of four 1-foot-diameter eggs with rocky outer shells, all halfburied in a shallow pit. These are hook horror eggs, and any character that touches an egg can feel it trembling.",
-						"Each hour, there is a 10 percent chance that one of the eggs hatches. The infant hook horror that emerges imprints on the first creature it sees. It thereafter follows that creature around like its parent, demanding to be fed. If the characters manage to keep the hook horror alive, it eventually reaches adulthood after six months. Track its growth using the Hook Horror Maturation table."
+						"Each hour, there is a {@chance 10|10 percent} chance that one of the eggs hatches. The infant hook horror that emerges imprints on the first creature it sees. It thereafter follows that creature around like its parent, demanding to be fed. If the characters manage to keep the hook horror alive, it eventually reaches adulthood after six months. Track its growth using the Hook Horror Maturation table."
 					]
 				},
 				{
@@ -3517,7 +3517,7 @@
 					"id": "0c4",
 					"entries": [
 						"Any character with a passive Wisdom (Perception) score of 12 or better can hear the roar of a waterfall ahead. A successful DC 14 group Strength (Athletics) check is necessary to steer or swim away from the falls. Otherwise, the characters go over, falling 1d6 × 10 feet into a pool or river 1d6 × 5 feet deep. A creature swept over the falls must succeed on a DC 11 Dexterity saving throw or take 1d6 bludgeoning damage per 10 feet fallen. A successful save indicates that the creature avoids a hard landing in the water below.",
-						"There is a 50 percent chance that any waterfall area contains a duergar-built lock designed to traverse it, in which case there is no risk of going over the falls. It takes a successful DC 11 Intelligence (Investigation) check to figure out how to operate the lock. Once a lock is opened, it takes 1 hour for the water level to lower so the party can proceed."
+						"There is a {@chance 50|50 percent} chance that any waterfall area contains a duergar-built lock designed to traverse it, in which case there is no risk of going over the falls. It takes a successful DC 11 Intelligence (Investigation) check to figure out how to operate the lock. Once a lock is opened, it takes 1 hour for the water level to lower so the party can proceed."
 					]
 				},
 				{
@@ -3525,7 +3525,7 @@
 					"name": "Island",
 					"id": "0c5",
 					"entries": [
-						"A small island rises from the water ahead. An island with no hostile creatures makes a good place for the party to take a long rest. There is a 50 percent chance that the island has one or more types of fungi growing atop it (see \"{@area Fungi of the Underdark|053|x}\" in chapter 2). Otherwise, the island is barren rock."
+						"A small island rises from the water ahead. An island with no hostile creatures makes a good place for the party to take a long rest. There is a {@chance 50|50 percent} chance that the island has one or more types of fungi growing atop it (see \"{@area Fungi of the Underdark|053|x}\" in chapter 2). Otherwise, the island is barren rock."
 					]
 				},
 				{
@@ -3557,7 +3557,7 @@
 					"name": "Run Aground",
 					"id": "0c9",
 					"entries": [
-						"This terrain encounter occurs only if one or more party members are traveling by raft or boat. The vessel hits a shallow area or sandbar and runs aground. The characters can push the vessel back into the water with a successful DC 10 group Strength (Athletics) check. While characters are pushing their boat free, there is a 50 percent chance that one or more creatures attack them; in this event, roll on the Darklake Creature Encounters table to determine what attacks."
+						"This terrain encounter occurs only if one or more party members are traveling by raft or boat. The vessel hits a shallow area or sandbar and runs aground. The characters can push the vessel back into the water with a successful DC 10 group Strength (Athletics) check. While characters are pushing their boat free, there is a {@chance 50|50 percent} chance that one or more creatures attack them; in this event, roll on the Darklake Creature Encounters table to determine what attacks."
 					]
 				},
 				{
@@ -3573,7 +3573,7 @@
 					"name": "Tight Passage",
 					"id": "0cb",
 					"entries": [
-						"The adventurers encounter an especially tight passage, requiring a successful DC 12 group Dexterity check to navigate a boat or raft through it. If the group check succeeds, the boat slips through. Otherwise, the boat gets stuck, requiring a successful DC 14 group Strength (Athletics) check to push it free. While characters are pushing their boat free, there is a 50 percent chance that one or more creatures attack them; in this event, roll on the Darklake Creature Encounters table to determine what attacks."
+						"The adventurers encounter an especially tight passage, requiring a successful DC 12 group Dexterity check to navigate a boat or raft through it. If the group check succeeds, the boat slips through. Otherwise, the boat gets stuck, requiring a successful DC 14 group Strength (Athletics) check to push it free. While characters are pushing their boat free, there is a {@chance 50|50 percent} chance that one or more creatures attack them; in this event, roll on the Darklake Creature Encounters table to determine what attacks."
 					]
 				},
 				{
@@ -3691,11 +3691,11 @@
 								],
 								[
 									"16-17",
-									"1d4 nets, each net has a 50 percent chance of containing 3d6 dead, edible quippers"
+									"1d4 nets, each net has a {@chance 50|50 percent} chance of containing 3d6 dead, edible quippers"
 								],
 								[
 									"18-19",
-									"1d4 nets, each net has a 50 percent chance of containing 1d4 living stirges"
+									"1d4 nets, each net has a {@chance 50|50 percent} chance of containing 1d4 living stirges"
 								],
 								[
 									"20",
@@ -3866,7 +3866,7 @@
 								"Though the kuo-toa are mad, at least some of that madness comes from an utterly alien mind-set. Although amphibious air dwellers, the kuo-toa still largely behave as aquatic creatures. Thus, much of what they do on land is a bizarre approximation of life under the water.",
 								"Kuo-toa names are a long series of gargling syllables, and their voices have a bubbly, gargling quality. However, the kuo-toa communicate as much through gesture as speech. They have difficulty standing still, and are prone to quick, darting movements. They pace constantly, walking in circles around creatures talking to them. A kuo-toa priest speaking to a group of followers doesn't stand at a podium but wanders aimlessly while the crowd follows like a school of fish.",
 								"Kuo-toa prefer their leaders to be physically above their subordinates. (If no dais or platform is available for leaders, they have been known to literally stand on top of prostrate underlings.) However, leaders tend to dwell on the lowest levels of buildings because these are considered the safest areas in a settlement, due to their proximity to the water.",
-								"Since the kuo-toa are fishlike, they lack eyelids. This isn't only unnerving in conversation (a kuo-toa never blinks), but it also means that kuo-toa all look the same sleeping as awake-and virtually all kuo-toa sleepwalk, making things even more confusing. There is a 25 percent chance that any individual kuo-toa the party encounters in Sloobludop is sleepwalking, ignoring everyone around it and moving in a shuffling gait from place to place."
+								"Since the kuo-toa are fishlike, they lack eyelids. This isn't only unnerving in conversation (a kuo-toa never blinks), but it also means that kuo-toa all look the same sleeping as awake-and virtually all kuo-toa sleepwalk, making things even more confusing. There is a {@chance 25|25 percent} chance that any individual kuo-toa the party encounters in Sloobludop is sleepwalking, ignoring everyone around it and moving in a shuffling gait from place to place."
 							]
 						}
 					]
@@ -4499,7 +4499,7 @@
 					"name": "Steeder Handlers",
 					"id": "102",
 					"entries": [
-						"A group of 1d4+1 {@creature duergar} teamsters herd a clutch of 2d6 {@creature male steeder|mtf|male steeders}. There is a 50 percent chance that 1d4 of the steeders attack nearby characters or bystanders. The duergar keep the rest of the clutch in check, but they clamor for the characters' arrest if even one of the arachnids is killed. A nearby patrol (see \"Duergar Patrol\") hears the teamsters' clamor and arrives 1d6 rounds later."
+						"A group of 1d4+1 {@creature duergar} teamsters herd a clutch of 2d6 {@creature male steeder|mtf|male steeders}. There is a {@chance 50|50 percent} chance that 1d4 of the steeders attack nearby characters or bystanders. The duergar keep the rest of the clutch in check, but they clamor for the characters' arrest if even one of the arachnids is killed. A nearby patrol (see \"Duergar Patrol\") hears the teamsters' clamor and arrives 1d6 rounds later."
 					]
 				},
 				{
@@ -5015,7 +5015,7 @@
 									"width": 558,
 									"height": 800
 								},
-								"Attentive characters can spot a curious figure darting between the stalls and shops of the Blade Bazaar. Every time they roam the market, they have a 20 percent chance to see a derro dressed in rags styled as an imitation of a fancy jacket, wearing a wide-brimmed hat with two tentacles from a displacer beast sewn into the hat's crown. A large satchel hangs from his shoulder, and he's always muttering to himself.",
+								"Attentive characters can spot a curious figure darting between the stalls and shops of the Blade Bazaar. Every time they roam the market, they have a {@chance 20|20 percent} chance to see a derro dressed in rags styled as an imitation of a fancy jacket, wearing a wide-brimmed hat with two tentacles from a displacer beast sewn into the hat's crown. A large satchel hangs from his shoulder, and he's always muttering to himself.",
 								"Duergar merchants glare scornfully at this derro, and none will discuss him with the characters. If a character asks about him in the Ghohlbrorn's Lair, a successful DC 12 Charisma (Persuasion) check yields up the name \"Droki,\" and identifies the wily derro as a courier and supplier of goods who works for disreputable employers.",
 								"Catching {@creature Droki|OotA} is the objective of quests from Errde Blackskull (see \"Overlake Hold\") and Gartokkar Xundorn (see \"Themberchaud's Lair\"), but if the characters pursue the courier openly, he flees for the West Cleft District. Pursuing characters quickly lose sight of the derro as he vanishes into the crowd. See \"Finding Droki\" in the \"Whorlstone Tunnels\" section for more information on what Droki is carrying if the characters catch him."
 							]
@@ -5212,7 +5212,7 @@
 								"As you pass through the gates, the stench in the air changes from acrid and metallic to fetid and repugnant, the fires of industry replaced by squalor. The homes in this part of Gracklstugh are crudely carved from the rock or are just holes in the walls, arranged in no apparent order. The chatter in the air is unnerving, with hundreds of derro muttering, screaming at each other, and otherwise reveling in their insanity. Those who spot you look at you with a burning hatred."
 							]
 						},
-						"At the end of each hour the adventurers stay inside either derro area, there is a 25 percent chance that 2d4 {@creature derro|mtf} attack without warning. If the characters kill any derro, the chance of another attack becomes 50 percent every half hour.",
+						"At the end of each hour the adventurers stay inside either derro area, there is a {@chance 25|25 percent} chance that 2d4 {@creature derro|mtf} attack without warning. If the characters kill any derro, the chance of another attack becomes 50 percent every half hour.",
 						"Sneaking through the senseless arrangement of the burrows is relatively easy, as the derro are normally too preoccupied with their own mad scheming to notice a group trying not to attract attention. The characters can attempt a DC 10 group Dexterity (Stealth) check, with success negating the need to roll for a possible attack at the end of each hour or half hour.",
 						"Other means of subterfuge such as illusions, climbing along the walls, or using flying or levitation magic automatically avoid detection, but invisibility of any kind activates magical wards placed by derro savants to guard against duergar intrusion. When a ward activates in response to the presence of an invisible creature, nearby derro fly into a frenzy, creating a chaotic mob meant to drive away invisible duergar patrols. Derro make active Wisdom (Perception) checks contested by the characters' Dexterity (Stealth) checks if a ward is activated. Characters using {@spell detect magic} actively can spot the invisible sensor of a ward before it activates. Otherwise, invisible characters encounter a ward every 15 minutes they move through derro territory.",
 						{
@@ -5222,7 +5222,7 @@
 							"entries": [
 								"Between a cluster of hovels in West Cleft lies the most well-used entrance to the Whorlstone Tunnels (see \"Whorlstone Tunnels\"). A narrow fissure in the chasm wall is hidden by scraps of cloth, gray sheets of canvas, and moldy boxes. The fissure is tall and wide enough for a Medium creature to squeeze through the first 10 feet, and then continues for 50 feet at an average 5 feet in width, with a gentle downward slope.",
 								"Ever since the foul irruption of the demon lords into the Underdark, the fissure is easier to find, as it sometimes leaks wisps of eerie fog created by faerzress. Otherwise, finding it requires careful searching and a successful DC 15 Wisdom (Perception) check. Each character can make this check at the end of each hour the party spends in the West Cleft warrens looking for the Whorlstone Tunnels' entrance.",
-								"Any attempt to question the locals without an effective means of disguise or manipulation, such as enchantment or illusion magic, is doomed to fail, as the derro are more likely to attack the characters than answer their questions. Even then, the derro are often incoherent, and a successful DC 15 Charisma (Persuasion) check is needed to obtain useful information. A successful DC 15 Charisma (Intimidation) check also works, but has a 50 percent chance of inspiring the derro to flee or attack."
+								"Any attempt to question the locals without an effective means of disguise or manipulation, such as enchantment or illusion magic, is doomed to fail, as the derro are more likely to attack the characters than answer their questions. Even then, the derro are often incoherent, and a successful DC 15 Charisma (Persuasion) check is needed to obtain useful information. A successful DC 15 Charisma (Intimidation) check also works, but has a {@chance 50|50 percent} chance of inspiring the derro to flee or attack."
 							]
 						}
 					]
@@ -5466,7 +5466,7 @@
 					"name": "Carrion Crawler",
 					"id": "151",
 					"entries": [
-						"There's a 50 percent chance that the {@creature carrion crawler} is feasting on the putrid flesh of a dead grimlock and ignores the party unless disturbed. Otherwise, it is scouring tunnels for food and attacks the party on sight. It prefers to attack while clinging to the ceiling."
+						"There's a {@chance 50|50 percent} chance that the {@creature carrion crawler} is feasting on the putrid flesh of a dead grimlock and ignores the party unless disturbed. Otherwise, it is scouring tunnels for food and attacks the party on sight. It prefers to attack while clinging to the ceiling."
 					]
 				},
 				{
@@ -5490,7 +5490,7 @@
 					"name": "Gray Ooze",
 					"id": "154",
 					"entries": [
-						"There's a 50 percent chance that this ooze has psionic abilities (use the psychic variant of the {@creature gray ooze}, as described in the Monster Manual)."
+						"There's a {@chance 50|50 percent} chance that this ooze has psionic abilities (use the psychic variant of the {@creature gray ooze}, as described in the Monster Manual)."
 					]
 				},
 				{
@@ -5498,7 +5498,7 @@
 					"name": "Moldy Quaggoth Spore Servants",
 					"id": "155",
 					"entries": [
-						"A patch of yellow mold (see \"Dungeon Hazards\" in chapter 5 of the Dungeon Master's Guide) covers each spore servant. Each time a spore servant is touched or takes damage, it releases a cloud of yellow mold spores until the mold patch is destroyed."
+						"A patch of {@hazard yellow mold} (see \"Dungeon Hazards\" in chapter 5 of the Dungeon Master's Guide) covers each spore servant. Each time a spore servant is touched or takes damage, it releases a cloud of yellow mold spores until the mold patch is destroyed."
 					]
 				},
 				{
@@ -5522,7 +5522,7 @@
 					"name": "Yellow Mold",
 					"id": "158",
 					"entries": [
-						"The characters notice a patch of yellow mold (see \"Dungeon Hazards\" in chapter 5 of the Dungeon Master's Guide) growing on something of interest, determined by rolling a d4 and consulting the Beneath the Yellow Mold table. Tampering with the moldencrusted object causing the yellow mold to release its deadly spores.",
+						"The characters notice a patch of {@hazard yellow mold} (see \"Dungeon Hazards\" in chapter 5 of the Dungeon Master's Guide) growing on something of interest, determined by rolling a d4 and consulting the Beneath the Yellow Mold table. Tampering with the moldencrusted object causing the yellow mold to release its deadly spores.",
 						{
 							"type": "table",
 							"caption": "Beneath the Yellow Mold",
@@ -5560,7 +5560,7 @@
 					"name": "Swarm of Insects",
 					"id": "159",
 					"entries": [
-						"The characters encounter a swarm of centipedes. Use the Swarm of Centipedes variant described by the Monster Manual."
+						"The characters encounter a {@creature swarm of centipedes}. Use the Swarm of Centipedes variant described by the Monster Manual."
 					]
 				},
 				{
@@ -5743,7 +5743,7 @@
 								"The tunnel opens into a natural cave, wherein you see several fungal creatures dancing to a silent tune. Three of them stand five feet tall, while the others are half as tall. One of the small ones stands apart from the rest, its movements not nearly as frantic. Hunched nearby are two larger creatures that resemble apes covered with mushroom growths and yellow mold."
 							]
 						},
-						"Characters who know anything about myconids know that myconids don't dance. If Stool is with the party, it points this out. This group is composed of three {@creature myconid adult||myconid adults} and five {@creature myconid sprout||myconid sprouts}. Stool recognizes one of the sprouts\u2014the one not dancing\u2014as his buddy, Rumpadump (see \"Development\"). The ape-like creatures are two {@creature quaggoth spore servant||quaggoth spore servants}, and each one is covered with a patch of yellow mold (see \"Dungeon Hazards\" in chapter 5 of the {@i Dungeon Master's Guide}). Whenever a quaggoth spore servant is touched or takes damage, it releases a cloud of yellow mold spores until its mold patch is destroyed.",
+						"Characters who know anything about myconids know that myconids don't dance. If Stool is with the party, it points this out. This group is composed of three {@creature myconid adult||myconid adults} and five {@creature myconid sprout||myconid sprouts}. Stool recognizes one of the sprouts\u2014the one not dancing\u2014as his buddy, Rumpadump (see \"Development\"). The ape-like creatures are two {@creature quaggoth spore servant||quaggoth spore servants}, and each one is covered with a patch of {@hazard yellow mold} (see \"Dungeon Hazards\" in chapter 5 of the {@i Dungeon Master's Guide}). Whenever a quaggoth spore servant is touched or takes damage, it releases a cloud of yellow mold spores until its mold patch is destroyed.",
 						"The myconids are too swept up in their silent revelry to notice the characters. If the adventurers attack, the myconid adults fight fiercely while the sprouts run and hide. The spore servants join the fray if either they or the myconids are threatened. Otherwise, they remain motionless.",
 						"If the characters try to communicate with the myconids, they release rapport spores so that everyone can speak telepathically. The leader of the myconids is an adult named Voosbur, who speaks on behalf of the others. Sharing thoughts with these sentient mushrooms is an odd and strangely intoxicating experience (and feels quite different than the rapport the characters might have shared with Stool). Voosbur happily tells the party how its \"troupe\" was attracted by the special mushrooms in these tunnels, and it tells the characters about the magical properties of the pygmywort and bigwig mushrooms. Voosbur further explains that the myconids didn't wander into this area, but arrived here by traveling \"through the Lady's dream.\" Voosbur describes \"the Lady\" as a powerful being that loves and guides all myconids. He offers to share \"the Lady's gift\" with the characters, allowing them to travel \"through the Lady's dream\" as the myconids do. Characters who accept the offer gain Zuggtmoy's gift.",
 						"If present, Stool tells the characters it has no idea what Voosbur is talking about. Additionally, Sarith Kzekarit starts to act erratically, trying to warn the characters away from the myconids, but unable to shake off the influence of Zuggtmoy's spores.",
@@ -5799,7 +5799,7 @@
 						},
 						"Although creepy, the hissing sound is harmless, caused by air whistling through perforated mushrooms in the thicket of fungi. The characters can cross this area by forcing their way through it, or by eating pygmywort mushrooms first to move through without disturbing the other fungi present. If the characters are chasing Droki, he uses the thicket to his advantage, eating a pygmywort to sneak his way across. At reduced size, he leaves no trail that normal-sized pursuers can follow.",
 						"Tiny creatures can move through the thicket at no penalty. For Small and Medium creatures, the thicket is difficult terrain. While in the thicket, Tiny and Small creatures have half cover against Medium creatures and can hide.",
-						"Creatures can negate the movement penalty by destroying the fungi before crossing the thicket. Each 5-foot-square area of fungi has AC 10 and 10 hit points. Any attack that deals fire damage has a 50 percent chance of igniting a torchstalk mushroom (see \"{@area Fungi of the Underdark|053|x}\" in chapter 2).",
+						"Creatures can negate the movement penalty by destroying the fungi before crossing the thicket. Each 5-foot-square area of fungi has AC 10 and 10 hit points. Any attack that deals fire damage has a {@chance 50|50 percent} chance of igniting a torchstalk mushroom (see \"{@area Fungi of the Underdark|053|x}\" in chapter 2).",
 						"The first time a Small or larger character reaches the tunnel intersection, two {@creature swarm of centipedes||swarm of insects (centipedes)} emerge from nests under the thicket and attack. Two more {@creature swarm of spiders||swarms of insects (spiders)} arrive on the second round of combat, plus another {@creature swarm of centipedes||swarm of insects (centipedes)} emerge from nests under the thicket and attack. Two more {@creature swarm of spiders||swarms of insects (spiders)} arrive on the second round of combat, plus another {@creature swarm of centipedes||swarm of insects (centipedes)} on the third round.",
 						{
 							"type": "entries",
@@ -6213,7 +6213,7 @@
 							"name": "Trap",
 							"id": "193",
 							"entries": [
-								"The tunnel west of this cavern contains a hidden pit (see \"Sample Traps\" in chapter 5 of the Dungeon Master's Guide). Debris conceals the lid, which is made of thin zurkhwood that breaks when a creature weighing 50 pounds or more steps on it. (A character of reduced size might not weigh enough to break the lid.) The pit is 10 feet deep, and its floor is covered by a patch of green slime (see \"Dungeon Hazards\" in chapter 5 of the {@i Dungeon Master's Guide}). Any creature that falls into the pit takes 1d6 bludgeoning damage and automatically fails its Dexterity saving throw to avoid the slime."
+								"The tunnel west of this cavern contains a hidden pit (see \"Sample Traps\" in chapter 5 of the Dungeon Master's Guide). Debris conceals the lid, which is made of thin zurkhwood that breaks when a creature weighing 50 pounds or more steps on it. (A character of reduced size might not weigh enough to break the lid.) The pit is 10 feet deep, and its floor is covered by a patch of {@hazard green slime} (see \"Dungeon Hazards\" in chapter 5 of the {@i Dungeon Master's Guide}). Any creature that falls into the pit takes 1d6 bludgeoning damage and automatically fails its Dexterity saving throw to avoid the slime."
 							]
 						},
 						{
@@ -6582,7 +6582,7 @@
 										],
 										[
 											"10",
-											"Patch of brown mold (see \"Dungeon Hazards\" in chapter 5 of the Dungeon Master's Guide)"
+											"Patch of {@hazard brown mold} (see \"Dungeon Hazards\" in chapter 5 of the Dungeon Master's Guide)"
 										],
 										[
 											"11",
@@ -6667,7 +6667,7 @@
 					"name": "Zurkhwoods",
 					"id": "1b2",
 					"entries": [
-						"There is a 50 percent chance that one of the zurkhwoods has 1d4+4 {@creature stirge||stirges} nesting in its cap. The stirges are drawn to light sources."
+						"There is a {@chance 50|50 percent} chance that one of the zurkhwoods has 1d4+4 {@creature stirge||stirges} nesting in its cap. The stirges are drawn to light sources."
 					]
 				},
 				{
@@ -7325,7 +7325,7 @@
 					"name": "Animated Drow Statues",
 					"id": "1e7",
 					"entries": [
-						"Once part of a expedition from Menzoberranzan, these drow were petrified by a medusa and later animated by Ogremoch's Bane (see \"Settlers, Squatters, and Invaders\" later in this chapter). They have the statistics of {@creature animated armor}, except they are elementals instead of constructs."
+						"Once part of a expedition from Menzoberranzan, these drow were petrified by a medusa and later animated by Ogrémoch's Bane (see \"Settlers, Squatters, and Invaders\" later in this chapter). They have the statistics of {@creature animated armor}, except they are elementals instead of constructs."
 					]
 				},
 				{
@@ -7633,11 +7633,11 @@
 						},
 						{
 							"type": "entries",
-							"name": "Ogremoch's Bane",
+							"name": "Ogrémoch's Bane",
 							"id": "1fb",
 							"entries": [
-								"Ogremoch's Bane is a drifting cloud of transparent, magical dust that first appeared in Blingdenstone over a century ago. Believed to be sentient, it is found roaming the Rockblight section of the settlement. Elemental creatures touched by the cloud fall under its control.",
-								"The cloud's origin remains a mystery, but it is known to have something to do with Ogremoch, Prince of Evil Earth. A medusa named Neheedra serves Ogremoch's Bane and leads some of the elemental creatures that have become enslaved by the evil cloud (see the \"Rockblight\" section and {@area 19|237} in particular)."
+								"Ogrémoch's Bane is a drifting cloud of transparent, magical dust that first appeared in Blingdenstone over a century ago. Believed to be sentient, it is found roaming the Rockblight section of the settlement. Elemental creatures touched by the cloud fall under its control.",
+								"The cloud's origin remains a mystery, but it is known to have something to do with Ogrémoch, Prince of Evil Earth. A medusa named Neheedra serves Ogrémoch's Bane and leads some of the elemental creatures that have become enslaved by the evil cloud (see the \"Rockblight\" section and {@area 19|237} in particular)."
 							]
 						},
 						{
@@ -7646,7 +7646,7 @@
 							"id": "1fc",
 							"entries": [
 								"After Blingdenstone's fall, a gang of wererats tried to make a home in the ruined city. The last handful of svirfneblin hiding in Blingdenstone after the drow armies abandoned the city managed to kill or drive off the wererats, but many of the deep gnomes became infected with lycanthropy.",
-								"Today, deep gnome wererats claims a large chunk of the ruins under the name of Clan Goldwhisker, holding territory against new settlers and engaging in urban warfare against them. The pack leader is the cunning and charismatic Chipgrin, whose concern for his pack's safety has him hoping to negotiate a truce with the Diggermattocks and stop his svirfneblin cousins from seeing his people as dangerous monsters fit only for extermination. Chipgrin is all too aware of the threat posed by Ogremoch's Bane and the oozes plaguing the settlement, and he hopes that making common cause against those threats will force the other svirfneblin to recognize Clan Goldwhisker's right to remain in Blingdenstone."
+								"Today, deep gnome wererats claims a large chunk of the ruins under the name of Clan Goldwhisker, holding territory against new settlers and engaging in urban warfare against them. The pack leader is the cunning and charismatic Chipgrin, whose concern for his pack's safety has him hoping to negotiate a truce with the Diggermattocks and stop his svirfneblin cousins from seeing his people as dangerous monsters fit only for extermination. Chipgrin is all too aware of the threat posed by Ogrémoch's Bane and the oozes plaguing the settlement, and he hopes that making common cause against those threats will force the other svirfneblin to recognize Clan Goldwhisker's right to remain in Blingdenstone."
 							]
 						},
 						{
@@ -7699,7 +7699,7 @@
 					"entries": [
 						"This large cavern is located west of Blingdenstone (see the map of Underdark regions and locations in chapter 2) and has always been a closely guarded secret. Most svirfneblin who knew of it perished during the drow invasion of Blingdenstone. A few members of the Stoneheart Enclave have heard of its existence, but have either dismissed it as legend or have simply been too preoccupied with the reclaiming and rebuilding of Blingdenstone to search for it.",
 						"The cave is two days' walk of the settlement, its entrance a small tunnel leading to a ledge high above the cavern floor. The cave is lined with stalagmites and stalactites, but the dominant feature is the summoning circle at its center. The circle was once used by the svirfneblin to summon Entemoch, a prince of elemental earth, and his energies suffused the entire cavern, empowering elemental summoning within its confines.",
-						"If the circle is used to cast a spell that summons an earth elemental, the spell's duration becomes 1d4+6 days and the spell requires no concentration. The summoned elemental never becomes hostile toward the spell's caster or its companions. To gain these benefits, the caster must provide material components in the form of gems with a total value of 10 gp per Hit Die of the elemental summoned.",
+						"If the circle is used to cast a spell that summons an {@creature earth elemental}, the spell's duration becomes 1d4+6 days and the spell requires no concentration. The summoned elemental never becomes hostile toward the spell's caster or its companions. To gain these benefits, the caster must provide material components in the form of gems with a total value of 10 gp per Hit Die of the elemental summoned.",
 						{
 							"type": "entries",
 							"name": "Finding Entemoch's Boon",
@@ -7804,7 +7804,7 @@
 							"name": "Elemental Healing",
 							"id": "205",
 							"entries": [
-								"Nomi Pathshutter is aware of Ogremoch's Bane and has made it her life's work to protect elementals from its influence. She studies samples of corrupted elementals as part of her efforts, and rewards characters who bring her a sample from any out-of-control earth elemental creature found in the unexplored areas of Blingdenstone. She pays 10 gp per Hit Die of the creature from which the sample was taken."
+								"Nomi Pathshutter is aware of Ogrémoch's Bane and has made it her life's work to protect elementals from its influence. She studies samples of corrupted elementals as part of her efforts, and rewards characters who bring her a sample from any out-of-control earth elemental creature found in the unexplored areas of Blingdenstone. She pays 10 gp per Hit Die of the creature from which the sample was taken."
 							]
 						}
 					]
@@ -7960,7 +7960,7 @@
 						"It is rare for cavern walls to be bare in Blingdenstone. The walls of large caverns are studded with stairs and ramps leading to balconies and hollows serving as storage or shops. The largest caverns are crisscrossed by walkways allowing svirfneblin and visitors to reach connecting tunnels high above the floor.",
 						"{@b Light.} The caverns of Inner Blingdenstone are brightly lit with a mix of bioluminescent fungi, caged giant fire beetles, and magic. The light from these chambers spills into short connecting tunnels lacking their own illumination, creating areas of dim light. Longer tunnels have their own light, usually magically produced.",
 						"{@b Connecting Tunnels.} Svirfneblin and other Small races can walk through tunnels with ease, but Medium or larger creatures must duck and squeeze-a feature intended to control invaders' movements. Most tunnels have smooth floors, but those around the periphery of the reclaimed areas are strewn with rubble and debris.",
-						"Some of the connecting tunnels in Blingdenstone are trapped. The most common traps are collapsing roofs and spiked pits (see \"Sample Traps\" in chapter 5 of the Dungeon Master's Guide). Many tunnels slope down before rising up again, allowing the gnomes to flood them. All tunnel traps are inactive in Inner Blingdenstone, but the svirfneblin can quickly activate them in case of emergency."
+						"Some of the connecting tunnels in Blingdenstone are trapped. The most common traps are collapsing roofs and spiked {@trap pits} (see \"Sample Traps\" in chapter 5 of the Dungeon Master's Guide). Many tunnels slope down before rising up again, allowing the gnomes to flood them. All tunnel traps are inactive in Inner Blingdenstone, but the svirfneblin can quickly activate them in case of emergency."
 					]
 				},
 				{
@@ -8082,7 +8082,7 @@
 								"3d6 trillimacs"
 							]
 						},
-						"Two blocked-off tunnels lead north and northeast to areas that have not been resettled. All elementals are kept away from the passages because the Stoneheart Enclave believes they lead to the caverns where Ogremoch's Bane lurks."
+						"Two blocked-off tunnels lead north and northeast to areas that have not been resettled. All elementals are kept away from the passages because the Stoneheart Enclave believes they lead to the caverns where Ogrémoch's Bane lurks."
 					]
 				},
 				{
@@ -8090,7 +8090,7 @@
 					"name": "10. Staging Area",
 					"id": "21e",
 					"entries": [
-						"This cave is fortified with barricades and defended by eight {@b deep gnomes} and four {@b cave badgers}. There are no earth elementals reinforcing security here because the passage on the north wall-sealed at either end with a locked door-leads to areas where the deep gnomes have confirmed the influence of Ogremoch's Bane.",
+						"This cave is fortified with barricades and defended by eight {@b deep gnomes} and four {@b cave badgers}. There are no earth elementals reinforcing security here because the passage on the north wall-sealed at either end with a locked door-leads to areas where the deep gnomes have confirmed the influence of Ogrémoch's Bane.",
 						{
 							"type": "entries",
 							"name": "Unseen Evil",
@@ -8149,7 +8149,7 @@
 							"id": "225",
 							"entries": [
 								"Gurnik Tapfinger, head priest of Callarduran Smoothhands in the Stoneheart Enclave, approaches the characters if they show any interest in the Speaking Stones (use the {@creature priest} statistics in the Monster Manual, but also give Gurnik the Stone Camouflage, Gnome Cunning, and Innate Spellcasting features of a {@b deep gnome}). He asks them to undertake a task in a closedoff area of the old city known as Rockblight, where the temple of his god stands desecrated. If the characters agree, he gives them a ruby spell gem containing the hallow spell and asks them to place the gem in the Steadfast Stone's menhir (see {@area 22|242}).",
-								"Gurnik warns them that once they place the gem, Ogremoch's Bane will send its servants to stop them. They must defeat these servants until the gem awakens three temple guardians, at which point the temple will be cleansed and the characters can leave. Once the characters accomplish this task, Gurnik channels the power of the cleansed temple, bestowing a {@i blessing of protection} or a {@i blessing of weapon enhancement} on each of the characters (each player's choice); see \"Other Rewards\" in chapter 7 of the Dungeon Master's Guide for more information on blessings."
+								"Gurnik warns them that once they place the gem, Ogrémoch's Bane will send its servants to stop them. They must defeat these servants until the gem awakens three temple guardians, at which point the temple will be cleansed and the characters can leave. Once the characters accomplish this task, Gurnik channels the power of the cleansed temple, bestowing a {@i blessing of protection} or a {@i blessing of weapon enhancement} on each of the characters (each player's choice); see \"Other Rewards\" in chapter 7 of the Dungeon Master's Guide for more information on blessings."
 							]
 						}
 					]
@@ -8216,7 +8216,7 @@
 									"items": [
 										"Blingdenstone's ghost problem is getting worse, and there are even spirits haunting the catacombs.",
 										"There was a crazy svirfneblin back in the first days of reclamation who disappeared. Some of the scouts claim to have seen him, skulking around the unrecovered areas of the settlement. (The scouts don't know that this gnome is the Pudding King.)",
-										"The Stoneheart Enclave is closing in on a solution to the threat of Ogremoch's Bane (untrue). The gnomes call a large unclaimed area in the northeast of the settlement \"Rockblight,\" as earth elementals go mad whenever they go near it.",
+										"The Stoneheart Enclave is closing in on a solution to the threat of Ogrémoch's Bane (untrue). The gnomes call a large unclaimed area in the northeast of the settlement \"Rockblight,\" as earth elementals go mad whenever they go near it.",
 										"People are divided as to what to do about the wererats living in the southwest caverns. Some want them out, while others propose an alliance of mutual defense.",
 										"A merchant from Gracklstugh says there's an influx of surface-world coins there, but nobody knows where they come from. (See chapter 4 for more information.)",
 										"A svirfneblin caravan returning from Whiteshell Mines encountered a parade of dancing myconids. Through their rapport spores, the myconids told the gnomes about a \"wedding celebration,\" which is strange considering that myconids don't celebrate or have weddings. (See chapter 5 for more information.)"
@@ -8232,11 +8232,11 @@
 					"name": "Rockblight",
 					"id": "22d",
 					"entries": [
-						"When the drow attacked Blingdenstone, Ogremoch's Bane retreated to the far corners of the ruined city, waiting for the time to reemerge and seek out earth elementals to corrupt. The malevolent entity didn't have to wait long, as the drow sent teams of scavengers to loot the treasures the deep gnomes left behind, bringing their own elemental creatures with them.",
-						"Ogremoch's Bane haunted the drow with the same relentless cruelty it did the svirfneblin, turning their elemental servants against them. Eventually, the drow armies departed the city, but when they did, a drow priestess of Lolth named Neheedra Duskryn stayed behind. Neheedra was obsessed with collecting spell gems for their power and beauty, intent on making herself the regal and powerful master of her own underground realm. She commanded a force of drow servants and soldiers with unabashed cruelty, relentlessly driving them to seek out spell gems and increase her own wealth and power.",
+						"When the drow attacked Blingdenstone, Ogrémoch's Bane retreated to the far corners of the ruined city, waiting for the time to reemerge and seek out earth elementals to corrupt. The malevolent entity didn't have to wait long, as the drow sent teams of scavengers to loot the treasures the deep gnomes left behind, bringing their own elemental creatures with them.",
+						"Ogrémoch's Bane haunted the drow with the same relentless cruelty it did the svirfneblin, turning their elemental servants against them. Eventually, the drow armies departed the city, but when they did, a drow priestess of Lolth named Neheedra Duskryn stayed behind. Neheedra was obsessed with collecting spell gems for their power and beauty, intent on making herself the regal and powerful master of her own underground realm. She commanded a force of drow servants and soldiers with unabashed cruelty, relentlessly driving them to seek out spell gems and increase her own wealth and power.",
 						"Overcome by her own greed and vanity, Neheedra engaged in dark rituals designed to secure her hold on power, imagining that Blingdenstone would one day become a drow enclave with her as its immortal leader. Unfortunately, the magical pacts she struck eventually transformed the vain priestess into a medusa.",
-						"Enraged by her fate, Neheedra turned her servants to stone and descended into madness. Over decades, she petrified any creature she encountered, eventually catching the attention of Ogremoch's Bane. Now, the medusa works in concert with the fell entity, creating stone servants animated by its power.",
-						"Since the return of the svirfneblin to Blingdenstone, the deep gnomes have studiously avoided sections of the old city that Ogremoch's Bane and Neheedra inhabit, blocking it off from the rest of the settlement and giving it the name \"Rockblight.\"",
+						"Enraged by her fate, Neheedra turned her servants to stone and descended into madness. Over decades, she petrified any creature she encountered, eventually catching the attention of Ogrémoch's Bane. Now, the medusa works in concert with the fell entity, creating stone servants animated by its power.",
+						"Since the return of the svirfneblin to Blingdenstone, the deep gnomes have studiously avoided sections of the old city that Ogrémoch's Bane and Neheedra inhabit, blocking it off from the rest of the settlement and giving it the name \"Rockblight.\"",
 						{
 							"type": "image",
 							"href": {
@@ -8398,15 +8398,15 @@
 					"name": "21. Drow Statues",
 					"id": "23e",
 					"entries": [
-						"This cave is filled with thirty statues of drow warriors, all standing as if on guard. In her madness, Neheedra turned these warriors of her house to stone. Over long years, Ogremoch's Bane has used its power to animate these statues, turning them into elemental creatures.",
+						"This cave is filled with thirty statues of drow warriors, all standing as if on guard. In her madness, Neheedra turned these warriors of her house to stone. Over long years, Ogrémoch's Bane has used its power to animate these statues, turning them into elemental creatures.",
 						"When the characters step inside the chamber, six of the statues animate and attack. The statues have the statistics of {@creature animated armor}, except that they are elementals instead of constructs.",
 						"The statues attack until destroyed but don't leave this area. If the characters spend 1 round or longer in the chamber after defeating the last statue, six more statues animate. This process repeats until either all of the statues are destroyed or until the characters leave the cave. A statue also animates and attacks if touched or otherwise disturbed.",
 						{
 							"type": "entries",
-							"name": "Ogremoch's Bane",
+							"name": "Ogrémoch's Bane",
 							"id": "23f",
 							"entries": [
-								"If every statue in this cave is destroyed, Ogremoch's Bane appears.",
+								"If every statue in this cave is destroyed, Ogrémoch's Bane appears.",
 								{
 									"type": "inset",
 									"id": "240",
@@ -8414,7 +8414,7 @@
 										"As the last statue crumbles, a cloud of dust erupts from its shattered remains and expands to fill the cave."
 									]
 								},
-								"The cloud is Ogremoch's Bane. Characters within the cloud can sense its malevolence, and a successful DC 15 Intelligence (Arcana) check confirms that the cloud is of extraplanar origin. The cloud has a flying speed of 20 feet and is impervious to all damage and spells except the following.",
+								"The cloud is Ogrémoch's Bane. Characters within the cloud can sense its malevolence, and a successful DC 15 Intelligence (Arcana) check confirms that the cloud is of extraplanar origin. The cloud has a flying speed of 20 feet and is impervious to all damage and spells except the following.",
 								{
 									"type": "list",
 									"items": [
@@ -8422,7 +8422,7 @@
 										"Casting a {@spell banishment} spell on the cloud sends it back to the Elemental Plane of Air if it fails its Charisma saving throw (it has a +4 modifier to the roll). A {@spell dispel evil and good} spell is equally effective and doesn't require a successful attack roll; however, the caster must be in contact with the cloud."
 									]
 								},
-								"Creatures native to the Elemental Plane of Earth (including earth elementals, galeb duhr, gargoyles, and xorn) that come in contact with Ogremoch's Bane instantly fall under the cloud's sway. The effect lasts as long as the enslaved elementals and Ogremoch's Bane are on the same plane of existence."
+								"Creatures native to the Elemental Plane of Earth (including earth elementals, galeb duhr, gargoyles, and xorn) that come in contact with Ogrémoch's Bane instantly fall under the cloud's sway. The effect lasts as long as the enslaved elementals and Ogrémoch's Bane are on the same plane of existence."
 							]
 						},
 						{
@@ -8430,7 +8430,7 @@
 							"name": "XP Awards",
 							"id": "241",
 							"entries": [
-								"If Ogremoch's Bane is banished back to the Elemental Plane of Earth, award each character 150 XP."
+								"If Ogrémoch's Bane is banished back to the Elemental Plane of Earth, award each character 150 XP."
 							]
 						}
 					]
@@ -8463,7 +8463,7 @@
 									]
 								},
 								"An {@creature earth elemental} materializes out of the wall and attacks. When the elemental is reduced to 0 hit points, it crumbles, and a galeb duhr emerges from the ground near the menhir in an unoccupied space. The {@creature galeb duhr} faces outward in a guarding pose, but doesn't move or respond. Another earth elemental then emerges from the wall of the chamber and attacks, when it is destroyed, a second stoic galeb duhr appears. This summoning process repeats once more, until the third earth elemental appears and is destroyed. The elementals ignore the galeb duhr, which continue to stand motionless throughout the fight.",
-								"When the characters reduce three earth elementals to 0 hit points and summon three galeb duhr, a white light shines from the menhir, producing a hallow effect protecting the galeb duhr from the influence of Ogremoch's Bane. The galeb duhr then animate and acknowledge the characters with a grave nod, before settling down in their boulder guise around the menhir.",
+								"When the characters reduce three earth elementals to 0 hit points and summon three galeb duhr, a white light shines from the menhir, producing a hallow effect protecting the galeb duhr from the influence of Ogrémoch's Bane. The galeb duhr then animate and acknowledge the characters with a grave nod, before settling down in their boulder guise around the menhir.",
 								"Gurnik delivers his promised blessings when the characters return to notify him of their success in the temple. He can sense whether or not the temple has been restored to its former glory, so if the characters fail to cleanse the temple but tell him they succeeded, he knows they're lying, and the deep gnomes' attitude toward the party worsens. If the characters accomplish Gurnik's task, they can make a DC 15 group Charisma check to improve the gnomes' attitude, with all characters making the check with advantage."
 							]
 						},
@@ -8768,8 +8768,8 @@
 							"id": "262",
 							"entries": [
 								"Stone is a resilient defense against oozes, making earth elementals the perfect force to combat them. Nomi Pathshutter suggests that if Entemoch's Boon could be found and its summoning circle put to use, the likelihood of victory would increase greatly.",
-								"Gurnik Tapfinger says that with Ogremoch's Bane still lurking, any elemental brought to the battle runs the risk of being driven insane.",
-								"Nomi and Gurnik agree that if the Steadfast Stone is cleansed and Ogremoch's Bane is banished, the Stoneheart Enclave can protect its elementals during the battle."
+								"Gurnik Tapfinger says that with Ogrémoch's Bane still lurking, any elemental brought to the battle runs the risk of being driven insane.",
+								"Nomi and Gurnik agree that if the Steadfast Stone is cleansed and Ogrémoch's Bane is banished, the Stoneheart Enclave can protect its elementals during the battle."
 							]
 						},
 						{
@@ -10433,7 +10433,7 @@
 						"{@b Shed 6} holds 2d10 empty wooden chests with iron fittings and 2d10 locks with keys.",
 						"{@b Shed 7} contains 2d6 jars of ink, 3d12 blank pieces of parchment, 3d6 boxes of candles (12 candles per box), and 2d6 ink pens.",
 						"{@b Shed 8} holds 3d6 crowbars, 3d6 hammers, and 3d6 miner's picks.",
-						"{@b Shed 9} is locked, and Ghazrim DuLoc carries the only key. The lock is also trapped with a poison needle (see \"{@book Sample Traps|DMG|5|Sample Traps}\" in chapter 5 of the Dungeon Master's Guide). The shed contains 250 pp, 1,800 gp, 3,300 sp, 6,000 cp, and thirty 100 gp gems in a loose pile.",
+						"{@b Shed 9} is locked, and Ghazrim DuLoc carries the only key. The lock is also trapped with a {@trap poison needle} (see \"{@book Sample Traps|DMG|5|Sample Traps}\" in chapter 5 of the Dungeon Master's Guide). The shed contains 250 pp, 1,800 gp, 3,300 sp, 6,000 cp, and thirty 100 gp gems in a loose pile.",
 						"{@b Shed 10} contains 3d6 jars of spices worth 10 gp each, 2d6 10-pound sacks of cinnamon worth 20 gp each, and 3d6 boxes of soap (12 bars of soap per box).",
 						"{@b Shed 11} holds four wooden chicken coops, each one containing 1d6+1 live chickens. Sacks of chicken feed are stored on a shelf above the coops.",
 						"{@b Shed 12} is currently empty.",
@@ -11045,7 +11045,7 @@
 							"rows": [
 								[
 									"1-2",
-									"A loud argument that has a 50 percent chance of attracting nearby monsters (roll on the Creature Encounters table in chapter 2)"
+									"A loud argument that has a {@chance 50|50 percent} chance of attracting nearby monsters (roll on the Creature Encounters table in chapter 2)"
 								],
 								[
 									"3-4",
@@ -12519,7 +12519,7 @@
 					"name": "Drider",
 					"id": "35c",
 					"entries": [
-						"This creature clings to the ceiling and prefers to make ranged attacks against the party. There is a 25 percent chance that the drider can cast spells (use the spellcasting variant in the Monster Manual). The drider flees if reduced to 30 or fewer hit points."
+						"This creature clings to the ceiling and prefers to make ranged attacks against the party. There is a {@chance 25|25 percent} chance that the drider can cast spells (use the spellcasting variant in the Monster Manual). The drider flees if reduced to 30 or fewer hit points."
 					]
 				},
 				{
@@ -12535,7 +12535,7 @@
 					"name": "Dwarf Commoners",
 					"id": "35e",
 					"entries": [
-						"There is a 75 percent chance that these shield dwarves are prospectors from Mithral Hall, hunting for precious stones and minerals. Otherwise, they are refugees who became lost in the Underdark after orcs attacked their stronghold and chased them underground. These dwarves are searching for a route to the surface.",
+						"There is a {@chance 75|75 percent} chance that these shield dwarves are prospectors from Mithral Hall, hunting for precious stones and minerals. Otherwise, they are refugees who became lost in the Underdark after orcs attacked their stronghold and chased them underground. These dwarves are searching for a route to the surface.",
 						"{@b Treasure.} Each dwarf carries 1d10 pounds of food, 1d4 gallons of water (stored in canteens), and 1d6 gems worth 10 gp each."
 					]
 				},
@@ -12759,7 +12759,7 @@
 							"name": "Treasure",
 							"id": "372",
 							"entries": [
-								"For each round spent digging at the wall, a character has a 10 percent chance of extracting a gemstone worth 100 gp. The chance increases to 20 percent if the character has a mining background and a miner's pick. After ten such gems are extracted, the deposit is depleted. For each round that any number of characters dig at the wall, there is a 10 percent cumulative chance that the sound attracts the attention of any troglodytes remaining in areas 5 or 7."
+								"For each round spent digging at the wall, a character has a {@chance 10|10 percent} chance of extracting a gemstone worth 100 gp. The chance increases to 20 percent if the character has a mining background and a miner's pick. After ten such gems are extracted, the deposit is depleted. For each round that any number of characters dig at the wall, there is a 10 percent cumulative chance that the sound attracts the attention of any troglodytes remaining in areas 5 or 7."
 							]
 						}
 					]
@@ -13132,7 +13132,7 @@
 					"id": "393",
 					"entries": [
 						"The floor of this dark, 60-foot-high cavern is covered in a thick layer of viscous purple worm saliva. Consequently, the floor is difficult terrain. As they enter, adventurers notice dozens of glinting objects in the goo beneath their feet. Further inspection reveals the sparkling objects are precious gems.",
-						"For every minute the adventurers spend in this cave, there is a 25 percent chance they attract the attention of 1d4 giant spiders from {@area 11|395}. The spiders scuttle along the walls and ceiling, avoiding the gooey floor.",
+						"For every minute the adventurers spend in this cave, there is a {@chance 25|25 percent} chance they attract the attention of 1d4 giant spiders from {@area 11|395}. The spiders scuttle along the walls and ceiling, avoiding the gooey floor.",
 						{
 							"type": "entries",
 							"name": "Treasure",
@@ -13314,7 +13314,7 @@
 								"If the characters have come to talk, Karazikar hears them out. The beholder is supremely arrogant, and it speaks and understands only Deep Speech and Undercommon. If any of the characters bluff about having information of interest to the beholder, Karazikar mentions the Maze Engine, either to see if the adventurers know of it, or in a scoffing tone to suggest they can't possibly know anything that it has not already learned.",
 								"Killing Karazikar is the only way to claim the beholder's central eye for Vizeran. At the first hint of violence, the beholder uses its disintegration ray to disintegrate a 10-foot section of the bridge, hoping to plunge one of more party members into the chasm. It then targets enemies with its other eye rays and makes full use of its lair actions (see the Monster Manual). Against characters who attempt to hide from it, the beholder uses a lair action to cause an eye to open up on a wall with line of effect to a hiding creature, then attacks with one of its eye rays.",
 								"Karazikar's slaves fearfully scatter during any confrontation, but if Shedrak is alive, he protects his \"god\" as best he can. If the beholder is reduced to 45 or fewer hit points, it attempts to flee, ordering Shedrak (if he's still alive) to cover its retreat.",
-								"When the beholder is reduced to 0 hit points, its corpse slowly sinks, falling 10 feet at the start of every turn until it reaches the bottom of the chasm. A character within reach of the beholder can use an action to gouge out its central eye. There is also a 10 percent chance at the end of each turn that the beholder's corpse lands on a bridge."
+								"When the beholder is reduced to 0 hit points, its corpse slowly sinks, falling 10 feet at the start of every turn until it reaches the bottom of the chasm. A character within reach of the beholder can use an action to gouge out its central eye. There is also a {@chance 10|10 percent} chance at the end of each turn that the beholder's corpse lands on a bridge."
 							]
 						},
 						{
@@ -13476,10 +13476,10 @@
 							"id": "3ab",
 							"entries": [
 								"Random encounters in the Labyrinth take place in one of the following environments, modified as you wish to suit the creatures in the encounter.",
-								"{@b Caves.} Most caves in the Labyrinth are small (up to 30 feet in diameter), with uneven floors featuring stalagmites, columns, or pools of standing water. A cave has a 10 percent chance of featuring luminescent growth on the walls that fill it with dim light. In addition to the tunnel through which the characters enter, there are 1d3 additional tunnels leading out. These tunnels can exit the cave through the floor, ceiling, or at odd angles.",
+								"{@b Caves.} Most caves in the Labyrinth are small (up to 30 feet in diameter), with uneven floors featuring stalagmites, columns, or pools of standing water. A cave has a {@chance 10|10 percent} chance of featuring luminescent growth on the walls that fill it with dim light. In addition to the tunnel through which the characters enter, there are 1d3 additional tunnels leading out. These tunnels can exit the cave through the floor, ceiling, or at odd angles.",
 								"{@b Tunnels.} Most tunnels in the Labyrinth are 5 to 10 feet wide, with ceilings 1d8+3 feet high. A tunnel follows a straight path for no more than 2d4 × 10 feet before it turns.",
 								"{@b Rifts.} The Labyrinth is shot through with rifts and chasms formed by upheavals in the earth. Blocks of stone thrust up in some places to hinder movement through passages and caverns, while other areas drop off suddenly, forming escarpments hundreds of feet high. In some places, the earth has shifted horizontally, creating tunnels that end suddenly only to continue hundreds of feet away.",
-								"Any rift the characters encounter has a 75 percent chance of featuring a bridge or staircase constructed to navigate it."
+								"Any rift the characters encounter has a {@chance 75|75 percent} chance of featuring a bridge or staircase constructed to navigate it."
 							]
 						}
 					]
@@ -13548,7 +13548,7 @@
 					"name": "Monodrone",
 					"id": "3b3",
 					"entries": [
-						"This modron has become separated from its fellows (see \"March to Nowhere\"), and there is a 75 percent chance that it is looking to rejoin them. If the characters can understand its language, the monodrone repeatedly says, \"We are on the march!\"",
+						"This modron has become separated from its fellows (see \"March to Nowhere\"), and there is a {@chance 75|75 percent} chance that it is looking to rejoin them. If the characters can understand its language, the monodrone repeatedly says, \"We are on the march!\"",
 						"A monodrone that doesn't want to rejoin its fellows is a rogue modron, made so by the chaotic energies suffusing the Underdark. This rogue monodrone gladly joins the party, saying \"Down with Primus!\" in its own language over and over. Its alignment is chaotic neutral, and it can only follow one simple task at a time."
 					]
 				},
@@ -13565,7 +13565,7 @@
 					"name": "Shriekers",
 					"id": "3b5",
 					"entries": [
-						"The shriekers sound off when bright light or a creature is within 30 feet of them. Their shrieking has a 75 percent chance of attracting other monsters, in which case roll again on the Labyrinth Encounters table, treating another shrieker encounter as \"no encounter.\""
+						"The shriekers sound off when bright light or a creature is within 30 feet of them. Their shrieking has a {@chance 75|75 percent} chance of attracting other monsters, in which case roll again on the Labyrinth Encounters table, treating another shrieker encounter as \"no encounter.\""
 					]
 				},
 				{
@@ -14012,7 +14012,7 @@
 							"id": "3de",
 							"entries": [
 								"Having just recently found the Maze Engine, Baphomet has set a {@creature nalfeshnee} named Slaughtertusk to watch over the crevasse and prevent any creature from approaching the device. Slaughtertusk would rather be helping the Horned King track down and kill Yeenoghu. The nalfeshnee is bored with its assigned task, although it knows better than to disobey the Horned King. Still, rather than immediately destroying any intruders, it toys with them for as long as possible.",
-								"Slaughtertusk is happy to let a fight drag on, feasting on its enemies' pain before finally slaying them. If reduced to fewer than 100 hit points, it uses its Summon Demon feature (see the \"Variant: Demon Summoning\" sidebar in the \"Demons\" entry of the Monster Manual) and tries to summon 1d6 vrocks. It has a 50 percent chance of succeeding.",
+								"Slaughtertusk is happy to let a fight drag on, feasting on its enemies' pain before finally slaying them. If reduced to fewer than 100 hit points, it uses its Summon Demon feature (see the \"Variant: Demon Summoning\" sidebar in the \"Demons\" entry of the Monster Manual) and tries to summon 1d6 vrocks. It has a {@chance 50|50 percent} chance of succeeding.",
 								"Slaughtertusk is a bully at heart and begs for its life if the adventurers have it at their mercy, promising to tell them the secrets of the Maze Engine or anything else they want. At the first opportunity, it teleports away, summoning demonic aid to cover its retreat if possible."
 							]
 						}
@@ -14060,7 +14060,7 @@
 					"name": "Shutting Down the Engine",
 					"id": "3e3",
 					"entries": [
-						"The engine shuts down if any part of it comes into contact with an antimagic field or if it is targeted by a successful dispel magic (DC 19). Otherwise, it can only be shut down by a wish spell or divine intervention."
+						"The engine shuts down if any part of it comes into contact with an antimagic field or if it is targeted by a successful dispel magic (DC 19). Otherwise, it can only be shut down by a {@spell wish} spell or divine intervention."
 					]
 				},
 				{
@@ -14508,7 +14508,7 @@
 						"The following features can be found throughout the City of Spiders.",
 						"{@b Light.} Most streets and buildings are lit by eldritch green, blue, and violet lights as bright as torches (created with continual flame spells). Other areas are dark.",
 						"{@b Shielded City.} The drow have locked down their city in the wake of Demogorgon's rampage. For the duration of this adventure, creatures can't teleport into or out of Menzoberranzan. In addition, creatures, objects, and spaces within the city can't be targeted by divination spells or perceived through scrying sensors created by divination spells.",
-						"{@b The Stone Curse.} The \"stone curse\" is an ancient enchantment woven by the wizards of Sorcere to protect the city from cave-ins. Any character casting earthquake, move earth, or similar magic within the city triggers a reverse gravity spell (save DC 18) centered on the caster, which takes effect before the triggering spell is completed. The reverse gravity lasts for 1 minute, and is accompanied by a peal of thunder that alerts everyone nearby. The caster of the triggering spell must make a successful DC 18 Constitution saving throw to maintain concentration. On a failed check, the triggering spell fails."
+						"{@b The Stone Curse.} The \"stone curse\" is an ancient enchantment woven by the wizards of Sorcere to protect the city from cave-ins. Any character casting earthquake, move earth, or similar magic within the city triggers a {@spell reverse gravity} spell (save DC 18) centered on the caster, which takes effect before the triggering spell is completed. The reverse gravity lasts for 1 minute, and is accompanied by a peal of thunder that alerts everyone nearby. The caster of the triggering spell must make a successful DC 18 Constitution saving throw to maintain concentration. On a failed check, the triggering spell fails."
 					]
 				},
 				{
@@ -14962,7 +14962,7 @@
 					"id": "411",
 					"entries": [
 						"The drow use orc slaves to farm their fungi fields. The orcs pour water into carefully irrigated dung fields, renewing and expanding the fields with wagonloads of excrement brought in from the city proper. The orcs are so disciplined that they can be relied upon to perform their tasks with minimal or no supervision.",
-						"The characters encounter 3d6 orc {@creature commoner||commoners}. The orcs are chaotic evil and have darkvision out to a range of 60 feet, but they don't attack drow or anyone accompanied by a drow. There's a 25 percent chance that 1d4 drow {@creature guard||guards} are standing within 120 feet of the orcs, quietly resenting the fact that they've been assigned to \"watch orcs till our waste.\" If the orcs come under attack, the drow rush in to protect them."
+						"The characters encounter 3d6 orc {@creature commoner||commoners}. The orcs are chaotic evil and have darkvision out to a range of 60 feet, but they don't attack drow or anyone accompanied by a drow. There's a {@chance 25|25 percent} chance that 1d4 drow {@creature guard||guards} are standing within 120 feet of the orcs, quietly resenting the fact that they've been assigned to \"watch orcs till our waste.\" If the orcs come under attack, the drow rush in to protect them."
 					]
 				},
 				{
@@ -15050,7 +15050,7 @@
 					"name": "Statue of Lolth",
 					"id": "417",
 					"entries": [
-						"The characters stumble upon a 9-foot-tall statue of Lolth depicted in her drow form. There is a 25 percent chance that the statue was toppled during Demogorgon's rampage, in which case it lies in pieces on the ground.",
+						"The characters stumble upon a 9-foot-tall statue of Lolth depicted in her drow form. There is a {@chance 25|25 percent} chance that the statue was toppled during Demogorgon's rampage, in which case it lies in pieces on the ground.",
 						"If an intact statue is touched by a non-drow or otherwise defiled, the statue opens its mouth and disgorges a {@creature swarm of spiders||swarm of insects (spiders)}. These spiders crawl down the statue and attack whoever touched or defiled the statue. Once the statue disgorges a swarm, its mouth closes, and it can't release another swarm until 1 hour has passed."
 					]
 				},
@@ -15239,7 +15239,7 @@
 							"rows": [
 								[
 									"1",
-									"1d6 nightlights (50 percent chance they are unlit)"
+									"1d6 nightlights ({@chance 50|50 percent} chance they are unlit)"
 								],
 								[
 									"2",
@@ -15270,7 +15270,7 @@
 					"name": "Giant Spiders",
 					"id": "422",
 					"entries": [
-						"There is a 50 percent chance that the giant spiders have a nest nearby (see \"Duthcloim\" earlier in this section). In addition to the eggs, characters find a 1d4-1 manshaped cocoons containing the exsanguinated corpses of escaped slaves (of any race)."
+						"There is a {@chance 50|50 percent} chance that the giant spiders have a nest nearby (see \"Duthcloim\" earlier in this section). In addition to the eggs, characters find a 1d4-1 manshaped cocoons containing the exsanguinated corpses of escaped slaves (of any race)."
 					]
 				},
 				{
@@ -15443,7 +15443,7 @@
 					"name": "Noble Entourage",
 					"id": "42d",
 					"entries": [
-						"The characters encounter a drow {@creature noble} traveling with eight {@creature drow} warriors bearing the symbol and colors of their noble house. There is a 25 percent chance that a {@creature succubus} or {@creature incubus} accompanies the noble in drow form, and a 75 percent chance that the noble is being carried around in a palanquin by unarmed slaves. Roll a d6 and consult the Drow House Slaves table to determine what kind of slaves and how many.",
+						"The characters encounter a drow {@creature noble} traveling with eight {@creature drow} warriors bearing the symbol and colors of their noble house. There is a {@chance 25|25 percent} chance that a {@creature succubus} or {@creature incubus} accompanies the noble in drow form, and a {@chance 75|75 percent} chance that the noble is being carried around in a palanquin by unarmed slaves. Roll a d6 and consult the Drow House Slaves table to determine what kind of slaves and how many.",
 						{
 							"type": "table",
 							"caption": "Drow House Slaves",
@@ -15567,7 +15567,7 @@
 					"id": "433",
 					"entries": [
 						"The characters happen upon 1d8 drow {@creature commoner||commoners} tending the decorative fungi fields and gardens that surround the various noble estates. These drow are lowranking members of their house. They give strangers unpleasant looks but pose little threat.",
-						"There is a 25 percent chance that one of the drow groundskeepers is actually a young drow {@creature noble} who's being punished for some infraction or political misstep. This noble is bold enough to approach the characters and demand to know their business. The noble also seizes any opportunity to reverse his or her recent misfortune, perhaps by rooting out enemy spies or using the characters to dispose of a rival. This noble is treacherous, however, and doesn't make good on any promises or bribes."
+						"There is a {@chance 25|25 percent} chance that one of the drow groundskeepers is actually a young drow {@creature noble} who's being punished for some infraction or political misstep. This noble is bold enough to approach the characters and demand to know their business. The noble also seizes any opportunity to reverse his or her recent misfortune, perhaps by rooting out enemy spies or using the characters to dispose of a rival. This noble is treacherous, however, and doesn't make good on any promises or bribes."
 					]
 				},
 				{
@@ -15606,7 +15606,7 @@
 							"name": "Westrift",
 							"id": "438",
 							"entries": [
-								"The newest of the city's large clefts, Westrift swallowed up three drow houses and a score of lesser dwellings when it opened its yawning maw three centuries ago. In more recent years, the rift has become home to hundreds of giant arachnids, which have filled much of the cleft with their webs and nests-to the extent that anyone falling into the rift has a 75 percent chance of being caught in a web, taking nfo damage from the fall but attracting 1d4+1 hungry {@creature giant spider||giant spiders}.",
+								"The newest of the city's large clefts, Westrift swallowed up three drow houses and a score of lesser dwellings when it opened its yawning maw three centuries ago. In more recent years, the rift has become home to hundreds of giant arachnids, which have filled much of the cleft with their webs and nests-to the extent that anyone falling into the rift has a {@chance 75|75 percent} chance of being caught in a web, taking nfo damage from the fall but attracting 1d4+1 hungry {@creature giant spider||giant spiders}.",
 								"Characters entering Menzoberranzan by means of Vizeran DeVir's secret tunnel come to a secret door that pulls open to reveal a narrow ledge 60 feet below the lip of the rift. Characters can scale the cleft wall with a successful DC 10 Strength (Athletics) check, as there are abundant handholds. Any character who fails the check by 5 or more falls."
 							]
 						}
@@ -15661,7 +15661,7 @@
 					"name": "Drow Acolytes",
 					"id": "43a",
 					"entries": [
-						"The characters encounter 2d6 female drow {@creature acolyte||acolytes} out for a walk. There is a 25 percent chance that a {@creature drow priestess of Lolth} is with them, filling the young devotees' heads with wisdom and instructing them on the Way of Lolth (see \"The Way of Lolth\" sidebar). If they come under attack, the acolytes withdraw to Arach-Tinilith while the priestess stands her ground."
+						"The characters encounter 2d6 female drow {@creature acolyte||acolytes} out for a walk. There is a {@chance 25|25 percent} chance that a {@creature drow priestess of Lolth} is with them, filling the young devotees' heads with wisdom and instructing them on the Way of Lolth (see \"The Way of Lolth\" sidebar). If they come under attack, the acolytes withdraw to Arach-Tinilith while the priestess stands her ground."
 					]
 				},
 				{
@@ -15669,7 +15669,7 @@
 					"name": "Drow Mages",
 					"id": "43b",
 					"entries": [
-						"The characters encounter 1d3 {@creature drow mage||drow mages} out for a walk. There is a 50 percent chance that these mages are members of the Council of Spiders and of a mind to help the characters infiltrate Sorcere, should the characters reveal that they are in league with Vizeran DeVir. These mages offer to cast {@spell greater invisibility} spells on visible characters and escort the party to Gromph's sanctum in the tower. As long as the characters are under the protection of these mages, they have no hostile encounters until they enter Gromph's sanctum (see \"Sorcere\" for details)."
+						"The characters encounter 1d3 {@creature drow mage||drow mages} out for a walk. There is a {@chance 50|50 percent} chance that these mages are members of the Council of Spiders and of a mind to help the characters infiltrate Sorcere, should the characters reveal that they are in league with Vizeran DeVir. These mages offer to cast {@spell greater invisibility} spells on visible characters and escort the party to Gromph's sanctum in the tower. As long as the characters are under the protection of these mages, they have no hostile encounters until they enter Gromph's sanctum (see \"Sorcere\" for details)."
 					]
 				},
 				{
@@ -15677,7 +15677,7 @@
 					"name": "Drow Warriors",
 					"id": "43c",
 					"entries": [
-						"The characters encounter 4d6 {@creature drow} warriors on a training exercise. There is a 50 percent chance that 1d4 {@creature drow elite warrior||drow elite warriors} are with them, providing instruction and discipline. If they spot non-drow on Academy grounds, the drow try to kill any intruder."
+						"The characters encounter 4d6 {@creature drow} warriors on a training exercise. There is a {@chance 50|50 percent} chance that 1d4 {@creature drow elite warrior||drow elite warriors} are with them, providing instruction and discipline. If they spot non-drow on Academy grounds, the drow try to kill any intruder."
 					]
 				},
 				{
@@ -15988,7 +15988,7 @@
 					"name": "Drow Mages",
 					"id": "453",
 					"entries": [
-						"There is a 50 percent chance that these mages have been forewarned of the party's arrival, either by Vizeran DeVir or by Matron Mother Quenthel Baenre, in which case they let the characters pass. Otherwise, the drow mages assume the characters are intruders and attack unless Grin Ousstyl is with them. If the characters declare that they have Quenthel Baenre's permission to be here, they can convince the mages to stand down with a successful DC 12 Charisma (Deception or Persuasion) check.",
+						"There is a {@chance 50|50 percent} chance that these mages have been forewarned of the party's arrival, either by Vizeran DeVir or by Matron Mother Quenthel Baenre, in which case they let the characters pass. Otherwise, the drow mages assume the characters are intruders and attack unless Grin Ousstyl is with them. If the characters declare that they have Quenthel Baenre's permission to be here, they can convince the mages to stand down with a successful DC 12 Charisma (Deception or Persuasion) check.",
 						"If one or more mages fall in battle, the rest use {@spell greater invisibility} spells to turn invisible and retreat, putting the tower on alert if it isn't already."
 					]
 				},
@@ -17070,7 +17070,7 @@
 							"name": "Threatened Bystanders",
 							"id": "4a3",
 							"entries": [
-								"If the battle takes place in a populated area such as Menzoberranzan, the characters spot bystanders under attack by lesser demons that prefer to take on easy prey rather than fighting against their own kind. A dozen {@creature dretch||dretches} or {@creature manes} (50 percent chance of either) attack, killing and consuming their mortal victims unless the adventurers intervene."
+								"If the battle takes place in a populated area such as Menzoberranzan, the characters spot bystanders under attack by lesser demons that prefer to take on easy prey rather than fighting against their own kind. A dozen {@creature dretch||dretches} or {@creature manes} ({@chance 50|50 percent} chance of either) attack, killing and consuming their mortal victims unless the adventurers intervene."
 							]
 						}
 					]
@@ -17225,19 +17225,10 @@
 					"entries": [
 						"A player can choose one of the following features to replace the feature normally granted by his or her character's background.",
 						{
-							"type": "entries",
-							"name": "Optional Feature: Deep Delver",
-							"id": "4b4",
-							"entries": [
-								"You have a knack for making your way in the deep places of the world. You can recall the twists and turns of passageways and tunnels such that you can always retrace your steps underground. You're also well acquainted with foraging and survival in the Underdark, and can determine when sources of food and water are safe to consume. You can always find sufficient food and water for yourself and up to five other people in the Underdark, as long as sustenance is available in the area."
-							]
-						},
-						{
-							"type": "entries",
-							"name": "Optional Feature: Underdark Experience",
-							"id": "4b5",
-							"entries": [
-								"You are no casual visitor to the Underdark, but instead have spent considerable time there learning its ways. You are familiar with the various races, civilizations, and settlements of the Underdark, as well as its major routes for travel. If you fail an Intelligence check to recall some piece of Underdark lore, you know a source you can consult for the answer unless the DM rules that the lore is unknown."
+							"type": "list",
+							"items": [
+								"{@charoption Deep Delver|OotA}",
+								"{@charoption Underdark Experience|OotA}"
 							]
 						}
 					]

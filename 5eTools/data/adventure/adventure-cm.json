@@ -849,7 +849,7 @@
 					"id": "03e",
 					"entries": [
 						"The characters have come to Candlekeep seeking aid for a stricken town, which could be the home of one or more of them. The settlement has withered this year. Crops have failed, the livestock stands in the fields like stick figures, and the rain has dwindled. A local mage determined that a curse had been levied on the land and recommended that the town seek aid from a sage named Matreous. After some inquiries, the mage found that Matreous was studying in Candlekeep and sent the characters to find him.",
-						"Alternatively, the characters could discover {@i The Joy of Extradimensional Spaces}while researching one of the following topics:",
+						"Alternatively, the characters could discover {@i The Joy of Extradimensional Spaces} while researching one of the following topics:",
 						{
 							"type": "list",
 							"items": [
@@ -857,7 +857,7 @@
 								"Demiplanes, pocket dimensions, and other spaces that exist outside the Material Plane"
 							]
 						},
-						"Tied to {@i The Joy of Extradimensional Spaces} are two mysteries.{@i }The first is the whereabouts of the missing sage Matreous. The characters can resolve this question by opening the portal to the mansion. The larger mystery, however, is how to escape once they are trapped inside.",
+						"Tied to {@i The Joy of Extradimensional Spaces} are two mysteries. The first is the whereabouts of the missing sage Matreous. The characters can resolve this question by opening the portal to the mansion. The larger mystery, however, is how to escape once they are trapped inside.",
 						{
 							"type": "entries",
 							"name": "Book Description",
@@ -1550,7 +1550,7 @@
 							"name": "Essays and Ramblings",
 							"id": "087",
 							"entries": [
-								"{@i Mazfroth's Mighty Digressions}contains a collection of eclectic essays, though not much is revealed or known about the author. Mazfroth's essays often go on long tangents. Although the topics in the book are many and varied, it is clear that divinity, the denizens of the multiverse, and the nature of magic were subjects of particular interest to Mazfroth."
+								"{@i Mazfroth's Mighty Digressions} contains a collection of eclectic essays, though not much is revealed or known about the author. Mazfroth's essays often go on long tangents. Although the topics in the book are many and varied, it is clear that divinity, the denizens of the multiverse, and the nature of magic were subjects of particular interest to Mazfroth."
 							]
 						},
 						{
@@ -2909,7 +2909,7 @@
 															"items": [
 																"Undead within 30 feet of the figurine can't be turned.",
 																"Dead creatures within 30 feet of the figurine can't be brought back to life.",
-																"A creature that holds the figurine while praying to Orcus for at least 1 hour has a 10 percent chance of summoning a smoky avatar of the demon lord. Once this avatar is summoned, it can't be summoned again for 30 days. Orcus's avatar has the statistics of a {@creature wraith} except that it's chaotic evil. It attacks all non-undead creatures it encounters, and it disappears after 1 hour or when reduced to 0 hit points."
+																"A creature that holds the figurine while praying to Orcus for at least 1 hour has a {@chance 10|10 percent} chance of summoning a smoky avatar of the demon lord. Once this avatar is summoned, it can't be summoned again for 30 days. Orcus's avatar has the statistics of a {@creature wraith} except that it's chaotic evil. It attacks all non-undead creatures it encounters, and it disappears after 1 hour or when reduced to 0 hit points."
 															]
 														}
 													]
@@ -3117,7 +3117,7 @@
 													"type": "inset",
 													"id": "11d",
 													"entries": [
-														"A Character Cursed with Wereraven Lycanthropy Gains a Dexterity of 15 If Their Score Isn't Already Higher. Attack and Damage Rolls for the Wereraven's Beak Are Based on Whichever Is Higher of the Character's Strength and Dexterity. the Peck of a Wereraven Deals 1 Piercing Damage in Raven Form (No Ability Modifier Applies to This Damage), or 1d4 Piercing Damage in Hybrid Form (The Character's Ability Modifier Applies to This Damage). This Attack Carries the Curse of Wereraven Lycanthropy."
+														"A character cursed with wereraven lycanthropy gains a Dexterity of 15 if their score isn't already higher. Attack and damage rolls for the wereraven's beak are based on whichever is higher of the character's Strength and Dexterity. The peck of a wereraven deals 1 piercing damage in raven form (no ability modifier applies to this damage), or {@dice 1d4} piercing damage in hybrid form (the character's ability modifier applies to this damage). This attack carries the curse of wereraven lycanthropy."
 													]
 												}
 											]
@@ -3753,7 +3753,7 @@
 										},
 										"Since the village's business was conducted on the first floor of the mansion, the mayor and her wife spent their personal time in this room. The shelves hold books of all sorts, from tomes on history and treatises on business to thin volumes of folktales and grand, sweeping novels. An entire section on arcane theory includes books about the other planes of existence. If you so desire, the library can include books relevant to other plots in your campaign.",
 										"Several open books lie on the table, with notes scribbled on bits of paper stuck between their pages. The topics include the effects of physical and emotional trauma, nightmares, and mysterious disappearances. Seemingly out of place in comparison to the other topics, a book about the Feywild and its sundry creatures holds a single note, written in a shaky hand. It reads: {@i Could this be the answer?}",
-										"{@i }The note marks a page with an entry on meenlocks, which includes the following information:",
+										"{@i}The note marks a page with an entry on meenlocks, which includes the following information:",
 										{
 											"type": "list",
 											"items": [
@@ -5404,7 +5404,7 @@
 									"id": "201",
 									"entries": [
 										"The eldest member of the Fetid Gaze, the lawful evil {@creature Hag of the Fetid Gaze|CM|Auntie Greenbones} often defers to the other two hags on decision-making. In her true form, she is shriveled and worn, her dark green skin covered in bark and fungus. Insects crawl across her and hide in the thick braid of white hair that curls around her shoulders like a serpent. Anyone who stares into her milky-white, seemingly blind eyes sees a reflection of their own face made decrepit and withered by age.",
-										"The hag's disguise is that of Greensong, a cheerful, rosy-cheeked wood elf who feigns blindness. She wears a delicate white veil across her eyes and speaks in a singsong voice, giggling often. She keeps her guard dog, Morty, with her at all times. This disguised hell hound{@b } appears as a mastiff with bloodshot eyes.",
+										"The hag's disguise is that of Greensong, a cheerful, rosy-cheeked wood elf who feigns blindness. She wears a delicate white veil across her eyes and speaks in a singsong voice, giggling often. She keeps her guard dog, Morty, with her at all times. This disguised hell hound{@b} appears as a mastiff with bloodshot eyes.",
 										"Auntie Greenbones knows how to infuse demon ichor into the paints needed to create the cursed paintings that drive the coven's evil bargains. This recipe is inscribed on the inside of Morty's collar.",
 										{
 											"type": "entries",
@@ -13506,7 +13506,7 @@
 					"id": "4d9",
 					"entries": [
 						"Alkazaar was an adventurer of great renown. Tales proliferate about his daring and incredible discoveries across Faerûn. Knowing that the definitive collection of Alkazaar's adventures rests within the walls of Candlekeep is reason enough for an adventurer to seek out this legendary book and claim a cozy corner to read about the escapades of Alkazaar and his dungeon-delving companions. {@i Alkazaar's Thrilling Tales} is a hefty tome, but its smaller companion\u2014{@i Alkazaar's Appendix}\u2014contains the intriguing story of Alkazaar's one unfinished quest.",
-						"The Avowed in Candlekeep{@i }could bring {@i Alkazaar's Appendix} to the characters' attention and approach the characters (especially if the party has visited Candlekeep before) in hopes that they can complete Alkazaar's unfinished quest and perhaps procure for the library the fabled {@item Nether Scroll of Azumar|CM|Nether Scroll} that Alkazaar believed the golem once guarded.",
+						"The Avowed in Candlekeep{@i}could bring {@i Alkazaar's Appendix} to the characters' attention and approach the characters (especially if the party has visited Candlekeep before) in hopes that they can complete Alkazaar's unfinished quest and perhaps procure for the library the fabled {@item Nether Scroll of Azumar|CM|Nether Scroll} that Alkazaar believed the golem once guarded.",
 						"Alternatively, an ogre named Little One (see the \"{@area Little One|029|x}\" sidebar in the \"{@adventure Candlekeep|CM|1}\" section earlier in this book) might approach the characters while they're relaxing in the Hearth and give them the books, thinking they might be intrigued by the tale of the lost golem.",
 						{
 							"type": "entries",
@@ -14270,10 +14270,22 @@
 											"type": "inset",
 											"id": "519",
 											"entries": [
-												"{@b Treasure Hoard A}",
-												"4,450 gp 370 pp {@item Spell scroll} of {@spell wish} {@item Wand of polymorph}",
-												"{@b Treasure Hoard B}",
-												"1,240 ep {@item Staff of withering} {@item +2 longbow} A {@condition petrified} {@creature chwinga|IDRotF} (see {@area the end of the adventure|524|x} for its stat block) that reverts to flesh when touched and uses its Magical Gift action to reward its liberator"
+												{
+													"type": "list",
+													"style": "list-hang",
+													"name": "Treasure Hoard A",
+													"items": [
+														"4,450 gp 370 pp {@item Spell scroll} of {@spell wish} {@item Wand of polymorph}"
+													]
+												},
+												{
+													"type": "list",
+													"style": "list-hang",
+													"name": "Treasure Hoard B",
+													"items": [
+														"1,240 ep {@item Staff of withering} {@item +2 longbow} A {@condition petrified} {@creature chwinga|IDRotF} (see {@area the end of the adventure|524|x} for its stat block) that reverts to flesh when touched and uses its Magical Gift action to reward its liberator"
+													]
+												}
 											]
 										}
 									]
@@ -14925,7 +14937,7 @@
 									"name": "L7. Kitchen",
 									"id": "54d",
 									"entries": [
-										"An unlocked wooden door seals off this cave. The door is covered with what is obviously a patch of yellow mold (see \"{@hazard Yellow Mold}\" in the {@book Dungeon Master's Guide|DMG}). Any intruder who opens or otherwise disturbs the door causes the mold to release its spores.",
+										"An unlocked wooden door seals off this cave. The door is covered with what is obviously a patch of {@hazard yellow mold} (see \"{@hazard Yellow Mold}\" in the {@book Dungeon Master's Guide|DMG}). Any intruder who opens or otherwise disturbs the door causes the mold to release its spores.",
 										{
 											"type": "insetReadaloud",
 											"id": "54e",
@@ -15080,7 +15092,7 @@
 									"name": "L11. Xanthoria's Grove of Horrors",
 									"id": "55b",
 									"entries": [
-										"An unlocked wooden door seals off this cave. The door is covered with what is obviously a patch of brown mold (see \"{@hazard Brown Mold}\" in the {@book Dungeon Master's Guide|DMG}). Any intruder who opens or otherwise disturbs the door causes the mold to release its spores.",
+										"An unlocked wooden door seals off this cave. The door is covered with what is obviously a patch of {@hazard brown mold} (see \"{@hazard Brown Mold}\" in the {@book Dungeon Master's Guide|DMG}). Any intruder who opens or otherwise disturbs the door causes the mold to release its spores.",
 										{
 											"type": "insetReadaloud",
 											"id": "55c",

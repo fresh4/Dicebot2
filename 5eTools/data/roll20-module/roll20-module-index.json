@@ -8,6 +8,13 @@
 			"dateLastModified": 1568753729
 		},
 		{
+			"id": "CM",
+			"name": "Candlekeep Mysteries",
+			"size": 19004631,
+			"version": "1.0",
+			"dateLastModified": 1616097594
+		},
+		{
 			"id": "CoS",
 			"name": "Curse of Strahd",
 			"size": 19892865,
@@ -188,6 +195,20 @@
 			"size": 19377282,
 			"version": "1",
 			"dateLastModified": 1571941394
+		},
+		{
+			"id": "HoL",
+			"name": "The House of Lament",
+			"size": 16286262,
+			"version": "1",
+			"dateLastModified": 1622393622
+		},
+		{
+			"id": "WBtW",
+			"name": "The Wild Beyond the Witchlight",
+			"size": 18202072,
+			"version": "",
+			"dateLastModified": 1632334185
 		},
 		{
 			"id": "WDMM",

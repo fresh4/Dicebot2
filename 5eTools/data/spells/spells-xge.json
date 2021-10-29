@@ -4098,6 +4098,16 @@
 			"name": "Mighty Fortress",
 			"source": "XGE",
 			"page": 161,
+			"otherSources": [
+				{
+					"source": "AitFR-AVT",
+					"page": 10
+				},
+				{
+					"source": "AitFR-FCD",
+					"page": 12
+				}
+			],
 			"level": 8,
 			"school": "C",
 			"time": [
@@ -5459,7 +5469,10 @@
 			},
 			"components": {
 				"s": true,
-				"m": "a melee weapon worth at least 1 sp"
+				"m": {
+					"text": "a melee weapon worth at least 1 sp",
+					"cost": 10
+				}
 			},
 			"duration": [
 				{

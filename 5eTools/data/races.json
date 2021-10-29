@@ -23,7 +23,7 @@
 			],
 			"languageProficiencies": [
 				{
-					"primordial": true
+					"auran": true
 				}
 			],
 			"entries": [
@@ -73,6 +73,10 @@
 					"wis": 1
 				}
 			],
+			"age": {
+				"mature": 3,
+				"max": 30
+			},
 			"traitTags": [
 				"Unarmed Strike"
 			],
@@ -80,7 +84,7 @@
 				{
 					"common": true,
 					"other": true,
-					"primordial": true
+					"auran": true
 				}
 			],
 			"soundClip": {
@@ -148,6 +152,10 @@
 					"cha": 2
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"darkvision": 60,
 			"languageProficiencies": [
 				{
@@ -166,9 +174,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": [
-							"light"
-						],
 						"3": {
 							"daily": {
 								"1": [
@@ -184,7 +189,12 @@
 							}
 						}
 					},
-					"ability": "cha"
+					"ability": "cha",
+					"known": {
+						"1": [
+							"light#c"
+						]
+					}
 				}
 			],
 			"entries": [
@@ -264,6 +274,10 @@
 				"baseWeight": 110,
 				"weightMod": "2d4"
 			},
+			"age": {
+				"mature": 20,
+				"max": 160
+			},
 			"darkvision": 60,
 			"languageProficiencies": [
 				{
@@ -281,12 +295,12 @@
 			},
 			"additionalSpells": [
 				{
-					"innate": {
+					"ability": "cha",
+					"known": {
 						"1": [
-							"light"
+							"light#c"
 						]
-					},
-					"ability": "cha"
+					}
 				}
 			],
 			"entries": [
@@ -441,6 +455,10 @@
 					}
 				}
 			],
+			"age": {
+				"mature": 0,
+				"max": 3
+			},
 			"darkvision": 60,
 			"skillProficiencies": [
 				{
@@ -520,6 +538,202 @@
 			]
 		},
 		{
+			"name": "Astral Elf",
+			"source": "UA2021TravelersOfTheMultiverse",
+			"page": 1,
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"traitTags": [
+				"Improved Resting"
+			],
+			"skillProficiencies": [
+				{
+					"perception": true
+				}
+			],
+			"additionalSpells": [
+				{
+					"known": {
+						"1": [
+							"dancing lights#c"
+						]
+					},
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				},
+				{
+					"known": {
+						"1": [
+							"light#c"
+						]
+					},
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				},
+				{
+					"known": {
+						"1": [
+							"sacred flame#c"
+						]
+					},
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Astral Fire",
+					"entries": [
+						"You know one of the following cantrips of your choice: {@spell dancing lights}, {@spell light}, or {@spell sacred flame}. Intelligence, Wisdom, or Charisma is your spellcasting ability for it (choose when you select this race)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Fey Ancestry",
+					"entries": [
+						"You have advantage on saving throws you make to avoid or end the {@condition charmed} condition on yourself."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Keen Senses",
+					"entries": [
+						"You have proficiency in the {@skill Perception} skill."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Radiant Soul",
+					"entries": [
+						"When you succeed on a death save, you can regain a number of hit points equal to your proficiency bonus + your Intelligence, Wisdom, or Charisma modifier (choose when you select this race). You can't use this trait again until you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Trance",
+					"entries": [
+						"You don't need to sleep, and magic can't put you to sleep. You can finish a long rest in 4 hours if you spend those hours in a trance-like meditation, during which you remain conscious."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Trance Proficiencies",
+					"entries": [
+						"Whenever you finish a long rest using your Trance trait, you gain two proficiencies, each one with a weapon or a tool of your choice (selected from the \"{@book Equipment|PHB|5}\" chapter of the Player's Handbook). You mystically acquire these proficiencies by drawing them from shared elven memory, and you retain them until you finish your next long rest."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Autognome",
+			"source": "UA2021TravelersOfTheMultiverse",
+			"page": 2,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"construct"
+			],
+			"size": [
+				"S"
+			],
+			"speed": 30,
+			"traitTags": [
+				"Improved Resting",
+				"Natural Armor"
+			],
+			"toolProficiencies": [
+				{
+					"any": 2
+				}
+			],
+			"resist": [
+				"poison"
+			],
+			"conditionImmune": [
+				"disease"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Construct."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Armored Casing",
+					"entries": [
+						"You are encased in thin metal or some other durable material. While you aren't wearing armor, your base Armor Class is 13 + your Dexterity modifier."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Built for Success",
+					"entries": [
+						"You can add a {@dice d4} to one attack roll, ability check, or saving throw you make, and you can do so after seeing the {@dice d20} but before the effects of the roll are resolved. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Mechanical Nature",
+					"entries": [
+						"You have resistance to poison damage and immunity to disease, and you have advantage on saving throws against being {@condition paralyzed} or {@condition poisoned}. You don't need to eat, drink, or breathe."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Sentry's Rest",
+					"entries": [
+						"When you take a long rest, you spend at least 6 hours in an inactive, motionless state, instead of sleeping. In this state, you appear inert, but you aren't {@condition unconscious}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Specialized Design",
+					"entries": [
+						"You gain two tool proficiencies of your choice."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "True Life",
+					"entries": [
+						"If the {@spell mending} spell is cast on you, you can expend a Hit Die, roll it, and regain a number of hit points equal to the roll plus your Constitution modifier (minimum of 1 hit point).",
+						"In addition, your creator designed you to benefit from common spells that preserve life but that normally don't affect Constructs: {@spell cure wounds}, {@spell healing word}, and {@spell spare the dying}."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Aven",
 			"source": "PSA",
 			"page": 15,
@@ -535,6 +749,10 @@
 					"dex": 2
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -600,7 +818,9 @@
 							],
 							"type": "entries"
 						}
-					]
+					],
+					"hasFluff": true,
+					"hasFluffImages": true
 				},
 				{
 					"name": "Ibis-Headed",
@@ -618,9 +838,13 @@
 							],
 							"type": "entries"
 						}
-					]
+					],
+					"hasFluff": true,
+					"hasFluffImages": true
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Aven",
@@ -639,6 +863,10 @@
 					"wis": 2
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"skillProficiencies": [
 				{
 					"perception": true
@@ -714,6 +942,10 @@
 				"heightMod": "2d12",
 				"baseWeight": 200,
 				"weightMod": "2d6"
+			},
+			"age": {
+				"mature": 16,
+				"max": 80
 			},
 			"darkvision": 60,
 			"traitTags": [
@@ -822,6 +1054,10 @@
 				"heightMod": "2d12",
 				"baseWeight": 200,
 				"weightMod": "2d6"
+			},
+			"age": {
+				"mature": 16,
+				"max": 80
 			},
 			"darkvision": 60,
 			"traitTags": [
@@ -994,6 +1230,10 @@
 				"baseWeight": 600,
 				"weightMod": "2d12"
 			},
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"traitTags": [
 				"Powerful Build",
 				"Unarmed Strike"
@@ -1083,7 +1323,8 @@
 					"type": "entries"
 				}
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Centaur",
@@ -1151,6 +1392,10 @@
 					"wis": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"traitTags": [
 				"Powerful Build",
 				"Unarmed Strike"
@@ -1231,8 +1476,7 @@
 					"type": "entries"
 				}
 			],
-			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluff": true
 		},
 		{
 			"name": "Changeling",
@@ -1268,6 +1512,10 @@
 				"heightMod": "2d4",
 				"baseWeight": 115,
 				"weightMod": "2d4"
+			},
+			"age": {
+				"mature": 20,
+				"max": 100
 			},
 			"skillProficiencies": [
 				{
@@ -1412,6 +1660,10 @@
 					}
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"traitTags": [
 				"Tool Proficiency"
 			],
@@ -1496,9 +1748,188 @@
 			]
 		},
 		{
+			"name": "Chromatic Dragonborn",
+			"source": "FTD",
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"acid",
+							"lightning",
+							"poison",
+							"fire",
+							"cold"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Chromatic Ancestry",
+					"entries": [
+						"You have a chromatic dragon ancestor, granting you a special magical affinity. Choose one kind of dragon from the Chromatic Ancestry table. This determines the damage type for your other traits, as shown in the table.",
+						{
+							"type": "table",
+							"caption": "Chromatic Ancestry",
+							"colLabels": [
+								"Dragon",
+								"Damage Type"
+							],
+							"colStyles": [
+								"col-6 text-center",
+								"col-6 text-center"
+							],
+							"rows": [
+								[
+									"Black",
+									"Acid"
+								],
+								[
+									"Blue",
+									"Lightning"
+								],
+								[
+									"Green",
+									"Poison"
+								],
+								[
+									"Red",
+									"Fire"
+								],
+								[
+									"White",
+									"Cold"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Breath Weapon",
+					"entries": [
+						"When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 30-foot line that is 5 feet wide. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} damage of the type associated with your Chromatic Ancestry. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}).",
+						"You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Resistance",
+					"entries": [
+						"You have resistance to the damage type associated with your Chromatic Ancestry."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Chromatic Warding",
+					"entries": [
+						"Starting at 5th level, as an action, you can channel your draconic energy to protect yourself. For 1 minute, you become immune to the damage type associated with your Chromatic Ancestry. Once you use this trait, you can't do so again until you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chromatic Dragonborn",
+			"source": "UA2021DraconicOptions",
+			"page": 2,
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"acid",
+							"lightning",
+							"poison",
+							"fire",
+							"cold"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Chromatic Ancestry",
+					"entries": [
+						"You trace your ancestry to a chromatic dragon, granting you a special magical affinity. Choose one type of dragon from the Chromatic Ancestry table. This determines the damage type for your other traits as shown in the table.",
+						{
+							"type": "table",
+							"caption": "Chromatic Ancestry",
+							"colLabels": [
+								"Dragon",
+								"Damage Type"
+							],
+							"colStyles": [
+								"col-6 text-center",
+								"col-6 text-center"
+							],
+							"rows": [
+								[
+									"Black",
+									"Acid"
+								],
+								[
+									"Blue",
+									"Lightning"
+								],
+								[
+									"Green",
+									"Poison"
+								],
+								[
+									"Red",
+									"Fire"
+								],
+								[
+									"White",
+									"Cold"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Breath Weapon",
+					"entries": [
+						"When you take the {@action Attack} action, you can replace one of your attacks with an exhalation of a magical energy in a 30-foot line that is 5 feet wide. Each creature in the area must make a Dexterity saving throw against a DC equal to 8 + your Constitution modifier + your proficiency bonus. A creature takes {@dice 2d8} damage of the type associated with your Chromatic Ancestry on a failed save, and half as much damage on a successful one. This damage increases by {@dice 1d8} when you reach 5th level ({@dice 3d8}), 11th level ({@dice 4d8}), and 17th level ({@dice 5d8}).",
+						"You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Resistance",
+					"entries": [
+						"You have resistance to the damage type associated with your Chromatic Ancestry."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Chromatic Warding",
+					"entries": [
+						"Starting at 3rd level, as an action, you can channel your draconic energies to protect yourself. For 10 minutes, you become immune to the damage type associated with your Chromatic Ancestry. Once you use this trait, you can't do so again until you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Custom Lineage",
 			"source": "TCE",
 			"page": 8,
+			"lineage": true,
 			"size": [
 				"S",
 				"M"
@@ -1523,28 +1954,7 @@
 			"feats": 1,
 			"skillProficiencies": [
 				{
-					"choose": {
-						"from": [
-							"athletics",
-							"acrobatics",
-							"sleight of hand",
-							"stealth",
-							"arcana",
-							"history",
-							"investigation",
-							"nature",
-							"religion",
-							"animal handling",
-							"insight",
-							"medicine",
-							"perception",
-							"survival",
-							"deception",
-							"intimidation",
-							"performance",
-							"persuasion"
-						]
-					}
+					"any": 1
 				}
 			],
 			"languageProficiencies": [
@@ -1664,6 +2074,80 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Dhampir",
+			"source": "VRGR",
+			"page": 16,
+			"lineage": "VRGR",
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": {
+				"walk": 35,
+				"climb": 35
+			},
+			"darkvision": 60,
+			"traitTags": [
+				"Unarmed Strike"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you gain this lineage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ancestral Legacy",
+					"entries": [
+						"If you replace a race with this lineage, you can keep the following elements of that race: any skill proficiencies you gained from it and any climbing, flying, or swimming speed you gained from it.",
+						"If you don't keep any of those elements or you choose this lineage at character creation, you gain proficiency in two skills of your choice."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Deathless Nature",
+					"entries": [
+						"You don't need to breathe."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spider Climb",
+					"entries": [
+						"You have a climbing speed equal to your walking speed. In addition, at 3rd level, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Vampiric Bite",
+					"entries": [
+						"Your fanged bite is a natural weapon, which counts as a simple melee weapon with which you are proficient. You add your Constitution modifier, instead of your Strength modifier, to the attack and damage rolls when you attack with this bite. It deals {@dice 1d4} piercing damage on a hit. While you are missing half or more of your hit points, you have advantage on attack rolls you make with this bite.",
+						"When you attack with this bite and hit a creature that isn't a Construct or an Undead, you can empower yourself in one of the following ways of your choice:",
+						{
+							"type": "list",
+							"items": [
+								"You regain hit points equal to the piercing damage dealt by the bite.",
+								"You gain a bonus to the next ability check or attack roll you make; the bonus equals the piercing damage dealt by the bite"
+							]
+						},
+						"You can empower yourself with this bite a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Dragonborn",
 			"source": "PHB",
 			"page": 32,
@@ -1683,6 +2167,10 @@
 				"heightMod": "2d8",
 				"baseWeight": 175,
 				"weightMod": "2d6"
+			},
+			"age": {
+				"mature": 15,
+				"max": 80
 			},
 			"traitTags": [
 				"Uncommon Race"
@@ -2079,6 +2567,10 @@
 					"con": 2
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 350
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Tool Proficiency"
@@ -2322,12 +2814,6 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
-								"1": [
-									"alarm",
-									"mage armor"
-								]
-							},
 							"expanded": {
 								"s1": [
 									"alarm",
@@ -2349,7 +2835,13 @@
 									"antilife shell"
 								]
 							},
-							"ability": "int"
+							"ability": "int",
+							"known": {
+								"1": [
+									"alarm",
+									"mage armor"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -2460,6 +2952,10 @@
 					"wis": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 350
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Tool Proficiency"
@@ -2553,6 +3049,10 @@
 					"dex": 2
 				}
 			],
+			"age": {
+				"mature": 100,
+				"max": 750
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Improved Resting"
@@ -2693,9 +3193,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"dancing lights"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -2711,7 +3208,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"dancing lights#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -2768,7 +3270,8 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
+							"ability": "cha",
+							"known": {
 								"1": {
 									"rest": {
 										"1": [
@@ -2776,8 +3279,7 @@
 										]
 									}
 								}
-							},
-							"ability": "cha"
+							}
 						}
 					],
 					"entries": [
@@ -2869,12 +3371,12 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
+							"known": {
 								"1": [
-									"friends",
-									"chill touch",
-									"minor illusion",
-									"fire bolt"
+									"friends#c",
+									"chill touch#c",
+									"minor illusion#c",
+									"fire bolt#c"
 								]
 							}
 						}
@@ -2954,7 +3456,7 @@
 					"additionalSpells": [
 						{
 							"ability": "wis",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -3022,7 +3524,7 @@
 					"additionalSpells": [
 						{
 							"ability": "int",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -3070,41 +3572,25 @@
 						}
 					],
 					"traitTags": [
+						"Skill Proficiency",
 						"Tool Proficiency"
 					],
-					"skillProficiencies": [
+					"skillToolLanguageProficiencies": [
 						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion",
-									{
-										"tool": true
-									}
-								]
-							}
+							"choose": [
+								{
+									"from": [
+										"anySkill",
+										"anyTool"
+									]
+								}
+							]
 						}
 					],
 					"additionalSpells": [
 						{
 							"ability": "int",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -3160,7 +3646,7 @@
 					"additionalSpells": [
 						{
 							"ability": "int",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -3216,9 +3702,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"minor illusion"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -3248,7 +3731,12 @@
 									"mislead"
 								]
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"minor illusion#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -3327,9 +3815,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"light"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -3345,7 +3830,12 @@
 									}
 								}
 							},
-							"ability": "wis"
+							"ability": "wis",
+							"known": {
+								"1": [
+									"light#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -3394,6 +3884,13 @@
 					},
 					"traitTags": [
 						"Amphibious"
+					],
+					"languageProficiencies": [
+						{
+							"common": true,
+							"elvish": true,
+							"aquan": true
+						}
 					],
 					"weaponProficiencies": [
 						{
@@ -3450,6 +3947,13 @@
 					],
 					"traitTags": [
 						"Amphibious"
+					],
+					"languageProficiencies": [
+						{
+							"common": true,
+							"elvish": true,
+							"aquan": true
+						}
 					],
 					"weaponProficiencies": [
 						{
@@ -3545,28 +4049,28 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
+							"ability": "cha",
+							"known": {
 								"1": [
-									"chill touch"
+									"chill touch#c"
 								]
-							},
-							"ability": "cha"
+							}
 						},
 						{
-							"innate": {
+							"ability": "cha",
+							"known": {
 								"1": [
-									"spare the dying"
+									"spare the dying#c"
 								]
-							},
-							"ability": "cha"
+							}
 						},
 						{
-							"innate": {
+							"ability": "cha",
+							"known": {
 								"1": [
-									"thaumaturgy"
+									"thaumaturgy#c"
 								]
-							},
-							"ability": "cha"
+							}
 						}
 					],
 					"entries": [
@@ -3742,6 +4246,10 @@
 					"wis": 1
 				}
 			],
+			"age": {
+				"mature": 100,
+				"max": 750
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Improved Resting"
@@ -3859,7 +4367,7 @@
 					"additionalSpells": [
 						{
 							"ability": "wis",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -3902,6 +4410,10 @@
 					"wis": 2
 				}
 			],
+			"age": {
+				"mature": 100,
+				"max": 750
+			},
 			"darkvision": 60,
 			"skillProficiencies": [
 				{
@@ -4030,9 +4542,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"chill touch"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -4048,7 +4557,12 @@
 									}
 								}
 							},
-							"ability": "wis"
+							"ability": "wis",
+							"known": {
+								"1": [
+									"chill touch#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -4094,36 +4608,20 @@
 						}
 					],
 					"traitTags": [
+						"Skill Proficiency",
 						"Tool Proficiency"
 					],
-					"skillProficiencies": [
+					"skillToolLanguageProficiencies": [
 						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion",
-									{
-										"tool": true
-									}
-								],
-								"count": 2
-							}
+							"choose": [
+								{
+									"from": [
+										"anySkill",
+										"anyTool"
+									],
+									"count": 2
+								}
+							]
 						}
 					],
 					"entries": [
@@ -4143,7 +4641,7 @@
 			"name": "Fairy",
 			"source": "UA2021FolkOfTheFeywild",
 			"page": 2,
-			"lineage": "UA2",
+			"lineage": "VRGR",
 			"creatureTypes": [
 				"fey"
 			],
@@ -4156,18 +4654,26 @@
 			},
 			"additionalSpells": [
 				{
-					"innate": {
-						"1": [
-							"druidcraft",
-							"faerie fire"
-						]
-					},
 					"ability": {
 						"choose": [
 							"int",
 							"wis",
 							"cha"
 						]
+					},
+					"known": {
+						"1": [
+							"druidcraft#c"
+						]
+					},
+					"innate": {
+						"1": {
+							"daily": {
+								"1": [
+									"faerie fire"
+								]
+							}
+						}
 					}
 				}
 			],
@@ -4204,6 +4710,81 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Fairy",
+			"source": "WBtW",
+			"page": 12,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"fey"
+			],
+			"size": [
+				"S"
+			],
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"additionalSpells": [
+				{
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"known": {
+						"1": [
+							"druidcraft#c"
+						]
+					},
+					"innate": {
+						"3": {
+							"daily": {
+								"1": [
+									"faerie fire"
+								]
+							}
+						},
+						"5": {
+							"daily": {
+								"1": [
+									"enlarge/reduce"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Fey."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Flight",
+					"entries": [
+						"Because of your wings, you have a flying speed equal to your walking speed. You can't use this flying speed if you're wearing medium or heavy armor."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Fairy Magic",
+					"entries": [
+						"You know the {@spell druidcraft} cantrip.",
+						"Starting at 3rd level, you can cast the {@spell faerie fire} spell with this trait. Starting at 5th level, you can also cast the {@spell enlarge/reduce} spell with this trait. Once you cast {@spell faerie fire} or {@spell enlarge/reduce} with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level.",
+						"Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race)."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Firbolg",
 			"source": "VGM",
 			"page": 107,
@@ -4229,6 +4810,10 @@
 				"baseWeight": 175,
 				"weightMod": "2d6"
 			},
+			"age": {
+				"mature": 30,
+				"max": 500
+			},
 			"traitTags": [
 				"Powerful Build"
 			],
@@ -4246,7 +4831,7 @@
 			"additionalSpells": [
 				{
 					"ability": "wis",
-					"innate": {
+					"known": {
 						"1": {
 							"rest": {
 								"1": [
@@ -4320,6 +4905,198 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Gem Dragonborn",
+			"source": "FTD",
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"force",
+							"radiant",
+							"psychic",
+							"thunder",
+							"necrotic"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Gem Ancestry",
+					"entries": [
+						"You have a gem dragon ancestor, granting you a special magical affinity. Choose one kind of dragon from the Gem Ancestry table. This determines the damage type for your other traits, as shown in the table.",
+						{
+							"type": "table",
+							"caption": "Gem Ancestry",
+							"colLabels": [
+								"Dragon",
+								"Damage Type"
+							],
+							"colStyles": [
+								"col-6 text-center",
+								"col-6 text-center"
+							],
+							"rows": [
+								[
+									"Amethyst",
+									"Force"
+								],
+								[
+									"Crystal",
+									"Radiant"
+								],
+								[
+									"Emerald",
+									"Psychic"
+								],
+								[
+									"Sapphire",
+									"Thunder"
+								],
+								[
+									"Topaz",
+									"Necrotic"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Breath Weapon",
+					"entries": [
+						"When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 15-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} damage of the type associated with your Gem Ancestry. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}).",
+						"You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Resistance",
+					"entries": [
+						"You have resistance to the damage type associated with your Gem Ancestry."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Psionic Mind",
+					"entries": [
+						"You can send telepathic messages to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand these messages, but it must be able to understand at least one language to comprehend them."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Gem Flight",
+					"entries": [
+						"Starting at 5th level, you can use a bonus action to manifest spectral wings on your body. These wings last for 1 minute. For the duration, you gain a flying speed equal to your walking speed and can hover. Once you use this trait, you can't do so again until you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gem Dragonborn",
+			"source": "UA2021DraconicOptions",
+			"page": 3,
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"force",
+							"radiant",
+							"psychic",
+							"thunder",
+							"necrotic"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Gem Ancestry",
+					"entries": [
+						"You trace your ancestry to a gem dragon, granting you a special magical affinity. Choose one type of dragon from the Gem Ancestry table. This determines the damage type for your other traits as shown in the table.",
+						{
+							"type": "table",
+							"caption": "Gem Ancestry",
+							"colLabels": [
+								"Dragon",
+								"Damage Type"
+							],
+							"colStyles": [
+								"col-6 text-center",
+								"col-6 text-center"
+							],
+							"rows": [
+								[
+									"Amethyst",
+									"Force"
+								],
+								[
+									"Crystal",
+									"Radiant"
+								],
+								[
+									"Emerald",
+									"Psychic"
+								],
+								[
+									"Sapphire",
+									"Thunder"
+								],
+								[
+									"Topaz",
+									"Necrotic"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Breath Weapon",
+					"entries": [
+						"When you take the {@action Attack} action, you can replace one of your attacks with an exhalation of a magical energy in a 15-foot cone. Each creature in the area must make a Dexterity saving throw against a DC equal to 8 + your Constitution modifier + your proficiency bonus. A creature takes {@dice 2d8} damage of the type associated with your Gem Ancestry on a failed save, and half as much damage on a successful one. This damage increases by {@dice 1d8} when you reach 5th level ({@dice 3d8}), 11th level ({@dice 4d8}), and 17th level ({@dice 5d8}).",
+						"You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Resistance",
+					"entries": [
+						"You have resistance to the damage type associated with your Gem Ancestry."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Psionic Mind",
+					"entries": [
+						"You can telepathically speak to any creature you can see within 30 feet of you. You don't need to share a language with the creature, but the creature must be able to understand at least one language. Your communication doesn't give the creature the ability to respond to you telepathically."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Gem Flight",
+					"entries": [
+						"Starting at 3rd level, you can use your bonus action to temporarily summon an array of spectral gems that match your Gem Ancestry in the shape of wings that last for 1 minute. For the duration, you gain a flying speed equal to your walking speed and can hover. Once you use this trait, you can't do so again until you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Genasi",
 			"source": "EEPC",
 			"page": 9,
@@ -4349,6 +5126,10 @@
 				"heightMod": "2d10",
 				"baseWeight": 110,
 				"weightMod": "2d4"
+			},
+			"age": {
+				"mature": 20,
+				"max": 120
 			},
 			"languageProficiencies": [
 				{
@@ -4401,12 +5182,12 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
+							"ability": "con",
+							"known": {
 								"1": [
 									"levitate"
 								]
-							},
-							"ability": "con"
+							}
 						}
 					],
 					"entries": [
@@ -4438,12 +5219,12 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
+							"ability": "con",
+							"known": {
 								"1": [
 									"pass without trace"
 								]
-							},
-							"ability": "con"
+							}
 						}
 					],
 					"entries": [
@@ -4480,9 +5261,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"produce flame"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -4491,7 +5269,12 @@
 									}
 								}
 							},
-							"ability": "con"
+							"ability": "con",
+							"known": {
+								"1": [
+									"produce flame#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -4541,9 +5324,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"shape water|xge"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -4552,7 +5332,12 @@
 									}
 								}
 							},
-							"ability": "con"
+							"ability": "con",
+							"known": {
+								"1": [
+									"shape water|xge#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -4593,6 +5378,39 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Giff",
+			"source": "UA2021TravelersOfTheMultiverse",
+			"page": 2,
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"traitTags": [
+				"Powerful Build"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Damage Dealer",
+					"entries": [
+						"Like a hippopotamus in a crystalware shop, you are naturally adept at damaging things. When you roll a 1 on a damage die for a melee attack, you can reroll the die and use the new roll. You can do so no more than once per turn."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hippo Build",
+					"entries": [
+						"You have advantage on Strength-based ability checks and Strength saving throws. In addition, you count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Gith",
 			"source": "MTF",
 			"page": 96,
@@ -4605,6 +5423,10 @@
 					"int": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -4649,34 +5471,9 @@
 						"baseWeight": 100,
 						"weightMod": "2d4"
 					},
-					"skillProficiencies": [
-						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion",
-									{
-										"tool": true
-									}
-								]
-							}
-						}
+					"traitTags": [
+						"Skill Proficiency",
+						"Tool Proficiency"
 					],
 					"weaponProficiencies": [
 						{
@@ -4691,12 +5488,21 @@
 							"medium": true
 						}
 					],
+					"skillToolLanguageProficiencies": [
+						{
+							"choose": [
+								{
+									"from": [
+										"anySkill",
+										"anyTool"
+									]
+								}
+							]
+						}
+					],
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"mage hand"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -4712,7 +5518,12 @@
 									}
 								}
 							},
-							"ability": "int"
+							"ability": "int",
+							"known": {
+								"1": [
+									"mage hand#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -4767,9 +5578,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"mage hand"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -4785,7 +5593,12 @@
 									}
 								}
 							},
-							"ability": "wis"
+							"ability": "wis",
+							"known": {
+								"1": [
+									"mage hand#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -4831,6 +5644,10 @@
 					"int": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -4869,34 +5686,9 @@
 							"str": 2
 						}
 					],
-					"skillProficiencies": [
-						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion",
-									{
-										"tool": true
-									}
-								]
-							}
-						}
+					"traitTags": [
+						"Skill Proficiency",
+						"Tool Proficiency"
 					],
 					"armorProficiencies": [
 						{
@@ -4904,12 +5696,21 @@
 							"medium": true
 						}
 					],
+					"skillToolLanguageProficiencies": [
+						{
+							"choose": [
+								{
+									"from": [
+										"anySkill",
+										"anyTool"
+									]
+								}
+							]
+						}
+					],
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"mage hand"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -4925,7 +5726,12 @@
 									}
 								}
 							},
-							"ability": "int"
+							"ability": "int",
+							"known": {
+								"1": [
+									"mage hand#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -4974,9 +5780,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"mage hand"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -4992,7 +5795,12 @@
 									}
 								}
 							},
-							"ability": "wis"
+							"ability": "wis",
+							"known": {
+								"1": [
+									"mage hand#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -5084,6 +5892,10 @@
 				"heightMod": "2d4",
 				"baseWeight": 35
 			},
+			"age": {
+				"mature": 40,
+				"max": 500
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Uncommon Race"
@@ -5152,6 +5964,10 @@
 							"dex": 1
 						}
 					],
+					"age": {
+						"mature": 25,
+						"max": 250
+					},
 					"darkvision": 120,
 					"languageProficiencies": [
 						{
@@ -5238,6 +6054,10 @@
 							"dex": 1
 						}
 					],
+					"age": {
+						"mature": 25,
+						"max": 250
+					},
 					"darkvision": 120,
 					"languageProficiencies": [
 						{
@@ -5320,12 +6140,12 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
+							"ability": "int",
+							"known": {
 								"1": [
-									"minor illusion"
+									"minor illusion#c"
 								]
-							},
-							"ability": "int"
+							}
 						}
 					],
 					"entries": [
@@ -5373,10 +6193,7 @@
 										"1": [
 											"comprehend languages"
 										]
-									},
-									"_": [
-										"message"
-									]
+									}
 								},
 								"3": {
 									"daily": {
@@ -5407,7 +6224,12 @@
 									"dream"
 								]
 							},
-							"ability": "int"
+							"ability": "int",
+							"known": {
+								"1": [
+									"message#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -5546,21 +6368,21 @@
 			"languageProficiencies": [
 				{
 					"gnomish": true,
-					"primordial": true,
+					"terran": true,
 					"undercommon": true
 				}
 			],
 			"additionalSpells": [
 				{
-					"innate": {
+					"ability": "int",
+					"known": {
 						"1": [
 							"nondetection",
 							"blindness/deafness",
 							"blur",
 							"disguise self"
 						]
-					},
-					"ability": "int"
+					}
 				}
 			],
 			"entries": [
@@ -5774,6 +6596,10 @@
 				"heightMod": "2d4",
 				"baseWeight": 35
 			},
+			"age": {
+				"mature": 8,
+				"max": 60
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Monstrous Race"
@@ -5897,6 +6723,10 @@
 					"dex": 2
 				}
 			],
+			"age": {
+				"mature": 12,
+				"max": 50
+			},
 			"darkvision": 60,
 			"languageProficiencies": [
 				{
@@ -5962,6 +6792,10 @@
 					"con": 2
 				}
 			],
+			"age": {
+				"mature": 12,
+				"max": 50
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Natural Armor"
@@ -6103,6 +6937,10 @@
 				"heightMod": "2d10",
 				"baseWeight": 200,
 				"weightMod": "2d6"
+			},
+			"age": {
+				"mature": 20,
+				"max": 100
 			},
 			"traitTags": [
 				"Powerful Build"
@@ -6257,6 +7095,10 @@
 					"con": 1
 				}
 			],
+			"age": {
+				"mature": 1,
+				"max": 50
+			},
 			"traitTags": [
 				"Amphibious"
 			],
@@ -6351,6 +7193,51 @@
 			]
 		},
 		{
+			"name": "Hadozee",
+			"source": "UA2021TravelersOfTheMultiverse",
+			"page": 3,
+			"lineage": "VRGR",
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you gain this lineage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dexterous Feet",
+					"entries": [
+						"You can take the {@action Use an Object} action as a bonus action."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Glide",
+					"entries": [
+						"If you are not {@condition incapacitated} or wearing heavy armor, you can extend your skin membranes and glide. When you do so, you can perform the following aerial maneuvers:",
+						{
+							"type": "list",
+							"items": [
+								"When you fall, you can move up to 5 feet horizontally for every 1 foot you descend.",
+								"When you would take damage from a fall, you can use your reaction to reduce the fall's damage to 0."
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Half-Elf",
 			"source": "PHB",
 			"page": 38,
@@ -6380,35 +7267,17 @@
 				"baseWeight": 110,
 				"weightMod": "2d4"
 			},
+			"age": {
+				"mature": 20,
+				"max": 180
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Uncommon Race"
 			],
 			"skillProficiencies": [
 				{
-					"choose": {
-						"from": [
-							"athletics",
-							"acrobatics",
-							"sleight of hand",
-							"stealth",
-							"arcana",
-							"history",
-							"investigation",
-							"nature",
-							"religion",
-							"animal handling",
-							"insight",
-							"medicine",
-							"perception",
-							"survival",
-							"deception",
-							"intimidation",
-							"performance",
-							"persuasion"
-						],
-						"count": 2
-					}
+					"any": 2
 				}
 			],
 			"languageProficiencies": [
@@ -6505,35 +7374,17 @@
 				"baseWeight": 110,
 				"weightMod": "2d4"
 			},
+			"age": {
+				"mature": 20,
+				"max": 180
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Uncommon Race"
 			],
 			"skillProficiencies": [
 				{
-					"choose": {
-						"from": [
-							"athletics",
-							"acrobatics",
-							"sleight of hand",
-							"stealth",
-							"arcana",
-							"history",
-							"investigation",
-							"nature",
-							"religion",
-							"animal handling",
-							"insight",
-							"medicine",
-							"perception",
-							"survival",
-							"deception",
-							"intimidation",
-							"performance",
-							"persuasion"
-						],
-						"count": 2
-					}
+					"any": 2
 				}
 			],
 			"languageProficiencies": [
@@ -6606,29 +7457,7 @@
 					"speed": 30,
 					"skillProficiencies": [
 						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion"
-								],
-								"count": 2
-							}
+							"any": 2
 						}
 					],
 					"entries": [
@@ -6673,37 +7502,12 @@
 					"page": 116,
 					"skillProficiencies": [
 						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion"
-								],
-								"count": 2
-							}
+							"any": 2
 						}
 					],
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"dancing lights"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -6719,7 +7523,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"dancing lights#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -6913,11 +7722,6 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
-								"1": [
-									"gust|xge"
-								]
-							},
 							"expanded": {
 								"s1": [
 									"feather fall",
@@ -6939,7 +7743,12 @@
 									"conjure elemental"
 								]
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"gust|xge#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -7019,29 +7828,7 @@
 					"page": 116,
 					"skillProficiencies": [
 						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion"
-								],
-								"count": 2
-							}
+							"any": 2
 						}
 					],
 					"weaponProficiencies": [
@@ -7055,7 +7842,7 @@
 					"additionalSpells": [
 						{
 							"ability": "int",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -7115,29 +7902,7 @@
 					"page": 116,
 					"skillProficiencies": [
 						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion"
-								],
-								"count": 2
-							}
+							"any": 2
 						}
 					],
 					"weaponProficiencies": [
@@ -7220,6 +7985,10 @@
 				"heightMod": "2d10",
 				"baseWeight": 140,
 				"weightMod": "2d6"
+			},
+			"age": {
+				"mature": 14,
+				"max": 75
 			},
 			"darkvision": 60,
 			"traitTags": [
@@ -7326,6 +8095,10 @@
 				"heightMod": "2d10",
 				"baseWeight": 140,
 				"weightMod": "2d6"
+			},
+			"age": {
+				"mature": 14,
+				"max": 75
 			},
 			"darkvision": 60,
 			"traitTags": [
@@ -7491,6 +8264,10 @@
 				"heightMod": "2d4",
 				"baseWeight": 35
 			},
+			"age": {
+				"mature": 20,
+				"max": 250
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -7607,9 +8384,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"druidcraft"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -7625,7 +8399,12 @@
 									}
 								}
 							},
-							"ability": "wis"
+							"ability": "wis",
+							"known": {
+								"1": [
+									"druidcraft#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -7781,13 +8560,6 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
-								"1": [
-									"prestidigitation",
-									"purify food and drink",
-									"unseen servant"
-								]
-							},
 							"expanded": {
 								"s1": [
 									"goodberry",
@@ -7809,7 +8581,14 @@
 									"hallow"
 								]
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"prestidigitation#c",
+									"purify food and drink",
+									"unseen servant"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -7898,6 +8677,61 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Harengon",
+			"source": "WBtW",
+			"page": 13,
+			"lineage": "VRGR",
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"skillProficiencies": [
+				{
+					"perception": true
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you select this race."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hare-Trigger",
+					"entries": [
+						"You can add your proficiency bonus to your initiative rolls."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Leporine Senses",
+					"entries": [
+						"You have proficiency in the {@skill Perception} skill."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Lucky Footwork",
+					"entries": [
+						"When you fail a Dexterity saving throw, you can use your reaction to roll a {@dice d4} and add it to the save, potentially turning the failure into a success. You can't use this reaction if you're {@condition prone} or your speed is 0."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Rabbit Hop",
+					"entries": [
+						"As a bonus action, you can jump a number of feet equal to five times your proficiency bonus, without provoking opportunity attacks. You can use this trait only if your speed is greater than 0. You can use it a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Hexblood",
 			"source": "UA2021GothicLineages",
 			"page": 3,
@@ -7914,17 +8748,17 @@
 			"darkvision": 60,
 			"additionalSpells": [
 				{
-					"innate": {
-						"1": [
-							"disguise self",
-							"hex"
-						]
-					},
 					"ability": {
 						"choose": [
 							"int",
 							"wis",
 							"cha"
+						]
+					},
+					"known": {
+						"1": [
+							"disguise self",
+							"hex"
 						]
 					}
 				}
@@ -7978,6 +8812,110 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Hexblood",
+			"source": "VRGR",
+			"page": 18,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"fey"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"additionalSpells": [
+				{
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"known": {
+						"1": [
+							"disguise self",
+							"hex"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Fey."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you gain this lineage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ancestral Legacy",
+					"entries": [
+						"If you replace a race with this lineage, you can keep the following elements of that race: any skill proficiencies you gained from it and any climbing, flying, or swimming speed you gained from it.",
+						"If you don't keep any of those elements or you choose this lineage at character creation, you gain proficiency in two skills of your choice."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Eerie Token",
+					"entries": [
+						"As a bonus action, you can harmlessly remove a lock of your hair, one of your nails, or one of your teeth. This token is imbued with magic until you finish a long rest. While the token is imbued in this way, you can take these actions:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Telepathic Message.",
+									"entry": "As an action, you can send a telepathic message to the creature holding or carrying the token, as long as you are within 10 miles of it. The message can contain up to twenty-five words."
+								},
+								{
+									"type": "item",
+									"name": "Remote Viewing.",
+									"entry": "If you are within 10 miles of the token, you can enter a trance as an action. The trance lasts for 1 minute, but it ends early if you dismiss it (no action required) or are {@condition incapacitated}. During this trance, you can see and hear from the token as if you were located where it is. While you are using your senses at the token's location, you are {@condition blinded} and {@condition deafened} in regard to your own surroundings. When the trance ends, the token is harmlessly destroyed."
+								}
+							]
+						},
+						"Once you create a token using this feature, you can't do so again until you finish a long rest, at which point your missing part regrows."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hex Magic",
+					"entries": [
+						"You can cast the {@spell disguise self} and {@spell hex} spells with this trait. Once you cast either of these spells with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast these spells using any spell slots you have.",
+						"Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose the ability when you gain this lineage).",
+						{
+							"type": "inset",
+							"name": "Becoming a Hag",
+							"entries": [
+								"Hags can undertake a ritual to irreversibly transform a hexblood they created into a new hag, either one of their own kind or that embodies the hexblood's nature. This requires that both the hag and hexblood be in the same place and consent to the lengthy ritual\u2014circumstances most hexbloods shun but might come to accept over the course of centuries. Once a hexblood undergoes this irreversible ritual, they emerge as a hag NPC no longer under the control of the hexblood's player, unless the DM rules otherwise."
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hobgoblin",
@@ -8060,20 +8998,13 @@
 			"name": "Hobgoblin",
 			"source": "UA2021FolkOfTheFeywild",
 			"page": 2,
-			"lineage": "UA2",
+			"lineage": "VRGR",
 			"size": [
 				"M"
 			],
 			"speed": 30,
 			"darkvision": 60,
 			"entries": [
-				{
-					"type": "entries",
-					"name": "Creature Type",
-					"entries": [
-						"You are a Humanoid."
-					]
-				},
 				{
 					"type": "entries",
 					"name": "Darkvision",
@@ -8153,6 +9084,10 @@
 				"baseWeight": 110,
 				"weightMod": "2d4"
 			},
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Monstrous Race"
@@ -8166,7 +9101,7 @@
 			"weaponProficiencies": [
 				{
 					"choose": {
-						"from": "type=martial weapon|miscellaneous=mundane",
+						"fromFilter": "type=martial weapon|miscellaneous=mundane",
 						"count": 2
 					}
 				}
@@ -8245,6 +9180,10 @@
 				"baseWeight": 110,
 				"weightMod": "2d4"
 			},
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -8309,6 +9248,10 @@
 							"con": 1
 						}
 					],
+					"age": {
+						"mature": 20,
+						"max": 100
+					},
 					"skillProficiencies": [
 						{
 							"athletics": true
@@ -8554,16 +9497,6 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
-								"1": {
-									"rest": {
-										"1": [
-											"animal friendship",
-											"speak with animals"
-										]
-									}
-								}
-							},
 							"expanded": {
 								"s1": [
 									"animal friendship",
@@ -8585,7 +9518,17 @@
 									"awaken"
 								]
 							},
-							"ability": "wis"
+							"ability": "wis",
+							"known": {
+								"1": {
+									"rest": {
+										"1": [
+											"animal friendship",
+											"speak with animals"
+										]
+									}
+								}
+							}
 						}
 					],
 					"entries": [
@@ -8681,19 +9624,13 @@
 					"traitTags": [
 						"Dragonmark"
 					],
-					"skillProficiencies": [
+					"toolProficiencies": [
 						{
-							"tool": true
+							"anyArtisans": 1
 						}
 					],
 					"additionalSpells": [
 						{
-							"innate": {
-								"1": [
-									"mending",
-									"magic weapon"
-								]
-							},
 							"expanded": {
 								"s1": [
 									"identify",
@@ -8715,7 +9652,13 @@
 									"creation"
 								]
 							},
-							"ability": "int"
+							"ability": "int",
+							"known": {
+								"1": [
+									"mending#c",
+									"magic weapon"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -8814,11 +9757,6 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
-								"1": [
-									"misty step"
-								]
-							},
 							"expanded": {
 								"s1": [
 									"expeditious retreat",
@@ -8840,7 +9778,12 @@
 									"teleportation circle"
 								]
 							},
-							"ability": "dex"
+							"ability": "dex",
+							"known": {
+								"1": [
+									"misty step"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -8929,11 +9872,6 @@
 					],
 					"additionalSpells": [
 						{
-							"innate": {
-								"1": [
-									"shield"
-								]
-							},
 							"expanded": {
 								"s1": [
 									"compelled duel",
@@ -8955,7 +9893,12 @@
 									"bigby's hand"
 								]
 							},
-							"ability": "wis"
+							"ability": "wis",
+							"known": {
+								"1": [
+									"shield"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -9045,28 +9988,7 @@
 					"feats": 1,
 					"skillProficiencies": [
 						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion"
-								]
-							}
+							"any": 1
 						}
 					],
 					"entries": [
@@ -9113,31 +10035,14 @@
 					}
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"feats": 1,
 			"skillProficiencies": [
 				{
-					"choose": {
-						"from": [
-							"athletics",
-							"acrobatics",
-							"sleight of hand",
-							"stealth",
-							"arcana",
-							"history",
-							"investigation",
-							"nature",
-							"religion",
-							"animal handling",
-							"insight",
-							"medicine",
-							"perception",
-							"survival",
-							"deception",
-							"intimidation",
-							"performance",
-							"persuasion"
-						]
-					}
+					"any": 1
 				}
 			],
 			"languageProficiencies": [
@@ -9196,7 +10101,9 @@
 					],
 					"type": "entries"
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Human (Innistrad)",
@@ -9206,6 +10113,10 @@
 				"M"
 			],
 			"speed": 30,
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -9322,36 +10233,20 @@
 						}
 					],
 					"traitTags": [
+						"Skill Proficiency",
 						"Tool Proficiency"
 					],
-					"skillProficiencies": [
+					"skillToolLanguageProficiencies": [
 						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion",
-									{
-										"tool": true
-									}
-								],
-								"count": 4
-							}
+							"choose": [
+								{
+									"from": [
+										"anySkill",
+										"anyTool"
+									],
+									"count": 4
+								}
+							]
 						}
 					],
 					"entries": [
@@ -9415,6 +10310,10 @@
 					"cha": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -9516,6 +10415,10 @@
 				"baseWeight": 110,
 				"weightMod": "1d6"
 			},
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -9613,6 +10516,10 @@
 					}
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -9710,9 +10617,13 @@
 			"languageProficiencies": [
 				{
 					"common": true,
-					"primordial": true
+					"auran": true
 				}
 			],
+			"soundClip": {
+				"type": "internal",
+				"path": "races/kenku.mp3"
+			},
 			"entries": [
 				{
 					"name": "Ambusher",
@@ -9763,6 +10674,10 @@
 				"baseWeight": 50,
 				"weightMod": "1d6"
 			},
+			"age": {
+				"mature": 12,
+				"max": 60
+			},
 			"skillProficiencies": [
 				{
 					"choose": {
@@ -9779,12 +10694,12 @@
 			"languageProficiencies": [
 				{
 					"common": true,
-					"primordial": true
+					"auran": true
 				}
 			],
 			"soundClip": {
 				"type": "internal",
-				"path": "races/kenku-2.mp3"
+				"path": "races/kenku.mp3"
 			},
 			"entries": [
 				{
@@ -9854,6 +10769,10 @@
 					"str": 1
 				}
 			],
+			"age": {
+				"mature": 13,
+				"max": 60
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -9910,7 +10829,9 @@
 					],
 					"type": "entries"
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Kobold",
@@ -9970,6 +10891,49 @@
 		},
 		{
 			"name": "Kobold",
+			"source": "UA2021DraconicOptions",
+			"page": 3,
+			"lineage": "VRGR",
+			"size": [
+				"S"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Legacy",
+					"entries": [
+						"The kobold connection to dragons can manifest in unpredictable ways in an individual kobold. Choose one of the following legacy options when you select this race:",
+						{
+							"type": "list",
+							"items": [
+								"You have advantage on saving throws to avoid or end the {@condition frightened} condition on yourself.",
+								"You know one cantrip of your choice from the sorcerer spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for that cantrip (choose when you select this race).",
+								"You can make unarmed strikes with your tail. When you hit with it, the strike deals {@dice 1d6} + your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Roar",
+					"entries": [
+						"As a bonus action, you let out a draconic roar at your enemies within 10 feet of you. Until the end of your next turn, you and your allies have advantage on attack rolls against any of those enemies who could hear the roar. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Kobold",
 			"source": "VGM",
 			"page": 119,
 			"size": [
@@ -9985,6 +10949,10 @@
 				"baseHeight": 25,
 				"heightMod": "2d4",
 				"baseWeight": 25
+			},
+			"age": {
+				"mature": 6,
+				"max": 120
 			},
 			"darkvision": 60,
 			"traitTags": [
@@ -10075,6 +11043,10 @@
 					"wis": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"skillProficiencies": [
 				{
 					"athletics": true,
@@ -10234,6 +11206,10 @@
 				"baseWeight": 180,
 				"weightMod": "2d6"
 			},
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Unarmed Strike"
@@ -10390,6 +11366,10 @@
 				"baseWeight": 120,
 				"weightMod": "2d6"
 			},
+			"age": {
+				"mature": 14,
+				"max": 60
+			},
 			"traitTags": [
 				"Natural Armor",
 				"Unarmed Strike"
@@ -10513,6 +11493,10 @@
 					"dex": 1
 				}
 			],
+			"age": {
+				"mature": 10,
+				"max": 80
+			},
 			"traitTags": [
 				"Amphibious",
 				"Natural Armor"
@@ -10610,6 +11594,10 @@
 				"baseWeight": 295,
 				"weightMod": "2d4"
 			},
+			"age": {
+				"mature": 20,
+				"max": 450
+			},
 			"traitTags": [
 				"Natural Armor",
 				"Powerful Build"
@@ -10693,7 +11681,8 @@
 					]
 				}
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Loxodon",
@@ -10709,6 +11698,10 @@
 					"wis": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 450
+			},
 			"traitTags": [
 				"Natural Armor",
 				"Powerful Build"
@@ -10797,8 +11790,7 @@
 					]
 				}
 			],
-			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluff": true
 		},
 		{
 			"name": "Merfolk",
@@ -10818,7 +11810,7 @@
 			"languageProficiencies": [
 				{
 					"common": true,
-					"primordial": true
+					"aquan": true
 				}
 			],
 			"entries": [
@@ -10854,6 +11846,10 @@
 					"cha": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"traitTags": [
 				"Amphibious"
 			],
@@ -10951,7 +11947,7 @@
 					"additionalSpells": [
 						{
 							"ability": "wis",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -10997,6 +11993,10 @@
 					"cha": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"traitTags": [
 				"Amphibious"
 			],
@@ -11070,7 +12070,7 @@
 					"additionalSpells": [
 						{
 							"ability": "cha",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -11115,7 +12115,7 @@
 					"additionalSpells": [
 						{
 							"ability": "wis",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -11162,7 +12162,7 @@
 					"additionalSpells": [
 						{
 							"ability": "int",
-							"innate": {
+							"known": {
 								"1": {
 									"_": [
 										{
@@ -11194,6 +12194,211 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Metallic Dragonborn",
+			"source": "FTD",
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"fire",
+							"lightning",
+							"acid",
+							"cold"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Metallic Ancestry",
+					"entries": [
+						"You have a metallic dragon ancestor, granting you a special magical affinity. Choose one kind of dragon from the Metallic Ancestry table. This determines the damage type for your other traits, as shown in the table.",
+						{
+							"type": "table",
+							"caption": "Metallic Ancestry",
+							"colLabels": [
+								"Dragon",
+								"Damage Type"
+							],
+							"colStyles": [
+								"col-6 text-center",
+								"col-6 text-center"
+							],
+							"rows": [
+								[
+									"Brass",
+									"Fire"
+								],
+								[
+									"Bronze",
+									"Lightning"
+								],
+								[
+									"Copper",
+									"Acid"
+								],
+								[
+									"Gold",
+									"Fire"
+								],
+								[
+									"Silver",
+									"Cold"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Breath Weapon",
+					"entries": [
+						"When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 15-foot cone. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes {@damage 1d10} damage of the type associated with your Metallic Ancestry. On a successful save, it takes half as much damage. This damage increases by {@dice 1d10} when you reach 5th level ({@dice 2d10}), 11th level ({@dice 3d10}), and 17th level ({@dice 4d10}).",
+						"You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Resistance",
+					"entries": [
+						"You have resistance to the damage type associated with your Metallic Ancestry."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Metallic Breath Weapon",
+					"entries": [
+						"At 5th level, you gain a second breath weapon. When you take the {@action Attack} action on your turn, you can replace one of your attacks with an exhalation in a 15-foot cone. The save DC for this breath is 8 + your Constitution modifier + your proficiency bonus. Whenever you use this trait, choose one:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Enervating Breath.",
+									"entries": [
+										"Each creature in the cone must succeed on a Constitution saving throw or become {@condition incapacitated} until the start of your next turn."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Repulsion Breath.",
+									"entries": [
+										"Each creature in the cone must succeed on a Strength saving throw or be pushed 20 feet away from you and be knocked {@condition prone}.",
+										"Once you use your Metallic Breath Weapon, you can't do so again until you finish a long rest."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Metallic Dragonborn",
+			"source": "UA2021DraconicOptions",
+			"page": 2,
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"fire",
+							"lightning",
+							"acid",
+							"cold"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Metallic Ancestry",
+					"entries": [
+						"You trace your ancestry to a metallic dragon, granting you a special magical affinity. Choose one type of dragon from the Metallic Ancestry table. This determines the damage type for your other traits as shown in the table.",
+						{
+							"type": "table",
+							"caption": "Metallic Ancestry",
+							"colLabels": [
+								"Dragon",
+								"Damage Type"
+							],
+							"colStyles": [
+								"col-6 text-center",
+								"col-6 text-center"
+							],
+							"rows": [
+								[
+									"Brass",
+									"Fire"
+								],
+								[
+									"Bronze",
+									"Lightning"
+								],
+								[
+									"Copper",
+									"Acid"
+								],
+								[
+									"Gold",
+									"Fire"
+								],
+								[
+									"Silver",
+									"Cold"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Breath Weapon",
+					"entries": [
+						"When you take the {@action Attack} action, you can replace one of your attacks with an exhalation of a magical energy in a 15-foot cone. Each creature in the area must make a Dexterity saving throw against a DC equal to 8 + your Constitution modifier + your proficiency bonus. A creature takes {@dice 2d8} damage of the type associated with your Metallic Ancestry on a failed save, and half as much damage on a successful one. This damage increases by {@dice 1d8} when you reach 5th level ({@dice 3d8}), 11th level ({@dice 4d8}), and 17th level ({@dice 5d8}).",
+						"You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Resistance",
+					"entries": [
+						"You have resistance to the damage type associated with your Metallic Ancestry."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Metallic Breath Weapon",
+					"entries": [
+						"At 3rd level you gain a second breath weapon. When you take the {@action Attack} action, you can replace one of your attacks with an exhalation of a magical gas in a 15-foot cone. The save DC for this breath is 8 + your Constitution modifier + your proficiency bonus. When you use this ability, choose one:",
+						{
+							"type": "list",
+							"items": [
+								"Each creature in the area must succeed on a Strength saving throw or be pushed 20 feet away from you and be knocked {@condition prone}.",
+								"Each creature in the area must succeed on a Constitution saving throw or become {@condition incapacitated} until the start of your next turn."
+							]
+						},
+						"Once you use your Metallic Breath Weapon, you can't do so again until you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Minotaur",
 			"source": "GGR",
 			"page": 18,
@@ -11212,6 +12417,10 @@
 				"heightMod": "2d8",
 				"baseWeight": 175,
 				"weightMod": "2d6"
+			},
+			"age": {
+				"mature": 17,
+				"max": 150
 			},
 			"traitTags": [
 				"Unarmed Strike"
@@ -11354,6 +12563,10 @@
 					"con": 1
 				}
 			],
+			"age": {
+				"mature": 17,
+				"max": 150
+			},
 			"traitTags": [
 				"Unarmed Strike"
 			],
@@ -11454,6 +12667,10 @@
 					"con": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 40
+			},
 			"traitTags": [
 				"Unarmed Strike"
 			],
@@ -11525,7 +12742,9 @@
 					],
 					"type": "entries"
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Minotaur (Krynn)",
@@ -11548,6 +12767,10 @@
 					}
 				}
 			],
+			"age": {
+				"mature": 17,
+				"max": 150
+			},
 			"traitTags": [
 				"Tool Proficiency",
 				"Unarmed Strike"
@@ -11644,6 +12867,10 @@
 					"int": 1
 				}
 			],
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"traitTags": [
 				"Tool Proficiency",
 				"Unarmed Strike"
@@ -11719,7 +12946,9 @@
 					],
 					"type": "entries"
 				}
-			]
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Orc",
@@ -11862,6 +13091,10 @@
 				"baseWeight": 175,
 				"weightMod": "2d6"
 			},
+			"age": {
+				"mature": 12,
+				"max": 50
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Powerful Build"
@@ -11967,6 +13200,10 @@
 				"baseWeight": 175,
 				"weightMod": "2d6"
 			},
+			"age": {
+				"mature": 12,
+				"max": 50
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Monstrous Race",
@@ -12069,6 +13306,10 @@
 					"con": 1
 				}
 			],
+			"age": {
+				"mature": 14,
+				"max": 75
+			},
 			"darkvision": 60,
 			"skillProficiencies": [
 				{
@@ -12144,7 +13385,7 @@
 			"name": "Owlfolk",
 			"source": "UA2021FolkOfTheFeywild",
 			"page": 3,
-			"lineage": "UA2",
+			"lineage": "VRGR",
 			"size": [
 				"S",
 				"M"
@@ -12161,30 +13402,23 @@
 			],
 			"additionalSpells": [
 				{
-					"innate": {
-						"1": {
-							"ritual": [
-								"detect magic"
-							]
-						}
-					},
 					"ability": {
 						"choose": [
 							"int",
 							"wis",
 							"cha"
 						]
+					},
+					"known": {
+						"1": {
+							"ritual": [
+								"detect magic"
+							]
+						}
 					}
 				}
 			],
 			"entries": [
-				{
-					"type": "entries",
-					"name": "Creature Type",
-					"entries": [
-						"You are a Humanoid."
-					]
-				},
 				{
 					"type": "entries",
 					"name": "Size",
@@ -12224,10 +13458,82 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Plasmoid",
+			"source": "UA2021TravelersOfTheMultiverse",
+			"page": 3,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"ooze"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"resist": [
+				"acid",
+				"poison"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are an Ooze."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you gain this race."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Amorphous",
+					"entries": [
+						"You can squeeze through a space as narrow as 1 inch wide, provided you are wearing and carrying nothing. You also have advantage on ability checks you make to initiate or escape a grapple."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hold Breath",
+					"entries": [
+						"You can hold your breath for 1 hour."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Natural Resilience",
+					"entries": [
+						"You have resistance to acid and poison damage, and you have advantage on saving throws against being {@condition poisoned}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Shape Self",
+					"entries": [
+						"If you are not {@condition incapacitated}, you can reshape your body to give yourself a head, one or two arms, one or two legs, and makeshift hands and feet, or you can revert to a limbless blob (no action required).",
+						"As a bonus action, you can extrude a pseudopod that is up to 6 inches wide and 10 feet long or reabsorb it into your body. You can use this pseudopod to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour out the contents of a container. The pseudopod can't attack, activate magic items, or carry more than 10 pounds."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Rabbitfolk",
 			"source": "UA2021FolkOfTheFeywild",
 			"page": 3,
-			"lineage": "UA2",
+			"lineage": "VRGR",
 			"size": [
 				"S",
 				"M"
@@ -12239,13 +13545,6 @@
 				}
 			],
 			"entries": [
-				{
-					"type": "entries",
-					"name": "Creature Type",
-					"entries": [
-						"You are a Humanoid."
-					]
-				},
 				{
 					"type": "entries",
 					"name": "Size",
@@ -12361,6 +13660,68 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Reborn",
+			"source": "VRGR",
+			"page": 20,
+			"lineage": "VRGR",
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"traitTags": [
+				"Improved Resting"
+			],
+			"resist": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you gain this lineage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ancestral Legacy",
+					"entries": [
+						"If you replace a race with this lineage, you can keep the following elements of that race: any skill proficiencies you gained from it and any climbing, flying, or swimming speed you gained from it.",
+						"If you don't keep any of those elements or you choose this lineage at character creation, you gain proficiency in two skills of your choice."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Deathless Nature",
+					"entries": [
+						"You have escaped death, a fact represented by the following benefits:",
+						{
+							"type": "list",
+							"items": [
+								"You have advantage on saving throws against disease and being {@condition poisoned}, and you have resistance to poison damage.",
+								"You have advantage on death saving throws.",
+								"You don't need to eat, drink, or breathe.",
+								"You don't need to sleep, and magic can't put you to sleep. You can finish a long rest in 4 hours if you spend those hours in an inactive, motionless state, during which you retain consciousness."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Knowledge from a Past Life",
+					"entries": [
+						"You temporarily remember glimpses of the past, perhaps faded memories from ages ago or a previous life. When you make an ability check that uses a skill, you can roll a {@dice d6} immediately after seeing the number on the {@dice d20} and add the number on the {@dice d6} to the check. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Revenant",
 			"source": "UAGothicHeroes",
 			"page": 1,
@@ -12471,22 +13832,29 @@
 				"baseWeight": 100,
 				"weightMod": "2d4"
 			},
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"traitTags": [
 				"Magic Resistance",
-				"Tool Proficiency",
 				"Unarmed Strike"
 			],
 			"skillProficiencies": [
 				{
 					"performance": true,
-					"persuasion": true,
-					"tool": true
+					"persuasion": true
 				}
 			],
 			"languageProficiencies": [
 				{
 					"common": true,
 					"sylvan": true
+				}
+			],
+			"toolProficiencies": [
+				{
+					"musical instrument": true
 				}
 			],
 			"entries": [
@@ -12576,6 +13944,10 @@
 				"heightMod": "2d8",
 				"baseWeight": 90,
 				"weightMod": "2d4"
+			},
+			"age": {
+				"mature": 10,
+				"max": 70
 			},
 			"darkvision": 60,
 			"languageProficiencies": [
@@ -12960,6 +14332,10 @@
 					"dex": 1
 				}
 			],
+			"age": {
+				"mature": 10,
+				"max": 70
+			},
 			"darkvision": 60,
 			"skillProficiencies": [
 				{
@@ -13299,7 +14675,8 @@
 					]
 				}
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Simic Hybrid",
@@ -13426,8 +14803,7 @@
 					]
 				}
 			],
-			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluff": true
 		},
 		{
 			"name": "Siren",
@@ -13453,9 +14829,9 @@
 			],
 			"additionalSpells": [
 				{
-					"innate": {
+					"known": {
 						"1": [
-							"friends"
+							"friends#c"
 						]
 					}
 				}
@@ -13521,6 +14897,9 @@
 			"immune": [
 				"poison"
 			],
+			"vulnerable": [
+				"bludgeoning"
+			],
 			"conditionImmune": [
 				"exhaustion",
 				"poisoned"
@@ -13584,6 +14963,10 @@
 				"heightMod": "2d10",
 				"baseWeight": 90,
 				"weightMod": "2d4"
+			},
+			"age": {
+				"mature": 20,
+				"max": 100
 			},
 			"darkvision": 60,
 			"traitTags": [
@@ -13667,6 +15050,85 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Thri-kreen",
+			"source": "UA2021TravelersOfTheMultiverse",
+			"page": 4,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"monstrosity"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"traitTags": [
+				"Improved Resting",
+				"Natural Armor"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Monstrosity."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you select this race."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Chameleon Carapace",
+					"entries": [
+						"While you aren't wearing armor, your carapace gives you a base Armor Class of 13 + your Dexterity modifier.",
+						"As an action, you can change the color of your carapace to match the color and texture of your surroundings, giving you advantage on Dexterity ({@skill Stealth}) checks made to hide in those surroundings."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Secondary Arms",
+					"entries": [
+						"You have two slightly smaller secondary arms below your primary pair of arms. The secondary arms function like your primary arms, with the following exceptions:",
+						{
+							"type": "list",
+							"items": [
+								"You can use a secondary arm to wield a weapon that has the light property, but you can't use a secondary arm to wield other kinds of weapons.",
+								"You can't wield a shield with a secondary arm."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Sleepless Revitalization",
+					"entries": [
+						"You do not require sleep and can choose to remain conscious during a long rest, though you must still refrain from strenuous activity to gain the benefit of the rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Thri-kreen Telepathy",
+					"entries": [
+						"You have the magical ability to communicate mentally with any number of willing creatures you can see within 120 feet of you. A contacted creature doesn't need to share a language with you, but it must be able to understand at least one language. Your telepathic link to a creature is broken if you and the creature move more than 120 feet apart, if either of you is {@condition incapacitated}, or if either of you mentally breaks the contact (no action required)."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Tiefling",
 			"source": "PHB",
 			"page": 42,
@@ -13686,6 +15148,10 @@
 				"heightMod": "2d8",
 				"baseWeight": 110,
 				"weightMod": "2d4"
+			},
+			"age": {
+				"mature": 20,
+				"max": 100
 			},
 			"darkvision": 60,
 			"traitTags": [
@@ -13707,9 +15173,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": [
-							"thaumaturgy"
-						],
 						"3": {
 							"daily": {
 								"1": [
@@ -13725,7 +15188,12 @@
 							}
 						}
 					},
-					"ability": "cha"
+					"ability": "cha",
+					"known": {
+						"1": [
+							"thaumaturgy#c"
+						]
+					}
 				}
 			],
 			"entries": [
@@ -13806,14 +15274,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"dancing lights",
-									"true strike",
-									"light",
-									"message",
-									"spare the dying",
-									"prestidigitation"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -13838,6 +15298,16 @@
 										]
 									}
 								}
+							},
+							"known": {
+								"1": [
+									"dancing lights#c",
+									"true strike#c",
+									"light#c",
+									"message#c",
+									"spare the dying#c",
+									"prestidigitation#c"
+								]
 							}
 						}
 					],
@@ -13954,9 +15424,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"thaumaturgy"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -13972,7 +15439,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"thaumaturgy#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -13997,9 +15469,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"thaumaturgy"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14015,7 +15484,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"thaumaturgy#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14044,9 +15518,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"thaumaturgy"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14062,7 +15533,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"thaumaturgy#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14096,9 +15572,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"thaumaturgy"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14114,7 +15587,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"thaumaturgy#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14146,9 +15624,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"friends"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14164,7 +15639,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"friends#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14198,9 +15678,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"friends"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14216,7 +15693,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"friends#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14248,9 +15730,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"minor illusion"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14266,7 +15745,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"minor illusion#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14300,9 +15784,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"minor illusion"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14318,7 +15799,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"minor illusion#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14350,9 +15836,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"ray of frost"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14368,7 +15851,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"ray of frost#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14402,9 +15890,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"ray of frost"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14420,7 +15905,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"ray of frost#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14446,9 +15936,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"mage hand"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14464,7 +15951,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"mage hand#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14489,9 +15981,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"mage hand"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14507,7 +15996,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"mage hand#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14530,9 +16024,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"mage hand"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14548,7 +16039,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"mage hand#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14573,9 +16069,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"mage hand"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14591,7 +16084,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"mage hand#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14627,9 +16125,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"vicious mockery"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14645,7 +16140,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"vicious mockery#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14691,9 +16191,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"thaumaturgy"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14709,7 +16206,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"thaumaturgy#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14755,9 +16257,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"thaumaturgy"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14773,7 +16272,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"thaumaturgy#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14851,9 +16355,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"thaumaturgy"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14869,7 +16370,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"thaumaturgy#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14903,9 +16409,6 @@
 					"additionalSpells": [
 						{
 							"innate": {
-								"1": [
-									"thaumaturgy"
-								],
 								"3": {
 									"daily": {
 										"1": [
@@ -14921,7 +16424,12 @@
 									}
 								}
 							},
-							"ability": "cha"
+							"ability": "cha",
+							"known": {
+								"1": [
+									"thaumaturgy#c"
+								]
+							}
 						}
 					],
 					"entries": [
@@ -14964,6 +16472,10 @@
 					"wis": 1
 				}
 			],
+			"age": {
+				"mature": 15,
+				"max": 50
+			},
 			"traitTags": [
 				"Natural Armor",
 				"Unarmed Strike"
@@ -14975,7 +16487,7 @@
 			],
 			"languageProficiencies": [
 				{
-					"primordial": true,
+					"aquan": true,
 					"common": true
 				}
 			],
@@ -15102,6 +16614,10 @@
 				"heightMod": "2d10",
 				"baseWeight": 90,
 				"weightMod": "2d4"
+			},
+			"age": {
+				"mature": 15,
+				"max": 200
 			},
 			"darkvision": 60,
 			"traitTags": [
@@ -15471,6 +16987,10 @@
 				"baseWeight": 110,
 				"weightMod": "2d4"
 			},
+			"age": {
+				"mature": 40,
+				"max": 500
+			},
 			"skillProficiencies": [
 				{
 					"choose": {
@@ -15482,8 +17002,7 @@
 							"performance",
 							"sleight of hand"
 						]
-					},
-					"tool": true
+					}
 				}
 			],
 			"languageProficiencies": [
@@ -15491,6 +17010,11 @@
 					"common": true,
 					"other": true,
 					"anyStandard": 1
+				}
+			],
+			"toolProficiencies": [
+				{
+					"any": 1
 				}
 			],
 			"entries": [
@@ -15545,7 +17069,8 @@
 					"type": "entries"
 				}
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Vedalken",
@@ -15561,6 +17086,10 @@
 					"wis": 1
 				}
 			],
+			"age": {
+				"mature": 40,
+				"max": 500
+			},
 			"languageProficiencies": [
 				{
 					"common": true,
@@ -15626,6 +17155,10 @@
 					"wis": 1
 				}
 			],
+			"age": {
+				"mature": 40,
+				"max": 500
+			},
 			"languageProficiencies": [
 				{
 					"common": true
@@ -15676,8 +17209,7 @@
 					"type": "entries"
 				}
 			],
-			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluff": true
 		},
 		{
 			"name": "Verdan",
@@ -15693,6 +17225,10 @@
 					"cha": 2
 				}
 			],
+			"age": {
+				"mature": 24,
+				"max": 200
+			},
 			"skillProficiencies": [
 				{
 					"persuasion": true
@@ -15780,6 +17316,10 @@
 					"str": 1
 				}
 			],
+			"age": {
+				"mature": 13,
+				"max": 60
+			},
 			"traitTags": [
 				"Unarmed Strike"
 			],
@@ -15887,44 +17427,28 @@
 				"baseWeight": 270,
 				"weightMod": "4"
 			},
+			"age": {
+				"mature": 2,
+				"max": 30
+			},
 			"traitTags": [
 				"Improved Resting",
 				"Natural Armor"
 			],
 			"skillProficiencies": [
 				{
-					"choose": {
-						"from": [
-							"athletics",
-							"acrobatics",
-							"sleight of hand",
-							"stealth",
-							"arcana",
-							"history",
-							"investigation",
-							"nature",
-							"religion",
-							"animal handling",
-							"insight",
-							"medicine",
-							"perception",
-							"survival",
-							"deception",
-							"intimidation",
-							"performance",
-							"persuasion",
-							{
-								"tool": true
-							}
-						],
-						"count": 2
-					}
+					"any": 1
 				}
 			],
 			"languageProficiencies": [
 				{
 					"common": true,
 					"anyStandard": 1
+				}
+			],
+			"toolProficiencies": [
+				{
+					"any": 1
 				}
 			],
 			"resist": [
@@ -16083,6 +17607,10 @@
 					"con": 1
 				}
 			],
+			"age": {
+				"mature": 2,
+				"max": 30
+			},
 			"traitTags": [
 				"Improved Resting",
 				"Natural Armor"
@@ -16214,28 +17742,7 @@
 					],
 					"skillProficiencies": [
 						{
-							"choose": {
-								"from": [
-									"athletics",
-									"acrobatics",
-									"sleight of hand",
-									"stealth",
-									"arcana",
-									"history",
-									"investigation",
-									"nature",
-									"religion",
-									"animal handling",
-									"insight",
-									"medicine",
-									"perception",
-									"survival",
-									"deception",
-									"intimidation",
-									"performance",
-									"persuasion"
-								]
-							}
+							"any": 1
 						}
 					],
 					"entries": [
@@ -16343,6 +17850,10 @@
 				"baseWeight": 110,
 				"weightMod": "2d4"
 			},
+			"age": {
+				"mature": 20,
+				"max": 100
+			},
 			"darkvision": 60,
 			"traitTags": [
 				"Magic Resistance",
@@ -16365,7 +17876,6 @@
 				{
 					"innate": {
 						"1": [
-							"poison spray",
 							"animal friendship"
 						],
 						"3": {
@@ -16376,7 +17886,12 @@
 							}
 						}
 					},
-					"ability": "cha"
+					"ability": "cha",
+					"known": {
+						"1": [
+							"poison spray#c"
+						]
+					}
 				}
 			],
 			"entries": [
@@ -16466,7 +17981,6 @@
 				"poison"
 			],
 			"conditionImmune": [
-				"exhaustion",
 				"poisoned"
 			],
 			"entries": [
@@ -16481,7 +17995,7 @@
 					"type": "entries",
 					"name": "Undead Nature",
 					"entries": [
-						"You are immune to poison damage and {@condition exhaustion}, and you can't be {@condition poisoned}. You don't require air, food, drink, or sleep."
+						"You are immune to poison damage, and you can't be {@condition poisoned}. You don't require air, food, drink, or sleep."
 					]
 				},
 				{

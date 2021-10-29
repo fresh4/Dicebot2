@@ -17,6 +17,7 @@
 			"name": "Aberrant Spirit",
 			"source": "TCE",
 			"page": 109,
+			"summonedBySpell": "Summon Aberration|TCE",
 			"size": "M",
 			"type": "aberration",
 			"alignment": [
@@ -57,7 +58,7 @@
 			],
 			"trait": [
 				{
-					"name": "Regeneration (Slaadi Only)",
+					"name": "Regeneration (Slaad Only)",
 					"entries": [
 						"The aberration regains 5 hit points at the start of its turn if it has at least 1 hit point."
 					]
@@ -79,19 +80,19 @@
 				{
 					"name": "Eye Ray (Beholderkin Only)",
 					"entries": [
-						"{@atk rs} {@hitYourSpellAttack} to hit, range 150 ft., one creature. {@h}{@damage 1d8 + 3} + the spell's level psychic damage."
+						"{@atk rs} {@hitYourSpellAttack} to hit, range 150 ft., one creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} psychic damage."
 					]
 				},
 				{
-					"name": "Claws (Slaadi Only)",
+					"name": "Claws (Slaad Only)",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 3} + the spell's level slashing damage. If the target is a creature, it can't regain hit points until the start of the aberration's next turn."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 3 + summonSpellLevel} slashing damage. If the target is a creature, it can't regain hit points until the start of the aberration's next turn."
 					]
 				},
 				{
 					"name": "Psychic Slam (Star Spawn Only)",
 					"entries": [
-						"{@atk ms} {@hitYourSpellAttack} to hit, reach 5 ft., one creature. {@h}{@damage 1d8 + 3} + the spell's level psychic damage."
+						"{@atk ms} {@hitYourSpellAttack} to hit, reach 5 ft., one creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} psychic damage."
 					]
 				}
 			],
@@ -126,12 +127,17 @@
 					"name": "Dracolich",
 					"source": "MM"
 				}
-			}
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			]
 		},
 		{
 			"name": "Beast of the Land",
 			"source": "TCE",
 			"page": 61,
+			"summonedByClass": "Ranger|PHB",
 			"size": "M",
 			"type": "beast",
 			"alignment": [
@@ -162,6 +168,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "equals your bonus",
 			"trait": [
 				{
 					"name": "Charge",
@@ -198,12 +205,14 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Beast of the Sea",
 			"source": "TCE",
 			"page": 61,
+			"summonedByClass": "Ranger|PHB",
 			"size": "M",
 			"type": "beast",
 			"alignment": [
@@ -234,6 +243,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "equals your bonus",
 			"trait": [
 				{
 					"name": "Amphibious",
@@ -271,12 +281,14 @@
 			],
 			"conditionInflict": [
 				"grappled"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Beast of the Sky",
 			"source": "TCE",
 			"page": 61,
+			"summonedByClass": "Ranger|PHB",
 			"size": "S",
 			"type": "beast",
 			"alignment": [
@@ -307,6 +319,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "equals your bonus",
 			"trait": [
 				{
 					"name": "Flyby",
@@ -340,12 +353,14 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Bestial Spirit",
 			"source": "TCE",
 			"page": 109,
+			"summonedBySpell": "Summon Beast|TCE",
 			"size": "S",
 			"type": "beast",
 			"alignment": [
@@ -417,7 +432,7 @@
 				{
 					"name": "Maul",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 4} + the spell's level piercing damage."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 4 + summonSpellLevel} piercing damage."
 					]
 				}
 			],
@@ -443,6 +458,7 @@
 			"name": "Celestial Spirit",
 			"source": "TCE",
 			"page": 110,
+			"summonedBySpell": "Summon Celestial|TCE",
 			"size": "L",
 			"type": "celestial",
 			"alignment": [
@@ -491,19 +507,19 @@
 				{
 					"name": "Radiant Bow (Avenger Only)",
 					"entries": [
-						"{@atk rw} {@hitYourSpellAttack} to hit, range 150/600 ft., one target. {@h}{@damage 2d6 + 2} + the spell's level radiant damage."
+						"{@atk rw} {@hitYourSpellAttack} to hit, range 150/600 ft., one target. {@h}{@damage 2d6 + 2 + summonSpellLevel} radiant damage."
 					]
 				},
 				{
 					"name": "Radiant Mace (Defender Only)",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 3} + the spell's level radiant damage, and the celestial can choose itself or another creature it can see within 10 feet of the target. The chosen creature gains {@dice 1d10} temporary hit points."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 3 + summonSpellLevel} radiant damage, and the celestial can choose itself or another creature it can see within 10 feet of the target. The chosen creature gains {@dice 1d10} temporary hit points."
 					]
 				},
 				{
 					"name": "Healing Touch (1/Day)",
 					"entries": [
-						"The celestial touches another creature. The target magically regains hit points equal to {@dice 2d8} + the spell's level."
+						"The celestial touches another creature. The target magically regains hit points equal to {@dice 2d8 + summonSpellLevel}."
 					]
 				}
 			],
@@ -522,12 +538,14 @@
 			"miscTags": [
 				"MW",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Construct Spirit",
 			"source": "TCE",
 			"page": 111,
+			"summonedBySpell": "Summon Construct|TCE",
 			"size": "M",
 			"type": "construct",
 			"alignment": [
@@ -593,7 +611,7 @@
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 4} + the spell's level bludgeoning damage."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 4 + summonSpellLevel} bludgeoning damage."
 					]
 				}
 			],
@@ -623,6 +641,7 @@
 			"name": "Dancing Item",
 			"source": "TCE",
 			"page": 29,
+			"summonedByClass": "Bard|PHB",
 			"size": "L",
 			"sizeNote": "or smaller",
 			"type": "construct",
@@ -704,12 +723,14 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Elemental Spirit",
 			"source": "TCE",
 			"page": 111,
+			"summonedBySpell": "Summon Elemental|TCE",
 			"size": "M",
 			"type": "elemental",
 			"alignment": [
@@ -813,7 +834,7 @@
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 4} + the spell's level bludgeoning damage (Air, Earth, and Water only) or fire damage (Fire only)."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 4 + summonSpellLevel} bludgeoning damage (Air, Earth, and Water only) or fire damage (Fire only)."
 					]
 				}
 			],
@@ -841,6 +862,7 @@
 			"name": "Fey Spirit",
 			"source": "TCE",
 			"page": 112,
+			"summonedBySpell": "Summon Fey|TCE",
 			"size": "S",
 			"type": "fey",
 			"alignment": [
@@ -884,7 +906,7 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3} + the spell's level piercing damage{@damage  + 1d6} force damage."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3 + summonSpellLevel} piercing damage{@damage  + 1d6} force damage."
 					]
 				}
 			],
@@ -905,7 +927,7 @@
 								{
 									"type": "item",
 									"name": "Mirthful.",
-									"entry": "The fey can force one creature it can see within 10 feet of it to make a Wisdom saving throw against your spell save DC. Unless the save succeeds, the target is charmed by you and the fey for 1 minute or until the target takes any damage."
+									"entry": "The fey can force one creature it can see within 10 feet of it to make a Wisdom saving throw against your spell save DC. Unless the save succeeds, the target is {@condition charmed} by you and the fey for 1 minute or until the target takes any damage."
 								},
 								{
 									"type": "item",
@@ -942,6 +964,7 @@
 			"name": "Fiendish Spirit",
 			"source": "TCE",
 			"page": 112,
+			"summonedBySpell": "Summon Fiend|TCE",
 			"size": "L",
 			"type": "fiend",
 			"alignment": [
@@ -1000,7 +1023,7 @@
 				{
 					"name": "Death Throes (Demon Only)",
 					"entries": [
-						"When the fiend drops to 0 hit points or the spell ends, the fiend explodes, and each creature within 10 feet of it must make a Dexterity saving throw against your spell save DC. A creature takes {@dice 2d10} + this spell's level fire damage on a failed save, or half as much damage on a successful one."
+						"When the fiend drops to 0 hit points or the spell ends, the fiend explodes, and each creature within 10 feet of it must make a Dexterity saving throw against your spell save DC. A creature takes {@damage 2d10 + summonSpellLevel} fire damage on a failed save, or half as much damage on a successful one."
 					]
 				},
 				{
@@ -1020,19 +1043,19 @@
 				{
 					"name": "Bite (Demon Only)",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d12 + 3} + the spell's level necrotic damage."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d12 + 3 + summonSpellLevel} necrotic damage."
 					]
 				},
 				{
 					"name": "Claws (Yugoloth Only)",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 3} + the spell's level slashing damage. Immediately after the attack hits or misses, the fiend can magically teleport up to 30 feet to an unoccupied space it can see."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 3 + summonSpellLevel} slashing damage. Immediately after the attack hits or misses, the fiend can magically teleport up to 30 feet to an unoccupied space it can see."
 					]
 				},
 				{
 					"name": "Hurl Flame (Devil Only)",
 					"entries": [
-						"{@atk rs} {@hitYourSpellAttack} to hit, range 150 ft., one target. {@h}{@damage 2d6 + 3} + the spell's level fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
+						"{@atk rs} {@hitYourSpellAttack} to hit, range 150 ft., one target. {@h}{@damage 2d6 + 3 + summonSpellLevel} fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
 					]
 				}
 			],
@@ -1071,6 +1094,7 @@
 					"page": 62
 				}
 			],
+			"summonedByClass": "Artificer|TCE",
 			"size": "T",
 			"type": "construct",
 			"ac": [
@@ -1122,12 +1146,6 @@
 					"entries": [
 						"If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails. It can't use this trait if it's {@condition incapacitated}."
 					]
-				},
-				{
-					"name": "Might of the Master",
-					"entries": [
-						"The following numbers increase by 1 when your proficiency bonus increases by 1: the homunculus's skill and saving throw bonuses (above) and the bonuses to hit and damage of its attack (below)."
-					]
 				}
 			],
 			"actionNote": "Requires Your Bonus Action",
@@ -1147,7 +1165,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1157,6 +1174,7 @@
 			"miscTags": [
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1255,7 +1273,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Mighty Servant of Leuk-o",
@@ -1317,6 +1336,7 @@
 				"blinded",
 				"charmed",
 				"deafened",
+				"exhaustion",
 				"frightened",
 				"grappled",
 				"incapacitated",
@@ -1396,6 +1416,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1431,12 +1452,14 @@
 			],
 			"vulnerable": [
 				"bludgeoning"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Shadow Spirit",
 			"source": "TCE",
 			"page": 114,
+			"summonedBySpell": "Summon Shadowspawn|TCE",
 			"size": "M",
 			"type": "monstrosity",
 			"alignment": [
@@ -1496,7 +1519,7 @@
 				{
 					"name": "Chilling Rend",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d12 + 3} + the spell's level cold damage."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d12 + 3 + summonSpellLevel} cold damage."
 					]
 				},
 				{
@@ -1531,7 +1554,8 @@
 			],
 			"conditionInflict": [
 				"frightened"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Steel Defender",
@@ -1543,6 +1567,7 @@
 					"page": 61
 				}
 			],
+			"summonedByClass": "Artificer|TCE",
 			"size": "M",
 			"type": "construct",
 			"ac": [
@@ -1554,7 +1579,7 @@
 				}
 			],
 			"hp": {
-				"special": "2 + your Intelligence modifier + five times your artificer level (the defender has a number of Hit Dice [ d8s] equal to your artificer level)"
+				"special": "2 + your Intelligence modifier + five times your artificer level (the defender has a number of Hit Dice [d8s] equal to your artificer level)"
 			},
 			"speed": {
 				"walk": 40
@@ -1620,7 +1645,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1630,12 +1654,14 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
 			"name": "Undead Spirit",
 			"source": "TCE",
 			"page": 114,
+			"summonedBySpell": "Summon Undead|TCE",
 			"size": "M",
 			"type": "undead",
 			"alignment": [
@@ -1704,19 +1730,19 @@
 				{
 					"name": "Deathly Touch (Ghostly Only)",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one creature. {@h}{@damage 1d8 + 3} + the spell's level necrotic damage, and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of the undead until the end of the target's next turn."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} necrotic damage, and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of the undead until the end of the target's next turn."
 					]
 				},
 				{
 					"name": "Grave Bolt (Skeletal Only)",
 					"entries": [
-						"{@atk rs} {@hitYourSpellAttack} to hit, range 150 ft., one target. {@h}{@damage 2d4 + 3} + the spell's level necrotic damage."
+						"{@atk rs} {@hitYourSpellAttack} to hit, range 150 ft., one target. {@h}{@damage 2d4 + 3 + summonSpellLevel} necrotic damage."
 					]
 				},
 				{
 					"name": "Rotting Claw (Putrid Only)",
 					"entries": [
-						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3} + the spell's level slashing damage. If the target is {@condition poisoned}, it must succeed on a Constitution saving throw against your spell save DC be {@condition paralyzed} until the end of its next turn."
+						"{@atk mw} {@hitYourSpellAttack} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3 + summonSpellLevel} slashing damage. If the target is {@condition poisoned}, it must succeed on a Constitution saving throw against your spell save DC or be {@condition paralyzed} until the end of its next turn."
 					]
 				}
 			],
@@ -1750,6 +1776,7 @@
 			"name": "Wildfire Spirit",
 			"source": "TCE",
 			"page": 40,
+			"summonedByClass": "Druid|PHB",
 			"size": "S",
 			"type": "elemental",
 			"alignment": [
@@ -1797,6 +1824,7 @@
 			"languages": [
 				"understands the languages you speak"
 			],
+			"pbNote": "equals your bonus",
 			"action": [
 				{
 					"name": "Flame Seed",
@@ -1820,7 +1848,8 @@
 			"miscTags": [
 				"AOE",
 				"RW"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

@@ -4,6 +4,7 @@
 			"name": "Lost Mine of Phandelver",
 			"id": "LMoP",
 			"source": "LMoP",
+			"group": "supplement",
 			"coverUrl": "img/covers/LMoP.png",
 			"published": "2014-07-15",
 			"storyline": "Starter Set",
@@ -39,7 +40,10 @@
 						"Encounters in Phandalin",
 						"Important NPCs",
 						"Town Description",
-						"Redbrand Ruffians",
+						{
+							"index": 1,
+							"header": "Redbrand Ruffians"
+						},
 						"Redbrand Hideout"
 					],
 					"ordinal": {
@@ -97,6 +101,7 @@
 			"name": "Hoard of the Dragon Queen",
 			"id": "HotDQ",
 			"source": "HotDQ",
+			"group": "supplement",
 			"coverUrl": "img/covers/HotDQ.png",
 			"published": "2014-08-19",
 			"storyline": "Tyranny of Dragons",
@@ -859,6 +864,7 @@
 			"name": "Rise of Tiamat",
 			"id": "RoT",
 			"source": "RoT",
+			"group": "supplement",
 			"coverUrl": "img/covers/RoT.png",
 			"published": "2014-11-04",
 			"storyline": "Tyranny of Dragons",
@@ -1415,6 +1421,7 @@
 			"name": "Princes of the Apocalypse",
 			"id": "PotA",
 			"source": "PotA",
+			"group": "supplement",
 			"coverUrl": "img/covers/PotA.png",
 			"published": "2015-04-07",
 			"storyline": "Elemental Evil",
@@ -1576,6 +1583,7 @@
 			"name": "Out of the Abyss",
 			"id": "OotA",
 			"source": "OotA",
+			"group": "supplement",
 			"coverUrl": "img/covers/OotA.png",
 			"published": "2015-09-15",
 			"storyline": "Rage of Demons",
@@ -1886,216 +1894,1360 @@
 			"name": "Curse of Strahd",
 			"id": "CoS",
 			"source": "CoS",
+			"group": "supplement",
 			"coverUrl": "img/covers/CoS.png",
 			"published": "2016-03-15",
-			"storyline": "Curse of Strahd",
+			"storyline": "Ravenloft",
 			"level": {
 				"start": 1,
 				"end": 10
 			},
 			"contents": [
 				{
+					"name": "Foreword: Ravenloft Revisited"
+				},
+				{
 					"name": "Introduction",
 					"headers": [
 						"Running the Adventure",
-						"A Classic Retold",
 						"Marks of Horror"
 					]
 				},
 				{
 					"name": "Into the Mists",
-					"headers": [
-						"Strahd von Zarovich",
-						"Fortunes of Ravenloft",
-						"Using Regular Playing Cards",
-						"Adventure Hooks"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 1
-					}
+					},
+					"headers": [
+						"Strahd von Zarovich",
+						"Fortunes of Ravenloft",
+						{
+							"depth": 1,
+							"header": "1. The Tome of Strahd"
+						},
+						{
+							"depth": 1,
+							"header": "2. The Holy Symbol of Ravenkind"
+						},
+						{
+							"depth": 1,
+							"header": "3. The Sunsword"
+						},
+						{
+							"depth": 1,
+							"header": "4. Strahd's Enemy"
+						},
+						{
+							"depth": 1,
+							"header": "5. Strahd"
+						},
+						"Adventure Hooks"
+					]
 				},
 				{
 					"name": "The Lands of Barovia",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 2
+					},
 					"headers": [
 						"Lay of the Land",
 						"Alterations to Magic",
 						"Barovians",
-						"Barovian Names",
-						"Barovian Lore",
 						"Vistani",
 						"Random Encounters",
-						"Strahd's Spies",
-						"Areas of Barovia",
-						"The Lands of Barovia: Common Features"
-					],
-					"ordinal": {
-						"type": "chapter",
-						"identifier": 2
-					}
+						"Areas of Barovia"
+					]
 				},
 				{
 					"name": "The Village of Barovia",
-					"headers": [
-						"Approaching the Village",
-						"Areas of the Village",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 3
-					}
+					},
+					"headers": [
+						"Approaching the Village",
+						"Areas of the Village",
+						{
+							"depth": 1,
+							"header": "E1. Bildrath's Mercantile"
+						},
+						{
+							"depth": 1,
+							"header": "E2. Blood of the Vine Tavern"
+						},
+						{
+							"depth": 1,
+							"header": "E3. Mad Mary's Townhouse"
+						},
+						{
+							"depth": 1,
+							"header": "E4. Burgomaster's Mansion"
+						},
+						{
+							"depth": 1,
+							"header": "E5. Church"
+						},
+						{
+							"depth": 1,
+							"header": "E6. Cemetery"
+						},
+						{
+							"depth": 1,
+							"header": "E7. Haunted House"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "Castle Ravenloft",
-					"headers": [
-						"Random Encounters",
-						"Walls of Ravenloft",
-						"Main Floor",
-						"Court of the Count",
-						"Rooms of Weeping",
-						"Spires of Ravenloft",
-						"Larders of Ill Omen",
-						"Dungeon and Catacombs"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 4
-					}
+					},
+					"headers": [
+						"Random Encounters",
+						"Walls of Ravenloft",
+						{
+							"depth": 1,
+							"header": "K1. Front Courtyard"
+						},
+						{
+							"depth": 1,
+							"header": "K2. Center Court Gate"
+						},
+						{
+							"depth": 1,
+							"header": "K3. Servants' Courtyard"
+						},
+						{
+							"depth": 1,
+							"header": "K4. Carriage House"
+						},
+						{
+							"depth": 1,
+							"header": "K5. Chapel Garden"
+						},
+						{
+							"depth": 1,
+							"header": "K6. Overlook"
+						},
+						"Main Floor",
+						{
+							"depth": 1,
+							"header": "K7. Entry"
+						},
+						{
+							"depth": 1,
+							"header": "K8. Great Entry"
+						},
+						{
+							"depth": 1,
+							"header": "K9. Guests' Hall"
+						},
+						{
+							"depth": 1,
+							"header": "K10. Dining Hall"
+						},
+						{
+							"depth": 1,
+							"header": "K11. South Archers' Post"
+						},
+						{
+							"depth": 1,
+							"header": "K12. Turret Post"
+						},
+						{
+							"depth": 1,
+							"header": "K13. Turret Post Access Hall"
+						},
+						{
+							"depth": 1,
+							"header": "K14. Hall of Faith"
+						},
+						{
+							"depth": 1,
+							"header": "K15. Chapel"
+						},
+						{
+							"depth": 1,
+							"header": "K16. North Chapel Access"
+						},
+						{
+							"depth": 1,
+							"header": "K17. South Chapel Access"
+						},
+						{
+							"depth": 1,
+							"header": "K18. High Tower Staircase"
+						},
+						{
+							"depth": 1,
+							"header": "K19. Grand Landing"
+						},
+						{
+							"depth": 1,
+							"header": "K20. Heart of Sorrow"
+						},
+						{
+							"depth": 1,
+							"header": "K21. South Tower Stair"
+						},
+						{
+							"depth": 1,
+							"header": "K22. North Archers' Post"
+						},
+						{
+							"depth": 1,
+							"header": "K23. Servants' Entrance"
+						},
+						{
+							"depth": 1,
+							"header": "K24. Servants' Quarters"
+						},
+						"Court of the Count",
+						{
+							"depth": 1,
+							"header": "K25. Audience Hall"
+						},
+						{
+							"depth": 1,
+							"header": "K26. Guards' Post"
+						},
+						{
+							"depth": 1,
+							"header": "K27. King's Hall"
+						},
+						{
+							"depth": 1,
+							"header": "K28. King's Balcony"
+						},
+						{
+							"depth": 1,
+							"header": "K29. Creaky Landing"
+						},
+						{
+							"depth": 1,
+							"header": "K30. King's Accountant"
+						},
+						{
+							"depth": 1,
+							"header": "K31. Trapworks"
+						},
+						{
+							"depth": 1,
+							"header": "K32. Maid in Hell"
+						},
+						{
+							"depth": 1,
+							"header": "K33. King's Apartment Stair"
+						},
+						{
+							"depth": 1,
+							"header": "K34. Servants' Upper Floor"
+						},
+						"Rooms of Weeping",
+						{
+							"depth": 1,
+							"header": "K35. Guardian Vermin"
+						},
+						{
+							"depth": 1,
+							"header": "K36. Dining Hall of the Count"
+						},
+						{
+							"depth": 1,
+							"header": "K37. Study"
+						},
+						{
+							"depth": 1,
+							"header": "K38. False Treasury"
+						},
+						{
+							"depth": 1,
+							"header": "K39. Hall of Webs"
+						},
+						{
+							"depth": 1,
+							"header": "K40. Belfry"
+						},
+						{
+							"depth": 1,
+							"header": "K41. Treasury"
+						},
+						{
+							"depth": 1,
+							"header": "K42. King's Bedchamber"
+						},
+						{
+							"depth": 1,
+							"header": "K43. Bath Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "K44. Closet"
+						},
+						{
+							"depth": 1,
+							"header": "K45. Hall of Heroes"
+						},
+						{
+							"depth": 1,
+							"header": "K46. Parapets"
+						},
+						"Spires of Ravenloft",
+						{
+							"depth": 1,
+							"header": "K47. Portrait of Strahd"
+						},
+						{
+							"depth": 1,
+							"header": "K48. Offstair"
+						},
+						{
+							"depth": 1,
+							"header": "K49. Lounge"
+						},
+						{
+							"depth": 1,
+							"header": "K50. Guest Room"
+						},
+						{
+							"depth": 1,
+							"header": "K51. Closet"
+						},
+						{
+							"depth": 1,
+							"header": "K52. Smokestack"
+						},
+						{
+							"depth": 1,
+							"header": "K53. Rooftop"
+						},
+						{
+							"depth": 1,
+							"header": "K54. Familiar Room"
+						},
+						{
+							"depth": 1,
+							"header": "K55. Element Room"
+						},
+						{
+							"depth": 1,
+							"header": "K56. Cauldron"
+						},
+						{
+							"depth": 1,
+							"header": "K57. Tower Roof"
+						},
+						{
+							"depth": 1,
+							"header": "K58. Bridge"
+						},
+						{
+							"depth": 1,
+							"header": "K59. High Tower Peak"
+						},
+						{
+							"depth": 1,
+							"header": "K60. North Tower Peak"
+						},
+						"Larders of Ill Omen",
+						{
+							"depth": 1,
+							"header": "K61. Elevator Trap"
+						},
+						{
+							"depth": 1,
+							"header": "K62. Servants' Hall"
+						},
+						{
+							"depth": 1,
+							"header": "K63. Wine Cellar"
+						},
+						{
+							"depth": 1,
+							"header": "K64. Guards' Stair"
+						},
+						{
+							"depth": 1,
+							"header": "K65. Kitchen"
+						},
+						{
+							"depth": 1,
+							"header": "K66. Butler's Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "K67. Hall of Bones"
+						},
+						{
+							"depth": 1,
+							"header": "K68. Guards' Run"
+						},
+						{
+							"depth": 1,
+							"header": "K69. Guards' Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "K70. Kingsmen Hall"
+						},
+						{
+							"depth": 1,
+							"header": "K71. Kingsmen Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "K72. Chamberlain's Office"
+						},
+						"Dungeon and Catacombs",
+						{
+							"depth": 1,
+							"header": "K73. Dungeon Hall"
+						},
+						{
+							"depth": 1,
+							"header": "K74. North Dungeon"
+						},
+						{
+							"depth": 1,
+							"header": "K75. South Dungeon"
+						},
+						{
+							"depth": 1,
+							"header": "K76. Torture Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "K77. Observation Balcony"
+						},
+						{
+							"depth": 1,
+							"header": "K78. Brazier Room"
+						},
+						{
+							"depth": 1,
+							"header": "K79. Western Stair"
+						},
+						{
+							"depth": 1,
+							"header": "K80. Center Stair"
+						},
+						{
+							"depth": 1,
+							"header": "K81. Tunnel"
+						},
+						{
+							"depth": 1,
+							"header": "K82. Marble Slide"
+						},
+						{
+							"depth": 1,
+							"header": "K83. Spiral Stair"
+						},
+						{
+							"depth": 1,
+							"header": "K84. Catacombs"
+						},
+						{
+							"depth": 1,
+							"header": "K85. Sergei's Tomb"
+						},
+						{
+							"depth": 1,
+							"header": "K86. Strahd's Tomb"
+						},
+						{
+							"depth": 1,
+							"header": "K87. Guardians"
+						},
+						{
+							"depth": 1,
+							"header": "K88. Tomb of King Barov and Queen Ravenovia"
+						}
+					]
 				},
 				{
 					"name": "The Town of Vallaki",
-					"headers": [
-						"Approaching the Town",
-						"Areas of Vallaki",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 5
-					}
+					},
+					"headers": [
+						"Approaching the Town",
+						"Areas of Vallaki",
+						{
+							"depth": 1,
+							"header": "N1. St. Andral's Church"
+						},
+						{
+							"depth": 1,
+							"header": "N2. Blue Water Inn"
+						},
+						{
+							"depth": 1,
+							"header": "N3. Burgomaster's Mansion"
+						},
+						{
+							"depth": 1,
+							"header": "N4. Wachterhaus"
+						},
+						{
+							"depth": 1,
+							"header": "N5. Arasek Stockyard"
+						},
+						{
+							"depth": 1,
+							"header": "N6. Coffin Maker's Shop"
+						},
+						{
+							"depth": 1,
+							"header": "N7. Blinsky Toys"
+						},
+						{
+							"depth": 1,
+							"header": "N8. Town Square"
+						},
+						{
+							"depth": 1,
+							"header": "N9. Vistani Camp"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "Old Bonegrinder",
-					"headers": [
-						"Approaching the Windmill",
-						"Areas of the Windmill",
-						"The Megaliths"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 6
-					}
+					},
+					"headers": [
+						"Morgantha's Coven",
+						"Dream Pastries",
+						"Approaching the Windmill",
+						"Areas of the Windmill",
+						{
+							"depth": 1,
+							"header": "O1. Ground Floor"
+						},
+						{
+							"depth": 1,
+							"header": "O2. Bone Mill"
+						},
+						{
+							"depth": 1,
+							"header": "O3. Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "O4. Domed Attic"
+						},
+						"The Megaliths"
+					]
 				},
 				{
 					"name": "Argynvostholt",
-					"headers": [
-						"The Order of the Silver Dragon",
-						"Revenants of Barovia",
-						"Approaching the Mansion",
-						"Areas of Argynvostholt",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 7
-					}
+					},
+					"headers": [
+						"The Order of the Silver Dragon",
+						"Approaching the Mansion",
+						"Areas of Argynvostholt",
+						{
+							"depth": 1,
+							"header": "Q1. Dragon Statue"
+						},
+						{
+							"depth": 1,
+							"header": "Q2. Main Entrance"
+						},
+						{
+							"depth": 1,
+							"header": "Q3. Dragon's Foyer"
+						},
+						{
+							"depth": 1,
+							"header": "Q4. Spiders' Ballroom"
+						},
+						{
+							"depth": 1,
+							"header": "Q5. Ruined Stable"
+						},
+						{
+							"depth": 1,
+							"header": "Q6. Dragon's Den"
+						},
+						{
+							"depth": 1,
+							"header": "Q7. Parlor"
+						},
+						{
+							"depth": 1,
+							"header": "Q8. Iron Gate"
+						},
+						{
+							"depth": 1,
+							"header": "Q9. Servants' Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "Q10. Kitchen"
+						},
+						{
+							"depth": 1,
+							"header": "Q11. Wine Storage"
+						},
+						{
+							"depth": 1,
+							"header": "Q12. Dining Hall"
+						},
+						{
+							"depth": 1,
+							"header": "Q13. Chapel of Morning"
+						},
+						{
+							"depth": 1,
+							"header": "Q14. Chapel Staircases"
+						},
+						{
+							"depth": 1,
+							"header": "Q15. Cemetery"
+						},
+						{
+							"depth": 1,
+							"header": "Q16. Dragon's Mausoleum"
+						},
+						{
+							"depth": 1,
+							"header": "Q17. West Staircases"
+						},
+						{
+							"depth": 1,
+							"header": "Q18. Balconies"
+						},
+						{
+							"depth": 1,
+							"header": "Q19. Ruined Bedchambers"
+						},
+						{
+							"depth": 1,
+							"header": "Q20. South Alcove"
+						},
+						{
+							"depth": 1,
+							"header": "Q21. North Alcove"
+						},
+						{
+							"depth": 1,
+							"header": "Q22. Bathroom"
+						},
+						{
+							"depth": 1,
+							"header": "Q23. Storage Room"
+						},
+						{
+							"depth": 1,
+							"header": "Q24. Chapel Balcony"
+						},
+						{
+							"depth": 1,
+							"header": "Q25. Trapped Hallway"
+						},
+						{
+							"depth": 1,
+							"header": "Q26. Northeast Guest Room"
+						},
+						{
+							"depth": 1,
+							"header": "Q27. Knights' Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "Q28. Knights' Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "Q29. Northwest Guest Room"
+						},
+						{
+							"depth": 1,
+							"header": "Q30. Curtained Staircase"
+						},
+						{
+							"depth": 1,
+							"header": "Q31. East Staircases"
+						},
+						{
+							"depth": 1,
+							"header": "Q32. Ruined Bedchambers"
+						},
+						{
+							"depth": 1,
+							"header": "Q33. Collapsed Ceiling"
+						},
+						{
+							"depth": 1,
+							"header": "Q34. Ruined Bathroom"
+						},
+						{
+							"depth": 1,
+							"header": "Q35. Upstairs Gallery"
+						},
+						{
+							"depth": 1,
+							"header": "Q36. Dragon's Audience Hall"
+						},
+						{
+							"depth": 1,
+							"header": "Q37. Knights of the Order"
+						},
+						{
+							"depth": 1,
+							"header": "Q38. Closet"
+						},
+						{
+							"depth": 1,
+							"header": "Q39. Vladimir's Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "Q40. Argynvost's Study"
+						},
+						{
+							"depth": 1,
+							"header": "Q41. Dragon's Vault"
+						},
+						{
+							"depth": 1,
+							"header": "Q42. Argynvost's Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "Q43. Hole in Roof"
+						},
+						{
+							"depth": 1,
+							"header": "Q44. Dragon Gargoyle"
+						},
+						{
+							"depth": 1,
+							"header": "Q45. Ancient Ballista"
+						},
+						{
+							"depth": 1,
+							"header": "Q46. Destroyed Ballista"
+						},
+						{
+							"depth": 1,
+							"header": "Q47. Roof Turrets"
+						},
+						{
+							"depth": 1,
+							"header": "Q48. Roof's Edge"
+						},
+						{
+							"depth": 1,
+							"header": "Q49. Beacon Tower Door"
+						},
+						{
+							"depth": 1,
+							"header": "Q50. Beacon, Lower Landing"
+						},
+						{
+							"depth": 1,
+							"header": "Q51. Beacon, Upper Landing"
+						},
+						{
+							"depth": 1,
+							"header": "Q52. Beacon Turrets"
+						},
+						{
+							"depth": 1,
+							"header": "Q53. Beacon of Argynvostholt"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "The Village of Krezk",
-					"headers": [
-						"Areas of Krezk",
-						"Areas of the Abbey",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 8
-					}
+					},
+					"headers": [
+						"Areas of Krezk",
+						{
+							"depth": 1,
+							"header": "S1. Road Junction"
+						},
+						{
+							"depth": 1,
+							"header": "S2. Gatehouse"
+						},
+						{
+							"depth": 1,
+							"header": "S3. Village of Krezk"
+						},
+						{
+							"depth": 1,
+							"header": "S4. Pool and Shrine"
+						},
+						{
+							"depth": 1,
+							"header": "S5. Winding Road"
+						},
+						{
+							"depth": 1,
+							"header": "S6. North Gate"
+						},
+						{
+							"depth": 1,
+							"header": "S7. Graveyard"
+						},
+						{
+							"depth": 1,
+							"header": "S8. Garden Gatehouse"
+						},
+						{
+							"depth": 1,
+							"header": "S9. Gardens"
+						},
+						{
+							"depth": 1,
+							"header": "S10. Abbey Entrance"
+						},
+						{
+							"depth": 1,
+							"header": "S11. Inner Gatehouses"
+						},
+						{
+							"depth": 1,
+							"header": "S12. Courtyard"
+						},
+						{
+							"depth": 1,
+							"header": "S13. Main Hall"
+						},
+						{
+							"depth": 1,
+							"header": "S14. Foyer"
+						},
+						{
+							"depth": 1,
+							"header": "S15. Madhouse"
+						},
+						{
+							"depth": 1,
+							"header": "S16. Wine Cellar"
+						},
+						{
+							"depth": 1,
+							"header": "S17. Loft and Belfry"
+						},
+						{
+							"depth": 1,
+							"header": "S18. Curtain Wall"
+						},
+						{
+							"depth": 1,
+							"header": "S19. Barracks"
+						},
+						{
+							"depth": 1,
+							"header": "S20. Upstairs Office"
+						},
+						{
+							"depth": 1,
+							"header": "S21. Haunted Hospital"
+						},
+						{
+							"depth": 1,
+							"header": "S22. Operating Room"
+						},
+						{
+							"depth": 1,
+							"header": "S23. Nursery"
+						},
+						{
+							"depth": 1,
+							"header": "S24. Morgue"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "Tsolenka Pass",
-					"headers": [
-						"Areas of the Pass",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 9
-					}
+					},
+					"headers": [
+						"Areas of the Pass",
+						{
+							"depth": 1,
+							"header": "T1. Gatehouse Portcullis"
+						},
+						{
+							"depth": 1,
+							"header": "T2. Demon Statues"
+						},
+						{
+							"depth": 1,
+							"header": "T3. Curtain of Green Flame"
+						},
+						{
+							"depth": 1,
+							"header": "T4. Guard Tower, Ground Floor"
+						},
+						{
+							"depth": 1,
+							"header": "T5. Guard Tower, Upper Floor"
+						},
+						{
+							"depth": 1,
+							"header": "T6. Guard Tower Rooftop"
+						},
+						{
+							"depth": 1,
+							"header": "T7. Western Arch"
+						},
+						{
+							"depth": 1,
+							"header": "T8. Stone Bridge"
+						},
+						{
+							"depth": 1,
+							"header": "T9. Eastern Arch"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "The Ruins of Berez",
-					"headers": [
-						"Approaching the Ruins",
-						"Areas of Berez",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 10
-					}
+					},
+					"headers": [
+						"Approaching the Ruins",
+						"Areas of Berez",
+						{
+							"depth": 1,
+							"header": "U1. Abandoned Cottages"
+						},
+						{
+							"depth": 1,
+							"header": "U2. Ulrich Mansion"
+						},
+						{
+							"depth": 1,
+							"header": "U3. Baba Lysaga's Hut"
+						},
+						{
+							"depth": 1,
+							"header": "U4. Churchyard"
+						},
+						{
+							"depth": 1,
+							"header": "U5. Marina's Monument"
+						},
+						{
+							"depth": 1,
+							"header": "U6. Standing Stones"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "Van Richten's Tower",
-					"headers": [
-						"Approaching the Tower",
-						"Areas of the Tower",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 11
-					}
+					},
+					"headers": [
+						"Approaching the Tower",
+						"Areas of the Tower",
+						{
+							"depth": 1,
+							"header": "V1. Ezmerelda's Magic Wagon"
+						},
+						{
+							"depth": 1,
+							"header": "V2. Tower Door"
+						},
+						{
+							"depth": 1,
+							"header": "V3. Rickety Scaffolding"
+						},
+						{
+							"depth": 1,
+							"header": "V4. Tower, First Floor"
+						},
+						{
+							"depth": 1,
+							"header": "V5. Tower, Second Floor"
+						},
+						{
+							"depth": 1,
+							"header": "V6. Tower, Third Floor"
+						},
+						{
+							"depth": 1,
+							"header": "V7. Tower, Fourth Floor"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "The Wizard of Wines",
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 12
+					},
 					"headers": [
 						"Approaching the Vineyard",
 						"Approaching the Winery",
 						"Areas of the Winery",
+						{
+							"depth": 1,
+							"header": "W1. Stables"
+						},
+						{
+							"depth": 1,
+							"header": "W2. Loading Dock"
+						},
+						{
+							"depth": 1,
+							"header": "W3. Barrel Maker's Workshop"
+						},
+						{
+							"depth": 1,
+							"header": "W4. Barrel Storage"
+						},
+						{
+							"depth": 1,
+							"header": "W5. Veranda"
+						},
+						{
+							"depth": 1,
+							"header": "W6. Well"
+						},
+						{
+							"depth": 1,
+							"header": "W7. Outhouse"
+						},
+						{
+							"depth": 1,
+							"header": "W8. Storage"
+						},
+						{
+							"depth": 1,
+							"header": "W9. Fermentation Vats"
+						},
+						{
+							"depth": 1,
+							"header": "W10. Glassblower's Workshop"
+						},
+						{
+							"depth": 1,
+							"header": "W11. Spiral Staircase"
+						},
+						{
+							"depth": 1,
+							"header": "W12. Ramp"
+						},
+						{
+							"depth": 1,
+							"header": "W13. Back Staircase"
+						},
+						{
+							"depth": 1,
+							"header": "W14. Wine Cellar"
+						},
+						{
+							"depth": 1,
+							"header": "W15. Brown Mold"
+						},
+						{
+							"depth": 1,
+							"header": "W16. Loading Winch"
+						},
+						{
+							"depth": 1,
+							"header": "W17. Master Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "W18. Kitchen and Dining Room"
+						},
+						{
+							"depth": 1,
+							"header": "W19. Sleeping Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "W20. Printing Press"
+						},
 						"Special Events"
-					],
-					"ordinal": {
-						"type": "chapter",
-						"identifier": 12
-					}
+					]
 				},
 				{
 					"name": "The Amber Temple",
-					"headers": [
-						"Extreme Cold",
-						"Areas of the Temple",
-						"Amber Sarcophagi",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 13
-					}
+					},
+					"headers": [
+						"Areas of the Temple",
+						{
+							"depth": 1,
+							"header": "X1. Temple Facade"
+						},
+						{
+							"depth": 1,
+							"header": "X2. Entrance"
+						},
+						{
+							"depth": 1,
+							"header": "X3. Empty Barracks"
+						},
+						{
+							"depth": 1,
+							"header": "X4. Overlook"
+						},
+						{
+							"depth": 1,
+							"header": "X5. Temple of Lost Secrets"
+						},
+						{
+							"depth": 1,
+							"header": "X6. Southeast Annex"
+						},
+						{
+							"depth": 1,
+							"header": "X7. Secret Scroll Repository"
+						},
+						{
+							"depth": 1,
+							"header": "X8. Upper East Hall"
+						},
+						{
+							"depth": 1,
+							"header": "X9. Lecture Hall"
+						},
+						{
+							"depth": 1,
+							"header": "X10. Northeast Annex"
+						},
+						{
+							"depth": 1,
+							"header": "X11. Northeast Balcony"
+						},
+						{
+							"depth": 1,
+							"header": "X12. East Shrine"
+						},
+						{
+							"depth": 1,
+							"header": "X13. East Archer Post"
+						},
+						{
+							"depth": 1,
+							"header": "X14. North Staircase"
+						},
+						{
+							"depth": 1,
+							"header": "X15. Southwest Annex"
+						},
+						{
+							"depth": 1,
+							"header": "X16. West Scroll Repository"
+						},
+						{
+							"depth": 1,
+							"header": "X17. Upper West Hall"
+						},
+						{
+							"depth": 1,
+							"header": "X18. Hallway"
+						},
+						{
+							"depth": 1,
+							"header": "X19. Potion Storage"
+						},
+						{
+							"depth": 1,
+							"header": "X20. Architect's Room"
+						},
+						{
+							"depth": 1,
+							"header": "X21. West Staircase"
+						},
+						{
+							"depth": 1,
+							"header": "X22. Northwest Annex"
+						},
+						{
+							"depth": 1,
+							"header": "X23. Northwest Balcony"
+						},
+						{
+							"depth": 1,
+							"header": "X24. West Shrine"
+						},
+						{
+							"depth": 1,
+							"header": "X25. West Archer Post"
+						},
+						{
+							"depth": 1,
+							"header": "X26. Secret Alcove"
+						},
+						{
+							"depth": 1,
+							"header": "X27. Lich's Lair"
+						},
+						{
+							"depth": 1,
+							"header": "X28. Hidden Phylactery"
+						},
+						{
+							"depth": 1,
+							"header": "X29. Secret Room"
+						},
+						{
+							"depth": 1,
+							"header": "X30. Preserved Library"
+						},
+						{
+							"depth": 1,
+							"header": "X31. Central Catacombs"
+						},
+						{
+							"depth": 1,
+							"header": "X32. Lower East Hall"
+						},
+						{
+							"depth": 1,
+							"header": "X33. Amber Vaults"
+						},
+						{
+							"depth": 1,
+							"header": "X34. Wizard's Bedchamber"
+						},
+						{
+							"depth": 1,
+							"header": "X35. Sleeping Guardian"
+						},
+						{
+							"depth": 1,
+							"header": "X36. Lower West Hall"
+						},
+						{
+							"depth": 1,
+							"header": "X37. Wizard's Bedchamber"
+						},
+						{
+							"depth": 1,
+							"header": "X38. Haunted Room"
+						},
+						{
+							"depth": 1,
+							"header": "X39. Plundered Treasury"
+						},
+						{
+							"depth": 1,
+							"header": "X40. Sealed Treasury"
+						},
+						{
+							"depth": 1,
+							"header": "X41. Fissure"
+						},
+						{
+							"depth": 1,
+							"header": "X42. Amber Vault"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "Yester Hill",
-					"headers": [
-						"Areas of the Hill",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 14
-					}
+					},
+					"headers": [
+						"Areas of the Hill",
+						{
+							"depth": 1,
+							"header": "Y1. Trail"
+						},
+						{
+							"depth": 1,
+							"header": "Y2. Berserker Cairns"
+						},
+						{
+							"depth": 1,
+							"header": "Y3. Druids' Circle"
+						},
+						{
+							"depth": 1,
+							"header": "Y4. Gulthias Tree"
+						},
+						{
+							"depth": 1,
+							"header": "Y5. Wall of Fog"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "Werewolf Den",
-					"headers": [
-						"Travel through the Mists",
-						"Areas of the Den",
-						"Special Events"
-					],
 					"ordinal": {
 						"type": "chapter",
 						"identifier": 15
-					}
+					},
+					"headers": [
+						"Approaching the Den",
+						"Areas of the Den",
+						{
+							"depth": 1,
+							"header": "Z1. Cave Mouth"
+						},
+						{
+							"depth": 1,
+							"header": "Z2. Guard Post"
+						},
+						{
+							"depth": 1,
+							"header": "Z3. Wolf Den"
+						},
+						{
+							"depth": 1,
+							"header": "Z4. Underground Spring"
+						},
+						{
+							"depth": 1,
+							"header": "Z5. Deep Caves"
+						},
+						{
+							"depth": 1,
+							"header": "Z6. Kiril's Cave"
+						},
+						{
+							"depth": 1,
+							"header": "Z7. Shrine of Mother Night"
+						},
+						{
+							"depth": 1,
+							"header": "Z8. Ring of Stone"
+						},
+						"Special Events"
+					]
 				},
 				{
 					"name": "Epilogue",
@@ -2109,25 +3261,210 @@
 					"ordinal": {
 						"type": "appendix",
 						"identifier": "A"
-					}
+					},
+					"headers": [
+						"Haunted One",
+						"Gothic Trinkets"
+					]
 				},
 				{
 					"name": "Death House",
 					"ordinal": {
 						"type": "appendix",
 						"identifier": "B"
-					}
+					},
+					"headers": [
+						"History",
+						"Areas of the House",
+						{
+							"depth": 1,
+							"header": "1. Entrance"
+						},
+						{
+							"depth": 1,
+							"header": "2. Main Hall"
+						},
+						{
+							"depth": 1,
+							"header": "3. Den of Wolves"
+						},
+						{
+							"depth": 1,
+							"header": "4. Kitchen and Pantry"
+						},
+						{
+							"depth": 1,
+							"header": "5. Dining Room"
+						},
+						{
+							"depth": 1,
+							"header": "6. Upper Hall"
+						},
+						{
+							"depth": 1,
+							"header": "7. Servants' Room"
+						},
+						{
+							"depth": 1,
+							"header": "8. Library"
+						},
+						{
+							"depth": 1,
+							"header": "9. Secret Room"
+						},
+						{
+							"depth": 1,
+							"header": "10. Conservatory"
+						},
+						{
+							"depth": 1,
+							"header": "11. Balcony"
+						},
+						{
+							"depth": 1,
+							"header": "12. Master Suite"
+						},
+						{
+							"depth": 1,
+							"header": "13. Bathroom"
+						},
+						{
+							"depth": 1,
+							"header": "14. Storage Room"
+						},
+						{
+							"depth": 1,
+							"header": "15. Nursemaid's Suite"
+						},
+						{
+							"depth": 1,
+							"header": "16. Attic Hall"
+						},
+						{
+							"depth": 1,
+							"header": "17. Spare Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "18. Storage Room"
+						},
+						{
+							"depth": 1,
+							"header": "19. Spare Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "20. Children's Room"
+						},
+						{
+							"depth": 1,
+							"header": "21. Secret Stairs"
+						},
+						{
+							"depth": 1,
+							"header": "22. Dungeon Level Access"
+						},
+						{
+							"depth": 1,
+							"header": "23. Family Crypts"
+						},
+						{
+							"depth": 1,
+							"header": "23A. Empty Crypt"
+						},
+						{
+							"depth": 1,
+							"header": "23B. Walter's Crypt"
+						},
+						{
+							"depth": 1,
+							"header": "23C. Gustav's Crypt"
+						},
+						{
+							"depth": 1,
+							"header": "23D. Elisabeth's Crypt"
+						},
+						{
+							"depth": 1,
+							"header": "23E. Rose's Crypt"
+						},
+						{
+							"depth": 1,
+							"header": "23F. Thorn's Crypt"
+						},
+						{
+							"depth": 1,
+							"header": "24. Cult Initiates' Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "25. Well and Cultist Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "26. Hidden Spiked Pit"
+						},
+						{
+							"depth": 1,
+							"header": "27. Dining Hall"
+						},
+						{
+							"depth": 1,
+							"header": "28. Larder"
+						},
+						{
+							"depth": 1,
+							"header": "29. Ghoulish Encounter"
+						},
+						{
+							"depth": 1,
+							"header": "30. Stairs Down"
+						},
+						{
+							"depth": 1,
+							"header": "31. Darklord's Shrine"
+						},
+						{
+							"depth": 1,
+							"header": "32. Hidden Trapdoor"
+						},
+						{
+							"depth": 1,
+							"header": "33. Cult Leaders' Den"
+						},
+						{
+							"depth": 1,
+							"header": "34. Cult Leaders' Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "35. Reliquary"
+						},
+						{
+							"depth": 1,
+							"header": "36. Prison"
+						},
+						{
+							"depth": 1,
+							"header": "37. Portcullis"
+						},
+						{
+							"depth": 1,
+							"header": "38. Ritual Chamber"
+						},
+						"Endings"
+					]
 				},
 				{
 					"name": "Treasures",
-					"headers": [
-						"Tome of Strahd",
-						"Magic Items"
-					],
 					"ordinal": {
 						"type": "appendix",
 						"identifier": "C"
-					}
+					},
+					"headers": [
+						"Tome of Strahd",
+						"Magic Items"
+					]
 				},
 				{
 					"name": "Monsters and NPCs",
@@ -2141,14 +3478,31 @@
 					"ordinal": {
 						"type": "appendix",
 						"identifier": "E"
-					}
+					},
+					"headers": [
+						"Composition",
+						"High Deck",
+						"Common Deck",
+						"Tarokka Cards"
+					]
 				},
 				{
 					"name": "Handouts",
 					"ordinal": {
 						"type": "appendix",
 						"identifier": "F"
-					}
+					},
+					"headers": [
+						"Kolyan Indirovich's Letter (version 1)",
+						"Strahd's Invitation",
+						"From the Tome of Strahd",
+						"Journal of Rudolph van Richten",
+						"Kolyan Indirovich's Letter (version 2)",
+						"Journal of Argynvost"
+					]
+				},
+				{
+					"name": "Poster Map"
 				}
 			]
 		},
@@ -2156,6 +3510,7 @@
 			"name": "Storm King's Thunder",
 			"id": "SKT",
 			"source": "SKT",
+			"group": "supplement",
 			"coverUrl": "img/covers/SKT.png",
 			"published": "2016-09-06",
 			"storyline": "Storm King's Thunder",
@@ -3025,16 +4380,18 @@
 			]
 		},
 		{
-			"name": "Tales from the Yawning Portal: Against the Giants",
-			"id": "TftYP-AtG",
-			"source": "TftYP-AtG",
+			"name": "Tales from the Yawning Portal: The Sunless Citadel",
+			"id": "TftYP-TSC",
+			"source": "TftYP-TSC",
+			"parentSource": "TftYP",
+			"group": "supplement",
 			"coverUrl": "img/covers/TftYP.png",
 			"published": "2017-03-24",
-			"publishedOrder": 5,
+			"publishedOrder": 0,
 			"storyline": "Tales from the Yawning Portal",
 			"level": {
-				"start": 11,
-				"end": 14
+				"start": 1,
+				"end": 3
 			},
 			"contents": [
 				{
@@ -3042,199 +4399,389 @@
 					"headers": [
 						"Using This Book",
 						"The Yawning Portal",
-						"Against the Giants"
+						"The Sunless Citadel"
 					]
 				},
 				{
-					"name": "Steading of the Hill Giant Chief",
+					"name": "Sunless Citadel Overview",
 					"headers": [
-						"Introduction",
-						"Upper Works: General Features",
-						"1. Front Gate and Foyer",
-						"1B. Tower Guard",
-						"2. Subchief's Room",
-						"3. Dormitory",
-						"4. Barracks",
-						"5. Maids' Chamber",
-						"6. Hall of the Chief",
-						"7. Chamber of the Chief's Wife",
-						"8. Chief's Chamber",
-						"9. Arms Room",
-						"10. Small Dining Room",
-						"10A. Secret Stairs",
-						"11. Great Hall",
-						"12. Arsenal Room",
-						"13. Weapons Room",
-						"14. Main Guest Chamber",
-						"15. Common Room",
-						"16. Common Room",
-						"17. Kitchen",
-						"18. Kitchen Workroom",
-						"18A. Pantry",
-						"19. Servants' Quarters",
-						"20. Orc Slave Quarters",
-						"21. Ogre Quarters",
-						"22. Open Yard",
-						"23. Guard Room",
-						"24. Barracks Room",
-						"25. Barracks Room",
-						"Dungeon Level: General Features",
-						"1. Marshaling Area",
-						"2. Chamber of the Keeper",
-						"3. Cell Block",
-						"Bugbear Complex (Areas 4-8)",
-						"Obedient Slave Quarters (Areas 9-11)",
-						"Unruly Slave Quarters (Areas 12-14)",
-						"15. Torture Chamber",
-						"16. Armory and Smithy",
-						"17. Blocked Passage",
-						"17A. Weird Abandoned Temple",
-						"18. Buried Vestry",
-						"19. Natural Cavern",
-						"20. Troglodyte Cavern",
-						"21. Lizards' Lair",
-						"22. Partially Cleared Passage to Cistern",
-						"23. Cavern of the Carrion Crawlers",
-						"24. Storage Room",
-						"25. Wine Cellar",
-						"26. Gallery Under Clearance",
-						"27. Chamber Under Clearance",
-						"28. Quarters for Stone Giant Miners",
-						"29. False Treasure",
-						"30. Imprisoned Guards",
-						"31. Minor Treasure Room",
-						"32. Secret Room",
-						"33. Chief's Secret Treasure Room"
+						"1. Ledge",
+						"2. Switchback Stairs",
+						"3. Crumbled Courtyard",
+						"4. Tower Shell",
+						"5. Secret Pocket",
+						"6. Old Approach",
+						"7. Gallery of Forlorn Notes",
+						"8. Pressure Plate",
+						"9. Dragon Riddle",
+						"10. Honor Guard",
+						"11. Secret Room",
+						"12. Tomb of a Failed Dragonpriest",
+						"13. Empty Room",
+						"14. Enchanted Water Cache",
+						"15. Dragon Cell",
+						"16. Kobold Guardroom",
+						"17. Dragon Chow",
+						"18. Prison",
+						"19. Hall of Dragons",
+						"20. Kobold Colony",
+						"21. Dragon Throne",
+						"22. Larder",
+						"23. Underdark Access",
+						"24. Trapped Access",
+						"25. Empty Chamber",
+						"26. Dry Fountain",
+						"27. Sanctuary",
+						"28. Infested Cells",
+						"29. Disabled Traps",
+						"30. Mama Rat",
+						"31. Caltrop Hall",
+						"32. Goblin Gate",
+						"33. Practice Range",
+						"34. Goblin Stockade",
+						"35. Trapped Corridor",
+						"36. Goblin Bandits",
+						"37. Trophy Room",
+						"38. Goblin Pantry",
+						"39. Dragon Haze",
+						"40. Goblinville",
+						"41. Hall of the Goblin Chief"
 					]
 				},
 				{
-					"name": "The Glacial Rift of the Frost Giant Jarl",
+					"name": "Locations on the Grove Level",
 					"headers": [
-						"Introduction",
-						"Upper Level General Features",
-						"1. Guardroom Ice Cavern",
-						"2. Guardroom Ice Cave",
-						"3. Empty Ice Cave",
-						"4. Small Ice Cave",
-						"5. Ice Caverns",
-						"6. Provisions",
-						"7. Cavern",
-						"8. South Cavern",
-						"Cavern Guard Post (Areas 9 and 10)",
-						"11. Cave of Bones",
-						"12. Lower Bone Cave",
-						"13. Ice Cavern",
-						"14. Misty Ice Cave",
-						"15. Ice Cave",
-						"16 Barracks Complex (Areas 16-19)",
-						"20. Ice Storage Cave",
-						"21. Ice Cavern",
-						"22. Guard Ice Cave",
-						"23. Guard Cave",
-						"24. Visitors' Cave",
-						"25. Visitors' Cave",
-						"26. Special Visitors' Cave",
-						"27. Winter Wolf Pack",
-						"28. Snow-Covered Dome of Ice",
-						"29. White Puddings",
-						"Lower Level: General Features",
-						"1. Grand Entry Cavern",
-						"2. Vaulted Cavern",
-						"2A. Dragon's Ledge",
-						"3. Abandoned Storage Cave",
-						"4. Deserted Cavern",
-						"4A. Stone Rubble",
-						"4B. Hungry and Hopping",
-						"5. Entrance Cavern",
-						"6. Emissaries' Cavern",
-						"7. Guest Cavern",
-						"8. Prison Cavern",
-						"9. Servants' Quarters Cavern",
-						"10. Antecavern",
-						"11. Great Cavern of the Jarl",
-						"12. Audience Alcove and Throne Dais",
-						"13. Guard Area",
-						"14. Kitchen",
-						"15. Weapons Cave",
-						"16. Common Quarters Caverns",
-						"17. Kennel Cave",
-						"Caverns of the Carls (Areas 18 and 19)",
-						"20. Jarl's Antecavern and Trophy Hall",
-						"21. Jarl Grugnur's Private Cavern"
+						"42. Central Garden",
+						"43. The Great Hunter's Abode",
+						"44. Rift",
+						"45. Rift Node",
+						"46. Old Shrine",
+						"47. Belak's Laboratory",
+						"48. Garden Galleries",
+						"49. Arboretums",
+						"50. Ashardalon's Shrine",
+						"51. Dragon Library",
+						"52. Underpass",
+						"53. Belak's Study",
+						"54. Grove Gate",
+						"55. Twilight Grove",
+						"56. The Gulthias Tree"
 					]
 				},
 				{
-					"name": "Hall of the Fire Giant King",
+					"name": "Magic Items",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Creatures",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				}
+			]
+		},
+		{
+			"name": "Tales from the Yawning Portal: The Forge of Fury",
+			"id": "TftYP-TFoF",
+			"source": "TftYP-TFoF",
+			"parentSource": "TftYP",
+			"group": "supplement",
+			"coverUrl": "img/covers/TftYP.png",
+			"published": "2017-03-24",
+			"publishedOrder": 1,
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"start": 3,
+				"end": 5
+			},
+			"contents": [
+				{
+					"name": "Preface",
 					"headers": [
-						"Introduction",
-						"Entrance Level: General Features",
-						"1. Entry Passage",
-						"1A. Alcove",
-						"2. Grand Hall",
-						"3. Throne Room and Audience Chamber",
-						"4. Chamber of the Queen's Servants",
-						"5. Queen's Chamber",
-						"6. Chamber of the King's Guards",
-						"7. King Snurre's Private Quarters",
-						"8. Hydra Cave",
-						"9. King Snurre's Treasure Cave",
-						"10. Arsenal Complex",
-						"11. Chimera Pen",
-						"12. Advisor's Quarters",
-						"12A. Obmi's Study",
-						"12B. Obmi's Bedchamber",
-						"13. Council Room",
-						"13A. West Alcove",
-						"13B. South Alcove",
-						"14. Door Guard",
-						"15. Kitchen",
-						"16. Storage Chamber",
-						"17. Guest Chamber",
-						"18. Barracks",
-						"19. Servants' Quarters",
-						"20. Communal Quarters",
-						"21. Entry Hall of the Kennels",
-						"22. Kennel Chamber",
-						"23. Kennel Keeper's Quarters",
-						"24. Guardpost",
-						"25. Barracks",
-						"Second Level: General Features",
-						"1. Hall of the Dead",
-						"2. Ettin Guards' Chamber",
-						"3. Visitors' Chamber",
-						"4. Storage Room",
-						"5. Community Quarters",
-						"6. Smithy",
-						"7. Torture Chamber",
-						"Cell Complex",
-						"8. Secret Room",
-						"Temple of the Eye (Areas 9-11)",
-						"12. Drow Clerics' Area",
-						"13. Guest Chamber",
-						"14. Guest Chamber",
-						"15. Trolls' Chamber",
-						"16. Thrall Pen",
-						"17. Thrall Pen",
-						"Third Level: General Features",
-						"1. Cavern",
-						"2. Glowing Cave",
-						"3. Cavern End",
-						"4. Cave",
-						"5. Cavern",
-						"6. Great Vaulted Cavern",
-						"7. Treasure Trove Cave",
-						"8. Cave",
-						"9. Wide Passage",
-						"10. Singing Chamber",
-						"Stinking Caverns (Areas 11-13)",
-						"14. Narrow Cavern",
-						"15. Gray Cavern",
-						"16. Small Cavern",
-						"17. Jeweled Cavern",
-						"18. Small Cavern",
-						"19. Salamander Central",
-						"20. Council Chamber and Drow HQ",
-						"Pursuing the Drow"
+						"Using This Book",
+						"The Yawning Portal",
+						"The Forge of Fury"
+					]
+				},
+				{
+					"name": "Approaching Khundrukar",
+					"headers": [
+						"The Stone Tooth"
+					]
+				},
+				{
+					"name": "Khundrukar",
+					"headers": [
+						"1. End of the Trail",
+						"2. The Dwarf-Door",
+						"3. The Rift Hall",
+						"4 and 4a. Archers' Stations",
+						"5. Orc Cave",
+						"6. Prisoner Cave",
+						"7. Fire in the Hole",
+						"8. Orc Commons",
+						"9. Shaman's Lair",
+						"10. The Grand Stair",
+						"11. Orc Quarters",
+						"12. Great Ulfe",
+						"13. Dwarven Statue",
+						"14. Bunk Room"
+					]
+				},
+				{
+					"name": "The Glitterhame",
+					"headers": [
+						"15. The Cold Stream",
+						"15a. Stirge Colony",
+						"16. High Cavern",
+						"17. Troglodyte Cavern",
+						"18. Troglodyte Warren",
+						"19. Chieftain's Cave",
+						"20. Scaly Lair",
+						"21. Orc Tunnel",
+						"22. Fungus Cavern",
+						"23. Dwarven Sepulchers",
+						"24. The Glitterhame",
+						"25. Long Cavern",
+						"26. Grick Lair",
+						"27. Iron Door"
+					]
+				},
+				{
+					"name": "The Sinkhole",
+					"headers": [
+						"28. Waterfall Cavern",
+						"29. River Cavern",
+						"30. Old Storeroom",
+						"31. Empty Storeroom",
+						"32. Flooded Storeroom",
+						"33. Roper's Cavern",
+						"34. Prison"
+					]
+				},
+				{
+					"name": "The Foundry",
+					"headers": [
+						"35. Chamber of Statues",
+						"36. The Great Hall",
+						"37. The Bladeworks",
+						"38. The Chasm",
+						"38a. Chain Ladder",
+						"39. Council Chamber",
+						"40. Durgeddin's Quarters",
+						"41. Kitchens",
+						"42. Desecrated Shrine",
+						"43. Entrance to the Dwarf-Halls",
+						"44. Looted Rooms",
+						"45. Skeleton Room",
+						"46. Common Area",
+						"47. Arundil's Chambers",
+						"48. Looted Armory",
+						"49. Idalla's Den",
+						"49a Bedchamber"
+					]
+				},
+				{
+					"name": "The Black Lake",
+					"headers": [
+						"50. The Cascade",
+						"51. Dwarven Bridges",
+						"52. Nightscale's Lair",
+						"53. Nightscale's Hoard",
+						"54. The Dragon's Passage"
+					]
+				},
+				{
+					"name": "Magic Items",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Creatures",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				}
+			]
+		},
+		{
+			"name": "Tales from the Yawning Portal: The Hidden Shrine of Tamoachan",
+			"id": "TftYP-THSoT",
+			"source": "TftYP-THSoT",
+			"parentSource": "TftYP",
+			"group": "supplement",
+			"coverUrl": "img/covers/TftYP.png",
+			"published": "2017-03-24",
+			"publishedOrder": 2,
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"start": 5,
+				"end": 8
+			},
+			"contents": [
+				{
+					"name": "Preface",
+					"headers": [
+						"Using This Book",
+						"The Yawning Portal",
+						"The Hidden Shrine of Tamoachan"
+					]
+				},
+				{
+					"name": "The Vault of Chicomoztoc",
+					"headers": [
+						"2. The Hall of Thrashing Canes",
+						"3. Roost of the Conch",
+						"4. Mud-Filled Doorway",
+						"5. Tomb Stone and Wet Lime",
+						"6. Rubble-Filled Staircase",
+						"7. The Sepulcher of Tloques-Popolocas",
+						"8. Courses of the Gods",
+						"9. Stone Statue",
+						"10. Secret Passage",
+						"11. The Court of Cemanahuac",
+						"12. The Tomb of Hurakan",
+						"12B. Tomb, South Entrance",
+						"13. Child of Zotzilaha",
+						"14. Flooded Hall",
+						"15. The Great Hall",
+						"16. Secret Door",
+						"17. Hall of the Great Spirits",
+						"18. Hallway of the Ancestors",
+						"19. Silver Coffer",
+						"20. Spirit Guard of Ayocuan",
+						"21. Stone Block",
+						"22. Chamber of the Nacehual",
+						"23. Light Ahead",
+						"23A. Triangular Stone",
+						"24. Sandbox",
+						"25. The Nest of the Warriors"
+					]
+				},
+				{
+					"name": "Ramp",
+					"headers": [
+						"27. Stairs",
+						"28. The Arc of Nanahuatcin",
+						"29. The Tomb of Pelota",
+						"30. The Guardian Beast",
+						"31. Calendar Stone",
+						"32. The Portal to Death",
+						"33. The Tomb of Tlacaelel",
+						"33A. Sacrifice to the Sun",
+						"34. Guardians Bar the Way",
+						"35. Xipe's Audience Chamber",
+						"36. Apartment of the Dust of Ages",
+						"37. Bed of Xilonen",
+						"38. Barred Pit",
+						"39. Chamber of the Second Sun"
+					]
+				},
+				{
+					"name": "Dragon Breath",
+					"headers": [
+						"41. Free Gold",
+						"42. The Chapel of Kukulkan",
+						"43. The Smoking Mirrors",
+						"44. Sun of Motion",
+						"45. Mictlan",
+						"46. Tlazoteotl",
+						"47. Spider in Hiding"
+					]
+				},
+				{
+					"name": "Hound of the Bat",
+					"headers": [
+						"49. Sacred Chitza-Atlan",
+						"50. Jade Wall",
+						"51. Wind Tunnel",
+						"52. The Hidden Room of Nahual",
+						"53. The Valve"
+					]
+				},
+				{
+					"name": "Temple Grounds",
+					"headers": [
+						"Maps",
+						"54. Temple Ruin"
+					]
+				},
+				{
+					"name": "Magic Items",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Creatures",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				}
+			]
+		},
+		{
+			"name": "Tales from the Yawning Portal: White Plume Mountain",
+			"id": "TftYP-WPM",
+			"source": "TftYP-WPM",
+			"parentSource": "TftYP",
+			"group": "supplement",
+			"coverUrl": "img/covers/TftYP.png",
+			"published": "2017-03-24",
+			"publishedOrder": 3,
+			"storyline": "Tales from the Yawning Portal",
+			"level": {
+				"start": 8,
+				"end": 9
+			},
+			"contents": [
+				{
+					"name": "Preface",
+					"headers": [
+						"Using This Book",
+						"The Yawning Portal",
+						"White Plume Mountain"
+					]
+				},
+				{
+					"name": "White Plume Mountain",
+					"headers": [
+						"1. Spiral Staircase",
+						"2. Riddling Guardian",
+						"3. Hidden Slime",
+						"4. Glass Globes",
+						"5. Numbered Golems",
+						"6. Turnstile",
+						"7. Geysers and Chains",
+						"8. Coffin",
+						"9. Pool and Drain",
+						"10. Deceptively Deep Room",
+						"11. Spinning Cylinder",
+						"12. Burket's Guardpost",
+						"13. Snarla's Sanctum",
+						"14. Flood Doors",
+						"15. Boiling Lake",
+						"16. Blow Hole",
+						"17. The Boiling Bubble",
+						"18. Hall Pit",
+						"19. Metal-Heating Corridor",
+						"20. Ghoul Ambushers",
+						"21. Stairs Up",
+						"22. Frictionless Trap",
+						"23. Floating Stream",
+						"24. Sir Bluto's Guardpost",
+						"25. Magical Secret Doors",
+						"26. Terraced Aquarium",
+						"27. Luxurious Prison"
 					]
 				},
 				{
@@ -3257,6 +4804,8 @@
 			"name": "Tales from the Yawning Portal: Dead in Thay",
 			"id": "TftYP-DiT",
 			"source": "TftYP-DiT",
+			"parentSource": "TftYP",
+			"group": "supplement",
 			"coverUrl": "img/covers/TftYP.png",
 			"published": "2017-03-24",
 			"publishedOrder": 4,
@@ -3739,408 +5288,177 @@
 			]
 		},
 		{
-			"name": "Tales from the Yawning Portal: The Forge of Fury",
-			"id": "TftYP-TFoF",
-			"source": "TftYP-TFoF",
-			"coverUrl": "img/covers/TftYP.png",
-			"published": "2017-03-24",
-			"publishedOrder": 1,
-			"storyline": "Tales from the Yawning Portal",
-			"level": {
-				"start": 3,
-				"end": 5
-			},
-			"contents": [
-				{
-					"name": "Preface",
-					"headers": [
-						"Using This Book",
-						"The Yawning Portal",
-						"The Forge of Fury"
-					]
-				},
-				{
-					"name": "Approaching Khundrukar",
-					"headers": [
-						"The Stone Tooth"
-					]
-				},
-				{
-					"name": "Khundrukar",
-					"headers": [
-						"1. End of the Trail",
-						"2. The Dwarf-Door",
-						"3. The Rift Hall",
-						"4 and 4a. Archers' Stations",
-						"5. Orc Cave",
-						"6. Prisoner Cave",
-						"7. Fire in the Hole",
-						"8. Orc Commons",
-						"9. Shaman's Lair",
-						"10. The Grand Stair",
-						"11. Orc Quarters",
-						"12. Great Ulfe",
-						"13. Dwarven Statue",
-						"14. Bunk Room"
-					]
-				},
-				{
-					"name": "The Glitterhame",
-					"headers": [
-						"15. The Cold Stream",
-						"15a. Stirge Colony",
-						"16. High Cavern",
-						"17. Troglodyte Cavern",
-						"18. Troglodyte Warren",
-						"19. Chieftain's Cave",
-						"20. Scaly Lair",
-						"21. Orc Tunnel",
-						"22. Fungus Cavern",
-						"23. Dwarven Sepulchers",
-						"24. The Glitterhame",
-						"25. Long Cavern",
-						"26. Grick Lair",
-						"27. Iron Door"
-					]
-				},
-				{
-					"name": "The Sinkhole",
-					"headers": [
-						"28. Waterfall Cavern",
-						"29. River Cavern",
-						"30. Old Storeroom",
-						"31. Empty Storeroom",
-						"32. Flooded Storeroom",
-						"33. Roper's Cavern",
-						"34. Prison"
-					]
-				},
-				{
-					"name": "The Foundry",
-					"headers": [
-						"35. Chamber of Statues",
-						"36. The Great Hall",
-						"37. The Bladeworks",
-						"38. The Chasm",
-						"38a. Chain Ladder",
-						"39. Council Chamber",
-						"40. Durgeddin's Quarters",
-						"41. Kitchens",
-						"42. Desecrated Shrine",
-						"43. Entrance to the Dwarf-Halls",
-						"44. Looted Rooms",
-						"45. Skeleton Room",
-						"46. Common Area",
-						"47. Arundil's Chambers",
-						"48. Looted Armory",
-						"49. Idalla's Den",
-						"49a Bedchamber"
-					]
-				},
-				{
-					"name": "The Black Lake",
-					"headers": [
-						"50. The Cascade",
-						"51. Dwarven Bridges",
-						"52. Nightscale's Lair",
-						"53. Nightscale's Hoard",
-						"54. The Dragon's Passage"
-					]
-				},
-				{
-					"name": "Magic Items",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "A"
-					}
-				},
-				{
-					"name": "Creatures",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "B"
-					}
-				}
-			]
-		},
-		{
-			"name": "Tales from the Yawning Portal: The Hidden Shrine of Tamoachan",
-			"id": "TftYP-THSoT",
-			"source": "TftYP-THSoT",
-			"coverUrl": "img/covers/TftYP.png",
-			"published": "2017-03-24",
-			"publishedOrder": 2,
-			"storyline": "Tales from the Yawning Portal",
-			"level": {
-				"start": 5,
-				"end": 8
-			},
-			"contents": [
-				{
-					"name": "Preface",
-					"headers": [
-						"Using This Book",
-						"The Yawning Portal",
-						"The Hidden Shrine of Tamoachan"
-					]
-				},
-				{
-					"name": "The Vault of Chicomoztoc",
-					"headers": [
-						"2. The Hall of Thrashing Canes",
-						"3. Roost of the Conch",
-						"4. Mud-Filled Doorway",
-						"5. Tomb Stone and Wet Lime",
-						"6. Rubble-Filled Staircase",
-						"7. The Sepulcher of Tloques-Popolocas",
-						"8. Courses of the Gods",
-						"9. Stone Statue",
-						"10. Secret Passage",
-						"11. The Court of Cemanahuac",
-						"12. The Tomb of Hurakan",
-						"12B. Tomb, South Entrance",
-						"13. Child of Zotzilaha",
-						"14. Flooded Hall",
-						"15. The Great Hall",
-						"16. Secret Door",
-						"17. Hall of the Great Spirits",
-						"18. Hallway of the Ancestors",
-						"19. Silver Coffer",
-						"20. Spirit Guard of Ayocuan",
-						"21. Stone Block",
-						"22. Chamber of the Nacehual",
-						"23. Light Ahead",
-						"23A. Triangular Stone",
-						"24. Sandbox",
-						"25. The Nest of the Warriors"
-					]
-				},
-				{
-					"name": "Ramp",
-					"headers": [
-						"27. Stairs",
-						"28. The Arc of Nanahuatcin",
-						"29. The Tomb of Pelota",
-						"30. The Guardian Beast",
-						"31. Calendar Stone",
-						"32. The Portal to Death",
-						"33. The Tomb of Tlacaelel",
-						"33A. Sacrifice to the Sun",
-						"34. Guardians Bar the Way",
-						"35. Xipe's Audience Chamber",
-						"36. Apartment of the Dust of Ages",
-						"37. Bed of Xilonen",
-						"38. Barred Pit",
-						"39. Chamber of the Second Sun"
-					]
-				},
-				{
-					"name": "Dragon Breath",
-					"headers": [
-						"41. Free Gold",
-						"42. The Chapel of Kukulkan",
-						"43. The Smoking Mirrors",
-						"44. Sun of Motion",
-						"45. Mictlan",
-						"46. Tlazoteotl",
-						"47. Spider in Hiding"
-					]
-				},
-				{
-					"name": "Hound of the Bat",
-					"headers": [
-						"49. Sacred Chitza-Atlan",
-						"50. Jade Wall",
-						"51. Wind Tunnel",
-						"52. The Hidden Room of Nahual",
-						"53. The Valve"
-					]
-				},
-				{
-					"name": "Temple Grounds",
-					"headers": [
-						"Maps",
-						"54. Temple Ruin"
-					]
-				},
-				{
-					"name": "Magic Items",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "A"
-					}
-				},
-				{
-					"name": "Creatures",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "B"
-					}
-				}
-			]
-		},
-		{
-			"name": "Tales from the Yawning Portal: The Sunless Citadel",
-			"id": "TftYP-TSC",
-			"source": "TftYP-TSC",
-			"coverUrl": "img/covers/TftYP.png",
-			"published": "2017-03-24",
-			"publishedOrder": 0,
-			"storyline": "Tales from the Yawning Portal",
-			"level": {
-				"start": 1,
-				"end": 3
-			},
-			"contents": [
-				{
-					"name": "Preface",
-					"headers": [
-						"Using This Book",
-						"The Yawning Portal",
-						"The Sunless Citadel"
-					]
-				},
-				{
-					"name": "Sunless Citadel Overview",
-					"headers": [
-						"1. Ledge",
-						"2. Switchback Stairs",
-						"3. Crumbled Courtyard",
-						"4. Tower Shell",
-						"5. Secret Pocket",
-						"6. Old Approach",
-						"7. Gallery of Forlorn Notes",
-						"8. Pressure Plate",
-						"9. Dragon Riddle",
-						"10. Honor Guard",
-						"11. Secret Room",
-						"12. Tomb of a Failed Dragonpriest",
-						"13. Empty Room",
-						"14. Enchanted Water Cache",
-						"15. Dragon Cell",
-						"16. Kobold Guardroom",
-						"17. Dragon Chow",
-						"18. Prison",
-						"19. Hall of Dragons",
-						"20. Kobold Colony",
-						"21. Dragon Throne",
-						"22. Larder",
-						"23. Underdark Access",
-						"24. Trapped Access",
-						"25. Empty Chamber",
-						"26. Dry Fountain",
-						"27. Sanctuary",
-						"28. Infested Cells",
-						"29. Disabled Traps",
-						"30. Mama Rat",
-						"31. Caltrop Hall",
-						"32. Goblin Gate",
-						"33. Practice Range",
-						"34. Goblin Stockade",
-						"35. Trapped Corridor",
-						"36. Goblin Bandits",
-						"37. Trophy Room",
-						"38. Goblin Pantry",
-						"39. Dragon Haze",
-						"40. Goblinville",
-						"41. Hall of the Goblin Chief"
-					]
-				},
-				{
-					"name": "Locations on the Grove Level",
-					"headers": [
-						"42. Central Garden",
-						"43. The Great Hunter's Abode",
-						"44. Rift",
-						"45. Rift Node",
-						"46. Old Shrine",
-						"47. Belak's Laboratory",
-						"48. Garden Galleries",
-						"49. Arboretums",
-						"50. Ashardalon's Shrine",
-						"51. Dragon Library",
-						"52. Underpass",
-						"53. Belak's Study",
-						"54. Grove Gate",
-						"55. Twilight Grove",
-						"56. The Gulthias Tree"
-					]
-				},
-				{
-					"name": "Magic Items",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "A"
-					}
-				},
-				{
-					"name": "Creatures",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "B"
-					}
-				}
-			]
-		},
-		{
 			"name": "Tales from the Yawning Portal: Tomb of Horrors",
 			"id": "TftYP-ToH",
 			"source": "TftYP-ToH",
+			"parentSource": "TftYP",
+			"group": "supplement",
 			"coverUrl": "img/covers/TftYP.png",
 			"published": "2017-03-24",
 			"publishedOrder": 6,
 			"storyline": "Tales from the Yawning Portal",
 			"level": {
-				"custom": "Higher level"
+				"start": 10,
+				"end": 14
 			},
 			"contents": [
 				{
-					"name": "Preface",
+					"name": "Introduction",
 					"headers": [
 						"Using This Book",
-						"The Yawning Portal",
-						"Tomb of Horrors"
+						"The Yawning Portal"
 					]
 				},
 				{
 					"name": "Tomb of Horrors",
 					"headers": [
-						"1. False Entrance Tunnel",
-						"2. False Entrance Tunnel",
-						"3. Entrance to the Tomb of Horrors",
-						"4. Fresco of the Wizardly Work Room",
-						"5. The Arch of Mist",
-						"6. The Face of the Great Green Devil",
-						"7. The Forsaken Prison",
-						"8. Gargoyle Lair",
-						"9. Complex of Secret Doors",
-						"10. Great Hall of Spheres",
-						"11. The Three-Armed Statue",
-						"12. Trapped False Doors",
-						"13. Chamber of Three Chests",
-						"14. Chapel of Evil",
-						"15. Stone Gate",
-						"16. Locked Oaken Door",
-						"17. Magical Secret Door",
-						"18. Corridor Protected by Fear Gas",
-						"18A. False Crypt",
-						"19. Laboratory and Mummy Preparation Room",
-						"20. Huge Pit Filled with Spikes",
-						"21. The Agitated Chamber",
-						"22. The Cavern of Gold and Silver Mists",
-						"23. False/True Door",
-						"23A. Knockout Corridor",
-						"24. Adamantine Door",
-						"25. Pillared Throne Room",
-						"26. Small Room with a Door of Electric Blue",
-						"27. The Portal of Scintillating Violet",
-						"27A. Chamber of Hopelessness",
-						"28. The Wondrous Foyer",
-						"29. The Valves of Mithral",
-						"30. False Treasure Room",
-						"31. One-Way Doors",
-						"32. Secret Door",
-						"33. The Crypt of Acererak the Demilich"
+						"Legend of the Tomb",
+						"Running the Adventure",
+						"Locations in the Tomb",
+						{
+							"depth": 1,
+							"header": "1. False Entrance Tunnel"
+						},
+						{
+							"depth": 1,
+							"header": "2. False Entrance Tunnel"
+						},
+						{
+							"depth": 1,
+							"header": "3. Entrance to the Tomb of Horrors"
+						},
+						{
+							"depth": 1,
+							"header": "4. Fresco of the Wizardly Work Room"
+						},
+						{
+							"depth": 1,
+							"header": "5. The Arch of Mist"
+						},
+						{
+							"depth": 1,
+							"header": "6. The Face of the Great Green Devil"
+						},
+						{
+							"depth": 1,
+							"header": "7. The Forsaken Prison"
+						},
+						{
+							"depth": 1,
+							"header": "8. Gargoyle Lair"
+						},
+						{
+							"depth": 1,
+							"header": "9. Complex of Secret Doors"
+						},
+						{
+							"depth": 1,
+							"header": "10. Great Hall of Spheres"
+						},
+						{
+							"depth": 1,
+							"header": "11. The Three-Armed Statue"
+						},
+						{
+							"depth": 1,
+							"header": "12. Trapped False Doors"
+						},
+						{
+							"depth": 1,
+							"header": "13. Chamber of Three Chests"
+						},
+						{
+							"depth": 1,
+							"header": "14. Chapel of Evil"
+						},
+						{
+							"depth": 1,
+							"header": "15. Stone Gate"
+						},
+						{
+							"depth": 1,
+							"header": "16. Locked Oaken Door"
+						},
+						{
+							"depth": 1,
+							"header": "17. Magical Secret Door"
+						},
+						{
+							"depth": 1,
+							"header": "18. Corridor Protected by Fear Gas"
+						},
+						{
+							"depth": 1,
+							"header": "18A. False Crypt"
+						},
+						{
+							"depth": 1,
+							"header": "19. Laboratory and Mummy Preparation Room"
+						},
+						{
+							"depth": 1,
+							"header": "20. Huge Pit Filled with Spikes"
+						},
+						{
+							"depth": 1,
+							"header": "21. The Agitated Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "22. The Cavern of Gold and Silver Mists"
+						},
+						{
+							"depth": 1,
+							"header": "23. False/True Door"
+						},
+						{
+							"depth": 1,
+							"header": "23A. Knockout Corridor"
+						},
+						{
+							"depth": 1,
+							"header": "24. Adamantine Door"
+						},
+						{
+							"depth": 1,
+							"header": "25. Pillared Throne Room"
+						},
+						{
+							"depth": 1,
+							"header": "26. Small Room with a Door of Electric Blue"
+						},
+						{
+							"depth": 1,
+							"header": "27. The Portal of Scintillating Violet"
+						},
+						{
+							"depth": 1,
+							"header": "27A. Chamber of Hopelessness"
+						},
+						{
+							"depth": 1,
+							"header": "28. The Wondrous Foyer"
+						},
+						{
+							"depth": 1,
+							"header": "29. The Valves of Mithral"
+						},
+						{
+							"depth": 1,
+							"header": "30. False Treasure Room"
+						},
+						{
+							"depth": 1,
+							"header": "31. One-Way Doors"
+						},
+						{
+							"depth": 1,
+							"header": "32. Secret Door"
+						},
+						{
+							"depth": 1,
+							"header": "33. The Crypt of Acererak the Demilich"
+						}
 					]
 				},
 				{
@@ -4160,16 +5478,18 @@
 			]
 		},
 		{
-			"name": "Tales from the Yawning Portal: White Plume Mountain",
-			"id": "TftYP-WPM",
-			"source": "TftYP-WPM",
+			"name": "Tales from the Yawning Portal: Against the Giants",
+			"id": "TftYP-AtG",
+			"source": "TftYP-AtG",
+			"parentSource": "TftYP",
+			"group": "supplement",
 			"coverUrl": "img/covers/TftYP.png",
 			"published": "2017-03-24",
-			"publishedOrder": 3,
+			"publishedOrder": 5,
 			"storyline": "Tales from the Yawning Portal",
 			"level": {
-				"start": 8,
-				"end": 9
+				"start": 11,
+				"end": 14
 			},
 			"contents": [
 				{
@@ -4177,39 +5497,199 @@
 					"headers": [
 						"Using This Book",
 						"The Yawning Portal",
-						"White Plume Mountain"
+						"Against the Giants"
 					]
 				},
 				{
-					"name": "White Plume Mountain",
+					"name": "Steading of the Hill Giant Chief",
 					"headers": [
-						"1. Spiral Staircase",
-						"2. Riddling Guardian",
-						"3. Hidden Slime",
-						"4. Glass Globes",
-						"5. Numbered Golems",
-						"6. Turnstile",
-						"7. Geysers and Chains",
-						"8. Coffin",
-						"9. Pool and Drain",
-						"10. Deceptively Deep Room",
-						"11. Spinning Cylinder",
-						"12. Burket's Guardpost",
-						"13. Snarla's Sanctum",
-						"14. Flood Doors",
-						"15. Boiling Lake",
-						"16. Blow Hole",
-						"17. The Boiling Bubble",
-						"18. Hall Pit",
-						"19. Metal-Heating Corridor",
-						"20. Ghoul Ambushers",
-						"21. Stairs Up",
-						"22. Frictionless Trap",
-						"23. Floating Stream",
-						"24. Sir Bluto's Guardpost",
-						"25. Magical Secret Doors",
-						"26. Terraced Aquarium",
-						"27. Luxurious Prison"
+						"Introduction",
+						"Upper Works: General Features",
+						"1. Front Gate and Foyer",
+						"1B. Tower Guard",
+						"2. Subchief's Room",
+						"3. Dormitory",
+						"4. Barracks",
+						"5. Maids' Chamber",
+						"6. Hall of the Chief",
+						"7. Chamber of the Chief's Wife",
+						"8. Chief's Chamber",
+						"9. Arms Room",
+						"10. Small Dining Room",
+						"10A. Secret Stairs",
+						"11. Great Hall",
+						"12. Arsenal Room",
+						"13. Weapons Room",
+						"14. Main Guest Chamber",
+						"15. Common Room",
+						"16. Common Room",
+						"17. Kitchen",
+						"18. Kitchen Workroom",
+						"18A. Pantry",
+						"19. Servants' Quarters",
+						"20. Orc Slave Quarters",
+						"21. Ogre Quarters",
+						"22. Open Yard",
+						"23. Guard Room",
+						"24. Barracks Room",
+						"25. Barracks Room",
+						"Dungeon Level: General Features",
+						"1. Marshaling Area",
+						"2. Chamber of the Keeper",
+						"3. Cell Block",
+						"Bugbear Complex (Areas 4-8)",
+						"Obedient Slave Quarters (Areas 9-11)",
+						"Unruly Slave Quarters (Areas 12-14)",
+						"15. Torture Chamber",
+						"16. Armory and Smithy",
+						"17. Blocked Passage",
+						"17A. Weird Abandoned Temple",
+						"18. Buried Vestry",
+						"19. Natural Cavern",
+						"20. Troglodyte Cavern",
+						"21. Lizards' Lair",
+						"22. Partially Cleared Passage to Cistern",
+						"23. Cavern of the Carrion Crawlers",
+						"24. Storage Room",
+						"25. Wine Cellar",
+						"26. Gallery Under Clearance",
+						"27. Chamber Under Clearance",
+						"28. Quarters for Stone Giant Miners",
+						"29. False Treasure",
+						"30. Imprisoned Guards",
+						"31. Minor Treasure Room",
+						"32. Secret Room",
+						"33. Chief's Secret Treasure Room"
+					]
+				},
+				{
+					"name": "The Glacial Rift of the Frost Giant Jarl",
+					"headers": [
+						"Introduction",
+						"Upper Level General Features",
+						"1. Guardroom Ice Cavern",
+						"2. Guardroom Ice Cave",
+						"3. Empty Ice Cave",
+						"4. Small Ice Cave",
+						"5. Ice Caverns",
+						"6. Provisions",
+						"7. Cavern",
+						"8. South Cavern",
+						"Cavern Guard Post (Areas 9 and 10)",
+						"11. Cave of Bones",
+						"12. Lower Bone Cave",
+						"13. Ice Cavern",
+						"14. Misty Ice Cave",
+						"15. Ice Cave",
+						"16 Barracks Complex (Areas 16-19)",
+						"20. Ice Storage Cave",
+						"21. Ice Cavern",
+						"22. Guard Ice Cave",
+						"23. Guard Cave",
+						"24. Visitors' Cave",
+						"25. Visitors' Cave",
+						"26. Special Visitors' Cave",
+						"27. Winter Wolf Pack",
+						"28. Snow-Covered Dome of Ice",
+						"29. White Puddings",
+						"Lower Level: General Features",
+						"1. Grand Entry Cavern",
+						"2. Vaulted Cavern",
+						"2A. Dragon's Ledge",
+						"3. Abandoned Storage Cave",
+						"4. Deserted Cavern",
+						"4A. Stone Rubble",
+						"4B. Hungry and Hopping",
+						"5. Entrance Cavern",
+						"6. Emissaries' Cavern",
+						"7. Guest Cavern",
+						"8. Prison Cavern",
+						"9. Servants' Quarters Cavern",
+						"10. Antecavern",
+						"11. Great Cavern of the Jarl",
+						"12. Audience Alcove and Throne Dais",
+						"13. Guard Area",
+						"14. Kitchen",
+						"15. Weapons Cave",
+						"16. Common Quarters Caverns",
+						"17. Kennel Cave",
+						"Caverns of the Carls (Areas 18 and 19)",
+						"20. Jarl's Antecavern and Trophy Hall",
+						"21. Jarl Grugnur's Private Cavern"
+					]
+				},
+				{
+					"name": "Hall of the Fire Giant King",
+					"headers": [
+						"Introduction",
+						"Entrance Level: General Features",
+						"1. Entry Passage",
+						"1A. Alcove",
+						"2. Grand Hall",
+						"3. Throne Room and Audience Chamber",
+						"4. Chamber of the Queen's Servants",
+						"5. Queen's Chamber",
+						"6. Chamber of the King's Guards",
+						"7. King Snurre's Private Quarters",
+						"8. Hydra Cave",
+						"9. King Snurre's Treasure Cave",
+						"10. Arsenal Complex",
+						"11. Chimera Pen",
+						"12. Advisor's Quarters",
+						"12A. Obmi's Study",
+						"12B. Obmi's Bedchamber",
+						"13. Council Room",
+						"13A. West Alcove",
+						"13B. South Alcove",
+						"14. Door Guard",
+						"15. Kitchen",
+						"16. Storage Chamber",
+						"17. Guest Chamber",
+						"18. Barracks",
+						"19. Servants' Quarters",
+						"20. Communal Quarters",
+						"21. Entry Hall of the Kennels",
+						"22. Kennel Chamber",
+						"23. Kennel Keeper's Quarters",
+						"24. Guardpost",
+						"25. Barracks",
+						"Second Level: General Features",
+						"1. Hall of the Dead",
+						"2. Ettin Guards' Chamber",
+						"3. Visitors' Chamber",
+						"4. Storage Room",
+						"5. Community Quarters",
+						"6. Smithy",
+						"7. Torture Chamber",
+						"Cell Complex",
+						"8. Secret Room",
+						"Temple of the Eye (Areas 9-11)",
+						"12. Drow Clerics' Area",
+						"13. Guest Chamber",
+						"14. Guest Chamber",
+						"15. Trolls' Chamber",
+						"16. Thrall Pen",
+						"17. Thrall Pen",
+						"Third Level: General Features",
+						"1. Cavern",
+						"2. Glowing Cave",
+						"3. Cavern End",
+						"4. Cave",
+						"5. Cavern",
+						"6. Great Vaulted Cavern",
+						"7. Treasure Trove Cave",
+						"8. Cave",
+						"9. Wide Passage",
+						"10. Singing Chamber",
+						"Stinking Caverns (Areas 11-13)",
+						"14. Narrow Cavern",
+						"15. Gray Cavern",
+						"16. Small Cavern",
+						"17. Jeweled Cavern",
+						"18. Small Cavern",
+						"19. Salamander Central",
+						"20. Council Chamber and Drow HQ",
+						"Pursuing the Drow"
 					]
 				},
 				{
@@ -4232,6 +5712,7 @@
 			"name": "Tomb of Annihilation",
 			"id": "ToA",
 			"source": "ToA",
+			"group": "supplement",
 			"coverUrl": "img/covers/ToA.png",
 			"published": "2017-09-19",
 			"storyline": "Tomb of Annihilation",
@@ -4384,6 +5865,7 @@
 			"name": "The Tortle Package",
 			"id": "TTP",
 			"source": "TTP",
+			"group": "supplement-alt",
 			"coverUrl": "img/covers/TTP.png",
 			"published": "2017-11-03",
 			"storyline": "Tomb of Annihilation",
@@ -4450,7 +5932,105 @@
 					]
 				},
 				{
+					"name": "New Monsters"
+				},
+				{
 					"name": "Handouts"
+				}
+			]
+		},
+		{
+			"name": "The Lost Kenku",
+			"id": "TLK",
+			"source": "TLK",
+			"group": "supplement-alt",
+			"coverUrl": "img/covers/TLK.png",
+			"published": "2017-11-28",
+			"storyline": "Extra Life",
+			"level": {
+				"start": 4,
+				"end": 4
+			},
+			"contents": [
+				{
+					"name": "The Lost Kenku"
+				}
+			]
+		},
+		{
+			"name": "X Marks the Spot",
+			"id": "XMtS",
+			"source": "XMtS",
+			"group": "supplement-alt",
+			"coverUrl": "img/covers/XMtS.png",
+			"published": "2017-12-11",
+			"storyline": "Ixalan",
+			"level": {
+				"start": 4,
+				"end": 4
+			},
+			"contents": [
+				{
+					"name": "Background"
+				},
+				{
+					"name": "Overview"
+				},
+				{
+					"name": "Adventure Hooks",
+					"headers": [
+						"Treasure"
+					]
+				},
+				{
+					"name": "Starting the Adventure",
+					"headers": [
+						"The Great Escape",
+						"Conqueror's Foothold",
+						"Field of Ruin",
+						"Fort Leor and Fort Durron",
+						"Primal Wellspring",
+						"Unclaimed Territory",
+						"Temple of Aclazotz"
+					]
+				},
+				{
+					"name": "Conclusion"
+				},
+				{
+					"name": "Monster and NPC Statistics",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Locations of Ixalan",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				},
+				{
+					"name": "Map of Ixalan",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "C"
+					}
+				},
+				{
+					"name": "Hidden Plunder",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "D"
+					}
+				},
+				{
+					"name": "Player Characters",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "E"
+					}
 				}
 			]
 		},
@@ -4458,6 +6038,7 @@
 			"name": "Waterdeep: Dragon Heist",
 			"id": "WDH",
 			"source": "WDH",
+			"group": "supplement",
 			"coverUrl": "img/covers/WDH.png",
 			"published": "2018-09-18",
 			"storyline": "Waterdeep",
@@ -4697,6 +6278,9 @@
 						"type": "appendix",
 						"identifier": "C"
 					}
+				},
+				{
+					"name": "Poster Map"
 				}
 			]
 		},
@@ -4704,6 +6288,7 @@
 			"name": "Lost Laboratory of Kwalish",
 			"id": "LLK",
 			"source": "LLK",
+			"group": "supplement-alt",
 			"coverUrl": "img/covers/LLK.png",
 			"published": "2018-11-10",
 			"storyline": "Extra Life",
@@ -4820,6 +6405,7 @@
 			"name": "Waterdeep: Dungeon of the Mad Mage",
 			"id": "WDMM",
 			"source": "WDMM",
+			"group": "supplement",
 			"coverUrl": "img/covers/WDMM.png",
 			"published": "2018-11-13",
 			"storyline": "Waterdeep",
@@ -8073,6 +9659,7 @@
 			"name": "Krenko's Way",
 			"id": "KKW",
 			"source": "KKW",
+			"group": "supplement-alt",
 			"coverUrl": "img/covers/GGR.png",
 			"published": "2018-11-20",
 			"storyline": "Ravnica",
@@ -8098,9 +9685,40 @@
 			]
 		},
 		{
+			"name": "A Zib for Your Thoughts",
+			"id": "AZfyT",
+			"source": "AZfyT",
+			"group": "supplement-alt",
+			"coverUrl": "img/covers/AZfyT.png",
+			"published": "2019-03-05",
+			"storyline": "Ravnica",
+			"level": {
+				"start": 2,
+				"end": 2
+			},
+			"contents": [
+				{
+					"name": "A Zib for Your Thoughts",
+					"headers": [
+						"Story Overview",
+						"Running the Adventure",
+						"Starting the Adventure",
+						"Getting to Work",
+						"House Dimir Intervenes",
+						"Argona",
+						"Delrim Munn",
+						"Herringbone",
+						"Return to Veszka",
+						"Further Adventures"
+					]
+				}
+			]
+		},
+		{
 			"name": "Ghosts of Saltmarsh",
 			"id": "GoS",
 			"source": "GoS",
+			"group": "supplement",
 			"coverUrl": "img/covers/GoS.png",
 			"published": "2019-05-21",
 			"storyline": "Ghosts of Saltmarsh",
@@ -9274,6 +10892,7 @@
 			"name": "Hunt for the Thessalhydra",
 			"id": "HftT",
 			"source": "HftT",
+			"group": "supplement-alt",
 			"coverUrl": "img/covers/HftT.png",
 			"published": "2019-05-21",
 			"storyline": "Stranger Things",
@@ -9302,6 +10921,7 @@
 			"name": "The Orrery of the Wanderer",
 			"id": "OoW",
 			"source": "OoW",
+			"group": "supplement",
 			"coverUrl": "img/covers/AI.png",
 			"published": "2019-06-18",
 			"storyline": "Acquisitions Incorporated",
@@ -9623,6 +11243,8 @@
 			"name": "Essentials Kit: Dragon of Icespire Peak",
 			"id": "DIP",
 			"source": "DIP",
+			"parentSource": "ESK",
+			"group": "supplement",
 			"coverUrl": "img/covers/ESK.png",
 			"published": "2019-06-24",
 			"publishedOrder": 0,
@@ -9773,9 +11395,1540 @@
 			]
 		},
 		{
+			"name": "Essentials Kit: Storm Lord's Wrath",
+			"id": "SLW",
+			"source": "SLW",
+			"parentSource": "ESK",
+			"group": "supplement",
+			"coverUrl": "img/covers/ESK.png",
+			"published": "2019-09-03",
+			"publishedOrder": 1,
+			"storyline": "Essentials Kit",
+			"level": {
+				"start": 7,
+				"end": 9
+			},
+			"contents": [
+				{
+					"name": "Introduction",
+					"headers": [
+						"Running the Adventure",
+						{
+							"depth": 1,
+							"header": "Abbreviations"
+						},
+						"Running for One Player",
+						{
+							"depth": 1,
+							"header": "Using Sidekicks"
+						},
+						{
+							"depth": 1,
+							"header": "Adjusting Encounters"
+						},
+						{
+							"depth": 1,
+							"header": "High Road"
+						},
+						{
+							"depth": 1,
+							"header": "Kryptgarden Forest"
+						},
+						{
+							"depth": 1,
+							"header": "Leilon"
+						},
+						{
+							"depth": 1,
+							"header": "Mere of Dead Men"
+						},
+						{
+							"depth": 1,
+							"header": "Neverwinter"
+						},
+						{
+							"depth": 1,
+							"header": "Neverwinter Wood"
+						},
+						{
+							"depth": 1,
+							"header": "Phandalin"
+						},
+						{
+							"depth": 1,
+							"header": "Starmetal Hills"
+						},
+						{
+							"depth": 1,
+							"header": "Sword Mountains"
+						},
+						{
+							"depth": 1,
+							"header": "Triboar Trail"
+						},
+						"The Adventure Begins",
+						{
+							"depth": 1,
+							"header": "Adventure Background"
+						},
+						{
+							"depth": 1,
+							"header": "Adventure Hooks"
+						},
+						{
+							"depth": 1,
+							"header": "Mercenaries for Lord Neverember"
+						},
+						{
+							"depth": 1,
+							"header": "Spies for Waterdeep"
+						},
+						{
+							"depth": 1,
+							"header": "Friends and Family"
+						},
+						{
+							"depth": 1,
+							"header": "A Stake in Leilon"
+						},
+						{
+							"depth": 1,
+							"header": "Love of Adventure"
+						}
+					]
+				},
+				{
+					"name": "Welcome to Leilon",
+					"headers": [
+						"Exploring Leilon",
+						{
+							"depth": 1,
+							"header": "Aubrey's Peculiarities Shoppe"
+						},
+						{
+							"depth": 1,
+							"header": "Barge Yard"
+						},
+						{
+							"depth": 1,
+							"header": "Fishery"
+						},
+						{
+							"depth": 1,
+							"header": "House of Thalivar"
+						},
+						{
+							"depth": 1,
+							"header": "Idol Island"
+						},
+						{
+							"depth": 1,
+							"header": "Shrine of Lathander"
+						},
+						{
+							"depth": 1,
+							"header": "Settler Camp"
+						},
+						{
+							"depth": 1,
+							"header": "Grizzelda Copperwraught"
+						},
+						{
+							"depth": 1,
+							"header": "Sergeant Hazz Yorrum"
+						},
+						{
+							"depth": 1,
+							"header": "Merrygold Brightshine"
+						},
+						{
+							"depth": 1,
+							"header": "Valdi Estapaar"
+						},
+						{
+							"depth": 1,
+							"header": "Town Square"
+						},
+						{
+							"depth": 1,
+							"header": "The Quest Board"
+						},
+						{
+							"depth": 1,
+							"header": "Starting Quests"
+						},
+						{
+							"depth": 1,
+							"header": "Attack on the Wayside Inn Quest"
+						},
+						{
+							"depth": 1,
+							"header": "A Normal Day in Leilon Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Follow-Up Quests"
+						},
+						{
+							"depth": 1,
+							"header": "Aid from Phandalin Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Foul Weather at Wayside Quest"
+						},
+						{
+							"depth": 1,
+							"header": "House of Thalivar Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Missing Patrol Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Thunder Cliffs Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Leveling Up"
+						}
+					]
+				},
+				{
+					"name": "Attack on the Wayside Inn",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Undead Attack"
+						},
+						{
+							"depth": 1,
+							"header": "Monsters"
+						},
+						{
+							"depth": 1,
+							"header": "Inn Occupants"
+						},
+						{
+							"depth": 1,
+							"header": "Aftermath"
+						}
+					]
+				},
+				{
+					"name": "A Normal Day in Leilon",
+					"headers": [
+						"A Town Meeting",
+						{
+							"depth": 1,
+							"header": "A Hard Decision"
+						},
+						{
+							"depth": 1,
+							"header": "Chasing the Children"
+						},
+						{
+							"depth": 1,
+							"header": "Storm's Moving In"
+						},
+						{
+							"depth": 1,
+							"header": "Aftermath"
+						},
+						{
+							"depth": 1,
+							"header": "The Request"
+						},
+						{
+							"depth": 1,
+							"header": "Something Fishy in Town"
+						},
+						{
+							"depth": 1,
+							"header": "Approaching the Town"
+						},
+						{
+							"depth": 1,
+							"header": "Aftermath"
+						},
+						{
+							"depth": 1,
+							"header": "Marsh, Unmellow"
+						},
+						{
+							"depth": 1,
+							"header": "Monsters"
+						},
+						{
+							"depth": 1,
+							"header": "Tactics"
+						},
+						{
+							"depth": 1,
+							"header": "Aftermath"
+						},
+						{
+							"depth": 1,
+							"header": "Time to Rest"
+						}
+					]
+				},
+				{
+					"name": "Aid from Phandalin",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Quest Goals"
+						},
+						"Travel to Phandalin",
+						{
+							"depth": 1,
+							"header": "Encounters on the Way"
+						},
+						{
+							"depth": 1,
+							"header": "Goat Check"
+						},
+						{
+							"depth": 1,
+							"header": "Herding"
+						},
+						{
+							"depth": 1,
+							"header": "Hungry Ogres"
+						},
+						"Arrival",
+						{
+							"depth": 1,
+							"header": "On the Town"
+						},
+						{
+							"depth": 1,
+							"header": "Stonehill Inn"
+						},
+						{
+							"depth": 1,
+							"header": "Following Skeel"
+						},
+						{
+							"depth": 1,
+							"header": "Lionshield Coster"
+						},
+						{
+							"depth": 1,
+							"header": "Barthen's Provisions"
+						},
+						{
+							"depth": 1,
+							"header": "Phandalin Miner's Exchange"
+						},
+						{
+							"depth": 1,
+							"header": "Shrine of Luck"
+						},
+						{
+							"depth": 1,
+							"header": "Townmaster's Hall"
+						},
+						"The Attack",
+						{
+							"depth": 1,
+							"header": "Aftermath"
+						}
+					]
+				},
+				{
+					"name": "Foul Weather at Wayside",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Quest Goals"
+						},
+						"Travel to the Inn",
+						{
+							"depth": 1,
+							"header": "A Violent Atmosphere"
+						},
+						{
+							"depth": 1,
+							"header": "Encounters on the Way"
+						},
+						{
+							"depth": 1,
+							"header": "Armor of Talos"
+						},
+						{
+							"depth": 1,
+							"header": "Curse of Talos"
+						},
+						{
+							"depth": 1,
+							"header": "The Creeping Storm"
+						},
+						{
+							"depth": 1,
+							"header": "Aftermath"
+						},
+						{
+							"depth": 1,
+							"header": "Lightning Strikes"
+						},
+						"Arrival",
+						{
+							"depth": 1,
+							"header": "The Victims"
+						},
+						{
+							"depth": 1,
+							"header": "Inside the Inn"
+						},
+						{
+							"depth": 1,
+							"header": "The Common Area and Courtyard"
+						},
+						{
+							"depth": 1,
+							"header": "Upstairs"
+						},
+						{
+							"depth": 1,
+							"header": "The Basement"
+						},
+						{
+							"depth": 1,
+							"header": "Help"
+						},
+						{
+							"depth": 1,
+							"header": "Aftermath"
+						},
+						{
+							"depth": 1,
+							"header": "Failure"
+						},
+						{
+							"depth": 1,
+							"header": "Clues"
+						}
+					]
+				},
+				{
+					"name": "House of Thalivar",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Quest Goals"
+						},
+						"Travel to the Tower",
+						{
+							"depth": 1,
+							"header": "Encounters on the Way"
+						},
+						{
+							"depth": 1,
+							"header": "Cowardly Soldiers"
+						},
+						{
+							"depth": 1,
+							"header": "Strange Sighting"
+						},
+						"Arrival",
+						{
+							"depth": 1,
+							"header": "Dealing with Gallio Elibro"
+						},
+						{
+							"depth": 1,
+							"header": "Gallio's Possession"
+						},
+						{
+							"depth": 1,
+							"header": "Ghostly Events"
+						},
+						{
+							"depth": 1,
+							"header": "Confronting Thalivar's Ghost"
+						},
+						{
+							"depth": 1,
+							"header": "House of Thalivar Locations"
+						},
+						{
+							"depth": 1,
+							"header": "H1. Tower Exterior"
+						},
+						{
+							"depth": 1,
+							"header": "H2. Entry Hall"
+						},
+						{
+							"depth": 1,
+							"header": "H3. Gallio's Study"
+						},
+						{
+							"depth": 1,
+							"header": "H4. Kitchen"
+						},
+						{
+							"depth": 1,
+							"header": "H5. Servant's Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "H6. Library"
+						},
+						{
+							"depth": 1,
+							"header": "Trapped Statues"
+						},
+						{
+							"depth": 1,
+							"header": "H7. Scaffolds"
+						},
+						{
+							"depth": 1,
+							"header": "H8. Collapsed Rooms"
+						},
+						{
+							"depth": 1,
+							"header": "H9. Thalivar's Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "H10. Broken Beacon"
+						},
+						{
+							"depth": 1,
+							"header": "Ghostly Farewell"
+						}
+					]
+				},
+				{
+					"name": "Missing Patrol",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Quest Goals"
+						},
+						"Travel in the Mere",
+						{
+							"depth": 1,
+							"header": "Encounters in the Mere"
+						},
+						{
+							"depth": 1,
+							"header": "Yuan-ti Scouts"
+						},
+						{
+							"depth": 1,
+							"header": "Pit of Snakes"
+						},
+						{
+							"depth": 1,
+							"header": "Quicksand and Alligators"
+						},
+						{
+							"depth": 1,
+							"header": "Troll Brawl"
+						},
+						{
+							"depth": 1,
+							"header": "Hydra Wranglers"
+						},
+						{
+							"depth": 1,
+							"header": "Tracking the Lizards"
+						},
+						{
+							"depth": 1,
+							"header": "Following the Tracks"
+						},
+						{
+							"depth": 1,
+							"header": "Fighting the Lizards"
+						},
+						{
+							"depth": 1,
+							"header": "Lizardfolk Forces"
+						},
+						{
+							"depth": 1,
+							"header": "The Unfolding Situation"
+						},
+						{
+							"depth": 1,
+							"header": "A Rotten Way to Die"
+						},
+						{
+							"depth": 1,
+							"header": "Aftermath"
+						}
+					]
+				},
+				{
+					"name": "Thunder Cliffs",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Quest Goals"
+						},
+						"Travel to the Cliffs",
+						{
+							"depth": 1,
+							"header": "Meeting the Captains"
+						},
+						{
+							"depth": 1,
+							"header": "The Interview"
+						},
+						{
+							"depth": 1,
+							"header": "A Secret Agent"
+						},
+						{
+							"depth": 1,
+							"header": "A Decision"
+						},
+						"Encounters on the Way",
+						{
+							"depth": 1,
+							"header": "Mutinous Intentions"
+						},
+						{
+							"depth": 1,
+							"header": "The Moment of Truth"
+						},
+						{
+							"depth": 1,
+							"header": "Allow the Mutiny"
+						},
+						{
+							"depth": 1,
+							"header": "Talk"
+						},
+						{
+							"depth": 1,
+							"header": "Fight"
+						},
+						{
+							"depth": 1,
+							"header": "Bad News"
+						},
+						{
+							"depth": 1,
+							"header": "Ghost Ship"
+						},
+						"Arrival",
+						{
+							"depth": 1,
+							"header": "Threats by Air"
+						},
+						{
+							"depth": 1,
+							"header": "Talos is Angry"
+						},
+						{
+							"depth": 1,
+							"header": "Sea Galley"
+						},
+						"Thunder Cliffs Caves",
+						{
+							"depth": 1,
+							"header": "1. Unsure Shore"
+						},
+						{
+							"depth": 1,
+							"header": "2. Unhappy Cultists"
+						},
+						{
+							"depth": 1,
+							"header": "A Better Offer?"
+						},
+						{
+							"depth": 1,
+							"header": "Success!"
+						},
+						{
+							"depth": 1,
+							"header": "3. Sea Hag Coven"
+						},
+						{
+							"depth": 1,
+							"header": "Accessing the Cave"
+						},
+						{
+							"depth": 1,
+							"header": "The Coven Cave"
+						},
+						{
+							"depth": 1,
+							"header": "A Nice Chat"
+						},
+						{
+							"depth": 1,
+							"header": "4. The Dying Second"
+						},
+						{
+							"depth": 1,
+							"header": "The Sick Room"
+						},
+						{
+							"depth": 1,
+							"header": "5. The Cultist's Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "The Blowhole"
+						},
+						{
+							"depth": 1,
+							"header": "6. Loot"
+						},
+						{
+							"depth": 1,
+							"header": "Trap"
+						},
+						{
+							"depth": 1,
+							"header": "7. Gadrille the Reef-Reaver"
+						},
+						{
+							"depth": 1,
+							"header": "Swirling Pool Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "Shrine Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "Treasury"
+						},
+						{
+							"depth": 1,
+							"header": "Aftermath"
+						}
+					]
+				},
+				{
+					"name": "Ending the Adventure",
+					"headers": [
+						"Duties in Leilon",
+						"Continuing the Story"
+					]
+				},
+				{
+					"name": "Creatures",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Sidekicks",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					},
+					"headers": [
+						"Sidekick Cards",
+						{
+							"depth": 1,
+							"header": "Donnabella Fiasco"
+						},
+						{
+							"depth": 1,
+							"header": "Galandro Luna"
+						},
+						{
+							"depth": 1,
+							"header": "Inverna Nightbreeze"
+						},
+						{
+							"depth": 1,
+							"header": "Nib Addlespur"
+						},
+						{
+							"depth": 1,
+							"header": "Pickled Pete"
+						},
+						{
+							"depth": 1,
+							"header": "Quinn Hightopple"
+						},
+						{
+							"depth": 1,
+							"header": "Ruby Hammerwhacker"
+						},
+						{
+							"depth": 1,
+							"header": "Shanjan Kwan"
+						},
+						{
+							"depth": 1,
+							"header": "Talon Thornwild"
+						},
+						"Sidekick Stat Blocks",
+						"Proficiencies",
+						"Sidekick Level",
+						{
+							"depth": 1,
+							"header": "Experts Beyond 11th Level"
+						},
+						{
+							"depth": 1,
+							"header": "Spellcasters Beyond 11th Level"
+						},
+						{
+							"depth": 1,
+							"header": "Warriors Beyond 11th Level"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Essentials Kit: Sleeping Dragon's Wake",
+			"id": "SDW",
+			"source": "SDW",
+			"parentSource": "ESK",
+			"group": "supplement",
+			"coverUrl": "img/covers/ESK.png",
+			"published": "2019-09-03",
+			"publishedOrder": 2,
+			"storyline": "Essentials Kit",
+			"level": {
+				"start": 9,
+				"end": 11
+			},
+			"contents": [
+				{
+					"name": "Introduction",
+					"headers": [
+						"Running the Adventure",
+						{
+							"depth": 1,
+							"header": "Abbreviations"
+						},
+						"Running for One Player",
+						{
+							"depth": 1,
+							"header": "Using Sidekicks"
+						},
+						{
+							"depth": 1,
+							"header": "Adjusting Encounters"
+						},
+						{
+							"depth": 1,
+							"header": "Conyberry"
+						},
+						{
+							"depth": 1,
+							"header": "Crags"
+						},
+						{
+							"depth": 1,
+							"header": "High Road"
+						},
+						{
+							"depth": 1,
+							"header": "Kryptgarden Forest"
+						},
+						{
+							"depth": 1,
+							"header": "Leilon"
+						},
+						{
+							"depth": 1,
+							"header": "Mere of Dead Men"
+						},
+						{
+							"depth": 1,
+							"header": "Neverwinter"
+						},
+						{
+							"depth": 1,
+							"header": "Neverwinter Wood"
+						},
+						{
+							"depth": 1,
+							"header": "Phandalin"
+						},
+						{
+							"depth": 1,
+							"header": "Starmetal Hills"
+						},
+						{
+							"depth": 1,
+							"header": "Sword Mountains"
+						},
+						{
+							"depth": 1,
+							"header": "Triboar Trail"
+						},
+						"The Adventure Begins",
+						{
+							"depth": 1,
+							"header": "Adventure Background"
+						}
+					]
+				},
+				{
+					"name": "Welcome to Leilon",
+					"headers": [
+						"Exploring Leilon",
+						{
+							"depth": 1,
+							"header": "Aubrey's Peculiarities Shoppe"
+						},
+						{
+							"depth": 1,
+							"header": "Barge Yard"
+						},
+						{
+							"depth": 1,
+							"header": "Fishery"
+						},
+						{
+							"depth": 1,
+							"header": "House of Thalivar"
+						},
+						{
+							"depth": 1,
+							"header": "Idol Island"
+						},
+						{
+							"depth": 1,
+							"header": "Lathander Shrine"
+						},
+						{
+							"depth": 1,
+							"header": "Settler Camp"
+						},
+						{
+							"depth": 1,
+							"header": "Torver's Post"
+						},
+						{
+							"depth": 1,
+							"header": "Town Square"
+						},
+						{
+							"depth": 1,
+							"header": "Tymora Shrine"
+						},
+						{
+							"depth": 1,
+							"header": "Umber Hulk's Shell Inn"
+						},
+						{
+							"depth": 1,
+							"header": "The Quest Board"
+						},
+						{
+							"depth": 1,
+							"header": "Starting Quests"
+						},
+						{
+							"depth": 1,
+							"header": "Death Knight-Dreadnaught Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Leilon Point Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Follow-Up Quests"
+						},
+						{
+							"depth": 1,
+							"header": "Bronze Shrine Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Iniarv's Tower Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Claugiyliamatar's Lair Quest"
+						},
+						{
+							"depth": 1,
+							"header": "Leveling Up"
+						}
+					]
+				},
+				{
+					"name": "Bronze Shrine",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Quest Goals"
+						},
+						"Travel to the Shrine",
+						"Arrival",
+						{
+							"depth": 1,
+							"header": "Climbing the Shrine"
+						},
+						{
+							"depth": 1,
+							"header": "Bronze Shrine Locations"
+						},
+						{
+							"depth": 1,
+							"header": "B1. Jetty"
+						},
+						{
+							"depth": 1,
+							"header": "B2. Guarded Entry"
+						},
+						{
+							"depth": 1,
+							"header": "Molten Bronze Trap"
+						},
+						{
+							"depth": 1,
+							"header": "B3. Scaly Eye Tombs"
+						},
+						{
+							"depth": 1,
+							"header": "B4. Scaly Eye Chambers"
+						},
+						{
+							"depth": 1,
+							"header": "B5. Bronze Gate Entrance"
+						},
+						{
+							"depth": 1,
+							"header": "B6. Statue Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "B7. Ascension Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "Stair Trap"
+						},
+						{
+							"depth": 1,
+							"header": "B8. Lhammaruntosz's Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "Innate Spellcasting"
+						},
+						{
+							"depth": 1,
+							"header": "Regeneration"
+						},
+						{
+							"depth": 1,
+							"header": "Spellcasting"
+						},
+						{
+							"depth": 1,
+							"header": "Lhammaruntosz's Thanks"
+						},
+						{
+							"depth": 1,
+							"header": "Treasure"
+						}
+					]
+				},
+				{
+					"name": "Claugiyliamatar's Lair",
+					"headers": [
+						"Location Overview",
+						"Travel to the Lair",
+						{
+							"depth": 1,
+							"header": "Myrkul Patrol"
+						},
+						"Arrival",
+						{
+							"depth": 1,
+							"header": "Lair Locations"
+						},
+						{
+							"depth": 1,
+							"header": "C1. Lookout Post"
+						},
+						{
+							"depth": 1,
+							"header": "C2. Owlbear Pens"
+						},
+						{
+							"depth": 1,
+							"header": "C3. Gnawbones Camp"
+						},
+						{
+							"depth": 1,
+							"header": "Pot of Poison"
+						},
+						{
+							"depth": 1,
+							"header": "Secret Poison Pit"
+						},
+						{
+							"depth": 1,
+							"header": "C4. Enchanting Spore Cavern"
+						},
+						{
+							"depth": 1,
+							"header": "Statues"
+						},
+						{
+							"depth": 1,
+							"header": "C5. Vine Stairway"
+						},
+						{
+							"depth": 1,
+							"header": "C6. Phase Spider Den"
+						},
+						{
+							"depth": 1,
+							"header": "C7. Slime Pool Overlook"
+						},
+						{
+							"depth": 1,
+							"header": "C8. Slime Pools"
+						},
+						{
+							"depth": 1,
+							"header": "Pushing Vines"
+						},
+						{
+							"depth": 1,
+							"header": "Slime Tunnel"
+						},
+						{
+							"depth": 1,
+							"header": "Statues"
+						},
+						{
+							"depth": 1,
+							"header": "C9. Zuri's Hidden Hoard"
+						},
+						{
+							"depth": 1,
+							"header": "C10. Bridge"
+						},
+						{
+							"depth": 1,
+							"header": "C11. Statue Overlook"
+						},
+						{
+							"depth": 1,
+							"header": "Statues"
+						},
+						{
+							"depth": 1,
+							"header": "C12. Map Room"
+						},
+						{
+							"depth": 1,
+							"header": "Hidden Message"
+						},
+						{
+							"depth": 1,
+							"header": "C13. Claugiyliamatar's Cavern"
+						},
+						{
+							"depth": 1,
+							"header": "Roleplaying Claugiyliamatar"
+						},
+						{
+							"depth": 1,
+							"header": "C14. Claugiyliamatar's Hoard"
+						},
+						{
+							"depth": 1,
+							"header": "Statues"
+						},
+						{
+							"depth": 1,
+							"header": "Finding Viantha"
+						},
+						{
+							"depth": 1,
+							"header": "Undead Encounter"
+						},
+						{
+							"depth": 1,
+							"header": "Viantha Found"
+						},
+						{
+							"depth": 1,
+							"header": "Roleplaying Viantha"
+						},
+						{
+							"depth": 1,
+							"header": "Return to the Lair"
+						}
+					]
+				},
+				{
+					"name": "Death Knight-Dreadnaught",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Quest Goals"
+						},
+						"Travel to the Ship",
+						"Arrival",
+						{
+							"depth": 1,
+							"header": "Staked Zombies"
+						},
+						{
+							"depth": 1,
+							"header": "Where is Fheralai Stormsworn?"
+						},
+						{
+							"depth": 1,
+							"header": "Death Knight's Soul"
+						},
+						{
+							"depth": 1,
+							"header": "Dreadnaught Locations"
+						},
+						{
+							"depth": 1,
+							"header": "D1. Coastal Rocks"
+						},
+						{
+							"depth": 1,
+							"header": "D2. Skeletal Figurehead"
+						},
+						{
+							"depth": 1,
+							"header": "Halberd"
+						},
+						{
+							"depth": 1,
+							"header": "D3. Main Deck"
+						},
+						{
+							"depth": 1,
+							"header": "D4. Hellfire Orb"
+						},
+						{
+							"depth": 1,
+							"header": "D5. Forecastle"
+						},
+						{
+							"depth": 1,
+							"header": "D6. Quarterdeck"
+						},
+						{
+							"depth": 1,
+							"header": "D7. Poop Deck"
+						},
+						{
+							"depth": 1,
+							"header": "D8. Chart Room"
+						},
+						{
+							"depth": 1,
+							"header": "D9. Storage Lockers"
+						},
+						{
+							"depth": 1,
+							"header": "D10. Captain's Cabin"
+						},
+						{
+							"depth": 1,
+							"header": "D11. Oar Deck"
+						},
+						{
+							"depth": 1,
+							"header": "Skeleton Crew"
+						},
+						{
+							"depth": 1,
+							"header": "D12. Badwind's Cabin"
+						},
+						{
+							"depth": 1,
+							"header": "D13. Magazine"
+						},
+						{
+							"depth": 1,
+							"header": "D14. Crew Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "D15. Galley"
+						},
+						{
+							"depth": 1,
+							"header": "D16. Surgery"
+						},
+						{
+							"depth": 1,
+							"header": "D17. Death Knight's Soul"
+						},
+						{
+							"depth": 1,
+							"header": "The Bard"
+						},
+						{
+							"depth": 1,
+							"header": "D18. Stores"
+						},
+						{
+							"depth": 1,
+							"header": "D19. Prisoner Cell"
+						},
+						{
+							"depth": 1,
+							"header": "D20. Armory"
+						},
+						{
+							"depth": 1,
+							"header": "D21. Flooded Hold"
+						}
+					]
+				},
+				{
+					"name": "Iniarv's Tower",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Quest Goals"
+						},
+						"Travel to Iniarv's Tower",
+						{
+							"depth": 1,
+							"header": "Zombie Escape"
+						},
+						"Arrival",
+						{
+							"depth": 1,
+							"header": "Iniarv's Tower Locations"
+						},
+						{
+							"depth": 1,
+							"header": "I1. Walls"
+						},
+						{
+							"depth": 1,
+							"header": "I2. Pit Trap"
+						},
+						{
+							"depth": 1,
+							"header": "I3. Gatehouse"
+						},
+						{
+							"depth": 1,
+							"header": "Doors and Portcullises"
+						},
+						{
+							"depth": 1,
+							"header": "Murder Holes"
+						},
+						{
+							"depth": 1,
+							"header": "I4. Courtyard"
+						},
+						{
+							"depth": 1,
+							"header": "Slippery Mud"
+						},
+						{
+							"depth": 1,
+							"header": "I5. Main Tower"
+						},
+						{
+							"depth": 1,
+							"header": "Collapsed Cellar Entrance"
+						},
+						{
+							"depth": 1,
+							"header": "I6. Main Tower Roof"
+						},
+						{
+							"depth": 1,
+							"header": "I7. North Guard Tower First Floor"
+						},
+						{
+							"depth": 1,
+							"header": "Ladder"
+						},
+						{
+							"depth": 1,
+							"header": "Steel Box"
+						},
+						{
+							"depth": 1,
+							"header": "I8. North Guard Tower Second Floor"
+						},
+						{
+							"depth": 1,
+							"header": "I9. South Guard Tower First Floor"
+						},
+						{
+							"depth": 1,
+							"header": "I10. South Guard Tower Second Floor"
+						}
+					]
+				},
+				{
+					"name": "Leilon Point",
+					"headers": [
+						"Location Overview",
+						{
+							"depth": 1,
+							"header": "Quest Goals"
+						},
+						"Arrival at Leilon Point",
+						{
+							"depth": 1,
+							"header": "Leilon Point Locations"
+						},
+						{
+							"depth": 1,
+							"header": "Farmhouses"
+						},
+						{
+							"depth": 1,
+							"header": "Fishing Supply Hut"
+						},
+						{
+							"depth": 1,
+							"header": "Head House"
+						},
+						{
+							"depth": 1,
+							"header": "Huer's Hut"
+						},
+						{
+							"depth": 1,
+							"header": "Umberlee Shrine"
+						},
+						"Arrival at Salt Cave",
+						{
+							"depth": 1,
+							"header": "Salt Cave Locations"
+						},
+						{
+							"depth": 1,
+							"header": "S1. Head Hall"
+						},
+						{
+							"depth": 1,
+							"header": "S2. Clam Cavern"
+						},
+						{
+							"depth": 1,
+							"header": "S3. Training Cavern"
+						},
+						{
+							"depth": 1,
+							"header": "S4. Ritual Cavern"
+						}
+					]
+				},
+				{
+					"name": "Ending the Adventure"
+				},
+				{
+					"name": "Creatures",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Sidekicks",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					},
+					"headers": [
+						"Sidekick Cards",
+						{
+							"depth": 1,
+							"header": "Donnabella Fiasco"
+						},
+						{
+							"depth": 1,
+							"header": "Galandro Luna"
+						},
+						{
+							"depth": 1,
+							"header": "Inverna Nightbreeze"
+						},
+						{
+							"depth": 1,
+							"header": "Nib Addlespur"
+						},
+						{
+							"depth": 1,
+							"header": "Pickled Pete"
+						},
+						{
+							"depth": 1,
+							"header": "Quinn Hightopple"
+						},
+						{
+							"depth": 1,
+							"header": "Ruby Hammerwhacker"
+						},
+						{
+							"depth": 1,
+							"header": "Shanjan Kwan"
+						},
+						{
+							"depth": 1,
+							"header": "Talon Thornwild"
+						},
+						"Sidekick Stat Blocks",
+						"Proficiencies",
+						"Sidekick Level",
+						{
+							"depth": 1,
+							"header": "Experts Beyond 9th Level"
+						},
+						{
+							"depth": 1,
+							"header": "Spellcasters Beyond 9th Level"
+						},
+						{
+							"depth": 1,
+							"header": "Warriors Beyond 9th Level"
+						}
+					]
+				},
+				{
+					"name": "Necromancer's Journal",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "C"
+					}
+				}
+			]
+		},
+		{
 			"name": "Essentials Kit: Divine Contention",
 			"id": "DC",
 			"source": "DC",
+			"parentSource": "ESK",
+			"group": "supplement",
 			"coverUrl": "img/covers/ESK.png",
 			"published": "2019-09-03",
 			"publishedOrder": 3,
@@ -10784,1534 +13937,10 @@
 			]
 		},
 		{
-			"name": "Essentials Kit: Storm Lord's Wrath",
-			"id": "SLW",
-			"source": "SLW",
-			"coverUrl": "img/covers/ESK.png",
-			"published": "2019-09-03",
-			"publishedOrder": 1,
-			"storyline": "Essentials Kit",
-			"level": {
-				"start": 7,
-				"end": 9
-			},
-			"contents": [
-				{
-					"name": "Introduction",
-					"headers": [
-						"Running the Adventure",
-						{
-							"depth": 1,
-							"header": "Abbreviations"
-						},
-						"Running for One Player",
-						{
-							"depth": 1,
-							"header": "Using Sidekicks"
-						},
-						{
-							"depth": 1,
-							"header": "Adjusting Encounters"
-						},
-						{
-							"depth": 1,
-							"header": "High Road"
-						},
-						{
-							"depth": 1,
-							"header": "Kryptgarden Forest"
-						},
-						{
-							"depth": 1,
-							"header": "Leilon"
-						},
-						{
-							"depth": 1,
-							"header": "Mere of Dead Men"
-						},
-						{
-							"depth": 1,
-							"header": "Neverwinter"
-						},
-						{
-							"depth": 1,
-							"header": "Neverwinter Wood"
-						},
-						{
-							"depth": 1,
-							"header": "Phandalin"
-						},
-						{
-							"depth": 1,
-							"header": "Starmetal Hills"
-						},
-						{
-							"depth": 1,
-							"header": "Sword Mountains"
-						},
-						{
-							"depth": 1,
-							"header": "Triboar Trail"
-						},
-						"The Adventure Begins",
-						{
-							"depth": 1,
-							"header": "Adventure Background"
-						},
-						{
-							"depth": 1,
-							"header": "Adventure Hooks"
-						},
-						{
-							"depth": 1,
-							"header": "Mercenaries for Lord Neverember"
-						},
-						{
-							"depth": 1,
-							"header": "Spies for Waterdeep"
-						},
-						{
-							"depth": 1,
-							"header": "Friends and Family"
-						},
-						{
-							"depth": 1,
-							"header": "A Stake in Leilon"
-						},
-						{
-							"depth": 1,
-							"header": "Love of Adventure"
-						}
-					]
-				},
-				{
-					"name": "Welcome to Leilon",
-					"headers": [
-						"Exploring Leilon",
-						{
-							"depth": 1,
-							"header": "Aubrey's Peculiarities Shoppe"
-						},
-						{
-							"depth": 1,
-							"header": "Barge Yard"
-						},
-						{
-							"depth": 1,
-							"header": "Fishery"
-						},
-						{
-							"depth": 1,
-							"header": "House of Thalivar"
-						},
-						{
-							"depth": 1,
-							"header": "Idol Island"
-						},
-						{
-							"depth": 1,
-							"header": "Shrine of Lathander"
-						},
-						{
-							"depth": 1,
-							"header": "Settler Camp"
-						},
-						{
-							"depth": 1,
-							"header": "Grizzelda Copperwraught"
-						},
-						{
-							"depth": 1,
-							"header": "Sergeant Hazz Yorrum"
-						},
-						{
-							"depth": 1,
-							"header": "Merrygold Brightshine"
-						},
-						{
-							"depth": 1,
-							"header": "Valdi Estapaar"
-						},
-						{
-							"depth": 1,
-							"header": "Town Square"
-						},
-						{
-							"depth": 1,
-							"header": "The Quest Board"
-						},
-						{
-							"depth": 1,
-							"header": "Starting Quests"
-						},
-						{
-							"depth": 1,
-							"header": "Attack on the Wayside Inn Quest"
-						},
-						{
-							"depth": 1,
-							"header": "A Normal Day in Leilon Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Follow-Up Quests"
-						},
-						{
-							"depth": 1,
-							"header": "Aid from Phandalin Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Foul Weather at Wayside Quest"
-						},
-						{
-							"depth": 1,
-							"header": "House of Thalivar Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Missing Patrol Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Thunder Cliffs Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Leveling Up"
-						}
-					]
-				},
-				{
-					"name": "Attack on the Wayside Inn",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Undead Attack"
-						},
-						{
-							"depth": 1,
-							"header": "Monsters"
-						},
-						{
-							"depth": 1,
-							"header": "Inn Occupants"
-						},
-						{
-							"depth": 1,
-							"header": "Aftermath"
-						}
-					]
-				},
-				{
-					"name": "A Normal Day in Leilon",
-					"headers": [
-						"A Town Meeting",
-						{
-							"depth": 1,
-							"header": "A Hard Decision"
-						},
-						{
-							"depth": 1,
-							"header": "Chasing the Children"
-						},
-						{
-							"depth": 1,
-							"header": "Storm's Moving In"
-						},
-						{
-							"depth": 1,
-							"header": "Aftermath"
-						},
-						{
-							"depth": 1,
-							"header": "The Request"
-						},
-						{
-							"depth": 1,
-							"header": "Something Fishy in Town"
-						},
-						{
-							"depth": 1,
-							"header": "Approaching the Town"
-						},
-						{
-							"depth": 1,
-							"header": "Aftermath"
-						},
-						{
-							"depth": 1,
-							"header": "Marsh, Unmellow"
-						},
-						{
-							"depth": 1,
-							"header": "Monsters"
-						},
-						{
-							"depth": 1,
-							"header": "Tactics"
-						},
-						{
-							"depth": 1,
-							"header": "Aftermath"
-						},
-						{
-							"depth": 1,
-							"header": "Time to Rest"
-						}
-					]
-				},
-				{
-					"name": "Aid from Phandalin",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Quest Goals"
-						},
-						"Travel to Phandalin",
-						{
-							"depth": 1,
-							"header": "Encounters on the Way"
-						},
-						{
-							"depth": 1,
-							"header": "Goat Check"
-						},
-						{
-							"depth": 1,
-							"header": "Herding"
-						},
-						{
-							"depth": 1,
-							"header": "Hungry Ogres"
-						},
-						"Arrival",
-						{
-							"depth": 1,
-							"header": "On the Town"
-						},
-						{
-							"depth": 1,
-							"header": "Stonehill Inn"
-						},
-						{
-							"depth": 1,
-							"header": "Following Skeel"
-						},
-						{
-							"depth": 1,
-							"header": "Lionshield Coster"
-						},
-						{
-							"depth": 1,
-							"header": "Barthen's Provisions"
-						},
-						{
-							"depth": 1,
-							"header": "Phandalin Miner's Exchange"
-						},
-						{
-							"depth": 1,
-							"header": "Shrine of Luck"
-						},
-						{
-							"depth": 1,
-							"header": "Townmaster's Hall"
-						},
-						"The Attack",
-						{
-							"depth": 1,
-							"header": "Aftermath"
-						}
-					]
-				},
-				{
-					"name": "Foul Weather at Wayside",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Quest Goals"
-						},
-						"Travel to the Inn",
-						{
-							"depth": 1,
-							"header": "A Violent Atmosphere"
-						},
-						{
-							"depth": 1,
-							"header": "Encounters on the Way"
-						},
-						{
-							"depth": 1,
-							"header": "Armor of Talos"
-						},
-						{
-							"depth": 1,
-							"header": "Curse of Talos"
-						},
-						{
-							"depth": 1,
-							"header": "The Creeping Storm"
-						},
-						{
-							"depth": 1,
-							"header": "Aftermath"
-						},
-						{
-							"depth": 1,
-							"header": "Lightning Strikes"
-						},
-						"Arrival",
-						{
-							"depth": 1,
-							"header": "The Victims"
-						},
-						{
-							"depth": 1,
-							"header": "Inside the Inn"
-						},
-						{
-							"depth": 1,
-							"header": "The Common Area and Courtyard"
-						},
-						{
-							"depth": 1,
-							"header": "Upstairs"
-						},
-						{
-							"depth": 1,
-							"header": "The Basement"
-						},
-						{
-							"depth": 1,
-							"header": "Help"
-						},
-						{
-							"depth": 1,
-							"header": "Aftermath"
-						},
-						{
-							"depth": 1,
-							"header": "Failure"
-						},
-						{
-							"depth": 1,
-							"header": "Clues"
-						}
-					]
-				},
-				{
-					"name": "House of Thalivar",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Quest Goals"
-						},
-						"Travel to the Tower",
-						{
-							"depth": 1,
-							"header": "Encounters on the Way"
-						},
-						{
-							"depth": 1,
-							"header": "Cowardly Soldiers"
-						},
-						{
-							"depth": 1,
-							"header": "Strange Sighting"
-						},
-						"Arrival",
-						{
-							"depth": 1,
-							"header": "Dealing with Gallio Elibro"
-						},
-						{
-							"depth": 1,
-							"header": "Gallio's Possession"
-						},
-						{
-							"depth": 1,
-							"header": "Ghostly Events"
-						},
-						{
-							"depth": 1,
-							"header": "Confronting Thalivar's Ghost"
-						},
-						{
-							"depth": 1,
-							"header": "House of Thalivar Locations"
-						},
-						{
-							"depth": 1,
-							"header": "H1. Tower Exterior"
-						},
-						{
-							"depth": 1,
-							"header": "H2. Entry Hall"
-						},
-						{
-							"depth": 1,
-							"header": "H3. Gallio's Study"
-						},
-						{
-							"depth": 1,
-							"header": "H4. Kitchen"
-						},
-						{
-							"depth": 1,
-							"header": "H5. Servant's Quarters"
-						},
-						{
-							"depth": 1,
-							"header": "H6. Library"
-						},
-						{
-							"depth": 1,
-							"header": "Trapped Statues"
-						},
-						{
-							"depth": 1,
-							"header": "H7. Scaffolds"
-						},
-						{
-							"depth": 1,
-							"header": "H8. Collapsed Rooms"
-						},
-						{
-							"depth": 1,
-							"header": "H9. Thalivar's Bedroom"
-						},
-						{
-							"depth": 1,
-							"header": "H10. Broken Beacon"
-						},
-						{
-							"depth": 1,
-							"header": "Ghostly Farewell"
-						}
-					]
-				},
-				{
-					"name": "Missing Patrol",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Quest Goals"
-						},
-						"Travel in the Mere",
-						{
-							"depth": 1,
-							"header": "Encounters in the Mere"
-						},
-						{
-							"depth": 1,
-							"header": "Yuan-ti Scouts"
-						},
-						{
-							"depth": 1,
-							"header": "Pit of Snakes"
-						},
-						{
-							"depth": 1,
-							"header": "Quicksand and Alligators"
-						},
-						{
-							"depth": 1,
-							"header": "Troll Brawl"
-						},
-						{
-							"depth": 1,
-							"header": "Hydra Wranglers"
-						},
-						{
-							"depth": 1,
-							"header": "Tracking the Lizards"
-						},
-						{
-							"depth": 1,
-							"header": "Following the Tracks"
-						},
-						{
-							"depth": 1,
-							"header": "Fighting the Lizards"
-						},
-						{
-							"depth": 1,
-							"header": "Lizardfolk Forces"
-						},
-						{
-							"depth": 1,
-							"header": "The Unfolding Situation"
-						},
-						{
-							"depth": 1,
-							"header": "A Rotten Way to Die"
-						},
-						{
-							"depth": 1,
-							"header": "Aftermath"
-						}
-					]
-				},
-				{
-					"name": "Thunder Cliffs",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Quest Goals"
-						},
-						"Travel to the Cliffs",
-						{
-							"depth": 1,
-							"header": "Meeting the Captains"
-						},
-						{
-							"depth": 1,
-							"header": "The Interview"
-						},
-						{
-							"depth": 1,
-							"header": "A Secret Agent"
-						},
-						{
-							"depth": 1,
-							"header": "A Decision"
-						},
-						"Encounters on the Way",
-						{
-							"depth": 1,
-							"header": "Mutinous Intentions"
-						},
-						{
-							"depth": 1,
-							"header": "The Moment of Truth"
-						},
-						{
-							"depth": 1,
-							"header": "Allow the Mutiny"
-						},
-						{
-							"depth": 1,
-							"header": "Talk"
-						},
-						{
-							"depth": 1,
-							"header": "Fight"
-						},
-						{
-							"depth": 1,
-							"header": "Bad News"
-						},
-						{
-							"depth": 1,
-							"header": "Ghost Ship"
-						},
-						"Arrival",
-						{
-							"depth": 1,
-							"header": "Threats by Air"
-						},
-						{
-							"depth": 1,
-							"header": "Talos is Angry"
-						},
-						{
-							"depth": 1,
-							"header": "Sea Galley"
-						},
-						"Thunder Cliffs Caves",
-						{
-							"depth": 1,
-							"header": "1. Unsure Shore"
-						},
-						{
-							"depth": 1,
-							"header": "2. Unhappy Cultists"
-						},
-						{
-							"depth": 1,
-							"header": "A Better Offer?"
-						},
-						{
-							"depth": 1,
-							"header": "Success!"
-						},
-						{
-							"depth": 1,
-							"header": "3. Sea Hag Coven"
-						},
-						{
-							"depth": 1,
-							"header": "Accessing the Cave"
-						},
-						{
-							"depth": 1,
-							"header": "The Coven Cave"
-						},
-						{
-							"depth": 1,
-							"header": "A Nice Chat"
-						},
-						{
-							"depth": 1,
-							"header": "4. The Dying Second"
-						},
-						{
-							"depth": 1,
-							"header": "The Sick Room"
-						},
-						{
-							"depth": 1,
-							"header": "5. The Cultist's Quarters"
-						},
-						{
-							"depth": 1,
-							"header": "The Blowhole"
-						},
-						{
-							"depth": 1,
-							"header": "6. Loot"
-						},
-						{
-							"depth": 1,
-							"header": "Trap"
-						},
-						{
-							"depth": 1,
-							"header": "7. Gadrille the Reef-Reaver"
-						},
-						{
-							"depth": 1,
-							"header": "Swirling Pool Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "Shrine Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "Treasury"
-						},
-						{
-							"depth": 1,
-							"header": "Aftermath"
-						}
-					]
-				},
-				{
-					"name": "Ending the Adventure",
-					"headers": [
-						"Duties in Leilon",
-						"Continuing the Story"
-					]
-				},
-				{
-					"name": "Creatures",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "A"
-					}
-				},
-				{
-					"name": "Sidekicks",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "B"
-					},
-					"headers": [
-						"Sidekick Cards",
-						{
-							"depth": 1,
-							"header": "Donnabella Fiasco"
-						},
-						{
-							"depth": 1,
-							"header": "Galandro Luna"
-						},
-						{
-							"depth": 1,
-							"header": "Inverna Nightbreeze"
-						},
-						{
-							"depth": 1,
-							"header": "Nib Addlespur"
-						},
-						{
-							"depth": 1,
-							"header": "Pickled Pete"
-						},
-						{
-							"depth": 1,
-							"header": "Quinn Hightopple"
-						},
-						{
-							"depth": 1,
-							"header": "Ruby Hammerwhacker"
-						},
-						{
-							"depth": 1,
-							"header": "Shanjan Kwan"
-						},
-						{
-							"depth": 1,
-							"header": "Talon Thornwild"
-						},
-						"Sidekick Stat Blocks",
-						"Proficiencies",
-						"Sidekick Level",
-						{
-							"depth": 1,
-							"header": "Experts Beyond 11th Level"
-						},
-						{
-							"depth": 1,
-							"header": "Spellcasters Beyond 11th Level"
-						},
-						{
-							"depth": 1,
-							"header": "Warriors Beyond 11th Level"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Essentials Kit: Sleeping Dragon's Wake",
-			"id": "SDW",
-			"source": "SDW",
-			"coverUrl": "img/covers/ESK.png",
-			"published": "2019-09-03",
-			"publishedOrder": 2,
-			"storyline": "Essentials Kit",
-			"level": {
-				"start": 9,
-				"end": 11
-			},
-			"contents": [
-				{
-					"name": "Introduction",
-					"headers": [
-						"Running the Adventure",
-						{
-							"depth": 1,
-							"header": "Abbreviations"
-						},
-						"Running for One Player",
-						{
-							"depth": 1,
-							"header": "Using Sidekicks"
-						},
-						{
-							"depth": 1,
-							"header": "Adjusting Encounters"
-						},
-						{
-							"depth": 1,
-							"header": "Conyberry"
-						},
-						{
-							"depth": 1,
-							"header": "Crags"
-						},
-						{
-							"depth": 1,
-							"header": "High Road"
-						},
-						{
-							"depth": 1,
-							"header": "Kryptgarden Forest"
-						},
-						{
-							"depth": 1,
-							"header": "Leilon"
-						},
-						{
-							"depth": 1,
-							"header": "Mere of Dead Men"
-						},
-						{
-							"depth": 1,
-							"header": "Neverwinter"
-						},
-						{
-							"depth": 1,
-							"header": "Neverwinter Wood"
-						},
-						{
-							"depth": 1,
-							"header": "Phandalin"
-						},
-						{
-							"depth": 1,
-							"header": "Starmetal Hills"
-						},
-						{
-							"depth": 1,
-							"header": "Sword Mountains"
-						},
-						{
-							"depth": 1,
-							"header": "Triboar Trail"
-						},
-						"The Adventure Begins",
-						{
-							"depth": 1,
-							"header": "Adventure Background"
-						}
-					]
-				},
-				{
-					"name": "Welcome to Leilon",
-					"headers": [
-						"Exploring Leilon",
-						{
-							"depth": 1,
-							"header": "Aubrey's Peculiarities Shoppe"
-						},
-						{
-							"depth": 1,
-							"header": "Barge Yard"
-						},
-						{
-							"depth": 1,
-							"header": "Fishery"
-						},
-						{
-							"depth": 1,
-							"header": "House of Thalivar"
-						},
-						{
-							"depth": 1,
-							"header": "Idol Island"
-						},
-						{
-							"depth": 1,
-							"header": "Lathander Shrine"
-						},
-						{
-							"depth": 1,
-							"header": "Settler Camp"
-						},
-						{
-							"depth": 1,
-							"header": "Torver's Post"
-						},
-						{
-							"depth": 1,
-							"header": "Town Square"
-						},
-						{
-							"depth": 1,
-							"header": "Tymora Shrine"
-						},
-						{
-							"depth": 1,
-							"header": "Umber Hulk's Shell Inn"
-						},
-						{
-							"depth": 1,
-							"header": "The Quest Board"
-						},
-						{
-							"depth": 1,
-							"header": "Starting Quests"
-						},
-						{
-							"depth": 1,
-							"header": "Death Knight-Dreadnaught Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Leilon Point Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Follow-Up Quests"
-						},
-						{
-							"depth": 1,
-							"header": "Bronze Shrine Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Iniarv's Tower Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Claugiyliamatar's Lair Quest"
-						},
-						{
-							"depth": 1,
-							"header": "Leveling Up"
-						}
-					]
-				},
-				{
-					"name": "Bronze Shrine",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Quest Goals"
-						},
-						"Travel to the Shrine",
-						"Arrival",
-						{
-							"depth": 1,
-							"header": "Climbing the Shrine"
-						},
-						{
-							"depth": 1,
-							"header": "Bronze Shrine Locations"
-						},
-						{
-							"depth": 1,
-							"header": "B1. Jetty"
-						},
-						{
-							"depth": 1,
-							"header": "B2. Guarded Entry"
-						},
-						{
-							"depth": 1,
-							"header": "Molten Bronze Trap"
-						},
-						{
-							"depth": 1,
-							"header": "B3. Scaly Eye Tombs"
-						},
-						{
-							"depth": 1,
-							"header": "B4. Scaly Eye Chambers"
-						},
-						{
-							"depth": 1,
-							"header": "B5. Bronze Gate Entrance"
-						},
-						{
-							"depth": 1,
-							"header": "B6. Statue Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "B7. Ascension Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "Stair Trap"
-						},
-						{
-							"depth": 1,
-							"header": "B8. Lhammaruntosz's Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "Innate Spellcasting"
-						},
-						{
-							"depth": 1,
-							"header": "Regeneration"
-						},
-						{
-							"depth": 1,
-							"header": "Spellcasting"
-						},
-						{
-							"depth": 1,
-							"header": "Lhammaruntosz's Thanks"
-						},
-						{
-							"depth": 1,
-							"header": "Treasure"
-						}
-					]
-				},
-				{
-					"name": "Claugiyliamatar's Lair",
-					"headers": [
-						"Location Overview",
-						"Travel to the Lair",
-						{
-							"depth": 1,
-							"header": "Myrkul Patrol"
-						},
-						"Arrival",
-						{
-							"depth": 1,
-							"header": "Lair Locations"
-						},
-						{
-							"depth": 1,
-							"header": "C1. Lookout Post"
-						},
-						{
-							"depth": 1,
-							"header": "C2. Owlbear Pens"
-						},
-						{
-							"depth": 1,
-							"header": "C3. Gnawbones Camp"
-						},
-						{
-							"depth": 1,
-							"header": "Pot of Poison"
-						},
-						{
-							"depth": 1,
-							"header": "Secret Poison Pit"
-						},
-						{
-							"depth": 1,
-							"header": "C4. Enchanting Spore Cavern"
-						},
-						{
-							"depth": 1,
-							"header": "Statues"
-						},
-						{
-							"depth": 1,
-							"header": "C5. Vine Stairway"
-						},
-						{
-							"depth": 1,
-							"header": "C6. Phase Spider Den"
-						},
-						{
-							"depth": 1,
-							"header": "C7. Slime Pool Overlook"
-						},
-						{
-							"depth": 1,
-							"header": "C8. Slime Pools"
-						},
-						{
-							"depth": 1,
-							"header": "Pushing Vines"
-						},
-						{
-							"depth": 1,
-							"header": "Slime Tunnel"
-						},
-						{
-							"depth": 1,
-							"header": "Statues"
-						},
-						{
-							"depth": 1,
-							"header": "C9. Zuri's Hidden Hoard"
-						},
-						{
-							"depth": 1,
-							"header": "C10. Bridge"
-						},
-						{
-							"depth": 1,
-							"header": "C11. Statue Overlook"
-						},
-						{
-							"depth": 1,
-							"header": "Statues"
-						},
-						{
-							"depth": 1,
-							"header": "C12. Map Room"
-						},
-						{
-							"depth": 1,
-							"header": "Hidden Message"
-						},
-						{
-							"depth": 1,
-							"header": "C13. Claugiyliamatar's Cavern"
-						},
-						{
-							"depth": 1,
-							"header": "Roleplaying Claugiyliamatar"
-						},
-						{
-							"depth": 1,
-							"header": "C14. Claugiyliamatar's Hoard"
-						},
-						{
-							"depth": 1,
-							"header": "Statues"
-						},
-						{
-							"depth": 1,
-							"header": "Finding Viantha"
-						},
-						{
-							"depth": 1,
-							"header": "Undead Encounter"
-						},
-						{
-							"depth": 1,
-							"header": "Viantha Found"
-						},
-						{
-							"depth": 1,
-							"header": "Roleplaying Viantha"
-						},
-						{
-							"depth": 1,
-							"header": "Return to the Lair"
-						}
-					]
-				},
-				{
-					"name": "Death Knight-Dreadnaught",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Quest Goals"
-						},
-						"Travel to the Ship",
-						"Arrival",
-						{
-							"depth": 1,
-							"header": "Staked Zombies"
-						},
-						{
-							"depth": 1,
-							"header": "Where is Fheralai Stormsworn?"
-						},
-						{
-							"depth": 1,
-							"header": "Death Knight's Soul"
-						},
-						{
-							"depth": 1,
-							"header": "Dreadnaught Locations"
-						},
-						{
-							"depth": 1,
-							"header": "D1. Coastal Rocks"
-						},
-						{
-							"depth": 1,
-							"header": "D2. Skeletal Figurehead"
-						},
-						{
-							"depth": 1,
-							"header": "Halberd"
-						},
-						{
-							"depth": 1,
-							"header": "D3. Main Deck"
-						},
-						{
-							"depth": 1,
-							"header": "D4. Hellfire Orb"
-						},
-						{
-							"depth": 1,
-							"header": "D5. Forecastle"
-						},
-						{
-							"depth": 1,
-							"header": "D6. Quarterdeck"
-						},
-						{
-							"depth": 1,
-							"header": "D7. Poop Deck"
-						},
-						{
-							"depth": 1,
-							"header": "D8. Chart Room"
-						},
-						{
-							"depth": 1,
-							"header": "D9. Storage Lockers"
-						},
-						{
-							"depth": 1,
-							"header": "D10. Captain's Cabin"
-						},
-						{
-							"depth": 1,
-							"header": "D11. Oar Deck"
-						},
-						{
-							"depth": 1,
-							"header": "Skeleton Crew"
-						},
-						{
-							"depth": 1,
-							"header": "D12. Badwind's Cabin"
-						},
-						{
-							"depth": 1,
-							"header": "D13. Magazine"
-						},
-						{
-							"depth": 1,
-							"header": "D14. Crew Quarters"
-						},
-						{
-							"depth": 1,
-							"header": "D15. Galley"
-						},
-						{
-							"depth": 1,
-							"header": "D16. Surgery"
-						},
-						{
-							"depth": 1,
-							"header": "D17. Death Knight's Soul"
-						},
-						{
-							"depth": 1,
-							"header": "The Bard"
-						},
-						{
-							"depth": 1,
-							"header": "D18. Stores"
-						},
-						{
-							"depth": 1,
-							"header": "D19. Prisoner Cell"
-						},
-						{
-							"depth": 1,
-							"header": "D20. Armory"
-						},
-						{
-							"depth": 1,
-							"header": "D21. Flooded Hold"
-						}
-					]
-				},
-				{
-					"name": "Iniarv's Tower",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Quest Goals"
-						},
-						"Travel to Iniarv's Tower",
-						{
-							"depth": 1,
-							"header": "Zombie Escape"
-						},
-						"Arrival",
-						{
-							"depth": 1,
-							"header": "Iniarv's Tower Locations"
-						},
-						{
-							"depth": 1,
-							"header": "I1. Walls"
-						},
-						{
-							"depth": 1,
-							"header": "I2. Pit Trap"
-						},
-						{
-							"depth": 1,
-							"header": "I3. Gatehouse"
-						},
-						{
-							"depth": 1,
-							"header": "Doors and Portcullises"
-						},
-						{
-							"depth": 1,
-							"header": "Murder Holes"
-						},
-						{
-							"depth": 1,
-							"header": "I4. Courtyard"
-						},
-						{
-							"depth": 1,
-							"header": "Slippery Mud"
-						},
-						{
-							"depth": 1,
-							"header": "I5. Main Tower"
-						},
-						{
-							"depth": 1,
-							"header": "Collapsed Cellar Entrance"
-						},
-						{
-							"depth": 1,
-							"header": "I6. Main Tower Roof"
-						},
-						{
-							"depth": 1,
-							"header": "I7. North Guard Tower First Floor"
-						},
-						{
-							"depth": 1,
-							"header": "Ladder"
-						},
-						{
-							"depth": 1,
-							"header": "Steel Box"
-						},
-						{
-							"depth": 1,
-							"header": "I8. North Guard Tower Second Floor"
-						},
-						{
-							"depth": 1,
-							"header": "I9. South Guard Tower First Floor"
-						},
-						{
-							"depth": 1,
-							"header": "I10. South Guard Tower Second Floor"
-						}
-					]
-				},
-				{
-					"name": "Leilon Point",
-					"headers": [
-						"Location Overview",
-						{
-							"depth": 1,
-							"header": "Quest Goals"
-						},
-						"Arrival at Leilon Point",
-						{
-							"depth": 1,
-							"header": "Leilon Point Locations"
-						},
-						{
-							"depth": 1,
-							"header": "Farmhouses"
-						},
-						{
-							"depth": 1,
-							"header": "Fishing Supply Hut"
-						},
-						{
-							"depth": 1,
-							"header": "Head House"
-						},
-						{
-							"depth": 1,
-							"header": "Huer's Hut"
-						},
-						{
-							"depth": 1,
-							"header": "Umberlee Shrine"
-						},
-						"Arrival at Salt Cave",
-						{
-							"depth": 1,
-							"header": "Salt Cave Locations"
-						},
-						{
-							"depth": 1,
-							"header": "S1. Head Hall"
-						},
-						{
-							"depth": 1,
-							"header": "S2. Clam Cavern"
-						},
-						{
-							"depth": 1,
-							"header": "S3. Training Cavern"
-						},
-						{
-							"depth": 1,
-							"header": "S4. Ritual Cavern"
-						}
-					]
-				},
-				{
-					"name": "Ending the Adventure"
-				},
-				{
-					"name": "Creatures",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "A"
-					}
-				},
-				{
-					"name": "Sidekicks",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "B"
-					},
-					"headers": [
-						"Sidekick Cards",
-						{
-							"depth": 1,
-							"header": "Donnabella Fiasco"
-						},
-						{
-							"depth": 1,
-							"header": "Galandro Luna"
-						},
-						{
-							"depth": 1,
-							"header": "Inverna Nightbreeze"
-						},
-						{
-							"depth": 1,
-							"header": "Nib Addlespur"
-						},
-						{
-							"depth": 1,
-							"header": "Pickled Pete"
-						},
-						{
-							"depth": 1,
-							"header": "Quinn Hightopple"
-						},
-						{
-							"depth": 1,
-							"header": "Ruby Hammerwhacker"
-						},
-						{
-							"depth": 1,
-							"header": "Shanjan Kwan"
-						},
-						{
-							"depth": 1,
-							"header": "Talon Thornwild"
-						},
-						"Sidekick Stat Blocks",
-						"Proficiencies",
-						"Sidekick Level",
-						{
-							"depth": 1,
-							"header": "Experts Beyond 9th Level"
-						},
-						{
-							"depth": 1,
-							"header": "Spellcasters Beyond 9th Level"
-						},
-						{
-							"depth": 1,
-							"header": "Warriors Beyond 9th Level"
-						}
-					]
-				},
-				{
-					"name": "Necromancer's Journal",
-					"ordinal": {
-						"type": "appendix",
-						"identifier": "C"
-					}
-				}
-			]
-		},
-		{
 			"name": "Baldur's Gate: Descent Into Avernus",
 			"id": "BGDIA",
 			"source": "BGDIA",
+			"group": "supplement",
 			"coverUrl": "img/covers/BGDIA.png",
 			"published": "2019-09-18",
 			"storyline": "Baldur's Gate",
@@ -13199,6 +14828,7 @@
 			"name": "Locathah Rising",
 			"id": "LR",
 			"source": "LR",
+			"group": "supplement-alt",
 			"coverUrl": "img/covers/LR.png",
 			"published": "2019-09-19",
 			"storyline": "Extra Life",
@@ -13294,6 +14924,7 @@
 			"name": "Infernal Machine Rebuild",
 			"id": "IMR",
 			"source": "IMR",
+			"group": "supplement-alt",
 			"coverUrl": "img/covers/IMR.png",
 			"published": "2019-11-12",
 			"storyline": "Extra Life",
@@ -13667,6 +15298,7 @@
 			"name": "Eberron: Forgotten Relics",
 			"id": "EFR",
 			"source": "EFR",
+			"group": "supplement",
 			"coverUrl": "img/covers/ERLW.png",
 			"published": "2019-11-19",
 			"storyline": "Eberron",
@@ -13754,6 +15386,7 @@
 			"name": "The Lost Dungeon of Rickedness: Big Rick Energy",
 			"id": "RMBRE",
 			"source": "RMBRE",
+			"group": "supplement",
 			"coverUrl": "img/covers/RMR.png",
 			"published": "2019-11-19",
 			"storyline": "Rick and Morty",
@@ -13964,136 +15597,11 @@
 			]
 		},
 		{
-			"name": "Wildemount: Frozen Sick",
-			"id": "FS",
-			"source": "FS",
-			"coverUrl": "img/covers/EGW.png",
-			"published": "2020-03-17",
-			"publishedOrder": 2,
-			"storyline": "Wildemount",
-			"level": {
-				"start": 1,
-				"end": 3
-			},
-			"contents": [
-				{
-					"name": "Frozen Sick",
-					"headers": [
-						"Story Overview",
-						"Mystery in Palebank Village",
-						"Croaker Cave",
-						{
-							"depth": 1,
-							"header": "C1. Entrance Pool"
-						},
-						{
-							"depth": 1,
-							"header": "C2. Training Pool"
-						},
-						{
-							"depth": 1,
-							"header": "C3. Bat Cavern"
-						},
-						{
-							"depth": 1,
-							"header": "C4. Bandit Camp"
-						},
-						{
-							"depth": 1,
-							"header": "C5. Old Croaker's Pool"
-						},
-						{
-							"depth": 1,
-							"header": "C6. Hulil's Cavern"
-						},
-						"Jolly Dwarf",
-						"Traveling to Eiselcross",
-						"Syrinlya",
-						"Into the Wilds",
-						"Salsvault",
-						{
-							"depth": 1,
-							"header": "S1. Entrance Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "S2. Ransacked Frigid Woe Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S3. Animated Armor Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S4. Frigid Woe Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S5. Disease Storage"
-						},
-						{
-							"depth": 1,
-							"header": "S6. North Hall"
-						},
-						"Salsvault (areas S7-S12)",
-						{
-							"depth": 1,
-							"header": "S7. Unoccupied Dorm"
-						},
-						{
-							"depth": 1,
-							"header": "S8. Ruined Dorm"
-						},
-						{
-							"depth": 1,
-							"header": "S9. Zombie Dorm"
-						},
-						{
-							"depth": 1,
-							"header": "S10. Ferol Sal's Chamber"
-						},
-						{
-							"depth": 1,
-							"header": "S11. Kitchen"
-						},
-						{
-							"depth": 1,
-							"header": "S12. Dining Hall"
-						},
-						"Salsvault (areas S13-S18)",
-						{
-							"depth": 1,
-							"header": "S13. Drowned Library"
-						},
-						{
-							"depth": 1,
-							"header": "S14. South Hall"
-						},
-						{
-							"depth": 1,
-							"header": "S15. Animated Weapon Storage"
-						},
-						{
-							"depth": 1,
-							"header": "S16. Golem Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S17. Ferol's Laboratory"
-						},
-						{
-							"depth": 1,
-							"header": "S18. Drowned Curative Laboratory"
-						},
-						"Concluding the Adventure"
-					]
-				}
-			]
-		},
-		{
 			"name": "Wildemount: Dangerous Designs",
 			"id": "DD",
 			"source": "DD",
+			"parentSource": "EGW",
+			"group": "supplement",
 			"coverUrl": "img/covers/EGW.png",
 			"published": "2020-03-17",
 			"publishedOrder": 1,
@@ -14227,9 +15735,211 @@
 			]
 		},
 		{
+			"name": "Wildemount: Frozen Sick",
+			"id": "FS",
+			"source": "FS",
+			"parentSource": "EGW",
+			"group": "supplement",
+			"coverUrl": "img/covers/EGW.png",
+			"published": "2020-03-17",
+			"publishedOrder": 2,
+			"storyline": "Wildemount",
+			"level": {
+				"start": 1,
+				"end": 3
+			},
+			"contents": [
+				{
+					"name": "Frozen Sick",
+					"headers": [
+						"Story Overview",
+						"Mystery in Palebank Village",
+						"Croaker Cave",
+						{
+							"depth": 1,
+							"header": "C1. Entrance Pool"
+						},
+						{
+							"depth": 1,
+							"header": "C2. Training Pool"
+						},
+						{
+							"depth": 1,
+							"header": "C3. Bat Cavern"
+						},
+						{
+							"depth": 1,
+							"header": "C4. Bandit Camp"
+						},
+						{
+							"depth": 1,
+							"header": "C5. Old Croaker's Pool"
+						},
+						{
+							"depth": 1,
+							"header": "C6. Hulil's Cavern"
+						},
+						"Jolly Dwarf",
+						"Traveling to Eiselcross",
+						"Syrinlya",
+						"Into the Wilds",
+						"Salsvault",
+						{
+							"depth": 1,
+							"header": "S1. Entrance Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "S2. Ransacked Frigid Woe Laboratory"
+						},
+						{
+							"depth": 1,
+							"header": "S3. Animated Armor Laboratory"
+						},
+						{
+							"depth": 1,
+							"header": "S4. Frigid Woe Laboratory"
+						},
+						{
+							"depth": 1,
+							"header": "S5. Disease Storage"
+						},
+						{
+							"depth": 1,
+							"header": "S6. North Hall"
+						},
+						"Salsvault (areas S7-S12)",
+						{
+							"depth": 1,
+							"header": "S7. Unoccupied Dorm"
+						},
+						{
+							"depth": 1,
+							"header": "S8. Ruined Dorm"
+						},
+						{
+							"depth": 1,
+							"header": "S9. Zombie Dorm"
+						},
+						{
+							"depth": 1,
+							"header": "S10. Ferol Sal's Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "S11. Kitchen"
+						},
+						{
+							"depth": 1,
+							"header": "S12. Dining Hall"
+						},
+						"Salsvault (areas S13-S18)",
+						{
+							"depth": 1,
+							"header": "S13. Drowned Library"
+						},
+						{
+							"depth": 1,
+							"header": "S14. South Hall"
+						},
+						{
+							"depth": 1,
+							"header": "S15. Animated Weapon Storage"
+						},
+						{
+							"depth": 1,
+							"header": "S16. Golem Laboratory"
+						},
+						{
+							"depth": 1,
+							"header": "S17. Ferol's Laboratory"
+						},
+						{
+							"depth": 1,
+							"header": "S18. Drowned Curative Laboratory"
+						},
+						"Concluding the Adventure"
+					]
+				}
+			]
+		},
+		{
+			"name": "Wildemount: Tide of Retribution",
+			"id": "ToR",
+			"source": "ToR",
+			"parentSource": "EGW",
+			"group": "supplement",
+			"coverUrl": "img/covers/EGW.png",
+			"published": "2020-03-17",
+			"publishedOrder": 0,
+			"storyline": "Wildemount",
+			"level": {
+				"start": 1,
+				"end": 3
+			},
+			"contents": [
+				{
+					"name": "Tide of Retribution",
+					"headers": [
+						"Story Overview",
+						"Adventure Summary",
+						"Setup and Starting Points",
+						"That Sinking Feeling",
+						{
+							"depth": 1,
+							"header": "P1. South Shore"
+						},
+						{
+							"depth": 1,
+							"header": "P2. West Shore"
+						},
+						{
+							"depth": 1,
+							"header": "P3. North Shore"
+						},
+						{
+							"depth": 1,
+							"header": "P4. East Shore"
+						},
+						{
+							"depth": 1,
+							"header": "P5. Bridge"
+						},
+						{
+							"depth": 1,
+							"header": "P6. Cliffs."
+						},
+						{
+							"depth": 1,
+							"header": "P7. Farmer's Cottage"
+						},
+						{
+							"depth": 1,
+							"header": "P8. Docks"
+						},
+						{
+							"depth": 1,
+							"header": "P9. Tavern"
+						},
+						{
+							"depth": 1,
+							"header": "P10. Public Square"
+						},
+						"Seafarers",
+						"Hunger of the Deep",
+						"Ambush at Palma Flora",
+						"Concluding the Adventure",
+						"Character Advancement"
+					]
+				}
+			]
+		},
+		{
 			"name": "Wildemount: Unwelcome Spirits",
 			"id": "US",
 			"source": "US",
+			"parentSource": "EGW",
+			"group": "supplement",
 			"coverUrl": "img/covers/EGW.png",
 			"published": "2020-03-17",
 			"publishedOrder": 3,
@@ -14336,78 +16046,10 @@
 			]
 		},
 		{
-			"name": "Wildemount: Tide of Retribution",
-			"id": "ToR",
-			"source": "ToR",
-			"coverUrl": "img/covers/EGW.png",
-			"published": "2020-03-17",
-			"publishedOrder": 0,
-			"storyline": "Wildemount",
-			"level": {
-				"start": 1,
-				"end": 3
-			},
-			"contents": [
-				{
-					"name": "Tide of Retribution",
-					"headers": [
-						"Story Overview",
-						"Adventure Summary",
-						"Setup and Starting Points",
-						"That Sinking Feeling",
-						{
-							"depth": 1,
-							"header": "P1. South Shore"
-						},
-						{
-							"depth": 1,
-							"header": "P2. West Shore"
-						},
-						{
-							"depth": 1,
-							"header": "P3. North Shore"
-						},
-						{
-							"depth": 1,
-							"header": "P4. East Shore"
-						},
-						{
-							"depth": 1,
-							"header": "P5. Bridge"
-						},
-						{
-							"depth": 1,
-							"header": "P6. Cliffs."
-						},
-						{
-							"depth": 1,
-							"header": "P7. Farmer's Cottage"
-						},
-						{
-							"depth": 1,
-							"header": "P8. Docks"
-						},
-						{
-							"depth": 1,
-							"header": "P9. Tavern"
-						},
-						{
-							"depth": 1,
-							"header": "P10. Public Square"
-						},
-						"Seafarers",
-						"Hunger of the Deep",
-						"Ambush at Palma Flora",
-						"Concluding the Adventure",
-						"Character Advancement"
-					]
-				}
-			]
-		},
-		{
-			"name": "No Silent Secret",
+			"name": "Theros: No Silent Secret",
 			"id": "MOT-NSS",
 			"source": "MOT",
+			"group": "supplement",
 			"coverUrl": "img/covers/MOT.png",
 			"published": "2020-06-02",
 			"storyline": "Mythic Odysseys of Theros",
@@ -14467,6 +16109,7 @@
 			"name": "Icewind Dale: Rime of the Frostmaiden",
 			"id": "IDRotF",
 			"source": "IDRotF",
+			"group": "supplement",
 			"coverUrl": "img/covers/IDRotF.png",
 			"published": "2020-09-15",
 			"storyline": "Icewind Dale",
@@ -16082,6 +17725,10 @@
 						},
 						{
 							"depth": 1,
+							"header": "Spire of Iriolarthas (Y19a-Y19h)"
+						},
+						{
+							"depth": 1,
 							"header": "Y20. Tower of Evocation"
 						},
 						{
@@ -16202,6 +17849,8 @@
 			"name": "Candlekeep Mysteries",
 			"id": "CM",
 			"source": "CM",
+			"group": "supplement",
+			"coverUrl": "img/covers/CM.png",
 			"published": "2021-03-16",
 			"storyline": "Candlekeep Mysteries",
 			"level": {
@@ -17230,6 +18879,1373 @@
 						"Xanthoria's Defeat ",
 						"Lichen Lich"
 					]
+				}
+			]
+		},
+		{
+			"name": "Ravenloft: The House of Lament",
+			"id": "HoL",
+			"source": "HoL",
+			"group": "supplement",
+			"coverUrl": "img/covers/VRGR.png",
+			"published": "2021-05-18",
+			"storyline": "Ravenloft",
+			"level": {
+				"start": 1,
+				"end": 3
+			},
+			"contents": [
+				{
+					"name": "The House of Lament",
+					"headers": [
+						"Story Overview",
+						"Running the Adventure",
+						"The Hauntings of Halvhrest House",
+						"Starting the Adventure",
+						"Adventure Flowchart",
+						"House of Lament Features",
+						"House of Lament Locations (1-9)",
+						{
+							"depth": 1,
+							"header": "1. Porch"
+						},
+						{
+							"depth": 1,
+							"header": "2. Foyer"
+						},
+						{
+							"depth": 1,
+							"header": "3. Parlor"
+						},
+						{
+							"depth": 1,
+							"header": "4. Gallery"
+						},
+						{
+							"depth": 1,
+							"header": "5a. Tower Base"
+						},
+						{
+							"depth": 1,
+							"header": "5b. Tower Heights"
+						},
+						{
+							"depth": 1,
+							"header": "6. Sitting Room"
+						},
+						{
+							"depth": 1,
+							"header": "7. Conservatory"
+						},
+						{
+							"depth": 1,
+							"header": "8. Ballroom"
+						},
+						{
+							"depth": 1,
+							"header": "9. First Floor Hall"
+						},
+						"House of Lament Locations (10-18)",
+						{
+							"depth": 1,
+							"header": "10. Kitchen"
+						},
+						{
+							"depth": 1,
+							"header": "11. Dining Room"
+						},
+						{
+							"depth": 1,
+							"header": "12. Music Room"
+						},
+						{
+							"depth": 1,
+							"header": "13. Second-Floor Hall"
+						},
+						{
+							"depth": 1,
+							"header": "14. Guest Bedrooms"
+						},
+						{
+							"depth": 1,
+							"header": "15. Morning Room"
+						},
+						{
+							"depth": 1,
+							"header": "16. Master Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "17. Master Bath"
+						},
+						{
+							"depth": 1,
+							"header": "18. Office"
+						},
+						"House of Lament Locations (19-27)",
+						{
+							"depth": 1,
+							"header": "19. Exterior Balcony"
+						},
+						{
+							"depth": 1,
+							"header": "20. Third-Floor Hall"
+						},
+						{
+							"depth": 1,
+							"header": "21. Servants' Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "22. Family Room"
+						},
+						{
+							"depth": 1,
+							"header": "23. Nursery"
+						},
+						{
+							"depth": 1,
+							"header": "24. Children's Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "25. Widow's Walk"
+						},
+						{
+							"depth": 1,
+							"header": "26. Tower Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "27. Wine Cellar"
+						},
+						"House of Lament Locations (28-31)",
+						{
+							"depth": 1,
+							"header": "28. Storage"
+						},
+						{
+							"depth": 1,
+							"header": "29. Buried Ruins"
+						},
+						{
+							"depth": 1,
+							"header": "30. Buried Tower"
+						},
+						{
+							"depth": 1,
+							"header": "31. Amber Cavity"
+						},
+						"Escaping the House",
+						"Beyond the House"
+					]
+				}
+			]
+		},
+		{
+			"name": "Return to the Glory",
+			"id": "RtG",
+			"source": "RtG",
+			"group": "supplement-alt",
+			"coverUrl": "img/covers/RtG.png",
+			"published": "2021-05-21",
+			"storyline": "Extra Life",
+			"level": {
+				"start": 6,
+				"end": 8
+			},
+			"contents": [
+				{
+					"name": "Adventure Primer",
+					"headers": [
+						"Boneyard",
+						"Eroding Ones",
+						"Chambers of the Overlox",
+						"Found Fortunate",
+						"Watchful Eye",
+						"Song Trackers",
+						"Lake of the Ancestors",
+						"Rotting Root",
+						"Red Wardens",
+						"Luthic's Zealots",
+						"Fang Trust",
+						"Quill Keepers",
+						"False Hope, Dark Promises"
+					]
+				},
+				{
+					"name": "Creatures",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Maps",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				}
+			]
+		},
+		{
+			"name": "Adventures in the Forgotten Realms: In Scarlet Flames",
+			"id": "AitFR-ISF",
+			"source": "AitFR-ISF",
+			"parentSource": "AitFR",
+			"group": "supplement-alt",
+			"coverUrl": "img/covers/AitFR-ISF.png",
+			"published": "2021-06-30",
+			"storyline": "Adventures in the Forgotten Realms",
+			"level": {
+				"start": 8,
+				"end": 8
+			},
+			"contents": [
+				{
+					"name": "In Scarlet Flames"
+				},
+				{
+					"name": "Part 1: The Village of Secomber"
+				},
+				{
+					"name": "Part 2: The Wizard's Barrow",
+					"headers": [
+						{
+							"header": "1. Guard Chamber",
+							"depth": 1
+						},
+						{
+							"header": "2. Moldering Supplies",
+							"depth": 1
+						},
+						{
+							"header": "3. Rotten Common Room",
+							"depth": 1
+						},
+						{
+							"header": "4. Abandoned Quarters",
+							"depth": 1
+						},
+						{
+							"header": "4A: Hidden Shrine",
+							"depth": 1
+						},
+						{
+							"header": "5. Ceremonial Entryway",
+							"depth": 1
+						},
+						{
+							"header": "6. Descent Passage",
+							"depth": 1
+						},
+						{
+							"header": "7. Observer's Chamber",
+							"depth": 1
+						},
+						{
+							"header": "8. Second-Level Passageways",
+							"depth": 1
+						},
+						{
+							"header": "9. Component Vault",
+							"depth": 1
+						},
+						{
+							"header": "10. Ritual Casting Chamber (North)",
+							"depth": 1
+						},
+						{
+							"header": "11. Ritual Casting Chamber (South)",
+							"depth": 1
+						},
+						{
+							"header": "12. Laboratory Chamber",
+							"depth": 1
+						},
+						{
+							"header": "13. Common Catacomb",
+							"depth": 1
+						},
+						{
+							"header": "14. Grand Library",
+							"depth": 1
+						},
+						{
+							"header": "15. Processional Hall",
+							"depth": 1
+						},
+						{
+							"header": "16. Honored Crypts",
+							"depth": 1
+						}
+					]
+				},
+				{
+					"name": "Part 3: What's Next?"
+				},
+				{
+					"name": "Appendix: Maps, Monsters, & NPCs"
+				}
+			]
+		},
+		{
+			"name": "Adventures in the Forgotten Realms: The Hidden Page",
+			"id": "AitFR-THP",
+			"source": "AitFR-THP",
+			"parentSource": "AitFR",
+			"group": "supplement-alt",
+			"coverUrl": "img/covers/AitFR-THP.png",
+			"published": "2021-07-07",
+			"storyline": "Adventures in the Forgotten Realms",
+			"level": {
+				"start": 8,
+				"end": 9
+			},
+			"contents": [
+				{
+					"name": "The Hidden Page"
+				},
+				{
+					"name": "Part 1: Hidden Chambers",
+					"headers": [
+						{
+							"header": "1. Entry Hall",
+							"depth": 1
+						},
+						{
+							"header": "2. Crackling Corridor",
+							"depth": 1
+						},
+						{
+							"header": "3. Emitter Stone",
+							"depth": 1
+						},
+						{
+							"header": "4. Bladed Corridors",
+							"depth": 1
+						},
+						{
+							"header": "5. Listing Floor",
+							"depth": 1
+						},
+						{
+							"header": "6. Room of Rising Blades",
+							"depth": 1
+						},
+						{
+							"header": "1. West Foyer",
+							"depth": 1
+						},
+						{
+							"header": "2. Grand Hall",
+							"depth": 1
+						},
+						{
+							"header": "3. Dining Room",
+							"depth": 1
+						},
+						{
+							"header": "4. Kitchen",
+							"depth": 1
+						},
+						{
+							"header": "5. Study",
+							"depth": 1
+						},
+						{
+							"header": "6. East Foyer",
+							"depth": 1
+						},
+						{
+							"header": "7. Bed Chamber",
+							"depth": 1
+						},
+						{
+							"header": "8. Outer Garden",
+							"depth": 1
+						},
+						{
+							"header": "9. Solarium",
+							"depth": 1
+						},
+						{
+							"header": "10. Cellar",
+							"depth": 1
+						}
+					]
+				},
+				{
+					"name": "Part 4: What's Next"
+				},
+				{
+					"name": "Appendix: Monsters and Magic Items"
+				}
+			]
+		},
+		{
+			"name": "Adventures in the Forgotten Realms: A Verdant Tomb",
+			"id": "AitFR-AVT",
+			"source": "AitFR-AVT",
+			"parentSource": "AitFR",
+			"group": "supplement-alt",
+			"coverUrl": "img/covers/AitFR-AVT.png",
+			"published": "2021-07-14",
+			"storyline": "Adventures in the Forgotten Realms",
+			"level": {
+				"start": 9,
+				"end": 9
+			},
+			"contents": [
+				{
+					"name": "A Verdant Tomb"
+				},
+				{
+					"name": "Part 1: Riverside",
+					"headers": [
+						{
+							"header": "1. Sunken Yard",
+							"depth": 1
+						},
+						{
+							"header": "2. Garden Shrine",
+							"depth": 1
+						},
+						{
+							"header": "3. Sepulcher Entrance",
+							"depth": 1
+						}
+					]
+				},
+				{
+					"name": "Part 2: Inside the Crypts",
+					"headers": [
+						{
+							"header": "4. Ceremonial Chamber",
+							"depth": 1
+						},
+						{
+							"header": "5. Northern Crypt",
+							"depth": 1
+						},
+						{
+							"header": "6. Southern Crypt",
+							"depth": 1
+						},
+						{
+							"header": "7. Grand Mausoleum",
+							"depth": 1
+						},
+						{
+							"header": "8. Processional Corridor",
+							"depth": 1
+						},
+						{
+							"header": "9. Tiled Passage",
+							"depth": 1
+						},
+						{
+							"header": "10. Memorial Chamber",
+							"depth": 1
+						},
+						{
+							"header": "11. Grand Crypt",
+							"depth": 1
+						}
+					]
+				},
+				{
+					"name": "Part 3: What's Next"
+				},
+				{
+					"name": "Appendix A: New Spells",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Appendix B: New Artifacts",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				}
+			]
+		},
+		{
+			"name": "Adventures in the Forgotten Realms: Darkest Night",
+			"id": "AitFR-DN",
+			"source": "AitFR-DN",
+			"parentSource": "AitFR",
+			"group": "supplement-alt",
+			"coverUrl": "img/covers/AitFR-DN.png",
+			"published": "2021-07-21",
+			"storyline": "Adventures in the Forgotten Realms",
+			"level": {
+				"start": 9,
+				"end": 10
+			},
+			"contents": [
+				{
+					"name": "Deepest Night"
+				},
+				{
+					"name": "Part 1: The Outer Lair",
+					"headers": [
+						{
+							"header": "1. Cleft in the Rock",
+							"depth": 1
+						},
+						{
+							"header": "2. Boulder Trio",
+							"depth": 1
+						},
+						{
+							"header": "3. Abandoned Altar",
+							"depth": 1
+						}
+					]
+				},
+				{
+					"name": "Part 2: The Inner Lair",
+					"headers": [
+						{
+							"header": "4. At the Threshold",
+							"depth": 1
+						},
+						{
+							"header": "5. A Deep, Dark Well",
+							"depth": 1
+						},
+						{
+							"header": "6. Giant Snake Den",
+							"depth": 1
+						},
+						{
+							"header": "7. Lost Bones",
+							"depth": 1
+						},
+						{
+							"header": "8. Poison Pool",
+							"depth": 1
+						},
+						{
+							"header": "9. Abandoned Chambers",
+							"depth": 1
+						},
+						{
+							"header": "10. Rotting Ceremonial Chamber",
+							"depth": 1
+						},
+						{
+							"header": "11. Magic Door",
+							"depth": 1
+						}
+					]
+				},
+				{
+					"name": "Part 3: Starry Refuge",
+					"headers": [
+						{
+							"header": "12. Deepest Night",
+							"depth": 1
+						},
+						{
+							"header": "13. A Cozy Cottage",
+							"depth": 1
+						}
+					]
+				},
+				{
+					"name": "Part 4: What's Next"
+				},
+				{
+					"name": "Appendix A: Monsters & NPCs",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Appendix B: New Magic Items",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				}
+			]
+		},
+		{
+			"name": "Adventures in the Forgotten Realms: From Cyan Depths",
+			"id": "AitFR-FCD",
+			"source": "AitFR-FCD",
+			"parentSource": "AitFR",
+			"group": "supplement-alt",
+			"coverUrl": "img/covers/AitFR-FCD.png",
+			"published": "2021-07-28",
+			"storyline": "Adventures in the Forgotten Realms",
+			"level": {
+				"start": 10,
+				"end": 10
+			},
+			"contents": [
+				{
+					"name": "From Cyan Depths"
+				},
+				{
+					"name": "The Fortress of the Cobalt Mage",
+					"headers": [
+						{
+							"header": "1. Lakeshore Gate",
+							"depth": 1
+						},
+						{
+							"header": "2. Central Guard Tower",
+							"depth": 1
+						},
+						{
+							"header": "3. Southern Guard Tower",
+							"depth": 1
+						},
+						{
+							"header": "4. Northern Guard Tower",
+							"depth": 1
+						},
+						{
+							"header": "5. Arched Walkways",
+							"depth": 1
+						},
+						{
+							"header": "6. Northern Turret",
+							"depth": 1
+						},
+						{
+							"header": "7. Southern Turret",
+							"depth": 1
+						},
+						{
+							"header": "8. Cellar Vault",
+							"depth": 1
+						},
+						{
+							"header": "9. Wizard's Residence",
+							"depth": 1
+						},
+						{
+							"header": "10. Sanctum",
+							"depth": 1
+						},
+						{
+							"header": "11. Study",
+							"depth": 1
+						},
+						{
+							"header": "12. Meeting Hall",
+							"depth": 1
+						},
+						{
+							"header": "13. Observatory",
+							"depth": 1
+						}
+					]
+				},
+				{
+					"name": "Appendix A: Monsters & NPCs",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Appendix B: Spells",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				},
+				{
+					"name": "Appendix C: Artifacts",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "C"
+					}
+				}
+			]
+		},
+		{
+			"name": "The Wild Beyond the Witchlight",
+			"id": "WBtW",
+			"source": "WBtW",
+			"group": "supplement",
+			"coverUrl": "img/covers/WBtW.png",
+			"published": "2021-09-21",
+			"storyline": "The Wild Beyond the Witchlight",
+			"level": {
+				"start": 1,
+				"end": 8
+			},
+			"contents": [
+				{
+					"name": "Into the Feywild",
+					"headers": [
+						"Adventure Summary",
+						"Running the Adventure",
+						"Feywild Trinkets",
+						"Backgrounds",
+						"Races",
+						"Character Traits",
+						"Beginning the Adventure",
+						"Pronunciation Guide"
+					]
+				},
+				{
+					"name": "Witchlight Carnival",
+					"headers": [
+						"Running This Chapter",
+						"Carnival Owners",
+						"Witchlight Hands",
+						"Carnival Overview",
+						"Carnival Locations",
+						"Carnival Events"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 1
+					}
+				},
+				{
+					"name": "Hither",
+					"headers": [
+						"Running This Chapter",
+						"Prismeer Overview",
+						"Features of Hither",
+						"Arrival in Hither",
+						"Locations in Hither",
+						"Downfall",
+						"Where's Bavlorna?",
+						"The Soggy Court",
+						"Downfall Locations",
+						{
+							"depth": 1,
+							"header": "D1. Channel"
+						},
+						{
+							"depth": 1,
+							"header": "D2. Damaged Balloon"
+						},
+						{
+							"depth": 1,
+							"header": "D3. Stepstone Crossing"
+						},
+						{
+							"depth": 1,
+							"header": "D4. Burned-out Balloon Factory"
+						},
+						{
+							"depth": 1,
+							"header": "D5. Chattering Heads"
+						},
+						{
+							"depth": 1,
+							"header": "D6. His Royal Majesty Gullop XIX"
+						},
+						{
+							"depth": 1,
+							"header": "D7. Murky Lake"
+						},
+						{
+							"depth": 1,
+							"header": "D8. Holding Cells"
+						},
+						{
+							"depth": 1,
+							"header": "D9. Proving Grounds"
+						},
+						{
+							"depth": 1,
+							"header": "D10. Trinket, Bauble, and Charm's"
+						},
+						{
+							"depth": 1,
+							"header": "D11. Sinking Palace"
+						},
+						{
+							"depth": 1,
+							"header": "D12. Bavlorna's Cottage"
+						},
+						{
+							"depth": 1,
+							"header": "D13. Big Barkless"
+						},
+						{
+							"depth": 1,
+							"header": "D14. Toadstool Patch"
+						},
+						{
+							"depth": 1,
+							"header": "D15. Bullywug Hut"
+						},
+						{
+							"depth": 1,
+							"header": "D16. Bullywug Hut"
+						},
+						{
+							"depth": 1,
+							"header": "D17. King's Mount"
+						},
+						{
+							"depth": 1,
+							"header": "D18. Bavlorna's Cauldron"
+						},
+						{
+							"depth": 1,
+							"header": "D19. Watch Tower"
+						},
+						"Bavlorna's Cottage",
+						{
+							"depth": 1,
+							"header": "B1. Preservation Pool"
+						},
+						{
+							"depth": 1,
+							"header": "B2. Taxidermy Workshop"
+						},
+						{
+							"depth": 1,
+							"header": "B3. Fabric Storage Room"
+						},
+						{
+							"depth": 1,
+							"header": "B4. Rickety Stairs"
+						},
+						{
+							"depth": 1,
+							"header": "B5. Trove of Lesser Goodies"
+						},
+						{
+							"depth": 1,
+							"header": "B6. Balcony"
+						},
+						{
+							"depth": 1,
+							"header": "B7. Hallway"
+						},
+						{
+							"depth": 1,
+							"header": "B8. Guest Room"
+						},
+						{
+							"depth": 1,
+							"header": "B9. Secret Passage"
+						},
+						{
+							"depth": 1,
+							"header": "B10. Study"
+						},
+						{
+							"depth": 1,
+							"header": "B11. Aviary"
+						},
+						{
+							"depth": 1,
+							"header": "B12. Meat Locker"
+						},
+						{
+							"depth": 1,
+							"header": "B13. Kitchen"
+						},
+						{
+							"depth": 1,
+							"header": "B14. Cages"
+						},
+						{
+							"depth": 1,
+							"header": "B15. Pantry"
+						},
+						{
+							"depth": 1,
+							"header": "B16. Dining Room"
+						},
+						{
+							"depth": 1,
+							"header": "B17. Hooch Distillery"
+						},
+						{
+							"depth": 1,
+							"header": "B18. Bavlorna's Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "B19. Bavlorna's Hoard"
+						},
+						"From Hither to Thither"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 2
+					}
+				},
+				{
+					"name": "Thither",
+					"headers": [
+						"Running This Chapter",
+						"Features of Thither",
+						"Arrival in Thither",
+						"Locations in Thither",
+						"Loomlurch",
+						"Approaching Loomlurch",
+						"Where's Skabatha?",
+						"Skabatha's Minions",
+						"Lost Children",
+						"Loomlurch Locations",
+						{
+							"depth": 1,
+							"header": "L1. Root Bridges"
+						},
+						{
+							"depth": 1,
+							"header": "L2. Goblin Market"
+						},
+						{
+							"depth": 1,
+							"header": "L3. Parlor"
+						},
+						{
+							"depth": 1,
+							"header": "L4. Workshop"
+						},
+						{
+							"depth": 1,
+							"header": "L5. Granny Nightshade's Garden"
+						},
+						{
+							"depth": 1,
+							"header": "L6. Rocking Horse"
+						},
+						{
+							"depth": 1,
+							"header": "L7. Tin Soldier Barracks"
+						},
+						{
+							"depth": 1,
+							"header": "L8. Workhouse Dormitory"
+						},
+						{
+							"depth": 1,
+							"header": "L9. Sewing Room"
+						},
+						{
+							"depth": 1,
+							"header": "L10. Cupboards"
+						},
+						{
+							"depth": 1,
+							"header": "L11. Family Tree"
+						},
+						{
+							"depth": 1,
+							"header": "L12. Textile Mill"
+						},
+						{
+							"depth": 1,
+							"header": "L13. Granny Nightshade's Kitchen"
+						},
+						{
+							"depth": 1,
+							"header": "L14. Study"
+						},
+						{
+							"depth": 1,
+							"header": "L15. Redcap Patch"
+						},
+						{
+							"depth": 1,
+							"header": "L16. Granny Nightshade's Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "L17. Aviary"
+						},
+						"From Thither to Yon"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 3
+					}
+				},
+				{
+					"name": "Yon",
+					"headers": [
+						"Running This Chapter",
+						"Features of Yon",
+						"Arrival in Yon",
+						"Locations in Yon",
+						"Motherhorn",
+						"Entering Motherhorn",
+						"Approaching Motherhorn",
+						"Where's Endelyn?",
+						"A Tragedy in the Making",
+						"Motherhorn Locations",
+						{
+							"depth": 1,
+							"header": "M1. Main Entrance"
+						},
+						{
+							"depth": 1,
+							"header": "M2. Amphitheater"
+						},
+						{
+							"depth": 1,
+							"header": "M3. Stage Left"
+						},
+						{
+							"depth": 1,
+							"header": "M4. Prop Storage"
+						},
+						{
+							"depth": 1,
+							"header": "M5. Dressing Room"
+						},
+						{
+							"depth": 1,
+							"header": "M6. Performers' Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "M7. Oracular Library"
+						},
+						{
+							"depth": 1,
+							"header": "M8. Endelyn's Mask Collection"
+						},
+						{
+							"depth": 1,
+							"header": "M9. Backdrop Hallway"
+						},
+						{
+							"depth": 1,
+							"header": "M10. Shadow Theater"
+						},
+						{
+							"depth": 1,
+							"header": "M11. Stage Workshop"
+						},
+						{
+							"depth": 1,
+							"header": "M12. Parts Storage"
+						},
+						{
+							"depth": 1,
+							"header": "M13. Worker Cells"
+						},
+						{
+							"depth": 1,
+							"header": "M14. Orrery of Tragedies"
+						},
+						{
+							"depth": 1,
+							"header": "M15. Theater Boxes"
+						},
+						{
+							"depth": 1,
+							"header": "M16. Darkling Balloon Dock"
+						},
+						{
+							"depth": 1,
+							"header": "M17. Prison"
+						},
+						{
+							"depth": 1,
+							"header": "M18. Audience Chamber"
+						},
+						{
+							"depth": 1,
+							"header": "M19. Viewing Gallery"
+						},
+						{
+							"depth": 1,
+							"header": "M20. Paper Birds and Hidden Belfry"
+						},
+						{
+							"depth": 1,
+							"header": "M21. Ornithopter Pad"
+						},
+						{
+							"depth": 1,
+							"header": "M22. Endelyn's Room"
+						},
+						"Leaving Yon"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 4
+					}
+				},
+				{
+					"name": "Palace of Heart's Desire",
+					"headers": [
+						"Running This Chapter",
+						"Arrival at the Palace",
+						"Exploring the Palace",
+						"Lower Palace Locations",
+						{
+							"depth": 1,
+							"header": "P1. Front Gate"
+						},
+						{
+							"depth": 1,
+							"header": "P2. Palace Garden"
+						},
+						{
+							"depth": 1,
+							"header": "P3. Pavilion"
+						},
+						{
+							"depth": 1,
+							"header": "P4. Standing Stones"
+						},
+						{
+							"depth": 1,
+							"header": "P5. Fountain of Awakening"
+						},
+						{
+							"depth": 1,
+							"header": "P6. Woodcutter's Axe"
+						},
+						{
+							"depth": 1,
+							"header": "P7. Rose Garden"
+						},
+						{
+							"depth": 1,
+							"header": "P8. Maiden's Pond"
+						},
+						{
+							"depth": 1,
+							"header": "P9. Envy's Tower"
+						},
+						{
+							"depth": 1,
+							"header": "P10. Wrath's Tower"
+						},
+						{
+							"depth": 1,
+							"header": "P11. Carriage House"
+						},
+						{
+							"depth": 1,
+							"header": "P12. Hall of Stars"
+						},
+						{
+							"depth": 1,
+							"header": "P13. Court of Storms"
+						},
+						{
+							"depth": 1,
+							"header": "P14. Spiral Staircases"
+						},
+						{
+							"depth": 1,
+							"header": "P15. Servants' Quarters"
+						},
+						{
+							"depth": 1,
+							"header": "P16. Palace Kitchen"
+						},
+						{
+							"depth": 1,
+							"header": "P17. Base of the Beanstalk"
+						},
+						{
+							"depth": 1,
+							"header": "P18. Banquet Hall"
+						},
+						{
+							"depth": 1,
+							"header": "P19. Dining Terrace"
+						},
+						{
+							"depth": 1,
+							"header": "P20. Aviary"
+						},
+						{
+							"depth": 1,
+							"header": "P21. Records Room"
+						},
+						{
+							"depth": 1,
+							"header": "P22. Ballroom"
+						},
+						{
+							"depth": 1,
+							"header": "P23. Round Table"
+						},
+						{
+							"depth": 1,
+							"header": "P24. Ruined Staterooms"
+						},
+						{
+							"depth": 1,
+							"header": "P25. Bathing Room"
+						},
+						{
+							"depth": 1,
+							"header": "P26. Changing Room"
+						},
+						{
+							"depth": 1,
+							"header": "P27. Armory"
+						},
+						{
+							"depth": 1,
+							"header": "P28. Library"
+						},
+						{
+							"depth": 1,
+							"header": "P29. Rug of White Roses"
+						},
+						{
+							"depth": 1,
+							"header": "P30. Sludge-Filled Tower"
+						},
+						{
+							"depth": 1,
+							"header": "P31. Throne Room"
+						},
+						"Upper Palace Locations",
+						{
+							"depth": 1,
+							"header": "P32. Minstrels' Gallery"
+						},
+						{
+							"depth": 1,
+							"header": "P33. Glass Statues"
+						},
+						{
+							"depth": 1,
+							"header": "P34. Hall of Hatches"
+						},
+						{
+							"depth": 1,
+							"header": "P35. Flooded Hall"
+						},
+						{
+							"depth": 1,
+							"header": "P36. Costume Room"
+						},
+						{
+							"depth": 1,
+							"header": "P37. Dretch Nursery"
+						},
+						{
+							"depth": 1,
+							"header": "P38. Secret Library"
+						},
+						{
+							"depth": 1,
+							"header": "P39. Roost"
+						},
+						{
+							"depth": 1,
+							"header": "P40. Guest Wing"
+						},
+						{
+							"depth": 1,
+							"header": "P41. Talking Door"
+						},
+						{
+							"depth": 1,
+							"header": "P42. Laboratory"
+						},
+						{
+							"depth": 1,
+							"header": "P43. Mirror of Heart's Desire"
+						},
+						{
+							"depth": 1,
+							"header": "P44. Jars of Time"
+						},
+						{
+							"depth": 1,
+							"header": "P45. Zybilna's Bedroom"
+						},
+						{
+							"depth": 1,
+							"header": "P46. Dressing Room"
+						},
+						{
+							"depth": 1,
+							"header": "P47. Destroyed Study"
+						},
+						{
+							"depth": 1,
+							"header": "P48. Turrets"
+						},
+						{
+							"depth": 1,
+							"header": "P49. Black Book"
+						},
+						{
+							"depth": 1,
+							"header": "P50. Vault"
+						},
+						{
+							"depth": 1,
+							"header": "P51. Beanstalk Tower"
+						},
+						"Ending the Story",
+						"Zybilna Comes Alive",
+						"Zybilna's Gifts"
+					],
+					"ordinal": {
+						"type": "chapter",
+						"identifier": 5
+					}
+				},
+				{
+					"name": "Magic Items",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "A"
+					}
+				},
+				{
+					"name": "Factions",
+					"headers": [
+						"Hourglass Coven",
+						"League of Malevolence",
+						"Valor's Call"
+					],
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "B"
+					}
+				},
+				{
+					"name": "Creatures",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "C"
+					}
+				},
+				{
+					"name": "Roleplaying Cards",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "D"
+					}
+				},
+				{
+					"name": "Stagefright's Lines",
+					"ordinal": {
+						"type": "appendix",
+						"identifier": "E"
+					}
+				},
+				{
+					"name": "Story Tracker"
 				}
 			]
 		}

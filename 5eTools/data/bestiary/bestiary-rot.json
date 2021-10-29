@@ -58,10 +58,10 @@
 				"petrified",
 				"poisoned"
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Rejuvenation"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Aquatic Troll",
@@ -95,12 +95,12 @@
 			"resist": [
 				"cold"
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Keen Senses",
 				"Regeneration",
 				"Water Breathing"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Carnivorous Flower",
@@ -250,11 +250,11 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -267,7 +267,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Dragonsoul",
@@ -377,11 +378,11 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -394,7 +395,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Galvan",
@@ -456,8 +458,8 @@
 					]
 				},
 				{
-					"ac": 15,
-					"condition": "with the Black Dragon Mask",
+					"ac": 17,
+					"condition": "with the Blue Dragon Mask",
 					"braces": true
 				}
 			],
@@ -467,14 +469,14 @@
 			"immune": [
 				"lightning"
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Pack Tactics"
 			],
 			"senseTags": [
 				"D"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Half-Blue Dragon Gladiator",
@@ -500,10 +502,14 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Parry"
 			],
 			"languageTags": [
 				"C",
@@ -520,7 +526,8 @@
 				"MW",
 				"RW",
 				"THW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Half-Green Dragon Assassin",
@@ -541,10 +548,13 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
 			],
 			"languageTags": [
 				"DR",
@@ -556,7 +566,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Half-Red Dragon Gladiator",
@@ -577,10 +588,14 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Parry"
 			],
 			"languageTags": [
 				"C",
@@ -597,7 +612,8 @@
 				"MW",
 				"RW",
 				"THW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Ice Toad",
@@ -672,7 +688,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -691,6 +706,7 @@
 			"conditionInflict": [
 				"grappled"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -762,7 +778,6 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -773,7 +788,8 @@
 			"spellcastingTags": [
 				"CW",
 				"I"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Marfulb",
@@ -906,7 +922,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -930,6 +945,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1031,7 +1047,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -1059,6 +1074,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1248,7 +1264,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -1266,6 +1281,7 @@
 			"conditionInflict": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1310,11 +1326,11 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"damageTags": [
 				"I",
 				"S"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Tiamat",
@@ -1521,7 +1537,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Weapons",
@@ -1565,6 +1580,7 @@
 				"deafened",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1597,7 +1613,6 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1606,7 +1621,8 @@
 				"D",
 				"DR",
 				"I"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

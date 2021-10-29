@@ -80,7 +80,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -97,6 +96,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -227,7 +227,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"languageTags": [
 				"C",
 				"DR",
@@ -246,6 +245,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -379,7 +379,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -402,6 +401,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -493,7 +493,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -511,6 +510,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -602,7 +602,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -618,7 +617,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Dragonwing",
@@ -727,7 +727,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -743,7 +742,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Dralmorrer Borngray",
@@ -881,7 +881,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -911,6 +910,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1022,7 +1022,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -1041,6 +1040,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1123,7 +1123,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/guard-drake.mp3"
@@ -1144,7 +1143,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Jamna Gleamsilver",
@@ -1261,7 +1261,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1283,6 +1282,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1384,12 +1384,12 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B",
 				"D"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -1407,6 +1407,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1458,7 +1459,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"damageTags": [
 				"P"
 			],
@@ -1466,7 +1466,8 @@
 				"MW",
 				"RCH",
 				"THW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Ontharr Frume",
@@ -1638,7 +1639,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -1661,6 +1661,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1834,7 +1835,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"languageTags": [
 				"C",
 				"DR",
@@ -1851,6 +1851,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -1982,16 +1983,19 @@
 					]
 				}
 			],
+			"legendaryHeader": [
+				"If she is wearing the Black Dragon Mask, Rezmir can take up to two legendary actions between each of her turns, taking the actions all at once or spreading them over the round. A legendary action can be taken only at the start or end of a turn."
+			],
+			"legendaryActions": 2,
 			"legendary": [
 				{
 					"name": "Darkness (Costs 2 Actions)",
 					"entries": [
-						"If she is wearing the Black Dragon Mask, Rezmir can take up to two legendary actions between each of her turns, taking the actions all at once or spreading them over the round. A legendary action can be taken only at the start or end of a turn.",
 						"A 15-foot radius of magical darkness extends from a point Rezmir can see within 60 feet of her and spreads around corners. The darkness lasts as long as Rezmir maintains concentration, up to 1 minute. A creature with darkvision can't see through this darkness, and no natural light can illuminate it. If any of the area overlaps with a area of light created by a spell of 2nd level or lower, the spell creating the light is dispelled."
 					]
 				},
 				{
-					"name": "Attack",
+					"name": "Melee Attack",
 					"entries": [
 						"Rezmir makes one melee attack."
 					]
@@ -2003,7 +2007,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Legendary Resistances"
@@ -2011,6 +2014,9 @@
 			"senseTags": [
 				"B",
 				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"C",
@@ -2028,6 +2034,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -2192,7 +2199,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -2222,6 +2228,7 @@
 				"deafened",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -2301,7 +2308,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Keen Senses",
 				"Regeneration"
@@ -2322,6 +2328,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		}

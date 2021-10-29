@@ -449,7 +449,7 @@
 										],
 										[
 											"2",
-											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas (20 percent chance of an accurate description)"
+											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas ({@chance 20|20 percent} chance of an accurate description)"
 										],
 										[
 											"3",
@@ -457,7 +457,7 @@
 										],
 										[
 											"4",
-											"Con artist, selling fake treasure maps (but a 10 percent chance that a map is genuine)"
+											"Con artist, selling fake treasure maps (but a {@chance 10|10 percent} chance that a map is genuine)"
 										],
 										[
 											"5",
@@ -481,7 +481,7 @@
 										],
 										[
 											"10",
-											"Elminster, incognito; 10 percent chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
+											"Elminster, incognito; {@chance 10|10 percent} chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
 										]
 									]
 								}
@@ -591,7 +591,7 @@
 									"name": "Unsafe Stonework",
 									"id": "021",
 									"entries": [
-										"In some places, the corbel arches that hold up the ceiling aren't structurally sound. As a result, some spells might have disastrous effects. A spell like fireball (an explosion) or thunderwave (an area of thunder damage) has a 25 percent chance to cause a ceiling collapse within the spell's area, dealing 16 (3d10) bludgeoning damage to creatures in the area. This collapse might block or bury objects or exits."
+										"In some places, the corbel arches that hold up the ceiling aren't structurally sound. As a result, some spells might have disastrous effects. A spell like fireball (an explosion) or thunderwave (an area of thunder damage) has a {@chance 25|25 percent} chance to cause a ceiling collapse within the spell's area, dealing 16 (3d10) bludgeoning damage to creatures in the area. This collapse might block or bury objects or exits."
 									]
 								},
 								{
@@ -599,7 +599,7 @@
 									"name": "Poisonous Gas",
 									"id": "022",
 									"entries": [
-										"The lower levels of the ruins, including the rooms and passages of encounter areas 1 through 38, are filled with poisonous gas. The gas is an amber color, and its area is lightly obscured. Anyone can tell that the gas is irritating, but it takes a successful DC 15 Intelligence (Nature) check to discern the gas's toxicity. Flames in the gas sputter and glow redly, and any attempt to use natural means to ignite a fire has only a 50 percent chance of success. Fire used as a light source has an effective radius only half normal."
+										"The lower levels of the ruins, including the rooms and passages of encounter areas 1 through 38, are filled with poisonous gas. The gas is an amber color, and its area is lightly obscured. Anyone can tell that the gas is irritating, but it takes a successful DC 15 Intelligence (Nature) check to discern the gas's toxicity. Flames in the gas sputter and glow redly, and any attempt to use natural means to ignite a fire has only a {@chance 50|50 percent} chance of success. Fire used as a light source has an effective radius only half normal."
 									]
 								},
 								"A creature takes 3 (1d6) poison damage every hour it spends in the gas. The gas is light, so it accumulates closer to the ceiling. Inhabitants of the dungeon have immunity to the poisonous effect of the gas.",
@@ -1847,7 +1847,7 @@
 							"name": "Rolling Stone Trap",
 							"id": "0a7",
 							"entries": [
-								"A millstone, concealed in the wall behind a layer of stucco, lies at the top of the steps. No nonmagical means can detect the hidden stone. If the trap is triggered, the mechanism pushes the millstone through the wall and sends it rolling down the stairs. When this occurs, anyone who has a passive Perception score of 14 or lower is surprised. Everyone rolls initiative, including the stone, which has a +10 bonus to the roll. On its turn, the stone moves 60 feet. Anyone in its path must succeed on a DC 15 Dexterity saving throw or take 27 (5d10) bludgeoning damage and have a 50 percent chance to drop anything carried in hand. A character whose saving throw fails by 5 or more takes maximum damage, is knocked prone, and drops anything held in hand. Dropped objects take damage from hitting the stone and end up somewhere on the stairs."
+								"A millstone, concealed in the wall behind a layer of stucco, lies at the top of the steps. No nonmagical means can detect the hidden stone. If the trap is triggered, the mechanism pushes the millstone through the wall and sends it rolling down the stairs. When this occurs, anyone who has a passive Perception score of 14 or lower is surprised. Everyone rolls initiative, including the stone, which has a +10 bonus to the roll. On its turn, the stone moves 60 feet. Anyone in its path must succeed on a DC 15 Dexterity saving throw or take 27 (5d10) bludgeoning damage and have a {@chance 50|50 percent} chance to drop anything carried in hand. A character whose saving throw fails by 5 or more takes maximum damage, is knocked prone, and drops anything held in hand. Dropped objects take damage from hitting the stone and end up somewhere on the stairs."
 							]
 						},
 						"The stone ultimately crashes into the doors to {@area 25|09e}, breaking them open and destroying them. If beetles remain in the room, some or all of them come into the stairway agitated and looking for a fight."
@@ -3216,7 +3216,7 @@
 							"name": "Fragile Roof",
 							"id": "13d",
 							"entries": [
-								"Each time a creature ends its turn on the portion of the roof that remains standing, there is a 20 percent chance that the roof beneath its feet gives way. The creature falls 35 feet, to the rubble below, taking 14 (4d6) bludgeoning damage."
+								"Each time a creature ends its turn on the portion of the roof that remains standing, there is a {@chance 20|20 percent} chance that the roof beneath its feet gives way. The creature falls 35 feet, to the rubble below, taking 14 (4d6) bludgeoning damage."
 							]
 						},
 						{

@@ -2703,13 +2703,13 @@
 											"entries": [
 												"The runes covering the walls keep the portal active. During combat, the characters notice these sigils continuing to pulse in sync with the portal and the gibbering mouther's blinking.",
 												"As an action, a character can attempt a DC 15 Intelligence ({@skill Arcana}) check to deactivate the runes or a DC 15 Dexterity ({@skill Sleight of Hand}) check to sabotage them. Any number of characters can attempt these checks, which can be made each round. All characters have advantage on these checks if someone succeeded on the check in area 7 or the characters examined the failed ritual there.",
-												"In each round that one or more characters succeed on the check, the gibbering mouther and the portal weaken, as follows:",
+												"In each round that one or more characters succeed on the check, the {@creature gibbering mouther} and the portal weaken, as follows:",
 												{
 													"type": "list",
 													"items": [
-														"{@b First Success}: The gibbering mouther deals half as much damage with its attacks.",
-														"{@b Second Success}: The gibbering mouther loses its Gibbering feature.",
-														"{@b Third Success}: The portal closes and the gibbering mouther dies."
+														"{@b First Success}: The {@creature gibbering mouther} deals half as much damage with its attacks.",
+														"{@b Second Success}: The {@creature gibbering mouther} loses its Gibbering feature.",
+														"{@b Third Success}: The portal closes and the {@creature gibbering mouther} dies."
 													]
 												}
 											]
@@ -2719,7 +2719,7 @@
 											"name": "Development",
 											"id": "105",
 											"entries": [
-												"If the portal isn't closed after 1 minute, a second gibbering mouther comes through. It suffers any consequences already in place for alterations to the runes."
+												"If the portal isn't closed after 1 minute, a second {@creature gibbering mouther} comes through. It suffers any consequences already in place for alterations to the runes."
 											]
 										}
 									]
@@ -6615,7 +6615,7 @@
 											"name": "Questionable River",
 											"id": "279",
 											"entries": [
-												"The water of the river is thick and slow moving, glows a phosphorescent green, and smells awful. A successful DC 10 Wisdom ({@skill Medicine}) check indicates that the water has been contaminated by magic and has unusual side effects. Anyone drinking the water gains the {@condition poisoned} condition for 1 hour and has a 50 percent chance to spontaneously grow an extra head. The extra head can speak, see, and hear, but provides no mechanical benefits. It shrinks away to nothing after 1 hour."
+												"The water of the river is thick and slow moving, glows a phosphorescent green, and smells awful. A successful DC 10 Wisdom ({@skill Medicine}) check indicates that the water has been contaminated by magic and has unusual side effects. Anyone drinking the water gains the {@condition poisoned} condition for 1 hour and has a {@chance 50|50 percent} chance to spontaneously grow an extra head. The extra head can speak, see, and hear, but provides no mechanical benefits. It shrinks away to nothing after 1 hour."
 											]
 										}
 									]
@@ -8393,11 +8393,11 @@
 											"rows": [
 												[
 													"1",
-													"Each goblin has advantage or disadvantage (50 percent chance) on attack rolls until the end of its next turn."
+													"Each goblin has advantage or disadvantage ({@chance 50|50 percent} chance) on attack rolls until the end of its next turn."
 												],
 												[
 													"2",
-													"Each character has advantage or disadvantage (50 percent chance) on attack rolls until the end of their next turn."
+													"Each character has advantage or disadvantage ({@chance 50|50 percent} chance) on attack rolls until the end of their next turn."
 												],
 												[
 													"3",

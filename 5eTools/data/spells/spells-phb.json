@@ -136,6 +136,9 @@
 					]
 				}
 			],
+			"miscTags": [
+				"HL"
+			],
 			"areaTags": [
 				"MT"
 			],
@@ -1171,6 +1174,16 @@
 							"name": "Undead (UA)",
 							"source": "UA2020SubclassesPt4"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
+						}
 					}
 				]
 			},
@@ -1225,7 +1238,7 @@
 					"type": "entries",
 					"name": "Targeted Effects",
 					"entries": [
-						"Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target."
+						"Spells and other magical effects, such as {@spell magic missile} and {@spell charm person}, that target a creature or an object in the sphere have no effect on that target."
 					]
 				},
 				{
@@ -2015,7 +2028,7 @@
 					]
 				},
 				"The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
-				"If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+				"If you cast the spell two or more times before completing your next long rest, there is a cumulative {@chance 25|25 percent} chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
 			],
 			"classes": {
 				"fromClassList": [
@@ -2743,6 +2756,16 @@
 						"subclass": {
 							"name": "Undead (UA)",
 							"source": "UA2020SubclassesPt4"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
 						}
 					}
 				]
@@ -4287,6 +4310,16 @@
 							"name": "Undead (UA)",
 							"source": "UA2020SubclassesPt4"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
+						}
 					}
 				]
 			}
@@ -4513,7 +4546,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Marid"
 						}
 					},
 					{
@@ -4790,7 +4824,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Efreeti"
 						}
 					},
 					{
@@ -5448,6 +5483,18 @@
 					{
 						"name": "Wizard",
 						"source": "PHB"
+					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Spores",
+							"source": "TCE"
+						}
 					}
 				]
 			},
@@ -6137,6 +6184,16 @@
 							"name": "Land",
 							"source": "PHB"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
+						}
 					}
 				]
 			},
@@ -6494,7 +6551,7 @@
 			"entries": [
 				"You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.",
 				"Divine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead.",
-				"If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The DM makes this roll in secret."
+				"If you cast the spell two or more times before finishing your next long rest, there is a cumulative {@chance 75|25 percent} chance for each casting after the first that you get no answer. The DM makes this roll in secret."
 			],
 			"classes": {
 				"fromClassList": [
@@ -7194,7 +7251,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Marid"
 						}
 					},
 					{
@@ -7204,7 +7262,8 @@
 						},
 						"subclass": {
 							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Marid"
 						}
 					},
 					{
@@ -8521,7 +8580,7 @@
 					"name": "Flood",
 					"entries": [
 						"You cause the water level of all standing water in the area to rise by as much as 20 feet. If the area includes a shore, the flooding water spills over onto dry land.",
-						"If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a 25 percent chance of capsizing.",
+						"If you choose an area in a large body of water, you instead create a 20-foot tall wave that travels from one side of the area to the other and then crashes down. Any Huge or smaller vehicles in the wave's path are carried with it to the other side. Any Huge or smaller vehicles struck by the wave have a {@chance 25|25 percent} chance of capsizing.",
 						"The water level remains elevated until the spell ends or you choose a different effect. If this effect produced a wave, the wave repeats on the start of your next turn while the flood effect lasts."
 					]
 				},
@@ -8649,7 +8708,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Marid"
 						}
 					},
 					{
@@ -8659,7 +8719,8 @@
 						},
 						"subclass": {
 							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Marid"
 						}
 					}
 				]
@@ -10462,6 +10523,16 @@
 							"name": "Undead (UA)",
 							"source": "UA2020SubclassesPt4"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -11927,7 +11998,7 @@
 			"entries": [
 				"Your magic and an offering put you in contact with a god or a god's servants. You ask a single question concerning a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply. The reply might be a short phrase, a cryptic rhyme, or an omen.",
 				"The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
-				"If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
+				"If you cast the spell two or more times before finishing your next long rest, there is a cumulative {@chance 25|25 percent} chance for each casting after the first that you get a random reading. The DM makes this roll in secret."
 			],
 			"classes": {
 				"fromClassList": [
@@ -12839,6 +12910,18 @@
 					}
 				]
 			},
+			"races": [
+				{
+					"name": "Halfling (Lotusden)",
+					"source": "EGW",
+					"baseName": "Halfling",
+					"baseSource": "PHB"
+				},
+				{
+					"name": "Fairy",
+					"source": "WBtW"
+				}
+			],
 			"backgrounds": [
 				{
 					"name": "Selesnya Initiate",
@@ -13508,6 +13591,10 @@
 					"source": "MTF",
 					"baseName": "Dwarf",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Fairy",
+					"source": "WBtW"
 				}
 			],
 			"backgrounds": [
@@ -13594,10 +13681,6 @@
 				]
 			},
 			"backgrounds": [
-				{
-					"name": "Azorius Functionary",
-					"source": "GGR"
-				},
 				{
 					"name": "Azorius Functionary",
 					"source": "GGR"
@@ -14009,6 +14092,16 @@
 						},
 						"subclass": {
 							"name": "Aberrant Mind",
+							"source": "TCE"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Fathomless",
 							"source": "TCE"
 						}
 					}
@@ -14475,6 +14568,10 @@
 					"source": "ERLW",
 					"baseName": "Human",
 					"baseSource": "PHB"
+				},
+				{
+					"name": "Fairy",
+					"source": "WBtW"
 				}
 			]
 		},
@@ -14608,6 +14705,16 @@
 						"subclass": {
 							"name": "Undead (UA)",
 							"source": "UA2020SubclassesPt4"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
 						}
 					}
 				]
@@ -15111,6 +15218,7 @@
 				"You can't have more than one steed bonded by this spell at a time. As an action, you can release the steed from its bond at any time, causing it to disappear."
 			],
 			"miscTags": [
+				"PRM",
 				"SMN"
 			],
 			"classes": {
@@ -15566,7 +15674,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Efreeti"
 						}
 					},
 					{
@@ -15815,7 +15924,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Efreeti"
 						}
 					},
 					{
@@ -16112,7 +16222,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Efreeti"
 						}
 					},
 					{
@@ -16621,7 +16732,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Marid"
 						}
 					},
 					{
@@ -16882,6 +16994,10 @@
 			"entries": [
 				"You touch a willing creature. For the duration, the target's movement is unaffected by difficult terrain, and spells and other magical effects can neither reduce the target's speed nor cause the target to be {@condition paralyzed} or {@condition restrained}.",
 				"The target can also spend 5 feet of movement to automatically escape from nonmagical restraints, such as manacles or a creature that has it {@condition grappled}. Finally, being underwater imposes no penalties on the target's movement or attacks."
+			],
+			"conditionImmune": [
+				"paralyzed",
+				"restrained"
 			],
 			"areaTags": [
 				"ST"
@@ -17597,7 +17713,7 @@
 			},
 			"entries": [
 				"You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
-				"The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead."
+				"The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as {@spell raise dead}."
 			],
 			"classes": {
 				"fromClassList": [
@@ -18456,7 +18572,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Djinni"
 						}
 					},
 					{
@@ -18466,7 +18583,18 @@
 						},
 						"subclass": {
 							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Djinni"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
 						}
 					}
 				]
@@ -18834,7 +18962,7 @@
 					"type": "entries",
 					"name": "Corridors",
 					"entries": [
-						"Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a 50 percent chance that a creature other than you will believe it is going in the opposite direction from the one it chooses."
+						"Fog fills all the warded corridors, making them heavily obscured. In addition, at each intersection or branching passage offering a choice of direction, there is a {@chance 50|50 percent} chance that a creature other than you will believe it is going in the opposite direction from the one it chooses."
 					]
 				},
 				{
@@ -18947,6 +19075,38 @@
 						"name": "Artificer",
 						"source": "TCE"
 					}
+				],
+				"fromSubclass": [
+					{
+						"class": {
+							"name": "Bard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Spirits (UA)",
+							"source": "UA2020SubclassesPt4"
+						}
+					},
+					{
+						"class": {
+							"name": "Bard",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Spirits",
+							"source": "VRGR"
+						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Stars",
+							"source": "TCE"
+						}
+					}
 				]
 			},
 			"backgrounds": [
@@ -19057,6 +19217,16 @@
 							"name": "Heroism (UA)",
 							"source": "UABardAndPaladin"
 						}
+					},
+					{
+						"class": {
+							"name": "Druid",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Stars",
+							"source": "TCE"
+						}
 					}
 				]
 			},
@@ -19105,7 +19275,7 @@
 			"entries": [
 				"A line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the spell's duration. Each creature that starts its turn in the line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the line.",
 				"Any creature in the line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.",
-				"The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.",
+				"The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a {@chance 50|50 percent} chance to extinguish them.",
 				"As a bonus action on each of your turns before the spell ends, you can change the direction in which the line blasts from you."
 			],
 			"savingThrow": [
@@ -19202,7 +19372,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Djinni"
 						}
 					},
 					{
@@ -19212,7 +19383,8 @@
 						},
 						"subclass": {
 							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Djinni"
 						}
 					},
 					{
@@ -20238,6 +20410,9 @@
 			"damageImmune": [
 				"poison"
 			],
+			"conditionImmune": [
+				"frightened"
+			],
 			"areaTags": [
 				"MT"
 			],
@@ -20310,6 +20485,9 @@
 						"When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
 					]
 				}
+			],
+			"conditionImmune": [
+				"frightened"
 			],
 			"miscTags": [
 				"THP"
@@ -22645,7 +22823,7 @@
 			"entries": [
 				"You hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet).",
 				"While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica.",
-				"After 60 days, there is a cumulative 5 percent chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost."
+				"After 60 days, there is a cumulative {@chance 5|5 percent} chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost."
 			],
 			"miscTags": [
 				"PRM"
@@ -25239,7 +25417,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Dao"
 						}
 					},
 					{
@@ -25644,6 +25823,9 @@
 			],
 			"damageImmune": [
 				"psychic"
+			],
+			"conditionImmune": [
+				"charmed"
 			],
 			"classes": {
 				"fromClassList": [
@@ -27078,7 +27260,7 @@
 					"type": "entries",
 					"name": "Mask",
 					"entries": [
-						"You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of a symbol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment."
+						"You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's {@classFeature Divine Sense|Paladin|PHB|1} or the trigger of a {@spell symbol} spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment."
 					]
 				}
 			],
@@ -27744,6 +27926,16 @@
 							"name": "Genie",
 							"source": "TCE"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
+						}
 					}
 				]
 			}
@@ -27951,6 +28143,16 @@
 						"subclass": {
 							"name": "Undead (UA)",
 							"source": "UA2020SubclassesPt4"
+						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
 						}
 					}
 				]
@@ -28495,7 +28697,7 @@
 				}
 			],
 			"entries": [
-				"This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. The spell has no effect on a shapechanger or a creature with 0 hit points.",
+				"This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. The spell has no effect on an unwilling shapechanger or a creature with 0 hit points.",
 				"The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be {@filter any beast|bestiary|type=beast|miscellaneous=!swarm} whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.",
 				"The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.",
 				"The creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.",
@@ -29130,7 +29332,7 @@
 					"type": "entries",
 					"name": "Green",
 					"entries": [
-						"The creature takes {@damage 10d6} poison damage on a failed save, or half as much damage on a successful one. A passwall spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer."
+						"The creature takes {@damage 10d6} poison damage on a failed save, or half as much damage on a successful one. A {@spell passwall} spell, or another spell of equal or greater level that can open a portal on a solid surface, destroys this layer."
 					]
 				},
 				{
@@ -29145,7 +29347,7 @@
 					"name": "Indigo",
 					"entries": [
 						"On a failed save, the creature is {@condition restrained}. It must then make a Constitution saving throw at the end of each of its turns. If it successfully saves three times, the spell ends. If it fails its save three times, it permanently turns to stone and is subjected to the {@condition petrified} condition. The successes and failures don't need to be consecutive; keep track of both until the creature collects three of a kind.",
-						"While this layer is in place, spells can't be cast through the wall. The layer is destroyed by bright light shed by a daylight spell or a similar spell of equal or higher level."
+						"While this layer is in place, spells can't be cast through the wall. The layer is destroyed by bright light shed by a {@spell daylight} spell or a similar spell of equal or higher level."
 					]
 				},
 				{
@@ -31639,7 +31841,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Dao"
 						}
 					},
 					{
@@ -31649,7 +31852,8 @@
 						},
 						"subclass": {
 							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Dao"
 						}
 					},
 					{
@@ -31807,7 +32011,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Efreeti"
 						}
 					},
 					{
@@ -32218,7 +32423,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of Talc and a small sprinkling of powdered silver"
+				"m": "a pinch of talc and a small sprinkling of powdered silver"
 			},
 			"duration": [
 				{
@@ -32425,7 +32630,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Djinni"
 						}
 					},
 					{
@@ -32476,7 +32682,7 @@
 			],
 			"entries": [
 				"You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.",
-				"You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive."
+				"You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a {@chance 5|5 percent} chance that the message doesn't arrive."
 			],
 			"classes": {
 				"fromClassList": [
@@ -32610,7 +32816,7 @@
 			"entries": [
 				"By means of this spell, a willing creature or an object can be hidden away, safe from detection for the duration. When you cast the spell and touch the target, it becomes {@condition invisible} and can't be targeted by {@filter divination spells|spells|school=D} or perceived through scrying sensors created by divination spells.",
 				"If the target is a creature, it falls into a state of suspended animation. Time ceases to flow for it, and it doesn't grow older.",
-				"You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the tarrasque awakens.\" This spell also ends if the target takes any damage."
+				"You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the {@creature tarrasque} awakens.\" This spell also ends if the target takes any damage."
 			],
 			"conditionInflict": [
 				"invisible"
@@ -33833,7 +34039,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Marid"
 						}
 					},
 					{
@@ -33843,7 +34050,8 @@
 						},
 						"subclass": {
 							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Marid"
 						}
 					}
 				]
@@ -34291,6 +34499,16 @@
 							"name": "Undead (UA)",
 							"source": "UA2020SubclassesPt4"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Undead",
+							"source": "VRGR"
+						}
 					}
 				],
 				"fromClassListVariant": [
@@ -34652,7 +34870,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Dao"
 						}
 					},
 					{
@@ -35218,7 +35437,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Dao"
 						}
 					},
 					{
@@ -37046,7 +37266,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Djinni"
 						}
 					},
 					{
@@ -37056,7 +37277,8 @@
 						},
 						"subclass": {
 							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Djinni"
 						}
 					},
 					{
@@ -37262,6 +37484,9 @@
 			],
 			"entries": [
 				"This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence. You must have seen or touched the destination plant at least once before. For the duration, any creature can step into the target plant and exit from the destination plant by using 5 feet of movement."
+			],
+			"miscTags": [
+				"TP"
 			],
 			"classes": {
 				"fromClassList": [
@@ -37603,6 +37828,9 @@
 			],
 			"entries": [
 				"You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended."
+			],
+			"areaTags": [
+				"ST"
 			],
 			"classes": {
 				"fromClassList": [
@@ -37953,7 +38181,7 @@
 			},
 			"races": [
 				{
-					"name": "Tiefling (Variant)",
+					"name": "Tiefling (Variant; Devil's Tongue)",
 					"source": "SCAG",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"
@@ -38483,7 +38711,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Dao"
 						}
 					},
 					{
@@ -38493,7 +38722,8 @@
 						},
 						"subclass": {
 							"name": "Genie (UA)",
-							"source": "UA2020SubclassesRevisited"
+							"source": "UA2020SubclassesRevisited",
+							"subSubclass": "Dao"
 						}
 					},
 					{
@@ -39368,7 +39598,8 @@
 						},
 						"subclass": {
 							"name": "Genie",
-							"source": "TCE"
+							"source": "TCE",
+							"subSubclass": "Djinni"
 						}
 					},
 					{
@@ -39435,7 +39666,7 @@
 						"You allow up to twenty creatures that you can see to regain all hit points, and you end all effects on them described in the {@spell greater restoration} spell.",
 						"You grant up to ten creatures that you can see resistance to a damage type you choose.",
 						"You grant up to ten creatures you can see immunity to a single spell or other magical effect for 8 hours. For instance, you could make yourself and all your companions immune to a {@creature lich}'s life drain attack.",
-						"You undo a single recent event by forcing a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a wish spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You can force the reroll to be made with advantage or disadvantage, and you can choose whether to use the reroll or the original roll."
+						"You undo a single recent event by forcing a reroll of any roll made within the last round (including your last turn). Reality reshapes itself to accommodate the new result. For example, a {@spell wish} spell could undo an opponent's successful save, a foe's critical hit, or a friend's failed save. You can force the reroll to be made with advantage or disadvantage, and you can choose whether to use the reroll or the original roll."
 					]
 				},
 				"You might be able to achieve something beyond the scope of the above examples. State your wish to the DM as precisely as possible. The DM has great latitude in ruling what occurs in such an instance; the greater the wish, the greater the likelihood that something goes wrong. This spell might simply fail, the effect you desire might only be partly achieved, or you might suffer some unforeseen consequence as a result of how you worded the wish. For example, wishing that a villain were dead might propel you forward in time to a period when that villain is no longer alive, effectively removing you from the game. Similarly, wishing for a legendary magic item or artifact might instantly transport you to the presence of the item's current owner.",

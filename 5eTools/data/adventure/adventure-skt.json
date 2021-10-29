@@ -2051,7 +2051,7 @@
 					"id": "080",
 					"entries": [
 						"An ankle-deep stream of water pours through a narrow tunnel in the west wall and forms a small pool in this otherwise empty cave. The water doesn't taste good because of its high mineral content, but the goblins have been forced to drink it because their supply of fresh water has been cut off (see {@area 3|07a}).",
-						"If the characters enter the caves undetected and take refuge here, there's a 50 percent chance each hour that a goblin noncombatant enters the cave, looking for a drink of water. The goblin flees at the sight of intruders, heading north to {@area 9|083}. The goblin has AC 10, 1 hit point, and no effective attacks."
+						"If the characters enter the caves undetected and take refuge here, there's a {@chance 50|50 percent} chance each hour that a goblin noncombatant enters the cave, looking for a drink of water. The goblin flees at the sight of intruders, heading north to {@area 9|083}. The goblin has AC 10, 1 hit point, and no effective attacks."
 					]
 				},
 				{
@@ -4589,7 +4589,7 @@
 					"name": "Bandits",
 					"id": "13f",
 					"entries": [
-						"A marauding gang of bandits confronts the party. The gang consists of a {@creature bandit captain} and {@dice 3d6+2} {@creature bandit||bandits}, all wearing cloaks and mounted on {@creature riding horse||riding horses}. There is a 25 percent chance that the bandits attack without provocation. Otherwise, the captain promises not to attack in exchange for a toll (no less than 100 gp worth of treasure). If the characters pay up, the captain bids them a safe journey before departing peacefully.",
+						"A marauding gang of bandits confronts the party. The gang consists of a {@creature bandit captain} and {@dice 3d6+2} {@creature bandit||bandits}, all wearing cloaks and mounted on {@creature riding horse||riding horses}. There is a {@chance 25|25 percent} chance that the bandits attack without provocation. Otherwise, the captain promises not to attack in exchange for a toll (no less than 100 gp worth of treasure). If the characters pay up, the captain bids them a safe journey before departing peacefully.",
 						{
 							"type": "entries",
 							"name": "Sea",
@@ -4680,13 +4680,13 @@
 					"name": "Elk",
 					"id": "14a",
 					"entries": [
-						"The characters come across {@dice 2d10} elk (or reindeer). The beasts aren't hostile and flee if attacked.",
+						"The characters come across {@dice 2d10} {@creature elk} (or reindeer). The beasts aren't hostile and flee if attacked.",
 						{
 							"type": "entries",
 							"name": "Treasure",
 							"id": "14b",
 							"entries": [
-								"There is a 1 percent chance per elk present that one of them has antlers of pure gold. Each of its antlers is worth 250 gp."
+								"There is a {@chance 1|1 percent} chance per elk present that one of them has antlers of pure gold. Each of its antlers is worth 250 gp."
 							]
 						}
 					]
@@ -4808,7 +4808,7 @@
 					"name": "Knight",
 					"id": "156",
 					"entries": [
-						"The Order of the Gauntlet is taking strides to deal with the giant threat. The characters encounter a {@creature knight} of the order mounted on a {@creature warhorse} clad in chain mail barding (AC 16). There is a 50 percent chance that the knight has a squire-a {@creature guard} mounted on an unarmored {@creature warhorse}. Two sample knights (one with a squire, one without) are presented below.",
+						"The Order of the Gauntlet is taking strides to deal with the giant threat. The characters encounter a {@creature knight} of the order mounted on a {@creature warhorse} clad in chain mail barding (AC 16). There is a {@chance 50|50 percent} chance that the knight has a squire-a {@creature guard} mounted on an unarmored {@creature warhorse}. Two sample knights (one with a squire, one without) are presented below.",
 						"Lady Harriana Hawkwinter (LG female Chondathan knight of Helm) is a Waterdhavian noble and a champion of the god of watchfulness. She and her squire recently rescued a couple of children trapped under the wreckage of a barn that had been demolished by stone giants. Lady Hawkwinter asks the characters to take the orphans to the nearest settlement while she continues to follow the giants' path and search for other survivors.",
 						"Sir Jordeth Tavilson (LN male Illuskan knight of Tyr), a believer in swift justice, has a gash in his armor and a broken lute strapped to his back. The lute belonged to his squire, who perished in a recent battle against two frost giants. Jordeth managed to kill one giant, but the other got away. He wants justice and asks the characters to join him on his quest to slay the wounded giant."
 					]
@@ -4834,7 +4834,7 @@
 					"name": "Orcs",
 					"id": "159",
 					"entries": [
-						"The characters come across {@dice 3d6+2} {@creature orc||orcs}. There is a 25 percent chance that these orcs have prisoners in tow. A sample group of prisoners is presented here, but you can create others.",
+						"The characters come across {@dice 3d6+2} {@creature orc||orcs}. There is a {@chance 25|25 percent} chance that these orcs have prisoners in tow. A sample group of prisoners is presented here, but you can create others.",
 						"The prisoners are {@dice 1d4+2} strongheart halfling {@creature commoner||commoners} belonging to the Woodhew clan. The oldest among them is a feisty old gardener named Ollie Woodhew. The orcs set fire to the Woodhew homestead and captured these family members as they tried to flee. One of the orcs even broke Ollie's favorite walking stick.",
 						{
 							"type": "entries",
@@ -4851,7 +4851,7 @@
 					"name": "Ranger",
 					"id": "15b",
 					"entries": [
-						"The characters encounter a helpful ranger, who might be a member of the Emerald Enclave or simply a wanderer of the wilderness. Either way, the ranger is happy to serve as a guide or a source of information. There is a 50 percent chance that the ranger has a {@creature riding horse}, one or more beast companions, or both. A ranger with neither travels alone on foot. Two sample rangers are presented below, but you can create others.",
+						"The characters encounter a helpful ranger, who might be a member of the Emerald Enclave or simply a wanderer of the wilderness. Either way, the ranger is happy to serve as a guide or a source of information. There is a {@chance 50|50 percent} chance that the ranger has a {@creature riding horse}, one or more beast companions, or both. A ranger with neither travels alone on foot. Two sample rangers are presented below, but you can create others.",
 						"Vordana Jezral (NG female lightfoot halfling scout) has the psionic ability to cast the misty step spell once per day. She is familiar with the roads and trails of the North and the settlements along them. She knows every innkeeper from Neverwinter to Deadsnows, and she has two traveling companions: a {@creature tressym|SKT} named Flycatcher and an old {@creature mule} named Tod, which she freed from an abusive owner.",
 						"Saarvin (CN male dragonborn {@creature scout}) travels on foot and carries his own gear. He was born in Fireshear and is the self-proclaimed King of the Frozenfar. He claims to have climbed the tallest peak in the Spine of the World and plucked coins from the hoard of a white dragon sleeping less than 10 feet away. Each night, while sitting by the campfire, he carves a tiny wooden figurine depicting one of the characters and gives it to that individual as a gift the next morning."
 					]
@@ -5671,7 +5671,7 @@
 							"width": 706,
 							"height": 450
 						},
-						"Tree Ghosts patrol the woods surrounding Grandfather Tree. Characters who venture into the forest on foot in search of the tree should encounter one or more patrols, each consisting of {@dice 3d6} Tree Ghost {@creature tribal warrior||tribal warriors} and an {@creature Uthgardt shaman|SKT}. There is a 25 percent chance that the group includes one of Great Chief Boorvald Orcbane's adult children, who leads the patrol. This Uthgardt barbarian leader is a {@creature berserker}, with the following changes:",
+						"Tree Ghosts patrol the woods surrounding Grandfather Tree. Characters who venture into the forest on foot in search of the tree should encounter one or more patrols, each consisting of {@dice 3d6} Tree Ghost {@creature tribal warrior||tribal warriors} and an {@creature Uthgardt shaman|SKT}. There is a {@chance 25|25 percent} chance that the group includes one of Great Chief Boorvald Orcbane's adult children, who leads the patrol. This Uthgardt barbarian leader is a {@creature berserker}, with the following changes:",
 						{
 							"type": "list",
 							"items": [
@@ -5809,7 +5809,7 @@
 							"width": 609,
 							"height": 450
 						},
-						"The cavern floor is a sheet of slippery ice (see the \"Wilderness Hazards\" section in chapter 5 of the {@i Dungeon Master's Guide}) flanked by 70-foot-high ledges of rock, atop which stand two totem poles of chiseled ice with carvings that resemble winged snakes. The walls of these ledges are riddled with caves in which the Great Worm tribe members live. Natural steam vents in the rock keep the caves warm throughout the year. Above the ledges, dug into the cavern walls, are narrow crypts where the honored dead are placed, their frozen corpses propped up in a standing position.",
+						"The cavern floor is a sheet of {@hazard slippery ice} (see the \"Wilderness Hazards\" section in chapter 5 of the {@i Dungeon Master's Guide}) flanked by 70-foot-high ledges of rock, atop which stand two totem poles of chiseled ice with carvings that resemble winged snakes. The walls of these ledges are riddled with caves in which the Great Worm tribe members live. Natural steam vents in the rock keep the caves warm throughout the year. Above the ledges, dug into the cavern walls, are narrow crypts where the honored dead are placed, their frozen corpses propped up in a standing position.",
 						{
 							"type": "entries",
 							"name": "Altar",
@@ -5960,7 +5960,7 @@
 							"id": "1b9",
 							"entries": [
 								"Characters who board the ship and defeat the giants find a ton of stolen foodstuffs, along with a dozen barrels of cheap ale of little value, twelve casks of expensive brandy (worth 300 gp each), 10,000 gp in mixed coinage, and {@dice 2d4} stolen art objects worth 750 gp each (roll on the appropriate table in chapter 7 of the {@i Dungeon Master's Guide} to determine each art object).",
-								"Each returning giant carries a sack stuffed with pillaged supplies as well as one mundane item, determined by rolling on the Items in a Giant's Bag table in the introduction. There is also a 25 percent chance of a sack containing {@dice 1d10 × 100} gp in mixed coinage."
+								"Each returning giant carries a sack stuffed with pillaged supplies as well as one mundane item, determined by rolling on the Items in a Giant's Bag table in the introduction. There is also a {@chance 25|25 percent} chance of a sack containing {@dice 1d10 × 100} gp in mixed coinage."
 							]
 						}
 					]
@@ -6143,7 +6143,7 @@
 									"name": "Ten-Towners",
 									"id": "1c8",
 									"entries": [
-										"The characters chance upon {@dice 1d4+1} {@creature scout||scouts} (trappers) from one of the small settlements of Ten-Towns. There is a 50 percent chance that they're heading home with {@dice 2d6} animal pelts worth 5 gp each. They know the wilderness well and can direct or guide characters to the nearest settlement. If the characters ask them about giant sightings, there is a 25 percent chance that the scouts have come across frost giant tracks in the past twelve hours, in which case they can steer the characters toward them."
+										"The characters chance upon {@dice 1d4+1} {@creature scout||scouts} (trappers) from one of the small settlements of Ten-Towns. There is a {@chance 50|50 percent} chance that they're heading home with {@dice 2d6} animal pelts worth 5 gp each. They know the wilderness well and can direct or guide characters to the nearest settlement. If the characters ask them about giant sightings, there is a {@chance 25|25 percent} chance that the scouts have come across frost giant tracks in the past twelve hours, in which case they can steer the characters toward them."
 									]
 								},
 								{
@@ -7023,7 +7023,7 @@
 							"id": "218",
 							"entries": [
 								"If the characters arrive at Raven Rock in the morning or the afternoon, they see {@dice 2d4} giant ravens (use the {@creature giant vulture} statistics) flying lazy circles at a height of 300 feet above the spirit mound. If the characters arrive in the evening, the giant ravens are perched quietly on their wooden roosts. The ravens aren't present at night. The giant ravens don't attack intruders or squawk at them, but they remember with perfect clarity any trespassers they see and describe them to the next group of Black Raven barbarians they meet.",
-								"If the giant ravens see the characters take the magma ring, the Black Raven barbarians learn about the theft {@dice 1d4} days later. After that time, there is a cumulative 5 percent chance per day that the Black Ravens locate the characters (or a subset of them, if the party splits up). Alternatively, you can have them catch up to the party at a dramatic moment of your choice. Wherever the characters happen to be, an {@creature Uthgardt shaman|SKT} and six {@creature tribal warrior||tribal warriors}, each mounted on a giant raven, attack the characters. Rules for mounted combat appear in chapter 9 of the {@i Player's Handbook}."
+								"If the giant ravens see the characters take the magma ring, the Black Raven barbarians learn about the theft {@dice 1d4} days later. After that time, there is a cumulative {@chance 5|5 percent} chance per day that the Black Ravens locate the characters (or a subset of them, if the party splits up). Alternatively, you can have them catch up to the party at a dramatic moment of your choice. Wherever the characters happen to be, an {@creature Uthgardt shaman|SKT} and six {@creature tribal warrior||tribal warriors}, each mounted on a giant raven, attack the characters. Rules for mounted combat appear in chapter 9 of the {@i Player's Handbook}."
 							]
 						},
 						{
@@ -7121,7 +7121,7 @@
 					"id": "222",
 					"entries": [
 						"A closely packed stand of towering shadowtop trees lies in the High Forest. The dark canopies of the trees form a high roof that permits only hints of sunlight to touch the ground beneath. Shadowtop Cathedral is an important meeting place for the Emerald Enclave. The forest within 50 miles of the site is seeded with {@creature awakened tree||awakened trees} and {@creature awakened shrub||awakened shrubs} that are loyal to the enclave. These plants hide the trails that lead to Shadowtop Cathedral. If the awakened plants spot a creature openly wearing or carrying the symbol of the Emerald Enclave, the plants move aside to reveal hidden trails. Other creatures searching the forest for trails have disadvantage on ability checks made to find them and to avoid becoming lost.",
-						"When the characters first arrive at Shadowtop Cathedral, no one else is present, and there are no tracks on the ground. Each day at dawn, highsun, and dusk, there is a cumulative 10 percent chance that a friendly {@creature druid} (NG male or female moon elf) visits the site. The druid doesn't stay long but urges characters seeking assistance to wait for the cathedral's caretaker to return. If they heed the druid's advice, assume that the caretaker returns at the next dawn.",
+						"When the characters first arrive at Shadowtop Cathedral, no one else is present, and there are no tracks on the ground. Each day at dawn, highsun, and dusk, there is a cumulative {@chance 10|10 percent} chance that a friendly {@creature druid} (NG male or female moon elf) visits the site. The druid doesn't stay long but urges characters seeking assistance to wait for the cathedral's caretaker to return. If they heed the druid's advice, assume that the caretaker returns at the next dawn.",
 						"The primary caretaker of Shadowtop Cathedral is a xenophobic, moss-covered treant named Turlang. He visits the site only occasionally. When he's not at the cathedral, Turlang wanders the forest, frightening off interlopers. He has the statistics of a {@creature treant}, with 200 hit points and the following additional feature.",
 						{
 							"type": "entries",
@@ -7494,7 +7494,7 @@
 							"id": "244",
 							"entries": [
 								"Two teenage cattle ranchers named Albie Grizlow and Leshonna Daar (CE male and female Tethyrian human {@creature commoner||commoners}) mounted on {@creature riding horse||riding horses} intercept the characters as they approach within five miles of Uluvin. The teenagers tell the party that the village has fallen to hill giants and goblins and that many villagers have taken refuge in the nearby forest.",
-								"Characters can give the village a wide berth, or they can deal with the threat. If they get within three miles of the village, they start to see scattered farmsteads surrounded by dry fields. At each farmstead are {@dice 3d6} {@creature goblin||goblins}; they either are searching the cottage and barn for treasure, chasing chickens and swine in the field, or dancing around {@dice 1d4} tied-up prisoners ({@creature commoner||commoners}). The goblins have covered their captives' heads with old buckets, flowerpots, and feedbags so that they can't see. There is a 50 percent chance that an {@creature ogre} is also present, trying to catch a pig or lift a cow and take it back to Grudd Haug (see chapter 5, \"Den of the Hill Giants\"). The goblins and the ogre are too distracted to notice the adventurers if they stick to the road. The ogre and most of the goblins have no treasure, but the goblin leader at each farmstead carries a trinket (roll on the Trinkets table in chapter 5 of the {@i Player's Handbook}).",
+								"Characters can give the village a wide berth, or they can deal with the threat. If they get within three miles of the village, they start to see scattered farmsteads surrounded by dry fields. At each farmstead are {@dice 3d6} {@creature goblin||goblins}; they either are searching the cottage and barn for treasure, chasing chickens and swine in the field, or dancing around {@dice 1d4} tied-up prisoners ({@creature commoner||commoners}). The goblins have covered their captives' heads with old buckets, flowerpots, and feedbags so that they can't see. There is a {@chance 50|50 percent} chance that an {@creature ogre} is also present, trying to catch a pig or lift a cow and take it back to Grudd Haug (see chapter 5, \"Den of the Hill Giants\"). The goblins and the ogre are too distracted to notice the adventurers if they stick to the road. The ogre and most of the goblins have no treasure, but the goblin leader at each farmstead carries a trinket (roll on the Trinkets table in chapter 5 of the {@i Player's Handbook}).",
 								"If the characters enter the village, they see dusty wood-frame buildings with tall facades lining the Iron Road. Three {@creature hill giant||hill giants} are outside in plain view, overturning wagons, smashing through clay-tiled rooftops with their greatclubs, and stuffing into their sacks anything that catches their eye. Characters can easily take these hill giants by surprise. An inn and saloon called the Black Bull's Tail stands at the intersection where the road branches. Two more {@creature hill giant||hill giants} have ripped through the inn's facade and destroyed most of the furnishings, including the stairs leading up to the second floor, and are in the midst of gorging themselves on food and ale. If they hear sounds of combat outside, they investigate, hurling benches, rain barrels, and whatever else they can find in lieu of rocks."
 							]
 						},
@@ -7839,7 +7839,7 @@
 					"name": "Everlund Circle",
 					"id": "261",
 					"entries": [
-						"The {@spell teleportation circle} in Everlund is located inside a circular chamber in Moongleam Tower. An {@spell arcane lock} spell has been cast on the chamber door, though tower mages can bypass it. Krowen has assigned a brusque but reliable apprentice named Nespril Menk (LG male Damaran human {@creature mage}) to watch over this circle during the day, and a lazy, sleep-deprived apprentice named Flewen Aldhark (NG male Chondathan human {@creature mage}) to mind the circle at night. If the characters arrive while Flewen is on duty, there is a 90 percent chance he's propped up in a chair, sound asleep."
+						"The {@spell teleportation circle} in Everlund is located inside a circular chamber in Moongleam Tower. An {@spell arcane lock} spell has been cast on the chamber door, though tower mages can bypass it. Krowen has assigned a brusque but reliable apprentice named Nespril Menk (LG male Damaran human {@creature mage}) to watch over this circle during the day, and a lazy, sleep-deprived apprentice named Flewen Aldhark (NG male Chondathan human {@creature mage}) to mind the circle at night. If the characters arrive while Flewen is on duty, there is a {@chance 90|90 percent} chance he's propped up in a chair, sound asleep."
 					]
 				},
 				{
@@ -7847,7 +7847,7 @@
 					"name": "Loudwater Circle",
 					"id": "262",
 					"entries": [
-						"The {@spell teleportation circle} in Loudwater is located in a 30-foot-square cellar under a tavern called the Smiling Satyr. Tucked underneath a wooden staircase is an unmade bed where the circle's attending mage sleeps. His name is Revil Slombarr (CG male Chondathan human {@creature mage}). He's a heavyset young man who shirks his duties from time to time to visit nearby festhalls. There is a 50 percent chance that Revil is absent when the characters arrive, in which case he returns after {@dice 1d4} hours.",
+						"The {@spell teleportation circle} in Loudwater is located in a 30-foot-square cellar under a tavern called the Smiling Satyr. Tucked underneath a wooden staircase is an unmade bed where the circle's attending mage sleeps. His name is Revil Slombarr (CG male Chondathan human {@creature mage}). He's a heavyset young man who shirks his duties from time to time to visit nearby festhalls. There is a {@chance 50|50 percent} chance that Revil is absent when the characters arrive, in which case he returns after {@dice 1d4} hours.",
 						"The stairs leads up to a secret door that opens inside a large wooden trunk bolted to the floor above. Characters who climb out of the trunk find themselves in a curtained cloakroom near the taproom. A Harper sympathizer named Gharwin Umbryl (LG male human {@creature commoner}) runs the Smiling Satyr and does his best to cover for Revil."
 					]
 				},
@@ -8394,7 +8394,7 @@
 												[
 													"Skye",
 													"Cloud",
-													"A reverse gravity spell activates (save DC 15), affecting the entire room. Creatures and objects that aren't anchored fall upward. The spell remains in effect for 1 minute, after which time creatures and objects on the ceiling fall back down to the floor. The giant statues and their weapons are considered anchored."
+													"A {@spell reverse gravity} spell activates (save DC 15), affecting the entire room. Creatures and objects that aren't anchored fall upward. The spell remains in effect for 1 minute, after which time creatures and objects on the ceiling fall back down to the floor. The giant statues and their weapons are considered anchored."
 												],
 												[
 													"Uvar",
@@ -8512,7 +8512,7 @@
 									"id": "291",
 									"entries": [
 										"This natural cave has a 30-foot-high ceiling supported by five rocky columns. The floor is flat and is normal terrain. The cavern is filled with translucent ice spider webs that block line of sight. Characters who succeed on a DC 15 Wisdom (Perception) check can spot a cluster of cocoons on the floor at the back of the cave.",
-										"Although they're made of ice, the webs are sticky (like frozen metal). They use the same rules as normal webs (see the \"Dungeon Hazards\" section in chapter 5 of the {@i Dungeon Master's Guide}) except that they are brittle and thus lack immunity to bludgeoning damage.",
+										"Although they're made of ice, the webs are sticky (like frozen metal). They use the same rules as normal {@hazard webs} (see the \"Dungeon Hazards\" section in chapter 5 of the {@i Dungeon Master's Guide}) except that they are brittle and thus lack immunity to bludgeoning damage.",
 										"Characters who smash or burn their way through the webs can reach the cocoons, of which there are three. The first one contains the exsanguinated corpse of a mountain goat. The second one holds a dead shield dwarf prospector wearing a tattered fur cloak and clutching a miner's pick close to his chest. The third one contains a living Uthgardt barbarian of the Great Worm tribe named Noori, a {@creature berserker} with the following changes:",
 										{
 											"type": "list",
@@ -9635,7 +9635,7 @@
 					"id": "2d8",
 					"entries": [
 						"Adventurers can use hit-and-run tactics to weaken Grudd Haug's defenses. Depending on how much time passes between the adventurers' forays, the hill giant den might gain reinforcements from the nearby hills.",
-						"At the end of each hour, roll percentile dice and consult the Grudd Haug Reinforcements table to determine what creatures, if any, appear. Unless otherwise noted, such creatures enter through the stockyard ({@area 9|2ee}) and go to the feasting hall ({@area 2|2e1}), to pay homage or deliver food to Chief Guh. There is a 25 percent chance that the creatures have {@dice 1d4} prisoners (unarmed {@creature commoner||commoners}) in tow. If Guh commands the reinforcements to stay, they take up defensive positions in and around the stockyard after confining their prisoners in {@area 13|2f3}. Otherwise, they leave by the route they came after 20 minutes or so.",
+						"At the end of each hour, roll percentile dice and consult the Grudd Haug Reinforcements table to determine what creatures, if any, appear. Unless otherwise noted, such creatures enter through the stockyard ({@area 9|2ee}) and go to the feasting hall ({@area 2|2e1}), to pay homage or deliver food to Chief Guh. There is a {@chance 25|25 percent} chance that the creatures have {@dice 1d4} prisoners (unarmed {@creature commoner||commoners}) in tow. If Guh commands the reinforcements to stay, they take up defensive positions in and around the stockyard after confining their prisoners in {@area 13|2f3}. Otherwise, they leave by the route they came after 20 minutes or so.",
 						{
 							"type": "table",
 							"caption": "Grudd Haug Reinforcements",
@@ -10592,7 +10592,7 @@
 									"name": "Gorgon Mud",
 									"id": "315",
 									"entries": [
-										"This pool of thick, magical mud is treated as quicksand (see the \"Wilderness Hazards\" section in chapter 5 of the {@i Dungeon Master's Guide}), and it also can petrify creatures that become immersed in it. A creature that ends its turn in an area of gorgon mud must succeed on a DC 12 Constitution saving throw or be petrified. Gorgon mud removed from its pool becomes ordinary mud. The pool radiates an aura of transmutation magic under the scrutiny of a {@spell detect magic} spell.",
+										"This pool of thick, magical mud is treated as {@hazard quicksand} (see the \"Wilderness Hazards\" section in chapter 5 of the {@i Dungeon Master's Guide}), and it also can petrify creatures that become immersed in it. A creature that ends its turn in an area of gorgon mud must succeed on a DC 12 Constitution saving throw or be petrified. Gorgon mud removed from its pool becomes ordinary mud. The pool radiates an aura of transmutation magic under the scrutiny of a {@spell detect magic} spell.",
 										"A petrified creature can be pulled out of the mud. For simplicity's sake, assume that a petrified Small character weighs 250 pounds and a petrified Medium character weighs 600 pounds."
 									]
 								}
@@ -11392,7 +11392,7 @@
 							"entries": [
 								"Icicles hang from the rafters of this ice-glazed hall, which is illuminated by bluish {@spell continual flame} spells. An ivory drinking horn rests atop a frozen table in the middle of the room. South of the table are a rug made from the hide of a white saber-toothed tiger and a throne carved from ice. Lying on the seat of the throne is a large conch (see \"Treasure\"). Against the walls stand three shelving units heaped with furs and packed with bottles of wine, stoppered jugs, and casks of mead.",
 								"Snowy wind blows in through a pillared opening in the south wall that leads to a balcony with no railing.",
-								"Jarl Storvald retires here when he's not plying the northern waters. He isn't here when the characters first arrive at Svardborg. Instead, two {@creature frost giant||frost giants} and two {@creature winter wolf||winter wolves} stand guard here, watching over seven frost-covered white dragon eggs in the northeast corner of the room. Each egg is 4 feet tall, weighs 300 pounds, and is covered with an icy glaze. An egg has AC 14 and 20 hit points. When an egg is broken, there is a 50 percent chance that the {@creature white dragon wyrmling} inside hatches and is able to attack; otherwise, it is dead.",
+								"Jarl Storvald retires here when he's not plying the northern waters. He isn't here when the characters first arrive at Svardborg. Instead, two {@creature frost giant||frost giants} and two {@creature winter wolf||winter wolves} stand guard here, watching over seven frost-covered white dragon eggs in the northeast corner of the room. Each egg is 4 feet tall, weighs 300 pounds, and is covered with an icy glaze. An egg has AC 14 and 20 hit points. When an egg is broken, there is a {@chance 50|50 percent} chance that the {@creature white dragon wyrmling} inside hatches and is able to attack; otherwise, it is dead.",
 								"A wooden ladder ascends 40 feet to {@area 1H|355}; the rungs of the ladder are 5 feet apart.",
 								"The giants and the wolves fight to the death. If Nilraun is here, he casts spells from behind the throne until his life is at risk, then he flees (see \"Development\").",
 								{
@@ -12508,7 +12508,7 @@
 							"id": "39a",
 							"entries": [
 								"After climbing 350 feet, the staircase is interrupted by a naturally formed, 50-foot-wide, 50-foot-deep chamber that a {@creature chimera} has made into a lair. The ledge that leads across this area is covered with the bones of the chimera's kills (beasts mostly, with a few orc and dwarf bones). The staircase resumes on the opposite side of the ledge, climbing another 150 feet to {@area 2|39c}. In the back of its lair, the chimera has a nest of bones, bits of tattered cloth, and clumps of earth and dead vegetation.",
-								"When the characters first arrive, there is a 50 percent chance that the chimera is present, in which case it attacks interlopers on sight. Otherwise, the chimera is out hunting and returns here at a time of your choosing.",
+								"When the characters first arrive, there is a {@chance 50|50 percent} chance that the chimera is present, in which case it attacks interlopers on sight. Otherwise, the chimera is out hunting and returns here at a time of your choosing.",
 								{
 									"type": "entries",
 									"name": "Treasure",
@@ -12560,7 +12560,7 @@
 							"id": "39f",
 							"entries": [
 								"Characters can try to reach {@area 9|3b4} by climbing through the openings in the frame of the water wheel and crawling along its iron axle. This is a dangerous act, and getting from one side to the other requires a successful DC 15 Strength (Athletics) or Dexterity (Acrobatics) check. A character who fails the check doesn't make it across and must make a DC 10 Dexterity saving throw. On a failed save, the character is swept down the river and tumbles down the mountainside, taking 70 ({@dice 20d6}) bludgeoning damage from the fall. On a successful save, the character manages to hang onto the wheel or the axle and avoid a fall, but is stuck between the spokes of the wheel and must repeat the check on his or her next turn to reach one end of the axle or the other.",
-								"Characters might try to make this route safer by preventing the water wheel from turning. Jamming a fence post or similar object between the spokes of the water wheel disables it, as does a successful DC 20 Strength check made to grab the wheel and stop it from turning. When the wheel is stopped, the force of the current puts tremendous strain on it. At the end of each turn, the wheel has a 25 percent chance of breaking apart and tumbling down the waterfall. If that happens, the millstone and the elevator ({@area 9|3b4}) cease to function. Any creature on the wheel when it breaks is swept over the cliff with the wreckage and takes 70 ({@dice 20d6}) bludgeoning damage from the fall. The breaking of the wheel puts the yakfolk village on alert. Meanwhile, Zalto orders one of the fire giants in {@area 34|3eb} to go to {@area 9|3b4}, find out what has caused the elevator to stop working, and report back. Unless it encounters trouble along the way, the giant arrives in {@area 9|3b4} roughly 20 minutes after the elevator stops working. If the giant finds evidence of foul play, it reports back to Zalto (taking 20 minutes to reach him). Zalto then places the foundry on alert, meaning that its defenders can't be surprised."
+								"Characters might try to make this route safer by preventing the water wheel from turning. Jamming a fence post or similar object between the spokes of the water wheel disables it, as does a successful DC 20 Strength check made to grab the wheel and stop it from turning. When the wheel is stopped, the force of the current puts tremendous strain on it. At the end of each turn, the wheel has a {@chance 25|25 percent} chance of breaking apart and tumbling down the waterfall. If that happens, the millstone and the elevator ({@area 9|3b4}) cease to function. Any creature on the wheel when it breaks is swept over the cliff with the wreckage and takes 70 ({@dice 20d6}) bludgeoning damage from the fall. The breaking of the wheel puts the yakfolk village on alert. Meanwhile, Zalto orders one of the fire giants in {@area 34|3eb} to go to {@area 9|3b4}, find out what has caused the elevator to stop working, and report back. Unless it encounters trouble along the way, the giant arrives in {@area 9|3b4} roughly 20 minutes after the elevator stops working. If the giant finds evidence of foul play, it reports back to Zalto (taking 20 minutes to reach him). Zalto then places the foundry on alert, meaning that its defenders can't be surprised."
 							]
 						}
 					]
@@ -12970,7 +12970,7 @@
 					"name": "18. Foundry, Upper Level",
 					"id": "3c7",
 					"entries": [
-						"This area is incredibly hot, and characters who linger here are susceptible to the effects of extreme heat (see the \"Wilderness Survival\" section in chapter 5 of the {@i Dungeon Master's Guide}). A rusted iron gantry clings to the north, west, and south walls 50 feet above the floor of the main foundry, which echoes with the sound of clanging metal, rattling chains, whooshing bellows, and bubbling molten iron. The ceiling looms 40 feet above the gantry. Cable towers support the bucket chain that runs near the path of the gantry.",
+						"This area is incredibly hot, and characters who linger here are susceptible to the effects of {@hazard extreme heat} (see the \"Wilderness Survival\" section in chapter 5 of the {@i Dungeon Master's Guide}). A rusted iron gantry clings to the north, west, and south walls 50 feet above the floor of the main foundry, which echoes with the sound of clanging metal, rattling chains, whooshing bellows, and bubbling molten iron. The ceiling looms 40 feet above the gantry. Cable towers support the bucket chain that runs near the path of the gantry.",
 						"Unless they have been drawn to {@area 17|3c5}, four {@creature ogre||ogres} armed with 15-foot-long hooked poles stand on the gantry above the smelters in {@area 34|3eb}. They use the poles to tip buckets of iron ore into the smelters. Overseeing them is Duke Zalto's fat and lazy son, Zaltember. When the characters first arrive, Zaltember is dangling a shield dwarf {@creature commoner} by his ankles over the southernmost smelter and threatening to drop him into it unless the dwarf pleads for his life. (Zaltember plucked the dwarf from the slave wheel and accused him of slacking off.) The dwarf refuses to give the sadistic young fire giant any satisfaction, which infuriates Zaltember. The ogres merely stand and watch with idiotic glee.",
 						"Zaltember is fifteen years old and stands 9 feet tall. He has the statistics of a {@creature half-ogre (ogrillon)||half-ogre}, with the following changes:",
 						{
@@ -13419,7 +13419,7 @@
 					"name": "34. Foundry, Lower Level",
 					"id": "3eb",
 					"entries": [
-						"Characters can hear the clanging of metal and see ripples of heat throughout this brightly lit area. Those who linger here are susceptible to the effects of extreme heat (see the \"Wilderness Survival\" section in chapter 5 of the {@i Dungeon Master's Guide}). A 60-foot wide, 160-foot long, and 5-foot deep stone trough filled with molten iron dominates the room. The molten iron spills from four cone-shaped smelters carved out of black basalt. The smelters are fueled by natural gas. Four {@creature fire giant||fire giants} pump huge bellows to fan the flames within. Any creature that enters the molten iron for the first time on a turn or starts its turn in molten iron takes 44 ({@dice 8d10}) fire damage.",
+						"Characters can hear the clanging of metal and see ripples of heat throughout this brightly lit area. Those who linger here are susceptible to the effects of {@hazard extreme heat} (see the \"Wilderness Survival\" section in chapter 5 of the {@i Dungeon Master's Guide}). A 60-foot wide, 160-foot long, and 5-foot deep stone trough filled with molten iron dominates the room. The molten iron spills from four cone-shaped smelters carved out of black basalt. The smelters are fueled by natural gas. Four {@creature fire giant||fire giants} pump huge bellows to fan the flames within. Any creature that enters the molten iron for the first time on a turn or starts its turn in molten iron takes 44 ({@dice 8d10}) fire damage.",
 						"The fire giants hurl globs of molten iron instead of rocks. A giant must be within reach of the trough to make this ranged weapon attack, which has a +11 bonus to hit, has a range of 30/120 ft., and deals 17 ({@dice 3d6+7}) bludgeoning damage plus 22 ({@dice 4d10}) fire damage on a hit.",
 						"The fire giants in {@area 35|3ec} investigate sounds of combat here."
 					]
@@ -13429,7 +13429,7 @@
 					"name": "35. Forges",
 					"id": "3ec",
 					"entries": [
-						"Streams of molten iron flow from the foundry ({@area 34|3eb}) into sword-shaped molds carved out of black basalt that sit inside three identical forges (areas 35A, 35B, and 35C), each one tended by a {@creature fire giant} weaponsmith. The heat in these rooms is almost unbearable, and characters who linger here are susceptible to the effects of extreme heat (see the \"Wilderness Survival\" section in chapter 5 of the {@i Dungeon Master's Guide}).",
+						"Streams of molten iron flow from the foundry ({@area 34|3eb}) into sword-shaped molds carved out of black basalt that sit inside three identical forges (areas 35A, 35B, and 35C), each one tended by a {@creature fire giant} weaponsmith. The heat in these rooms is almost unbearable, and characters who linger here are susceptible to the effects of {@hazard extreme heat} (see the \"Wilderness Survival\" section in chapter 5 of the {@i Dungeon Master's Guide}).",
 						"The three fire giants are busy hammering and bending iron to make blades and hilts, but they draw their greatswords and attack if they see any intruders.",
 						"In addition to the molds, each forge contains a fire place, a pair of massive anvils, and shelves that hold weaponsmithing tools."
 					]
@@ -16228,7 +16228,7 @@
 							"width": 1500,
 							"height": 1905
 						},
-						"Chapter 3 describes random encounters you can use to spice up a sea voyage. To calculate how long it takes for the characters to find the {@i Morkoth}, ascertain the rough distance from the party's starting location to the Purple Rocks, then calculate the amount of time it would take the party's conveyance to travel that distance. Once the characters get within 100 miles of the Purple Rocks, they have a base 10 percent chance per day of locating the {@i Morkoth}. This chance assumes that the characters are traveling in one group or aboard multiple conveyances in fairly close formation. If multiple conveyances are searching for the {@i Morkoth} and they are so widespread as to be at least 30 miles apart, roll separately for each conveyance.",
+						"Chapter 3 describes random encounters you can use to spice up a sea voyage. To calculate how long it takes for the characters to find the {@i Morkoth}, ascertain the rough distance from the party's starting location to the Purple Rocks, then calculate the amount of time it would take the party's conveyance to travel that distance. Once the characters get within 100 miles of the Purple Rocks, they have a base {@chance 10|10 percent} chance per day of locating the {@i Morkoth}. This chance assumes that the characters are traveling in one group or aboard multiple conveyances in fairly close formation. If multiple conveyances are searching for the {@i Morkoth} and they are so widespread as to be at least 30 miles apart, roll separately for each conveyance.",
 						"You can forgo precision and assume that the party spots the {@i Morkoth} {@dice 1d4+2} days after coming within 100 miles of the Purple Rocks."
 					]
 				},
@@ -16823,7 +16823,7 @@
 					"entries": [
 						"Iymrith dug this cavern out of the sand, clay, and rock and uses it to store her treasure. In the middle of the cavern are two 10-foot-high sandstone walls. A giant pile of gold coins lies in the sand where the two walls meet.",
 						"When a creature other than Iymrith approaches within 10 feet of the treasure pile, the gold coins are swept up into four whirlwinds. These vortexes are four {@creature air elemental||air elementals} that deal extra damage because of the gold coins swirling inside them at high velocity. Each slam attack deals 18 ({@dice 3d8+5}) bludgeoning damage, and the elementals' whirlwind attack deals 20 ({@dice 4d8+2}) bludgeoning damage (half damage on a successful save, as normal). When an air elemental is destroyed, the gold coins contained within it tumble to the floor (see \"Treasure\").",
-						"The most prized treasures of Iymrith's hoard are contained in six stone sarcophagi buried 10 feet under the sandy floor and scattered about the room. Each sarcophagus has a sequester spell cast upon it, rendering it invisible and impervious to magical detection. The sequester spell on a given sarcophagus ends when a creature comes in direct contact with it. A creature that spends an hour digging in this cavern has a 10 percent chance of finding a sarcophagus. A group of characters working together must spend at least 10 minutes clearing the sand around the sarcophagus before it can be opened. Then and only then can a character use an action to try to pry open the lid of a sarcophagus, doing so with a successful DC 13 Strength (Athletics) check. Using a crowbar or a similar tool grants advantage on the check.",
+						"The most prized treasures of Iymrith's hoard are contained in six stone sarcophagi buried 10 feet under the sandy floor and scattered about the room. Each sarcophagus has a sequester spell cast upon it, rendering it invisible and impervious to magical detection. The sequester spell on a given sarcophagus ends when a creature comes in direct contact with it. A creature that spends an hour digging in this cavern has a {@chance 10|10 percent} chance of finding a sarcophagus. A group of characters working together must spend at least 10 minutes clearing the sand around the sarcophagus before it can be opened. Then and only then can a character use an action to try to pry open the lid of a sarcophagus, doing so with a successful DC 13 Strength (Athletics) check. Using a crowbar or a similar tool grants advantage on the check.",
 						{
 							"type": "entries",
 							"name": "Treasure",

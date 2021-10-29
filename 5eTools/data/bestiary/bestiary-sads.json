@@ -161,7 +161,6 @@
 				"name": "Sapphire Dragon",
 				"source": "SADS"
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Spider Climb"
@@ -171,6 +170,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -186,6 +186,7 @@
 				"T"
 			],
 			"spellcastingTags": [
+				"I",
 				"P"
 			],
 			"miscTags": [
@@ -203,7 +204,9 @@
 			"conditionInflictSpell": [
 				"restrained"
 			],
-			"hasFluff": true
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }

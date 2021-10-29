@@ -1,9 +1,4 @@
 {
-	"_meta": {
-		"internalCopies": [
-			"monsterFluff"
-		]
-	},
 	"monsterFluff": [
 		{
 			"name": "Abjurer",
@@ -444,7 +439,7 @@
 									"name": "Soul Feeding",
 									"entries": [
 										"A barghest can feed on the corpse of a humanoid that it killed that has been dead for less than 10 minutes, devouring both flesh and soul in doing so. This feeding takes at least 1 minute, and it destroys the victim's body. The victim's soul is trapped in the barghest for 24 hours, after which time it is digested. If the barghest dies before the soul is digested, the soul is released.",
-										"While a humanoid's soul is trapped in a barghest, any form of revival that could work has only a 50 percent chance of doing so, freeing the soul from the barghest if it is successful. Once a creature's soul is digested, however, no mortal magic can return that humanoid to life."
+										"While a humanoid's soul is trapped in a barghest, any form of revival that could work has only a {@chance 50|50 percent} chance of doing so, freeing the soul from the barghest if it is successful. Once a creature's soul is digested, however, no mortal magic can return that humanoid to life."
 									]
 								}
 							]
@@ -3263,8 +3258,7 @@
 									"type": "entries",
 									"name": "Lair of Luxury",
 									"entries": [
-										"On the celestial planes, ki-rins reside in lofty, elegant aeries filled with luxurious objects. In the world, a ki-rin chooses a similar location, such as atop a tall pinnacle or within a cloud solidified by the ki-rin's magic. When viewed from the outside, a ki-rin's lair is indistinguishable from a natural site, and the entrance is difficult for visitors to find and reach. Inside, the lair is a serene and comfortable place, its ambiance a mix between palace and temple. If the ki-rin has taken creatures into its service, its lair doubles as a sacred site wherein the ki-rin not only rests, but also teaches of holy mysteries.",
-										"Inside its lair, a ki-rin has the power to conjure objects up to three times per day, using each of the following versions of the power once. One version permanently creates enough objects made of soft, plant-based material-including manufactured objects such as cloth, pillows, rope, blankets, and clothing-to fill a cube 20 feet on a side. The second version permanently creates enough objects made of wood, or similarly hard plant-based material, to fill a cube 10 feet on a side. The third version creates enough objects made of stone or metal to fill a cube 2 feet on a side, but any materials created in this way last for only 1 hour."
+										"On the celestial planes, ki-rins reside in lofty, elegant aeries filled with luxurious objects. In the world, a ki-rin chooses a similar location, such as atop a tall pinnacle or within a cloud solidified by the ki-rin's magic. When viewed from the outside, a ki-rin's lair is indistinguishable from a natural site, and the entrance is difficult for visitors to find and reach. Inside, the lair is a serene and comfortable place, its ambiance a mix between palace and temple. If the ki-rin has taken creatures into its service, its lair doubles as a sacred site wherein the ki-rin not only rests, but also teaches of holy mysteries."
 									]
 								}
 							]

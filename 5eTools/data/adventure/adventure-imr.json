@@ -130,35 +130,40 @@
 											"name": "Chapter 1: The Unicorn and the Hags",
 											"entries": [
 												"Traveling through fey woods, the characters find themselves surrounded by dangerous, corrupted trees. \"Rescued\" by a trio of hags disguised as dryads, the characters might choose to help them rid the woods of a supposedly evil unicorn. Alternatively, they might meet the unicorn\u2014actually a good creature under assault by the hags that needs their help to fight back. Either way, they encounter a fallen clock tower holding mysterious magical components that can alter the flow of time."
-											]
+											],
+											"id": "1b0"
 										},
 										{
 											"type": "flowBlock",
 											"name": "Chapter 2: An Invitation Extended",
 											"entries": [
 												"Two agents, Lynx Creatlach and Sir Ursas, compete to hire the characters onto an expedition. Both seek additional components to rebuild the fabled artifact, the {@i Infernal Machine of Lum the Mad}\u2014and are looking to history to find them. The characters choose which of two legendary locations in the ancient past to use as the starting point for their search for the components."
-											]
+											],
+											"id": "1b1"
 										},
 										{
 											"type": "flowBlock",
 											"name": "Chapter 3: Construction of Horrors",
 											"entries": [
 												"Traveling to the distant past, the characters explore a version of the Tomb of Horrors still under construction. To obtain the missing components, they must contend with the tomb's architect, Moghadam, and disrupt the evil ceremony that keeps a powerful balor imprisoned."
-											]
+											],
+											"id": "1b2"
 										},
 										{
 											"type": "flowBlock",
 											"name": "Chapter 4: Temple of Moloch",
 											"entries": [
 												"The characters explore the ancient Temple of Moloch, also known as the laboratory of Thessalar, creator of numerous monsters. To obtain the components, they must contend with Thessalar, his lizardfolk guards, and the temple's monstrous denizens."
-											]
+											],
+											"id": "1b3"
 										},
 										{
 											"type": "flowBlock",
 											"name": "Chapter 5: Final Showdown",
 											"entries": [
 												"The characters return to the present with any components recovered. The agent who receives the components installs them in their framework for the {@i Infernal Machine of Lum the Mad}, while the other agent launches a raid to seize the machine. The characters are forced to determine who retains possession of this powerful artifact."
-											]
+											],
+											"id": "1b4"
 										}
 									]
 								}
@@ -1428,7 +1433,7 @@
 									"name": "Manipulating Time",
 									"id": "08c",
 									"entries": [
-										"Having a mechanical guide spend 1 charge in this area either brings the statue one day of work closer or further from completion (a 50 percent chance for either)."
+										"Having a mechanical guide spend 1 charge in this area either brings the statue one day of work closer or further from completion (a {@chance 50|50 percent} chance for either)."
 									]
 								}
 							]
@@ -1573,7 +1578,7 @@
 									"id": "09b",
 									"entries": [
 										"This block of strange material glows with an inner light of opalescent blue, owing to the missing components of the {@i Infernal Machine of Lum the Mad} wired into its workings. There are three such components, each a deep sapphire blue. Removing one component safely requires a successful DC 14 Dexterity check using thieves' tools, jeweler's tools, or tinker's tools.",
-										"In addition, Tarnhem's flaming whip and lightning-imbued longsword have also been worked into the altar. On a failed check to remove a missing component, these weapons cast a {@spell lightning bolt} or a {@spell fireball} at the character making the check (a 50 percent chance for either spell; save DC 16 for both). If Tarnhem is freed, he comes here directly to recover these weapons, and is the only creature that can do so. Anyone else attempting to claim them automatically triggers a {@spell lightning bolt} or a {@spell fireball}."
+										"In addition, Tarnhem's flaming whip and lightning-imbued longsword have also been worked into the altar. On a failed check to remove a missing component, these weapons cast a {@spell lightning bolt} or a {@spell fireball} at the character making the check (a {@chance 50|50 percent} chance for either spell; save DC 16 for both). If Tarnhem is freed, he comes here directly to recover these weapons, and is the only creature that can do so. Anyone else attempting to claim them automatically triggers a {@spell lightning bolt} or a {@spell fireball}."
 									]
 								},
 								{
@@ -1760,7 +1765,7 @@
 											"entries": [
 												"If {@creature Seodra|IMR} has all six diamond teeth (the three in the Tomb of Horrors, along with the three she has with her in {@area area 31|151|x} of chapter 4), the jeweled eyes from the great statue in the Temple of Moloch ({@area area 25|13a|x} of {@adventure chapter 4|IMR|4}), and the silver skull (also in {@area area 31|151|x} of chapter 4), she will have all she needs to complete Acererak's demilich skull.",
 												"The magic of the ritual that creates the skull shrinks down the great rubies of Moloch's eyes to fit the silver skull. The last stage of the ritual involves placing the finished skull atop the manikin in area 18a. The spirit of the archmage Acererak then possesses the manikin and transforms it into an eye of fear and flame. If the characters are present, they can treat with Acererak in this form.",
-												"The {@creature eye of fear and flame|MFF} attacks at once if the characters are known to have undertaken any actions against Moghadam, the tomb, or its workers. If not, and if Acererak is impressed with their adventuring acumen, the archmage promises to grant a great boon in exchange for some measure of service necessary for the completion of his tomb. The details of the service are left to your determination. The boon can be the equivalent of a wish spell, though whether or not Acererak fulfills any promise is left to you to decide."
+												"The {@creature eye of fear and flame|MFF} attacks at once if the characters are known to have undertaken any actions against Moghadam, the tomb, or its workers. If not, and if Acererak is impressed with their adventuring acumen, the archmage promises to grant a great boon in exchange for some measure of service necessary for the completion of his tomb. The details of the service are left to your determination. The boon can be the equivalent of a {@spell wish} spell, though whether or not Acererak fulfills any promise is left to you to decide."
 											]
 										}
 									]
@@ -2303,7 +2308,7 @@
 												],
 												[
 													"86\u201390",
-													"A piece of parchment hidden under a crate appears to be a magic treasure map. If the map is not followed to its end within 30 days, it rewrites itself as an entirely new map and any copies made of it turn blank. There is a 50 percent chance that the map leads to an actual treasure. If not, it leads to a dangerous monster with no treasure."
+													"A piece of parchment hidden under a crate appears to be a magic treasure map. If the map is not followed to its end within 30 days, it rewrites itself as an entirely new map and any copies made of it turn blank. There is a {@chance 50|50 percent} chance that the map leads to an actual treasure. If not, it leads to a dangerous monster with no treasure."
 												],
 												[
 													"91\u201396",
@@ -2579,7 +2584,7 @@
 									"name": "Barbatos",
 									"id": "103",
 									"entries": [
-										"The neutral evil human ranger {@creature Barbatos|IMR} is either here or in area 13 (a 50 percent chance for either; see {@adventure appendix B|IMR|7} for his stat block), accompanied by his {@creature hell hound} companion, Sadie III. He carries keys to the cages in this area and area 13. Arrogant and cruel, Barbatos threatens and taunts the characters before attempting to capture them for Thessalar. If they prove too powerful, he flees and sets up hit-and-run ambushes for them as they continue to explore the temple.",
+										"The neutral evil human ranger {@creature Barbatos|IMR} is either here or in area 13 (a {@chance 50|50 percent} chance for either; see {@adventure appendix B|IMR|7} for his stat block), accompanied by his {@creature hell hound} companion, Sadie III. He carries keys to the cages in this area and area 13. Arrogant and cruel, Barbatos threatens and taunts the characters before attempting to capture them for Thessalar. If they prove too powerful, he flees and sets up hit-and-run ambushes for them as they continue to explore the temple.",
 										"A successful DC 12 Wisdom ({@skill Perception}) check made while Barbatos is in combat identifies a number of silver wires connecting the ranger's cloak and backpack. If Barbatos is defeated, examining his body reveals that the backpack holds a troll's still-beating heart, while his cloak incorporates the feathery antennae of several rust monsters. The silver wires connect those living tissues to the ranger's own heart, providing his unique features. This setup is made permanently inoperable if Barbatos is slain.",
 										"Anyone attempting to disrupt the wires must succeed on a DC 13 Constitution saving throw or take 11 ({@dice 2d10}) force damage. The wires are self-repairing, and cannot be severed or destroyed."
 									]
@@ -2598,7 +2603,7 @@
 									"name": "Manipulating Time",
 									"id": "105",
 									"entries": [
-										"Having a mechanical guide spend 1 charge in this area causes all the cage doors to rust with age and weaken, allowing the owls to break free. There is a 50 percent chance that the giant owl also ages into an undead version of itself that attacks until destroyed. The {@creature Skeletal Giant Owl|IMR|skeletal, rotted creature} uses the {@creature giant owl} stat block with the following changes:",
+										"Having a mechanical guide spend 1 charge in this area causes all the cage doors to rust with age and weaken, allowing the owls to break free. There is a {@chance 50|50 percent} chance that the giant owl also ages into an undead version of itself that attacks until destroyed. The {@creature Skeletal Giant Owl|IMR|skeletal, rotted creature} uses the {@creature giant owl} stat block with the following changes:",
 										{
 											"type": "list",
 											"items": [
@@ -2623,7 +2628,7 @@
 									"name": "Barbatos",
 									"id": "107",
 									"entries": [
-										"The ranger {@creature Barbatos|IMR} is either here or in area 12 (a 50 percent chance for either), accompanied by his {@creature hell hound} companion, Sadie III. See {@adventure appendix B|IMR|7} for his stat block, and {@area area 12|102|x} for more information."
+										"The ranger {@creature Barbatos|IMR} is either here or in area 12 (a {@chance 50|50 percent} chance for either), accompanied by his {@creature hell hound} companion, Sadie III. See {@adventure appendix B|IMR|7} for his stat block, and {@area area 12|102|x} for more information."
 									]
 								},
 								{
@@ -2640,7 +2645,7 @@
 									"name": "Manipulating Time",
 									"id": "109",
 									"entries": [
-										"Having a mechanical guide spend 1 charge in this area causes all the cage doors to rust with age and weaken, allowing the bears to break free. There is a 50 percent chance that both polar bears also age into undead versions of themselves that attack anyone in the room until destroyed. Each {@creature Skeletal Polar Bear|IMR|skeletal, rotted bear} uses the {@creature polar bear} stat block with the following changes:",
+										"Having a mechanical guide spend 1 charge in this area causes all the cage doors to rust with age and weaken, allowing the bears to break free. There is a {@chance 50|50 percent} chance that both polar bears also age into undead versions of themselves that attack anyone in the room until destroyed. Each {@creature Skeletal Polar Bear|IMR|skeletal, rotted bear} uses the {@creature polar bear} stat block with the following changes:",
 										{
 											"type": "list",
 											"items": [
@@ -3493,7 +3498,7 @@
 									"name": "\"Slippy\"",
 									"id": "166",
 									"entries": [
-										"If not already met when summoned to area 35, there is a 50 percent chance that the steward to the ettin is found in this area. If not in this area, the boggle is in area 37.",
+										"If not already met when summoned to area 35, there is a {@chance 50|50 percent} chance that the steward to the ettin is found in this area. If not in this area, the boggle is in area 37.",
 										"This {@creature boggle|VGM} was one of two caught trying to use their Dimensional Rift traits to reach into the temple's treasure vault ({@area area 38|16b|x}). As punishment, they were assigned to provide care and grooming to the ettin's left and right heads, as well as relaying messages on the giant's behalf. When the ettin wants to talk to himself, one head gives the message to his steward, who runs off to deliver it to the other steward, who runs back to deliver it to the other head, and back down the line.",
 										"The two stewards are identical except for an epaulet worn on the left or right shoulder of their livery, but they have of late never been seen together. This is because only one boggle remains, the companion boggle having been disposed of in {@area area 7|0e5|x}. Both stewards are thus now the same creature, who works hard to make sure this is never discovered. The boggle intuits (correctly) that if the ettin were to uncover this secret, he would rip the boggle in half as a furious means of getting the proper number of stewards once more."
 									]
@@ -3520,7 +3525,7 @@
 									"name": "\"Sticky\"",
 									"id": "169",
 									"entries": [
-										"If not already met when summoned to {@area area 35|15f|x}, there is a 50 percent chance that the steward to the ettin is found in this area. If not in this area, the {@creature boggle|VGM} is in area 36. See area 36 for details on the identity of Sticky and Slippy."
+										"If not already met when summoned to {@area area 35|15f|x}, there is a {@chance 50|50 percent} chance that the steward to the ettin is found in this area. If not in this area, the {@creature boggle|VGM} is in area 36. See area 36 for details on the identity of Sticky and Slippy."
 									]
 								},
 								{
@@ -3562,7 +3567,7 @@
 									"name": "Manipulating Time",
 									"id": "16e",
 									"entries": [
-										"Having a mechanical guide spend 1 charge in this area either causes {@dice 1d4} of the largest uncut rubies to become cut and polished, doubling their value (a 50 percent chance), or causes the same number of the largest cut rubies to degrade back to raw stones, halving their value."
+										"Having a mechanical guide spend 1 charge in this area either causes {@dice 1d4} of the largest uncut rubies to become cut and polished, doubling their value (a {@chance 50|50 percent} chance), or causes the same number of the largest cut rubies to degrade back to raw stones, halving their value."
 									]
 								}
 							]

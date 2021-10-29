@@ -341,7 +341,7 @@
 									"id": "022",
 									"entries": [
 										"To fish for knucklehead trout on the lakes of Icewind Dale, a character needs fishing tackle and a rowboat. The former costs 4 gp (per the {@book Player's Handbook|PHB}), while the latter can be bought for 50 gp or rented for 2 gp per day. A character can fish on the ice instead of a boat, in which case a saw or similar tool is needed to cut a fishing hole through the ice.",
-										"At the end of each hour spent fishing on the lake, the character must make a DC 15 Wisdom ({@skill Survival}) check. A failed check indicates no fish is caught during that hour. If the check succeeds, the character hooks a {@creature knucklehead trout|IDRotF} (see {@adventure appendix C|IDRotF|21}) and must make a Strength ({@skill Athletics}) check contested by the fish's Strength check to pull it out of the water. The trout has advantage on its check. If the character fails the check, the trout escapes. A character who fails the check by 5 or more must succeed on a DC 10 Dexterity saving throw or be pulled into the frigid water (see \"Frigid Water\" below). A character who is pulled out of the water is dripping wet and continues to suffer the effects of the frigid water until the wet clothes are taken off and replaced with dry ones."
+										"At the end of each hour spent fishing on the lake, the character must make a DC 15 Wisdom ({@skill Survival}) check. A failed check indicates no fish is caught during that hour. If the check succeeds, the character hooks a {@creature knucklehead trout|IDRotF} (see {@adventure appendix C|IDRotF|21}) and must make a Strength ({@skill Athletics}) check contested by the fish's Strength check to pull it out of the water. The trout has advantage on its check. If the character fails the check, the trout escapes. A character who fails the check by 5 or more must succeed on a DC 10 Dexterity saving throw or be pulled into the {@hazard frigid water} (see \"Frigid Water\" below). A character who is pulled out of the water is dripping wet and continues to suffer the effects of the frigid water until the wet clothes are taken off and replaced with dry ones."
 									]
 								},
 								{
@@ -1037,7 +1037,7 @@
 											"name": "Ring Hunter",
 											"id": "03c",
 											"entries": [
-												"You might decide that the lost ring sought by this character is lodged inside Ol' Bitey (see \"{@area Ol' Bitey|09f|x}\"). Otherwise, the character can try to fish it out of Maer Dualdon (see {@area Fishing for Knucklehead Trout|022|x}). Each time a party member cuts open a trout pulled from this lake, there's a 1 percent chance that the fish has the signet ring lodged inside it."
+												"You might decide that the lost ring sought by this character is lodged inside Ol' Bitey (see \"{@area Ol' Bitey|09f|x}\"). Otherwise, the character can try to fish it out of Maer Dualdon (see {@area Fishing for Knucklehead Trout|022|x}). Each time a party member cuts open a trout pulled from this lake, there's a {@chance 1|1 percent} chance that the fish has the signet ring lodged inside it."
 											]
 										},
 										{
@@ -1367,7 +1367,7 @@
 									"id": "04b",
 									"entries": [
 										"This outfit consists of a heavy fur coat or cloak over layers of wool clothing, as well as a fur-lined hat or hood, goggles, and fur-lined leather boots and gloves.",
-										"As long as cold weather clothing remains dry, its wearer automatically succeeds on saving throws against the effects of extreme cold (see \"{@area Extreme Cold|020|x}\")."
+										"As long as cold weather clothing remains dry, its wearer automatically succeeds on saving throws against the effects of {@hazard extreme cold} (see \"{@area Extreme Cold|020|x}\")."
 									]
 								},
 								{
@@ -1726,7 +1726,7 @@
 									"name": "Elusive Elementals",
 									"id": "06b",
 									"entries": [
-										"There are no chwingas in the adventurers' starting town, but each time they visit another town in Icewind Dale, there's a cumulative 25 percent chance of chwingas being present. Searching a town for chwingas doesn't take long if the characters use the {@item lantern of tracking|IDRotF}, since the towns are small and compact.",
+										"There are no chwingas in the adventurers' starting town, but each time they visit another town in Icewind Dale, there's a cumulative {@chance 25|25 percent} chance of chwingas being present. Searching a town for chwingas doesn't take long if the characters use the {@item lantern of tracking|IDRotF}, since the towns are small and compact.",
 										"If the characters ask the residents of a town about chwinga sightings, people seem dismissive of the notion of elementals living among them. The occasional fisher reeking of dwarven ale might recall seeing \"a tiny figure riding a fox through town\" but can't remember where or when the sighting occurred."
 									]
 								}
@@ -2044,7 +2044,7 @@
 									"name": "Falling in the Water",
 									"id": "087",
 									"entries": [
-										"Any character who falls into the lake is subject to the effects of frigid water (see \"{@area Frigid Water|023|x}\"). Even after the character gets out of the frigid water, the effects persist until the wet clothing is dried out or replaced with warm, dry clothing."
+										"Any character who falls into the lake is subject to the effects of {@hazard frigid water} (see \"{@area Frigid Water|023|x}\"). Even after the character gets out of the frigid water, the effects persist until the wet clothing is dried out or replaced with warm, dry clothing."
 									]
 								},
 								{
@@ -4274,7 +4274,7 @@
 							"name": "Crossing the Tundra",
 							"id": "13f",
 							"entries": [
-								"The wilderness around Dougan's Hole is a frozen tundra. Snow falls frequently, adding to the snowpack and erasing tracks. There is a 50 percent chance that the characters get caught in a blizzard on the way to the lodge (see \"{@area Blizzards|01e|x}\"). If Kanan and Koran are with the party, they protect the characters from the worst of the storm, using their bodies to shield the characters until it passes. The wolves' presence also prevents the characters from getting lost or separated.",
+								"The wilderness around Dougan's Hole is a frozen tundra. Snow falls frequently, adding to the snowpack and erasing tracks. There is a {@chance 50|50 percent} chance that the characters get caught in a blizzard on the way to the lodge (see \"{@area Blizzards|01e|x}\"). If Kanan and Koran are with the party, they protect the characters from the worst of the storm, using their bodies to shield the characters until it passes. The wolves' presence also prevents the characters from getting lost or separated.",
 								"Also crossing the tundra are a pack of {@dice 1d6 + 1} {@creature Wolf||wolves}, prowling the white in search of food. Characters who make a successful DC 13 Intelligence ({@skill Nature}) check note that the wolves are gaunt from starvation. If the winter wolves are with the party, Kanan and Koran growl and bare their teeth, which deters the pack from approaching closer.",
 								{
 									"type": "image",
@@ -7411,16 +7411,6 @@
 										"As sure as night she's dead."
 									]
 								},
-								{
-									"type": "image",
-									"href": {
-										"type": "internal",
-										"path": "adventure/IDRotF/084-01-041.ring-of-warmth.png"
-									},
-									"title": "Ring of Warmth",
-									"width": 850,
-									"height": 1179
-								},
 								"If asked about the song, Marta recounts the following tale. Fifty years ago, a mysterious woman in a fur-lined red cloak stopped at the Eastside on her way to Lonelywood. Because the woman was alone and frightened, the innkeepers\u2014a pair of retired adventurers who happened to be Marta's grandparents\u2014tried to console her. The woman gave them a ring as payment for their hospitality. Not long afterward, a howling wind burst into the inn and tossed the woman about like a rag doll. The innkeepers intervened, giving the woman time to escape. The evil wind battered Marta's grandparents unconscious before resuming its hunt. That was the last anyone saw of the woman.",
 								{
 									"type": "entries",
@@ -8580,16 +8570,6 @@
 															"Awakened {@creature walrus|IDRotF} (see {@adventure appendix C|IDRotF|21})"
 														]
 													]
-												},
-												{
-													"type": "image",
-													"href": {
-														"type": "internal",
-														"path": "adventure/IDRotF/092-02-003.mammoth.png"
-													},
-													"title": "Frost Giant Riding a Mammoth",
-													"width": 1700,
-													"height": 1180
 												}
 											]
 										}
@@ -8600,6 +8580,16 @@
 									"name": "Frost Giant Riding a Mammoth",
 									"id": "2a1",
 									"entries": [
+										{
+											"type": "image",
+											"href": {
+												"type": "internal",
+												"path": "adventure/IDRotF/092-02-003.mammoth.png"
+											},
+											"title": "Frost Giant Riding a Mammoth",
+											"width": 1700,
+											"height": 1180
+										},
 										"Even a raging blizzard can't conceal the presence of a {@creature frost giant} riding a {@creature mammoth}, as the earth rumbles and trembles with every one of the mammoth's heavy footfalls.",
 										{
 											"type": "entries",
@@ -9811,7 +9801,7 @@
 									"name": "Leaving the Chasm",
 									"id": "305",
 									"entries": [
-										"Once the characters get what they came for, there's little reason to stay. In fact, characters who stay too long run the risk of encountering six {@creature Gnoll||gnolls} returning from a hunt. There's a 20 percent chance that the gnolls have brought food with them, such as a dead mountain goat or crag cat, in which case the gnolls gather in {@area area Z2|2f4|x} (along with any other gnolls left alive in the chasm) to feast on the fresh kill.",
+										"Once the characters get what they came for, there's little reason to stay. In fact, characters who stay too long run the risk of encountering six {@creature Gnoll||gnolls} returning from a hunt. There's a {@chance 20|20 percent} chance that the gnolls have brought food with them, such as a dead mountain goat or crag cat, in which case the gnolls gather in {@area area Z2|2f4|x} (along with any other gnolls left alive in the chasm) to feast on the fresh kill.",
 										"If the characters turn the gnolls' animus toward Chyzka to their advantage, they can come and go without having to kill every gnoll in the chasm. Even so, any gnolls they leave alive remain a potential threat to Ten-Towns.",
 										{
 											"type": "entries",
@@ -10383,7 +10373,7 @@
 									"id": "340",
 									"entries": [
 										"Arveiaturace, an {@creature ancient white dragon} whose vision is hampered by cataracts, carries the body of her former master, the wizard Meltharond, in a saddle on her back (see \"{@area Arveiaturace|290|x}\", for more information).",
-										"The dragon is out hunting when the characters first arrive at the {@i Dark Duchess}, but she checks on the ship regularly to make sure her hoard is undisturbed. At the end of each hour the characters spend in the {@i Dark Duchess}, there is a 20 percent chance that Arveiaturace returns to the ship. Because she can see only out to a range of 60 feet, the dragon must get close to the ship to examine it.",
+										"The dragon is out hunting when the characters first arrive at the {@i Dark Duchess}, but she checks on the ship regularly to make sure her hoard is undisturbed. At the end of each hour the characters spend in the {@i Dark Duchess}, there is a {@chance 20|20 percent} chance that Arveiaturace returns to the ship. Because she can see only out to a range of 60 feet, the dragon must get close to the ship to examine it.",
 										"If the characters are below decks when the White Wyrm arrives, use the following boxed text to describe her arrival:",
 										{
 											"type": "insetReadaloud",
@@ -10768,7 +10758,7 @@
 													"name": "Pacifier Rod",
 													"id": "366",
 													"entries": [
-														"This 6-inch-long black metal rod has a button at the top. Using an action to press the button causes the rod to emit a chirp. Any creature within 30 feet of the rod that isn't {@condition deafened} and has an Intelligence of 3 or lower must succeed on a DC 13 Constitution saving throw or be {@condition incapacitated} for 1 minute. After each activation, there's a 25 percent chance that the rod breaks and becomes inoperable."
+														"This 6-inch-long black metal rod has a button at the top. Using an action to press the button causes the rod to emit a chirp. Any creature within 30 feet of the rod that isn't {@condition deafened} and has an Intelligence of 3 or lower must succeed on a DC 13 Constitution saving throw or be {@condition incapacitated} for 1 minute. After each activation, there's a {@chance 25|25 percent} chance that the rod breaks and becomes inoperable."
 													]
 												},
 												{
@@ -10858,7 +10848,7 @@
 													"name": "Worktable",
 													"id": "36f",
 													"entries": [
-														"Amid the clutter on the table are two magic items (see \"Treasure\" below), which a character can find only by rooting through the junk. Any creature that does so has a 50 percent chance of knocking two things together and triggering an electrical discharge. When such a discharge occurs, every creature within 5 feet of the table must make a DC 17 Dexterity saving throw. On a failed save, the creature takes 4 ({@dice 1d8}) lightning damage."
+														"Amid the clutter on the table are two magic items (see \"Treasure\" below), which a character can find only by rooting through the junk. Any creature that does so has a {@chance 50|50 percent} chance of knocking two things together and triggering an electrical discharge. When such a discharge occurs, every creature within 5 feet of the table must make a DC 17 Dexterity saving throw. On a failed save, the creature takes 4 ({@dice 1d8}) lightning damage."
 													]
 												},
 												{
@@ -15680,7 +15670,7 @@
 									"entries": [
 										"The prison of Revel's End has easy access to the Sea of Moving Ice. On the downside, captains who are brave enough to take their ships into the Sea of Moving Ice expect to be well compensated; characters can expect to pay 1,000 gp or more for a one-way trip to Auril's island, or five times that amount if they expect the ship to wait for them and take them back to Revel's End.",
 										"One such captain is Sharlasta Stormsword, a retired pirate (lawful evil human {@creature bandit captain}) who commands the {@i Ravenous}, a sailing ship with a crew of twenty well-trained scalawags ({@creature Bandit||bandits}). The ship's port of call is the city of Neverwinter. Despite her checkered past, Captain Stormsword is one of the most reliable privateers working for the Lords' Alliance today, and she rarely turns down a chance to earn a little extra coin on the side. Each dawn, she tosses a barrel of fish and a cask of whiskey into the sea as offerings to Umberlee\u2014a practice that keeps the evil sea god on her side.",
-										"When the characters arrive at Revel's End, there's a 10 percent chance that the {@i Ravenous} is moored at the pier and is in the process of offloading crates of supplies as well as {@dice 1d4} convicts in shackles. Characters who aren't so lucky must wait {@dice 1d10} days for the ship to arrive.",
+										"When the characters arrive at Revel's End, there's a {@chance 10|10 percent} chance that the {@i Ravenous} is moored at the pier and is in the process of offloading crates of supplies as well as {@dice 1d4} convicts in shackles. Characters who aren't so lucky must wait {@dice 1d10} days for the ship to arrive.",
 										"The {@i Ravenous} can travel 50 miles a day. But finding Auril's island while avoiding close encounters with icebergs and ice floes takes five days. Under no circumstances will Captain Stormsword or her crew leave their ship to explore the island.",
 										"If you need a map of the {@i Ravenous}, use the ship map in {@book appendix C|DMG|11} of the {@book Dungeon Master's Guide|DMG}."
 									]
@@ -15845,7 +15835,7 @@
 												],
 												[
 													"7",
-													"The ship's hold contains {@dice 1d6} giant oysters, each of which has a 10 percent chance of containing a {@item crystal ball}-sized white pearl (2,500 gp)."
+													"The ship's hold contains {@dice 1d6} giant oysters, each of which has a {@chance 10|10 percent} chance of containing a {@item crystal ball}-sized white pearl (2,500 gp)."
 												],
 												[
 													"8",
@@ -16306,7 +16296,7 @@
 											]
 										},
 										"If Auril is home, so is her white {@creature roc}, Iskra. During the day, the roc sleeps in its nest. Shortly before midnight, the roc takes to the sky with the Frostmaiden on its back and doesn't return to the fortress until a few hours before sunrise. Without the roc to carry her around Icewind Dale, Auril can't cast her nightly spell, thus bringing an end to the everlasting winter.",
-										"The roc is too big to enter the fortress. If it takes damage from foes it can't reach, it gets clear of the fortress and climbs to a height that puts it outside the range of its enemies. If the roc grapples a foe, it heads toward open water with its prize; once there, it drops the {@condition grappled} creature into the water from a height of at least 200 feet. In addition to taking {@dice 20d6} bludgeoning damage from the fall, the victim must also contend with the frigid water (see \"{@area Frigid Water|023|x}\").",
+										"The roc is too big to enter the fortress. If it takes damage from foes it can't reach, it gets clear of the fortress and climbs to a height that puts it outside the range of its enemies. If the roc grapples a foe, it heads toward open water with its prize; once there, it drops the {@condition grappled} creature into the water from a height of at least 200 feet. In addition to taking {@dice 20d6} bludgeoning damage from the fall, the victim must also contend with the {@hazard frigid water} (see \"{@area Frigid Water|023|x}\").",
 										{
 											"type": "entries",
 											"name": "Treasure",
@@ -18743,7 +18733,7 @@
 												"A stone walkway leads to a tower that claws upward and inward, its pointed roof leaning menacingly overhead. Narrow windows pierce its walls, gargoyles cling to its eaves, and a doorway at the tower's base gapes open."
 											]
 										},
-										"Two of the outer spires have broken off. One crashed in Icewind Dale (see {@area chapter 2|3a8|x}), and the other is buried elsewhere in the glacier (see {@adventure chapter 6|IDRotF|16}). The remaining twelve spires are intact, though two are almost buried in ice. There is a 20 percent chance per tower that {@dice 1d3 + 1} {@creature Gargoyle||gargoyles} cling to the outside of it. (The other gargoyles clinging to the tower are inanimate statues.) Living gargoyles swoop down to attack anyone who crosses the gantry approaching the tower.",
+										"Two of the outer spires have broken off. One crashed in Icewind Dale (see {@area chapter 2|3a8|x}), and the other is buried elsewhere in the glacier (see {@adventure chapter 6|IDRotF|16}). The remaining twelve spires are intact, though two are almost buried in ice. There is a {@chance 20|20 percent} chance per tower that {@dice 1d3 + 1} {@creature Gargoyle||gargoyles} cling to the outside of it. (The other gargoyles clinging to the tower are inanimate statues.) Living gargoyles swoop down to attack anyone who crosses the gantry approaching the tower.",
 										"These towers were once occupied by mages and contained laboratories, libraries, and living quarters. Now they lie in ruins. {@adventure Map 2.10|IDRotF|12|Map 2.10: Lost Spire of NetherilView Player Version} gives you an idea of how the interior of each spire is laid out."
 									]
 								},
@@ -18859,7 +18849,7 @@
 											"name": "Anvil of Disjunction",
 											"id": "643",
 											"entries": [
-												"The anvil has the power to destroy any magic item that isn't an artifact. When a character holds the anvil's hammer for the first time, a voice inside their head, seeming to come from the anvil, says, \"Bring me your items of power, and together we shall destroy them.\" To destroy an item, the character must place it on the anvil and strike it three times with the hammer. Each hammer strike takes one action. On the third strike, the item disintegrates in a flash of blue light. Every time a character uses the anvil, there is a 25 percent chance that a {@creature tomb tapper|IDRotF} (see {@adventure appendix C|IDRotF|21}) burrows its way into the tower to attack them (this happens only once). The anvil is anchored here and cannot be moved by any means. Removing the hammer from the tower causes it to teleport atop the anvil."
+												"The anvil has the power to destroy any magic item that isn't an artifact. When a character holds the anvil's hammer for the first time, a voice inside their head, seeming to come from the anvil, says, \"Bring me your items of power, and together we shall destroy them.\" To destroy an item, the character must place it on the anvil and strike it three times with the hammer. Each hammer strike takes one action. On the third strike, the item disintegrates in a flash of blue light. Every time a character uses the anvil, there is a {@chance 25|25 percent} chance that a {@creature tomb tapper|IDRotF} (see {@adventure appendix C|IDRotF|21}) burrows its way into the tower to attack them (this happens only once). The anvil is anchored here and cannot be moved by any means. Removing the hammer from the tower causes it to teleport atop the anvil."
 											]
 										},
 										{
@@ -20416,7 +20406,7 @@
 												"When the cultist dies, its corpse freezes for 9 days, during which time it can't be thawed, harmed by fire, animated, or raised from the dead.",
 												"Avarice and her retinue enter the necropolis 12 hours after the party arrives. Avarice immediately claims the floating chamber above Skydock Spire ({@area area Y28|6cd|x}) as her base of operations, using her {@spell fly} spell to reach it, while the cult fanatics encamp around the base of the tower. Avarice's goal is simple: conquer Ythryn and claim its treasures for herself.",
 												"From her refuge, Avarice divides her expedition into four hunting parties of five cult fanatics each, and sends them off to explore the ruins, using her raven familiar and the gargoyles as aerial scouts. The party can meet Avarice's minions anywhere in the necropolis (including inside the spire if the force field surrounding it is deactivated or suppressed). They have orders to attack the characters on sight.",
-												"Each time the party explores a new building, there is a 20 percent chance that one of Avarice's hunting parties is already inside or arrives while the party is searching its interior."
+												"Each time the party explores a new building, there is a {@chance 20|20 percent} chance that one of Avarice's hunting parties is already inside or arrives while the party is searching its interior."
 											]
 										}
 									]
@@ -20463,7 +20453,7 @@
 							"name": "Final Showdown",
 							"id": "6e1",
 							"entries": [
-								"If the characters defeat most of Auril's minions, the god's cool voice echoes across the city from the high balcony of the Spire of Iriolarthas, demanding that they leave Ythryn or face her wrath. One hour after making this announcement, Auril leaves the tower and prowls through the streets in search of the characters. For every hour that passes, there is a 20 percent chance that she catches up with them. Only characters who flee the city and return to Icewind Dale are spared her wrath."
+								"If the characters defeat most of Auril's minions, the god's cool voice echoes across the city from the high balcony of the Spire of Iriolarthas, demanding that they leave Ythryn or face her wrath. One hour after making this announcement, Auril leaves the tower and prowls through the streets in search of the characters. For every hour that passes, there is a {@chance 20|20 percent} chance that she catches up with them. Only characters who flee the city and return to Icewind Dale are spared her wrath."
 							]
 						}
 					]
@@ -21359,7 +21349,8 @@
 					"width": 6000,
 					"height": 4215
 				}
-			]
+			],
+			"id": "01f"
 		}
 	]
 }

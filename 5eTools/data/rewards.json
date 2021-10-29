@@ -96,7 +96,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"When another creature that you can see within 60 feet of you makes an ability check, an attack roll, or a saving throw, you can roll a d10 and apply the result as a bonus or penalty to the roll. Once you use this boon, you can't use it again until you finish a short rest."
+				"When another creature that you can see within 60 feet of you makes an ability check, an attack roll, or a saving throw, you can roll a {@dice d10} and apply the result as a bonus or penalty to the roll. Once you use this boon, you can't use it again until you finish a short rest."
 			]
 		},
 		{
@@ -150,7 +150,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"You can add a d10 roll to any ability check, attack roll, or saving throw you make. Once you use this boon, you can't use it again until you finish a short rest. "
+				"You can add a {@dice d10} roll to any ability check, attack roll, or saving throw you make. Once you use this boon, you can't use it again until you finish a short rest. "
 			]
 		},
 		{
@@ -231,7 +231,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"Your walking speed increases by 30 feet. In addition, you can use a bonus action to take the Dash or Disengage action. Once you do so, you can't do so again until you finish a short rest."
+				"Your walking speed increases by 30 feet. In addition, you can use a bonus action to take the {@action Dash} or {@action Disengage} action. Once you do so, you can't do so again until you finish a short rest."
 			]
 		},
 		{
@@ -267,7 +267,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"While completely in an area of dim light or darkness, you can become {@condition invisible} as an action. You remain invisible until you take an action or a reaction. "
+				"While completely in an area of dim light or darkness, you can become {@condition invisible} as an action. You remain {@condition invisible} until you take an action or a reaction. "
 			]
 		},
 		{
@@ -294,7 +294,7 @@
 			"page": 232,
 			"type": "Boon",
 			"entries": [
-				"You have truesight out to a range of 60 feet."
+				"You have {@sense truesight} out to a range of 60 feet."
 			]
 		},
 		{
@@ -331,7 +331,7 @@
 			"type": "Charm",
 			"entries": [
 				"{@note This charm can be bestowed by a {@creature chwinga|ToA} living in Icewind Dale or other cold regions by using their Magical Gift action.}",
-				"This charm has 3 charges. As a bonus action, you can expend 1 of the charm's charges to wreathe your weapon attacks with biting cold for 1 minute. Until this effect ends, you deal an extra {@dice 1d6} cold damage when you hit with a melee or ranged weapon attack. Once all its charges have been expended, this charm vanishes from you."
+				"This charm has 3 charges. As a bonus action, you can expend 1 of the charm's charges to wreathe your weapon attacks with biting cold for 1 minute. Until this effect ends, you deal an extra {@damage 1d6} cold damage when you hit with a melee or ranged weapon attack. Once all its charges have been expended, this charm vanishes from you."
 			]
 		},
 		{
@@ -406,7 +406,7 @@
 			"type": "Charm",
 			"entries": [
 				"{@note This charm can be bestowed by a {@creature chwinga|ToA} living in Icewind Dale or other cold regions by using their Magical Gift action.}",
-				"This charm has 5 charges. As a bonus action, you can expend 1 of the charm's charges to create a magical snowball in your hand and throw it. You must have a hand free to hold the snowball, or the charge is wasted. The snowball is a magic ranged weapon with which you are proficient. It has a normal range of 20 feet and a long range of 60 feet, it deals {@dice 1d4} cold damage on a hit, and it scores a critical hit on a roll of 19 or 20. If you score a critical hit with the snowball, the target is {@condition blinded} until the end of its next turn. The snowball vanishes immediately after you hit or miss with it, or at the end of your turn if you don't throw it. Once all its charges have been expended, this charm vanishes from you."
+				"This charm has 5 charges. As a bonus action, you can expend 1 of the charm's charges to create a magical snowball in your hand and throw it. You must have a hand free to hold the snowball, or the charge is wasted. The snowball is a magic ranged weapon with which you are proficient. It has a normal range of 20 feet and a long range of 60 feet, it deals {@damage 1d4} cold damage on a hit, and it scores a critical hit on a roll of 19 or 20. If you score a critical hit with the snowball, the target is {@condition blinded} until the end of its next turn. The snowball vanishes immediately after you hit or miss with it, or at the end of your turn if you don't throw it. Once all its charges have been expended, this charm vanishes from you."
 			]
 		},
 		{
@@ -424,7 +424,7 @@
 			"page": 167,
 			"type": "Charm",
 			"entries": [
-				"This charm allows you to use an action to eat a mouthful of flesh from a humanoid that has been dead no longer than 1 day. When you do, you regain 3d8+3 hit points. Once used three times, the charm goes away."
+				"This charm allows you to use an action to eat a mouthful of flesh from a humanoid that has been dead no longer than 1 day. When you do, you regain {@dice 3d8 + 3} hit points. Once used three times, the charm goes away."
 			]
 		},
 		{
@@ -449,10 +449,11 @@
 		{
 			"name": "Charm of the Mirage",
 			"source": "CM",
+			"page": 212,
 			"type": "Charm",
 			"entries": [
 				"{@note This charm can be bestowed by a {@creature chwinga|CM} living a desert by using their Magical Gift action.}",
-				"This charm allows you to cast the hallucinatory terrain spell (save DC 15) as an action. Once used, this charm vanishes from you."
+				"This charm allows you to cast the {@spell hallucinatory terrain} spell (save DC 15) as an action. Once used, this charm vanishes from you."
 			]
 		},
 		{
@@ -514,6 +515,7 @@
 		{
 			"name": "Charm of the Water Bearer",
 			"source": "CM",
+			"page": 212,
 			"type": "Charm",
 			"entries": [
 				"{@note This charm can be bestowed by a {@creature chwinga|CM} living a desert by using their Magical Gift action.}",
@@ -556,7 +558,7 @@
 						"size": "T",
 						"objectType": "U",
 						"creatureType": "construct",
-						"hp": "1",
+						"hp": 1,
 						"speed": {
 							"walk": 10
 						},
@@ -716,7 +718,7 @@
 			"page": 193,
 			"type": "Charm",
 			"entries": [
-				"Yrrga's gift is the power of true seeing. This dark gift grants its beneficiary the benefits of truesight out to a range of 60 feet. These benefits last for 30 days, after which the dark gift vanishes.",
+				"Yrrga's gift is the power of true seeing. This dark gift grants its beneficiary the benefits of {@sense truesight} out to a range of 60 feet. These benefits last for 30 days, after which the dark gift vanishes.",
 				"The eyes of the beneficiary become starry voids until the dark gift vanishes. The beneficiary of this dark gift also gains the following flaw: \"I believe that all life is pointless and look forward to death when it finally comes.\""
 			]
 		},
@@ -747,6 +749,70 @@
 			"type": "Charm",
 			"entries": [
 				"When you activate this charm, you can cast the {@spell blink} or {@spell sleep} (3rd-level version) spell. Alternatively, when you take damage, you can use your reaction to turn {@condition invisible} and teleport up to 30 feet to an unoccupied space you can see. You remain {@condition invisible} until the start of your next turn or until you attack or cast a spell. The charm vanishes after you activate it."
+			]
+		},
+		{
+			"name": "Draconic Familiar",
+			"source": "FTD",
+			"type": "Draconic Gift",
+			"rarity": "uncommon",
+			"entries": [
+				"You gain the aid of a draconic familiar, which might be a splinter of the consciousness of a dragon that invested you with power.",
+				"You can cast the {@spell find familiar} spell as a ritual without using any material components. When you cast the spell in this way, your familiar always takes the form of a {@creature pseudodragon}.",
+				"Additionally, when you take the {@action Attack} action on your turn, you can forgo one of your own attacks to allow your pseudodragon familiar to make one attack of its own with its reaction."
+			]
+		},
+		{
+			"name": "Draconic Rebirth",
+			"source": "FTD",
+			"type": "Draconic Gift",
+			"rarity": "uncommon",
+			"entries": [
+				"You become a dragonborn. You replace the racial traits of your original race with the traits of a chromatic, gem, or metallic dragonborn (detailed in this {@book book|FTD|1|Draconic Races}). The kind of dragonborn you become matches the family of the dragon that is the source of this gift. You can keep any skill proficiencies you gained from your previous race, or you gain proficiency in two skills of your choice."
+			]
+		},
+		{
+			"name": "Draconic Senses",
+			"source": "FTD",
+			"type": "Draconic Gift",
+			"rarity": "rare",
+			"entries": [
+				"You gain keen senses like a dragon's.",
+				{
+					"type": "entries",
+					"name": "Blindsight",
+					"entries": [
+						"You have {@sense blindsight} to a range of 10 feet. Within that range, you can effectively see anything that isn't behind {@book total cover|PHB|9|Cover}, even if you're {@condition blinded} or in darkness. Moreover, you can see {@condition invisible} creatures within that range, unless the creatures successfully hide from you."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Keen Senses",
+					"entries": [
+						"You have advantage on Wisdom ({@skill Perception}) checks."
+					]
+				}
+			]
+		},
+		{
+			"name": "Echo of Dragonsight",
+			"source": "FTD",
+			"type": "Draconic Gift",
+			"rarity": "very rare",
+			"entries": [
+				"You have begun to extend your awareness beyond the single world of the Material Plane that is your home.",
+				"You can cast {@spell contact other plane} as a ritual. The entity you contact is a dragon on another world in the Material Plane, so its knowledge of your world might be limited. Also, this dragon is an echo of the dragon who is the source of the gift, which might affect its attitude and behavior toward you."
+			]
+		},
+		{
+			"name": "Frightful Presence",
+			"source": "FTD",
+			"type": "Draconic Gift",
+			"rarity": "very rare",
+			"entries": [
+				"Echoes of a dragon's might linger around you, and you can call on them to inspire fear in those who stand against you.",
+				"As a bonus action, you can manifest your frightful presence. Each creature of your choice that is within 120 feet of you and aware of you must make a Wisdom saving throw against a DC equal to 8 + your proficiency bonus + your Charisma modifier. A creature that fails becomes {@condition frightened} of you for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+				"Once you use this ability a number of times equal to your proficiency bonus, you can't use it again until you finish a long rest."
 			]
 		},
 		{
@@ -838,7 +904,7 @@
 						"size": "T",
 						"objectType": "U",
 						"creatureType": "construct",
-						"hp": "1",
+						"hp": 1,
 						"speed": {
 							"walk": 10
 						},
@@ -934,7 +1000,7 @@
 						{
 							"type": "item",
 							"name": "Power:",
-							"entry": "The host can use an action to turn invisible. Anything the host is wearing or carrying is invisible as long as it is on the host's person. The effect ends if the host attacks, casts a spell, forces a saving throw, or deals damage."
+							"entry": "The host can use an action to turn {@condition invisible}. Anything the host is wearing or carrying is {@condition invisible} as long as it is on the host's person. The effect ends if the host attacks, casts a spell, forces a saving throw, or deals damage."
 						}
 					]
 				}
@@ -1082,12 +1148,31 @@
 			]
 		},
 		{
+			"name": "Psionic Reach",
+			"source": "FTD",
+			"type": "Draconic Gift",
+			"rarity": "very rare",
+			"entries": [
+				"The psionic energy of a gem dragon empowers your mind. You gain resistance to psychic damage.",
+				"In addition, you learn the {@spell telekinesis} spell. You can cast this spell without expending a spell slot. Once you cast this spell in this way, you can't do so again until you finish a long rest. You can also cast this spell using spell slots you have of the appropriate level. The spellcasting ability is Intelligence, Wisdom, or Charisma when you cast the spell with this gift (choose when you gain the gift)."
+			]
+		},
+		{
 			"name": "Rakdos Charm",
 			"source": "GGR",
 			"page": 174,
 			"type": "Charm",
 			"entries": [
 				"When you activate this charm, you can cast the {@spell crown of madness}, {@spell hellish rebuke}, or {@spell shatter} spell. The charm vanishes after you activate it."
+			]
+		},
+		{
+			"name": "Scaled Toughness",
+			"source": "FTD",
+			"type": "Draconic Gift",
+			"rarity": "legendary",
+			"entries": [
+				"Your skin toughens, making you resistant to certain types of physical harm. You gain resistance to piercing and slashing damage."
 			]
 		},
 		{
@@ -1137,7 +1222,7 @@
 						{
 							"type": "item",
 							"name": "Power:",
-							"entry": "The host can make one extra attack when taking the Attack action on its turn."
+							"entry": "The host can make one extra attack when taking the {@action Attack} action on its turn."
 						}
 					]
 				}
@@ -1170,7 +1255,7 @@
 						"size": "T",
 						"objectType": "U",
 						"creatureType": "construct",
-						"hp": "1",
+						"hp": 1,
 						"speed": {
 							"walk": 10
 						},
@@ -1192,6 +1277,36 @@
 			"entries": [
 				"Ever changing, mirthful, and beautiful, the primal elves could assume whatever sex they liked. When they bowed to Lolth's influence and chose to fix their physical forms, elves lost the ability to transform in this way. Yet occasionally elves are born who are so androgynous that they are proclaimed to be among the blessed of Corellon\u2014living symbols of the god's love and of the primal elves' original fluid state of being. Many of Corellon's chief priests bear this blessing.",
 				"The rarest of these blessed elves can change their sex whenever they finish a long rest-a miracle celebrated by elves of all sorts except drow. (The DM decides whether an elf can manifest this miracle.) Dark elves find this ability to be terrifying and characterize it as a curse, for it could destabilize their entire society. If Corellon's blessing manifests in a drow, that elf usually flees to the surface world to seek shelter among those dedicated to Corellon."
+			]
+		},
+		{
+			"name": "Tongue of the Dragon",
+			"source": "FTD",
+			"type": "Draconic Gift",
+			"rarity": "uncommon",
+			"entries": [
+				"You gain some of the majestic presence of a dragon.",
+				{
+					"type": "entries",
+					"name": "Dragon's Speech",
+					"entries": [
+						"You can speak, read, and write Draconic."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dragon's Voice",
+					"entries": [
+						"As a bonus action, you can make your voice audible up to 300 feet away for 1 minute."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dragon's Wiles",
+					"entries": [
+						"You have advantage on Charisma ({@skill Persuasion}) checks."
+					]
+				}
 			]
 		},
 		{
@@ -1285,7 +1400,7 @@
 						{
 							"type": "item",
 							"name": "Power:",
-							"entry": "The host can use an action to unleash a psionic assault on a creature it can see within 60 feet of it. The target must succeed on a DC 16 Wisdom saving throw or be stunned until the end of the target's next turn."
+							"entry": "The host can use an action to unleash a psionic assault on a creature it can see within 60 feet of it. The target must succeed on a DC 16 Wisdom saving throw or be {@condition stunned} until the end of the target's next turn."
 						}
 					]
 				}
@@ -1323,7 +1438,7 @@
 					"type": "entries",
 					"name": "Poison Immunity",
 					"entries": [
-						"You are immune to poison damage and the poisoned condition."
+						"You are immune to poison damage and the {@condition poisoned} condition."
 					]
 				}
 			]

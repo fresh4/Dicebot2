@@ -100,7 +100,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -119,7 +118,8 @@
 			],
 			"conditionInflict": [
 				"stunned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Demonlord of Ashmouth",
@@ -303,16 +303,13 @@
 				{
 					"name": "Ethereal Sight",
 					"entries": [
-						"The geist can see 60 feet into the Ethereal Plane when",
-						"it is on the Material Plane, and vice versa."
+						"The geist can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa."
 					]
 				},
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The geist can move through other creatures",
-						"and objects as if they were difficult terrain. It takes 5 ({@dice 1d10}) force",
-						"damage if it ends its turn inside an object."
+						"The geist can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@dice 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -354,7 +351,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement"
 			],
@@ -373,7 +369,8 @@
 			"conditionInflict": [
 				"frightened",
 				"incapacitated"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Host of Herons Angel",
@@ -461,6 +458,9 @@
 					},
 					"ability": "wis"
 				}
+			],
+			"spellcastingTags": [
+				"CD"
 			]
 		},
 		{
@@ -606,7 +606,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Damage Absorption",
 				"Immutable Form",
@@ -627,7 +626,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Vampire Neonate",
@@ -772,7 +772,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Regeneration"
 			],
@@ -792,7 +791,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Werewolf (Krallenhorde)",
@@ -928,7 +928,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Keen Senses",
 				"Shapechanger"
@@ -948,7 +947,8 @@
 				"MW",
 				"RW",
 				"THW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Zombie Cat",

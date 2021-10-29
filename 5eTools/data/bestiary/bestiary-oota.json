@@ -76,11 +76,11 @@
 				"N",
 				"G"
 			],
-			"hasToken": true,
 			"damageTags": [
 				"B",
 				"P"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Animated Drow Statue",
@@ -174,7 +174,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"False Appearance"
 			],
@@ -188,6 +187,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -270,7 +270,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -284,7 +283,8 @@
 			"conditionInflict": [
 				"incapacitated",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Buppido",
@@ -412,7 +412,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -432,7 +431,8 @@
 			],
 			"conditionInflict": [
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Chuul Spore Servant",
@@ -494,7 +494,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -510,7 +509,8 @@
 			],
 			"conditionInflict": [
 				"grappled"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Deepking Horgar Steelshadow V",
@@ -653,7 +653,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -674,7 +673,11 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Droki",
@@ -801,7 +804,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Sneak Attack",
@@ -831,6 +833,7 @@
 			"conditionInflictSpell": [
 				"frightened"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -846,11 +849,15 @@
 					"source": "PHB"
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Drow Bandit",
@@ -864,11 +871,14 @@
 					"source": "PHB"
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Drow Commoner",
@@ -882,11 +892,14 @@
 					"source": "PHB"
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Drow Cultist",
@@ -900,11 +913,14 @@
 					"source": "PHB"
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Drow Guard",
@@ -918,11 +934,14 @@
 					"source": "PHB"
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Drow Noble",
@@ -936,11 +955,14 @@
 					"source": "PHB"
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Drow Scout",
@@ -954,12 +976,15 @@
 					"source": "PHB"
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Keen Senses",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Drow Spore Servant",
@@ -1010,7 +1035,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -1019,7 +1043,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Drow Spy",
@@ -1033,12 +1058,15 @@
 					"source": "PHB"
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sneak Attack",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Duergar Alchemist",
@@ -1068,12 +1096,12 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"damageTags": [
 				"A",
 				"F",
 				"P"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Duergar Darkhaft",
@@ -1183,7 +1211,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -1206,9 +1233,13 @@
 				"RW",
 				"THW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1349,7 +1380,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -1373,9 +1403,13 @@
 				"RW",
 				"THW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1431,7 +1465,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -1440,7 +1473,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Eldeth Feldrun",
@@ -1463,7 +1497,6 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1471,7 +1504,8 @@
 				"C",
 				"D",
 				"X"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Emerald Enclave Scout",
@@ -1561,7 +1595,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -1582,7 +1615,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Fiendish Giant Spider",
@@ -1603,7 +1637,8 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"cr": "1/2"
+			"cr": "1/2",
+			"hasToken": true
 		},
 		{
 			"name": "Four-Armed Statue",
@@ -1642,10 +1677,10 @@
 					]
 				}
 			},
-			"hasToken": true,
 			"damageTags": [
 				"S"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Gash",
@@ -1759,7 +1794,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Spider Climb"
 			],
@@ -1771,7 +1805,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Rocktopus",
@@ -1805,7 +1840,8 @@
 			},
 			"traitTags": [
 				"Water Breathing"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Glabbagool",
@@ -1964,7 +2000,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -1980,7 +2015,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Hook Horror Spore Servant",
@@ -2041,7 +2077,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -2054,7 +2089,8 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Ilvara Mizzrym",
@@ -2119,6 +2155,7 @@
 					]
 				}
 			],
+			"conditionInflict": [],
 			"hasToken": true
 		},
 		{
@@ -2149,8 +2186,8 @@
 			"str": 9,
 			"cr": "0",
 			"action": null,
-			"hasToken": true,
-			"actionTags": []
+			"actionTags": [],
+			"hasToken": true
 		},
 		{
 			"name": "Ixitxachitl",
@@ -2210,7 +2247,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2224,6 +2260,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2323,7 +2360,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2340,6 +2376,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -2392,6 +2429,9 @@
 					}
 				}
 			},
+			"spellcastingTags": [
+				"I"
+			],
 			"hasToken": true
 		},
 		{
@@ -2484,11 +2524,14 @@
 					"ability": "int"
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sneak Attack"
-			]
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Kinyel Druu'giir",
@@ -2511,12 +2554,15 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sneak Attack",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Kurr",
@@ -2598,7 +2644,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2608,7 +2653,8 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Lords' Alliance Spy",
@@ -2694,7 +2740,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Sneak Attack"
 			],
@@ -2712,7 +2757,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Lorthuun",
@@ -2787,11 +2833,11 @@
 				}
 			},
 			"cr": "9",
-			"hasToken": true,
 			"damageTags": [
 				"N",
 				"P"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Narrak",
@@ -2913,7 +2959,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Sunlight Sensitivity"
@@ -2937,7 +2982,8 @@
 			"conditionInflictSpell": [
 				"charmed",
 				"paralyzed"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Ougalop",
@@ -2979,6 +3025,9 @@
 					}
 				}
 			},
+			"spellcastingTags": [
+				"I"
+			],
 			"hasToken": true
 		},
 		{
@@ -3049,12 +3098,12 @@
 			},
 			"int": 6,
 			"cr": "5",
-			"hasToken": true,
 			"traitTags": [
 				"Amorphous",
 				"Regeneration",
 				"Spider Climb"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Ront",
@@ -3173,7 +3222,7 @@
 				{
 					"name": "Eye Tattoos",
 					"entries": [
-						"Shedrak has ten small eyes tattooed on his bald head that allow him to see invisible creatures and objects as if they were visible."
+						"Shedrak has ten small eyes tattooed on his bald head that allow him to see {@condition invisible} creatures and objects as if they were visible."
 					]
 				}
 			],
@@ -3246,10 +3295,10 @@
 				"N",
 				"G"
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Sloopidoop",
@@ -3287,7 +3336,6 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"damageTags": [
 				"B",
 				"I"
@@ -3296,7 +3344,8 @@
 				"incapacitated",
 				"poisoned",
 				"stunned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Spider King",
@@ -3331,7 +3380,6 @@
 				"perception": "+4"
 			},
 			"passive": 14,
-			"hasToken": true,
 			"traitTags": [
 				"Spider Climb",
 				"Web Sense",
@@ -3340,7 +3388,8 @@
 			"senseTags": [
 				"B",
 				"D"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Spiderbait",
@@ -3567,9 +3616,11 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Shapechanger"
 			],
 			"languageTags": [
 				"AB",
@@ -3593,6 +3644,7 @@
 				"deafened",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -3837,7 +3889,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3851,6 +3902,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3949,7 +4001,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3966,6 +4017,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -4004,6 +4056,9 @@
 						]
 					}
 				}
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -4078,7 +4133,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -4094,7 +4148,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Vizeran DeVir",
@@ -4121,12 +4176,16 @@
 				"N",
 				"E"
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Magic Resistance",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Xazax the Eyemonger",
@@ -4257,7 +4316,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -4277,6 +4335,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -4464,7 +4523,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -4482,7 +4540,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Zilchyn Q'Leptin",
@@ -4505,11 +4564,15 @@
 					}
 				}
 			},
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
-			]
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"hasToken": true
 		}
 	]
 }

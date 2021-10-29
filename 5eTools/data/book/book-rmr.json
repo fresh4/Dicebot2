@@ -1934,7 +1934,7 @@
 									"id": "084",
 									"entries": [
 										"Sometimes fate blesses or curses a combatant, causing the novice to hit or the veteran to miss.",
-										"If the {@dice d20} roll for an attack is a 20, the attack hits regardless of any modifiers or the target's AC. In addition, the attack is a critical hit, as explained later in the chapter.",
+										"If the {@dice d20} roll for an attack is a 20, the attack hits regardless of any modifiers or the target's AC. This is called a critical hit, which is explained later in this chapter.",
 										"If the {@dice d20} roll for an attack is a 1, the attack misses regardless of any modifiers or the target's AC.",
 										{
 											"type": "inset",
@@ -5433,7 +5433,7 @@
 									]
 								},
 								"The spell doesn't take into account any possible circumstances that might change the outcome, such as the casting of additional spells or the loss or gain of a companion.",
-								"If you cast the spell two or more times before completing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get a false reading. The DM makes this roll in secret.",
+								"If you cast the spell two or more times before completing your next long rest, there is a cumulative {@chance 25|25 percent} chance for each casting after the first that you get a false reading. The DM makes this roll in secret.",
 								"{@comic This is for theater majors and Jerrys. Don't worry about divining the future when you play D&D, Morty. The story will find you when you start killing.}"
 							]
 						},

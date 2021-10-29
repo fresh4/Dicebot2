@@ -89,7 +89,6 @@
 			"environment": [
 				"mountain"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/aarakocra.mp3"
@@ -107,6 +106,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -249,7 +249,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/aboleth.mp3"
@@ -283,6 +282,7 @@
 			"conditionInflictLegendary": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -399,7 +399,6 @@
 			"environment": [
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/abominable-yeti.mp3"
@@ -411,6 +410,7 @@
 				"D"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -427,6 +427,7 @@
 			"conditionInflict": [
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -545,7 +546,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/acolyte.mp3"
@@ -563,6 +563,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -719,8 +720,7 @@
 			"environment": [
 				"swamp"
 			],
-			"dragonCastingColor": "B",
-			"hasToken": true,
+			"dragonCastingColor": "black",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/black-dragon.mp3"
@@ -734,6 +734,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -759,6 +760,7 @@
 			"conditionInflictLegendary": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -916,7 +918,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/blue-dracolich.mp3"
@@ -930,6 +931,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -957,6 +959,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -990,7 +993,12 @@
 				"E"
 			],
 			"ac": [
-				19
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
 			],
 			"hp": {
 				"average": 225,
@@ -1104,8 +1112,7 @@
 				"desert",
 				"coastal"
 			],
-			"dragonCastingColor": "U",
-			"hasToken": true,
+			"dragonCastingColor": "blue",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/blue-dragon.mp3"
@@ -1118,6 +1125,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -1145,6 +1153,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -1302,8 +1311,7 @@
 			"environment": [
 				"desert"
 			],
-			"dragonCastingColor": "A",
-			"hasToken": true,
+			"dragonCastingColor": "brass",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/brass-dragon.mp3"
@@ -1316,6 +1324,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -1343,6 +1352,7 @@
 				"blinded",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -1524,8 +1534,7 @@
 			"environment": [
 				"coastal"
 			],
-			"dragonCastingColor": "Z",
-			"hasToken": true,
+			"dragonCastingColor": "bronze",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bronze-dragon.mp3"
@@ -1539,8 +1548,10 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -1564,6 +1575,7 @@
 			"conditionInflictLegendary": [
 				"deafened"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -1723,8 +1735,7 @@
 			"environment": [
 				"hill"
 			],
-			"dragonCastingColor": "C",
-			"hasToken": true,
+			"dragonCastingColor": "copper",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/copper-dragon.mp3"
@@ -1737,6 +1748,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -1759,6 +1771,7 @@
 				"frightened",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -1933,8 +1946,7 @@
 				"grassland",
 				"forest"
 			],
-			"dragonCastingColor": "O",
-			"hasToken": true,
+			"dragonCastingColor": "gold",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gold-dragon.mp3"
@@ -1948,8 +1960,10 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -1970,6 +1984,7 @@
 				"frightened",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2127,8 +2142,7 @@
 			"environment": [
 				"forest"
 			],
-			"dragonCastingColor": "G",
-			"hasToken": true,
+			"dragonCastingColor": "green",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/green-dragon.mp3"
@@ -2142,6 +2156,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -2168,6 +2183,7 @@
 				"charmed",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2320,8 +2336,7 @@
 				"mountain",
 				"hill"
 			],
-			"dragonCastingColor": "R",
-			"hasToken": true,
+			"dragonCastingColor": "red",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/red-dragon.mp3"
@@ -2334,6 +2349,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -2361,6 +2377,7 @@
 				"poisoned",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2528,8 +2545,7 @@
 				"mountain",
 				"urban"
 			],
-			"dragonCastingColor": "S",
-			"hasToken": true,
+			"dragonCastingColor": "silver",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/silver-dragon.mp3"
@@ -2542,8 +2558,10 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -2565,6 +2583,7 @@
 				"paralyzed",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2729,8 +2748,7 @@
 			"environment": [
 				"arctic"
 			],
-			"dragonCastingColor": "W",
-			"hasToken": true,
+			"dragonCastingColor": "white",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/white-dragon.mp3"
@@ -2743,6 +2761,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -2765,6 +2784,7 @@
 				"frightened",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2818,6 +2838,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -2912,7 +2935,6 @@
 				"mountain",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/air-elemental.mp3"
@@ -2935,6 +2957,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3007,7 +3030,6 @@
 			"environment": [
 				"grassland"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/allosaurus.mp3"
@@ -3025,6 +3047,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3165,8 +3188,7 @@
 			"environment": [
 				"swamp"
 			],
-			"dragonCastingColor": "B",
-			"hasToken": true,
+			"dragonCastingColor": "black",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/black-dragon.mp3"
@@ -3180,6 +3202,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -3205,6 +3228,7 @@
 			"conditionInflictLegendary": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3348,8 +3372,7 @@
 				"desert",
 				"coastal"
 			],
-			"dragonCastingColor": "U",
-			"hasToken": true,
+			"dragonCastingColor": "blue",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/blue-dragon.mp3"
@@ -3362,6 +3385,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -3389,6 +3413,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3548,8 +3573,7 @@
 			"environment": [
 				"desert"
 			],
-			"dragonCastingColor": "A",
-			"hasToken": true,
+			"dragonCastingColor": "brass",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/brass-dragon.mp3"
@@ -3562,8 +3586,10 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -3589,6 +3615,7 @@
 				"blinded",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3758,8 +3785,7 @@
 			"environment": [
 				"coastal"
 			],
-			"dragonCastingColor": "Z",
-			"hasToken": true,
+			"dragonCastingColor": "bronze",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bronze-dragon.mp3"
@@ -3773,8 +3799,10 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -3798,6 +3826,7 @@
 			"conditionInflictLegendary": [
 				"deafened"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3961,8 +3990,7 @@
 			"environment": [
 				"hill"
 			],
-			"dragonCastingColor": "C",
-			"hasToken": true,
+			"dragonCastingColor": "copper",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/copper-dragon.mp3"
@@ -3975,8 +4003,10 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -3997,6 +4027,7 @@
 				"frightened",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -4163,8 +4194,7 @@
 				"grassland",
 				"forest"
 			],
-			"dragonCastingColor": "O",
-			"hasToken": true,
+			"dragonCastingColor": "gold",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gold-dragon.mp3"
@@ -4178,8 +4208,10 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -4200,6 +4232,7 @@
 				"frightened",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -4354,8 +4387,7 @@
 			"environment": [
 				"forest"
 			],
-			"dragonCastingColor": "G",
-			"hasToken": true,
+			"dragonCastingColor": "green",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/green-dragon.mp3"
@@ -4369,6 +4401,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -4395,6 +4428,7 @@
 				"charmed",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -4541,8 +4575,7 @@
 				"mountain",
 				"hill"
 			],
-			"dragonCastingColor": "R",
-			"hasToken": true,
+			"dragonCastingColor": "red",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/red-dragon.mp3"
@@ -4555,6 +4588,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -4582,6 +4616,7 @@
 				"poisoned",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -4741,8 +4776,7 @@
 				"mountain",
 				"urban"
 			],
-			"dragonCastingColor": "S",
-			"hasToken": true,
+			"dragonCastingColor": "silver",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/silver-dragon.mp3"
@@ -4755,8 +4789,10 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -4778,6 +4814,7 @@
 				"paralyzed",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -4930,8 +4967,7 @@
 			"environment": [
 				"arctic"
 			],
-			"dragonCastingColor": "W",
-			"hasToken": true,
+			"dragonCastingColor": "white",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/white-dragon.mp3"
@@ -4944,6 +4980,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -4966,6 +5003,7 @@
 				"frightened",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -5191,7 +5229,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/androsphinx.mp3"
@@ -5230,6 +5267,7 @@
 				"incapacitated",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -5275,6 +5313,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -5350,7 +5391,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/animated-armor.mp3"
@@ -5371,6 +5411,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -5451,7 +5492,6 @@
 				"grassland",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ankeg.mp3"
@@ -5470,6 +5510,7 @@
 			"conditionInflict": [
 				"grappled"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -5522,7 +5563,6 @@
 			"environment": [
 				"grassland"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ankylosaurus.mp3"
@@ -5537,6 +5577,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -5613,7 +5654,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ape.mp3"
@@ -5627,7 +5667,8 @@
 			"miscTags": [
 				"MW",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Arcanaloth",
@@ -5866,7 +5907,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/arcanaloth.mp3"
@@ -5902,6 +5942,7 @@
 				"invisible",
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -6127,7 +6168,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/archmage.mp3"
@@ -6149,6 +6189,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -6300,17 +6341,10 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/assassin.mp3"
 			},
-			"altArt": [
-				{
-					"name": "Vistana Assassin",
-					"source": "CoS"
-				}
-			],
 			"traitTags": [
 				"Sneak Attack"
 			],
@@ -6330,6 +6364,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6352,6 +6387,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -6405,7 +6443,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/awakened-shrub.mp3"
@@ -6419,6 +6456,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6453,6 +6491,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "H",
@@ -6512,7 +6553,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/awakened-tree.mp3"
@@ -6527,6 +6567,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6586,7 +6627,6 @@
 				"grassland",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/axe-beak.mp3"
@@ -6597,6 +6637,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6683,7 +6724,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/azer.mp3"
@@ -6702,6 +6742,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -6719,6 +6760,12 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "CoS"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -6765,7 +6812,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/baboon.mp3"
@@ -6778,13 +6824,19 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Badger",
 			"source": "MM",
 			"page": 318,
 			"srd": true,
+			"otherSources": [
+				{
+					"source": "WBtW"
+				}
+			],
 			"size": "T",
 			"type": "beast",
 			"alignment": [
@@ -6831,7 +6883,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/badger.mp3"
@@ -6847,7 +6898,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Balor",
@@ -6999,7 +7051,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/balor.mp3"
@@ -7029,6 +7080,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -7082,6 +7134,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "CoS"
 				}
 			],
 			"size": "M",
@@ -7138,7 +7193,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bandit.mp3"
@@ -7148,10 +7202,6 @@
 					"name": "Diabolical Bandit",
 					"source": "MTF",
 					"page": 18
-				},
-				{
-					"name": "Vistana Bandit",
-					"source": "CoS"
 				},
 				{
 					"name": "Uttolot Elf Bandit",
@@ -7171,6 +7221,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -7223,6 +7274,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "CoS"
 				}
 			],
 			"size": "M",
@@ -7302,7 +7356,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bandit-captain.mp3"
@@ -7312,10 +7365,6 @@
 					"name": "Diabolical Bandit Captain",
 					"source": "MTF",
 					"page": 18
-				},
-				{
-					"name": "Vistana Bandit Captain",
-					"source": "CoS"
 				}
 			],
 			"actionTags": [
@@ -7334,6 +7383,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -7362,6 +7412,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -7473,7 +7526,6 @@
 				"forest",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/banshee.mp3"
@@ -7496,6 +7548,7 @@
 			"conditionInflict": [
 				"frightened"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -7647,7 +7700,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/barbed-devil.mp3"
@@ -7673,6 +7725,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -7823,7 +7876,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/barlgura.mp3"
@@ -7852,6 +7904,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -7929,7 +7982,6 @@
 			"environment": [
 				"mountain"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/basilisk.mp3"
@@ -7948,6 +8000,7 @@
 				"petrified",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -7968,6 +8021,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -8020,7 +8076,6 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bat.mp3"
@@ -8036,7 +8091,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Bearded Devil",
@@ -8168,7 +8224,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bearded-devil.mp3"
@@ -8198,6 +8253,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -8296,7 +8352,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/behir.mp3"
@@ -8305,6 +8360,7 @@
 				"D"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack",
 				"Swallow"
 			],
@@ -8327,6 +8383,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -8522,10 +8579,85 @@
 				"name": "Beholder",
 				"source": "MM"
 			},
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Variant Abilities",
+					"entries": [
+						"When a beholder's dream-imagination runs wild, the result can be an offspring that has an unusual or unique set of abilities. Rather than the standard powers of a beholder's central eye and eyestalks, the creature has one or more variant abilities\u2014guaranteed to surprise any enemies who thought they knew what they were getting themselves into.",
+						"This section provides several alternative spell effects for a beholder's eye. Each of these effects is designed to be of the same power level as the one it replaces, enabling you to create a custom beholder without altering the monster's challenge rating. As another option, you can switch any of the damaging eye rays in the {@book Monster Manual|MM} to an effect with a different damage type, such as replacing the enervation ray with a combustion ray that deals fire damage instead of necrotic damage.",
+						"Unless otherwise indicated, an alternative ability has the same range as the eye ray it is replacing, and it affects only one creature per use (even if the ability is based on a spell that normally affects an area or multiple targets). The saving throw for an alternative ability uses the same DC and the same ability score as the spell the eye ray is based on.",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Antimagic Cone:",
+									"entry": "{@spell mirage arcane}, {@spell power word stun} (affecting the weakest non-{@condition stunned} target in the cone each round)"
+								},
+								{
+									"type": "item",
+									"name": "Charm Ray:",
+									"entry": "{@spell banishment} (1 minute), {@spell confusion} (1 minute)"
+								},
+								{
+									"type": "item",
+									"name": "Death Ray:",
+									"entry": "{@spell circle of death} (10-foot-radius sphere; 4d6 necrotic damage to all creatures in the area), {@spell feeblemind}"
+								},
+								{
+									"type": "item",
+									"name": "Disintegration Ray:",
+									"entry": "{@spell chain lightning} (primary target takes 6d8 lightning damage; two secondary targets within 30 feet of the primary target take 3d8 lightning damage each), eyebite (sickened effect; 1 minute)"
+								},
+								{
+									"type": "item",
+									"name": "Enervation Ray:",
+									"entry": "{@spell create undead} (usable regardless of the time of day), {@spell polymorph} (1 minute)"
+								},
+								{
+									"type": "item",
+									"name": "Fear Ray:",
+									"entry": "{@spell gaseous form} (self or willing creature only), {@spell moonbeam}"
+								},
+								{
+									"type": "item",
+									"name": "Paralyzing Ray:",
+									"entry": "{@spell modify memory}, {@spell silence} (1 minute)"
+								},
+								{
+									"type": "item",
+									"name": "Petrification Ray:",
+									"entry": "{@spell Otto's irresistible dance} (1 minute), {@spell wall of ice} (1 minute; one 10-foot-square panel)"
+								},
+								{
+									"type": "item",
+									"name": "Sleep Ray:",
+									"entry": "{@spell blindness/deafness}, {@spell misty step} (self or willing creature only)"
+								},
+								{
+									"type": "item",
+									"name": "Slowing Ray:",
+									"entry": "{@spell bestow curse} (1 minute), {@spell sleet storm} (one 10-foot-cube)"
+								},
+								{
+									"type": "item",
+									"name": "Telekinesis Ray:",
+									"entry": "{@spell geas} (1 hour), {@spell wall of force} (1 minute; one 10-foot-square panel)"
+								}
+							]
+						}
+					],
+					"variantSource": {
+						"source": "VGM",
+						"page": 12
+					}
+				}
+			],
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/beholder.mp3"
@@ -8557,6 +8689,7 @@
 			"conditionInflictLegendary": [
 				"grappled"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -8680,7 +8813,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/beholder-zombie.mp3"
@@ -8709,6 +8841,7 @@
 				"frightened",
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -8816,7 +8949,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/berserker.mp3"
@@ -8841,6 +8973,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -8928,7 +9061,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/black-bear.mp3"
@@ -8945,7 +9077,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Black Dragon Wyrmling",
@@ -9031,7 +9164,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/black-dragon-wyrmling.mp3"
@@ -9042,6 +9174,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -9054,6 +9189,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -9171,7 +9307,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/black-pudding.mp3"
@@ -9190,6 +9325,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -9213,6 +9349,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -9272,13 +9411,15 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/blink-dog.mp3"
 			},
 			"traitTags": [
 				"Keen Senses"
+			],
+			"actionTags": [
+				"Teleport"
 			],
 			"languageTags": [
 				"CS",
@@ -9291,6 +9432,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -9373,7 +9515,6 @@
 				"coastal",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/blood-hawk.mp3"
@@ -9388,6 +9529,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -9466,7 +9608,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/blue-dragon-wyrmling.mp3"
@@ -9474,6 +9615,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -9486,6 +9630,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -9593,7 +9738,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/blue-slaad.mp3"
@@ -9620,6 +9764,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -9646,6 +9791,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -9703,7 +9851,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/boar.mp3"
@@ -9719,7 +9866,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Bone Devil",
@@ -9876,7 +10024,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bone-devil.mp3"
@@ -9908,6 +10055,7 @@
 				"grappled",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -10016,7 +10164,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bone-naga.mp3"
@@ -10039,6 +10186,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -10139,7 +10287,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bone-naga.mp3"
@@ -10162,6 +10309,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -10252,7 +10400,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/brass-dragon-wyrmling.mp3"
@@ -10260,6 +10407,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -10275,6 +10425,7 @@
 			"conditionInflict": [
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -10373,7 +10524,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bronze-dragon-wyrmling.mp3"
@@ -10384,6 +10534,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -10396,6 +10549,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -10425,6 +10579,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -10492,7 +10649,6 @@
 				"hill",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/brown-bear.mp3"
@@ -10509,7 +10665,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Bugbear",
@@ -10552,6 +10709,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -10633,7 +10793,6 @@
 				"grassland",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bugbear.mp3"
@@ -10656,6 +10815,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -10760,7 +10920,6 @@
 				"grassland",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bugbear-chief.mp3"
@@ -10786,6 +10945,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -10868,7 +11028,6 @@
 				"grassland",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bulette.mp3"
@@ -10888,6 +11047,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -10907,6 +11067,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -11000,7 +11163,6 @@
 			"environment": [
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bullywug.mp3"
@@ -11029,6 +11191,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -11198,7 +11361,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/cambion.mp3"
@@ -11244,6 +11406,7 @@
 			"conditionInflictSpell": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -11294,7 +11457,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/camel.mp3"
@@ -11304,7 +11466,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Carrion Crawler",
@@ -11405,7 +11568,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/carrior-crawler.mp3"
@@ -11433,6 +11595,7 @@
 				"paralyzed",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -11468,6 +11631,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -11521,7 +11687,6 @@
 				"desert"
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/cat.mp3"
@@ -11534,7 +11699,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Cave Bear",
@@ -11615,7 +11781,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/cave-bear.mp3"
@@ -11635,7 +11800,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Centaur",
@@ -11657,6 +11823,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -11730,7 +11899,6 @@
 				"grassland",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/centaur.mp3"
@@ -11755,6 +11923,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -11879,7 +12048,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/chain-devil.mp3"
@@ -11911,6 +12079,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -12026,7 +12195,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/chasme.mp3"
@@ -12053,6 +12221,7 @@
 			"conditionInflict": [
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -12161,7 +12330,6 @@
 				"grassland",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/chimera.mp3"
@@ -12170,6 +12338,7 @@
 				"D"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -12186,6 +12355,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -12290,7 +12460,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/chuul.mp3"
@@ -12321,6 +12490,7 @@
 				"paralyzed",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -12454,7 +12624,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/clay-golem.mp3"
@@ -12480,6 +12649,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -12596,7 +12766,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/cloaker.mp3"
@@ -12627,6 +12796,7 @@
 				"blinded",
 				"frightened"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -12790,7 +12960,6 @@
 			"environment": [
 				"mountain"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/cloud-giant.mp3"
@@ -12823,6 +12992,7 @@
 			"conditionInflictSpell": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -12843,6 +13013,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -12883,7 +13056,6 @@
 			"environment": [
 				"grassland"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/cockatrice.mp3"
@@ -12901,6 +13073,7 @@
 				"petrified",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -12975,6 +13148,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -13025,16 +13201,11 @@
 				"urban",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/commoner.mp3"
 			},
 			"altArt": [
-				{
-					"name": "Vistana Commoner",
-					"source": "CoS"
-				},
 				{
 					"name": "Commoner",
 					"source": "EGW"
@@ -13050,6 +13221,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -13115,7 +13287,6 @@
 				"swamp",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/constrictor-snake.mp3"
@@ -13133,7 +13304,8 @@
 			"conditionInflict": [
 				"grappled",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Copper Dragon Wyrmling",
@@ -13222,7 +13394,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/copper-dragon-wyrmling.mp3"
@@ -13230,6 +13401,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -13242,6 +13416,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -13398,7 +13573,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/couatl.mp3"
@@ -13408,6 +13582,9 @@
 			],
 			"senseTags": [
 				"U"
+			],
+			"actionTags": [
+				"Shapechanger"
 			],
 			"languageTags": [
 				"TP",
@@ -13430,6 +13607,7 @@
 				"restrained",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -13504,7 +13682,6 @@
 				"coastal"
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/crab.mp3"
@@ -13520,7 +13697,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Crawling Claw",
@@ -13604,7 +13782,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/crawling-claw.mp3"
@@ -13626,6 +13803,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -13658,6 +13836,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -13712,7 +13893,6 @@
 				"swamp",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/crocodile.mp3"
@@ -13729,7 +13909,8 @@
 			"conditionInflict": [
 				"grappled",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Cult Fanatic",
@@ -13895,7 +14076,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/cult-fanatic.mp3"
@@ -13929,6 +14109,7 @@
 				"paralyzed",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -14056,7 +14237,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/cultist.mp3"
@@ -14082,6 +14262,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -14107,6 +14288,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "H",
@@ -14177,7 +14361,6 @@
 				"desert",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/cyclops.mp3"
@@ -14196,6 +14379,7 @@
 				"RCH",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -14368,7 +14552,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/dao.mp3"
@@ -14398,6 +14581,7 @@
 				"frightened",
 				"invisible"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -14412,6 +14596,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -14477,7 +14664,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/darkmantle.mp3"
@@ -14498,6 +14684,7 @@
 			"conditionInflict": [
 				"blinded"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -14576,7 +14763,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/death-dog.mp3"
@@ -14596,6 +14782,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -14765,7 +14952,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/death-knight.mp3"
@@ -14801,6 +14987,7 @@
 				"paralyzed",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -14976,7 +15163,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/death-slaad.mp3"
@@ -15014,6 +15200,7 @@
 				"frightened",
 				"invisible"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -15100,7 +15287,7 @@
 					"name": "Negative Energy Cone",
 					"entries": [
 						"The death tyrant's central eye emits an {@condition invisible}, magical 150-foot cone of negative energy. At the start of each of its turns, the tyrant decides which way the cone faces and whether the cone is active.",
-						"Any creature in that area can't regain hit points. Any humanoid that dies there becomes a zombie under the tyrant's command. The dead humanoid retains its place in the initiative order and animates at the start of its next turn, provided that its body hasn't been completely destroyed."
+						"Any creature in that area can't regain hit points. Any humanoid that dies there becomes a {@creature zombie} under the tyrant's command. The dead humanoid retains its place in the initiative order and animates at the start of its next turn, provided that its body hasn't been completely destroyed."
 					]
 				}
 			],
@@ -15205,7 +15392,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/death-tyrant.mp3"
@@ -15234,6 +15420,7 @@
 				"restrained",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -15350,7 +15537,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/svirfneblin.mp3"
@@ -15381,6 +15567,7 @@
 				"blinded",
 				"deafened"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -15432,7 +15619,6 @@
 				"grassland",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/deer.mp3"
@@ -15442,7 +15628,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Demilich",
@@ -15636,7 +15823,6 @@
 					}
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/demilich.mp3"
@@ -15658,6 +15844,7 @@
 			"conditionInflictLegendary": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -15670,6 +15857,9 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "CoS"
 				}
 			],
 			"size": "M",
@@ -15793,7 +15983,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/deva.mp3"
@@ -15805,7 +15994,8 @@
 				"SD"
 			],
 			"actionTags": [
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"TP",
@@ -15821,6 +16011,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -15904,7 +16095,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/dire-wolf.mp3"
@@ -15921,7 +16111,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Displacer Beast",
@@ -15939,6 +16130,9 @@
 				},
 				{
 					"source": "ERLW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -16004,7 +16198,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/displacer-beast.mp3"
@@ -16024,6 +16217,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -16177,7 +16371,6 @@
 			"environment": [
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/djinni.mp3"
@@ -16210,6 +16403,7 @@
 				"incapacitated",
 				"invisible"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -16341,7 +16535,6 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/doppelganger.mp3"
@@ -16365,6 +16558,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -16424,7 +16618,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/draft-horse.mp3"
@@ -16434,7 +16627,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Dragon Turtle",
@@ -16549,7 +16743,6 @@
 				"underwater",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/dragon-turtle.mp3"
@@ -16561,6 +16754,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -16581,6 +16775,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -16604,6 +16799,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -16684,7 +16882,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/dretch.mp3"
@@ -16710,6 +16907,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -16858,7 +17056,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/drider.mp3"
@@ -16892,6 +17089,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -17035,7 +17233,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/drow.mp3"
@@ -17062,6 +17259,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -17225,7 +17423,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/drow-elite-warrior.mp3"
@@ -17257,6 +17454,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -17294,6 +17492,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -17447,7 +17648,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/drow-mage.mp3"
@@ -17478,6 +17678,7 @@
 				"invisible",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -17675,7 +17876,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/drow-priestess-of-lolth.mp3"
@@ -17711,6 +17911,7 @@
 				"poisoned",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -17758,6 +17959,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -17839,11 +18043,10 @@
 				{
 					"name": "Quarterstaff",
 					"entries": [
-						"{@atk mw} {@hit 2} to hit ({@hit 4} to hit with shillelagh), reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage, or 6 ({@damage 1d8 + 2}) bludgeoning damage with shillelagh or if wielded with two hands."
+						"{@atk mw} {@hit 2} to hit ({@hit 4} to hit with shillelagh), reach 5 ft., one target. {@h}3 ({@damage 1d6}) bludgeoning damage, 4 ({@damage 1d8}) bludgeoning damage if wielded with two hands, or 6 ({@damage 1d8 + 2}) bludgeoning damage with {@spell shillelagh}."
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/druid.mp3"
@@ -17868,6 +18071,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -17897,6 +18101,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -18000,7 +18207,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/dryad.mp3"
@@ -18030,6 +18236,7 @@
 			"conditionInflictSpell": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -18149,7 +18356,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/duergar.mp3"
@@ -18172,6 +18378,10 @@
 				"RW",
 				"THW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -18259,7 +18469,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/duodrone.mp3"
@@ -18282,6 +18491,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -18392,7 +18602,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mephit.mp3"
@@ -18402,6 +18611,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"AU",
@@ -18423,6 +18635,7 @@
 			"conditionInflictSpell": [
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -18485,7 +18698,6 @@
 				"hill",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/eagle.mp3"
@@ -18498,7 +18710,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Earth Elemental",
@@ -18619,7 +18832,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/earth-elemental.mp3"
@@ -18644,6 +18856,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -18798,7 +19011,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/efreeti.mp3"
@@ -18822,6 +19034,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -18888,7 +19101,6 @@
 			"environment": [
 				"grassland"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/elephant.mp3"
@@ -18902,7 +19114,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Elk",
@@ -18976,7 +19189,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/elk.mp3"
@@ -18992,7 +19204,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Empyrean",
@@ -19165,7 +19378,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/empyrean.mp3"
@@ -19198,6 +19410,7 @@
 			"conditionInflictSpell": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -19331,11 +19544,10 @@
 					"type": "variant",
 					"name": "Rope of Entanglement",
 					"entries": [
-						"Some erinyes carry a rope of entanglement (detailed in the Dungeon Master's Guide). When such an erinyes uses its Multiattack, the erinyes can use the rope in place of two of the attacks."
+						"Some erinyes carry a {@item rope of entanglement} (detailed in the Dungeon Master's Guide). When such an erinyes uses its Multiattack, the erinyes can use the rope in place of two of the attacks."
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/erinyes.mp3"
@@ -19367,6 +19579,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -19402,6 +19615,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -19500,7 +19716,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ettercap.mp3"
@@ -19531,6 +19746,7 @@
 				"poisoned",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -19634,7 +19850,6 @@
 				"mountain",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ettin.mp3"
@@ -19656,6 +19871,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -19773,7 +19989,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/faerie-dragon.mp3"
@@ -19783,6 +19998,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR",
@@ -19797,9 +20015,13 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"blinded"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -19921,7 +20143,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/faerie-dragon.mp3"
@@ -19931,6 +20152,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR",
@@ -19945,9 +20169,13 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"blinded"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -20066,7 +20294,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/faerie-dragon.mp3"
@@ -20076,6 +20303,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR",
@@ -20090,9 +20320,13 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"blinded"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -20207,7 +20441,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/faerie-dragon.mp3"
@@ -20217,6 +20450,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR",
@@ -20231,9 +20467,13 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"blinded"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -20244,6 +20484,9 @@
 			"otherSources": [
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -20352,7 +20595,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/faerie-dragon.mp3"
@@ -20362,6 +20604,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR",
@@ -20376,6 +20621,10 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -20392,6 +20641,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -20506,7 +20758,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/faerie-dragon.mp3"
@@ -20516,6 +20767,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR",
@@ -20530,9 +20784,13 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"blinded"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -20648,7 +20906,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/faerie-dragon.mp3"
@@ -20658,6 +20915,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR",
@@ -20672,9 +20932,13 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"blinded"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -20716,6 +20980,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -20782,7 +21049,7 @@
 				{
 					"name": "Illumination",
 					"entries": [
-						"The elemental sheds bright light in a 30-foot radius and dim light in an additional 30 ft.."
+						"The elemental sheds bright light in a 30-foot radius and dim light in an additional 30 feet."
 					]
 				},
 				{
@@ -20809,7 +21076,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/fire-elemental.mp3"
@@ -20834,6 +21100,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -20960,7 +21227,6 @@
 				"underdark",
 				"mountain"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/fire-giant.mp3"
@@ -20983,6 +21249,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -21084,7 +21351,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/fire-snake.mp3"
@@ -21107,6 +21373,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -21150,6 +21417,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -21281,7 +21551,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/flameskull.mp3"
@@ -21315,6 +21584,7 @@
 			"miscTags": [
 				"AOE"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -21467,7 +21737,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/flesh-golem.mp3"
@@ -21493,6 +21762,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -21582,7 +21852,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/flumph.mp3"
@@ -21607,6 +21876,7 @@
 				"poisoned",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -21679,7 +21949,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/flying-snake.mp3"
@@ -21697,6 +21966,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -21821,7 +22091,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/flying-sword.mp3"
@@ -21839,6 +22108,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -21852,6 +22122,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "H",
@@ -21924,7 +22197,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/fomorian.mp3"
@@ -21947,6 +22219,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -21958,6 +22231,12 @@
 			"otherSources": [
 				{
 					"source": "ToA"
+				},
+				{
+					"source": "CoS"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -22006,7 +22285,6 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/frog.mp3"
@@ -22017,6 +22295,7 @@
 			"senseTags": [
 				"D"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -22133,7 +22412,6 @@
 				"mountain",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/frost-giant.mp3"
@@ -22156,6 +22434,7 @@
 			"conditionInflict": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -22172,6 +22451,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -22264,7 +22546,6 @@
 				"mountain",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/galeb-duhr.mp3"
@@ -22288,6 +22569,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -22421,7 +22703,6 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gargoyle.mp3"
@@ -22445,6 +22726,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -22531,7 +22813,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gas-spore.mp3"
@@ -22551,6 +22832,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -22574,6 +22856,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -22647,7 +22932,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gelatinous-cube.mp3"
@@ -22664,6 +22948,7 @@
 			"conditionInflict": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -22778,7 +23063,6 @@
 				"swamp",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ghast.mp3"
@@ -22809,6 +23093,7 @@
 				"paralyzed",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -22983,7 +23268,6 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ghost.mp3"
@@ -23008,6 +23292,7 @@
 				"frightened",
 				"incapacitated"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -23061,6 +23346,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -23120,7 +23408,6 @@
 				"swamp",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ghoul.mp3"
@@ -23147,6 +23434,7 @@
 			"conditionInflict": [
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -23211,7 +23499,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-ape.mp3"
@@ -23226,7 +23513,8 @@
 				"MW",
 				"RCH",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Badger",
@@ -23296,7 +23584,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-badger.mp3"
@@ -23316,7 +23603,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Bat",
@@ -23390,7 +23678,6 @@
 				"underdark",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-bat.mp3"
@@ -23406,7 +23693,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Boar",
@@ -23482,7 +23770,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-boar.mp3"
@@ -23498,7 +23785,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Centipede",
@@ -23569,7 +23857,6 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-centipede.mp3"
@@ -23587,7 +23874,8 @@
 			"conditionInflict": [
 				"paralyzed",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Constrictor Snake",
@@ -23609,6 +23897,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "H",
@@ -23662,7 +23953,6 @@
 				"swamp",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-constrictor-snake.mp3"
@@ -23681,7 +23971,8 @@
 			"conditionInflict": [
 				"grappled",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Crab",
@@ -23774,7 +24065,6 @@
 			"environment": [
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-crab.mp3"
@@ -23793,7 +24083,8 @@
 			],
 			"conditionInflict": [
 				"grappled"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Crocodile",
@@ -23877,7 +24168,6 @@
 			"environment": [
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-crocodile.mp3"
@@ -23900,7 +24190,8 @@
 				"grappled",
 				"prone",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Eagle",
@@ -23910,6 +24201,9 @@
 			"otherSources": [
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -23978,7 +24272,6 @@
 				"hill",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-eagle.mp3"
@@ -24002,6 +24295,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -24078,7 +24372,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-elk.mp3"
@@ -24103,6 +24396,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -24171,7 +24465,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-fire-beetle.mp3"
@@ -24189,6 +24482,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -24215,6 +24509,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -24280,7 +24577,6 @@
 				"forest",
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-frog.mp3"
@@ -24305,7 +24601,8 @@
 				"blinded",
 				"grappled",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Goat",
@@ -24321,6 +24618,12 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "CoS"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -24378,7 +24681,6 @@
 				"grassland",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-goat.mp3"
@@ -24394,7 +24696,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Hyena",
@@ -24460,7 +24763,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-hyena.mp3"
@@ -24473,7 +24775,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Lizard",
@@ -24570,7 +24873,6 @@
 				"desert",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-lizard.mp3"
@@ -24584,6 +24886,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -24679,7 +24982,6 @@
 			"environment": [
 				"underwater"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-octopus.mp3"
@@ -24706,6 +25008,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -24789,7 +25092,6 @@
 				"hill",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-owl.mp3"
@@ -24814,6 +25116,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -24840,6 +25143,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -24888,7 +25194,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-poisonous-snake.mp3"
@@ -24903,7 +25208,8 @@
 			"miscTags": [
 				"MW",
 				"RCH"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Rat",
@@ -24940,6 +25246,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -25012,7 +25321,6 @@
 				"swamp",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-rat.mp3"
@@ -25029,7 +25337,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Scorpion",
@@ -25107,7 +25416,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-scorpion.mp3"
@@ -25128,7 +25436,8 @@
 			],
 			"conditionInflict": [
 				"grappled"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Sea Horse",
@@ -25194,7 +25503,6 @@
 			"environment": [
 				"underwater"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-sea-horse.mp3"
@@ -25212,6 +25520,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -25301,7 +25610,6 @@
 			"environment": [
 				"underwater"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-shark.mp3"
@@ -25318,6 +25626,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -25455,7 +25764,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-spider.mp3"
@@ -25482,6 +25790,7 @@
 				"poisoned",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -25502,6 +25811,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -25567,7 +25879,6 @@
 				"desert",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-toad.mp3"
@@ -25593,7 +25904,8 @@
 				"blinded",
 				"grappled",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Vulture",
@@ -25686,7 +25998,6 @@
 				"grassland",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-vulture.mp3"
@@ -25709,6 +26020,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -25764,7 +26076,6 @@
 				"forest",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-wasp.mp3"
@@ -25779,7 +26090,8 @@
 			"conditionInflict": [
 				"paralyzed",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Weasel",
@@ -25845,7 +26157,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-weasel.mp3"
@@ -25861,7 +26172,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Giant Wolf Spider",
@@ -25883,6 +26195,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -25952,7 +26267,6 @@
 				"desert",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/giant-wolf-spider.mp3"
@@ -25977,6 +26291,7 @@
 				"paralyzed",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -26071,7 +26386,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gibbering-mouther.mp3"
@@ -26093,6 +26407,7 @@
 				"blinded",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -26185,7 +26500,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/githyanki-knight.mp3"
@@ -26207,6 +26521,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -26294,7 +26609,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/githyanki-warrior.mp3"
@@ -26316,6 +26630,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -26407,7 +26722,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/githzerai-monk.mp3"
@@ -26429,6 +26743,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -26530,7 +26845,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/githzerai-zerth.mp3"
@@ -26552,6 +26866,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -26704,7 +27019,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/glabrezu.mp3"
@@ -26738,6 +27052,7 @@
 			"conditionInflictSpell": [
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -26872,7 +27187,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gladiator.mp3"
@@ -26900,6 +27214,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -27005,7 +27320,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gnoll.mp3"
@@ -27028,6 +27342,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -27123,7 +27438,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gnoll-fang-of-yeenoghu.mp3"
@@ -27149,6 +27463,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -27253,7 +27568,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gnoll-pack-lord.mp3"
@@ -27280,6 +27594,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -27315,6 +27630,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -27368,7 +27686,6 @@
 				"hill",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/goat.mp3"
@@ -27384,7 +27701,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Goblin",
@@ -27433,6 +27751,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -27508,7 +27829,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/goblin.mp3"
@@ -27535,6 +27855,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -27563,6 +27884,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -27652,7 +27976,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/goblin-boss.mp3"
@@ -27676,6 +27999,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -27774,7 +28098,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gold-dragon-wyrmlin.mp3"
@@ -27785,6 +28108,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -27797,6 +28123,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -27820,6 +28147,9 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -27892,13 +28222,15 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gorgon.mp3"
 			},
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"damageTags": [
 				"B",
@@ -27913,6 +28245,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -28041,7 +28374,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/goristro.mp3"
@@ -28071,6 +28403,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -28188,7 +28521,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gray-ooze.mp3"
@@ -28208,6 +28540,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -28221,6 +28554,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -28370,7 +28706,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gray-slaad.mp3"
@@ -28407,6 +28742,7 @@
 				"frightened",
 				"invisible"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -28416,6 +28752,11 @@
 			"source": "MM",
 			"page": 95,
 			"srd": true,
+			"otherSources": [
+				{
+					"source": "WBtW"
+				}
+			],
 			"size": "M",
 			"type": "dragon",
 			"alignment": [
@@ -28492,7 +28833,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/green-dragon-wyrmling.mp3"
@@ -28503,6 +28843,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -28515,6 +28858,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -28544,6 +28888,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -28604,59 +28951,6 @@
 						"{@spell vicious mockery}"
 					],
 					"ability": "cha"
-				},
-				{
-					"name": "Shared Spellcasting (Coven Only)",
-					"headerEntries": [
-						"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
-					],
-					"spells": {
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell identify}",
-								"{@spell ray of sickness}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell hold person}",
-								"{@spell locate object}"
-							]
-						},
-						"3": {
-							"slots": 3,
-							"spells": [
-								"{@spell bestow curse}",
-								"{@spell counterspell}",
-								"{@spell lightning bolt}"
-							]
-						},
-						"4": {
-							"slots": 3,
-							"spells": [
-								"{@spell phantasmal killer}",
-								"{@spell polymorph}"
-							]
-						},
-						"5": {
-							"slots": 2,
-							"spells": [
-								"{@spell contact other plane}",
-								"{@spell scrying}"
-							]
-						},
-						"6": {
-							"slots": 1,
-							"spells": [
-								"{@spell eyebite}"
-							]
-						}
-					},
-					"footerEntries": [
-						"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
-					]
 				}
 			],
 			"trait": [
@@ -28670,20 +28964,6 @@
 					"name": "Mimicry",
 					"entries": [
 						"The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful {@dc 14} Wisdom (Insight) check."
-					]
-				},
-				{
-					"name": "Hag Coven",
-					"entries": [
-						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos."
-					]
-				},
-				{
-					"name": "Hag Eye (Coven Only)",
-					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
 					]
 				}
 			],
@@ -28708,12 +28988,87 @@
 					]
 				}
 			],
+			"legendaryGroup": {
+				"name": "Green Hag",
+				"source": "MM"
+			},
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Hag Covens",
+					"entries": [
+						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
+						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos.",
+						{
+							"type": "spellcasting",
+							"name": "Shared Spellcasting (Coven Only)",
+							"headerEntries": [
+								"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell identify}",
+										"{@spell ray of sickness}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell hold person}",
+										"{@spell locate object}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell bestow curse}",
+										"{@spell counterspell}",
+										"{@spell lightning bolt}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell phantasmal killer}",
+										"{@spell polymorph}"
+									]
+								},
+								"5": {
+									"slots": 2,
+									"spells": [
+										"{@spell contact other plane}",
+										"{@spell scrying}"
+									]
+								},
+								"6": {
+									"slots": 1,
+									"spells": [
+										"{@spell eyebite}"
+									]
+								}
+							},
+							"footerEntries": [
+								"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Hag Eye",
+							"entries": [
+								"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
+								"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+							]
+						}
+					]
+				}
+			],
 			"environment": [
 				"forest",
 				"swamp",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/green-hag.mp3"
@@ -28740,12 +29095,16 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"frightened",
 				"paralyzed",
 				"poisoned",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -28901,7 +29260,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/green-slaad.mp3"
@@ -28939,6 +29297,7 @@
 				"frightened",
 				"invisible"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -29039,7 +29398,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/grell.mp3"
@@ -29067,6 +29425,7 @@
 				"poisoned",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -29170,7 +29529,6 @@
 				"underdark",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/grick.mp3"
@@ -29189,6 +29547,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -29285,7 +29644,6 @@
 				"underdark",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/grick-alpha.mp3"
@@ -29306,6 +29664,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -29408,7 +29767,6 @@
 				"coastal",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/griffon.mp3"
@@ -29429,6 +29787,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -29516,7 +29875,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/grimlock.mp3"
@@ -29537,6 +29895,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -29643,17 +30002,10 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/guard.mp3"
 			},
-			"altArt": [
-				{
-					"name": "Vistana Guard",
-					"source": "CoS"
-				}
-			],
 			"languageTags": [
 				"C",
 				"X"
@@ -29666,6 +30018,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -29817,7 +30170,6 @@
 				"forest",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/guardian-naga.mp3"
@@ -29844,6 +30196,7 @@
 				"RCH",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -30034,7 +30387,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gynosphinx.mp3"
@@ -30061,6 +30413,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -30149,7 +30502,6 @@
 				"desert",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/half-ogre.mp3"
@@ -30170,12 +30522,12 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
 		{
 			"name": "Half-Red Dragon Veteran",
-			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 180,
 			"srd": true,
@@ -30273,7 +30625,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/half-red-dragon-veteran.mp3"
@@ -30283,6 +30634,7 @@
 				"D"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -30300,6 +30652,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -30396,7 +30749,6 @@
 				"hill",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/harpy.mp3"
@@ -30418,6 +30770,7 @@
 				"charmed",
 				"incapacitated"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -30438,6 +30791,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -30484,7 +30840,6 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hawk.mp3"
@@ -30498,6 +30853,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -30619,7 +30975,6 @@
 				"underdark",
 				"mountain"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hell-hound.mp3"
@@ -30630,6 +30985,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"CS",
@@ -30643,6 +31001,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -30772,7 +31131,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/helmed-horror.mp3"
@@ -30796,6 +31154,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -30819,6 +31178,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -30932,7 +31294,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hezrou.mp3"
@@ -30960,6 +31321,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -31069,7 +31431,6 @@
 			"environment": [
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hill-giant.mp3"
@@ -31092,6 +31453,7 @@
 				"grappled",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -31177,7 +31539,6 @@
 				"grassland",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hippogriff.mp3"
@@ -31195,6 +31556,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -31236,6 +31598,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -31309,7 +31674,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hobgoblin.mp3"
@@ -31330,6 +31694,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -31436,7 +31801,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hobgoblin-captain.mp3"
@@ -31460,6 +31824,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -31580,7 +31945,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hobgoblin-warlord.mp3"
@@ -31609,6 +31973,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -31695,7 +32060,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/homunculus.mp3"
@@ -31716,6 +32080,7 @@
 				"poisoned",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -31804,7 +32169,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hook-horror.mp3"
@@ -31829,6 +32193,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -31952,7 +32317,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/horned-devil.mp3"
@@ -31979,6 +32343,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -32069,7 +32434,6 @@
 			"environment": [
 				"underwater"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hunter-shark.mp3"
@@ -32086,6 +32450,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -32205,7 +32570,6 @@
 			"environment": [
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hydra.mp3"
@@ -32226,6 +32590,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -32290,7 +32655,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/hyena.mp3"
@@ -32304,6 +32668,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -32457,7 +32822,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ice-devil.mp3"
@@ -32487,6 +32851,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -32617,7 +32982,6 @@
 			"environment": [
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ice-mephit.mp3"
@@ -32628,6 +32992,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"AQ",
@@ -32644,6 +33011,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -32794,7 +33162,6 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/imp.mp3"
@@ -32818,6 +33185,10 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -32847,6 +33218,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -32959,7 +33333,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/succubus-incubus.mp3"
@@ -32986,6 +33359,7 @@
 			"conditionInflict": [
 				"charmed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -33091,7 +33465,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/intellect-devourer.mp3"
@@ -33117,6 +33490,7 @@
 			"conditionInflict": [
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -33161,6 +33535,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -33257,7 +33634,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/invisible-stalker.mp3"
@@ -33278,6 +33654,10 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -33417,7 +33797,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/iron-golem.mp3"
@@ -33432,6 +33811,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -33447,6 +33827,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -33512,7 +33893,6 @@
 				"grassland",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/jackal.mp3"
@@ -33526,7 +33906,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Jackalwere",
@@ -33610,7 +33991,7 @@
 				{
 					"name": "Pack Tactics",
 					"entries": [
-						"The jackalwere has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+						"The jackalwere has advantage on an attack roll against a creature if at least one of the jackalwere's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
 					]
 				}
 			],
@@ -33638,7 +34019,6 @@
 				"grassland",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/jackalwere.mp3"
@@ -33662,6 +34042,7 @@
 			"conditionInflict": [
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -33758,10 +34139,9 @@
 				"forest",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
-				"path": "bestiary/kenku-2.mp3"
+				"path": "bestiary/kenku.mp3"
 			},
 			"traitTags": [
 				"Ambusher"
@@ -33778,6 +34158,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -33847,7 +34228,7 @@
 				{
 					"name": "Hold Breath",
 					"entries": [
-						"The whale can hold its breath for 30 minutes"
+						"The whale can hold its breath for 30 minutes."
 					]
 				},
 				{
@@ -33868,7 +34249,6 @@
 			"environment": [
 				"underwater"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/killer-whale.mp3"
@@ -33885,7 +34265,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Knight",
@@ -33937,6 +34318,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -34021,7 +34405,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/knight.mp3"
@@ -34043,6 +34426,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -34157,7 +34541,6 @@
 				"mountain",
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/kobold.mp3"
@@ -34182,6 +34565,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -34351,7 +34735,6 @@
 			"environment": [
 				"underwater"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/kraken.mp3"
@@ -34394,6 +34777,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -34523,7 +34907,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/kuo-toa.mp3"
@@ -34549,8 +34932,10 @@
 			],
 			"conditionInflict": [
 				"grappled",
+				"invisible",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -34714,7 +35099,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/kuo-toa-archpriest.mp3"
@@ -34742,9 +35126,13 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -34858,7 +35246,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/kuo-toa-monitor.mp3"
@@ -34884,6 +35271,10 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -35023,7 +35414,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/kuo-toa-whip.mp3"
@@ -35051,6 +35441,10 @@
 				"MW",
 				"RCH"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -35068,6 +35462,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -35164,7 +35561,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/lamia.mp3"
@@ -35189,6 +35585,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -35274,7 +35671,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/lemure.mp3"
@@ -35295,6 +35691,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -35536,7 +35933,6 @@
 				"name": "Lich",
 				"source": "MM"
 			},
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/lich.mp3"
@@ -35569,6 +35965,7 @@
 				"invisible",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -35658,7 +36055,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/lion.mp3"
@@ -35677,7 +36073,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Lizard",
@@ -35725,7 +36122,6 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/lizard.mp3"
@@ -35738,7 +36134,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Lizard King",
@@ -35853,7 +36250,6 @@
 				"forest",
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/lizard-king-_-queen.mp3"
@@ -35880,6 +36276,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -35985,7 +36382,6 @@
 				"forest",
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/lizard-king-_-queen.mp3"
@@ -36012,6 +36408,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -36142,7 +36539,6 @@
 				"forest",
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/lizardfolk.mp3"
@@ -36165,6 +36561,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -36308,7 +36705,6 @@
 				"forest",
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/lizardfolk-shaman.mp3"
@@ -36317,7 +36713,8 @@
 				"Hold Breath"
 			],
 			"actionTags": [
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"DR"
@@ -36340,6 +36737,7 @@
 			"conditionInflictSpell": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -36408,6 +36806,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -36527,7 +36928,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mage.mp3"
@@ -36546,6 +36946,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -36673,7 +37074,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/magma-mephit.mp3"
@@ -36684,6 +37084,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"IG",
@@ -36700,6 +37103,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -36720,6 +37124,9 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -36793,7 +37200,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/magmin.mp3"
@@ -36814,6 +37220,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -36883,7 +37290,6 @@
 			"environment": [
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mammoth.mp3"
@@ -36899,6 +37305,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -36917,6 +37324,9 @@
 				},
 				{
 					"source": "IMR"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -36980,7 +37390,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/manes.mp3"
@@ -36998,6 +37407,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -37115,7 +37525,6 @@
 				"coastal",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/manticore.mp3"
@@ -37137,6 +37546,7 @@
 				"MW",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -37305,7 +37715,6 @@
 				"underwater",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/marid.mp3"
@@ -37342,6 +37751,7 @@
 			"conditionInflictSpell": [
 				"invisible"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -37499,7 +37909,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/marilith.mp3"
@@ -37532,6 +37941,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -37610,7 +38020,6 @@
 				"hill",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mastiff.mp3"
@@ -37627,6 +38036,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -37735,7 +38145,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/medusa.mp3"
@@ -37762,6 +38171,7 @@
 				"petrified",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -37776,6 +38186,9 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -37834,7 +38247,6 @@
 				"underwater",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/merfolk.mp3"
@@ -37854,6 +38266,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -37883,6 +38296,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -37960,7 +38376,6 @@
 				"underwater",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/merrow.mp3"
@@ -37986,6 +38401,7 @@
 				"MW",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -38153,7 +38569,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mezzoloth.mp3"
@@ -38187,6 +38602,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -38228,6 +38644,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -38319,7 +38738,6 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mimic.mp3"
@@ -38342,6 +38760,7 @@
 			"conditionInflict": [
 				"grappled"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -38475,7 +38894,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mind-flayer.mp3"
@@ -38513,6 +38931,7 @@
 			"conditionInflictSpell": [
 				"charmed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -38684,7 +39103,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mind-flayer-arcanist.mp3"
@@ -38726,6 +39144,7 @@
 				"restrained",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -38835,7 +39254,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/minotaur.mp3"
@@ -38860,6 +39278,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -38964,7 +39383,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/minotaur-skeleton.mp3"
@@ -38989,6 +39407,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -39082,7 +39501,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/monodrone.mp3"
@@ -39101,6 +39519,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -39120,6 +39539,9 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -39204,7 +39626,6 @@
 			"environment": [
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mud-mephit.mp3"
@@ -39215,6 +39636,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"AQ",
@@ -39229,6 +39653,7 @@
 			"conditionInflict": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -39298,7 +39723,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mule.mp3"
@@ -39308,7 +39732,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Mummy",
@@ -39430,7 +39855,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mummy.mp3"
@@ -39455,6 +39879,7 @@
 				"frightened",
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -39681,7 +40106,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/mummy-lord.mp3"
@@ -39723,6 +40147,7 @@
 				"prone",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -39840,7 +40265,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/myconid-adult.mp3"
@@ -39862,6 +40286,7 @@
 				"poisoned",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -40004,7 +40429,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/myconid-sovere.mp3"
@@ -40030,6 +40454,7 @@
 				"poisoned",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -40100,7 +40525,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/myconid-sprout.mp3"
@@ -40116,6 +40540,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -40260,7 +40685,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/nalfeshnee.mp3"
@@ -40290,6 +40714,7 @@
 			"conditionInflict": [
 				"frightened"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -40364,7 +40789,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/needle-blight.mp3"
@@ -40389,6 +40813,7 @@
 				"MW",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -40510,59 +40935,6 @@
 						]
 					},
 					"ability": "cha"
-				},
-				{
-					"name": "Shared Spellcasting (Coven Only)",
-					"headerEntries": [
-						"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
-					],
-					"spells": {
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell identify}",
-								"{@spell ray of sickness}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell hold person}",
-								"{@spell locate object}"
-							]
-						},
-						"3": {
-							"slots": 3,
-							"spells": [
-								"{@spell bestow curse}",
-								"{@spell counterspell}",
-								"{@spell lightning bolt}"
-							]
-						},
-						"4": {
-							"slots": 3,
-							"spells": [
-								"{@spell phantasmal killer}",
-								"{@spell polymorph}"
-							]
-						},
-						"5": {
-							"slots": 2,
-							"spells": [
-								"{@spell contact other plane}",
-								"{@spell scrying}"
-							]
-						},
-						"6": {
-							"slots": 1,
-							"spells": [
-								"{@spell eyebite}"
-							]
-						}
-					},
-					"footerEntries": [
-						"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
-					]
 				}
 			],
 			"trait": [
@@ -40578,20 +40950,6 @@
 						"A night hag carries two very rare magic items that she must craft for herself. If either object is lost, the night hag will go to great lengths to retrieve it, as creating a new tool takes time and effort.",
 						"Heartstone: This lustrous black gem allows a night hag to become ethereal while it is in her possession. The touch of a heartstone also cures any disease. Crafting a heartstone takes 30 days.",
 						"Soul Bag: When an evil humanoid dies as a result of a night hag's Nightmare Haunting, the hag catches the soul in this black sack made of stitched flesh. A soul bag can hold only one evil soul at a time, and only the night hag who crafted the bag can catch a soul with it. Crafting a soul bag takes 7 days and a humanoid sacrifice (whose flesh is used to make the bag)."
-					]
-				},
-				{
-					"name": "Hag Coven",
-					"entries": [
-						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos."
-					]
-				},
-				{
-					"name": "Hag Eye (Coven Only)",
-					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
 					]
 				}
 			],
@@ -40621,7 +40979,82 @@
 					]
 				}
 			],
-			"hasToken": true,
+			"legendaryGroup": {
+				"name": "Night Hag",
+				"source": "MM"
+			},
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Hag Covens",
+					"entries": [
+						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
+						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos.",
+						{
+							"type": "spellcasting",
+							"name": "Shared Spellcasting (Coven Only)",
+							"headerEntries": [
+								"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell identify}",
+										"{@spell ray of sickness}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell hold person}",
+										"{@spell locate object}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell bestow curse}",
+										"{@spell counterspell}",
+										"{@spell lightning bolt}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell phantasmal killer}",
+										"{@spell polymorph}"
+									]
+								},
+								"5": {
+									"slots": 2,
+									"spells": [
+										"{@spell contact other plane}",
+										"{@spell scrying}"
+									]
+								},
+								"6": {
+									"slots": 1,
+									"spells": [
+										"{@spell eyebite}"
+									]
+								}
+							},
+							"footerEntries": [
+								"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Hag Eye",
+							"entries": [
+								"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
+								"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+							]
+						}
+					]
+				}
+			],
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/night-hag.mp3"
@@ -40631,6 +41064,9 @@
 			],
 			"senseTags": [
 				"SD"
+			],
+			"actionTags": [
+				"Shapechanger"
 			],
 			"languageTags": [
 				"AB",
@@ -40655,6 +41091,7 @@
 				"poisoned",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -40672,6 +41109,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "CoS"
 				}
 			],
 			"size": "L",
@@ -40738,7 +41178,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/nightmare.mp3"
@@ -40760,6 +41199,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -40825,6 +41265,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -40884,7 +41327,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/noble.mp3"
@@ -40901,6 +41343,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -41018,7 +41461,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/nothic.mp3"
@@ -41042,6 +41484,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -41213,7 +41656,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/nycaloth.mp3"
@@ -41244,6 +41686,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -41356,7 +41799,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ochre-jelly.mp3"
@@ -41375,6 +41817,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -41395,6 +41838,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -41463,7 +41909,6 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/octopus.mp3"
@@ -41487,7 +41932,8 @@
 			],
 			"conditionInflict": [
 				"grappled"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Ogre",
@@ -41602,7 +42048,6 @@
 				"underdark",
 				"mountain"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ogre.mp3"
@@ -41623,6 +42068,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -41709,7 +42155,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ogre-zombie.mp3"
@@ -41731,6 +42176,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -41763,6 +42209,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -41878,7 +42327,6 @@
 				"forest",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/oni.mp3"
@@ -41891,7 +42339,8 @@
 				"D"
 			],
 			"actionTags": [
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -41907,6 +42356,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -42028,7 +42478,6 @@
 				"hill",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/orc.mp3"
@@ -42058,6 +42507,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -42191,7 +42641,6 @@
 				"hill",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/orc-eye-of-gruumsh.mp3"
@@ -42217,6 +42666,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -42239,6 +42689,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -42339,7 +42792,6 @@
 				"hill",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/orc-war-chief.mp3"
@@ -42365,6 +42817,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -42476,7 +42929,6 @@
 				"hill",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/orog.mp3"
@@ -42503,6 +42955,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -42608,7 +43061,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/otyugh.mp3"
@@ -42637,6 +43089,7 @@
 				"restrained",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -42717,7 +43170,6 @@
 				"arctic"
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/owl.mp3"
@@ -42734,7 +43186,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Owlbear",
@@ -42780,6 +43233,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -42847,7 +43303,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/owlbear.mp3"
@@ -42874,6 +43329,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -42954,7 +43410,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/panther.mp3"
@@ -42972,7 +43427,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Pegasus",
@@ -42985,6 +43441,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -43039,7 +43498,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/pegasus.mp3"
@@ -43057,6 +43515,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -43152,7 +43611,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/pentadrone.mp3"
@@ -43176,6 +43634,7 @@
 			"conditionInflict": [
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -43198,6 +43657,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -43291,7 +43753,6 @@
 				"mountain",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/peryton.mp3"
@@ -43314,6 +43775,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -43413,7 +43875,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/phase-spider.mp3"
@@ -43436,6 +43897,7 @@
 				"paralyzed",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -43521,7 +43983,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/piercer.mp3"
@@ -43540,6 +44001,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -43699,7 +44161,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/pit-fiend.mp3"
@@ -43739,6 +44200,7 @@
 			"conditionInflictSpell": [
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -43758,6 +44220,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -43837,7 +44302,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/pixie.mp3"
@@ -43851,10 +44315,14 @@
 			"spellcastingTags": [
 				"I"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
 			"conditionInflictSpell": [
 				"restrained",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -43997,7 +44465,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/planetar.mp3"
@@ -44028,6 +44495,7 @@
 			"conditionInflictSpell": [
 				"invisible"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -44101,7 +44569,6 @@
 				"underwater",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/plesiosaurus.mp3"
@@ -44116,6 +44583,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -44182,7 +44650,6 @@
 				"coastal"
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/poisonous-snake.mp3"
@@ -44196,7 +44663,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Polar Bear",
@@ -44287,7 +44755,6 @@
 				"underdark",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/polar-bear.mp3"
@@ -44304,7 +44771,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Poltergeist",
@@ -44427,7 +44895,6 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/poltergeist.mp3"
@@ -44450,6 +44917,10 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -44460,6 +44931,9 @@
 			"otherSources": [
 				{
 					"source": "SKT"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -44496,7 +44970,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/pony.mp3"
@@ -44506,7 +44979,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Priest",
@@ -44672,7 +45146,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/priest.mp3"
@@ -44690,6 +45163,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -44818,7 +45292,6 @@
 				"coastal"
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/pseudodragon.mp3"
@@ -44846,6 +45319,7 @@
 				"poisoned",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -44863,6 +45337,9 @@
 				},
 				{
 					"source": "ERLW"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -44918,7 +45395,6 @@
 				"grassland",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/pteranodon.mp3"
@@ -44932,6 +45408,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -45018,7 +45495,6 @@
 				"underdark",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/purple-worm.mp3"
@@ -45044,6 +45520,7 @@
 				"blinded",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -45143,7 +45620,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/quadrone.mp3"
@@ -45166,6 +45642,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -45256,7 +45733,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/quaggoth.mp3"
@@ -45276,6 +45752,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -45350,7 +45827,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/quaggoth-spore-servant.mp3"
@@ -45367,6 +45843,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -45477,7 +45954,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/quaggoth-thonot.mp3"
@@ -45501,6 +45977,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -45530,6 +46007,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -45642,7 +46122,6 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/quasit.mp3"
@@ -45667,8 +46146,10 @@
 			],
 			"conditionInflict": [
 				"frightened",
+				"invisible",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -45746,7 +46227,6 @@
 				"underwater"
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/quipper.mp3"
@@ -45763,6 +46243,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -45893,7 +46374,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The rakshasa makes two claw attacks"
+						"The rakshasa makes two claw attacks."
 					]
 				},
 				{
@@ -45906,7 +46387,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/rakshasa.mp3"
@@ -45930,6 +46410,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -46008,7 +46489,6 @@
 				"urban"
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/rat.mp3"
@@ -46025,6 +46505,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -46041,6 +46522,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -46092,7 +46576,6 @@
 				"urban"
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/raven.mp3"
@@ -46102,7 +46585,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Red Dragon Wyrmling",
@@ -46186,7 +46670,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/red-dragon-wyrmling.mp3"
@@ -46194,6 +46677,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -46206,6 +46692,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -46318,7 +46805,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/red-slaad.mp3"
@@ -46344,6 +46830,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -46422,7 +46909,6 @@
 			"environment": [
 				"underwater"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/reef-shark.mp3"
@@ -46440,6 +46926,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -46533,7 +47020,6 @@
 			"environment": [
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/remorhaz.mp3"
@@ -46559,6 +47045,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -46707,7 +47194,6 @@
 				"desert",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/revenant.mp3"
@@ -46736,6 +47222,7 @@
 				"frightened",
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -46802,7 +47289,6 @@
 			"environment": [
 				"grassland"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/rhinoceros.mp3"
@@ -46818,7 +47304,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Riding Horse",
@@ -46883,7 +47370,6 @@
 				"grassland",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/riding-horse.mp3"
@@ -46894,6 +47380,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -46928,6 +47415,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "G",
@@ -47003,7 +47493,6 @@
 				"coastal",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/roc.mp3"
@@ -47026,6 +47515,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -47137,7 +47627,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/roper.mp3"
@@ -47163,6 +47652,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -47205,6 +47695,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -47274,7 +47767,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/run-of-smothering.mp3"
@@ -47297,6 +47789,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -47391,7 +47884,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/rust-monster.mp3"
@@ -47406,6 +47898,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -47423,6 +47916,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "CoS"
 				}
 			],
 			"size": "L",
@@ -47484,7 +47980,6 @@
 				"mountain",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/saber-toothed-tiger.mp3"
@@ -47502,7 +47997,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Sahuagin",
@@ -47623,7 +48119,6 @@
 				"underwater",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/sahuagin.mp3"
@@ -47646,6 +48141,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -47764,7 +48260,6 @@
 				"underwater",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/sahuagin-baron.mp3"
@@ -47787,6 +48282,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -47936,7 +48432,6 @@
 				"underwater",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/sahuagin-priestess.mp3"
@@ -47960,6 +48455,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -48074,7 +48570,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/salamander.mp3"
@@ -48103,6 +48598,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -48120,6 +48616,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -48230,7 +48729,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/satyr.mp3"
@@ -48257,6 +48755,7 @@
 				"frightened",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -48361,7 +48860,6 @@
 			"environment": [
 				"grassland"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/scarecrow.mp3"
@@ -48388,6 +48886,7 @@
 				"frightened",
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -48443,7 +48942,6 @@
 			"environment": [
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/scorpion.mp3"
@@ -48457,7 +48955,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Scout",
@@ -48515,6 +49014,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -48587,7 +49089,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/scout.mp3"
@@ -48610,6 +49111,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -48688,61 +49190,6 @@
 				"cr": "2",
 				"coven": "4"
 			},
-			"spellcasting": [
-				{
-					"name": "Shared Spellcasting (Coven Only)",
-					"headerEntries": [
-						"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
-					],
-					"spells": {
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell identify}",
-								"{@spell ray of sickness}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell hold person}",
-								"{@spell locate object}"
-							]
-						},
-						"3": {
-							"slots": 3,
-							"spells": [
-								"{@spell bestow curse}",
-								"{@spell counterspell}",
-								"{@spell lightning bolt}"
-							]
-						},
-						"4": {
-							"slots": 3,
-							"spells": [
-								"{@spell phantasmal killer}",
-								"{@spell polymorph}"
-							]
-						},
-						"5": {
-							"slots": 2,
-							"spells": [
-								"{@spell contact other plane}",
-								"{@spell scrying}"
-							]
-						},
-						"6": {
-							"slots": 1,
-							"spells": [
-								"{@spell eyebite}"
-							]
-						}
-					},
-					"footerEntries": [
-						"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
-					]
-				}
-			],
 			"trait": [
 				{
 					"name": "Amphibious",
@@ -48755,20 +49202,6 @@
 					"entries": [
 						"Any humanoid that starts its turn within 30 feet of the hag and can see the hag's true form must make a {@dc 11} Wisdom saving throw. On a failed save, the creature is {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, with disadvantage if the hag is within line of sight, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the hag's Horrific Appearance for the next 24 hours.",
 						"Unless the target is surprised or the revelation of the hag's true form is sudden, the target can avert its eyes and avoid making the initial saving throw. Until the start of its next turn, a creature that averts its eyes has disadvantage on attack rolls against the hag."
-					]
-				},
-				{
-					"name": "Hag Coven",
-					"entries": [
-						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
-						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos."
-					]
-				},
-				{
-					"name": "Hag Eye (Coven Only)",
-					"entries": [
-						"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
-						"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
 					]
 				}
 			],
@@ -48793,11 +49226,86 @@
 					]
 				}
 			],
+			"legendaryGroup": {
+				"name": "Sea Hag",
+				"source": "MM"
+			},
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Hag Covens",
+					"entries": [
+						"When hags must work together, they form covens, in spite of their selfish natures. A coven is made up of hags of any type, all of whom are equals within the group. However, each of the hags continues to desire more personal power.",
+						"A coven consists of three hags so that any arguments between two hags can be settled by the third. If more than three hags ever come together, as might happen if two covens come into conflict, the result is usually chaos.",
+						{
+							"type": "spellcasting",
+							"name": "Shared Spellcasting (Coven Only)",
+							"headerEntries": [
+								"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell identify}",
+										"{@spell ray of sickness}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell hold person}",
+										"{@spell locate object}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell bestow curse}",
+										"{@spell counterspell}",
+										"{@spell lightning bolt}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell phantasmal killer}",
+										"{@spell polymorph}"
+									]
+								},
+								"5": {
+									"slots": 2,
+									"spells": [
+										"{@spell contact other plane}",
+										"{@spell scrying}"
+									]
+								},
+								"6": {
+									"slots": 1,
+									"spells": [
+										"{@spell eyebite}"
+									]
+								}
+							},
+							"footerEntries": [
+								"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Hag Eye",
+							"entries": [
+								"A hag coven can craft a magic item called a hag eye, which is made from a real eye coated in varnish and often fitted to a pendant or other wearable item. The hag eye is usually entrusted to a minion for safekeeping and transport. A hag in the coven can take an action to see what the hag eye sees if the hag eye is on the same plane of existence. A hag eye has AC 10, 1 hit point, and darkvision with a radius of 60 feet. If it is destroyed, each coven member takes {@dice 3d10} psychic damage and is {@condition blinded} for 24 hours.",
+								"A hag coven can have only one hag eye at a time, and creating a new one requires all three members of the coven to perform a ritual. The ritual takes 1 hour, and the hags can't perform it while {@condition blinded}. During the ritual, if the hags take any action other than performing the ritual, they must start over."
+							]
+						}
+					]
+				}
+			],
 			"environment": [
 				"underwater",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/sea-hag.mp3"
@@ -48832,6 +49340,7 @@
 				"poisoned",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -48872,14 +49381,14 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/sea-horse.mp3"
 			},
 			"traitTags": [
 				"Water Breathing"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Shadow",
@@ -48922,6 +49431,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -49020,7 +49532,6 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/shadow.mp3"
@@ -49037,6 +49548,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -49180,7 +49692,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/shadow-demon.mp3"
@@ -49203,6 +49714,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -49238,6 +49750,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -49319,7 +49834,6 @@
 				"forest",
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/shambling-mound.mp3"
@@ -49344,6 +49858,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -49471,7 +49986,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/shield-guardian.mp3"
@@ -49496,6 +50010,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -49562,7 +50077,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/shrieker.mp3"
@@ -49573,6 +50087,7 @@
 			"senseTags": [
 				"B"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -49670,7 +50185,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/silver-dragon-wyrmling.mp3"
@@ -49678,6 +50192,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -49693,6 +50210,7 @@
 			"conditionInflict": [
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -49749,6 +50267,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -49813,7 +50334,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/skeleton.mp3"
@@ -49833,6 +50353,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -49907,7 +50428,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/slaad-tadpole.mp3"
@@ -49928,6 +50448,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -50043,7 +50564,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/smoke-mephit.mp3"
@@ -50053,6 +50573,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"AU",
@@ -50068,6 +50591,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -50248,7 +50772,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/solar.mp3"
@@ -50287,6 +50810,7 @@
 			"conditionInflictSpell": [
 				"invisible"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -50421,7 +50945,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/spectator.mp3"
@@ -50451,6 +50974,7 @@
 				"frightened",
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -50610,7 +51134,6 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/specter.mp3"
@@ -50630,6 +51153,7 @@
 				"N",
 				"O"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -50705,7 +51229,6 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/spider.mp3"
@@ -50724,7 +51247,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Spined Devil",
@@ -50854,7 +51378,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/spined-devil.mp3"
@@ -50883,6 +51406,7 @@
 				"MW",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -51029,7 +51553,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/spirit-naga.mp3"
@@ -51055,6 +51578,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -51084,6 +51608,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -51155,7 +51682,6 @@
 				"forest"
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/sprite.mp3"
@@ -51175,8 +51701,10 @@
 				"RW"
 			],
 			"conditionInflict": [
+				"invisible",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -51236,6 +51764,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -51312,17 +51843,10 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/spy.mp3"
 			},
-			"altArt": [
-				{
-					"name": "Vistana Spy",
-					"source": "CoS"
-				}
-			],
 			"traitTags": [
 				"Sneak Attack"
 			],
@@ -51340,6 +51864,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -51452,7 +51977,6 @@
 			"environment": [
 				"underwater"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/steam-mephit.mp3"
@@ -51462,6 +51986,9 @@
 			],
 			"senseTags": [
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"AQ",
@@ -51478,6 +52005,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -51579,7 +52107,6 @@
 				"mountain",
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/stirge.mp3"
@@ -51593,6 +52120,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -51729,7 +52257,6 @@
 				"mountain",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/stone-giant.mp3"
@@ -51754,6 +52281,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -51798,6 +52326,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "CoS"
 				}
 			],
 			"size": "L",
@@ -51895,7 +52426,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/stone-golem.mp3"
@@ -51920,6 +52450,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -52073,7 +52604,6 @@
 			"environment": [
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/storm-giant.mp3"
@@ -52102,6 +52632,7 @@
 				"RCH",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -52246,7 +52777,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/succubus-incubus.mp3"
@@ -52273,6 +52803,7 @@
 			"conditionInflict": [
 				"charmed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -52305,6 +52836,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -52386,7 +52920,6 @@
 				"hill",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/swarm-of-bats.mp3"
@@ -52403,6 +52936,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -52487,7 +53021,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -52497,6 +53030,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -52591,7 +53125,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -52601,6 +53134,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -52706,7 +53240,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/swarm-of-insects.mp3"
@@ -52720,6 +53253,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -52818,7 +53352,6 @@
 				"forest",
 				"swamp"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/swarm-of-poisonous-snakes.mp3"
@@ -52833,6 +53366,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -52861,6 +53395,9 @@
 				},
 				{
 					"source": "LR"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -52939,7 +53476,6 @@
 			"environment": [
 				"underwater"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/swarm-of-quippers.mp3"
@@ -52956,6 +53492,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -53063,7 +53600,6 @@
 				"swamp",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/swarm-of-rats.mp3"
@@ -53080,6 +53616,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -53180,7 +53717,6 @@
 				"hill",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/swarm-of-ravens.mp3"
@@ -53191,6 +53727,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -53315,7 +53852,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Spider Climb",
 				"Web Sense",
@@ -53330,6 +53866,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -53346,6 +53883,9 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -53423,7 +53963,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -53433,6 +53972,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -53608,7 +54148,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/tarrasque.mp3"
@@ -53643,6 +54182,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -53785,7 +54325,6 @@
 				"grassland",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/thri-kreen.mp3"
@@ -53807,9 +54346,11 @@
 				"MW"
 			],
 			"conditionInflict": [
+				"invisible",
 				"paralyzed",
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -53860,6 +54401,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "CoS"
 				}
 			],
 			"size": "M",
@@ -53933,17 +54477,10 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/thug.mp3"
 			},
-			"altArt": [
-				{
-					"name": "Vistana Thug",
-					"source": "CoS"
-				}
-			],
 			"traitTags": [
 				"Pack Tactics"
 			],
@@ -53963,6 +54500,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -54050,7 +54588,6 @@
 				"grassland",
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/tiger.mp3"
@@ -54071,7 +54608,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Treant",
@@ -54114,6 +54652,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "H",
@@ -54201,7 +54742,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/treant.mp3"
@@ -54226,6 +54766,7 @@
 				"MW",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -54315,7 +54856,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/tribal-warrior.mp3"
@@ -54334,6 +54874,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -54400,7 +54941,6 @@
 			"environment": [
 				"grassland"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/triceratops.mp3"
@@ -54415,6 +54955,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -54507,7 +55048,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/tridrone.mp3"
@@ -54530,6 +55070,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -54640,7 +55181,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/troglodyte.mp3"
@@ -54677,6 +55217,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -54840,7 +55381,6 @@
 				"hill",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/troll.mp3"
@@ -54865,6 +55405,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -54887,6 +55428,9 @@
 				},
 				{
 					"source": "RMBRE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "S",
@@ -54953,7 +55497,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/twig-blight.mp3"
@@ -54980,6 +55523,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -55051,7 +55595,6 @@
 			"environment": [
 				"grassland"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/tyrannosaurus-rex.mp3"
@@ -55071,6 +55614,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -55248,7 +55792,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/ultroloth.mp3"
@@ -55287,6 +55830,7 @@
 				"frightened",
 				"invisible"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -55384,7 +55928,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/umber-hulk.mp3"
@@ -55405,6 +55948,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -55428,6 +55972,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "L",
@@ -55571,7 +56118,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/unicorn.mp3"
@@ -55610,6 +56156,7 @@
 			"conditionInflictSpell": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -55819,17 +56366,16 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/vampire.mp3"
 			},
 			"traitTags": [
 				"Legendary Resistances",
-				"Light Sensitivity",
 				"Regeneration",
 				"Shapechanger",
-				"Spider Climb"
+				"Spider Climb",
+				"Sunlight Sensitivity"
 			],
 			"senseTags": [
 				"SD"
@@ -55851,6 +56397,7 @@
 			"conditionInflict": [
 				"charmed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -55997,15 +56544,14 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/vampire-spawn.mp3"
 			},
 			"traitTags": [
-				"Light Sensitivity",
 				"Regeneration",
-				"Spider Climb"
+				"Spider Climb",
+				"Sunlight Sensitivity"
 			],
 			"senseTags": [
 				"D"
@@ -56024,6 +56570,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -56257,17 +56804,16 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/vampire-spellcaster.mp3"
 			},
 			"traitTags": [
 				"Legendary Resistances",
-				"Light Sensitivity",
 				"Regeneration",
 				"Shapechanger",
-				"Spider Climb"
+				"Spider Climb",
+				"Sunlight Sensitivity"
 			],
 			"senseTags": [
 				"SD"
@@ -56297,6 +56843,7 @@
 				"invisible",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -56482,17 +57029,16 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/vampire-warrior.mp3"
 			},
 			"traitTags": [
 				"Legendary Resistances",
-				"Light Sensitivity",
 				"Regeneration",
 				"Shapechanger",
-				"Spider Climb"
+				"Spider Climb",
+				"Sunlight Sensitivity"
 			],
 			"senseTags": [
 				"SD"
@@ -56515,6 +57061,7 @@
 			"conditionInflict": [
 				"charmed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -56648,7 +57195,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/veteran.mp3"
@@ -56669,6 +57215,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -56753,7 +57300,6 @@
 			"environment": [
 				"forest"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/vine-blight.mp3"
@@ -56785,6 +57331,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -56860,7 +57407,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/violet-fungus.mp3"
@@ -56881,6 +57427,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -57033,7 +57580,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/vrock.mp3"
@@ -57064,6 +57610,7 @@
 				"poisoned",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -57084,6 +57631,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -57140,7 +57690,6 @@
 				"hill",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/vulture.mp3"
@@ -57154,7 +57703,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Warhorse",
@@ -57276,7 +57826,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/war-horse.mp3"
@@ -57289,7 +57838,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Warhorse Skeleton",
@@ -57357,7 +57907,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/warhorse-skeleton.mp3"
@@ -57371,6 +57920,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -57513,7 +58063,6 @@
 				"swamp",
 				"coastal"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/water-elemental.mp3"
@@ -57537,6 +58086,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -57647,7 +58197,6 @@
 				"underdark",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/water-weird.mp3"
@@ -57667,8 +58216,10 @@
 			],
 			"conditionInflict": [
 				"grappled",
+				"invisible",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -57680,6 +58231,9 @@
 			"otherSources": [
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -57726,7 +58280,6 @@
 				}
 			],
 			"familiar": true,
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/weasel.mp3"
@@ -57739,7 +58292,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Werebear",
@@ -57869,7 +58423,6 @@
 				"hill",
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/werebear.mp3"
@@ -57892,6 +58445,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -58041,7 +58595,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/wereboar.mp3"
@@ -58067,6 +58620,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -58209,7 +58763,6 @@
 				"forest",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/wererat.mp3"
@@ -58236,6 +58789,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -58372,7 +58926,6 @@
 				"forest",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/weretiger.mp3"
@@ -58404,6 +58957,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -58561,7 +59115,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/werewolf.mp3"
@@ -58586,6 +59139,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -58672,7 +59226,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/white-dragon-wyrmling.mp3"
@@ -58680,6 +59233,9 @@
 			"senseTags": [
 				"B",
 				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"DR"
@@ -58692,6 +59248,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -58843,7 +59400,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/wight.mp3"
@@ -58870,6 +59426,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -58911,6 +59468,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "T",
@@ -59022,7 +59582,6 @@
 				"swamp",
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/will-o-wisp.mp3"
@@ -59043,6 +59602,10 @@
 			"miscTags": [
 				"AOE"
 			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -59140,7 +59703,6 @@
 				"mountain",
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/winged-kobold.mp3"
@@ -59164,6 +59726,7 @@
 				"MW",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -59264,7 +59827,6 @@
 			"environment": [
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/winter-wolf.mp3"
@@ -59272,6 +59834,9 @@
 			"traitTags": [
 				"Keen Senses",
 				"Pack Tactics"
+			],
+			"actionTags": [
+				"Breath Weapon"
 			],
 			"languageTags": [
 				"C",
@@ -59289,6 +59854,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -59391,7 +59957,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/wolf.mp3"
@@ -59408,7 +59973,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Worg",
@@ -59495,7 +60061,6 @@
 				"forest",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/worg.mp3"
@@ -59519,6 +60084,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -59673,7 +60239,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/wraith.mp3"
@@ -59695,6 +60260,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -59794,7 +60360,6 @@
 				"mountain",
 				"hill"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/wyvern.mp3"
@@ -59814,6 +60379,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -59923,7 +60489,6 @@
 			"environment": [
 				"underdark"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/xorn.mp3"
@@ -59945,6 +60510,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -60052,7 +60618,6 @@
 			"environment": [
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/yeti.mp3"
@@ -60079,6 +60644,7 @@
 			"conditionInflict": [
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -60245,7 +60811,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/yochlol.mp3"
@@ -60286,6 +60851,7 @@
 				"charmed",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -60398,8 +60964,7 @@
 			"environment": [
 				"swamp"
 			],
-			"dragonCastingColor": "B",
-			"hasToken": true,
+			"dragonCastingColor": "black",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/black-dragon.mp3"
@@ -60412,6 +60977,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -60428,6 +60994,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -60536,8 +61103,7 @@
 				"desert",
 				"coastal"
 			],
-			"dragonCastingColor": "U",
-			"hasToken": true,
+			"dragonCastingColor": "blue",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/blue-dragon.mp3"
@@ -60547,6 +61113,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -60563,6 +61130,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -60675,8 +61243,7 @@
 			"environment": [
 				"desert"
 			],
-			"dragonCastingColor": "A",
-			"hasToken": true,
+			"dragonCastingColor": "brass",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/brass-dragon.mp3"
@@ -60686,6 +61253,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -60705,6 +61273,7 @@
 			"conditionInflict": [
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -60831,8 +61400,7 @@
 			"environment": [
 				"coastal"
 			],
-			"dragonCastingColor": "Z",
-			"hasToken": true,
+			"dragonCastingColor": "bronze",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/bronze-dragon.mp3"
@@ -60845,6 +61413,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -60861,6 +61430,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -60973,8 +61543,7 @@
 			"environment": [
 				"hill"
 			],
-			"dragonCastingColor": "C",
-			"hasToken": true,
+			"dragonCastingColor": "copper",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/copper-dragon.mp3"
@@ -60984,6 +61553,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -61000,6 +61570,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -61117,8 +61688,7 @@
 				"grassland",
 				"forest"
 			],
-			"dragonCastingColor": "O",
-			"hasToken": true,
+			"dragonCastingColor": "gold",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/gold-dragon.mp3"
@@ -61131,6 +61701,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -61147,6 +61718,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -61266,8 +61838,7 @@
 			"environment": [
 				"forest"
 			],
-			"dragonCastingColor": "G",
-			"hasToken": true,
+			"dragonCastingColor": "green",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/green-dragon.mp3"
@@ -61286,6 +61857,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -61302,6 +61874,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -61407,8 +61980,7 @@
 				"mountain",
 				"hill"
 			],
-			"dragonCastingColor": "R",
-			"hasToken": true,
+			"dragonCastingColor": "red",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/red-dragon.mp3"
@@ -61418,6 +61990,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -61434,6 +62007,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -61545,8 +62119,7 @@
 			"environment": [
 				"underdark"
 			],
-			"dragonCastingColor": "R",
-			"hasToken": true,
+			"dragonCastingColor": "red",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/red-shadow-dragon.mp3"
@@ -61559,6 +62132,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -61575,6 +62149,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -61649,7 +62224,6 @@
 			"environment": [
 				"arctic"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/remorhaz.mp3"
@@ -61665,6 +62239,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -61778,8 +62353,7 @@
 				"mountain",
 				"urban"
 			],
-			"dragonCastingColor": "S",
-			"hasToken": true,
+			"dragonCastingColor": "silver",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/silver-dragon.mp3"
@@ -61789,6 +62363,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -61808,6 +62383,7 @@
 			"conditionInflict": [
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -61921,8 +62497,7 @@
 			"environment": [
 				"arctic"
 			],
-			"dragonCastingColor": "W",
-			"hasToken": true,
+			"dragonCastingColor": "white",
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/white-dragon.mp3"
@@ -61932,6 +62507,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -61948,6 +62524,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -62099,7 +62676,6 @@
 				"swamp",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/yuan-ti-abomination.mp3"
@@ -62143,6 +62719,7 @@
 				"charmed",
 				"frightened"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -62304,7 +62881,6 @@
 				"swamp",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/yuan-ti-malison.mp3"
@@ -62338,6 +62914,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -62484,7 +63061,6 @@
 				"swamp",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/yuan-ti-malison.mp3"
@@ -62515,6 +63091,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -62682,7 +63259,6 @@
 				"swamp",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/yuan-ti-malison.mp3"
@@ -62724,6 +63300,7 @@
 			"conditionInflictSpell": [
 				"charmed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -62851,7 +63428,6 @@
 				"urban",
 				"desert"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/yuan-ti-pureblood.mp3"
@@ -62883,6 +63459,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -62942,6 +63519,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "WBtW"
 				}
 			],
 			"size": "M",
@@ -63002,7 +63582,6 @@
 			"environment": [
 				"urban"
 			],
-			"hasToken": true,
 			"soundClip": {
 				"type": "internal",
 				"path": "bestiary/zombie.mp3"
@@ -63023,6 +63602,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		}

@@ -41,12 +41,12 @@
 						],
 						[
 							"Bag of Nails",
-							"-",
+							"\u2014",
 							"Unhinged tabaxi hunter in Omu"
 						],
 						[
 							"Dragonbait",
-							"-",
+							"\u2014",
 							"Saurial paladin aiding Artus Cimber"
 						],
 						[
@@ -81,7 +81,7 @@
 						],
 						[
 							"Flask of Wine",
-							"-",
+							"\u2014",
 							"Tabaxi guide in Port Nyanzaru"
 						],
 						[
@@ -91,7 +91,7 @@
 						],
 						[
 							"Grabstab",
-							"-",
+							"\u2014",
 							"Queen of the Biting Ant goblin tribe and ruler of Yellyark"
 						],
 						[
@@ -101,7 +101,7 @@
 						],
 						[
 							"Hew Hackinstone",
-							"-",
+							"\u2014",
 							"Shield dwarf guide in Port Nyanzaru"
 						],
 						[
@@ -161,7 +161,7 @@
 						],
 						[
 							"Niles Breakbone",
-							"-",
+							"\u2014",
 							"Commander of Camp Vengeance and Order of the Gauntlet member"
 						],
 						[
@@ -186,7 +186,7 @@
 						],
 						[
 							"River Mist",
-							"-",
+							"\u2014",
 							"Tabaxi guide in Port Nyanzaru"
 						],
 						[
@@ -226,7 +226,7 @@
 						],
 						[
 							"Withers",
-							"-",
+							"\u2014",
 							"Spellcasting wight working for Acererak"
 						],
 						[
@@ -236,7 +236,7 @@
 						],
 						[
 							"Yorb",
-							"-",
+							"\u2014",
 							"Grung chief in Omu"
 						],
 						[
@@ -354,7 +354,7 @@
 										],
 										[
 											"NPC = nonplayer character",
-											"-"
+											"\u2014"
 										]
 									]
 								}
@@ -756,7 +756,7 @@
 							"entries": [
 								"Chult is hot, humid, and rainy throughout the year. The temperature regularly climbs as high as 95 degrees F (35 degrees C) during the day and seldom falls below 70 degrees F (20 degrees C) even at night. A day without rain is rare, but rain varies from a steady mist to drenching downpours.",
 								"Visibility in heavy rain is limited to 50 yards. Beyond that distance, only Huge or larger objects can be distinguished. Missile weapon ranges are halved during rain.",
-								"On days that receive heavy rain, there's a 25 percent chance of a full-blown tropical storm featuring sheets of rain, high wind, lightning, tall waves at sea, and immense surf along the coast. Guides who know the conditions in Chult recommend hunkering down and staying put on these days. Travel by river is impossible (canoes are swamped by waves within 15 minutes of launching). If characters insist on traveling by foot, every character gains 1 level of {@condition exhaustion} automatically and must make a successful DC 10 Constitution check or gain another. Skill checks to avoid becoming lost are made with disadvantage on storm days."
+								"On days that receive heavy rain, there's a {@chance 25|25 percent} chance of a full-blown tropical storm featuring sheets of rain, high wind, lightning, tall waves at sea, and immense surf along the coast. Guides who know the conditions in Chult recommend hunkering down and staying put on these days. Travel by river is impossible (canoes are swamped by waves within 15 minutes of launching). If characters insist on traveling by foot, every character gains 1 level of {@condition exhaustion} automatically and must make a successful DC 10 Constitution check or gain another. Skill checks to avoid becoming lost are made with disadvantage on storm days."
 							]
 						},
 						{
@@ -1274,7 +1274,7 @@
 							"name": "9. Save an Innocent Man",
 							"id": "04a",
 							"entries": [
-								" Belym (LG male Chultan human commoner) is distraught because his husband, Draza (LG male Chultan {@creature commoner}), has been sentenced to Executioner's Run for stealing. Belym asserts that his husband was a victim of mistaken identity and sentenced without a proper hearing or trial. He's been unable to persuade anyone in authority that Draza is innocent. He'll give the characters 25 sp (all his savings) if they can help Draza from the sidelines so he survives the run. Draza is about to be thrown into the pit with a pair of {@creature velociraptor|VGM|velociraptors}, so the characters must act quickly. Both the authorities and the gamblers take a dim view of interference."
+								" Belym (LG male Chultan human {@creature commoner}) is distraught because his husband, Draza (LG male Chultan {@creature commoner}), has been sentenced to Executioner's Run for stealing. Belym asserts that his husband was a victim of mistaken identity and sentenced without a proper hearing or trial. He's been unable to persuade anyone in authority that Draza is innocent. He'll give the characters 25 sp (all his savings) if they can help Draza from the sidelines so he survives the run. Draza is about to be thrown into the pit with a pair of {@creature velociraptor|VGM|velociraptors}, so the characters must act quickly. Both the authorities and the gamblers take a dim view of interference."
 							]
 						},
 						{
@@ -2293,7 +2293,7 @@
 							"name": "Treasure",
 							"id": "094",
 							"entries": [
-								" The suite contains personal items equivalent to two rolls on the \"Gems or Art Objects\" column of the Treasure Hoard, Challenge 0-4 table in the {@i Dungeon Master's Guide}. If the room contains jewelry, there is a 50 percent chance it is in a locked jewelry box requiring thieves' tools and a successful DC 15 Dexterity check to open."
+								" The suite contains personal items equivalent to two rolls on the \"Gems or Art Objects\" column of the Treasure Hoard, Challenge 0-4 table in the {@i Dungeon Master's Guide}. If the room contains jewelry, there is a {@chance 50|50 percent} chance it is in a locked jewelry box requiring thieves' tools and a successful DC 15 Dexterity check to open."
 							]
 						}
 					]
@@ -2633,77 +2633,76 @@
 								"Racer Example"
 							],
 							"colStyles": [
-								"",
-								"",
-								"",
-								"",
+								"text-center",
+								"text-center",
+								"text-center",
+								"text-center",
 								""
 							],
 							"rows": [
 								[
 									"7/1",
-									"d8",
+									"{@dice d8}",
 									"2-8",
 									"Wager ÷ 7",
-									"Big Honker (crowd-pleasing young tyrannosaurus rex)"
+									"Big Honker (crowd-pleasing young {@creature tyrannosaurus rex})"
 								],
 								[
 									"5/1",
-									"d6",
+									"{@dice d6}",
 									"2-6",
 									"Wager ÷ 5",
-									"Ubtao's Favorite (young triceratops on a streak)"
+									"Ubtao's Favorite (young {@creature triceratops} on a streak)"
 								],
 								[
 									"3/1",
-									"d4",
+									"{@dice d4}",
 									"2-4",
 									"Wager ÷ 3",
-									"Banana Candy (well-trained hadrosaurus)"
+									"Banana Candy (well-trained {@creature hadrosaurus|vgm})"
 								],
 								[
 									"2/1",
-									"d3",
+									"{@dice d3}",
 									"2-3",
 									"Wager ÷ 2",
-									"Bonecruncher (young, ill-tempered allosaurus)"
+									"Bonecruncher (young, ill-tempered {@creature allosaurus})"
 								],
 								[
 									"1/1",
 									"Any",
 									"Even",
 									"Wager",
-									"Grung Stomper (young ankylosaurus)"
+									"Grung Stomper (young {@creature ankylosaurus})"
 								],
 								[
 									"1/2",
-									"d3",
+									"{@dice d3}",
 									"1",
 									"Wager × 2",
-									"Scarback (young tyrannosaurus rex on its last race)"
+									"Scarback (young {@creature tyrannosaurus rex} on its last race)"
 								],
 								[
 									"1/3",
-									"d4",
+									"{@dice d4}",
 									"1",
 									"Wager × 3",
-									"Nasty Boy (allosaurus with famous trainer)"
+									"Nasty Boy ({@creature allosaurus} with famous trainer)"
 								],
 								[
 									"1/5",
-									"d6",
+									"{@dice d6}",
 									"1",
 									"Wager × 5",
-									"Jungle Princess (deinonychus with frightened jockey)"
+									"Jungle Princess ({@creature deinonychus|vgm} with frightened jockey)"
 								],
 								[
 									"1/7",
-									"d8",
+									"{@dice d8}",
 									"1",
 									"Wager × 7",
-									"Mountain Thunder (aging dimetrodon)"
-								],
-								[]
+									"Mountain Thunder (aging {@creature dimetrodon|vgm})"
+								]
 							]
 						}
 					]
@@ -3165,8 +3164,8 @@
 					"name": "Mad Monkey Fever",
 					"id": "0c4",
 					"entries": [
-						"A magical mist creeps through the jungles of Chult. Contact with this thin, blue, odorless mist can infect giants and humanoids with mad monkey fever. A {@spell dispel magic} spell destroys the mist in a 20-foot square starting at a point chosen by the caster within the spell's range. An encounter with this mist typically covers {@dice 1d6} such areas (400-2,400 square feet).",
-						"A giant or humanoid that comes into contact with the mist must succeed on a DC 13 Constitution saving throw or become infected with mad monkey fever. The infected creature gains a random form of long-term madness (roll on the {@table Long-Term Madness} table in chapter 8 of the Dungeon Master's Guide) that manifests {@dice 1d6} hours after infection and lasts for the duration ({@dice 1d10 × 10} hours). If the madness is allowed to run its full course, the creature must repeat the saving throw at the end of the madness. If the second saving throw fails, the creature suffers another bout of long-term madness (roll again on the table) that lasts for the normal duration. The madness symptoms continue until the disease ends."
+						"A magical mist creeps through the jungles of Chult. Contact with this thin, blue, odorless mist can infect giants and humanoids with {@disease mad monkey fever|toa}. A {@spell dispel magic} spell destroys the mist in a 20-foot square starting at a point chosen by the caster within the spell's range. An encounter with this mist typically covers {@dice 1d6} such areas (400-2,400 square feet).",
+						"A giant or humanoid that comes into contact with the mist must succeed on a DC 13 Constitution saving throw or become infected with {@disease mad monkey fever|toa}. The infected creature gains a random form of long-term madness (roll on the {@table Long-Term Madness} table in chapter 8 of the Dungeon Master's Guide) that manifests {@dice 1d6} hours after infection and lasts for the duration ({@dice 1d10 × 10} hours). If the madness is allowed to run its full course, the creature must repeat the saving throw at the end of the madness. If the second saving throw fails, the creature suffers another bout of long-term madness (roll again on the table) that lasts for the normal duration. The madness symptoms continue until the disease ends."
 					]
 				},
 				{
@@ -3174,7 +3173,7 @@
 					"name": "Shivering Sickness",
 					"id": "0c5",
 					"entries": [
-						"Insects native to the jungles and marshes of Chult carry this disease, shivering sickness. The easiest protection against it is a coating of insect-repelling salve on all exposed skin (for the cost of insect repellent, see {@area \"Buying a Special Item\"|0a4|x}.",
+						"Insects native to the jungles and marshes of Chult carry this disease, {@disease shivering sickness|toa}. The easiest protection against it is a coating of insect-repelling salve on all exposed skin (for the cost of insect repellent, see {@area \"Buying a Special Item\"|0a4|x}.",
 						"A giant or humanoid that takes damage from {@creature Swarm of Insects||insect swarms} or from {@creature giant centipede||giant centipedes}, {@creature giant scorpion||giant scorpions}, or {@creature giant wasp||giant wasps} is exposed to the disease at the end of the encounter. Those who haven't applied insect repellent since their previous long rest are exposed to the disease when they finish a long rest.",
 						"A giant or humanoid exposed to the disease must succeed on a DC 11 Constitution saving throw or become infected. A creature with natural armor has advantage on the saving throw. It takes {@dice 2d6} hours for symptoms to manifest in an infected creature. Symptoms include blurred vision, disorientation, and a sudden drop in body temperature that causes uncontrollable shivering and chattering of the teeth.",
 						"Once symptoms begin, the infected creature regains only half the normal number of hit points from spending Hit Dice and no hit points from a long rest. The infected creature also has disadvantage on ability checks and attack rolls. At the end of a long rest, an infected creature repeats the saving throw, shaking off the disease on a successful save."
@@ -3185,8 +3184,8 @@
 					"name": "Throat Leeches",
 					"id": "0c6",
 					"entries": [
-						"Minuscule parasites known as throat leeches infect the water in Chult's forests, swamps, and rivers. Any giant or humanoid that swallows tainted water must succeed on a DC 12 Constitution saving throw or be infested with throat leeches. Immediate symptoms include throat inflammation and shortness of breath. After {@dice 1d6} hours, the infected character gains 1 level of {@condition exhaustion} that can't be removed (except as described below) until the disease is cured. At the end of each long rest, the infected creature must repeat the saving throw. On a failed save, the creature's {@condition exhaustion} increases by 1 level; on a successful save, the creature's {@condition exhaustion} decreases by 1 level. If a successful saving throw reduces the infected creature's level of {@condition exhaustion} below 1, the creature recovers from the disease.",
-						"Explorers can avoid contracting throat leeches by drinking only rainwater or water that's been boiled or magically purified."
+						"Minuscule parasites known as {@disease throat leeches|toa} infect the water in Chult's forests, swamps, and rivers. Any giant or humanoid that swallows tainted water must succeed on a DC 12 Constitution saving throw or be infested with {@disease throat leeches|toa}. Immediate symptoms include throat inflammation and shortness of breath. After {@dice 1d6} hours, the infected character gains 1 level of {@condition exhaustion} that can't be removed (except as described below) until the disease is cured. At the end of each long rest, the infected creature must repeat the saving throw. On a failed save, the creature's {@condition exhaustion} increases by 1 level; on a successful save, the creature's {@condition exhaustion} decreases by 1 level. If a successful saving throw reduces the infected creature's level of {@condition exhaustion} below 1, the creature recovers from the disease.",
+						"Explorers can avoid contracting {@disease throat leeches|toa} by drinking only rainwater or water that's been boiled or magically purified."
 					]
 				},
 				{
@@ -3525,7 +3524,7 @@
 					"name": "6A. Concealed Pit Trap",
 					"id": "0e4",
 					"entries": [
-						"The ceiling here is 23 feet high and draped with cobwebs, and the stone-tiled floor is covered with a thick layer of mud, creepers, and blown-in leaves, so attempts to spot this pit trap are made with disadvantage. An individual who crosses this section of floor has a 50 percent chance of triggering the trapdoor and dropping into the 20-foot-deep pit, taking damage from the fall as normal.",
+						"The ceiling here is 23 feet high and draped with cobwebs, and the stone-tiled floor is covered with a thick layer of mud, creepers, and blown-in leaves, so attempts to spot this pit trap are made with disadvantage. An individual who crosses this section of floor has a {@chance 50|50 percent} chance of triggering the trapdoor and dropping into the 20-foot-deep pit, taking damage from the fall as normal.",
 						"Once the pit opens, a narrow ledge remains around the outside edge. The ledge can be traversed safely with a successful DC 10 Dexterity (Acrobatics) check, but a character with someone riding on his or her shoulders makes the check with disadvantage."
 					]
 				},
@@ -3534,7 +3533,7 @@
 					"name": "6B. Blade Trap",
 					"id": "0e5",
 					"entries": [
-						"The ceiling here is 23 feet high and draped with cobwebs. Each individual that passes through this section of the corridor has a 50 percent chance of triggering scything blades that sweep out from concealed wall niches. Any creature in the 10-foot-square section of hall between the blades must make a DC 13 Dexterity throw, taking 18 (4d8) slashing damage on a failed save, or half as much damage on a successful one. Once identified, the trap can be jammed by hammering spikes or metal blades into the niches and succeeding on four separate DC 10 Strength checks (to hammer in the metal solidly enough). Each successful check jams one scythe and reduces the trap's damage by 1d8."
+						"The ceiling here is 23 feet high and draped with cobwebs. Each individual that passes through this section of the corridor has a {@chance 50|50 percent} chance of triggering scything blades that sweep out from concealed wall niches. Any creature in the 10-foot-square section of hall between the blades must make a DC 13 Dexterity throw, taking 18 (4d8) slashing damage on a failed save, or half as much damage on a successful one. Once identified, the trap can be jammed by hammering spikes or metal blades into the niches and succeeding on four separate DC 10 Strength checks (to hammer in the metal solidly enough). Each successful check jams one scythe and reduces the trap's damage by 1d8."
 					]
 				},
 				{
@@ -3683,13 +3682,13 @@
 					"id": "0f4",
 					"entries": [
 						"Commander Breakbone understands war well enough when it involves battle lines, waving banners, trumpets, and supply trains, but this war of ambush and creeping through the jungle only mystifies and frustrates him. He spends most of his time in his command tent, poring over inaccurate maps and reviewing reports about the camp's supplies. His two immediate subordinates, Ord Firebeard and Perne Salhana, do a commendable job of managing the camp in the absence of effective leadership from Breakbone.",
-						"Commander Breakbone has two immediate problems. If characters arrived by boat, he needs them to carry messages and seven sick soldiers downriver to Port Nyanzaru. Each soldier is suffering from mad monkey fever, shivering sickness, or throat leeches (see {@i \"Diseases\"}.) If characters arrived on foot, Breakbone insists that they lead a detachment of his soldiers (consisting of four {@creature guard||guards} and four {@creature tribal warrior||tribal warriors}) on a two-week patrol back in the direction they came from; their orders are to destroy any undead they encounter. If either request is refused, Breakbone orders the characters arrested and tied hand and foot in separate guard towers, to await trial for insubordination during a military emergency. If they're found guilty, the penalty is to be stripped of all gear, tied to trees in the forest, and left for the carnivores or the undead.",
+						"Commander Breakbone has two immediate problems. If characters arrived by boat, he needs them to carry messages and seven sick soldiers downriver to Port Nyanzaru. Each soldier is suffering from {@disease mad monkey fever|toa}, {@disease shivering sickness|toa}, or {@disease throat leeches|toa} (see {@i \"Diseases\"}.) If characters arrived on foot, Breakbone insists that they lead a detachment of his soldiers (consisting of four {@creature guard||guards} and four {@creature tribal warrior||tribal warriors}) on a two-week patrol back in the direction they came from; their orders are to destroy any undead they encounter. If either request is refused, Breakbone orders the characters arrested and tied hand and foot in separate guard towers, to await trial for insubordination during a military emergency. If they're found guilty, the penalty is to be stripped of all gear, tied to trees in the forest, and left for the carnivores or the undead.",
 						{
 							"type": "entries",
 							"name": "Quest: Carry Messages",
 							"id": "0f5",
 							"entries": [
-								"Commander Breakbone, at Camp Vengeance has tasked us with carring messages and seven sick soldiers downriver to Port Nyanzaru. Each soldier is suffering from mad monkey fever, shivering sickness, or throat leeches."
+								"Commander Breakbone, at Camp Vengeance has tasked us with carring messages and seven sick soldiers downriver to Port Nyanzaru. Each soldier is suffering from {@disease mad monkey fever|toa}, {@disease shivering sickness|toa}, or {@disease throat leeches|toa}."
 							]
 						},
 						{
@@ -5947,7 +5946,7 @@
 							"id": "1bb",
 							"entries": [
 								"The water in this pool is unusually clear. A dozen or more large fish, turtles, and lizards swim lazily through it, and waterbirds paddle on the surface. Their ripples obscure something on the bottom of the pool, so you can't quite make it out, but the bottom appears blanketed in oddly shaped stones.",
-								"Bits of shattered stone rest atop a square dais that rises from middle of the pool-evidence of a sculpture that once stood atop it. Part of the sculpture lies in the pool, west of the dais: a large stone face staring up at the sky."
+								"Bits of shattered stone rest atop a square dais that rises from middle of the pool\u2014evidence of a sculpture that once stood atop it. Part of the sculpture lies in the pool, west of the dais: a large stone face staring up at the sky."
 							]
 						},
 						"An immense stone bust of Zalkoré once rose above the pool atop the dais. It was the most beautiful sculpture in the garden. After Zalkoré learned the truth about Thiru-taya, she destroyed the likeness of herself in an act of self-revulsion.",
@@ -5964,7 +5963,7 @@
 							"type": "inset",
 							"id": "1bd",
 							"entries": [
-								"The single, large chamber inside the dome is obviously a royal apartment-or was, centuries ago. Now the bright, floral murals are dim and gray, bits of colored glass are heaped beneath a cracked mosaic, enameled wooden tables are split and tilting, and every bit of cloth is frayed and streaked.",
+								"The single, large chamber inside the dome is obviously a royal apartment\u2014or was, centuries ago. Now the bright, floral murals are dim and gray, bits of colored glass are heaped beneath a cracked mosaic, enameled wooden tables are split and tilting, and every bit of cloth is frayed and streaked.",
 								"At the center of the room, a long divan stands atop a circular dais. Reclining on the divan is a woman dressed in a flowing robe made from parrot feathers in stunning colors. Despite the heat, her arms, head, and face are covered in feathery veils. Next to her, a black orchid grows out of a large clay pot at the head of the divan. She addresses you in a voice tinged with odd inflections."
 							]
 						},
@@ -6299,7 +6298,7 @@
 								"The journal contains a picture of Vorn's control amulet but provides no clues to the amulet's current whereabouts. As reward for finding and retrieving the construct and its control amulet, Wakanga offered us a spellbook containing fifteen spells."
 							]
 						},
-						"The statue is actually a deactivated {@creature shield guardian} that once served as a wizard's bodyguard. The wizard died from extreme bad luck decades ago-he fell out of a tree during a particularly bad bout of mad monkey fever, hit his head on a rock that knocked him unconscious, and rolled into a puddle, where he drowned. The shield guardian has stood impassive and unmoving, awaiting orders, ever since. A character with proficiency in the Arcana skill recognizes the shield guardian for what it is with a successful DC 10 Intelligence (Arcana) check.",
+						"The statue is actually a deactivated {@creature shield guardian} that once served as a wizard's bodyguard. The wizard died from extreme bad luck decades ago-he fell out of a tree during a particularly bad bout of {@disease mad monkey fever|toa}, hit his head on a rock that knocked him unconscious, and rolled into a puddle, where he drowned. The shield guardian has stood impassive and unmoving, awaiting orders, ever since. A character with proficiency in the Arcana skill recognizes the shield guardian for what it is with a successful DC 10 Intelligence (Arcana) check.",
 						"A character who searches the area and succeeds on a DC 10 Wisdom (Survival) check finds footprints in the dirt-evidence of nomadic tribes of goblins, grungs, and vegepygmies that revere the construct as a lesser god. They trim back the jungle vines and creepers that would otherwise swallow the construct, and they leave offerings at its feet. The area around it for several miles is a \"neutral zone\" where these tribes allow each other to enter without triggering conflict.",
 						"Anyone who finds the shield guardian's control amulet (see {@i \"Yellyark,\"}) can animate the construct and take control of it. Reactivating the construct and marching it away infuriates local goblin, grung, and vegepygmy tribes. Random encounters with such creatures are automatically hostile unless characters placate the tribes with treasure or convince them of Vorn's \"wish\" to be moved elsewhere."
 					]
@@ -6476,7 +6475,7 @@
 								"An ore cart sits on the tracks at the entrance to the mine, held in place by a block under the wheels."
 							]
 						},
-						"The cart's metal box is still solid, but one of the axles is broken and the other screeches horribly. The supply shed ({@area 2|1ef}) contains the parts and grease to get it rolling again. The old brake looks solid, but each time it's used, it has a 10 percent chance to fail utterly. This risk is recognized by someone who inspects the brake and makes a successful DC 10 Intelligence check. The brake can be repaired with spare parts from the supply shed."
+						"The cart's metal box is still solid, but one of the axles is broken and the other screeches horribly. The supply shed ({@area 2|1ef}) contains the parts and grease to get it rolling again. The old brake looks solid, but each time it's used, it has a {@chance 10|10 percent} chance to fail utterly. This risk is recognized by someone who inspects the brake and makes a successful DC 10 Intelligence check. The brake can be repaired with spare parts from the supply shed."
 					]
 				},
 				{
@@ -6533,7 +6532,7 @@
 					"name": "6C. Rolling Stone Trap",
 					"id": "1f9",
 					"entries": [
-						"A tripwire stretches across the mouth of the tunnel where the lower passage joins the cart track. It can be spotted with a successful DC 13 Wisdom (Perception) check. If the tripwire is missed, each character who passes through the tunnel mouth has a 50 percent chance to trip it and trigger two mechanisms.",
+						"A tripwire stretches across the mouth of the tunnel where the lower passage joins the cart track. It can be spotted with a successful DC 13 Wisdom (Perception) check. If the tripwire is missed, each character who passes through the tunnel mouth has a {@chance 50|50 percent} chance to trip it and trigger two mechanisms.",
 						"The first mechanism is a spring-loaded wooden contraption resembling a claw that swings out from the wall of the mine shaft up-slope from this tunnel to snap across the tunnel mouth. Whoever triggered the trap must succeed on a DC 13 Dexterity throw or take 7 (2d6) bludgeoning damage from the claw. One round later, the second mechanism releases a 5-foot-diameter stone sphere that drops into the cave (marked T on the map) and rolls into the wooden claw across the tunnel mouth, which is demolished by the sphere's impact-but not before diverting the sphere onto the cart tracks. The sphere careens down the tracks until it reaches {@area 11|201}, where it derails and smashes into the urds' living quarters. (The urds easily hear it coming and get out of the way.)",
 						"Everyone in the sphere's path must succeed on a DC 13 Dexterity saving throw or take 22 (4d10) bludgeoning damage and be knocked prone. Instead of being hit by the sphere, a character who fails the saving throw can opt to leap off the tracks and fall to the bottom of the shaft; this succeeds automatically. The sphere can't be slowed down by Strength checks because of the steep incline of the tracks."
 					]
@@ -6549,7 +6548,7 @@
 							"name": "Ore Cart",
 							"id": "1fb",
 							"entries": [
-								" The ore cart north of this area appears to be in working condition, though its brakes have a 10 percent chance to fail each time they're used."
+								" The ore cart north of this area appears to be in working condition, though its brakes have a {@chance 10|10 percent} chance to fail each time they're used."
 							]
 						}
 					]
@@ -6569,7 +6568,7 @@
 							"width": 950,
 							"height": 1700
 						},
-						"The north passage connecting this chamber to the cart track is trapped with a swinging log studded with spikes. A character moving through the passage has a 50 percent chance to trip the trigger wire, which can be spotted with a successful DC 13 Wisdom (Perception) check. Each creature in the passage when the log swings through must make a successful DC 13 Dexterity saving throw or take 10 (3d6) piercing damage and be knocked prone.",
+						"The north passage connecting this chamber to the cart track is trapped with a swinging log studded with spikes. A character moving through the passage has a {@chance 50|50 percent} chance to trip the trigger wire, which can be spotted with a successful DC 13 Wisdom (Perception) check. Each creature in the passage when the log swings through must make a successful DC 13 Dexterity saving throw or take 10 (3d6) piercing damage and be knocked prone.",
 						{
 							"type": "inset",
 							"id": "1fd",
@@ -7022,7 +7021,7 @@
 							"width": 500,
 							"height": 571
 						},
-						"The puzzle cubes can't be destroyed by any means. If they're discarded, buried, or taken more than a mile outside Omu, they teleport back to their resting places inside their respective shrines. If the characters return to a previously cleared shrine, there's a cumulative 20 percent chance per day that kobolds have reset its traps.",
+						"The puzzle cubes can't be destroyed by any means. If they're discarded, buried, or taken more than a mile outside Omu, they teleport back to their resting places inside their respective shrines. If the characters return to a previously cleared shrine, there's a cumulative {@chance 20|20 percent} chance per day that kobolds have reset its traps.",
 						{
 							"type": "entries",
 							"name": "Learning of the Shrines",
@@ -7037,7 +7036,7 @@
 							"id": "228",
 							"entries": [
 								"The characters need not explore all nine shrines. The Red Wizards find at least two of the puzzle cubes, and Ras Nsi always steps in to claim the final cube. Things play out differently if the players find a way to foil their enemies' plans-by killing them, for example.",
-								"On the day the characters claim their first puzzle cube, the Red Wizards clear a separate shrine within the city. While the Red Wizards remain active, there's a cumulative 25 percent chance per day that they claim another puzzle cube from a random shrine. If the players arrive at a cleared shrine, they discover a scene of devastation: traps sprung, monsters slain, and the cube missing.",
+								"On the day the characters claim their first puzzle cube, the Red Wizards clear a separate shrine within the city. While the Red Wizards remain active, there's a cumulative {@chance 25|25 percent} chance per day that they claim another puzzle cube from a random shrine. If the players arrive at a cleared shrine, they discover a scene of devastation: traps sprung, monsters slain, and the cube missing.",
 								"Once five puzzle cubes have been taken from their shrines, Ras Nsi begins to set ambushes. When the characters arrive at their next shrine, three type 1 {@creature yuan-ti malison (type 1)||yuan-ti malisons} and six {@creature yuan-ti pureblood||yuan-ti purebloods} ambush them. Their orders are to capture characters and bring them to the Fane of the Night Serpent for interrogation.",
 								"Once eight puzzle cubes have been claimed, Ras Nsi steals the ninth cube for himself and leaves an obvious trail leading pursuers to the main entrance of his underground temple (see {@area 20A|2de}). The characters must infiltrate the temple and either take the puzzle cube by force or convince Ras Nsi to part with it. For more information on the temple and its inhabitants, see chapter 4."
 							]
@@ -7176,7 +7175,7 @@
 					"name": "Mad Monkey Mist",
 					"id": "22d",
 					"entries": [
-						"A thin, odorless blue mist lingers inside the ruin. Characters who enter the building expose themselves to mad monkey fever (see {@i \"Diseases\"}). Roll again on the Ruin Interior table to see if there's anything else in the building.",
+						"A thin, odorless blue mist lingers inside the ruin. Characters who enter the building expose themselves to {@disease mad monkey fever|toa} (see {@i \"Diseases\"}). Roll again on the Ruin Interior table to see if there's anything else in the building.",
 						{
 							"type": "table",
 							"caption": "Ruin Interior",
@@ -7230,7 +7229,7 @@
 					"name": "Nest",
 					"id": "22e",
 					"entries": [
-						"Vermin have made a nest in the building. Roll a d6 and consult the Nest Occupants table to determine the nest's inhabitants. Any character damaged by a giant wasp must succeed on a DC 11 Constitution saving throw at the end of the encounter or become infected with shivering sickness (see {@i \"Diseases,\"}).",
+						"Vermin have made a nest in the building. Roll a d6 and consult the Nest Occupants table to determine the nest's inhabitants. Any character damaged by a giant wasp must succeed on a DC 11 Constitution saving throw at the end of the encounter or become infected with {@disease shivering sickness|toa} (see {@i \"Diseases,\"}).",
 						{
 							"type": "table",
 							"caption": "Nest Occupants",
@@ -7826,7 +7825,7 @@
 							"name": "Pits",
 							"id": "25f",
 							"entries": [
-								" Three covered pits are spaced along the corridor in the positions marked X on the shrine map. Their covers remain locked until the puzzle cube is moved from the pedestal in {@area 6C|260}. Thereafter, a creature stepping on a pit cover causes it to swing open and falls in unless it succeeds on a DC 15 Dexterity saving throw. Each pit is 10 feet deep and has a patch of green slime (see chapter 5 of the {@i Dungeon Master's Guide}) at the bottom of it."
+								" Three covered pits are spaced along the corridor in the positions marked X on the shrine map. Their covers remain locked until the puzzle cube is moved from the pedestal in {@area 6C|260}. Thereafter, a creature stepping on a pit cover causes it to swing open and falls in unless it succeeds on a DC 15 Dexterity saving throw. Each pit is 10 feet deep and has a patch of {@hazard green slime} (see chapter 5 of the {@i Dungeon Master's Guide}) at the bottom of it."
 							]
 						},
 						"A character who searches the hallway floor for traps finds a pit trap with a successful DC 15 Wisdom (Perception) check. The lids are cleverly constructed and can be jammed shut only by using magic such as an {@spell arcane lock} spell."
@@ -8556,7 +8555,7 @@
 							"name": "Hail to the King",
 							"id": "2a3",
 							"entries": [
-								"During the day, there is a 50 percent chance that the King of Feathers rests in the amphitheater. At night, this chance decreases to 25 percent. If the beast is out hunting, there is a cumulative 20 percent chance per hour of it returning. The King of Feathers is a feathered {@creature tyrannosaurus rex}, with these changes:",
+								"During the day, there is a {@chance 50|50 percent} chance that the King of Feathers rests in the amphitheater. At night, this chance decreases to 25 percent. If the beast is out hunting, there is a cumulative {@chance 20|20 percent} chance per hour of it returning. The King of Feathers is a feathered {@creature tyrannosaurus rex}, with these changes:",
 								{
 									"type": "list",
 									"items": [
@@ -8579,7 +8578,7 @@
 									"name": "Summon Swarm (Recharge 5-6)",
 									"id": "2a5",
 									"entries": [
-										" The King of Feathers exhales a swarm of insects (wasps) that forms in a space within 20 feet of it. The swarm acts as an ally of the King of Feathers and takes its turn immediately after it. The swarm disperses after 1 minute."
+										" The King of Feathers exhales a {@creature swarm of wasps||swarm of insects (wasps)} that forms in a space within 20 feet of it. The swarm acts as an ally of the King of Feathers and takes its turn immediately after it. The swarm disperses after 1 minute."
 									]
 								}
 							]
@@ -8632,7 +8631,7 @@
 								"A derelict market hall stands on the street corner ahead. Frayed cloth awnings hang in tatters above a broad alley lined with stalls."
 							]
 						},
-						"Kobolds live in hidden cellars underneath the ruined market hall and have set six traps throughout the bazaar. A character has a cumulative 20 percent chance of finding a trap for each minute spent searching the bazaar. When a trap is found, have the character make a DC 15 Wisdom (Perception) check. If the check succeeds, the character spots the trap (a hidden, springloaded catapult) and its triggering mechanism (a tripwire or pressure plate) without triggering it. Once spotted, the trap is easily disarmed or avoided (no check required). A failed check indicates that the character accidentally set off the trap, which duplicates the Weapon Invention attack of a kobold inventor.",
+						"Kobolds live in hidden cellars underneath the ruined market hall and have set six traps throughout the bazaar. A character has a cumulative {@chance 20|20 percent} chance of finding a trap for each minute spent searching the bazaar. When a trap is found, have the character make a DC 15 Wisdom (Perception) check. If the check succeeds, the character spots the trap (a hidden, springloaded catapult) and its triggering mechanism (a tripwire or pressure plate) without triggering it. Once spotted, the trap is easily disarmed or avoided (no check required). A failed check indicates that the character accidentally set off the trap, which duplicates the Weapon Invention attack of a {@creature kobold inventor|VGM}.",
 						"After the characters find three traps, they spot a {@creature kobold} disappearing down a well-hidden staircase on the outskirts of the bazaar. If they follow the creature, it leads them to the cellars under the marketplace.",
 						{
 							"type": "entries",
@@ -9896,7 +9895,7 @@
 									"type": "list",
 									"items": [
 										"Tahvo, a ten-year-old boy (LG male Chultan human noncombatant with AC 10 and 2 hit points), wears a flower garland and prays constantly to Tymora.",
-										"Sev, a {@creature yuan-ti pureblood} who looks human except for his forked tongue, succumbed to mad monkey fever and is confined here until he regains his sanity. Roll on the Long-Term Madness table in chapter 8 of the {@i Dungeon Master's Guide} to determine Sev's form of madness.",
+										"Sev, a {@creature yuan-ti pureblood} who looks human except for his forked tongue, succumbed to {@disease mad monkey fever|toa} and is confined here until he regains his sanity. Roll on the Long-Term Madness table in chapter 8 of the {@i Dungeon Master's Guide} to determine Sev's form of madness.",
 										"Oloma Authdamar (CG female Turami human {@creature scout}) is a former crew member of the {@i Star Goddess} (see chapter 2). She leapt from a porthole as the ship crashed, and the yuan-ti captured her in the jungle. Oloma carries a concealed dagger.",
 										"Pottery Shard, a {@creature tabaxi minstrel|ToA}, was kidnapped while traveling from Port Nyanzaru to Fort Beluarian.",
 										"Gorvax, a {@creature firenewt warrior|VGM} is eager to escape and return to the Valley of Lost Honor.",
@@ -10434,8 +10433,8 @@
 								"The passage widens into a cavern filled with fungi. Toadstools, puffballs, and other tuberous growths cover the walls and floor. Against the far wall, a malformed skeleton lies buried under a patch of buttery mold. A brass key hangs around its neck."
 							]
 						},
-						"A patch of green slime (see chapter 5 of the {@i Dungeon Master's Guide}) clings to the ceiling above the entrance and drops on the first creature that passes underneath.",
-						"A patch of yellow mold (see chapter 5 of the {@i Dungeon Master's Guide}) covers the skeletal corpse. If a creature touches the mold, it ejects a cloud of deadly spores.",
+						"A patch of {@hazard green slime} (see chapter 5 of the {@i Dungeon Master's Guide}) clings to the ceiling above the entrance and drops on the first creature that passes underneath.",
+						"A patch of {@hazard yellow mold} (see chapter 5 of the {@i Dungeon Master's Guide}) covers the skeletal corpse. If a creature touches the mold, it ejects a cloud of deadly spores.",
 						"The corpse belongs to Kukuga, a yuan-ti pureblood who secretly worshiped Zuggtmoy (the demon queen of fungi). Kukuga concocted a fungal brew that would transform his body into a form closer to that of his demonic mistress. Instead, it led to his sudden and horrific death. Xopal ({@area 14|333}) occasionally ventures into the cavern to harvest poisonous toadstools from his corpse.",
 						"To remove the brass key without disturbing the mold, a character must succeed on a DC 12 Dexterity (Sleight of Hand) check. The key unlocks the door to the venom distillery ({@area 14|333})."
 					]
@@ -12185,7 +12184,7 @@
 								"Ancient cobwebs fill this narrow corridor, whose midpoint features an arched alcove. Within the alcove, a dusty bottle stands on a table."
 							]
 						},
-						"The bottle is stoppered and contains a {@creature dao} named Keshma al-Wazir, who was trapped centuries ago by Acererak. Anyone examining the bottle spots the genie waving from within and hears her muffled voice calling out. Keshma speaks Terran only. At first, she orders the characters to release her. If they refuse, she tries to bargain with them (see \"Roleplaying the Dao\" below). While trapped inside the bottle, Keshma can't attack or cast spells. Once she's released, she can cast the tongues spell to better communicate with her liberators.",
+						"The bottle is stoppered and contains a {@creature dao} named Keshma al-Wazir, who was trapped centuries ago by Acererak. Anyone examining the bottle spots the genie waving from within and hears her muffled voice calling out. Keshma speaks Terran only. At first, she orders the characters to release her. If they refuse, she tries to bargain with them (see \"Roleplaying the Dao\" below). While trapped inside the bottle, Keshma can't attack or cast spells. Once she's released, she can cast the {@spell tongues} spell to better communicate with her liberators.",
 						"If the bottle is broken or unplugged, the dao emerges in a whirlwind of sand. She fulfills whatever promise she made to the characters in exchange for her freedom, then casts {@spell plane shift} in an effort to return to the Elemental Plane of Earth. (The attempt fails, naturally, and she winds up trapped in {@area 57|4c0}.)",
 						{
 							"type": "entries",
@@ -12358,7 +12357,7 @@
 								"Old wooden benches and shelves along the walls of this chamber are covered with gears, chains, trap components, and cages filled with rats. Lit iron braziers hang by chains from the ceiling. Along the north wall, a stepped dais is set with a bulky contraption: an iron maiden of sorts, attached to a network of steaming pistons, tubes, and bubbling vats of blood. Five masked dwarves operate the contraption."
 							]
 						},
-						"When the characters arrive, five tomb dwarves are working inside the chamber. Each one has the statistics of a {@creature wight}, except that it wields a battleaxe and a light crossbow. If the adventurers leave this area, there's a 50 percent chance that 1d4 of the other tomb dwarves prowling the dungeon are present when they return.",
+						"When the characters arrive, five tomb dwarves are working inside the chamber. Each one has the statistics of a {@creature wight}, except that it wields a battleaxe and a light crossbow. If the adventurers leave this area, there's a {@chance 50|50 percent} chance that 1d4 of the other tomb dwarves prowling the dungeon are present when they return.",
 						"Any character who searches the forge uncovers enough gear to assemble two sets of thieves' tools, a set of artisan's tools, a set of {@item alchemist's supplies|phb}, a set of mason's tools, and a set of smith's tools. The caged rats are used to test traps.",
 						{
 							"type": "image",
@@ -14113,10 +14112,10 @@
 								"Reaction if Released"
 							],
 							"colStyles": [
-								"",
-								"",
-								"",
-								""
+								"col-1 text-center",
+								"col-2",
+								"col-4-5",
+								"col-4-5"
 							],
 							"rows": [
 								[
@@ -14127,9 +14126,9 @@
 								],
 								[
 									"2",
-									"-",
-									"-",
-									"-"
+									"\u2014",
+									"\u2014",
+									"\u2014"
 								],
 								[
 									"3",
@@ -14139,15 +14138,15 @@
 								],
 								[
 									"4",
-									"Zaal (minotaur)",
+									"Zaal ({@creature minotaur})",
 									"Trapped by Acererak shortly after Omu's fall",
 									"Attacks any other creature it sees except Lukanu, whom it obeys"
 								],
 								[
 									"5",
-									"-",
-									"-",
-									"-"
+									"\u2014",
+									"\u2014",
+									"\u2014"
 								],
 								[
 									"6",
@@ -14175,9 +14174,9 @@
 								],
 								[
 									"10",
-									"-",
-									"-",
-									"-"
+									"\u2014",
+									"\u2014",
+									"\u2014"
 								],
 								[
 									"11",
@@ -15482,7 +15481,7 @@
 								"{@b DC 10:} Planar vortices are incredibly destructive. No one can expect to enter a vortex and survive.",
 								"{@b DC 15:} The chain is called a Mechanus chain. Such chains are crafted by modrons and used in conjunction with other machinery to keep the plane of Mechanus in working order.",
 								"{@b DC 20:} This Mechanus chain has been repurposed for the tomb. One chain would be enough to keep the tomb's traps and other mechanisms in working order.",
-								"{@b DC 25:} Destroying a Mechanus chain requires the casting of three wish spells."
+								"{@b DC 25:} Destroying a Mechanus chain requires the casting of three {@spell wish} spells."
 							]
 						},
 						{
@@ -16203,7 +16202,7 @@
 									]
 								},
 								"Acererak has disciples scattered throughout the multiverse, including many liches that seek to become as powerful as him. He keeps their phylacteries here.",
-								"Each balcony has 2d6+5 lich phylacteries on it. Any character who succeeds on a DC 15 Intelligence (Arcana) check recognizes the phylacteries for what they are. Destroying a phylactery is no simple task and often requires a special ritual, item, or weapon. The phylacteries here are all unique, and discovering the key to each one's destruction will require time and expensive research. There's a 10 percent chance that any one of these phylacteries would be destroyed by hurling it into the lava."
+								"Each balcony has 2d6+5 lich phylacteries on it. Any character who succeeds on a DC 15 Intelligence (Arcana) check recognizes the phylacteries for what they are. Destroying a phylactery is no simple task and often requires a special ritual, item, or weapon. The phylacteries here are all unique, and discovering the key to each one's destruction will require time and expensive research. There's a {@chance 10|10 percent} chance that any one of these phylacteries would be destroyed by hurling it into the lava."
 							]
 						},
 						{
@@ -16796,7 +16795,7 @@
 					"name": "Volo",
 					"id": "593",
 					"entries": [
-						"The characters run into {@creature Volothamp \"Volo\" Geddarm|toa|Volothamp Geddarm}, who is delivering a copy of his new book to one of the city's merchant princes. There is a 50 percent chance that Volo is drunk."
+						"The characters run into {@creature Volothamp \"Volo\" Geddarm|toa|Volothamp Geddarm}, who is delivering a copy of his new book to one of the city's merchant princes. There is a {@chance 50|50 percent} chance that Volo is drunk."
 					]
 				},
 				{
@@ -18176,8 +18175,8 @@
 									"type": "table",
 									"caption": "Wilderness River Chance - Low",
 									"colLabels": [
-										"col-2 text-center",
-										"col-10"
+										"d20",
+										"Result"
 									],
 									"colStyles": [
 										"col-2 text-center",
@@ -19503,7 +19502,7 @@
 							"name": "Tyrannosaurus",
 							"id": "5b9",
 							"entries": [
-								" The characters spot a {@creature tyrannosaurus rex} 300 yards away. There's a 50 percent chance that the hungry behemoth is fighting either a stegosaurus, a triceratops, a pair of giant constrictor snakes, a giant ape, or a mob of ghouls and zombies. None of these creatures will voluntarily team up with the party, but their presence might weaken the tyrannosaurus to the point where the characters have a chance of slaying it."
+								" The characters spot a {@creature tyrannosaurus rex} 300 yards away. There's a {@chance 50|50 percent} chance that the hungry behemoth is fighting either a stegosaurus, a triceratops, a pair of giant constrictor snakes, a giant ape, or a mob of ghouls and zombies. None of these creatures will voluntarily team up with the party, but their presence might weaken the tyrannosaurus to the point where the characters have a chance of slaying it."
 							]
 						},
 						"Characters can avoid an encounter with the tyrannosaurus if they keep their distance and succeed on a DC 15 group Dexterity (Stealth) check. If any character is trained in the Survival skill, all the characters' checks are made with advantage.",
@@ -19756,7 +19755,7 @@
 					"name": "Frost Giants",
 					"id": "5c8",
 					"entries": [
-						"The characters hear the sound of huge creatures stomping through the wilderness. If they follow the noise, they encounter a search party of three {@creature frost giant||frost giants} accompanied by 1d2 {@creature winter wolf||winter wolves}. For each such encounter, there is a 20 percent chance that this is Drufi's search party (see {@i \"Hvalspyd\"}).",
+						"The characters hear the sound of huge creatures stomping through the wilderness. If they follow the noise, they encounter a search party of three {@creature frost giant||frost giants} accompanied by 1d2 {@creature winter wolf||winter wolves}. For each such encounter, there is a {@chance 20|20 percent} chance that this is Drufi's search party (see {@i \"Hvalspyd\"}).",
 						"The frost giants are concerned chiefly with locating the {@item Ring of Winter|ToA}, and they might help characters who can provide useful information. They immediately attack characters who withhold information, or who threaten to reveal the giants' presence to the Flaming Fist. The frost giants carry no treasure with them while they hunt."
 					]
 				},
@@ -19797,7 +19796,7 @@
 					"name": "Giant Scorpions",
 					"id": "5cd",
 					"entries": [
-						"Any character with a passive Wisdom (Perception) score of 11 or higher spots 1d3 {@creature giant scorpion||giant scorpions} moments before they emerge from hiding and attack. At the end of the encounter, any character damaged by a giant scorpion must succeed on a DC 11 Constitution saving throw or become infected with shivering sickness (see {@i \"Diseases\"})."
+						"Any character with a passive Wisdom (Perception) score of 11 or higher spots 1d3 {@creature giant scorpion||giant scorpions} moments before they emerge from hiding and attack. At the end of the encounter, any character damaged by a giant scorpion must succeed on a DC 11 Constitution saving throw or become infected with {@disease shivering sickness|toa} (see {@i \"Diseases\"})."
 					]
 				},
 				{
@@ -19813,7 +19812,7 @@
 					"name": "Giant Wasps",
 					"id": "5cf",
 					"entries": [
-						"A droning sound announces the presence of 1d6 {@creature giant wasp||giant wasps} before the characters see them. The wasps attack at once, ignoring heavily armored targets in favor of those with little or no defensive protection. At the end of the encounter, any character damaged by a giant wasp must succeed on a DC 11 Constitution saving throw or become infected with shivering sickness (see {@i \"Diseases\"})."
+						"A droning sound announces the presence of 1d6 {@creature giant wasp||giant wasps} before the characters see them. The wasps attack at once, ignoring heavily armored targets in favor of those with little or no defensive protection. At the end of the encounter, any character damaged by a giant wasp must succeed on a DC 11 Constitution saving throw or become infected with {@disease shivering sickness|toa} (see {@i \"Diseases\"})."
 					]
 				},
 				{
@@ -19860,7 +19859,7 @@
 					"id": "5d4",
 					"entries": [
 						"The party is ambushed by 1d2 {@creature kamadan|ToA|kamadans}. Any character with a passive Wisdom (Perception) score of 16 or higher gets a warning of the attack, but all others are surprised. Characters who prevail against the kamadans can search the area for their lair, finding it with a successful DC 15 Wisdom (Survival) check.",
-						"A kamadan lair has a 25 percent chance of containing 1d3 noncombatant young the size of house cats. With their snakes not yet grown out, they look like leopard cubs. Ifan Talro'a in Port Nyanzaru will pay 150 gp for a live kamadan cub, but a successful DC 15 Charisma (Persuasion) check talks him up to 300 gp.",
+						"A kamadan lair has a {@chance 25|25 percent} chance of containing 1d3 noncombatant young the size of house cats. With their snakes not yet grown out, they look like leopard cubs. Ifan Talro'a in Port Nyanzaru will pay 150 gp for a live kamadan cub, but a successful DC 15 Charisma (Persuasion) check talks him up to 300 gp.",
 						{
 							"type": "table",
 							"caption": "Kamadan Cubs",
@@ -19898,7 +19897,7 @@
 					"name": "Mad Monkey Mist",
 					"id": "5d6",
 					"entries": [
-						"A bank of blue mist drifts toward the party, covering an area of 1d6 20-foot squares. Any character with a passive Wisdom (Perception) score of 13 or higher notices the mist and can warn others of its approach. If the encounter occurs while the party is camped, the mist drifts through the camp at a speed of 5 feet per round. Characters who come into contact with the mist are exposed to mad monkey fever (see {@i \"Diseases\"})."
+						"A bank of blue mist drifts toward the party, covering an area of 1d6 20-foot squares. Any character with a passive Wisdom (Perception) score of 13 or higher notices the mist and can warn others of its approach. If the encounter occurs while the party is camped, the mist drifts through the camp at a speed of 5 feet per round. Characters who come into contact with the mist are exposed to {@disease mad monkey fever|toa} (see {@i \"Diseases\"})."
 					]
 				},
 				{
@@ -20090,7 +20089,7 @@
 						},
 						"{@b 1.} Treasure lies at the foot of the statue, left there as tribute by some jungle creature. Roll once on the Treasure Drops table to determine what treasure is found. If the roll indicates no treasure, the characters find worthless pieces of bone jewelry instead.",
 						"{@b 2.} Goblin, grung, and su-monster skulls are piled around the statue's base.",
-						"{@b 3.} A {@spell glyph of warding} is inscribed on the statue. To spot the glyph, a character searching the statue must succeed on a DC 15 Intelligence (Investigation) check. If any creature touches the statue, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the statue. Each creature in the area must succeed on a DC 14 Dexterity saving throw, taking 22 (5d8) thunder damage on a failed save, or half as much damage on a successful one. The thunderous noise has a 75 percent chance of attracting stirges or a troll lurking nearby (see \"Stirges\" and \"Troll\" below).",
+						"{@b 3.} A {@spell glyph of warding} is inscribed on the statue. To spot the glyph, a character searching the statue must succeed on a DC 15 Intelligence (Investigation) check. If any creature touches the statue, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the statue. Each creature in the area must succeed on a DC 14 Dexterity saving throw, taking 22 (5d8) thunder damage on a failed save, or half as much damage on a successful one. The thunderous noise has a {@chance 75|75 percent} chance of attracting stirges or a troll lurking nearby (see \"Stirges\" and \"Troll\" below).",
 						"{@b 4.} The statue has grooves carved into its stomach that form a maze. Any character who studies the grooves and succeeds on a DC 10 Intelligence check sees a clear pathway through the labyrinth. That character is then bestowed with the power to cast the {@spell find the path} spell as an action, no components required, by tracing the same path with his or her finger. Once used, this ability goes away. Once the statue has granted this benefit, it can't do so again until the next dawn."
 					]
 				},
@@ -20124,7 +20123,7 @@
 					"name": "Swarms of Insects",
 					"id": "5e9",
 					"entries": [
-						"The characters are beset by {@dice 1d4} {@creature swarm of centipedes||swarm of insects (centipedes)}. At the end of the encounter, any character damaged by a swarm must succeed on a DC 11 Constitution saving throw or become infected with shivering sickness (see {@i \"Diseases\"})."
+						"The characters are beset by {@dice 1d4} {@creature swarm of centipedes||swarm of insects (centipedes)}. At the end of the encounter, any character damaged by a swarm must succeed on a DC 11 Constitution saving throw or become infected with {@disease shivering sickness|toa} (see {@i \"Diseases\"})."
 					]
 				},
 				{
@@ -20211,42 +20210,42 @@
 							"name": "Zombies",
 							"id": "5f4",
 							"entries": [
-								" Characters catch the scent of death on the air and hear the undead lumbering through the jungle."
-							]
-						},
-						"Roll on the table below to determine what appears:",
-						{
-							"type": "table",
-							"caption": "Zombies",
-							"colLabels": [
-								"d10",
-								"Zombies Appearing"
-							],
-							"colStyles": [
-								"col-2 text-center",
-								"col-10"
-							],
-							"rows": [
-								[
-									"1-3",
-									"Zombies"
-								],
-								[
-									"4-5",
-									"Ankylosaurus Zombie"
-								],
-								[
-									"6-7",
-									"Girallon Zombies"
-								],
-								[
-									"8-9",
-									"Ogre Zombies"
-								],
-								[
-									"10",
-									"Tyrannosaurus Zombie"
-								]
+								"Characters catch the scent of death on the air and hear the undead lumbering through the jungle.",
+								"Roll on the table below to determine what appears:",
+								{
+									"type": "table",
+									"caption": "Zombies",
+									"colLabels": [
+										"d10",
+										"Zombies Appearing"
+									],
+									"colStyles": [
+										"col-2 text-center",
+										"col-10"
+									],
+									"rows": [
+										[
+											"1-3",
+											"{@dice 3d6} {@creature Zombie||Zombies}"
+										],
+										[
+											"4-5",
+											"1 {@creature Ankylosaurus Zombie|ToA}"
+										],
+										[
+											"6-7",
+											"{@dice 1d4} {@creature Girallon Zombie|ToA|Girallon Zombies}"
+										],
+										[
+											"8-9",
+											"{@dice 1d4} {@creature Ogre Zombie||Ogre Zombies}"
+										],
+										[
+											"10",
+											"1 {@creature Tyrannosaurus Zombie|ToA}"
+										]
+									]
+								}
 							]
 						}
 					]
@@ -20720,7 +20719,7 @@
 							"name": "Yahcha",
 							"id": "60e",
 							"entries": [
-								"A yahcha (pronounced YAH-chah) is a harmless, meaty beetle about the size of a human hand, which feeds on worms and maggots. It moves slowly (walking speed 10 feet) and is easy to catch. A creature with mad monkey fever that eats a raw or cooked yahcha can immediately make a saving throw with advantage against that disease (see {@i \"Diseases,\"})."
+								"A yahcha (pronounced YAH-chah) is a harmless, meaty beetle about the size of a human hand, which feeds on worms and maggots. It moves slowly (walking speed 10 feet) and is easy to catch. A creature with {@disease mad monkey fever|toa} that eats a raw or cooked yahcha can immediately make a saving throw with advantage against that disease (see {@i \"Diseases,\"})."
 							]
 						},
 						{

@@ -1,6 +1,8 @@
 {
 	"AI": "spells-ai.json",
+	"AitFR-AVT": "spells-aitfr-avt.json",
 	"EGW": "spells-egw.json",
+	"FTD": "spells-ftd.json",
 	"GGR": "spells-ggr.json",
 	"IDRotF": "spells-idrotf.json",
 	"LLK": "spells-llk.json",
@@ -8,6 +10,7 @@
 	"TCE": "spells-tce.json",
 	"UA2020PsionicOptionsRevisited": "spells-ua-2020por.json",
 	"UA2020SpellsAndMagicTattoos": "spells-ua-2020smt.json",
+	"UA2021DraconicOptions": "spells-ua-2021do.json",
 	"UAArtificerRevisited": "spells-ua-ar.json",
 	"UAFighterRogueWizard": "spells-ua-frw.json",
 	"UAModernMagic": "spells-ua-mm.json",

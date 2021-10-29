@@ -3,7 +3,8 @@
 		"dependencies": {
 			"monster": [
 				"MM",
-				"ToA"
+				"ToA",
+				"MOT"
 			]
 		},
 		"otherSources": {
@@ -96,7 +97,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Flyby"
 			],
@@ -111,7 +111,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Animated Chained Library",
@@ -182,7 +183,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -198,6 +198,7 @@
 			"conditionInflict": [
 				"grappled"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -253,6 +254,33 @@
 				"Undercommon"
 			],
 			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Quill casts one of the following spells using Charisma as the spellcasting ability (save {@dc 17}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell detect magic}",
+							"{@spell dispel magic}",
+							"{@spell faerie fire}",
+							"{@spell hold monster}"
+						],
+						"1e": [
+							"{@spell mind blank}",
+							"{@spell teleport}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
 			"action": [
 				{
 					"name": "Multiattack",
@@ -273,22 +301,12 @@
 					]
 				},
 				{
-					"name": "Spellcasting",
-					"entries": [
-						"Quill casts one of the following spells using Charisma as the spellcasting ability (save {@dc 17}):",
-						"At will: light, mage hand, prestidigitation",
-						"3/day each: detect magic, dispel magic, faerie fire, hold monster",
-						"1/day each: mind blank, teleport"
-					]
-				},
-				{
 					"name": "Supreme Mockery",
 					"entries": [
 						"Quill hurls a string of insults laced with enchantments at a creature he can see within 60 feet of him. If the creature can hear Quill (though it need not understand him), it must succeed on a {@dc 17} Wisdom saving throw or take 66 ({@damage 12d10}) psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn."
 					]
 				}
 			],
-			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -307,6 +325,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -454,7 +473,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -476,6 +494,7 @@
 				"deafened",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -571,7 +590,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -586,12 +604,14 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
 		{
 			"name": "Chwinga",
 			"source": "CM",
+			"page": 212,
 			"_copy": {
 				"name": "Chwinga",
 				"source": "ToA"
@@ -666,6 +686,27 @@
 				"Giant"
 			],
 			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The ghost casts one of the following spells, using Charisma as the spellcasting ability and requiring no material components:"
+					],
+					"will": [
+						"{@spell fog cloud}"
+					],
+					"daily": {
+						"1": [
+							"{@spell control weather}"
+						],
+						"3": [
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
 			"trait": [
 				{
 					"name": "Ethereal Sight",
@@ -706,22 +747,12 @@
 					]
 				},
 				{
-					"name": "Spellcasting",
-					"entries": [
-						"The ghost casts one of the following spells, using Charisma as the spellcasting ability and requiring no material components:",
-						"At will: fog cloud",
-						"3/day: telekinesis",
-						"1/day: control weather"
-					]
-				},
-				{
 					"name": "Wind Howl {@recharge}",
 					"entries": [
 						"The ghost emits a dreadful howl that summons a cold, biting wind. This wind engulfs up to three creatures of the ghost's choice that it can see within 60 feet of it. Each target is pulled up to 20 feet toward the ghost and must make a {@dc 15} Constitution saving throw, taking 16 ({@damage 3d10}) cold damage on a failed save, or half as much damage on a successful one."
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement",
 				"Regeneration"
@@ -744,6 +775,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -801,7 +833,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"languageTags": [
 				"C"
 			],
@@ -811,6 +842,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -890,7 +922,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -909,6 +940,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -995,6 +1027,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -1089,7 +1122,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -1106,6 +1138,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -1307,7 +1340,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Rejuvenation"
@@ -1345,7 +1377,8 @@
 				"poisoned",
 				"prone",
 				"stunned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Gingwatzim",
@@ -1415,9 +1448,11 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
+			],
+			"actionTags": [
+				"Shapechanger"
 			],
 			"languageTags": [
 				"TP"
@@ -1431,6 +1466,7 @@
 			"conditionInflict": [
 				"exhaustion"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1512,7 +1548,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Hold Breath"
 			],
@@ -1538,6 +1573,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -1545,176 +1581,69 @@
 			"name": "Hag of the Fetid Gaze",
 			"source": "CM",
 			"page": 76,
-			"size": "M",
-			"type": "fey",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 17,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 82,
-				"formula": "11d8 + 33"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 18,
-			"dex": 12,
-			"con": 16,
-			"int": 13,
-			"wis": 14,
-			"cha": 14,
-			"skill": {
-				"arcana": "+3",
-				"deception": "+4",
-				"perception": "+4",
-				"stealth": "+4"
-			},
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 14,
-			"languages": [
-				"Common",
-				"Draconic",
-				"Sylvan"
-			],
-			"cr": "5",
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"headerEntries": [
-						"The hag's innate spellcasting ability is Charisma (spell save {@dc 12}). She can innately cast the following spells, requiring no material components:"
-					],
-					"will": [
-						"{@spell dancing lights}",
-						"{@spell minor illusion}",
-						"{@spell vicious mockery}"
-					],
-					"ability": "cha"
-				},
-				{
-					"name": "Shared Spellcasting",
-					"headerEntries": [
-						"While all three members of the Fetid Gaze are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
-					],
-					"spells": {
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell charm person}",
-								"{@spell witch bolt}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell alter self}",
-								"{@spell suggestion}"
-							]
-						},
-						"3": {
-							"slots": 3,
-							"spells": [
-								"{@spell dispel magic}",
-								"{@spell glyph of warding}",
-								"{@spell slow}"
-							]
-						},
-						"4": {
-							"slots": 3,
-							"spells": [
-								"{@spell blight}",
-								"{@spell polymorph}"
-							]
-						},
-						"5": {
-							"slots": 2,
-							"spells": [
-								"{@spell dominate person}",
-								"{@spell seeming}"
-							]
-						},
-						"6": {
-							"slots": 1,
-							"spells": [
-								"{@spell Otto's irresistible dance}"
+			"_copy": {
+				"name": "Green Hag",
+				"source": "MM",
+				"_mod": {
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Shared Spellcasting (Coven Only)",
+							"headerEntries": [
+								"While all three members of a hag coven are within 30 feet of one another, they can each cast the following spells from the wizard's spell list but must share the spell slots among themselves:"
+							],
+							"spells": {
+								"1": {
+									"slots": 4,
+									"spells": [
+										"{@spell charm person}",
+										"{@spell witch bolt}"
+									]
+								},
+								"2": {
+									"slots": 3,
+									"spells": [
+										"{@spell alter self}",
+										"{@spell suggestion}"
+									]
+								},
+								"3": {
+									"slots": 3,
+									"spells": [
+										"{@spell dispel magic}",
+										"{@spell glyph of warding}",
+										"{@spell slow}"
+									]
+								},
+								"4": {
+									"slots": 3,
+									"spells": [
+										"{@spell blight}",
+										"{@spell polymorph}"
+									]
+								},
+								"5": {
+									"slots": 2,
+									"spells": [
+										"{@spell dominate person}",
+										"{@spell seeming}"
+									]
+								},
+								"6": {
+									"slots": 1,
+									"spells": [
+										"{@spell Otto's irresistible dance}"
+									]
+								}
+							},
+							"footerEntries": [
+								"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
 							]
 						}
-					},
-					"footerEntries": [
-						"For casting these spells, each hag is a 12th-level spellcaster that uses Intelligence as her spellcasting ability. The spell save DC is 12 + the hag's Intelligence modifier, and the spell attack bonus is 4 + the hag's Intelligence modifier."
-					]
+					}
 				}
-			],
-			"trait": [
-				{
-					"name": "Amphibious",
-					"entries": [
-						"The hag can breathe air and water."
-					]
-				},
-				{
-					"name": "Mimicry",
-					"entries": [
-						"The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful {@dc 14} Wisdom (Insight) check."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) slashing damage."
-					]
-				},
-				{
-					"name": "Illusory Appearance",
-					"entries": [
-						"The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies.",
-						"The changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a {@dc 20} Intelligence (Investigation) check to discern that the hag is disguised."
-					]
-				},
-				{
-					"name": "Invisible Passage",
-					"entries": [
-						"The hag magically turns {@condition invisible} until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While {@condition invisible}, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is {@condition invisible} with her."
-					]
-				}
-			],
-			"traitTags": [
-				"Amphibious"
-			],
-			"senseTags": [
-				"D"
-			],
-			"languageTags": [
-				"C",
-				"DR",
-				"S"
-			],
-			"damageTags": [
-				"S"
-			],
-			"spellcastingTags": [
-				"CW",
-				"I",
-				"S"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflictSpell": [
-				"charmed"
-			],
+			},
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -1783,7 +1712,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -1801,7 +1729,8 @@
 			],
 			"conditionInflict": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Jade Tigress",
@@ -1913,7 +1842,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -1934,6 +1862,7 @@
 				"exhaustion",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2040,7 +1969,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2061,6 +1989,7 @@
 			"conditionInflictSpell": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -2139,7 +2068,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -2156,6 +2084,7 @@
 			"conditionInflict": [
 				"grappled"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2223,6 +2152,36 @@
 				"Sylvan"
 			],
 			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The lich casts one of the following spells using Wisdom as the spellcasting ability (save {@dc 19}):"
+					],
+					"will": [
+						"{@spell druidcraft}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell detect magic}",
+							"{@spell fog cloud}",
+							"{@spell pass without trace}"
+						],
+						"1e": [
+							"{@spell antilife shell}",
+							"{@spell dispel magic}",
+							"{@spell speak with plants}",
+							"{@spell transport via plants}",
+							{
+								"entry": "{@spell fire storm}",
+								"hidden": true
+							}
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
 			"trait": [
 				{
 					"name": "Legendary Resistance (3/Day)",
@@ -2261,15 +2220,6 @@
 					"entries": [
 						"The lich fills up to ten 10-foot cubes with fire. Every cube must be within 150 feet of the lich and occupy a space the lich can see, and each cube must have at least one face adjacent to the face of another cube. Each creature in the area must make a {@dc 19} Dexterity saving throw, taking 38 ({@damage 7d10}) fire damage on a failed save, or half as much damage on a successful one. The fire ignites flammable objects in the area that aren't being worn or carried. If the lich chooses, plant life in the area is unaffected by the spell."
 					]
-				},
-				{
-					"name": "Spellcasting",
-					"entries": [
-						"The lich casts one of the following spells using Wisdom as the spellcasting ability (save {@dc 19}):",
-						"At will: druidcraft",
-						"3/day each: detect magic, fog cloud, pass without trace",
-						"1/day each: antilife shell, dispel magic, speak with plants, transport via plants"
-					]
 				}
 			],
 			"legendary": [
@@ -2292,7 +2242,10 @@
 					]
 				}
 			],
-			"hasToken": true,
+			"legendaryGroup": {
+				"name": "Lichen Lich",
+				"source": "CM"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Rejuvenation"
@@ -2322,6 +2275,7 @@
 				"poisoned",
 				"unconscious"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2426,7 +2380,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Damage Absorption",
 				"Immutable Form",
@@ -2448,6 +2401,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -2491,6 +2445,59 @@
 				"Common plus any five languages"
 			],
 			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The sage casts one of the following spells, using Intelligence as the spellcasting ability (save {@dc 14}, {@hit 6} to hit with spell attacks):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand}",
+						"{@spell mending}",
+						"{@spell prestidigitation}",
+						{
+							"entry": "{@spell shocking grasp}",
+							"hidden": true
+						}
+					],
+					"daily": {
+						"3e": [
+							"{@spell comprehend languages}",
+							"{@spell detect magic}",
+							"{@spell dispel magic}",
+							{
+								"entry": "{@spell fireball}",
+								"hidden": true
+							},
+							"{@spell identify}",
+							"{@spell levitate}",
+							"{@spell locate object}",
+							{
+								"entry": "{@spell shield}",
+								"hidden": true
+							},
+							"{@spell Tenser's Floating Disk}",
+							"{@spell unseen servant}"
+						],
+						"1e": [
+							"{@spell banishment}",
+							"{@spell contact other plane}",
+							"{@spell Drawmij's instant summons}",
+							"{@spell legend lore}",
+							"{@spell locate creature}",
+							"{@spell planar binding}",
+							"{@spell polymorph}",
+							"{@spell protection from evil and good}",
+							"{@spell scrying}",
+							"{@spell sending}",
+							"{@spell true seeing}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
 			"action": [
 				{
 					"name": "Shocking Grasp (Cantrip)",
@@ -2503,15 +2510,6 @@
 					"entries": [
 						"The sage creates a fiery explosion centered on a point it can see within 150 feet of it. Each creature in a 20-foot-radius sphere centered on that point must make a {@dc 14} Dexterity saving throw, taking 28 ({@damage 8d6}) fire damage on a failed save, or half as much damage on a successful one. The fire spreads around corners and ignites flammable objects in the area that aren't being worn or carried."
 					]
-				},
-				{
-					"name": "Spellcasting",
-					"entries": [
-						"The sage casts one of the following spells, using Intelligence as the spellcasting ability (save {@dc 14}, {@hit 6} to hit with spell attacks):",
-						"At will: light, mage hand, mending, prestidigitation",
-						"3/day each: comprehend languages, detect magic, dispel magic, identify, levitate, locate object, Tenser's Floating Disk, unseen servant",
-						"1/day each: banishment, contact other plane, Drawmij's instant summons, legend lore, locate creature, planar binding, polymorph, protection from evil and good, scrying, sending, true seeing"
-					]
 				}
 			],
 			"reaction": [
@@ -2522,7 +2520,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -2534,6 +2531,7 @@
 			"miscTags": [
 				"AOE"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2610,6 +2608,32 @@
 				"Draconic"
 			],
 			"cr": "22",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Miirym casts one of the following spells, using Charisma as the spellcasting ability (save {@dc 21}) and requiring no material components:"
+					],
+					"will": [
+						"{@spell dancing lights}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell detect magic}",
+							"{@spell detect thoughts}",
+							"{@spell dispel magic}",
+							"{@spell locate creature}"
+						],
+						"1e": [
+							"{@spell dispel evil and good}",
+							"{@spell wall of force}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
 			"trait": [
 				{
 					"name": "Bound to Candlekeep",
@@ -2678,15 +2702,6 @@
 					"entries": [
 						"Each creature of Miirym's choice that is within 120 feet of her and aware of her must succeed on a {@dc 21} Wisdom saving throw or become {@condition frightened} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Miirym's Frightful Presence for the next 24 hours."
 					]
-				},
-				{
-					"name": "Spellcasting",
-					"entries": [
-						"Miirym casts one of the following spells, using Charisma as the spellcasting ability (save {@dc 21}) and requiring no material components:",
-						"At will: dancing lights, mage hand",
-						"3/day each: detect magic, detect thoughts, dispel magic, locate creature",
-						"1/day each: dispel evil and good, wall of force"
-					]
 				}
 			],
 			"legendary": [
@@ -2703,7 +2718,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement",
 				"Legendary Resistances",
@@ -2714,6 +2728,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence"
 			],
 			"languageTags": [
@@ -2733,6 +2748,7 @@
 				"frightened",
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2825,7 +2841,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"False Appearance",
 				"Shapechanger"
@@ -2843,7 +2858,19 @@
 			],
 			"conditionInflict": [
 				"grappled"
-			]
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Naiad",
+			"source": "CM",
+			"_copy": {
+				"name": "Naiad",
+				"source": "MOT"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nintra Siotta",
@@ -2903,6 +2930,23 @@
 				"Sylvan"
 			],
 			"cr": "16",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Nintra casts one of the following spells, using Charisma as the spellcasting ability (save {@dc 20}) and requiring no material components:"
+					],
+					"daily": {
+						"3e": [
+							"{@spell dispel magic}",
+							"{@spell faerie fire}",
+							"{@spell mirror image}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
 			"trait": [
 				{
 					"name": "Legendary Resistance (3/Day)",
@@ -2928,13 +2972,6 @@
 					"name": "Shard of Shadow",
 					"entries": [
 						"{@atk rs} {@hit 12} to hit, range 120 ft., one target. {@h}10 ({@damage 1d6 + 7}) necrotic damage, and if the target is a creature, it must succeed on a {@dc 20} Constitution saving throw or be {@condition poisoned} until the end of its next turn."
-					]
-				},
-				{
-					"name": "Spellcasting",
-					"entries": [
-						"Nintra casts one of the following spells, using Charisma as the spellcasting ability (save {@dc 20}) and requiring no material components:",
-						"3/day each: dispel magic, faerie fire, mirror image"
 					]
 				},
 				{
@@ -2964,7 +3001,10 @@
 					]
 				}
 			],
-			"hasToken": true,
+			"legendaryGroup": {
+				"name": "Nintra Siotta",
+				"source": "CM"
+			},
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -2991,6 +3031,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3079,6 +3120,7 @@
 				"D"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack",
 				"Swallow"
 			],
@@ -3217,8 +3259,8 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"actionTags": [
+				"Breath Weapon",
 				"Multiattack"
 			],
 			"languageTags": [
@@ -3241,6 +3283,7 @@
 				"paralyzed",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3284,20 +3327,50 @@
 				"Common plus any four languages"
 			],
 			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The sage casts one of the following spells, using Intelligence as the spellcasting ability (save {@dc 14}, {@hit 6} to hit with spell attacks):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand}",
+						"{@spell mending}",
+						{
+							"entry": "{@spell shocking grasp}",
+							"hidden": true
+						}
+					],
+					"daily": {
+						"3e": [
+							"{@spell comprehend languages}",
+							"{@spell detect magic}",
+							"{@spell identify}",
+							{
+								"entry": "{@spell shield}",
+								"hidden": true
+							}
+						],
+						"1e": [
+							"{@spell dispel magic}",
+							"{@spell levitate}",
+							"{@spell locate object}",
+							"{@spell see invisibility}",
+							"{@spell sending}",
+							"{@spell tongues}",
+							"{@spell unseen servant}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
 			"action": [
 				{
 					"name": "Shocking Grasp (Cantrip)",
 					"entries": [
 						"{@atk ms} {@hit 6} to hit (with advantage if the target is wearing armor made of metal), reach 5 ft., one creature. {@h}9 ({@damage 2d8}) lightning damage, and the target can't take reactions until the start of its next turn."
-					]
-				},
-				{
-					"name": "Spellcasting",
-					"entries": [
-						"The sage casts one of the following spells, using Intelligence as the spellcasting ability (save {@dc 14}, {@hit 6} to hit with spell attacks):",
-						"At will: light, mage hand, mending",
-						"3/day each: comprehend languages, detect magic, identify",
-						"1/day each: dispel magic, levitate, locate object, see invisibility, sending, tongues, unseen servant"
 					]
 				}
 			],
@@ -3309,7 +3382,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"languageTags": [
 				"C",
 				"X"
@@ -3317,6 +3389,7 @@
 			"damageTags": [
 				"L"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3425,7 +3498,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Immutable Form",
 				"Magic Resistance",
@@ -3447,6 +3519,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3554,7 +3627,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement"
 			],
@@ -3568,6 +3640,7 @@
 				"O",
 				"Y"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -3660,7 +3733,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Damage Absorption"
 			],
@@ -3681,6 +3753,7 @@
 				"grappled",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3789,7 +3862,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -3807,6 +3879,7 @@
 			"conditionInflict": [
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -3890,7 +3963,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -3908,7 +3980,8 @@
 				"MW",
 				"RCH",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Swarm of Animated Books",
@@ -3991,7 +4064,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"senseTags": [
 				"B"
 			],
@@ -4001,6 +4073,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluffImages": true
 		},
 		{
@@ -4203,7 +4276,10 @@
 					]
 				}
 			],
-			"hasToken": true,
+			"legendaryGroup": {
+				"name": "Valin Sarnaster",
+				"source": "CM"
+			},
 			"traitTags": [
 				"Magic Resistance",
 				"Rejuvenation"
@@ -4242,6 +4318,7 @@
 				"prone",
 				"stunned"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -4327,7 +4404,6 @@
 					]
 				}
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Fey Ancestry"
 			],
@@ -4348,175 +4424,29 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Wood Elf Wizard",
 			"source": "CM",
 			"page": 187,
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"elf"
-				]
-			},
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"average": 45,
-				"formula": "10d8"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 9,
-			"dex": 14,
-			"con": 10,
-			"int": 17,
-			"wis": 13,
-			"cha": 12,
-			"skill": {
-				"arcana": "+6",
-				"deception": "+5",
-				"perception": "+4",
-				"stealth": "+5"
-			},
-			"senses": [
-				"darkvision 120 ft."
-			],
-			"passive": 14,
-			"languages": [
-				"Elvish",
-				"Undercommon"
-			],
-			"cr": "7",
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"headerEntries": [
-						"The wood elf's innate spellcasting ability is Charisma (spell save {@dc 12}). It can innately cast the following spells, requiring no material components:"
-					],
-					"will": [
-						"{@spell dancing lights}"
-					],
-					"daily": {
-						"1e": [
-							"{@spell darkness}",
-							"{@spell faerie fire}",
-							"{@spell levitate} (self only)"
-						]
+			"_copy": {
+				"name": "Drow Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "\\bdrow\\b",
+						"with": "wood elf"
 					},
-					"ability": "cha"
-				},
-				{
-					"name": "Spellcasting",
-					"headerEntries": [
-						"The wood elf is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). The wood elf has the following wizard spells prepared:"
-					],
-					"spells": {
-						"0": {
-							"spells": [
-								"{@spell mage hand}",
-								"{@spell minor illusion}",
-								"{@spell poison spray}",
-								"{@spell ray of frost}"
-							]
-						},
-						"1": {
-							"slots": 4,
-							"spells": [
-								"{@spell mage armor}",
-								"{@spell magic missile}",
-								"{@spell shield}",
-								"{@spell witch bolt}"
-							]
-						},
-						"2": {
-							"slots": 3,
-							"spells": [
-								"{@spell alter self}",
-								"{@spell misty step}",
-								"{@spell web}"
-							]
-						},
-						"3": {
-							"slots": 3,
-							"spells": [
-								"{@spell fly}",
-								"{@spell lightning bolt}"
-							]
-						},
-						"4": {
-							"slots": 3,
-							"spells": [
-								"{@spell Evard's black tentacles}",
-								"{@spell greater invisibility}"
-							]
-						},
-						"5": {
-							"slots": 2,
-							"spells": [
-								"{@spell cloudkill}"
-							]
-						}
-					},
-					"ability": "int"
+					"trait": {
+						"mode": "removeArr",
+						"names": "Sunlight Sensitivity"
+					}
 				}
-			],
-			"trait": [
-				{
-					"name": "Fey Ancestry",
-					"entries": [
-						"The wood elf has advantage on saving throws against being {@condition charmed}, and magic can't put the wood elf to sleep."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Staff",
-					"entries": [
-						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage, or 3 ({@damage 1d8 - 1}) bludgeoning damage if used with two hands, plus 3 ({@damage 1d6}) poison damage."
-					]
-				},
-				{
-					"name": "Summon Demon (1/Day)",
-					"entries": [
-						"The wood elf magically summons a quasit, or attempts to summon a shadow demon with a 50 percent chance of success. The summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action."
-					]
-				}
-			],
-			"hasToken": true,
-			"traitTags": [
-				"Fey Ancestry"
-			],
-			"senseTags": [
-				"SD"
-			],
-			"languageTags": [
-				"E",
-				"U"
-			],
-			"damageTags": [
-				"B",
-				"I"
-			],
-			"spellcastingTags": [
-				"CW",
-				"I"
-			],
-			"miscTags": [
-				"MW"
-			],
-			"conditionInflictSpell": [
-				"invisible",
-				"restrained"
-			]
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Zikran",
@@ -4561,7 +4491,6 @@
 				"Sahuagin",
 				"Undercommon"
 			],
-			"hasToken": true,
 			"traitTags": [
 				"Amphibious",
 				"Magic Resistance"
@@ -4573,6 +4502,7 @@
 				"P",
 				"U"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -4717,6 +4647,10 @@
 					]
 				}
 			],
+			"legendaryGroup": {
+				"name": "Zikzokrishka",
+				"source": "CM"
+			},
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -4726,6 +4660,7 @@
 				"SD"
 			],
 			"actionTags": [
+				"Breath Weapon",
 				"Frightful Presence",
 				"Multiattack"
 			],
@@ -4748,6 +4683,7 @@
 				"frightened",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		}

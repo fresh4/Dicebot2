@@ -449,7 +449,7 @@
 										],
 										[
 											"2",
-											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas (20 percent chance of an accurate description)"
+											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas ({@chance 20|20 percent} chance of an accurate description)"
 										],
 										[
 											"3",
@@ -457,7 +457,7 @@
 										],
 										[
 											"4",
-											"Con artist, selling fake treasure maps (but a 10 percent chance that a map is genuine)"
+											"Con artist, selling fake treasure maps (but a {@chance 10|10 percent} chance that a map is genuine)"
 										],
 										[
 											"5",
@@ -481,7 +481,7 @@
 										],
 										[
 											"10",
-											"Elminster, incognito; 10 percent chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
+											"Elminster, incognito; {@chance 10|10 percent} chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
 										]
 									]
 								}
@@ -3581,7 +3581,7 @@
 											"type": "entries",
 											"name": "Bridges",
 											"entries": [
-												"A series of unsteady plank bridges runs 10 feet above the floor, lashed to the pillars and to the slabs of rock that block the eastern stairs. Any creature that falls {@condition unconscious} while on a bridge has a 50 percent chance to fall into the pigpen."
+												"A series of unsteady plank bridges runs 10 feet above the floor, lashed to the pillars and to the slabs of rock that block the eastern stairs. Any creature that falls {@condition unconscious} while on a bridge has a {@chance 50|50 percent} chance to fall into the pigpen."
 											],
 											"id": "114"
 										},

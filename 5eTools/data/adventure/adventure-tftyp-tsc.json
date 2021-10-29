@@ -449,7 +449,7 @@
 										],
 										[
 											"2",
-											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas (20 percent chance of an accurate description)"
+											"Bored, retired adventurer, claims to have explored dungeon of note and can describe first few areas ({@chance 20|20 percent} chance of an accurate description)"
 										],
 										[
 											"3",
@@ -457,7 +457,7 @@
 										],
 										[
 											"4",
-											"Con artist, selling fake treasure maps (but a 10 percent chance that a map is genuine)"
+											"Con artist, selling fake treasure maps (but a {@chance 10|10 percent} chance that a map is genuine)"
 										],
 										[
 											"5",
@@ -481,7 +481,7 @@
 										],
 										[
 											"10",
-											"Elminster, incognito; 10 percent chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
+											"Elminster, incognito; {@chance 10|10 percent} chance he is on an errand of cosmic importance; otherwise, he's pressing Durnan for gossip"
 										]
 									]
 								}
@@ -2592,7 +2592,7 @@
 							"name": "Creature",
 							"id": "104",
 							"entries": [
-								"Balsag the {@creature bugbear} and his two {@creature giant rat} \"hounds,\" named Grip and Fang, reside in a natural stone chamber when they're not hunting (25 percent chance of being absent when characters arrive). The bugbear wears a crown of antlers on his head to enhance his frightening appearance. Balsag considers all non-Durbuluk creatures to be potential prey, so he attacks any he meets, roaring in Goblin,"
+								"Balsag the {@creature bugbear} and his two {@creature giant rat} \"hounds,\" named Grip and Fang, reside in a natural stone chamber when they're not hunting ({@chance 25|25 percent} chance of being absent when characters arrive). The bugbear wears a crown of antlers on his head to enhance his frightening appearance. Balsag considers all non-Durbuluk creatures to be potential prey, so he attacks any he meets, roaring in Goblin,"
 							]
 						},
 						{

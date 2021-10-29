@@ -1721,7 +1721,7 @@
 								],
 								[
 									"4",
-									"Bleeds Wasps. The first time in each combat the demon is reduced to half its hit points or less, a swarm of insects (wasps) forms around it. The swarm considers creatures other than the demon to be enemies."
+									"Bleeds Wasps. The first time in each combat the demon is reduced to half its hit points or less, a {@creature swarm of wasps||swarm of insects (wasps)} forms around it. The swarm considers creatures other than the demon to be enemies."
 								],
 								[
 									"5",
@@ -8271,7 +8271,8 @@
 						"{@creature Zuggtmoy|MTF}"
 					]
 				}
-			]
+			],
+			"id": "194"
 		}
 	]
 }

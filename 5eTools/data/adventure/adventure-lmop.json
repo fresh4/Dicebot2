@@ -146,7 +146,7 @@
 					"name": "Overview",
 					"id": "008",
 					"entries": [
-						"Lost Mine of Phandelver is divided into four parts. In part 1, \"Goblin Arrows,\" the adventurers are on the road to the town of Phandalin when they stumble into a goblin ambush. They discover that the goblins (who belong to the Cragmaw tribe) have captured their dwarf friend Gundren Rockseeker and his escort, a human warrior named Sildar Hallwinter. The characters must deal with the ambushers and then follow their trail back to the goblins' hideout. They rescue Sildar and learn from him that Gundren and his brothers discovered a famous lost mine. Sildar knows only that Gundren and his map have been taken to somewhere called \"Cragmaw Castle.\"",
+						"Lost Mine of Phandelver is divided into four parts. In part 1, \"Goblin Arrows,\" the adventurers are on the road to the town of Phandalin when they stumble into a goblin ambush. They discover that the goblins (who belong to the Cragmaw tribe) have captured their dwarf friend {@creature Gundren Rockseeker|lmop} and his escort, a human warrior named Sildar Hallwinter. The characters must deal with the ambushers and then follow their trail back to the goblins' hideout. They rescue Sildar and learn from him that Gundren and his brothers discovered a famous lost mine. Sildar knows only that Gundren and his map have been taken to somewhere called \"Cragmaw Castle.\"",
 						"In part 2, \"Phandalin,\" the characters arrive in Phandalin to find it terrorized by the Redbrands, a gang of miscreants led by a mysterious figure called Glasstaff. A number of interesting NPCs can also be found in Phandalin, laying the hooks for short adventures in part 3. The Redbrands try to run the characters out of town, so the characters return the favor and storm the Redbrand lair. In a hidden stronghold beneath an old manor, they find that Iarno \"Glasstaff\" Albrek, the leader of the Redbrands, is taking his orders from someone called the Black Spider-and that the Black Spider wants the adventurers out of the picture.",
 						"Part 3, \"The Spider's Web,\" provides the characters with several short adventures in the region around Phandalin as they search for more information about the Black Spider and the dwarves' lost mine. The clues the characters picked up in Phandalin can lead them to spy on a mysterious wizard at the ruins of Old Owl Well, seek the advice of a dangerous banshee, oust a band of orcs lurking at Wyvern Tor, and investigate the ruins of the town of Thundertree.",
 						"Several of these leads point to Cragmaw Castle, which is the stronghold of King Grol, leader of the Cragmaw goblins. Here the characters discover that the Black Spider is a drow adventurer named Nezznar, and that the Cragmaw goblins work for him (drow are elves who hail from a realm deep underground). More importantly, they recover Gundren Rockseeker's map to the lost mine, or learn the mine's location from one of the other leads they unearth during part 3.",
@@ -167,10 +167,16 @@
 								"The characters are in the city of Neverwinter when their dwarf patron and friend, Gundren Rockseeker, hires them to escort a wagon to Phandalin. Gundren has gone ahead with a warrior, Sildar Hallwinter, to attend to business in the town while the characters follow with the supplies. The characters will be paid 10 gp each by the owner of Barthen's Provisions in Phandalin when they deliver the wagon safely to that trading post."
 							]
 						},
-						"{@b Roleplaying and Inspiration}",
-						"One of the things that you can do as the DM is reward players for roleplaying their characters well.",
-						"Each of the characters included in this set has two personality traits (one positive and one negative), an ideal, a bond, and a flaw. These elements can make the character easier and more fun to roleplay. Personality traits provide a glimpse into the character's likes, dislikes, accomplishments, fears, attitude, or mannerisms. An ideal is something that the character believes in or strives for above all else. A character's bond represents a connection to a person, place, or event in the world-someone the character cares about, a place the holds a special connection, or a treasured possession. A flaw is a characteristic that someone else can exploit to bring the character to ruin or cause the character to act against his or her best interests.",
-						"When a player roleplays a negative personality trait or gives in to the drawbacks presented by a bond or flaw, you can give that player one inspiration as a reward. A player with inspiration can use it in a situation where his or her character's personality traits, ideal, or bond relate to what's happening. Spending inspiration gives the character advantage on one ability check, attack roll, or saving throw. A character can have only one inspiration at a time."
+						{
+							"type": "inset",
+							"name": "Roleplaying and Inspiration",
+							"entries": [
+								"One of the things that you can do as the DM is reward players for roleplaying their characters well.",
+								"Each of the characters included in this set has two personality traits (one positive and one negative), an ideal, a bond, and a flaw. These elements can make the character easier and more fun to roleplay. Personality traits provide a glimpse into the character's likes, dislikes, accomplishments, fears, attitude, or mannerisms. An ideal is something that the character believes in or strives for above all else. A character's bond represents a connection to a person, place, or event in the world-someone the character cares about, a place the holds a special connection, or a treasured possession. A flaw is a characteristic that someone else can exploit to bring the character to ruin or cause the character to act against his or her best interests.",
+								"When a player roleplays a negative personality trait or gives in to the drawbacks presented by a bond or flaw, you can give that player one inspiration as a reward. A player with inspiration can use it in a situation where his or her character's personality traits, ideal, or bond relate to what's happening. Spending inspiration gives the character advantage on one ability check, attack roll, or saving throw.",
+								"A character can have only one inspiration at a time."
+							]
+						}
 					]
 				},
 				{
@@ -604,7 +610,7 @@
 								{
 									"type": "list",
 									"items": [
-										"The three Rockseeker brothers (Gundren, Tharden, and Nundro) recently located an entrance to the long-lost Wave Echo Cave, site of the mines of the Phandelver's Pact. (Share the information in the first two paragraphs of the \"Background\" section to the players at this time.)",
+										"The three Rockseeker brothers ({@creature Gundren Rockseeker|lmop|Gundren}, Tharden, and {@creature Nundro Rockseeker|lmop|Nundro}) recently located an entrance to the long-lost Wave Echo Cave, site of the mines of the Phandelver's Pact. (Share the information in the first two paragraphs of the \"Background\" section to the players at this time.)",
 										"Klarg, the bugbear who leads this goblin band, had orders to waylay Gundren. Sildar heard from the goblins that the Black Spider sent word that the dwarf was to be brought to him. Sildar doesn't know who or what the Black Spider is.",
 										"Gundren had a map showing the secret location of Wave Echo Cave, but the goblins took it when they captured him. Sildar believes that Klarg sent the map and the dwarf to the chief of the Cragmaws at a place called Cragmaw Castle. Sildar doesn't know where that might be, but he suggests someone in Phandalin might know. (It doesn't occur to Sildar immediately, but a captured goblin might also be persuaded to divulge the castle's location. See the \"What the Goblins Know\" sidebar on page 8.)",
 										"Sildar's contact in Phandalin is a human wizard named Iarno Albrek. The wizard traveled to the town two months ago to establish order there. After the Lords' Alliance received no word from Iarno, Sildar decided to investigate."
@@ -1073,7 +1079,7 @@
 							"name": "Recovered Goods",
 							"id": "05b",
 							"entries": [
-								"If the characters return the stolen goods found in {@area 8|098} of the Cragmaw hideout (or if they left the goods but reveal where they can be found), Linene gives them a reward of 50 gp and promises to help the adventurers any way she can."
+								"If the characters return the stolen goods found in {@area 8|037} of the Cragmaw hideout (or if they left the goods but reveal where they can be found), Linene gives them a reward of 50 gp and promises to help the adventurers any way she can."
 							]
 						}
 					]
@@ -1272,7 +1278,7 @@
 									]
 								},
 								"Continue the insults and baiting as long as you like. The Redbrands attack in a round or two if the characters don't. Neither side is surprised, because it's obvious that a fight is brewing.",
-								"The group consists of four Redbrand ruffians. If three of them are defeated, the last one flees toward Tresendar Manor."
+								"The group consists of four {@creature Redbrand Ruffian|lmop|Redbrand ruffians}. If three of them are defeated, the last one flees toward Tresendar Manor."
 							]
 						},
 						{
@@ -2431,7 +2437,7 @@
 							"name": "Joining the Emerald Enclave",
 							"id": "0e2",
 							"entries": [
-								"If the party helps Reidoth by chasing off Venomfang, the druid privately approaches certain members of the group and urges them to join the Emerald Enclave. He speaks with those who exemplify the ideal of protecting the natural order. If a character agrees, Reidoth gives the individual the title of Springwarden."
+								"If the party helps Reidoth by chasing off {@creature Venomfang|lmop}, the druid privately approaches certain members of the group and urges them to join the Emerald Enclave. He speaks with those who exemplify the ideal of protecting the natural order. If a character agrees, Reidoth gives the individual the title of Springwarden."
 							]
 						}
 					]
@@ -2480,7 +2486,7 @@
 							"name": "Webs",
 							"id": "0e8",
 							"entries": [
-								"The webs fill two squares north of the doorway (and the square marked \"6\"). They are difficult terrain, and a creature trying to move through them must succeed on a DC 10 Strength (Athletics) check. On a failure, the creature is restrained in the webs (see the rulebook for the effects of being restrained). A snared creature can take an action each round to attempt to break free with a DC 12 Strength check, or it can try to cut its way free by using a light weapon that deals slashing damage. The webs have AC 10, 5 hit points, vulnerability to fire damage, and immunity to bludgeoning, poison, and psychic damage (see \"Damage Resistance and Vulnerability\" in the rulebook for how vulnerability works)."
+								"The webs fill two squares north of the doorway (and the square marked \"6\"). They are difficult terrain, and a creature trying to move through them must succeed on a DC 10 Strength (Athletics) check. On a failure, the creature is restrained in the {@hazard webs} (see the rulebook for the effects of being restrained). A snared creature can take an action each round to attempt to break free with a DC 12 Strength check, or it can try to cut its way free by using a light weapon that deals slashing damage. The webs have AC 10, 5 hit points, vulnerability to fire damage, and immunity to bludgeoning, poison, and psychic damage (see \"Damage Resistance and Vulnerability\" in the rulebook for how vulnerability works)."
 							]
 						},
 						"Going around the webs is difficult because of the thickets on the north side of the road. Going around the ruined building to the south leads to the twig blights in {@area 5|0e3}.",
@@ -4016,7 +4022,7 @@
 								"Dusty draperies adorn the walls of this room, which also contains a bed and brazier. A badly disheveled dwarf lies bound and unconscious on the cold stone floor."
 							]
 						},
-						"This room formerly belonged to the priest in charge of Dumathoin's temple ({@area 19|18b}), but Nezznar has appropriated it for use as a cell. The figure lying on the floor is Nundro, a dwarf {@creature commoner} and the youngest of the three Rockseeker brothers. Nezznar spared him because he thought the dwarf might know more about the mine than he admitted. The drow has interrogated Nundro harshly once or twice a day ever since capturing him.",
+						"This room formerly belonged to the priest in charge of Dumathoin's temple ({@area 19|18b}), but Nezznar has appropriated it for use as a cell. The figure lying on the floor is {@creature Nundro Rockseeker|lmop|Nundro}, a dwarf {@creature commoner} and the youngest of the three Rockseeker brothers. Nezznar spared him because he thought the dwarf might know more about the mine than he admitted. The drow has interrogated Nundro harshly once or twice a day ever since capturing him.",
 						{
 							"type": "entries",
 							"name": "Developments",
@@ -4196,6 +4202,7 @@
 					"type": "list",
 					"columns": 3,
 					"items": [
+						"{@creature ash zombie|LMoP}",
 						"{@creature Bugbear}",
 						"{@creature Commoner}",
 						"{@creature Cultist}",
@@ -4206,10 +4213,12 @@
 						"{@creature Giant Spider}",
 						"{@creature Goblin}",
 						"{@creature Grick}",
+						"{@creature Gundren Rockseeker|lmop}",
 						"{@creature Hobgoblin}",
 						"{@creature Mormesk the Wraith|LMoP}",
 						"{@creature Nezznar the Black Spider|LMoP}",
 						"{@creature Nothic}",
+						"{@creature Nundro Rockseeker|lmop}",
 						"{@creature Ochre Jelly}",
 						"{@creature Ogre}",
 						"{@creature Orc}",
@@ -4221,7 +4230,7 @@
 						"{@creature Stirge}",
 						"{@creature Twig Blight}",
 						"{@creature Wolf}",
-						"{@creature Young Green Dragon}",
+						"{@creature Young Green Dragon} ({@creature Venomfang|lmop})",
 						"{@creature Zombie}"
 					]
 				}

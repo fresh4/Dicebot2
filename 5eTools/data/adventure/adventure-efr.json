@@ -699,7 +699,7 @@
 							"name": "T5. Lower-Level Apartments",
 							"id": "4b6",
 							"entries": [
-								"The lower-level apartments have similar layouts to the ones in {@adventure area T4|ERLW|0|T4. Top-Level Apartments} but house different creatures. The door to every apartment is locked. If you need occupants for an apartment, use the Apartment Occupants table to generate them. There is a 10 percent chance that an occupant knows what Martisha Kullandra knows about Garra (see {@adventure area T4a|ERLW|0|T4a. Martisha's Apartment}).",
+								"The lower-level apartments have similar layouts to the ones in {@adventure area T4|ERLW|0|T4. Top-Level Apartments} but house different creatures. The door to every apartment is locked. If you need occupants for an apartment, use the Apartment Occupants table to generate them. There is a {@chance 10|10 percent} chance that an occupant knows what Martisha Kullandra knows about Garra (see {@adventure area T4a|ERLW|0|T4a. Martisha's Apartment}).",
 								{
 									"type": "table",
 									"caption": "Apartment Occupants",
