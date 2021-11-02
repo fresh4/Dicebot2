@@ -248,7 +248,11 @@ function replaceStupidFilters(input){
                    .replace(/{@atk mw,rw}/g, "{@atk *Melee or Ranged Weapon Attack*:} ")
                    .replace(/{@atk ms}/g, "{@atk *Melee Spell Attack*:} ")
                    .replace(/{@atk rs}/g, "{@atk *Ranged Spell Attack*:} ")
-                   .replace(/{@recharge/g, "{@recharge Recharge")
+                   .replace(/{@recharge( \d)?}/g, r => {
+                        return (r = input.match(/{@recharge( \d)?}/)[1]) ? 
+                            `{@recharge (Recharge ${Number(r[1])}-6)}` : 
+                            `{@recharge (Recharge 6)}`
+                   })
                    .replace(/{@scaledamage .*?}/g, `{@scaledamage ${input.match(/(\d*\w*)}/g)}`)
     return output
 }
