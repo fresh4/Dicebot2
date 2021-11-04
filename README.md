@@ -8,7 +8,7 @@ Dicebot is a Discord bot using NodeJS, with an extensive amount of dice rolling 
 ### Install Locally
 If you want to install and run Dicebot for yourself, doing so should be straightforward. After cloning the directory, in the root folder you'll need to create 3 files.
 
-`server_info.json`: you can leave this empty.
+`server_info.json`: you can leave this empty. (NOTE: An empty .json should just contain `{}`, rather than literally empty.)
 
 `reminderQueue.txt`: you can leave this empty.
 
