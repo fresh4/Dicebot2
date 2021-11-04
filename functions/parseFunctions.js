@@ -100,6 +100,10 @@ class tags {
         this.input = filterFunc("scaledamage", this.input);
         return this
     }
+    removeItalics(){
+        this.input = filterFunc("i", this.input);
+        return this
+    }
     toString(){
         return this.input
     }
@@ -130,6 +134,7 @@ exports.removeTags = function(input){
                           .removeAction()
                           .removeRace()
                           .removeScaleDamage()
+                          .removeItalics()
                           .toString()
 }
 exports.parseSourcesName = function(source){
@@ -254,6 +259,9 @@ function replaceStupidFilters(input){
                             `{@recharge (Recharge 6)}`
                    })
                    .replace(/{@scaledamage .*?}/g, `{@scaledamage ${input.match(/(\d*\w*)}/g)}`)
+                   .replace(/{@i (.*?)}/g, (e)=>{
+                       return `{@i *__${e.match(/{@i (.*?)}/)[1]}__*}`
+                   })
     return output
 }
 function jsplit(str, sep, n) {
