@@ -11,8 +11,8 @@ exports.run = (bot, msg, args) => {
     let coins = parseCoins(items.coins)
     items = items.table;
     let gems = pickLoot(items, "gems", d100),
-        art = pickLoot(items, "artobjects", d100),
-        magicItems = parse.removeTags(pickLoot(items, "magicitems", d100));
+        art = pickLoot(items, "artObjects", d100),
+        magicItems = parse.removeTags(pickLoot(items, "magicItems", d100));
     let embed = new discord.MessageEmbed().setTitle("Loot Generator")
                                        .setDescription(`Items generated for a hoard belonging to a CR ${CR} creature`)
                                        .addField("**Coins**", coins)
@@ -28,13 +28,23 @@ function pickLoot(table, lootType, dice){
         if(entry.min <= dice && dice <= entry.max){
             if(entry[lootType]){
                 if(lootType == "gems"){
-                    output = rollLoot(loot.gemstones, entry[lootType].type, entry[lootType].amount)
+                    output = rollLoot(loot.gems, entry[lootType].type, entry[lootType].amount)
                 }
-                if(lootType == "artobjects"){
-                    output = rollLoot(loot.artobjects, entry[lootType].type, entry[lootType].amount)
+                if(lootType == "artObjects"){
+                    output = rollLoot(loot.artObjects, entry[lootType].type, entry[lootType].amount)
                 }
-                if(lootType == "magicitems"){
-                    output = rollLoot(loot.magicitems, entry[lootType].type, entry[lootType].amount)
+                if(lootType == "magicItems"){
+                    let magicItems = {type: "", amount: ""}
+                    for(let i in entry[lootType]){
+                        if(i == 0){
+                            magicItems.type += entry[lootType][i].type
+                            magicItems.amount += entry[lootType][i].amount
+                        } else{
+                            magicItems.type += "," + entry[lootType][i].type
+                            magicItems.amount += "," + entry[lootType][i].amount
+                        }
+                    }
+                    output = rollLoot(loot.magicItems, magicItems.type, magicItems.amount)
                 }
             } else output = "None."
         }
@@ -56,7 +66,7 @@ function rollLoot(item, type, amount){
                     output += "\n"
                     for(let i = 0; i < rollAmount; i++){
                         if(i > 0) output += "\n";
-                        output += table.rollTable(entry.table, 100)
+                        output += "• " + table.rollTable(entry.table, 100)
                     }
                 }
             }
