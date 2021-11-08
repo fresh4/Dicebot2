@@ -59,6 +59,7 @@ function rollLoot(item, type, amount){
         item.forEach(entry => {
             if(entry.type == type[j]){
                 (j > 0) ? output += "\n" : ""
+                if(amount[j] == 1) amount[j] = "1d1" 
                 let dice = amount[j].split("d");
                 let rollAmount = roll.RollX(dice[0], dice[1]);
                 output += `*${rollAmount}* x ${entry.name}`
