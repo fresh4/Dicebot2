@@ -7,7 +7,12 @@ exports.rollTable = function(table, diceType){
             if(table[i].min <= roll && roll <= table[i].max){
                 if(table[i].result) return table[i].result
                 else if(table[i].item) return table[i].item
-                else if(table[i].choose) return (table[i].choose.fromGeneric || "")
+                else if(table[i].choose) {
+                    if(table[i].choose.fromGeneric)
+                        return (table[i].choose.fromGeneric)
+                    else if(table[i].choose.fromGroup)
+                        return (table[i].choose.fromGroup || "")
+                }
             }
         }
     }
