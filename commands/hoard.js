@@ -76,7 +76,7 @@ function parseCoins(coins){
 function pickTable(CR, tables){
     let output = ""
     tables.forEach(option => {
-        if(option.mincr <= CR && CR <= option.maxcr) output = option
+        if(option.crMin <= CR && CR <= option.crMax) output = option
     });
     return output
 }
