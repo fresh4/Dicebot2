@@ -1,7 +1,5 @@
 exports.run = (bot, msg, args) => {
-    var result = Math.floor(Math.random() * 2) + 1;
-    if(result == 1) msg.channel.send("Heads");
-    else msg.channel.send("Tails");
+    msg.channel.send(((Math.floor(Math.random() * 2) + 1) == 1) ? "Heads" : "Tails")
 }
 module.exports.help = {
     name: "flip",
