@@ -7,6 +7,9 @@ var itemParser = require('../functions/parseItemFunctions.js');
 var raceParser = require('../functions/parseRaceFunctions.js');
 var backgroundParser = require('../functions/parseBackgroundFunctions.js');
 var parse = require('../functions/parseFunctions.js');
+var bestiary = require('../functions/loadFunctions.js').loadBestiary();
+var subclasses = require('../functions/loadFunctions.js').loadSubClasses();
+
 
 /*
 FUCKING READ THIS YOU DIMWIT
@@ -18,6 +21,15 @@ DON'T FUCKING FORGET
 exports.lookup = function(book, msg, args){
     let input = args.join(' ');
     let type = Object.keys(book)[0], entries = book[type], occurences = 0, listOfFoundObjects = [];
+    if(input.includes("_copy")){
+        var result;
+        entries.forEach(entry => { 
+            if(compare.compareTwoStrings(entry.name.toLowerCase(), input.split("_copy")[0].toLowerCase()) == 1) {
+                result = entry;
+            }
+        })
+        return result
+    }
     entries.forEach(entry => { 
         const relevance = compare.compareTwoStrings(entry.name.toLowerCase(), input.toLowerCase());
         if(relevance == 1) {
@@ -157,7 +169,7 @@ exports.classLookup = function(classs, args){
     let startEquipment = classParser.parseStartEquipment(classs.startingEquipment);
     let multiclassingInfo = classParser.parseMulticlassingInfo(classs);
     let quickStart = classParser.parseQuickStart(classs.fluff);
-    let subclassList = classParser.parseSubclassList(classs.subclasses);
+    //let subclassList = classParser.parseSubclassList(classs.subclasses);
     let source = `${parse.parseSourcesName(classs.source)} p. ${classs.page}`
     embeddedMessage.setTitle(classs.name)
                    .setDescription(levelTable)
@@ -166,11 +178,15 @@ exports.classLookup = function(classs, args){
                    .addField("Starting Equipment", startEquipment)
                    .addField("Multiclassing", multiclassingInfo)
                    .addField("Quick Build", quickStart)
-                   .setFooter(`${source}\nUse the classfeat command to lookup a specific feature.\nSubclasses: ${subclassList}`)
+                   //.setFooter(`${source}\nUse the classfeat command to lookup a specific feature.\nSubclasses: ${subclassList}`)
                    .setColor("fa2af3")
     return embeddedMessages;
 }
 exports.monsterLookup = function(monster){
+    let originalMonster = monster,
+        replace, replacewith;
+    if(monster._copy) monster = this.lookup(bestiary, null, (monster._copy.name + "_copy").split(" "));
+
     let embeddedMessage = new discord.MessageEmbed().setColor("f44242"),
         embeddedMessages = {embeds: [embeddedMessage]};
     let footer = (monster.source) ? `Source: ${parse.parseSourcesName(monster.source)}, page ${(monster.page) ? monster.page : null}` : null 
@@ -178,15 +194,33 @@ exports.monsterLookup = function(monster){
     let physicals = monsterParser.parsePhysical(monster, embeddedMessage);
     let scores = monsterParser.parseScores(monster);
     let passiveInfo = monsterParser.parsePassives(monster);
-    embeddedMessage.setTitle(monster.name)
+    embeddedMessage.setTitle(originalMonster.name)
                     .setDescription(descriptors)
                     .addField("Ability Scores", scores)
                     .addField("Attributes", passiveInfo)
                     .setFooter(footer);
-    let traits = (monster.trait || monster.spellcasting) ? monsterParser.parseTraits(monster, embeddedMessage) : null
-    let actions = (monster.action) ? monsterParser.parseActions(monster.action, embeddedMessage, "ACTIONS") : null
-    let legendaryActions = (monster.legendary) ? monsterParser.parseActions(monster.legendary, embeddedMessage, "LEGENDARY ACTIONS") : null
-    let reactions = (monster.reaction) ? monsterParser.parseActions(monster.reaction, embeddedMessage, "REACTIONS") : null
+    let traits = (monster.trait || monster.spellcasting) ? monsterParser.parseTraits(monster) : null
+    let actions = (monster.action) ? monsterParser.parseActions(monster.action) : null
+    let legendaryActions = (monster.legendary) ? monsterParser.parseActions(monster.legendary) : null
+    let reactions = (monster.reaction) ? monsterParser.parseActions(monster.reaction) : null
+
+    if(originalMonster._copy){
+        if(originalMonster._copy._mod){
+            if(originalMonster._copy._mod["*"]){
+                replace = new RegExp(originalMonster._copy._mod["*"].replace, "ig")
+                replacewith = originalMonster._copy._mod["*"].with;
+                if(traits) traits = traits.replaceAll(replace, replacewith)
+                if(actions) actions = actions.replaceAll(replace, replacewith)
+                if(legendaryActions) legendaryActions = legendaryActions.replaceAll(replace, replacewith)
+                if(reactions) reactions = reactions.replaceAll(replace, replacewith)
+            }
+        }
+    }
+    if(traits) traits = parse.handleLongMessage(traits, embeddedMessage, "TRAITS")
+    if(actions) actions = parse.handleLongMessage(actions, embeddedMessage, "ACTIONS")
+    if(legendaryActions) legendaryActions = parse.handleLongMessage(legendaryActions, embeddedMessage, "LEGENDARY ACTIONS")
+    if(reactions) reactions = parse.handleLongMessage(reactions, embeddedMessage, "REACTIONS")
+
     return embeddedMessages;
 }
 exports.spellLookup = function(spell){

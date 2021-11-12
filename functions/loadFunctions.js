@@ -5,7 +5,7 @@ exports.loadClassFeatures = function(){
     fs.readdir("./5eTools/data/class/", (err, files) => {
         if (err) return console.error(err);
         files.forEach(file => {
-            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick")) return;
+            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick") || file.match('generic')) return;
             classes.classfeatures = classes.classfeatures.concat(require(`../5eTools/data/class/${file}`).classFeature)
         });
     });
@@ -17,7 +17,7 @@ exports.loadSubclassFeatures = function(){
     fs.readdir("./5eTools/data/class/", (err, files) => {
         if (err) return console.error(err);
         files.forEach(file => {
-            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick")) return;
+            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick") || file.match('generic')) return;
             classes.subclassfeatures = classes.subclassfeatures.concat(require(`../5eTools/data/class/${file}`).subclassFeature)
         });
     });
@@ -29,11 +29,23 @@ exports.loadClasses = function(){
     fs.readdir("./5eTools/data/class/", (err, files) => {
         if (err) return console.error(err);
         files.forEach(file => {
-            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick")) return;
+            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick") || file.match('generic')) return;
             classes.class = classes.class.concat(require(`../5eTools/data/class/${file}`).class)
         });
     });
     return classes;
+}
+
+exports.loadSubClasses = function(){
+    let subclasses = {"subclass":[]};
+    fs.readdir("./5eTools/data/class/", (err, files) => {
+        if (err) return console.error(err);
+        files.forEach(file => {
+            if (!file.endsWith(".json") || !file.startsWith('class-') || file.match("sidekick") || file.match('generic')) return;
+            subclasses.subclass = subclasses.subclass.concat(require(`../5eTools/data/class/${file}`).subclass)
+        });
+    });
+    return subclasses
 }
 exports.loadBestiary = function(){
     let bestiary = {"monster": []};

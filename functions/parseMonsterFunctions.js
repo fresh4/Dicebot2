@@ -33,7 +33,7 @@ exports.parsePassives = function(monster){
     if(monster.cr) output += `**Challenge** ${parseCR(monster.cr)}\n`
     return output;
 }
-exports.parseTraits = function(monster, message){
+exports.parseTraits = function(monster){
     let output = "" 
     output += (monster.trait) ? parse.parseEntry(monster.trait, "\n") + "\n" : ""
     if(monster.spellcasting){ 
@@ -61,13 +61,11 @@ exports.parseTraits = function(monster, message){
             }
         })
     }
-    output = parse.handleLongMessage(output, message, "TRAITS");
     return output;
 }
-exports.parseActions = function(monster, message, title){
+exports.parseActions = function(monster){
     let output = ""
     output = parse.parseEntry(monster, "\n")
-    output = parse.handleLongMessage(output, message, title);
     return output;
 }
 function parseResistances(immunity, type){

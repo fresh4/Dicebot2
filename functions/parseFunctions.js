@@ -160,7 +160,6 @@ exports.parseTable = function(tableObject){
                 if(tableObject.rows[i][j].roll.min && tableObject.rows[i][j].roll.max != undefined){
                     if(tableObject.rows[i][j].roll.max == 0) tableObject.rows[i][j].roll.max = 100
                     tableRows += `**${tableObject.rows[i][j].roll.min} - ${tableObject.rows[i][j].roll.max}** **\|** `
-
                 }
                 else if(tableObject.rows[i][j].roll.exact) tableRows += `**${tableObject.rows[i][j].roll.exact}** \| `
             }
@@ -179,11 +178,7 @@ exports.handleLongMessage = function(input, message, title){
     let output = input.split(/(?<=\.\s|\n)/), count = 0, acc = ""
     for(let i = 0; i < output.length; i++){
         if((acc + output[i]).length + message.length > 6000){
-
             break;
-            //let message2 = new discord.MessageEmbed().setColor(message.color).setDescription("...continued");
-            //acc = output[i]
-            //console.log(this.handleLongMessage(acc, message2, title))
         }
         else if((acc + output[i]).length < 1024) acc += `${output[i]}`
         else{
