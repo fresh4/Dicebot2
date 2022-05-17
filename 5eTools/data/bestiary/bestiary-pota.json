@@ -23,7 +23,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 192,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -187,6 +189,13 @@
 				"L",
 				"P"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"I",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -221,7 +230,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 201,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -357,6 +368,11 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O"
+			],
 			"spellcastingTags": [
 				"CS",
 				"I"
@@ -373,7 +389,9 @@
 			"name": "Black Earth Guard",
 			"source": "PotA",
 			"page": 195,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -456,7 +474,9 @@
 			"name": "Black Earth Priest",
 			"source": "PotA",
 			"page": 195,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -572,6 +592,11 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"T"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -629,7 +654,9 @@
 			"name": "Burrowshark",
 			"source": "PotA",
 			"page": 196,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -749,7 +776,9 @@
 			"name": "Crushing Wave Priest",
 			"source": "PotA",
 			"page": 205,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -849,6 +878,12 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"C",
+				"N",
+				"O",
+				"P"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -863,7 +898,9 @@
 			"name": "Crushing Wave Reaver",
 			"source": "PotA",
 			"page": 205,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -968,7 +1005,9 @@
 					"source": "SLW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1098,7 +1137,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 210,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1226,7 +1267,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 202,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1341,6 +1384,13 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F",
+				"I",
+				"N",
+				"P",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -1392,7 +1442,9 @@
 			"name": "Eternal Flame Guardian",
 			"source": "PotA",
 			"page": 200,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1492,7 +1544,9 @@
 			"name": "Eternal Flame Priest",
 			"source": "PotA",
 			"page": 200,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1594,6 +1648,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -1615,7 +1672,9 @@
 					"source": "GoS"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1727,6 +1786,11 @@
 				"B",
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"N",
+				"O"
+			],
 			"spellcastingTags": [
 				"CL",
 				"F"
@@ -1751,7 +1815,9 @@
 			"name": "Feathergale Knight",
 			"source": "PotA",
 			"page": 189,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1850,6 +1916,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"C"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -1917,7 +1986,9 @@
 			"name": "Flamewrath",
 			"source": "PotA",
 			"page": 201,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2033,6 +2104,10 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"F"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -2050,7 +2125,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 208,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2218,6 +2295,16 @@
 				"C",
 				"P"
 			],
+			"damageTagsLegendary": [
+				"L",
+				"N"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -2241,7 +2328,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 210,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2412,7 +2501,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 198,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2535,7 +2626,9 @@
 			"name": "Howling Hatred Initiate",
 			"source": "PotA",
 			"page": 190,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2620,7 +2713,9 @@
 			"name": "Howling Hatred Priest",
 			"source": "PotA",
 			"page": 190,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2635,7 +2730,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -2746,6 +2841,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"L"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -2762,7 +2861,9 @@
 			"name": "Hurricane",
 			"source": "PotA",
 			"page": 191,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2877,6 +2978,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"T"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -2892,7 +2996,9 @@
 			"isNamedCreature": true,
 			"source": "PotA",
 			"page": 214,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -3080,6 +3186,13 @@
 				"B",
 				"F"
 			],
+			"damageTagsLegendary": [
+				"B",
+				"F"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3087,6 +3200,9 @@
 				"AOE",
 				"MW",
 				"RCH"
+			],
+			"conditionInflict": [
+				"exhaustion"
 			],
 			"conditionInflictLegendary": [
 				"prone"
@@ -3174,6 +3290,10 @@
 					"ability": "int"
 				}
 			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
 			"hasToken": true
 		},
 		{
@@ -3198,7 +3318,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 199,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -3253,7 +3375,7 @@
 				{
 					"name": "Earth Passage",
 					"entries": [
-						"Marlos can move in difficult terrain composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were difficult terrain. If he ends his turn there, he is shunted into the nearest space he last occupied."
+						"Marlos can move in {@quickref difficult terrain||3} composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were {@quickref difficult terrain||3}. If he ends his turn there, he is shunted into the nearest space he last occupied."
 					]
 				},
 				{
@@ -3314,6 +3436,9 @@
 				"P",
 				"T"
 			],
+			"damageTagsLegendary": [
+				"B"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -3330,7 +3455,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 198,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3451,7 +3578,7 @@
 				{
 					"name": "Earth Walk",
 					"entries": [
-						"Moving through difficult terrain made of earth or stone costs Miraj no extra movement."
+						"Moving through {@quickref difficult terrain||3} made of earth or stone costs Miraj no extra movement."
 					]
 				}
 			],
@@ -3469,6 +3596,16 @@
 			],
 			"damageTags": [
 				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O",
+				"T"
 			],
 			"spellcastingTags": [
 				"CS",
@@ -3533,7 +3670,7 @@
 				"name": "Adult Black Dragon",
 				"source": "MM",
 				"_trait": {
-					"name": "Shadow Dragon",
+					"name": "Legendary Shadow Dragon",
 					"source": "MM"
 				},
 				"_mod": {
@@ -3556,6 +3693,7 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [],
 			"hasToken": true
 		},
 		{
@@ -3564,7 +3702,9 @@
 			"isNamedCreature": true,
 			"source": "PotA",
 			"page": 216,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -3738,6 +3878,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3766,7 +3909,9 @@
 			"isNamedCreature": true,
 			"source": "PotA",
 			"page": 218,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -3946,6 +4091,16 @@
 				"A",
 				"B"
 			],
+			"damageTagsLegendary": [
+				"C"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3973,7 +4128,9 @@
 			"name": "One-Eyed Shiver",
 			"source": "PotA",
 			"page": 207,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4085,6 +4242,10 @@
 				"C",
 				"P"
 			],
+			"damageTagsSpell": [
+				"N",
+				"T"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -4106,7 +4267,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 212,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4223,6 +4386,12 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"I",
+				"L",
+				"N",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -4273,7 +4442,9 @@
 			"name": "Razerblast",
 			"source": "PotA",
 			"page": 201,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4470,6 +4641,7 @@
 					"ability": "int"
 				}
 			],
+			"damageTagsLegendary": [],
 			"hasToken": true
 		},
 		{
@@ -4513,7 +4685,9 @@
 			"name": "Sacred Stone Monk",
 			"source": "PotA",
 			"page": 196,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4613,7 +4787,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 208,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4743,6 +4919,13 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"N",
+				"O"
+			],
 			"spellcastingTags": [
 				"CS",
 				"I"
@@ -4759,7 +4942,9 @@
 			"name": "Skyweaver",
 			"source": "PotA",
 			"page": 191,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4858,6 +5043,10 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"L"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -4895,7 +5084,9 @@
 			"name": "Stonemelder",
 			"source": "PotA",
 			"page": 197,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5017,6 +5208,11 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"T"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -5031,7 +5227,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 192,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5156,6 +5354,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"C"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -5194,7 +5395,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 203,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5209,7 +5412,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -5354,6 +5557,18 @@
 				"F",
 				"P"
 			],
+			"damageTagsLegendary": [
+				"F"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"T"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -5370,7 +5585,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 212,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5482,6 +5699,11 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"P"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -5500,7 +5722,9 @@
 			"isNpc": true,
 			"source": "PotA",
 			"page": 192,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5515,7 +5739,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -5637,6 +5861,11 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"O",
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CB"
 			],
@@ -5656,7 +5885,9 @@
 			"isNamedCreature": true,
 			"source": "PotA",
 			"page": 221,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N",
@@ -5845,6 +6076,14 @@
 				"L",
 				"O",
 				"T"
+			],
+			"damageTagsLegendary": [
+				"B",
+				"L"
+			],
+			"damageTagsSpell": [
+				"I",
+				"L"
 			],
 			"spellcastingTags": [
 				"I"

@@ -1,4 +1,11 @@
 {
+	"_meta": {
+		"dependencies": {
+			"subclass": [
+				"generic"
+			]
+		}
+	},
 	"class": [
 		{
 			"name": "Warlock",
@@ -101,6 +108,15 @@
 						8,
 						8
 					]
+				},
+				{
+					"name": "Pact Boon",
+					"featureType": [
+						"PB"
+					],
+					"progression": {
+						"3": 1
+					}
 				}
 			],
 			"startingProficiencies": {
@@ -3281,7 +3297,7 @@
 					"items": [
 						"Your spirit and body gain resistance to bludgeoning, piercing, and slashing damage.",
 						"When you cast a spell of the conjuration or necromancy school, the spell doesn't require verbal, somatic, or material components that lack a gold cost.",
-						"You have a flying speed equal to your walking speed and can hover. You can move through creatures and objects as if they were difficult terrain, but you take {@damage 1d10} force damage if you end your turn inside a creature or an object.",
+						"You have a flying speed equal to your walking speed and can hover. You can move through creatures and objects as if they were {@quickref difficult terrain||3}, but you take {@damage 1d10} force damage if you end your turn inside a creature or an object.",
 						"While you are using your Form of Dread, once during each of your turns when you deal necrotic damage to a creature, you regain hit points equal to half the amount of necrotic damage dealt."
 					]
 				},
@@ -3478,12 +3494,12 @@
 					"items": [
 						{
 							"type": "item",
-							"name": "Bottled Respite.",
+							"name": "Bottled Respite",
 							"entry": "As an action, you can magically vanish and enter your vessel, which remains in the space you left. The interior of the vessel is an extradimensional space in the shape of a 20-foot-radius cylinder, 20 feet high, and resembles your vessel. The interior is comfortably appointed with cushions and low tables and is a comfortable temperature. While inside, you can hear the area around your vessel as if you were in its space. You can remain inside the vessel up to a number of hours equal to twice your proficiency bonus. You exit the vessel early if you use a bonus action to leave, if you die, or if the vessel is destroyed. When you exit the vessel, you appear in the unoccupied space closest to it. Any objects left in the vessel remain there until carried out, and if the vessel is destroyed, every object stored there harmlessly appears in the unoccupied spaces closest to the vessel's former space. Once you enter the vessel, you can't enter again until you finish a long rest."
 						},
 						{
 							"type": "item",
-							"name": "Genie's Wrath.",
+							"name": "Genie's Wrath",
 							"entry": "Once during each of your turns when you hit with an attack roll, you can deal extra damage to the target equal to your proficiency bonus. The type of this damage is determined by your patron: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid)."
 						}
 					]
@@ -4683,7 +4699,7 @@
 					"items": [
 						"Your spirit and body gain resistance to bludgeoning, piercing, and slashing damage.",
 						"When you cast a spell of the conjuration or necromancy school, the spell doesn't require verbal or somatic components or material components that lack a gold cost.",
-						"You have a flying speed equal to your walking speed and can hover. You can move through creatures and objects as if they were difficult terrain, but you take {@dice 1d10} force damage if you end your turn inside a creature or an object.",
+						"You have a flying speed equal to your walking speed and can hover. You can move through creatures and objects as if they were {@quickref difficult terrain||3}, but you take {@dice 1d10} force damage if you end your turn inside a creature or an object.",
 						"While you are using your Form of Dread, once during each of your turns when you deal necrotic damage to a creature, you regain hit points equal to half the amount of necrotic damage dealt."
 					]
 				},

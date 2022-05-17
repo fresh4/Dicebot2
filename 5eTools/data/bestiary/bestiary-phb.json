@@ -4,7 +4,9 @@
 			"name": "Animated Object (Huge)",
 			"source": "PHB",
 			"page": 213,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -18,7 +20,7 @@
 				}
 			],
 			"hp": {
-				"average": 80
+				"special": "80"
 			},
 			"speed": {
 				"walk": 30
@@ -66,7 +68,9 @@
 			"name": "Animated Object (Large)",
 			"source": "PHB",
 			"page": 213,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -80,7 +84,7 @@
 				}
 			],
 			"hp": {
-				"average": 50
+				"special": "50"
 			},
 			"speed": {
 				"walk": 30
@@ -128,7 +132,9 @@
 			"name": "Animated Object (Medium)",
 			"source": "PHB",
 			"page": 213,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -142,7 +148,7 @@
 				}
 			],
 			"hp": {
-				"average": 40
+				"special": "40"
 			},
 			"speed": {
 				"walk": 30
@@ -190,7 +196,9 @@
 			"name": "Animated Object (Small)",
 			"source": "PHB",
 			"page": 213,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -204,7 +212,7 @@
 				}
 			],
 			"hp": {
-				"average": 25
+				"special": "25"
 			},
 			"speed": {
 				"walk": 30
@@ -252,7 +260,9 @@
 			"name": "Animated Object (Tiny)",
 			"source": "PHB",
 			"page": 213,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -266,7 +276,7 @@
 				}
 			],
 			"hp": {
-				"average": 20
+				"special": "20"
 			},
 			"speed": {
 				"walk": 30

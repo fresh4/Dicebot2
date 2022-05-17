@@ -24,7 +24,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 73,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -157,7 +159,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 144,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -259,7 +263,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 135,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "plant",
 			"alignment": [
 				"N",
@@ -354,7 +360,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 216,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -510,6 +518,8 @@
 				"MW"
 			],
 			"conditionInflict": [
+				"blinded",
+				"grappled",
 				"restrained"
 			],
 			"hasToken": true,
@@ -520,7 +530,9 @@
 			"name": "Brigganock",
 			"source": "WBtW",
 			"page": 230,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -630,6 +642,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"B"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -647,7 +662,9 @@
 			"name": "Bullywug Knight",
 			"source": "WBtW",
 			"page": 231,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"L",
@@ -756,7 +773,9 @@
 			"name": "Campestri",
 			"source": "WBtW",
 			"page": 232,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -841,7 +860,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 78,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -968,7 +989,9 @@
 			"name": "Displacer Beast Kitten",
 			"source": "WBtW",
 			"page": 108,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -1037,7 +1060,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 224,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1161,7 +1186,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 217,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -1297,7 +1324,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 178,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -1362,7 +1391,7 @@
 				{
 					"name": "Petrifying Breath {@recharge 5}",
 					"entries": [
-						"Envy exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a {@dc 13} Constitution saving throw. On a failed save, a target begins to turn to stone and is {@condition restrained}. The {@condition restrained} target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is {@condition petrified} until freed by the greater restoration spell or other magic."
+						"Envy exhales petrifying gas in a 30-foot cone. Each creature in that area must succeed on a {@dc 13} Constitution saving throw. On a failed save, a target begins to turn to stone and is {@condition restrained}. The {@condition restrained} target must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is {@condition petrified} until freed by the {@spell greater restoration} spell or other magic."
 					]
 				}
 			],
@@ -1397,7 +1426,9 @@
 			"name": "Flying Rocking Horse",
 			"source": "WBtW",
 			"page": 121,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1494,7 +1525,9 @@
 			"name": "Giant Dragonfly",
 			"source": "WBtW",
 			"page": 234,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -1561,7 +1594,9 @@
 			"name": "Giant Snail",
 			"source": "WBtW",
 			"page": 234,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -1632,7 +1667,9 @@
 			"name": "Giant Swan",
 			"source": "WBtW",
 			"page": 38,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"N",
@@ -1708,7 +1745,9 @@
 			"name": "Glass Pegasus",
 			"source": "WBtW",
 			"page": 181,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -1783,7 +1822,9 @@
 			"name": "Glasswork Golem",
 			"source": "WBtW",
 			"page": 193,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1910,7 +1951,9 @@
 			"isNpc": true,
 			"source": "WBtW",
 			"page": 93,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "undead",
 			"alignment": [
 				"U"
@@ -1982,7 +2025,9 @@
 			"name": "Harengon Brigand",
 			"source": "WBtW",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -2071,7 +2116,9 @@
 			"name": "Harengon Sniper",
 			"source": "WBtW",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -2101,7 +2148,7 @@
 				"dex": "+5"
 			},
 			"skill": {
-				"acrobatics": "+2",
+				"athletics": "+2",
 				"perception": "+5",
 				"stealth": "+5"
 			},
@@ -2155,7 +2202,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 205,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -2354,6 +2403,9 @@
 				"N",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"N"
+			],
 			"miscTags": [
 				"AOE"
 			],
@@ -2375,7 +2427,9 @@
 			"name": "Jabberwock",
 			"source": "WBtW",
 			"page": 236,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -2450,17 +2504,17 @@
 							"items": [
 								{
 									"type": "item",
-									"name": "1-2.",
+									"name": "1-2",
 									"entry": "The creature does nothing."
 								},
 								{
 									"type": "item",
-									"name": "3.",
+									"name": "3",
 									"entry": "The creature does nothing except use all its movement to move in a random direction."
 								},
 								{
 									"type": "item",
-									"name": "4.",
+									"name": "4",
 									"entry": "The creature either makes one melee attack against a random creature it can see or does nothing if no visible creature is within its reach."
 								}
 							]
@@ -2565,7 +2619,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 70,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2649,7 +2705,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 219,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2775,6 +2833,9 @@
 				"F",
 				"O"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -2793,7 +2854,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 52,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2899,10 +2962,16 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"N"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
 				"THW"
+			],
+			"conditionInflict": [
+				"unconscious"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2912,7 +2981,9 @@
 			"name": "Living Doll",
 			"source": "WBtW",
 			"page": 238,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"N",
@@ -3027,7 +3098,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 224,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3164,7 +3237,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 26,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3227,7 +3302,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"While carrying the Witchlight vane, Light casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
+						"While carrying the {@item Witchlight vane|WbtW}, Light casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
 					],
 					"will": [
 						"{@spell dancing lights}",
@@ -3248,7 +3323,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Light carries and is attuned to the Witchlight vane. In Light's hands, the vane is a finesse weapon."
+						"Light carries and is attuned to the {@item Witchlight vane|WbtW}. In Light's hands, the vane is a finesse weapon."
 					]
 				}
 			],
@@ -3256,7 +3331,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Light makes two Witchlight vane attacks."
+						"Light makes two {@item Witchlight vane|WbtW} attacks."
 					]
 				},
 				{
@@ -3292,6 +3367,9 @@
 				"B",
 				"R"
 			],
+			"damageTagsSpell": [
+				"C"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -3305,7 +3383,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 25,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3359,7 +3439,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"While carrying the Witchlight watch, Witch casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
+						"While carrying the {@item Witchlight watch|WbtW}, Witch casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
 					],
 					"will": [
 						"{@spell fire bolt}",
@@ -3380,7 +3460,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Witch carries and is attuned to the Witchlight watch."
+						"Witch carries and is attuned to the {@item Witchlight watch|WbtW}."
 					]
 				}
 			],
@@ -3424,6 +3504,9 @@
 				"B",
 				"N"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -3440,7 +3523,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 226,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3522,7 +3607,7 @@
 				{
 					"name": "Levitate",
 					"entries": [
-						"While wearing boots of levitation, Molliver casts levitate (self only)."
+						"While wearing boots of levitation, Molliver casts {@spell levitate} (self only)."
 					]
 				}
 			],
@@ -3556,7 +3641,9 @@
 			"name": "Paper Bird",
 			"source": "WBtW",
 			"page": 166,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -3630,7 +3717,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 135,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -3677,7 +3766,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 193,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3802,7 +3893,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 227,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3949,7 +4042,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 241,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4024,7 +4119,7 @@
 				{
 					"name": "Moon Ray (Gleam Only; 3/Day)",
 					"entries": [
-						"{@atk rs} {@hit 5} to hit, range 60 ft., one creature. {@h}12 ({@damage 2d8 + 3}) radiant damage, and the target must succeed on a {@dc 13} Wisdom saving throw or be transformed into a bat for 1 minute, as though affected by a polymorph spell. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+						"{@atk rs} {@hit 5} to hit, range 60 ft., one creature. {@h}12 ({@damage 2d8 + 3}) radiant damage, and the target must succeed on a {@dc 13} Wisdom saving throw or be transformed into a bat for 1 minute, as though affected by a {@spell polymorph} spell. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
 				},
 				{
@@ -4073,7 +4168,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 69,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "dragon",
 			"alignment": [
 				"L",
@@ -4160,7 +4257,7 @@
 				{
 					"name": "+1 Tiny Sword",
 					"entries": [
-						"{@atk mw} {@hit 8} to hit, reach 5ft., one target. {@h}8 ({@damage 1d4 + 6}) piercing damage."
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d4 + 6}) piercing damage."
 					]
 				},
 				{
@@ -4228,7 +4325,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 218,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -4380,7 +4479,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 220,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4504,7 +4605,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 110,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -4576,7 +4679,7 @@
 				{
 					"name": "Boggle Oil (3 Applications)",
 					"entries": [
-						"Squirt expends 1 application of boggle oil to create a 10-foot-square puddle of slippery, non-flammable oil on the ground within 5 feet of it. The puddle is difficult terrain and lasts for 1 hour. Each creature that enters the puddle's area or starts its turn there must succeed on a {@dc 11} Dexterity saving throw or fall {@condition prone}. Boggles are unaffected by the oil. After it expends all 3 applications, Squirt can't use this action again until its supply of boggle oil is replenished."
+						"Squirt expends 1 application of boggle oil to create a 10-foot-square puddle of slippery, non-flammable oil on the ground within 5 feet of it. The puddle is {@quickref difficult terrain||3} and lasts for 1 hour. Each creature that enters the puddle's area or starts its turn there must succeed on a {@dc 11} Dexterity saving throw or fall {@condition prone}. Boggles are unaffected by the oil. After it expends all 3 applications, Squirt can't use this action again until its supply of boggle oil is replenished."
 					]
 				}
 			],
@@ -4607,7 +4710,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 228,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4704,7 +4809,7 @@
 				{
 					"name": "Revivify (Recharges at the Next Dawn)",
 					"entries": [
-						"While holding Steel, Strongheart casts revivify."
+						"While holding Steel, Strongheart casts {@spell revivify}."
 					]
 				}
 			],
@@ -4743,7 +4848,9 @@
 			"name": "Swarm of Campestris",
 			"source": "WBtW",
 			"page": 232,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "plant",
 				"swarmSize": "T"
@@ -4891,7 +4998,9 @@
 			"name": "Tin Soldier",
 			"source": "WBtW",
 			"page": 115,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -4940,7 +5049,7 @@
 				{
 					"name": "Antimagic Susceptibility",
 					"entries": [
-						"The tin soldier is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the tin soldier must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
+						"The tin soldier is incapacitated while in the area of an {@spell antimagic field}. If targeted by {@spell dispel magic}, the tin soldier must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."
 					]
 				},
 				{
@@ -4988,7 +5097,9 @@
 			"name": "Treant Sapling",
 			"source": "WBtW",
 			"page": 36,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "plant",
 			"alignment": [
 				"C",
@@ -5093,7 +5204,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 221,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5220,19 +5333,25 @@
 						"items": {
 							"name": "Magic Boon (Recharges after a Long Rest)",
 							"entries": [
-								"The will-o'-wisp grants a boon to one creature it can see within 5 feet of it that isn't an Undead. The boon's recipient gains a {@dice d4} and can, at any time within the next 24 hours, roll this die and add the number rolled to one ability check, attack roll, or saving throw made by it. No creature can have more than one of these magic boons at a time."
+								"The will-o'-wells grants a boon to one creature it can see within 5 feet of it that isn't an Undead. The boon's recipient gains a {@dice d4} and can, at any time within the next 24 hours, roll this die and add the number rolled to one ability check, attack roll, or saving throw made by it. No creature can have more than one of these magic boons at a time."
 							]
 						}
 					}
 				}
 			},
+			"alignment": [
+				"C",
+				"G"
+			],
 			"hasToken": true
 		},
 		{
 			"name": "Witchlight Hand (Medium)",
 			"source": "WBtW",
 			"page": 27,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"A"
@@ -5325,7 +5444,9 @@
 					"hasFluffImages": true
 				}
 			},
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"hp": {
 				"average": 7,
 				"formula": "2d6"
@@ -5339,7 +5460,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 222,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5466,7 +5589,9 @@
 			"isNamedCreature": true,
 			"source": "WBtW",
 			"page": 223,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [

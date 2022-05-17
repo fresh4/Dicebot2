@@ -1775,17 +1775,17 @@
 					"items": [
 						{
 							"type": "item",
-							"name": "Bite.",
+							"name": "Bite",
 							"entry": "Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals {@damage 1d8} piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit."
 						},
 						{
 							"type": "item",
-							"name": "Claws.",
+							"name": "Claws",
 							"entry": "Each of your hands transforms into a claw, which you can use as a weapon if it's empty. It deals {@damage 1d6} slashing damage on a hit. Once on each of your turns when you attack with a claw using the {@action Attack} action, you can make one additional claw attack as part of the same action."
 						},
 						{
 							"type": "item",
-							"name": "Tail.",
+							"name": "Tail",
 							"entry": "You grow a lashing, spiny tail, which deals {@damage 1d8} piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a {@dice d8}, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you."
 						}
 					]
@@ -1941,11 +1941,11 @@
 						],
 						[
 							"6",
-							"Until your rage ends, you are surrounded by multi colored, protective lights. You gain a +1 bonus to AC, and while within 10 feet of you, your allies gain the same bonus."
+							"Until your rage ends, you are surrounded by multi colored, protective lights; you gain a +1 bonus to AC, and while within 10 feet of you, your allies gain the same bonus."
 						],
 						[
 							"7",
-							"Flowers and vines temporarily grow around you. Until your rage ends, the ground within 15 feet of you is difficult terrain for your enemies."
+							"Flowers and vines temporarily grow around you. Until your rage ends, the ground within 15 feet of you is {@quickref difficult terrain||3} for your enemies."
 						],
 						[
 							"8",
@@ -2237,7 +2237,7 @@
 						],
 						[
 							5,
-							"Plant life temporarily grows around you: until your rage ends, the ground within 10 feet of you is difficult terrain."
+							"Plant life temporarily grows around you: until your rage ends, the ground within 10 feet of you is {@quickref difficult terrain||3}."
 						],
 						[
 							6,
@@ -2520,7 +2520,7 @@
 					"type": "entries",
 					"name": "Tundra",
 					"entries": [
-						"The air around you coldly slows your foes. The area within your aura is difficult terrain for your enemies."
+						"The air around you coldly slows your foes. The area within your aura is {@quickref difficult terrain||3} for your enemies."
 					]
 				}
 			]

@@ -16,7 +16,9 @@
 			"name": "Ash Zombie",
 			"source": "LMoP",
 			"page": 31,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -105,7 +107,9 @@
 					"source": "RMBRE"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -203,6 +207,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"L",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -215,6 +223,7 @@
 		{
 			"name": "Gundren Rockseeker",
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 41,
 			"_copy": {
@@ -230,9 +239,12 @@
 		{
 			"name": "Mormesk the Wraith",
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 59,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -338,9 +350,12 @@
 		{
 			"name": "Nezznar the Black Spider",
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 59,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -481,6 +496,11 @@
 				"B",
 				"I"
 			],
+			"damageTagsSpell": [
+				"C",
+				"L",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I"
@@ -498,6 +518,7 @@
 		{
 			"name": "Nundro Rockseeker",
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 50,
 			"_copy": {
@@ -514,7 +535,9 @@
 			"name": "Redbrand Ruffian",
 			"source": "LMoP",
 			"page": 61,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -529,7 +552,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -586,9 +609,12 @@
 		{
 			"name": "Sildar Hallwinter",
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 61,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -682,6 +708,7 @@
 		{
 			"name": "Venomfang",
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 63,
 			"_copy": {
@@ -695,7 +722,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		}
 	]
 }

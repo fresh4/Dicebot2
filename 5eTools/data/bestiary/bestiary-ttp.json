@@ -16,7 +16,9 @@
 			"name": "Decapus",
 			"source": "TTP",
 			"page": 21,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -100,7 +102,9 @@
 			"name": "Geonid",
 			"source": "TTP",
 			"page": 22,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -176,7 +180,9 @@
 			"name": "Giant Slug",
 			"source": "TTP",
 			"page": 18,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -295,6 +301,10 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -302,13 +312,19 @@
 				"MW",
 				"RCH"
 			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
+			],
 			"hasToken": true
 		},
 		{
 			"name": "Topi",
 			"source": "TTP",
 			"page": 22,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",

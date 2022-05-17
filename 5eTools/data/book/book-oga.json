@@ -14,7 +14,9 @@
 					"href": {
 						"type": "internal",
 						"path": "book/OGA/001.webp"
-					}
+					},
+					"width": 865,
+					"height": 953
 				},
 				{
 					"type": "section",
@@ -38,13 +40,18 @@
 											"href": {
 												"type": "internal",
 												"path": "book/OGA/002.webp"
-											}
+											},
+											"width": 292,
+											"height": 490
 										}
-									]
+									],
+									"id": "003"
 								}
-							]
+							],
+							"id": "002"
 						}
-					]
+					],
+					"id": "001"
 				},
 				{
 					"type": "section",
@@ -67,13 +74,18 @@
 											"href": {
 												"type": "internal",
 												"path": "book/OGA/003.webp"
-											}
+											},
+											"width": 417,
+											"height": 497
 										}
-									]
+									],
+									"id": "006"
 								}
-							]
+							],
+							"id": "005"
 						}
-					]
+					],
+					"id": "004"
 				},
 				{
 					"type": "section",
@@ -96,13 +108,18 @@
 											"href": {
 												"type": "internal",
 												"path": "book/OGA/004.webp"
-											}
+											},
+											"width": 331,
+											"height": 418
 										}
-									]
+									],
+									"id": "009"
 								}
-							]
+							],
+							"id": "008"
 						}
-					]
+					],
+					"id": "007"
 				},
 				{
 					"type": "section",
@@ -125,7 +142,9 @@
 											"href": {
 												"type": "internal",
 												"path": "book/OGA/005.webp"
-											}
+											},
+											"width": 750,
+											"height": 776
 										},
 										{
 											"type": "inset",
@@ -133,13 +152,17 @@
 											"page": 4,
 											"entries": [
 												"The grung of ONE GRUNG ABOVE are trained to use this new musical instrument. This is a hollow tube with holes cut throughout, much like a flute. You can play music with it for entertainment, but the grung also swing it about by a sturdy cord (attached) to create a sound recognizable by other grung, so they know each other's approximate location. Additionally, grung that know Thieves' Cant can use a whistle stick in this manner to communicate over distance."
-											]
+											],
+											"id": "00d"
 										}
-									]
+									],
+									"id": "00c"
 								}
-							]
+							],
+							"id": "00b"
 						}
-					]
+					],
+					"id": "00a"
 				},
 				{
 					"type": "section",
@@ -147,9 +170,11 @@
 					"page": 4,
 					"entries": [
 						"Your {@race grung|OGA} character has an assortment of inborn abilities, part and parcel of grung nature."
-					]
+					],
+					"id": "00e"
 				}
-			]
+			],
+			"id": "000"
 		}
 	]
 }

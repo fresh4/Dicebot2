@@ -4,7 +4,9 @@
 			"name": "Ancient Deep Crow",
 			"source": "AI",
 			"page": 211,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -133,6 +135,9 @@
 			"actionTags": [
 				"Multiattack"
 			],
+			"languageTags": [
+				"OTH"
+			],
 			"damageTags": [
 				"B",
 				"P",
@@ -157,7 +162,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 208,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -265,7 +272,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 205,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -375,6 +384,10 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"S",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CB"
 			],
@@ -397,7 +410,9 @@
 			"name": "Chaos Quadrapod",
 			"source": "AI",
 			"page": 209,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"C",
@@ -493,7 +508,9 @@
 			"name": "Clockwork Dragon",
 			"source": "AI",
 			"page": 209,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -599,7 +616,9 @@
 			"name": "Deep Crow",
 			"source": "AI",
 			"page": 210,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -694,6 +713,9 @@
 			"actionTags": [
 				"Multiattack"
 			],
+			"languageTags": [
+				"OTH"
+			],
 			"damageTags": [
 				"P",
 				"S"
@@ -715,7 +737,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 201,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -843,6 +867,10 @@
 				"A",
 				"S"
 			],
+			"damageTagsSpell": [
+				"R",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CP"
 			],
@@ -864,7 +892,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 200,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -987,6 +1017,11 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"L"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -1004,7 +1039,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 197,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1144,6 +1181,10 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -1161,7 +1202,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 202,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1176,7 +1219,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -1322,6 +1365,13 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"P",
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CL",
 				"I"
@@ -1337,7 +1387,9 @@
 			"name": "Keg Robot",
 			"source": "AI",
 			"page": 212,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1464,7 +1516,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 199,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1479,7 +1533,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -1610,6 +1664,9 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"P"
+			],
 			"spellcastingTags": [
 				"CR",
 				"I"
@@ -1631,7 +1688,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 205,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1656,7 +1715,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -1754,7 +1813,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 196,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1930,6 +1991,12 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F",
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -1950,7 +2017,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 206,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2057,6 +2126,14 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"I",
+				"L",
+				"O",
+				"S"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -2072,7 +2149,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 206,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2183,6 +2262,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -2204,7 +2287,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 208,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -2309,7 +2394,9 @@
 			"name": "Prophetess Dran",
 			"source": "AI",
 			"page": 208,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2431,19 +2518,27 @@
 				"B",
 				"R"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Rosie Beestinger",
 			"isNpc": true,
 			"source": "AI",
 			"page": 203,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2582,6 +2677,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"R"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -2600,7 +2698,9 @@
 			"name": "Splugoth the Returned",
 			"source": "AI",
 			"page": 213,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2728,7 +2828,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 198,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2870,7 +2972,9 @@
 			"isNpc": true,
 			"source": "AI",
 			"page": 204,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3033,6 +3137,14 @@
 			"damageTags": [
 				"P",
 				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"N",
+				"P",
+				"R",
+				"T"
 			],
 			"spellcastingTags": [
 				"CD"

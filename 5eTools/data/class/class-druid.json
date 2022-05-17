@@ -1,4 +1,11 @@
 {
+	"_meta": {
+		"dependencies": {
+			"subclass": [
+				"generic"
+			]
+		}
+	},
 	"class": [
 		{
 			"name": "Druid",
@@ -2570,7 +2577,7 @@
 					"type": "entries",
 					"name": "Spellcasting Focus",
 					"entries": [
-						"You can use a {@item druidic focus|phb} as a spellcasting focus for your druid spells"
+						"You can use a {@item druidic focus|phb} as a spellcasting focus for your druid spells."
 					]
 				}
 			]
@@ -2595,6 +2602,9 @@
 			"classSource": "PHB",
 			"level": 2,
 			"isClassFeatureVariant": true,
+			"consumes": {
+				"name": "Wild Shape"
+			},
 			"entries": [
 				"{@i 2nd-level druid {@variantrule optional class features|tce|optional feature}}",
 				"You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell find familiar} spell, without material components.",
@@ -2609,6 +2619,9 @@
 			"classSource": "PHB",
 			"level": 2,
 			"isClassFeatureVariant": true,
+			"consumes": {
+				"name": "Wild Shape"
+			},
 			"entries": [
 				"{@i 2nd-level druid feature (enhances Wild Shape)}",
 				"You gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the {@spell find familiar} spell, without material components.",
@@ -2961,7 +2974,7 @@
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"You learn one additional druid cantrip of your choice."
+				"You learn one additional druid cantrip of your choice. This cantrip doesn't count against the number of druid cantrips you know."
 			]
 		},
 		{
@@ -3248,8 +3261,8 @@
 			"level": 6,
 			"header": 2,
 			"entries": [
-				"Starting at 6th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
-				"In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the {@spell entangle} spell."
+				"Starting at 6th level, moving through nonmagical {@quickref difficult terrain||3} costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
+				"In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such as those created by the {@spell entangle} spell."
 			]
 		},
 		{
@@ -3415,6 +3428,10 @@
 			"subclassSource": "PHB",
 			"level": 10,
 			"header": 2,
+			"consumes": {
+				"name": "Wild Shape",
+				"amount": 2
+			},
 			"entries": [
 				"At 10th level, you can expend two uses of Wild Shape at the same time to transform into an {@creature air elemental}, an {@creature earth elemental}, a {@creature fire elemental}, or a {@creature water elemental}."
 			]
@@ -3553,6 +3570,9 @@
 			"subclassSource": "TCE",
 			"level": 2,
 			"header": 1,
+			"consumes": {
+				"name": "Wild Shape"
+			},
 			"entries": [
 				"At 2nd level, you gain the ability to channel magic into your spores. As an action, you can expend a use of your Wild Shape feature to awaken those spores, rather than transforming into a beast form, and you gain 4 temporary hit points for each level you have in this class. While this feature is active, you gain the following benefits:",
 				{
@@ -3724,6 +3744,9 @@
 			"subclassSource": "TCE",
 			"level": 2,
 			"header": 1,
+			"consumes": {
+				"name": "Wild Shape"
+			},
 			"entries": [
 				"{@i 2nd-level Circle of the Stars feature}",
 				"As a bonus action, you can expend a use of your Wild Shape feature to take on a starry form, rather than transforming into a beast.",
@@ -3771,12 +3794,12 @@
 					"items": [
 						{
 							"type": "item",
-							"name": "Weal (even).",
+							"name": "Weal (even)",
 							"entry": "Whenever a creature you can see within 30 feet of you is about to make an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and add the number rolled to the total."
 						},
 						{
 							"type": "item",
-							"name": "Woe (odd).",
+							"name": "Woe (odd)",
 							"entry": "Whenever a creature you can see within 30 feet of you is about to make an attack roll, a saving throw, or an ability check, you can use your reaction to roll a {@dice d6} and subtract the number rolled from the total."
 						}
 					]
@@ -3896,6 +3919,9 @@
 			"subclassSource": "TCE",
 			"level": 2,
 			"header": 1,
+			"consumes": {
+				"name": "Wild Shape"
+			},
 			"entries": [
 				"{@i 2nd-level Circle of Wildfire feature}",
 				"You can summon the primal spirit bound to your soul. As an action, you can expend one use of your Wild Shape feature to summon your wildfire spirit, rather than assuming a beast form.",
@@ -4040,6 +4066,9 @@
 			"subclassSource": "UA2020SubclassesPt3",
 			"level": 2,
 			"header": 1,
+			"consumes": {
+				"name": "Wild Shape"
+			},
 			"entries": [
 				"{@i 2nd-level Circle of the Stars feature}",
 				"You gain the ability to harness constellations' power to alter your form. As an action, you can expend a use of your Wild Shape feature to take on a starry form rather than transforming into a beast.",
@@ -4208,6 +4237,9 @@
 			"subclassSource": "UAClericDruidWizard",
 			"level": 2,
 			"header": 1,
+			"consumes": {
+				"name": "Wild Shape"
+			},
 			"entries": [
 				"{@i 2nd-level Circle of Wildfire feature}",
 				"You can summon the primal spirit bound to your soul. As an action, you can expend one use of your Wild Shape feature to summon your {@creature wildfire spirit|UAClericDruidWizard}, rather than assuming a beast form.",

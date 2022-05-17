@@ -21,7 +21,9 @@
 			"name": "Animated Broom",
 			"source": "CM",
 			"page": 20,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -118,7 +120,9 @@
 			"name": "Animated Chained Library",
 			"source": "CM",
 			"page": 24,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -208,7 +212,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 157,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -335,7 +341,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 168,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -502,7 +510,9 @@
 			"name": "Canopic Golem",
 			"source": "CM",
 			"page": 179,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -624,7 +634,9 @@
 			"name": "Cloud Giant Ghost",
 			"source": "CM",
 			"page": 146,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -717,7 +729,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The ghost can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The ghost can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -782,7 +794,9 @@
 			"name": "Constructed Commoner",
 			"source": "CM",
 			"page": 149,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -850,7 +864,9 @@
 			"name": "Corrupted Avatar of Lurue",
 			"source": "CM",
 			"page": 123,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"ac": [
 				{
@@ -948,7 +964,9 @@
 			"name": "Dragon Tortoise",
 			"source": "CM",
 			"page": 205,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"N"
@@ -1047,6 +1065,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1055,7 +1074,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 104,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1146,7 +1167,9 @@
 			"name": "Fungal Servant",
 			"source": "CM",
 			"page": 217,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -1298,7 +1321,7 @@
 				{
 					"name": "Rotting Fist",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}14 ({@damage 3d6 + 4}) bludgeoning damage plus 21 ({@damage 6d6}) necrotic damage. If the target is a creature, it must succeed on a {@dc 16} Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 ({@dice 3d6}) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to spores. The curse lasts until removed by the remove curse spell or other magic."
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}14 ({@damage 3d6 + 4}) bludgeoning damage plus 21 ({@damage 6d6}) necrotic damage. If the target is a creature, it must succeed on a {@dc 16} Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 ({@dice 3d6}) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to spores. The curse lasts until removed by the {@spell remove curse} spell or other magic."
 					]
 				},
 				{
@@ -1357,6 +1380,12 @@
 				"B",
 				"N"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"P",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -1384,7 +1413,9 @@
 			"name": "Gingwatzim",
 			"source": "CM",
 			"page": 27,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "aberration",
 				"tags": [
@@ -1473,7 +1504,9 @@
 			"name": "Grippli Warrior",
 			"source": "CM",
 			"page": 99,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1643,6 +1676,18 @@
 					}
 				}
 			},
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"L",
+				"N",
+				"P",
+				"S",
+				"T",
+				"Y"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -1651,7 +1696,9 @@
 			"name": "Immortal Lotus Monk",
 			"source": "CM",
 			"page": 165,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{
@@ -1738,7 +1785,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 166,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1872,7 +1921,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 64,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1980,6 +2031,10 @@
 				"B",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -1996,7 +2051,9 @@
 			"name": "Kiddywidget",
 			"source": "CM",
 			"page": 136,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -2092,7 +2149,9 @@
 			"name": "Lichen Lich",
 			"source": "CM",
 			"page": 223,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -2266,6 +2325,9 @@
 				"I",
 				"N"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -2283,7 +2345,9 @@
 			"name": "Lightning Golem",
 			"source": "CM",
 			"page": 129,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -2401,14 +2465,15 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasToken": true,
 			"hasFluff": true
 		},
 		{
 			"name": "Master Sage",
 			"source": "CM",
 			"page": 9,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2516,7 +2581,7 @@
 				{
 					"name": "Shield (1st-Level Spell; 3/Day)",
 					"entries": [
-						"When the sage is hit by an attack or targeted by a magic missile spell, it calls forth an {@condition invisible} barrier of magical force that protects it. Until the start of its next turn, the sage has a +5 bonus to AC, including against the triggering attack, and it takes no damage from magic missile."
+						"When the sage is hit by an attack or targeted by a {@spell magic missile} spell, it calls forth an {@condition invisible} barrier of magical force that protects it. Until the start of its next turn, the sage has a +5 bonus to AC, including against the triggering attack, and it takes no damage from magic missile."
 					]
 				}
 			],
@@ -2528,8 +2593,16 @@
 				"F",
 				"L"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"Y"
+			],
 			"miscTags": [
 				"AOE"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2541,7 +2614,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 16,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"ac": [
 				10
@@ -2650,7 +2725,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"Miirym can move through other creatures and objects as if they were difficult terrain. She takes 5 ({@damage 1d10}) force damage if she ends her turn inside an object."
+						"Miirym can move through other creatures and objects as if they were {@quickref difficult terrain||3}. She takes 5 ({@damage 1d10}) force damage if she ends her turn inside an object."
 					]
 				},
 				{
@@ -2756,7 +2831,9 @@
 			"name": "Mimic Chair",
 			"source": "CM",
 			"page": 22,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -2864,6 +2941,7 @@
 		{
 			"name": "Naiad",
 			"source": "CM",
+			"page": 84,
 			"_copy": {
 				"name": "Naiad",
 				"source": "MOT"
@@ -2878,7 +2956,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 197,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fey",
 			"alignment": [
 				"C",
@@ -3024,6 +3104,10 @@
 				"P",
 				"S"
 			],
+			"damageTagsLegendary": [
+				"N",
+				"P"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -3039,7 +3123,9 @@
 			"name": "Parasite-infested Behir",
 			"source": "CM",
 			"page": 220,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -3152,7 +3238,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 132,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3271,6 +3359,11 @@
 				"F",
 				"P"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -3290,7 +3383,9 @@
 			"name": "Sage",
 			"source": "CM",
 			"page": 9,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3378,7 +3473,7 @@
 				{
 					"name": "Shield (1st-Level Spell; 3/Day)",
 					"entries": [
-						"When the sage is hit by an attack or targeted by a magic missile spell, it calls forth an {@condition invisible} barrier of magical force that protects it. Until the start of its next turn, the sage has a +5 bonus to AC, including against the triggering attack, and it takes no damage from magic missile."
+						"When the sage is hit by an attack or targeted by a {@spell magic missile} spell, it calls forth an {@condition invisible} barrier of magical force that protects it. Until the start of its next turn, the sage has a +5 bonus to AC, including against the triggering attack, and it takes no damage from magic missile."
 					]
 				}
 			],
@@ -3389,6 +3484,9 @@
 			"damageTags": [
 				"L"
 			],
+			"damageTagsSpell": [
+				"L"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -3397,7 +3495,9 @@
 			"name": "Sapphire Sentinel",
 			"source": "CM",
 			"page": 201,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -3494,7 +3594,7 @@
 				{
 					"name": "Sapphire",
 					"entries": [
-						"The sapphire has 3 charges. As an action, the golem can expend 1 charge to cast dispel magic (as a 9th-level spell) from the sapphire using Constitution as its spellcasting ability. The sapphire ceases to glow if all its charges are expended, but it regains {@dice 1d3} expended charges daily at dawn and glows again once it has 1 or more charges."
+						"The sapphire has 3 charges. As an action, the golem can expend 1 charge to cast {@spell dispel magic} (as a 9th-level spell) from the sapphire using Constitution as its spellcasting ability. The sapphire ceases to glow if all its charges are expended, but it regains {@dice 1d3} expended charges daily at dawn and glows again once it has 1 or more charges."
 					]
 				}
 			],
@@ -3529,7 +3629,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 69,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				13
@@ -3603,7 +3705,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"Shemshime can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"Shemshime can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				}
 			],
@@ -3647,7 +3749,9 @@
 			"name": "Skitterwidget",
 			"source": "CM",
 			"page": 136,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -3763,7 +3867,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 164,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3887,7 +3993,9 @@
 			"name": "Storm Giant Skeleton",
 			"source": "CM",
 			"page": 208,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -3987,7 +4095,9 @@
 			"name": "Swarm of Animated Books",
 			"source": "CM",
 			"page": 19,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "construct",
 				"swarmSize": "T"
@@ -4082,7 +4192,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 182,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -4234,7 +4346,7 @@
 				{
 					"name": "Rotting Fist",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}14 ({@damage 3d6 + 4}) bludgeoning damage plus 21 ({@damage 6d6}) necrotic damage. If the target is a creature, it must succeed on a {@dc 16} Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 ({@dice 3d6}) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or other magic."
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one target. {@h}14 ({@damage 3d6 + 4}) bludgeoning damage plus 21 ({@damage 6d6}) necrotic damage. If the target is a creature, it must succeed on a {@dc 16} Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 ({@dice 3d6}) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the {@spell remove curse} spell or other magic."
 					]
 				},
 				{
@@ -4297,6 +4409,11 @@
 				"B",
 				"N"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -4328,7 +4445,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 63,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4512,7 +4631,9 @@
 			"isNamedCreature": true,
 			"source": "CM",
 			"page": 209,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -4673,6 +4794,10 @@
 				"L",
 				"P",
 				"S"
+			],
+			"damageTagsLegendary": [
+				"B",
+				"L"
 			],
 			"miscTags": [
 				"AOE",

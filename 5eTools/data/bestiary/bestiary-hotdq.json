@@ -17,7 +17,9 @@
 			"name": "Ambush Drake",
 			"source": "HotDQ",
 			"page": 88,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"U"
@@ -104,7 +106,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 88,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -237,6 +241,13 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"L",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -253,7 +264,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 89,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "giant",
 				"tags": [
@@ -393,6 +406,11 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"L",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I"
@@ -409,7 +427,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 89,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -523,7 +543,9 @@
 					"page": 89
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -630,7 +652,9 @@
 					"page": 89
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -750,7 +774,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 90,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -765,7 +791,7 @@
 				{
 					"ac": 16,
 					"from": [
-						"{@item studded leather armor|phb}",
+						"{@item studded leather armor|phb|studded leather}",
 						"{@item shield|phb}"
 					]
 				}
@@ -902,6 +928,12 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -918,7 +950,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 90,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1033,6 +1067,11 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -1063,7 +1102,12 @@
 					"page": 90
 				}
 			],
-			"size": "M",
+			"reprintedAs": [
+				"Guard Drake|MPMM"
+			],
+			"size": [
+				"M"
+			],
 			"type": "dragon",
 			"alignment": [
 				"U"
@@ -1151,7 +1195,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 91,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1276,6 +1322,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"C"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -1290,7 +1339,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 91,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1502,7 +1553,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 91,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1517,7 +1570,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}",
+						"{@item studded leather armor|phb|studded leather}",
 						"{@item shield|phb}"
 					]
 				}
@@ -1653,6 +1706,11 @@
 				"I",
 				"P"
 			],
+			"damageTagsSpell": [
+				"I",
+				"P",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -1696,7 +1754,9 @@
 					"page": 91
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1845,6 +1905,16 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O",
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -1865,7 +1935,9 @@
 					"source": "RoT"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2061,7 +2133,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 93,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2215,6 +2289,11 @@
 				"C",
 				"P"
 			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"P"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -2236,7 +2315,9 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 63,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",

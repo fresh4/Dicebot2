@@ -21,7 +21,9 @@
 			"isNpc": true,
 			"source": "LR",
 			"page": 15,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -207,6 +209,9 @@
 				"B",
 				"S"
 			],
+			"damageTagsSpell": [
+				"R"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -319,7 +324,9 @@
 			"isNamedCreature": true,
 			"source": "LR",
 			"page": 18,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"alignment": [
 				"N",
@@ -536,6 +543,11 @@
 				"B",
 				"P"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -562,7 +574,9 @@
 			"isNpc": true,
 			"source": "LR",
 			"page": 23,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -701,6 +715,13 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"L",
+				"N"
+			],
 			"spellcastingTags": [
 				"CS",
 				"I"
@@ -795,7 +816,9 @@
 			"name": "Young Kraken",
 			"source": "LR",
 			"page": 21,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [

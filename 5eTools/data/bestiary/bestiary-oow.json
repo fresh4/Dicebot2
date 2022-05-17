@@ -108,6 +108,10 @@
 				"I",
 				"X"
 			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC",
 				"I"
@@ -291,7 +295,9 @@
 					}
 				}
 			},
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"speed": {
 				"walk": 400,
 				"climb": 200
@@ -550,7 +556,8 @@
 			],
 			"conditionImmune": [
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

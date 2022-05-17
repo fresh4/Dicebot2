@@ -18,7 +18,9 @@
 			"isNpc": true,
 			"source": "RMBRE",
 			"page": 27,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -108,7 +110,9 @@
 			"isNpc": true,
 			"source": "RMBRE",
 			"page": 27,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -212,7 +216,9 @@
 					}
 				}
 			},
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"hp": {
 				"formula": "9d8 + 18",
 				"average": 75
@@ -231,7 +237,9 @@
 			"isNpc": true,
 			"source": "RMBRE",
 			"page": 28,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -307,54 +315,15 @@
 		},
 		{
 			"name": "Lycanthropickle",
-			"group": "Lycanthropes",
+			"group": [
+				"Lycanthropes"
+			],
 			"source": "RMBRE",
 			"page": 11,
-			"size": "S",
-			"type": "plant",
-			"alignment": [
-				"N",
-				"E"
-			],
-			"ac": [
-				{
-					"ac": 13,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"average": 4,
-				"formula": "1d6 + 1"
+			"_copy": {
+				"name": "Twig Blight",
+				"source": "MM"
 			},
-			"speed": {
-				"walk": 20
-			},
-			"str": 6,
-			"dex": 13,
-			"con": 12,
-			"int": 4,
-			"wis": 8,
-			"cha": 3,
-			"skill": {
-				"stealth": "+3"
-			},
-			"senses": [
-				"blindsight 60 ft. (blind beyond this radius)"
-			],
-			"passive": 9,
-			"vulnerable": [
-				"fire"
-			],
-			"conditionImmune": [
-				"blinded",
-				"deafened"
-			],
-			"languages": [
-				"Common understands but can't speak"
-			],
-			"cr": "1/8",
 			"trait": [
 				{
 					"name": "False Appearance",
@@ -362,30 +331,6 @@
 						"While the lycanthropickle remains motionless, it is indistinguishable from a pickle."
 					]
 				}
-			],
-			"action": [
-				{
-					"name": "Claws",
-					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"False Appearance"
-			],
-			"senseTags": [
-				"B"
-			],
-			"languageTags": [
-				"C",
-				"CS"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -409,7 +354,9 @@
 			"isNpc": true,
 			"source": "RMBRE",
 			"page": 28,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",
@@ -500,7 +447,9 @@
 			"isNpc": true,
 			"source": "RMBRE",
 			"page": 28,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"C",

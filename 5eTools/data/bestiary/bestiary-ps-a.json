@@ -16,6 +16,7 @@
 				"source": "MM"
 			},
 			"int": 8,
+			"damageTagsLegendary": [],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -112,6 +113,7 @@
 				"name": "Androsphinx",
 				"source": "MM"
 			},
+			"damageTagsLegendary": [],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -125,6 +127,7 @@
 				"source": "MM"
 			},
 			"int": 10,
+			"damageTagsLegendary": [],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -232,7 +235,9 @@
 			"name": "Criosphinx",
 			"source": "PSA",
 			"page": 32,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N"
@@ -413,6 +418,7 @@
 				"P",
 				"S"
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -481,7 +487,9 @@
 			"name": "Manticore, Heart-Piercer",
 			"source": "PSA",
 			"page": 36,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -603,7 +611,9 @@
 			"name": "Serpopard",
 			"source": "PSA",
 			"page": 37,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"

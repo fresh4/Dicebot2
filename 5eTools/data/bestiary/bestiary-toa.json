@@ -22,7 +22,9 @@
 			"isNamedCreature": true,
 			"source": "ToA",
 			"page": 209,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -288,6 +290,15 @@
 				"C",
 				"N"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"I",
+				"L",
+				"N",
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -311,7 +322,9 @@
 			"name": "Albino Dwarf Spirit Warrior",
 			"source": "ToA",
 			"page": 210,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -419,7 +432,9 @@
 			"name": "Albino Dwarf Warrior",
 			"source": "ToA",
 			"page": 210,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -506,7 +521,9 @@
 			"name": "Aldani (Lobsterfolk)",
 			"source": "ToA",
 			"page": 210,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -597,7 +614,9 @@
 			"name": "Almiraj",
 			"source": "ToA",
 			"page": 211,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -670,7 +689,9 @@
 			"name": "Ankylosaurus Zombie",
 			"source": "ToA",
 			"page": 240,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"U"
@@ -747,7 +768,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 212,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -762,7 +785,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -884,7 +907,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 69,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1008,6 +1033,12 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -1032,7 +1063,9 @@
 					"source": "SDW"
 				}
 			],
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -1092,7 +1125,7 @@
 				{
 					"name": "Entangling Vines",
 					"entries": [
-						"The assassin vine can animate normal vines and roots on the ground in a 15-foot square within 30 feet of it. These plants turn the ground in that area into difficult terrain. A creature in that area when the effect begins must succeed on a {@dc 13} Strength saving throw or be {@condition restrained} by entangling vines and roots. A creature {@condition restrained} by the plants can use its action to make a {@dc 13} Strength (Athletics) check, freeing itself on a successful check. The effect ends after 1 minute or when the assassin vine dies or uses Entangling Vines again."
+						"The assassin vine can animate normal vines and roots on the ground in a 15-foot square within 30 feet of it. These plants turn the ground in that area into {@quickref difficult terrain||3}. A creature in that area when the effect begins must succeed on a {@dc 13} Strength saving throw or be {@condition restrained} by entangling vines and roots. A creature {@condition restrained} by the plants can use its action to make a {@dc 13} Strength (Athletics) check, freeing itself on a successful check. The effect ends after 1 minute or when the assassin vine dies or uses Entangling Vines again."
 					]
 				}
 			],
@@ -1121,7 +1154,9 @@
 			"name": "Atropal",
 			"source": "ToA",
 			"page": 214,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -1307,7 +1342,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 102,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1322,7 +1359,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -1515,7 +1552,9 @@
 			"name": "Chwinga",
 			"source": "ToA",
 			"page": 216,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "elemental",
 			"alignment": [
 				"N"
@@ -1605,7 +1644,9 @@
 			"name": "Clay Gladiator",
 			"source": "ToA",
 			"page": 100,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1725,7 +1766,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 218,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1854,7 +1897,9 @@
 			"name": "Eblis",
 			"source": "ToA",
 			"page": 219,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -2054,7 +2099,8 @@
 					}
 				}
 			},
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Flask of Wine",
@@ -2079,7 +2125,9 @@
 			"name": "Flying Monkey",
 			"source": "ToA",
 			"page": 220,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -2144,7 +2192,9 @@
 			"name": "Giant Four-Armed Gargoyle",
 			"source": "ToA",
 			"page": 221,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -2260,7 +2310,9 @@
 			"name": "Giant Snapping Turtle",
 			"source": "ToA",
 			"page": 222,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -2337,7 +2389,9 @@
 			"name": "Girallon Zombie",
 			"source": "ToA",
 			"page": 240,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"C",
@@ -2520,7 +2574,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 33,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2641,7 +2697,9 @@
 			"name": "Jaculi",
 			"source": "ToA",
 			"page": 225,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "beast",
 			"alignment": [
 				"U"
@@ -2783,7 +2841,9 @@
 			"name": "Kamadan",
 			"source": "ToA",
 			"page": 225,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -2891,7 +2951,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 106,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -2990,6 +3052,10 @@
 			"miscTags": [
 				"MW",
 				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3092,7 +3158,9 @@
 					"source": "BGDIA"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3107,7 +3175,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"{@item studded leather armor|phb}",
+						"{@item studded leather armor|phb|studded leather}",
 						"{@item shield|phb}"
 					]
 				}
@@ -3202,7 +3270,9 @@
 			"name": "Mantrap",
 			"source": "ToA",
 			"page": 227,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -3326,7 +3396,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 228,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3408,6 +3480,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"CL"
 			],
@@ -3425,7 +3500,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 228,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3610,7 +3687,9 @@
 			"name": "Pterafolk",
 			"source": "ToA",
 			"page": 229,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -3737,7 +3816,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 230,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -3944,6 +4025,13 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"I",
+				"N",
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW",
 				"I"
@@ -4016,26 +4104,22 @@
 		{
 			"name": "Sekelok",
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "ToA",
 			"page": 120,
 			"_copy": {
 				"name": "Champion",
 				"source": "VGM",
+				"_trait": {
+					"name": "Yuan-ti Pureblood",
+					"source": "VGM"
+				},
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
 						"replace": "the champion",
 						"with": "Sekelok",
 						"flags": "i"
-					},
-					"trait": {
-						"mode": "prependArr",
-						"items": {
-							"name": "Magic Resistance",
-							"entries": [
-								"Sekelok has advantage on saving throws against spells and other magical effects."
-							]
-						}
 					}
 				}
 			},
@@ -4051,38 +4135,6 @@
 					]
 				}
 			],
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"poisoned"
-			],
-			"languages": [
-				"Abyssal",
-				"Common",
-				"Draconic"
-			],
-			"spellcasting": [
-				{
-					"name": "Innate Spellcasting",
-					"headerEntries": [
-						"Sekelok's spellcasting ability is Charisma (spell save {@dc 13}). Sekelok can innately cast the following spells, requiring no material components:"
-					],
-					"will": [
-						"{@spell animal friendship} (snakes only)",
-						"{@spell poison spray}"
-					],
-					"daily": {
-						"3e": [
-							"{@spell suggestion}"
-						]
-					},
-					"ability": "cha"
-				}
-			],
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -4093,6 +4145,9 @@
 				"AB",
 				"C",
 				"DR"
+			],
+			"damageTagsSpell": [
+				"I"
 			],
 			"spellcastingTags": [
 				"I"
@@ -4188,7 +4243,9 @@
 			"name": "Spiked Tomb Guardian",
 			"source": "ToA",
 			"page": 154,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -4326,7 +4383,9 @@
 			"name": "Stone Juggernaut",
 			"source": "ToA",
 			"page": 231,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -4442,7 +4501,9 @@
 			"name": "Su-monster",
 			"source": "ToA",
 			"page": 232,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -4559,7 +4620,9 @@
 			"name": "Tabaxi Hunter",
 			"source": "ToA",
 			"page": 232,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4666,7 +4729,9 @@
 			"name": "Tabaxi Minstrel",
 			"source": "ToA",
 			"page": 233,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4820,7 +4885,9 @@
 			"name": "Tomb Dwarf",
 			"source": "ToA",
 			"page": 135,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -4830,7 +4897,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -4942,7 +5009,9 @@
 			"name": "Tomb Guardian",
 			"source": "ToA",
 			"page": 127,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -5072,7 +5141,9 @@
 			"name": "Tri-flower Frond",
 			"source": "ToA",
 			"page": 234,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -5157,7 +5228,9 @@
 			"name": "Tyrannosaurus Zombie",
 			"source": "ToA",
 			"page": 241,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"alignment": [
 				"U"
@@ -5259,7 +5332,9 @@
 			"isNamedCreature": true,
 			"source": "ToA",
 			"page": 58,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -5424,7 +5499,7 @@
 				{
 					"name": "Mask",
 					"entries": [
-						"As a bonus action, Valindra can mask her shriveled flesh and appear to be a living elf. This magical illusion lasts until she ends it as a bonus action or until she uses her Frightening Gaze legendary action. The effect also ends if Valindra drops to 30 hit points or fewer, or if dispel magic is cast on her."
+						"As a bonus action, Valindra can mask her shriveled flesh and appear to be a living elf. This magical illusion lasts until she ends it as a bonus action or until she uses her Frightening Gaze legendary action. The effect also ends if Valindra drops to 30 hit points or fewer, or if {@spell dispel magic} is cast on her."
 					]
 				},
 				{
@@ -5506,6 +5581,15 @@
 				"C",
 				"N"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"N",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -5532,7 +5616,9 @@
 					"source": "WDH"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5705,7 +5791,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 145,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -5715,7 +5803,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -5870,6 +5958,13 @@
 				"N",
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"L",
+				"N",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -5885,7 +5980,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 236,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6018,6 +6115,15 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -6032,7 +6138,9 @@
 			"name": "Yellow Musk Creeper",
 			"source": "ToA",
 			"page": 237,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"alignment": [
 				"U"
@@ -6117,7 +6225,9 @@
 			"name": "Yellow Musk Zombie",
 			"source": "ToA",
 			"page": 237,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"U"
@@ -6235,6 +6345,10 @@
 					"ability": "cha"
 				}
 			],
+			"damageTagsSpell": [
+				"I",
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -6333,7 +6447,9 @@
 			"isNpc": true,
 			"source": "ToA",
 			"page": 239,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6510,6 +6626,10 @@
 				"B",
 				"F"
 			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
 			"spellcastingTags": [
 				"CS"
 			],
@@ -6525,7 +6645,9 @@
 			"name": "Zorbo",
 			"source": "ToA",
 			"page": 241,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"

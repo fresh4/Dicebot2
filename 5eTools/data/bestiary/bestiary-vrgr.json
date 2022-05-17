@@ -4,12 +4,6 @@
 			"monster": [
 				"MM"
 			]
-		},
-		"otherSources": {
-			"monster": {
-				"CoS": "VRGR",
-				"IDRotF": "VRGR"
-			}
 		}
 	},
 	"monster": [
@@ -17,7 +11,9 @@
 			"name": "Bodytaker Plant",
 			"source": "VRGR",
 			"page": 226,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "plant",
 			"ac": [
 				{
@@ -135,7 +131,9 @@
 			"name": "Boneless",
 			"source": "VRGR",
 			"page": 228,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				12
@@ -232,10 +230,174 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Brain in a Jar",
+			"source": "VRGR",
+			"page": 278,
+			"otherSources": [
+				{
+					"source": "IDRotF",
+					"page": 278
+				}
+			],
+			"size": [
+				"S"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d6 + 20"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 10,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 1,
+			"dex": 3,
+			"con": 15,
+			"int": 19,
+			"wis": 10,
+			"cha": 15,
+			"save": {
+				"int": "+6",
+				"cha": "+4"
+			},
+			"senses": [
+				"blindsight 120 ft. (blind beyond this radius); see also \"detect sentience\" below"
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"poisoned",
+				"prone"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"headerEntries": [
+						"The brain's innate spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). It can innately cast the following spells, requiring no components:"
+					],
+					"will": [
+						"{@spell chill touch} (see \"Actions\" below)",
+						"{@spell detect thoughts}",
+						"{@spell mage hand}",
+						"{@spell zone of truth}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell charm person}",
+							"{@spell hold person}"
+						],
+						"1e": [
+							"{@spell compulsion}",
+							"{@spell hold monster}",
+							"{@spell sleep} (3rd-level version)",
+							"{@spell Tasha's hideous laughter}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Detect Sentience",
+					"entries": [
+						"The brain can sense the presence and location of any creature within 300 feet of it that has an Intelligence of 3 or higher, regardless of interposing barriers, unless the creature is protected by a {@spell mind blank} spell."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The brain has advantage on saving throws against spells and other magic effects."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"The brain doesn't require air, food, drink, or sleep."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Chill Touch (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 6} to hit, range 120 ft., one creature. {@h}13 ({@damage 3d8}) necrotic damage, and the target can't regain hit points until the start of the brain's next turn. If the target is undead, it also has disadvantage on attack rolls against the brain until the end of the brain's next turn."
+					]
+				},
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"The brain magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a {@dc 14} Intelligence saving throw or take 17 ({@damage 3d8 + 4}) psychic damage and be {@condition stunned} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated",
+				"paralyzed",
+				"prone",
+				"unconscious"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Carrion Stalker",
 			"source": "VRGR",
 			"page": 230,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "monstrosity",
 			"ac": [
 				{
@@ -318,7 +480,9 @@
 			"name": "Carrionette",
 			"source": "VRGR",
 			"page": 231,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"ac": [
 				{
@@ -379,8 +543,8 @@
 				{
 					"name": "Soul Swap",
 					"entries": [
-						"The carrionette targets a creature it can see within 15 feet of it that is cursed by its Silver Needle. Unless the target is protected by a protection from evil and good spell, it must succeed on a {@dc 12} Charisma saving throw or have its consciousness swapped with the carrionette. The carrionette gains control of the target's body, and the target is {@condition unconscious} for 1 hour, after which it gains control of the carrionette's body. While controlling the target's body, the carrionette retains its Intelligence, Wisdom, and Charisma scores. It otherwise uses the controlled body's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.",
-						"If the carrionette's body is destroyed, both the carrionette and the target die. A protection from evil and good spell cast on the controlled body drives the carrionette out and returns the consciousness of both creatures to their original bodies. The swap is also undone if the controlled body takes damage from the carrionette's Silver Needle."
+						"The carrionette targets a creature it can see within 15 feet of it that is cursed by its Silver Needle. Unless the target is protected by a {@spell protection from evil and good} spell, it must succeed on a {@dc 12} Charisma saving throw or have its consciousness swapped with the carrionette. The carrionette gains control of the target's body, and the target is {@condition unconscious} for 1 hour, after which it gains control of the carrionette's body. While controlling the target's body, the carrionette retains its Intelligence, Wisdom, and Charisma scores. It otherwise uses the controlled body's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies.",
+						"If the carrionette's body is destroyed, both the carrionette and the target die. A {@spell protection from evil and good} spell cast on the controlled body drives the carrionette out and returns the consciousness of both creatures to their original bodies. The swap is also undone if the controlled body takes damage from the carrionette's Silver Needle."
 					]
 				}
 			],
@@ -402,7 +566,9 @@
 			"name": "Death's Head",
 			"source": "VRGR",
 			"page": 232,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -488,7 +654,9 @@
 			"name": "Dullahan",
 			"source": "VRGR",
 			"page": 233,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -649,7 +817,9 @@
 			"isNamedCreature": true,
 			"source": "VRGR",
 			"page": 143,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -769,7 +939,9 @@
 			"name": "Gallows Speaker",
 			"source": "VRGR",
 			"page": 234,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				12
@@ -842,7 +1014,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The gallows speaker can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends it turn inside an object."
+						"The gallows speaker can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends it turn inside an object."
 					]
 				},
 				{
@@ -887,7 +1059,9 @@
 			"name": "Greater Star Spawn Emissary",
 			"source": "VRGR",
 			"page": 245,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "aberration",
 			"ac": [
 				{
@@ -994,7 +1168,7 @@
 				{
 					"name": "Warp Space (Costs 2 Actions)",
 					"entries": [
-						"The emissary causes the ground in a 20-foot square that it can see within 90 feet of it to turn into teeth and maws until the start of its next turn. The area becomes difficult terrain for the duration. Any creature takes 10 ({@damage 3d6}) piercing damage for each 5 feet it moves on this terrain."
+						"The emissary causes the ground in a 20-foot square that it can see within 90 feet of it to turn into teeth and maws until the start of its next turn. The area becomes {@quickref difficult terrain||3} for the duration. Any creature takes 10 ({@damage 3d6}) piercing damage for each 5 feet it moves on this terrain."
 					]
 				},
 				{
@@ -1035,7 +1209,9 @@
 			"name": "Gremishka",
 			"source": "VRGR",
 			"page": 235,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "monstrosity",
 			"ac": [
 				12
@@ -1115,7 +1291,9 @@
 			"name": "Inquisitor of the Mind Fire",
 			"source": "VRGR",
 			"page": 248,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{
@@ -1249,7 +1427,9 @@
 			"name": "Inquisitor of the Sword",
 			"source": "VRGR",
 			"page": 249,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{
@@ -1363,6 +1543,9 @@
 				"O",
 				"S"
 			],
+			"damageTagsSpell": [
+				"O"
+			],
 			"spellcastingTags": [
 				"I",
 				"P"
@@ -1381,7 +1564,9 @@
 			"name": "Inquisitor of the Tome",
 			"source": "VRGR",
 			"page": 249,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				11
@@ -1518,7 +1703,9 @@
 			"isNamedCreature": true,
 			"source": "VRGR",
 			"page": 86,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "fey",
 				"tags": [
@@ -1665,6 +1852,11 @@
 				"R",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -1686,7 +1878,9 @@
 			"name": "Jiangshi",
 			"source": "VRGR",
 			"page": 236,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -1798,7 +1992,9 @@
 			"name": "Lesser Star Spawn Emissary",
 			"source": "VRGR",
 			"page": 245,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"ac": [
 				{
@@ -1952,10 +2148,14 @@
 		},
 		{
 			"name": "Loup Garou",
-			"group": "Lycanthropes",
+			"group": [
+				"Lycanthropes"
+			],
 			"source": "VRGR",
 			"page": 237,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -2114,7 +2314,9 @@
 			"name": "Necrichor",
 			"source": "VRGR",
 			"page": 238,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				12
@@ -2176,7 +2378,7 @@
 				{
 					"name": "Rejuvenation",
 					"entries": [
-						"Unless its lifeless remains are splashed with holy water or placed in a vessel under the effects of the hallow spell, the destroyed necrichor re-forms in {@dice 1d10} days, regaining all its hits points and appearing in the place it died or in the nearest unoccupied space."
+						"Unless its lifeless remains are splashed with holy water or placed in a vessel under the effects of the {@spell hallow} spell, the destroyed necrichor re-forms in {@dice 1d10} days, regaining all its hits points and appearing in the place it died or in the nearest unoccupied space."
 					]
 				},
 				{
@@ -2252,7 +2454,9 @@
 			"name": "Nosferatu",
 			"source": "VRGR",
 			"page": 239,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -2384,7 +2588,9 @@
 			"name": "Podling",
 			"source": "VRGR",
 			"page": 227,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "plant",
 			"ac": [
 				10
@@ -2457,7 +2663,9 @@
 			"name": "Priest of Osybus",
 			"source": "VRGR",
 			"page": 241,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{
@@ -2588,7 +2796,7 @@
 										"type": "entries",
 										"name": "Blazing",
 										"entries": [
-											"The priest sloughs off its flesh, and its skeleton crumbles away, leaving only its skull. Its stat block is replaced by that of a flameskull, but it retains its Tattoo of Osybus trait, and all fire damage it deals becomes necrotic damage. The Tattoo of Osybus now appears carved into the skull's forehead."
+											"The priest sloughs off its flesh, and its skeleton crumbles away, leaving only its skull. Its stat block is replaced by that of a {@creature flameskull}, but it retains its Tattoo of Osybus trait, and all fire damage it deals becomes necrotic damage. The Tattoo of Osybus now appears carved into the skull's forehead."
 										]
 									}
 								],
@@ -2598,7 +2806,7 @@
 										"type": "entries",
 										"name": "Spectral",
 										"entries": [
-											"The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were difficult terrain, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
+											"The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were {@quickref difficult terrain||3}, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
 										]
 									}
 								],
@@ -2608,7 +2816,7 @@
 										"type": "entries",
 										"name": "Deathly",
 										"entries": [
-											"The priest's visage becomes bone white, and its challenge rating increases by 1. It can cast animate dead and create undead once per day each, using Intelligence as the spellcasting ability, and it gains the following action:",
+											"The priest's visage becomes bone white, and its challenge rating increases by 1. It can cast {@spell animate dead} and {@spell create undead} once per day each, using Intelligence as the spellcasting ability, and it gains the following action:",
 											{
 												"type": "entries",
 												"name": "Circle of Death (Spell; {@recharge 5|m})",
@@ -2641,17 +2849,147 @@
 				"MW"
 			],
 			"conditionInflict": [
+				"frightened",
 				"paralyzed"
 			],
 			"hasToken": true,
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Priest of Osybus (Blazing Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Blazing Boon",
+								"entries": [
+									"The priest sloughs off its flesh, and its skeleton crumbles away, leaving only its skull. Its stat block is replaced by that of a {@creature flameskull}, but it retains its Tattoo of Osybus trait, and all fire damage it deals becomes necrotic damage. The Tattoo of Osybus now appears carved into the skull's forehead."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Deathly Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Circle of Death (Spell; {@recharge 5|m})",
+								"entries": [
+									"Each creature in a 60-foot-radius sphere centered on a point the priest can see within 150 feet of it must make a DC 15 Constitution saving throw, taking 28 ({@dice 8d6}) necrotic damage on a failed save, or half as much damage on a successful one.)"
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"cr": "7",
+					"spellcasting": [
+						{
+							"name": "Innate Spellcasting",
+							"headerEntries": [
+								"The priest casts one of the following spells, requiring no components and using Intelligence as the spellcasting ability (spell save {@dc 15}):"
+							],
+							"daily": {
+								"1e": [
+									"{@spell animate dead}",
+									"{@spell create undead}"
+								]
+							},
+							"will": [
+								{
+									"entry": "{@spell circle of death}",
+									"hidden": true
+								}
+							],
+							"ability": "int",
+							"displayAs": "action"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Dread Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Dread Boon",
+								"entries": [
+									"Eerie whispers can now be heard around the priest. Any non-Undead creature that starts its turn within 30 feet of the priest must succeed on a DC 15 Wisdom saving throw or be {@condition frightened} of the priest until the start of the creature's next turn."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Ectoplasmic Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Ectoplasmic Boon",
+								"entries": [
+									"An otherworldly slime drips off the priest and fades away moments later, leaving a greenish stain. When any creature starts its turn within 10 feet of the priest, the priest can reduce that creature's speed by 10 feet until the start of the creature's next turn, until which the creature is covered by ectoplasm. In addition, as an action, the priest can use the slime to make itself look and feel like any creature that is Medium or Small, while retaining its game statistics. This transformation lasts for 8 hours or until the priest drops to 0 hit points."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Spectral Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Spectral Boon",
+								"entries": [
+									"The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were {@quickref difficult terrain||3}, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Vampiric Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Vampiric Boon",
+								"entries": [
+									"When the priest deals necrotic damage to any creature, the priest gains a number of temporary hit points equal to half that necrotic damage. The priest's speed also increases by 10 feet."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				}
+			]
 		},
 		{
 			"name": "Relentless Juggernaut",
 			"source": "VRGR",
 			"page": 243,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fiend",
 			"ac": [
 				{
@@ -2758,7 +3096,7 @@
 				{
 					"name": "Implacable Advance",
 					"entries": [
-						"The juggernaut moves up to its speed, ignoring difficult terrain. Any object in its path takes 55 ({@damage 10d10}) bludgeoning damage if it isn't being worn or carried."
+						"The juggernaut moves up to its speed, ignoring {@quickref difficult terrain||3}. Any object in its path takes 55 ({@damage 10d10}) bludgeoning damage if it isn't being worn or carried."
 					]
 				},
 				{
@@ -2803,7 +3141,9 @@
 			"name": "Relentless Slasher",
 			"source": "VRGR",
 			"page": 242,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fiend",
 			"ac": [
 				{
@@ -2919,7 +3259,9 @@
 			"name": "Strigoi",
 			"source": "VRGR",
 			"page": 246,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"ac": [
 				{
@@ -3027,7 +3369,9 @@
 			"name": "Swarm of Gremishkas",
 			"source": "VRGR",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"swarmSize": "T"
@@ -3126,7 +3470,9 @@
 			"name": "Swarm of Maggots",
 			"source": "VRGR",
 			"page": 247,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -3233,7 +3579,9 @@
 			"name": "Swarm of Scarabs",
 			"source": "VRGR",
 			"page": 247,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "beast",
 				"swarmSize": "T"
@@ -3328,7 +3676,9 @@
 			"name": "Swarm of Zombie Limbs",
 			"source": "VRGR",
 			"page": 254,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"swarmSize": "T"
@@ -3482,7 +3832,9 @@
 			"name": "Unspeakable Horror",
 			"source": "VRGR",
 			"page": 250,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"ac": [
 				{
@@ -3668,7 +4020,7 @@
 										"type": "entries",
 										"name": "Petrifying Hex {@recharge 5}",
 										"entries": [
-											"The horror expels petrifying gas in a 30-foot cone. Each creature in that area must succeed on a DC 15 Constitution saving throw or take 14 ({@dice 4d6}) necrotic damage and be {@condition restrained} as it begins to turn to stone. A {@condition restrained} creature must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is {@condition petrified} until freed by the greater restoration spell or other magic."
+											"The horror expels petrifying gas in a 30-foot cone. Each creature in that area must succeed on a DC 15 Constitution saving throw or take 14 ({@dice 4d6}) necrotic damage and be {@condition restrained} as it begins to turn to stone. A {@condition restrained} creature must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is {@condition petrified} until freed by the {@spell greater restoration} spell or other magic."
 										]
 									}
 								],
@@ -3738,7 +4090,11 @@
 								]
 							]
 						}
-					]
+					],
+					"_version": {
+						"name": "Unspeakable Horror (Customized)",
+						"addAs": "trait"
+					}
 				}
 			],
 			"traitTags": [
@@ -3778,7 +4134,9 @@
 			"name": "Vampiric Mind Flayer",
 			"source": "VRGR",
 			"page": 252,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -3917,10 +4275,142 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Wereraven",
+			"group": [
+				"Lycanthropes"
+			],
+			"source": "VRGR",
+			"page": 253,
+			"otherSources": [
+				{
+					"source": "CM"
+				},
+				{
+					"source": "CoS",
+					"page": 242
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 31,
+				"formula": "7d8"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(fly 50 ft. in raven and hybrid forms)"
+				}
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 11,
+			"int": 13,
+			"wis": 15,
+			"cha": 14,
+			"skill": {
+				"insight": "+4",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Common (can't speak in raven form)"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"The wereraven can use its action to polymorph into a raven-humanoid hybrid or into a raven, or back into its human form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its human form if it dies."
+					]
+				},
+				{
+					"name": "Mimicry",
+					"entries": [
+						"The wereraven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful {@dc 10} Wisdom (Insight) check."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The wereraven regains 10 hit points at the start of its turn. If the wereraven takes damage from a silvered weapon or a spell, this trait doesn't function at the start of the wereraven's next turn. The wereraven dies only if it starts its turn with 0 hit points and doesn't regenerate."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Human or Hybrid Form Only)",
+					"entries": [
+						"The wereraven makes two weapon attacks, one of which can be with its hand crossbow."
+					]
+				},
+				{
+					"name": "Beak (Raven or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}1 piercing damage in raven form, or 4 ({@damage 1d4 + 2}) piercing damage in hybrid form. If the target is humanoid, it must succeed on a {@dc 10} Constitution saving throw or be cursed with wereraven lycanthropy."
+					]
+				},
+				{
+					"name": "Shortsword (Human or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Hand Crossbow (Human or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+					]
+				}
+			],
+			"altArt": [
+				{
+					"name": "Wereraven (Alt)",
+					"source": "CoS",
+					"page": 242
+				}
+			],
+			"traitTags": [
+				"Regeneration",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Zombie Clot",
 			"source": "VRGR",
 			"page": 255,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "undead",
 			"ac": [
 				{
@@ -4039,7 +4529,9 @@
 			"name": "Zombie Plague Spreader",
 			"source": "VRGR",
 			"page": 255,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"ac": [
 				10

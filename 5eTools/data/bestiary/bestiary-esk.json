@@ -5,13 +5,15 @@
 			"source": "ESK",
 			"page": 63,
 			"level": 1,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -96,7 +98,9 @@
 			"source": "ESK",
 			"page": 63,
 			"level": 1,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{
@@ -204,6 +208,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC",
 				"CW"
@@ -218,7 +226,9 @@
 			"source": "ESK",
 			"page": 63,
 			"level": 1,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "humanoid",
 			"ac": [
 				{

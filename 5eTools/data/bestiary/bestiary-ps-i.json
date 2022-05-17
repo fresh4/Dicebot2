@@ -12,7 +12,9 @@
 			"name": "Creepy Doll",
 			"source": "PSI",
 			"page": 25,
-			"size": "T",
+			"size": [
+				"T"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -251,7 +253,9 @@
 			"name": "Geist",
 			"source": "PSI",
 			"page": 19,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -309,7 +313,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The geist can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@dice 1d10}) force damage if it ends its turn inside an object."
+						"The geist can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@dice 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -404,7 +408,7 @@
 			"page": 40,
 			"_copy": {
 				"name": "Wereraven",
-				"source": "CoS",
+				"source": "VRGR",
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
@@ -459,6 +463,10 @@
 					"ability": "wis"
 				}
 			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			]
@@ -467,7 +475,9 @@
 			"name": "Skaab",
 			"source": "PSI",
 			"page": 20,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"N"
@@ -633,7 +643,9 @@
 			"name": "Vampire Neonate",
 			"source": "PSI",
 			"page": 17,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -798,7 +810,9 @@
 			"name": "Werewolf (Krallenhorde)",
 			"source": "PSI",
 			"page": 15,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -969,7 +983,8 @@
 			],
 			"traitTags": [
 				"Undead Fortitude"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Zombie Rat",
@@ -990,7 +1005,8 @@
 			],
 			"traitTags": [
 				"Undead Fortitude"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Zombie Snake",
@@ -1011,7 +1027,8 @@
 			],
 			"traitTags": [
 				"Undead Fortitude"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

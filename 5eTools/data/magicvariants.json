@@ -41,6 +41,7 @@
 				"source": "DMG",
 				"page": 152,
 				"srd": true,
+				"basicRules": true,
 				"tier": "major",
 				"rarity": "rare",
 				"bonusAc": "+1",
@@ -90,6 +91,7 @@
 				"source": "DMG",
 				"page": 213,
 				"srd": true,
+				"basicRules": true,
 				"tier": "major",
 				"rarity": "uncommon",
 				"bonusWeapon": "+1",
@@ -162,6 +164,7 @@
 				"source": "DMG",
 				"page": 152,
 				"srd": true,
+				"basicRules": true,
 				"tier": "major",
 				"rarity": "very rare",
 				"bonusAc": "+2",
@@ -211,6 +214,7 @@
 				"source": "DMG",
 				"page": 213,
 				"srd": true,
+				"basicRules": true,
 				"tier": "major",
 				"rarity": "rare",
 				"bonusWeapon": "+2",
@@ -283,6 +287,7 @@
 				"source": "DMG",
 				"page": 152,
 				"srd": true,
+				"basicRules": true,
 				"tier": "major",
 				"rarity": "legendary",
 				"bonusAc": "+3",
@@ -332,6 +337,7 @@
 				"source": "DMG",
 				"page": 213,
 				"srd": true,
+				"basicRules": true,
 				"tier": "major",
 				"rarity": "very rare",
 				"bonusWeapon": "+3",
@@ -620,7 +626,10 @@
 			"type": "GV",
 			"requires": [
 				{
-					"armor": true
+					"type": "HA"
+				},
+				{
+					"type": "MA"
 				}
 			],
 			"inherits": {
@@ -828,7 +837,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Ascendant Dragon's Wrath Weapon ",
+				"namePrefix": "Ascendant Dragon's Wrath ",
 				"source": "FTD",
 				"page": 25,
 				"rarity": "legendary",
@@ -856,6 +865,7 @@
 				"source": "PHB",
 				"page": 157,
 				"srd": true,
+				"basicRules": true,
 				"type": "TAH",
 				"rarity": "none",
 				"weightMult": 2,
@@ -980,7 +990,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Crystal Blade ",
+				"namePrefix": "Crystal ",
 				"source": "FTD",
 				"page": 22,
 				"rarity": "rare",
@@ -1087,7 +1097,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Dragon Wing Bow ",
+				"namePrefix": "Dragon Wing ",
 				"source": "FTD",
 				"page": 23,
 				"rarity": "rare",
@@ -1159,6 +1169,88 @@
 				"page": 126,
 				"rarity": "unknown (magic)",
 				"bonusWeapon": "+1",
+				"entries": [
+					"You have a {=bonusWeapon} bonus to attack and damage rolls made with this weapon. This weapon loses its enchantment bonus permanently if it is exposed to sunlight for 1 hour or longer."
+				]
+			}
+		},
+		{
+			"name": "Drow +2 Armor",
+			"type": "GV",
+			"requires": [
+				{
+					"armor": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Drow +2 ",
+				"source": "MM",
+				"page": 126,
+				"rarity": "unknown (magic)",
+				"bonusAc": "+2",
+				"entries": [
+					"You have a {=bonusAc} bonus to AC while wearing this armor. This armor loses its enchantment bonus permanently if it is exposed to sunlight for 1 hour or longer."
+				]
+			}
+		},
+		{
+			"name": "Drow +2 Weapon",
+			"type": "GV",
+			"requires": [
+				{
+					"weapon": true
+				}
+			],
+			"excludes": {
+				"net": true
+			},
+			"inherits": {
+				"namePrefix": "Drow +2 ",
+				"source": "MM",
+				"page": 126,
+				"rarity": "unknown (magic)",
+				"bonusWeapon": "+2",
+				"entries": [
+					"You have a {=bonusWeapon} bonus to attack and damage rolls made with this weapon. This weapon loses its enchantment bonus permanently if it is exposed to sunlight for 1 hour or longer."
+				]
+			}
+		},
+		{
+			"name": "Drow +3 Armor",
+			"type": "GV",
+			"requires": [
+				{
+					"armor": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Drow +3 ",
+				"source": "MM",
+				"page": 126,
+				"rarity": "unknown (magic)",
+				"bonusAc": "+3",
+				"entries": [
+					"You have a {=bonusAc} bonus to AC while wearing this armor. This armor loses its enchantment bonus permanently if it is exposed to sunlight for 1 hour or longer."
+				]
+			}
+		},
+		{
+			"name": "Drow +3 Weapon",
+			"type": "GV",
+			"requires": [
+				{
+					"weapon": true
+				}
+			],
+			"excludes": {
+				"net": true
+			},
+			"inherits": {
+				"namePrefix": "Drow +3 ",
+				"source": "MM",
+				"page": 126,
+				"rarity": "unknown (magic)",
+				"bonusWeapon": "+3",
 				"entries": [
 					"You have a {=bonusWeapon} bonus to attack and damage rolls made with this weapon. This weapon loses its enchantment bonus permanently if it is exposed to sunlight for 1 hour or longer."
 				]
@@ -2354,6 +2446,116 @@
 			}
 		},
 		{
+			"name": "Ruidium Armor",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "MA"
+				},
+				{
+					"type": "HA"
+				}
+			],
+			"excludes": {
+				"name": "Hide Armor"
+			},
+			"inherits": {
+				"namePrefix": "Ruidium ",
+				"source": "CRCotN",
+				"page": 215,
+				"resist": [
+					"psychic"
+				],
+				"rarity": "very rare",
+				"reqAttune": true,
+				"bonusAc": "+1",
+				"modifySpeed": {
+					"equal": {
+						"swim": "walk"
+					}
+				},
+				"entries": [
+					"This magic armor has a dull, rusty color or has veins of ruidium running through it. While you wear this armor, you gain the following benefits:",
+					{
+						"type": "list",
+						"items": [
+							"You have resistance to psychic damage.",
+							"You can breathe water.",
+							"You gain a swimming speed equal to your walking speed."
+						]
+					},
+					{
+						"type": "entries",
+						"name": "Ruidium Corruption",
+						"entries": [
+							"When you roll a 1 on a saving throw while wearing this armor, you must make a DC 15 Charisma saving throw. On a failed save, you gain 1 level of {@condition exhaustion}. If you are not already suffering from ruidium corruption, you become corrupted when you fail this save."
+						]
+					},
+					{
+						"type": "entries",
+						"name": "If Ruidium Is Destroyed",
+						"entries": [
+							"If the Apotheon is killed or redeemed, all the ruidium in Exandria is destroyed instantly, and ruidium armor becomes {@item +1 armor}."
+						]
+					}
+				]
+			}
+		},
+		{
+			"name": "Ruidium Weapon",
+			"type": "GV",
+			"requires": [
+				{
+					"weapon": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Ruidium ",
+				"source": "CRCotN",
+				"page": 216,
+				"rarity": "very rare",
+				"reqAttune": true,
+				"bonusWeapon": "+2",
+				"modifySpeed": {
+					"equal": {
+						"swim": "walk"
+					}
+				},
+				"entries": [
+					"This magic weapon has a dull, rusty color or has veins of ruidium running through it. While this weapon is on your person, you gain the following benefits:",
+					{
+						"type": "list",
+						"items": [
+							"You can breathe water.",
+							"You gain a swimming speed equal to your walking speed."
+						]
+					},
+					{
+						"type": "entries",
+						"name": "Ruidium Strike",
+						"entries": [
+							"A creature you hit with this weapon takes an extra {@damage 2d6} psychic damage."
+						]
+					},
+					{
+						"type": "entries",
+						"name": "Ruidium Corruption",
+						"entries": [
+							"When you roll a 1 on an attack roll made with this weapon, you must make a DC 20 Charisma saving throw. On a failed save, you gain 1 level of {@condition exhaustion}. If you are not already suffering from ruidium corruption, you become corrupted when you fail this save."
+						]
+					},
+					{
+						"type": "entries",
+						"name": "If Ruidium Is Destroyed",
+						"entries": [
+							"If the Apotheon is killed or redeemed, all the ruidium in Exandria is destroyed instantly, and a ruidium weapon becomes a {@item +2 weapon}."
+						]
+					}
+				]
+			},
+			"hasFluffImages": true
+		},
+		{
 			"name": "Silvered Ammunition",
 			"type": "GV",
 			"requires": [
@@ -2375,6 +2577,7 @@
 				"namePrefix": "Silvered ",
 				"source": "PHB",
 				"page": 148,
+				"basicRules": true,
 				"tier": "minor",
 				"rarity": "unknown"
 			}
@@ -2397,6 +2600,7 @@
 				"namePrefix": "Silvered ",
 				"source": "PHB",
 				"page": 148,
+				"basicRules": true,
 				"tier": "major",
 				"rarity": "unknown",
 				"valueExpression": "[[baseItem.value]] + 10000"
@@ -2411,7 +2615,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Slumbering Dragon's Wrath Weapon ",
+				"namePrefix": "Slumbering Dragon's Wrath ",
 				"source": "FTD",
 				"page": 25,
 				"rarity": "uncommon",
@@ -2451,7 +2655,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Stirring Dragon's Wrath Weapon ",
+				"namePrefix": "Stirring Dragon's Wrath ",
 				"source": "FTD",
 				"page": 25,
 				"rarity": "rare",
@@ -2675,7 +2879,7 @@
 				}
 			],
 			"inherits": {
-				"namePrefix": "Wakened Dragon's Wrath Weapon ",
+				"namePrefix": "Wakened Dragon's Wrath ",
 				"source": "FTD",
 				"page": 25,
 				"rarity": "very rare",

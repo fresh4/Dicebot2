@@ -5164,11 +5164,6 @@
 										"For elements that don't attack, allow each successful check to reduce that element's effectiveness by one-third. A lock's DC is decreased, or a gate opens wide enough to allow a Small character to squeeze through it. A mechanism pumping poison gas into the room becomes defective, causing the gas's damage to increase more slowly or not at all.",
 										"It takes time to disable a complex trap. Three characters can't make checks in rapid succession to disarm a complex trap in a matter of seconds. Each would get in another character's way and disrupt the effort. Once a character succeeds on a check, another character can't attempt the same check against the same trap element until the end of the successful character's next turn.",
 										"Not all of the characters' options need to be focused on stopping a trap from operating. Think of what characters can do to mitigate or avoid a trap's effects. Making the trap vulnerable to this sort of effort is a way to engage characters who might be ill-suited to confront the trap directly. A successful Intelligence ({@skill Religion}) check might provide insight into the imagery displayed by a trap in a temple or shrine, giving other characters a clue about how and where to direct their efforts. A character could stand in front of a dart trap while holding a shield that the darts can target harmlessly, while other characters trigger that element as they work to disable it.",
-										"If a character wants to try something you haven't allowed for, pick an ability, assess the chance of success, and ask for a roll.",
-										"Shutting down one part of a complex trap usually requires multiple successes. As a default, it takes three successful checks or actions to disable an element. The first successful check might reduce the element's saving throw DC or attack bonus. The second successful check might halve the element's damage, and the final successful check shuts it down.",
-										"For elements that don't attack, allow each successful check to reduce that element's effectiveness by one-third. A lock's DC is decreased, or a gate opens wide enough to allow a Small character to squeeze through it. A mechanism pumping poison gas into the room becomes defective, causing the gas's damage to increase more slowly or not at all.",
-										"It takes time to disable a complex trap. Three characters can't make checks in rapid succession to disarm a complex trap in a matter of seconds. Each would get in another character's way and disrupt the effort. Once a character succeeds on a check, another character can't attempt the same check against the same trap element until the end of the successful character's next turn.",
-										"Not all of the characters' options need to be focused on stopping a trap from operating. Think of what characters can do to mitigate or avoid a trap's effects. Making the trap vulnerable to this sort of effort is a way to engage characters who might be ill-suited to confront the trap directly. A successful Intelligence ({@skill Religion}) check might provide insight into the imagery displayed by a trap in a temple or shrine, giving other characters a clue about how and where to direct their efforts. A character could stand in front of a dart trap while holding a shield that the darts can target harmlessly, while other characters trigger that element as they work to disable it.",
 										{
 											"type": "inset",
 											"name": "Complex Traps and Legendary Monsters",
@@ -5583,7 +5578,7 @@
 											"page": 126,
 											"entries": [
 												"Carousing covers a workweek of fine food, strong drink, and socializing. A character can attempt to carouse among lower-, middle-, or upper-class folk. A character can carouse with the lower class for 10 gp to cover expenses, or 50 gp for the middle class. Carousing with the upper class requires 250 gp for the workweek and access to the local nobility.",
-												"A character with the noble background can mingle with the upper class, but other characters can do so only if you judge that the character has made sufficient contacts. Alternatively, a character might use a {@item disguise Kit|phb} and the {@skill Deception} skill to pass as a noble visiting from a distant city."
+												"A character with the noble background can mingle with the upper class, but other characters can do so only if you judge that the character has made sufficient contacts. Alternatively, a character might use a {@item disguise kit|phb} and the {@skill Deception} skill to pass as a noble visiting from a distant city."
 											],
 											"id": "09b"
 										},
@@ -7387,7 +7382,7 @@
 							"name": "Magic Item Tables",
 							"page": 140,
 							"entries": [
-								"The items in the {@5etools Items|items.html} page are classified as minor or major according to the tables originally found in this section.",
+								"{@note The items in the {@5etools Items|items.html} page are classified as major or minor according to tables originally found in this section.}",
 								{
 									"type": "inset",
 									"name": "Recharging without a Dawn",

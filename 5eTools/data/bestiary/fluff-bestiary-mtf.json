@@ -1,4 +1,9 @@
 {
+	"_meta": {
+		"internalCopies": [
+			"monsterFluff"
+		]
+	},
 	"monsterFluff": [
 		{
 			"name": "Adult Kruthik",
@@ -21,7 +26,7 @@
 									"type": "entries",
 									"name": "Adult Kruthik",
 									"entries": [
-										"It takes six months of steady eating for a young kruthik to reach adult size. The natural life span of an adult kruthik is roughly seven years.",
+										"It takes six months of steady eating for a {@creature young kruthik|MTF} to reach adult size. The natural life span of an adult kruthik is roughly seven years.",
 										"Adult kruthiks grow spiky protrusions on their legs and can fling these dagger-sized spikes at enemies beyond the reach of their claws."
 									]
 								},
@@ -390,7 +395,7 @@
 									"name": "Antimagic Eye",
 									"type": "entries",
 									"entries": [
-										"Astral sailors claim that insanity awaits anyone who gazes into the eye of an astral dreadnought. What one sees reflected in that starry void is the sudden, terrifying realization of one's own mortality. Spellcasters have cause to fear the eye more than others, since it emits a continuous antimagic field. The dreadnought can shut off the effect by simply closing its eye, though it seldom has reason to do so."
+										"Astral sailors claim that insanity awaits anyone who gazes into the eye of an astral dreadnought. What one sees reflected in that starry void is the sudden, terrifying realization of one's own mortality. Spellcasters have cause to fear the eye more than others, since it emits a continuous {@spell antimagic field}. The dreadnought can shut off the effect by simply closing its eye, though it seldom has reason to do so."
 									]
 								},
 								{

@@ -21,7 +21,9 @@
 					"source": "SDW"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -123,6 +125,10 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -138,7 +144,9 @@
 			"isNpc": true,
 			"source": "DIP",
 			"page": 56,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -238,7 +246,9 @@
 			"isNpc": true,
 			"source": "DIP",
 			"page": 56,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -253,7 +263,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -342,7 +352,9 @@
 			"isNpc": true,
 			"source": "DIP",
 			"page": 58,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"C",
@@ -447,7 +459,9 @@
 			"name": "Rock Gnome Recluse",
 			"source": "DIP",
 			"page": 62,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -549,6 +563,10 @@
 				"G"
 			],
 			"damageTags": [
+				"C",
+				"O"
+			],
+			"damageTagsSpell": [
 				"C",
 				"O"
 			],

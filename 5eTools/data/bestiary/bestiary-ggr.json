@@ -11,7 +11,9 @@
 			"name": "Anarch",
 			"source": "GGR",
 			"page": 239,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -96,7 +98,9 @@
 			"name": "Archon of the Triumvirate",
 			"source": "GGR",
 			"page": 192,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -255,7 +259,9 @@
 			"name": "Arclight Phoenix",
 			"source": "GGR",
 			"page": 193,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -375,7 +381,9 @@
 			"isNamedCreature": true,
 			"source": "GGR",
 			"page": 230,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "celestial",
 				"tags": [
@@ -554,7 +562,9 @@
 			"name": "Battleforce Angel",
 			"source": "GGR",
 			"page": 189,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -671,7 +681,9 @@
 			"name": "Biomancer",
 			"source": "GGR",
 			"page": 256,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -829,6 +841,16 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -843,7 +865,9 @@
 			"name": "Blistercoil Weird",
 			"source": "GGR",
 			"page": 207,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -959,7 +983,9 @@
 			"name": "Blood Drinker Vampire",
 			"source": "GGR",
 			"page": 223,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -1084,7 +1110,9 @@
 			"name": "Blood Witch",
 			"source": "GGR",
 			"page": 248,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1170,7 +1198,7 @@
 				{
 					"name": "Blood Witch Dance",
 					"entries": [
-						"The witch can use a bonus action to control the movement of one creature cursed by its hex spell that it can see within 30 feet of it. The creature must succeed on a {@dc 15} Charisma saving throw or use its reaction to move up to 30 feet in a direction of the witch's choice."
+						"The witch can use a bonus action to control the movement of one creature cursed by its {@spell hex} spell that it can see within 30 feet of it. The creature must succeed on a {@dc 15} Charisma saving throw or use its reaction to move up to 30 feet in a direction of the witch's choice."
 					]
 				},
 				{
@@ -1218,6 +1246,14 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"N",
+				"O",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -1232,7 +1268,9 @@
 			"name": "Bloodfray Giant",
 			"source": "GGR",
 			"page": 200,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -1319,7 +1357,9 @@
 			"isNamedCreature": true,
 			"source": "GGR",
 			"page": 238,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -1480,7 +1520,9 @@
 			"name": "Cackler",
 			"source": "GGR",
 			"page": 195,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -1603,6 +1645,9 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -1618,7 +1663,9 @@
 			"name": "Category 1 Krasis",
 			"source": "GGR",
 			"page": 210,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -1695,7 +1742,9 @@
 			"name": "Category 2 Krasis",
 			"source": "GGR",
 			"page": 211,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -1772,7 +1821,9 @@
 			"name": "Category 3 Krasis",
 			"source": "GGR",
 			"page": 212,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -1860,7 +1911,9 @@
 			"name": "Conclave Dryad",
 			"source": "GGR",
 			"page": 194,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "fey",
 			"alignment": [
 				"L",
@@ -1997,6 +2050,11 @@
 				"B",
 				"P"
 			],
+			"damageTagsSpell": [
+				"P",
+				"R",
+				"S"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -2019,7 +2077,9 @@
 			"name": "Cosmotronic Blastseeker",
 			"source": "GGR",
 			"page": 242,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2113,6 +2173,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -2126,7 +2190,9 @@
 			"name": "Counterflux Blastseeker",
 			"source": "GGR",
 			"page": 242,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2215,6 +2281,9 @@
 			"damageTags": [
 				"P"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -2230,7 +2299,9 @@
 			"name": "Deathpact Angel",
 			"source": "GGR",
 			"page": 192,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -2397,7 +2468,9 @@
 			"name": "Devkarin Lich",
 			"source": "GGR",
 			"page": 198,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -2610,6 +2683,18 @@
 				"I",
 				"N"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"P",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -2629,7 +2714,9 @@
 			"name": "Druid of the Old Ways",
 			"source": "GGR",
 			"page": 239,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2775,6 +2862,12 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F",
+				"P",
+				"S",
+				"T"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -2789,7 +2882,9 @@
 			"name": "Felidar",
 			"source": "GGR",
 			"page": 199,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "celestial",
 			"alignment": [
 				"L",
@@ -2909,13 +3004,26 @@
 			],
 			"hasToken": true,
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Winged Felidar",
+					"source": "GGR",
+					"speed": {
+						"walk": 40,
+						"fly": 40
+					},
+					"variant": null
+				}
+			]
 		},
 		{
 			"name": "Firefist",
 			"source": "GGR",
 			"page": 231,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3048,6 +3156,10 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC"
 			],
@@ -3062,7 +3174,9 @@
 			"name": "Firemane Angel",
 			"source": "GGR",
 			"page": 190,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "celestial",
 			"alignment": [
 				"C",
@@ -3196,6 +3310,10 @@
 				"R",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"R"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3210,7 +3328,9 @@
 			"name": "Flux Blastseeker",
 			"source": "GGR",
 			"page": 242,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3301,6 +3421,12 @@
 				"B",
 				"T"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"O"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3314,7 +3440,9 @@
 			"name": "Fluxcharger",
 			"source": "GGR",
 			"page": 208,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -3431,7 +3559,9 @@
 			"name": "Flying Horror",
 			"source": "GGR",
 			"page": 203,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -3526,7 +3656,9 @@
 			"name": "Frontline Medic",
 			"source": "GGR",
 			"page": 231,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3630,7 +3762,9 @@
 			"name": "Galvanic Blastseeker",
 			"source": "GGR",
 			"page": 243,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3698,13 +3832,13 @@
 				{
 					"name": "Galvanic Overcast {@recharge 5}",
 					"entries": [
-						"When the blastseeker casts lightning bolt or thunderwave, it can roll a die. On an odd number, the blastseeker takes 9 ({@damage 2d8}) force damage. On an even number, the spell also deals 9 ({@damage 2d8}) lightning damage to each target that fails its saving throw."
+						"When the blastseeker casts {@spell lightning bolt} or thunderwave, it can roll a die. On an odd number, the blastseeker takes 9 ({@damage 2d8}) force damage. On an even number, the spell also deals 9 ({@damage 2d8}) lightning damage to each target that fails its saving throw."
 					]
 				},
 				{
 					"name": "Heart of the Storm",
 					"entries": [
-						"When the blastseeker casts lightning bolt or thunderwave, all other creatures within 10 feet of the blastseeker each take 3 lightning damage."
+						"When the blastseeker casts {@spell lightning bolt} or thunderwave, all other creatures within 10 feet of the blastseeker each take 3 lightning damage."
 					]
 				},
 				{
@@ -3732,6 +3866,10 @@
 				"O",
 				"P"
 			],
+			"damageTagsSpell": [
+				"L",
+				"T"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -3747,7 +3885,9 @@
 			"name": "Galvanice Weird",
 			"source": "GGR",
 			"page": 209,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "elemental",
 			"alignment": [
 				"C",
@@ -3842,7 +3982,9 @@
 			"name": "Gloamwing",
 			"source": "GGR",
 			"page": 215,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -3975,7 +4117,9 @@
 			"name": "Golgari Shaman",
 			"source": "GGR",
 			"page": 236,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4120,6 +4264,11 @@
 				"I",
 				"N"
 			],
+			"damageTagsSpell": [
+				"I",
+				"N",
+				"P"
+			],
 			"spellcastingTags": [
 				"CD"
 			],
@@ -4137,7 +4286,9 @@
 			"name": "Guardian Giant",
 			"source": "GGR",
 			"page": 201,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"L",
@@ -4232,7 +4383,9 @@
 			"name": "Horncaller",
 			"source": "GGR",
 			"page": 253,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4342,7 +4495,9 @@
 			"name": "Hybrid Brute",
 			"source": "GGR",
 			"page": 217,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4424,7 +4579,9 @@
 			"name": "Hybrid Flier",
 			"source": "GGR",
 			"page": 217,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4504,7 +4661,9 @@
 			"name": "Hybrid Poisoner",
 			"source": "GGR",
 			"page": 217,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4600,7 +4759,9 @@
 			"name": "Hybrid Shocker",
 			"source": "GGR",
 			"page": 218,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4699,7 +4860,9 @@
 			"name": "Hybrid Spy",
 			"source": "GGR",
 			"page": 218,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -4793,7 +4956,9 @@
 			"name": "Indentured Spirit",
 			"source": "GGR",
 			"page": 206,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -4859,7 +5024,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The spirit can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The spirit can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				}
 			],
@@ -4893,7 +5058,9 @@
 			"isNamedCreature": true,
 			"source": "GGR",
 			"page": 227,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"L",
@@ -5134,6 +5301,11 @@
 				"S",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"N",
+				"P",
+				"R"
+			],
 			"spellcastingTags": [
 				"CC",
 				"I"
@@ -5150,7 +5322,9 @@
 			"isNamedCreature": true,
 			"source": "GGR",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -5393,6 +5567,13 @@
 				"I",
 				"N"
 			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"I",
+				"N",
+				"P"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -5415,7 +5596,9 @@
 			"name": "Kraul Death Priest",
 			"source": "GGR",
 			"page": 214,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5547,6 +5730,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -5564,7 +5751,9 @@
 			"name": "Kraul Warrior",
 			"source": "GGR",
 			"page": 213,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5664,13 +5853,27 @@
 			],
 			"hasToken": true,
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Winged Kraul Warrior",
+					"source": "GGR",
+					"speed": {
+						"walk": 30,
+						"climb": 30,
+						"fly": 40
+					},
+					"variant": null
+				}
+			]
 		},
 		{
 			"name": "Lawmage",
 			"source": "GGR",
 			"page": 228,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -5781,6 +5984,9 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -5795,7 +6001,9 @@
 			"isNamedCreature": true,
 			"source": "GGR",
 			"page": 232,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "monstrosity",
 				"tags": [
@@ -5963,6 +6171,9 @@
 				"P",
 				"Y"
 			],
+			"damageTagsSpell": [
+				"Y"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -5980,7 +6191,9 @@
 			"name": "Master of Cruelties",
 			"source": "GGR",
 			"page": 196,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -6152,7 +6365,9 @@
 			"name": "Mind Drinker Vampire",
 			"source": "GGR",
 			"page": 224,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -6303,7 +6518,9 @@
 			"name": "Mind Mage",
 			"source": "GGR",
 			"page": 233,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -6416,7 +6633,9 @@
 			"name": "Nightveil Specter",
 			"source": "GGR",
 			"page": 215,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"N",
@@ -6546,7 +6765,9 @@
 			"isNamedCreature": true,
 			"source": "GGR",
 			"page": 241,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "dragon",
 			"alignment": [
 				"C",
@@ -6809,6 +7030,15 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -6836,7 +7066,9 @@
 			"name": "Nivix Cyclops",
 			"source": "GGR",
 			"page": 216,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"U"
@@ -6945,7 +7177,9 @@
 			"name": "Obzedat Ghost",
 			"source": "GGR",
 			"page": 245,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -7053,27 +7287,27 @@
 							"items": [
 								{
 									"type": "item",
-									"name": "Enezesku: Enfeebling Ray.",
+									"name": "Enezesku: Enfeebling Ray",
 									"entry": "Enezesku's Innate Spellcasting trait includes {@spell ray of enfeeblement}, which he can cast at will."
 								},
 								{
 									"type": "item",
-									"name": "Fautomni: Undead Fortitude.",
+									"name": "Fautomni: Undead Fortitude",
 									"entry": "If damage reduces Fautomni to 0 hit points, he must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, Fautomni drops to 1 hit point instead."
 								},
 								{
 									"type": "item",
-									"name": "Karlov: Unnatural Vigor.",
+									"name": "Karlov: Unnatural Vigor",
 									"entry": "When Karlov regains hit points, he has advantage on attack rolls he makes on his next turn."
 								},
 								{
 									"type": "item",
-									"name": "Vuliev: Teleportation.",
+									"name": "Vuliev: Teleportation",
 									"entry": "Vuliev's Innate Spellcasting trait includes {@spell misty step}, which he can cast at will."
 								},
 								{
 									"type": "item",
-									"name": "Xil Xaxosz: Lingering Spite.",
+									"name": "Xil Xaxosz: Lingering Spite",
 									"entry": "When Xil Xaxosz is reduced to 0 hit points, his incorporeal form explodes in a burst of necrotic energy. Each creature within 5 feet of him must make a {@dc 16} Constitution saving throw, taking 14 ({@damage 4d6}) necrotic damage on a failed save, or half as much damage on a successful one."
 								}
 							]
@@ -7089,7 +7323,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The ghost can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The ghost can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -7144,6 +7378,10 @@
 				"N",
 				"O"
 			],
+			"damageTagsSpell": [
+				"N",
+				"R"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -7158,7 +7396,9 @@
 			"name": "Orzhov Giant",
 			"source": "GGR",
 			"page": 202,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "giant",
 			"alignment": [
 				"L",
@@ -7254,7 +7494,9 @@
 			"name": "Precognitive Mage",
 			"source": "GGR",
 			"page": 228,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7359,6 +7601,9 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"stunned"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -7368,7 +7613,9 @@
 			"isNamedCreature": true,
 			"source": "GGR",
 			"page": 247,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -7549,6 +7796,9 @@
 				"F",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F"
+			],
 			"spellcastingTags": [
 				"I"
 			],
@@ -7568,7 +7818,9 @@
 			"name": "Rakdos Lampooner",
 			"source": "GGR",
 			"page": 248,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7660,6 +7912,10 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CB"
 			],
@@ -7674,7 +7930,9 @@
 			"name": "Rakdos Performer, Blade Juggler",
 			"source": "GGR",
 			"page": 249,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7760,7 +8018,9 @@
 			"name": "Rakdos Performer, Fire Eater",
 			"source": "GGR",
 			"page": 249,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7853,7 +8113,9 @@
 			"name": "Rakdos Performer, High-Wire Acrobat",
 			"source": "GGR",
 			"page": 249,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -7937,7 +8199,9 @@
 			"name": "Reckoner",
 			"source": "GGR",
 			"page": 231,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -8051,6 +8315,11 @@
 			"damageTags": [
 				"S"
 			],
+			"damageTagsSpell": [
+				"L",
+				"R",
+				"T"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -8065,7 +8334,9 @@
 			"name": "Rubblebelt Stalker",
 			"source": "GGR",
 			"page": 239,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -8124,7 +8395,7 @@
 				{
 					"name": "Ruin Dweller",
 					"entries": [
-						"The stalker has advantage on Dexterity (Stealth) checks made to hide in ruins, and its speed is not reduced in difficult terrain composed of rubble."
+						"The stalker has advantage on Dexterity (Stealth) checks made to hide in ruins, and its speed is not reduced in {@quickref difficult terrain||3} composed of rubble."
 					]
 				},
 				{
@@ -8169,7 +8440,9 @@
 			"name": "Scorchbringer Guard",
 			"source": "GGR",
 			"page": 243,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -8250,7 +8523,9 @@
 			"name": "Servitor Thrull",
 			"source": "GGR",
 			"page": 221,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -8322,7 +8597,9 @@
 			"name": "Shadow Horror",
 			"source": "GGR",
 			"page": 205,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -8363,7 +8640,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The horror can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The horror can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -8462,7 +8739,9 @@
 			"name": "Sire of Insanity",
 			"source": "GGR",
 			"page": 197,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": {
 				"type": "fiend",
 				"tags": [
@@ -8623,7 +8902,9 @@
 			"name": "Skittering Horror",
 			"source": "GGR",
 			"page": 205,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "aberration",
 			"alignment": [
 				"N",
@@ -8735,7 +9016,9 @@
 			"name": "Skyjek Roc",
 			"source": "GGR",
 			"page": 219,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -8820,7 +9103,9 @@
 			"name": "Skyswimmer",
 			"source": "GGR",
 			"page": 220,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -8916,7 +9201,9 @@
 					"source": "MOT"
 				}
 			],
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -9058,13 +9345,19 @@
 					"ability": "int"
 				}
 			],
+			"damageTagsLegendary": [],
+			"damageTagsSpell": [
+				"P"
+			],
 			"hasToken": true
 		},
 		{
 			"name": "Sunder Shaman",
 			"source": "GGR",
 			"page": 202,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "giant",
 			"alignment": [
 				"C",
@@ -9180,7 +9473,9 @@
 			"name": "Thought Spy",
 			"source": "GGR",
 			"page": 233,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -9307,7 +9602,9 @@
 			"isNamedCreature": true,
 			"source": "GGR",
 			"page": 252,
-			"size": "L",
+			"size": [
+				"L"
+			],
 			"type": "fey",
 			"alignment": [
 				"N",
@@ -9463,13 +9760,13 @@
 				{
 					"name": "Voice of Order",
 					"entries": [
-						"Trostani casts dispel magic."
+						"Trostani casts {@spell dispel magic}."
 					]
 				},
 				{
 					"name": "Chorus of the Conclave (Costs 2 Actions)",
 					"entries": [
-						"Trostani casts suggestion. This counts as one of her daily uses of the spell."
+						"Trostani casts {@spell suggestion}. This counts as one of her daily uses of the spell."
 					]
 				},
 				{
@@ -9482,7 +9779,8 @@
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance",
-				"Magic Weapons"
+				"Magic Weapons",
+				"Tree Stride"
 			],
 			"senseTags": [
 				"SD"
@@ -9501,12 +9799,20 @@
 				"R",
 				"S"
 			],
+			"damageTagsSpell": [
+				"P",
+				"R"
+			],
 			"spellcastingTags": [
 				"I"
 			],
 			"miscTags": [
 				"AOE",
 				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -9516,7 +9822,9 @@
 			"name": "Undercity Medusa",
 			"source": "GGR",
 			"page": 222,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"N",
@@ -9630,6 +9938,10 @@
 			"miscTags": [
 				"MW"
 			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -9638,7 +9950,9 @@
 			"name": "Winged Thrull",
 			"source": "GGR",
 			"page": 221,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -9723,7 +10037,9 @@
 			"name": "Wurm",
 			"source": "GGR",
 			"page": 225,
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "monstrosity",
 			"alignment": [
 				"U"
@@ -9821,7 +10137,9 @@
 			"isNamedCreature": true,
 			"source": "GGR",
 			"page": 255,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -10006,7 +10324,7 @@
 				{
 					"name": "Enlarge (Costs 2 Actions)",
 					"entries": [
-						"Zegana casts enlarge/reduce on herself, using the enlarge option, without expending a spell slot."
+						"Zegana casts {@spell enlarge/reduce} on herself, using the enlarge option, without expending a spell slot."
 					]
 				},
 				{
@@ -10032,6 +10350,14 @@
 				"B",
 				"P",
 				"T"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L"
 			],
 			"spellcastingTags": [
 				"CW"

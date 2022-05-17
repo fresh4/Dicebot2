@@ -2,7 +2,8 @@
 	"_meta": {
 		"dependencies": {
 			"monster": [
-				"MM"
+				"MM",
+				"VRGR"
 			]
 		},
 		"internalCopies": [
@@ -10,7 +11,8 @@
 		],
 		"otherSources": {
 			"monster": {
-				"MM": "CoS"
+				"MM": "CoS",
+				"VRGR": "CoS"
 			}
 		}
 	},
@@ -154,11 +156,15 @@
 		},
 		{
 			"name": "Baba Lysaga",
-			"group": "Hags",
+			"group": [
+				"Hags"
+			],
 			"isNpc": true,
 			"source": "CoS",
 			"page": 228,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -338,6 +344,16 @@
 			"damageTags": [
 				"B"
 			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -352,7 +368,9 @@
 			"isNpc": true,
 			"source": "CoS",
 			"page": 226,
-			"size": "G",
+			"size": [
+				"G"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -413,7 +431,7 @@
 				{
 					"name": "Antimagic Susceptibility",
 					"entries": [
-						"The hut is {@condition incapacitated} while the magic gem that animates it is in the area of an antimagic field. If targeted by dispel magic, the hut must succeed on a Constitution saving throw against the caster's spell save DC or fall {@condition unconscious} for 1 minute."
+						"The hut is {@condition incapacitated} while the magic gem that animates it is in the area of an {@spell antimagic field}. If targeted by {@spell dispel magic}, the hut must succeed on a Constitution saving throw against the caster's spell save DC or fall {@condition unconscious} for 1 minute."
 					]
 				},
 				{
@@ -544,7 +562,9 @@
 			"name": "Barovian Witch",
 			"source": "CoS",
 			"page": 229,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -640,6 +660,13 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"I",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -697,10 +724,50 @@
 			"hasToken": true
 		},
 		{
+			"name": "Bray Martikov",
+			"isNpc": true,
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Young Wereraven",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereraven",
+						"with": "Bray",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Brom Martikov",
+			"isNpc": true,
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Young Wereraven",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereraven",
+						"with": "Brom",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
 			"name": "Broom of Animated Attack",
 			"source": "CoS",
 			"page": 226,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -762,7 +829,7 @@
 				{
 					"name": "Antimagic Susceptibility",
 					"entries": [
-						"The broom is {@condition incapacitated} while in the area of an antimagic field. If targeted by dispel magic, the broom must succeed on a Constitution saving throw against the caster's spell save DC or fall {@condition unconscious} for 1 minute."
+						"The broom is {@condition incapacitated} while in the area of an {@spell antimagic field}. If targeted by {@spell dispel magic}, the broom must succeed on a Constitution saving throw against the caster's spell save DC or fall {@condition unconscious} for 1 minute."
 					]
 				},
 				{
@@ -879,13 +946,36 @@
 			"hasToken": true
 		},
 		{
+			"name": "Danika Dorakova",
+			"isNpc": true,
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereraven",
+						"with": "Danika",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
 			"name": "Davian Martikov",
 			"isNpc": true,
 			"source": "CoS",
 			"page": 173,
 			"_copy": {
 				"name": "Wereraven",
-				"source": "CoS",
+				"source": "VRGR",
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
@@ -895,6 +985,10 @@
 					}
 				}
 			},
+			"alignment": [
+				"L",
+				"G"
+			],
 			"hasToken": true
 		},
 		{
@@ -991,7 +1085,8 @@
 				"average": 72,
 				"formula": "9d8 + 18"
 			},
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Escher",
@@ -1052,6 +1147,10 @@
 					"ability": "int"
 				}
 			],
+			"damageTagsLegendary": [],
+			"damageTagsSpell": [
+				"C"
+			],
 			"hasToken": true
 		},
 		{
@@ -1059,7 +1158,9 @@
 			"isNpc": true,
 			"source": "CoS",
 			"page": 231,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1218,6 +1319,11 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -1279,7 +1385,9 @@
 			"name": "Guardian Portrait",
 			"source": "CoS",
 			"page": 227,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"U"
@@ -1356,7 +1464,7 @@
 				{
 					"name": "Antimagic Susceptibility",
 					"entries": [
-						"The portrait is {@condition incapacitated} while in the area of an antimagic field. If targeted by dispel magic, the portrait must succeed on a Constitution saving throw against the caster's spell save DC or become {@condition unconscious} for 1 minute."
+						"The portrait is {@condition incapacitated} while in the area of an {@spell antimagic field}. If targeted by {@spell dispel magic}, the portrait must succeed on a Constitution saving throw against the caster's spell save DC or become {@condition unconscious} for 1 minute."
 					]
 				},
 				{
@@ -1495,7 +1603,9 @@
 			"isNpc": true,
 			"source": "CoS",
 			"page": 232,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -1510,7 +1620,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -1841,6 +1951,7 @@
 					"ability": "wis"
 				}
 			],
+			"damageTagsSpell": [],
 			"hasToken": true
 		},
 		{
@@ -1959,7 +2070,9 @@
 			"isNpc": true,
 			"source": "CoS",
 			"page": 233,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2095,7 +2208,7 @@
 				{
 					"name": "Curse (Recharges after a Long Rest)",
 					"entries": [
-						"Madam Eva targets one creature that she can see within 30 feet of her. The target must succeed on a {@dc 17} Wisdom saving throw or be cursed. While cursed, the target is {@condition blinded} and {@condition deafened}. The curse lasts until ended with a greater restoration spell, a {@spell remove curse} spell, or similar magic. When the curse ends, Madam Eva takes {@dice 5d6} psychic damage."
+						"Madam Eva targets one creature that she can see within 30 feet of her. The target must succeed on a {@dc 17} Wisdom saving throw or be cursed. While cursed, the target is {@condition blinded} and {@condition deafened}. The curse lasts until ended with a {@spell greater restoration} spell, a {@spell remove curse} spell, or similar magic. When the curse ends, Madam Eva takes {@dice 5d6} psychic damage."
 					]
 				},
 				{
@@ -2113,6 +2226,13 @@
 			],
 			"damageTags": [
 				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"N",
+				"O",
+				"R"
 			],
 			"spellcastingTags": [
 				"CC"
@@ -2251,7 +2371,9 @@
 			"name": "Mongrelfolk",
 			"source": "CoS",
 			"page": 234,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2465,7 +2587,7 @@
 				{
 					"ac": 14,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -2505,7 +2627,9 @@
 			"name": "Phantom Warrior",
 			"source": "CoS",
 			"page": 235,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"A"
@@ -2575,7 +2699,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"The phantom warrior can move through other creatures and objects as if they were difficult terrain. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
+						"The phantom warrior can move through other creatures and objects as if they were {@quickref difficult terrain||3}. It takes 5 ({@damage 1d10}) force damage if it ends its turn inside an object."
 					]
 				},
 				{
@@ -2628,6 +2752,42 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Phantom Warrior (Archer)",
+			"isNpc": true,
+			"source": "CoS",
+			"page": 142,
+			"_copy": {
+				"name": "Phantom Warrior",
+				"source": "CoS",
+				"_mod": {
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Spectral Longbow",
+									"entries": [
+										"{@atk rw} {@hit 2} to hit, range 150/600 ft., one target. {@h}4 ({@damage 1d8}) force damage."
+									]
+								}
+							]
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"The phantom warrior makes two attacks with its spectral longsword or spectral longbow."
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true
+		},
+		{
 			"name": "Piccolo",
 			"isNpc": true,
 			"source": "CoS",
@@ -2651,7 +2811,9 @@
 			"isNpc": true,
 			"source": "CoS",
 			"page": 236,
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"type": "construct",
 			"alignment": [
 				"N",
@@ -2739,7 +2901,9 @@
 			"isNpc": true,
 			"source": "CoS",
 			"page": 237,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -2754,7 +2918,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"{@item studded leather armor|phb}"
+						"{@item studded leather armor|phb|studded leather}"
 					]
 				}
 			],
@@ -2888,7 +3052,9 @@
 			"isNpc": true,
 			"source": "CoS",
 			"page": 238,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "humanoid",
 				"tags": [
@@ -3067,7 +3233,9 @@
 					}
 				}
 			},
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"alignment": [
 				"L",
 				"G"
@@ -3210,6 +3378,11 @@
 					"ability": "wis"
 				}
 			],
+			"damageTagsSpell": [
+				"R",
+				"T",
+				"Y"
+			],
 			"spellcastingTags": [
 				"CP"
 			],
@@ -3336,6 +3509,9 @@
 					"ability": "int"
 				}
 			],
+			"damageTagsSpell": [
+				"N"
+			],
 			"hasToken": true
 		},
 		{
@@ -3365,7 +3541,9 @@
 			"isNamedCreature": true,
 			"source": "CoS",
 			"page": 240,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": {
 				"type": "undead",
 				"tags": [
@@ -3618,6 +3796,14 @@
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"N",
+				"P",
+				"S"
+			],
 			"spellcastingTags": [
 				"CW"
 			],
@@ -3638,7 +3824,9 @@
 			"name": "Strahd Zombie",
 			"source": "CoS",
 			"page": 241,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"U"
@@ -3737,7 +3925,9 @@
 			"isNpc": true,
 			"source": "CoS",
 			"page": 227,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "construct",
 			"alignment": [
 				"L",
@@ -3804,7 +3994,7 @@
 				{
 					"name": "Antimagic Susceptibility",
 					"entries": [
-						"The armor is {@condition incapacitated} while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall {@condition unconscious} for 1 minute."
+						"The armor is {@condition incapacitated} while in the area of an {@spell antimagic field}. If targeted by {@spell dispel magic}, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall {@condition unconscious} for 1 minute."
 					]
 				},
 				{
@@ -4029,6 +4219,14 @@
 					"ability": "int"
 				}
 			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"L",
+				"O",
+				"P"
+			],
 			"hasToken": true
 		},
 		{
@@ -4052,7 +4250,9 @@
 					}
 				}
 			},
-			"size": "S",
+			"size": [
+				"S"
+			],
 			"alignment": [
 				"L",
 				"G"
@@ -4079,7 +4279,9 @@
 					"source": "WBtW"
 				}
 			],
-			"size": "H",
+			"size": [
+				"H"
+			],
 			"type": "plant",
 			"alignment": [
 				"N",
@@ -4094,8 +4296,8 @@
 				}
 			],
 			"hp": {
-				"average": 149,
-				"formula": "13d12 + 65"
+				"average": 92,
+				"formula": "8d12 + 40"
 			},
 			"speed": {
 				"walk": 30
@@ -4188,6 +4390,29 @@
 			],
 			"hasToken": true,
 			"hasFluff": true
+		},
+		{
+			"name": "Urwin Martikov",
+			"isNpc": true,
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereraven",
+						"with": "Urwin",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Vasilka",
@@ -4369,7 +4594,9 @@
 			"isNpc": true,
 			"source": "CoS",
 			"page": 241,
-			"size": "M",
+			"size": [
+				"M"
+			],
 			"type": "undead",
 			"alignment": [
 				"L",
@@ -4555,129 +4782,8 @@
 			"conditionImmune": [
 				"charmed",
 				"frightened"
-			]
-		},
-		{
-			"name": "Wereraven",
-			"group": "Lycanthropes",
-			"source": "CoS",
-			"page": 242,
-			"otherSources": [
-				{
-					"source": "CM"
-				},
-				{
-					"source": "VRGR"
-				}
 			],
-			"size": "M",
-			"type": {
-				"type": "humanoid",
-				"tags": [
-					"human",
-					"shapechanger"
-				]
-			},
-			"alignment": [
-				"L",
-				"G"
-			],
-			"ac": [
-				12
-			],
-			"hp": {
-				"average": 31,
-				"formula": "7d8"
-			},
-			"speed": {
-				"walk": {
-					"number": 30,
-					"condition": "(fly 50 ft. in raven and hybrid forms)"
-				}
-			},
-			"str": 10,
-			"dex": 15,
-			"con": 11,
-			"int": 13,
-			"wis": 15,
-			"cha": 14,
-			"skill": {
-				"insight": "+4",
-				"perception": "+6"
-			},
-			"passive": 16,
-			"languages": [
-				"Common (can't speak in raven form)"
-			],
-			"cr": "2",
-			"trait": [
-				{
-					"name": "Shapechanger",
-					"entries": [
-						"The wereraven can use its action to polymorph into a raven-humanoid hybrid or into a raven, or back into its human form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its human form if it dies."
-					]
-				},
-				{
-					"name": "Mimicry",
-					"entries": [
-						"The wereraven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful {@dc 10} Wisdom (Insight) check."
-					]
-				},
-				{
-					"name": "Regeneration",
-					"entries": [
-						"The wereraven regains 10 hit points at the start of its turn. If the wereraven takes damage from a silvered weapon or a spell, this trait doesn't function at the start of the wereraven's next turn. The wereraven dies only if it starts its turn with 0 hit points and doesn't regenerate."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Multiattack (Human or Hybrid Form Only)",
-					"entries": [
-						"The wereraven makes two weapon attacks, one of which can be with its hand crossbow."
-					]
-				},
-				{
-					"name": "Beak (Raven or Hybrid Form Only)",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}1 piercing damage in raven form, or 4 ({@damage 1d4 + 2}) piercing damage in hybrid form. If the target is humanoid, it must succeed on a {@dc 10} Constitution saving throw or be cursed with wereraven lycanthropy."
-					]
-				},
-				{
-					"name": "Shortsword (Human or Hybrid Form Only)",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
-					]
-				},
-				{
-					"name": "Hand Crossbow (Human or Hybrid Form Only)",
-					"entries": [
-						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
-					]
-				}
-			],
-			"traitTags": [
-				"Regeneration",
-				"Shapechanger"
-			],
-			"actionTags": [
-				"Multiattack"
-			],
-			"languageTags": [
-				"C",
-				"CS"
-			],
-			"damageTags": [
-				"P"
-			],
-			"miscTags": [
-				"MW",
-				"RNG",
-				"RW"
-			],
-			"hasToken": true,
-			"hasFluff": true,
-			"hasFluffImages": true
+			"hasToken": true
 		},
 		{
 			"name": "Yevgeni Krushkin",
@@ -4706,6 +4812,26 @@
 				"N"
 			],
 			"hasToken": true
+		},
+		{
+			"name": "Young Wereraven",
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR"
+			},
+			"size": [
+				"S"
+			],
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d6"
+			}
 		},
 		{
 			"name": "Zuleika Toranescu",
