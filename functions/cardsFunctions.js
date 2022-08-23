@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = `${global.__basedir}/server_data/cards.json`
 
 exports.cards = ["♠1", "♠2", "♠3", "♠4", "♠5", "♠6", "♠7", "♠8", "♠9", "♠10", "♠K", "♠Q", "♠J",
     "♣1", "♣2", "♣3", "♣4", "♣5", "♣6", "♣7", "♣8", "♣9", "♣10", "♣K", "♣Q", "♣J",
@@ -12,16 +13,16 @@ exports.getCards = function () {
 exports.getCardMap = function (id) {
     // gets the cards from a stored file
     const data = JSON.parse(
-        fs.readFileSync('./server_data/cards.json', 'utf-8', () => { }
+        fs.readFileSync(path, 'utf-8', () => { }
         ).toString())
     return data[id]
 }
 
 exports.setCardMap = function (key, value) {
     //writes the card map into a file
-    let cardJson = JSON.parse(fs.readFileSync('./server_data/cards.json', 'utf-8', () => { }).toString())
+    let cardJson = JSON.parse(fs.readFileSync(path, 'utf-8', () => { }).toString())
     cardJson[key] = value
-    return fs.writeFileSync('./server_data/cards.json', JSON.stringify(cardJson, null, 4), (e) => { })
+    return fs.writeFileSync(path, JSON.stringify(cardJson, null, 4), (e) => { })
 }
 
 exports.getGlobalCards = function () {

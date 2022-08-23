@@ -2,12 +2,14 @@ const discord = require('discord.js');
 const Enmap = require("enmap");
 const fs = require('fs');
 
+global.__basedir = __dirname
+
 const dicebotIntents = new discord.Intents().add(discord.Intents.FLAGS.DIRECT_MESSAGES)
-                                            .add(discord.Intents.FLAGS.GUILDS)
-                                            .add(discord.Intents.FLAGS.GUILD_MEMBERS)
-                                            .add(discord.Intents.FLAGS.GUILD_MESSAGES)
-                                            .add(discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS);
-const bot = new discord.Client({intents : dicebotIntents});
+    .add(discord.Intents.FLAGS.GUILDS)
+    .add(discord.Intents.FLAGS.GUILD_MEMBERS)
+    .add(discord.Intents.FLAGS.GUILD_MESSAGES)
+    .add(discord.Intents.FLAGS.GUILD_MESSAGE_REACTIONS);
+const bot = new discord.Client({ intents: dicebotIntents });
 const botConfig = require('./botconfig.json');
 
 bot.config = botConfig;
