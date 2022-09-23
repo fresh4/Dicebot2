@@ -254,8 +254,11 @@ function replaceStupidFilters(input){
                             `{@recharge (Recharge 6)}`
                    })
                    .replace(/{@scaledamage .*?}/g, `{@scaledamage ${input.match(/(\d*\w*)}/g)}`)
-                   .replace(/{@i (.*?)}/g, (e)=>{
-                       return `{@i *__${e.match(/{@i (.*?)}/)[1]}__*}`
+                   .replace(/{@i (.*?)}/g, (e) => {
+                        return `{@i *__${e.match(/{@i (.*?)}/)[1]}__*}`
+                   })
+                   .replace(/{@b (.*?)}/g, (e) => {
+                        return `{@i **${e.match(/{@b (.*?)}/)[1]}**}`
                    })
     return output
 }
